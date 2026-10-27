@@ -1,11 +1,16 @@
 """Export the SQLite DB to a JSON file for frontend fallback."""
-import sqlite3, json, os, sys, pathlib
+import json
+import os
+import pathlib
+import sqlite3
+import sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from pathomap.ml.dimred import pathogen_feature_pca  # noqa: E402
+from pathomap.literature import load_literature  # noqa: E402
 from pathomap.ml.classifier import compare_classifiers, out_of_fold_predictions  # noqa: E402
+from pathomap.ml.dimred import pathogen_feature_pca  # noqa: E402
 from pathomap.ml.phylogenetics import build_phylogenetic_tree  # noqa: E402
 
 DB = os.path.join(os.path.dirname(__file__), '..', 'src', 'pathomap', 'data', 'pathomap.db')
@@ -23,8 +28,8 @@ pathogens = [dict(r) for r in c.fetchall()]
 c.execute('SELECT p.name as pathogen_name, e.name as effector_name, e.type, e.host_target, e.mechanism FROM effectors e JOIN pathogens p ON e.pathogen_id = p.id ORDER BY p.name')
 effectors = [dict(r) for r in c.fetchall()]
 
-# Host proteins
-c.execute('SELECT hp.name, hp.full_name, hp.function, hp.localization, hp.pathway FROM host_proteins hp ORDER BY hp.name')
+# Host proteins (uniprot_id drives the external UniProt link in the UI)
+c.execute('SELECT hp.name, hp.full_name, hp.function, hp.localization, hp.pathway, hp.uniprot_id FROM host_proteins hp ORDER BY hp.name')
 host_proteins = [dict(r) for r in c.fetchall()]
 
 # Effector -> host protein interactions, with names resolved. The Database
@@ -138,6 +143,13 @@ try:
 except Exception:
     phylogeny = {}
 
+# Real PubMed references fetched by scripts/fetch_literature.py (may be empty
+# if the fetch has not been run; the UI then shows no references).
+try:
+    literature = list(load_literature())
+except Exception:
+    literature = []
+
 data = {
     'pathogens': pathogens,
     'effectors': effectors,
@@ -151,7 +163,8 @@ data = {
     'ml_predictions': ml_preds,
     'ml_pca': pca_data,
     'classifier_comparison': classifier_comparison,
-    'phylogeny': phylogeny
+    'phylogeny': phylogeny,
+    'literature': literature
 }
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
@@ -166,6 +179,6 @@ with open(JS_OUT, 'w', encoding='utf-8') as f:
     json.dump(data, f, indent=2, ensure_ascii=False)
     f.write(';\n')
 
-print(f"Wrote {OUT}  ({len(pathogens)} pathogens, {len(effectors)} effectors, {len(host_proteins)} host proteins, {len(interactions)} interactions, {len(hubs)} hubs, {len(pathogen_actions)} actions, {len(ml_preds)} predictions, pca={'yes' if pca_data else 'no'}, phylogeny={'yes' if phylogeny else 'no'})")
+print(f"Wrote {OUT}  ({len(pathogens)} pathogens, {len(effectors)} effectors, {len(host_proteins)} host proteins, {len(interactions)} interactions, {len(hubs)} hubs, {len(pathogen_actions)} actions, {len(ml_preds)} predictions, {len(literature)} references, pca={'yes' if pca_data else 'no'}, phylogeny={'yes' if phylogeny else 'no'})")
 print(f"Wrote {JS_OUT} (embedded TOOLKIT_DATA for file:// support)")
 conn.close()

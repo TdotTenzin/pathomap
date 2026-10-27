@@ -7,9 +7,10 @@ All other modules import from here rather than using sqlite3 directly.
 Uses thread-local connection pooling to avoid repeated open/close overhead.
 """
 
-import sqlite3
 import pathlib
+import sqlite3
 import threading
+
 import pandas as pd
 
 # Path to the pre-built database (relative to this file)

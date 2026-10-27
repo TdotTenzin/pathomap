@@ -24,9 +24,9 @@ import argparse
 import json
 import pathlib
 import sys
-import urllib.request
-import urllib.error
 import time
+import urllib.error
+import urllib.request
 
 # Add src to path
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent / "src"))

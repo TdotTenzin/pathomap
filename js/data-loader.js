@@ -71,6 +71,7 @@
     if (fb.ml_pca) TOOLKIT_DATA.ml_pca = fb.ml_pca;
     if (fb.classifier_comparison) TOOLKIT_DATA.classifier_comparison = fb.classifier_comparison;
     if (fb.phylogeny) TOOLKIT_DATA.phylogeny = fb.phylogeny;
+    if (fb.literature) TOOLKIT_DATA.literature = fb.literature;
   }
 
   function loadLiveData() {
@@ -82,6 +83,7 @@
         if (data.host_proteins) TOOLKIT_DATA.host_proteins = data.host_proteins;
         if (data.interactions) TOOLKIT_DATA.interactions = data.interactions;
         if (data.hubs) TOOLKIT_DATA.hubs = data.hubs;
+        if (data.literature) TOOLKIT_DATA.literature = data.literature;
 
         if (data.stages) {
           TOOLKIT_DATA.maturation_stages = data.stages.map(function(s) {
@@ -114,17 +116,20 @@
           fetchJSON("/api/trafficking/stages").catch(function() { return null; }),
           fetchJSON("/api/interactome/hubs?top_n=15").catch(function() { return null; }),
           fetchJSON("/api/host-proteins?limit=100").catch(function() { return null; }),
+          fetchJSON("/api/literature").catch(function() { return null; }),
         ]).then(function(results) {
           var pathogens = results[0];
           var effectors = results[1];
           var stages = results[2];
           var hubs = results[3];
           var hostProteins = results[4];
+          var literature = results[5];
 
           if (pathogens) { TOOLKIT_DATA.pathogens = pathogens; }
           if (effectors) { TOOLKIT_DATA.effectors = processEffectors(effectors); }
           if (hostProteins) { TOOLKIT_DATA.host_proteins = hostProteins; }
           if (hubs) { TOOLKIT_DATA.hubs = hubs; }
+          if (literature) { TOOLKIT_DATA.literature = literature; }
 
           if (stages) {
             TOOLKIT_DATA.maturation_stages = stages.map(function(s) {

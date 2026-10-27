@@ -5,8 +5,8 @@ Tests for the dimensionality reduction module (PCA / UMAP).
 import pandas as pd
 
 from pathomap.ml.dimred import (
-    pca_analysis,
     pathogen_feature_pca,
+    pca_analysis,
     pca_from_matrix,
     umap_analysis,
     umap_from_matrix,

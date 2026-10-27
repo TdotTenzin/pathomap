@@ -22,7 +22,14 @@ dependencies = [
 [project.optional-dependencies]
 dev = [
     "pytest>=7.0",
+    "httpx>=0.27",
     "jupyter>=1.0",
+    "ruff>=0.6",
+]
+# Model interpretation. SHAP is optional: the pipeline falls back to
+# permutation importance when it is not installed.
+ml = [
+    "shap>=0.44",
 ]
 
 [tool.setuptools.packages.find]
@@ -31,3 +38,17 @@ where = ["src"]
 [tool.pytest.ini_options]
 pythonpath = ["src"]
 testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+src = ["src", "api", "tests", "scripts"]
+# Notebooks are generated artifacts and use a cell-based style ruff shouldn't police.
+extend-exclude = ["notebooks"]
+
+[tool.ruff.lint]
+# Substantive rules only: pyflakes (F), import sorting (I), and pycodestyle (E)
+# excluding E501 — the codebase does not enforce a hard line length, and
+# reformatting every long line would be a large unrelated diff.
+select = ["E", "F", "I"]
+ignore = ["E501"]

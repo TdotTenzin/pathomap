@@ -5,6 +5,8 @@ tests/
 r/
 data_fragment.txt
 .vercel/
-src/hostpathogen/data/seed/
-src/hostpathogen/data/build_db.py
-src/hostpathogen/data/export_r.py
+# The API reads the seed CSVs (literature.csv, effector_sequences.csv) and the
+# generated notebooks at request time, so those must be deployed. Only the
+# local build helpers below are excluded.
+src/pathomap/data/build_db.py
+src/pathomap/data/export_r.py

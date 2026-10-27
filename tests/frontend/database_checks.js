@@ -101,6 +101,13 @@ check('pathogens carry a numeric n_effectors', D.pathogens.every((p) => typeof p
 check('no RangeIndex-style numeric keys leak in', D.effectors.every((e) => e.effector_name !== null), true);
 check('interactions present offline', Array.isArray(D.interactions) && D.interactions.length === 150, true);
 
+// --- 1b. literature layer ---------------------------------------------------
+group('literature layer');
+check('literature present offline', Array.isArray(D.literature) && D.literature.length > 0, true);
+check('each reference has a PubMed URL',
+  D.literature.every((r) => /^https:\/\/pubmed\.ncbi\.nlm\.nih\.gov\/\d+\/$/.test(r.pubmed_url || '')), true);
+check('_sourceLiterature returns the payload', ctx._sourceLiterature().length, D.literature.length);
+
 // --- 2. table shape ---------------------------------------------------------
 group('table row counts');
 const EXPECTED = {
@@ -118,9 +125,36 @@ for (const [id, n] of Object.entries(EXPECTED)) {
 group('every declared column resolves to data');
 for (const t of T) {
   const rows = t.rows(D) || [];
-  const blank = t.columns.filter((c) => rows.every((r) => r[c.key] === undefined || r[c.key] === ''));
+  // Stored columns (those without an `href`) must hold a value for some row.
+  const stored = t.columns.filter((c) => typeof c.href !== 'function');
+  const blank = stored.filter((c) => rows.every((r) => r[c.key] === undefined || r[c.key] === ''));
   check(`${t.id} has no unpopulated column`, blank.map((c) => c.key), []);
+  // Derived link columns must produce a real URL for at least one row.
+  for (const c of t.columns.filter((col) => typeof col.href === 'function')) {
+    check(`${t.id} "${c.label}" link resolves`, rows.some((r) => !!c.href(r)), true);
+  }
 }
+
+group('external database links');
+const uniprotCol = table('host_proteins').columns.find((c) => c.key === 'uniprot_id');
+const actin = table('host_proteins').rows(D).find((r) => r.name === 'Actin');
+check('UniProt accession builds an entry URL',
+  uniprotCol.href(actin), 'https://www.uniprot.org/uniprotkb/P68133/entry');
+const noAcc = table('host_proteins').rows(D).find((r) => !r.uniprot_id);
+check('a record without an accession renders a dash',
+  /&mdash;/.test(ctx._dbLinkCell(noAcc, uniprotCol)), true);
+
+const phiCol = table('effectors').columns.find((c) => c.label === 'PHI-base');
+const sopE = table('effectors').rows(D).find((r) => r.effector_name === 'SopE');
+check('PHI-base link is a name search',
+  /^http:\/\/www\.phi-base\.org\/searchFacet\.htm\?queryTerm=SopE/.test(phiCol.href(sopE)), true);
+
+const intactCol = table('interactions').columns.find((c) => c.label === 'IntAct');
+check('IntAct link is a host-protein search',
+  /^https:\/\/www\.ebi\.ac\.uk\/intact\/search\?query=/.test(intactCol.href({ host_protein: 'Rab1' })), true);
+check('link cells open in a new tab and noopener',
+  /target="_blank"/.test(ctx._dbLinkCell(sopE, phiCol)) &&
+  /rel="noopener noreferrer"/.test(ctx._dbLinkCell(sopE, phiCol)), true);
 
 // --- 3. search --------------------------------------------------------------
 group('search filtering');

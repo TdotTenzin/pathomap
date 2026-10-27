@@ -2,18 +2,21 @@
 Tests for the ML classifier module (evasion strategy prediction).
 """
 
+import numpy as np
 import pandas as pd
 
 from pathomap.data.loader import to_df
 from pathomap.ml.classifier import (
     FEATURE_NAMES,
-    extract_features,
-    features_from_effectors,
-    train_classifier,
+    bootstrap_confidence_interval,
     compare_classifiers,
     cross_validate_rf,
+    extract_features,
+    features_from_effectors,
     grid_search_rf,
     out_of_fold_predictions,
+    permutation_test,
+    train_classifier,
 )
 
 
@@ -152,3 +155,61 @@ def test_grid_search_rf_structure():
     assert "best_params" in result
     assert "best_score" in result
     assert 0 <= result["best_score"] <= 1
+
+
+def _signal_frame(seed: int = 0, n: int = 60) -> tuple[pd.DataFrame, pd.Series]:
+    rng = np.random.default_rng(seed)
+    X = pd.DataFrame(rng.normal(size=(n, 4)), columns=list("abcd"))
+    y = pd.Series((X["a"] + X["b"] > 0).astype(int), name="y")
+    return X, y
+
+
+def test_permutation_test_finds_real_signal():
+    """With a genuine feature/label relationship the p-value must be small.
+
+    This is the regression guard for the previous implementation, which scored
+    the null model against its own shuffled labels and so returned p ~ 1.0 even
+    for perfectly learnable data.
+    """
+    X, y = _signal_frame()
+    result = permutation_test(X, y, n_permutations=50, random_state=42)
+    assert result["actual_score"] > 0.8
+    assert result["p_value"] < 0.1
+    assert result["is_significant"] is True
+    assert 0.0 <= result["p_value"] <= 1.0
+    assert result["n_train"] + result["n_test"] == len(y)
+    for key in ("mean", "std", "min", "max"):
+        assert 0.0 <= result["null_distribution"][key] <= 1.0
+
+
+def test_permutation_test_does_not_invent_signal_in_noise():
+    """On pure noise the observed score should not look significant."""
+    rng = np.random.default_rng(1)
+    X = pd.DataFrame(rng.normal(size=(60, 4)), columns=list("abcd"))
+    y = pd.Series(rng.integers(0, 2, size=60), name="y")
+    result = permutation_test(X, y, n_permutations=50, random_state=42)
+    assert result["p_value"] > 0.05
+    assert result["is_significant"] is False
+
+
+def test_permutation_test_is_reproducible():
+    X, y = _signal_frame()
+    first = permutation_test(X, y, n_permutations=25, random_state=7)
+    second = permutation_test(X, y, n_permutations=25, random_state=7)
+    assert first == second
+
+
+def test_bootstrap_confidence_interval_brackets_the_mean():
+    scores = [0.35, 0.40, 0.38, 0.42, 0.37]
+    result = bootstrap_confidence_interval(scores, n_bootstrap=500, random_state=42)
+    assert result["mean"] == round(sum(scores) / len(scores), 4)
+    assert result["lower"] <= result["mean"] <= result["upper"]
+    assert result["confidence_level"] == 95
+    assert result["standard_error"] >= 0
+
+
+def test_bootstrap_confidence_interval_rejects_empty():
+    import pytest
+
+    with pytest.raises(ValueError):
+        bootstrap_confidence_interval([], n_bootstrap=10)

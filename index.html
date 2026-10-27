@@ -27,6 +27,8 @@
         <li><a href="#maturation" onclick="closeMobileNav()">Trafficking</a></li>
         <li><a href="#ml-analysis" onclick="closeMobileNav()">ML</a></li>
         <li><a href="#phylogeny" onclick="closeMobileNav()">Phylogeny</a></li>
+        <li><a href="#methods" onclick="closeMobileNav()">Methods</a></li>
+        <li><a href="#citation" onclick="closeMobileNav()">Cite</a></li>
       </ul>
       <button class="dark-toggle" id="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode" title="Toggle dark mode">&#9790;</button>
     </div>
@@ -46,6 +48,16 @@
           evolutionary relationships between them. Genome, pangenome, and ecological-niche
           layers are on the roadmap.
         </p>
+        
+        <div class="research-objective">
+          <p class="section-label">Research Objective</p>
+          <h3 class="research-question">
+            Do effector protein sequence features predict intracellular survival strategies across diverse bacterial pathogens?
+          </h3>
+          <p class="research-hypothesis">
+            <strong>Hypothesis:</strong> Specific sequence motifs (hydrophobicity patterns, disorder regions, charge distributions) correlate with evasion strategies (arrest, escape, reroute, modified_compartment, extracellular).
+          </p>
+        </div>
         <div class="hero-author">
           <span class="hero-author-dot"></span>
           Built by a student focused on cellular microbiology and host–pathogen dynamics
@@ -191,6 +203,34 @@
           selected pathogen; hovering a node dims unrelated connections. The network is derived
           from the curated effector dataset and works fully offline.
         </p>
+
+        <div class="chart-section">
+          <h3 class="chart-heading">Network Metrics</h3>
+          <div id="network-metrics" class="network-metrics">
+            <p class="network-metrics-note">Select a pathogen to see its subnetwork metrics.</p>
+          </div>
+          <p class="chart-caption">
+            Basic topology (nodes, edges, density) is computed in the browser. Betweenness,
+            closeness, eigenvector centrality, clustering and modularity are computed by the
+            live analysis API; they are hidden when running offline.
+          </p>
+        </div>
+
+        <div class="chart-section">
+          <h3 class="chart-heading">Compare Two Pathogens' Networks</h3>
+          <div class="network-compare-controls">
+            <select id="network-compare-a" class="tool-select"></select>
+            <span class="network-compare-vs">vs</span>
+            <select id="network-compare-b" class="tool-select"></select>
+            <button type="button" class="tool-btn tool-btn-sm" onclick="compareSelectedNetworks()">Compare</button>
+          </div>
+          <div id="network-compare-result" class="network-compare-result"></div>
+          <p class="chart-caption">
+            Node/edge Jaccard overlap and shared-neighbour similarity between the two
+            subnetworks. Exact graph edit distance is only computed for small graphs and is
+            bounded by a timeout.
+          </p>
+        </div>
 
         <div class="chart-section">
           <h3 class="chart-heading">Most-Targeted Host Proteins</h3>
@@ -381,6 +421,133 @@
       </div>
     </section>
 
+    <section class="section" id="methods">
+      <div class="container">
+        <p class="section-label">Methodology</p>
+        <h2 class="section-title mb-28">Methods</h2>
+
+        <div class="method-grid">
+          <div class="method-card">
+            <h3>Trafficking Prediction</h3>
+            <p>
+              Marker-based stage matching using pre-computed stage profiles from the phagosome maturation pathway. The algorithm matches observed host protein markers to canonical maturation stages (early endosome, late endosome, lysosome, etc.) using a similarity scoring system.
+            </p>
+            <details>
+              <summary>Algorithm Details</summary>
+              <pre class="code-block">
+Input: Set of observed host protein markers
+Process:
+  1. Retrieve canonical stage profiles from database
+  2. Calculate Jaccard similarity between observed markers and each stage
+  3. Assign stage with highest similarity score (>0.5 threshold)
+  4. If no stage exceeds threshold, return "unknown"
+Output: Predicted maturation stage with confidence score</pre>
+            </details>
+          </div>
+
+          <div class="method-card">
+            <h3>Enrichment Analysis</h3>
+            <p>
+              Hypergeometric enrichment testing to identify overrepresented pathways and localizations among effector targets. Uses the hypergeometric distribution to calculate p-values, with Benjamini-Hochberg FDR correction for multiple testing.
+            </p>
+            <details>
+              <summary>Algorithm Details</summary>
+              <pre class="code-block">
+Input: Set of effector target proteins
+Process:
+  1. Count targets in each pathway/localization
+  2. Calculate hypergeometric p-value for each pathway
+  3. Apply Benjamini-Hochberg FDR correction
+  4. Return pathways with FDR < 0.05
+Output: Enriched pathways with p-values and effect sizes</pre>
+            </details>
+          </div>
+
+          <div class="method-card">
+            <h3>Machine Learning Classifier</h3>
+            <p>
+              Random Forest classifier trained on 11 effector features (n_effectors, n_targets, n_t3ss, n_t4ss, n_t6ss, n_toxins, n_surface_proteins, n_invasins, n_pathways, n_localizations, n_interaction_types) to predict intracellular survival strategies. Uses 5-fold stratified cross-validation for evaluation.
+            </p>
+            <details>
+              <summary>Algorithm Details</summary>
+              <pre class="code-block">
+Input: Pathogen effector data
+Process:
+  1. Extract 11 features from effector database
+  2. Train RandomForestClassifier (n_estimators=100, class_weight="balanced")
+  3. Evaluate with 5-fold stratified cross-validation
+  4. Report accuracy, precision, recall, F1-score
+  5. Statistical significance assessed via permutation testing
+Output: Predicted evasion strategy with confidence scores</pre>
+            </details>
+          </div>
+
+          <div class="method-card">
+            <h3>Network Analysis</h3>
+            <p>
+              Construction of effector-host protein interaction networks using NetworkX. Computes network topology metrics including degree centrality, betweenness centrality, and clustering coefficient to identify hub proteins and critical interaction points.
+            </p>
+            <details>
+              <summary>Algorithm Details</summary>
+              <pre class="code-block">
+Input: Effector-target interaction database
+Process:
+  1. Build bipartite graph (effectors ↔ host proteins)
+  2. Calculate centrality metrics (degree, betweenness, closeness)
+  3. Identify hub proteins (top 10% by degree)
+  4. Compute clustering coefficient for network structure
+Output: Network metrics and hub protein rankings</pre>
+            </details>
+          </div>
+        </div>
+
+        <div class="notebook-download" id="notebook-download">
+          <h3>Reproducible Notebooks</h3>
+          <p>
+            Download a Jupyter notebook that re-runs a full analysis end-to-end
+            against the <code>pathomap</code> package, so every figure and number on
+            this site can be reproduced from the curated dataset.
+          </p>
+          <div class="notebook-list" id="notebook-list"><em>Loading&hellip;</em></div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section" id="citation">
+      <div class="container">
+        <p class="section-label">Academic</p>
+        <h2 class="section-title mb-28">How to Cite</h2>
+
+        <div class="callout">
+          <div class="callout-icon"><img src="img/icon-book.svg" alt="Citation" /></div>
+          <div class="callout-body">
+            <h3>Citation Format</h3>
+            <p>
+              If you use PathoMap in your research, please cite it as follows:
+            </p>
+            <pre class="code-block">PathoMap: A computational platform for analyzing host-pathogen interactions and effector protein features.
+Version 0.4.0. https://github.com/yourusername/pathomap (2025)</pre>
+            
+            <h4 class="mt-20">BibTeX</h4>
+            <pre class="code-block">@misc{pathomap2025,
+  title = {PathoMap: A computational platform for analyzing host-pathogen interactions and effector protein features},
+  author = {Your Name},
+  year = {2025},
+  version = {0.4.0},
+  url = {https://github.com/yourusername/pathomap},
+  doi = {10.5281/zenodo.XXXXXXX}
+}</pre>
+            
+            <p class="mt-20 text-sm text-gray-600">
+              <strong>Note:</strong> A permanent DOI will be registered on Zenodo once the dataset is finalized.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
   <footer>
@@ -405,5 +572,7 @@
   <script src="js/database.js"></script>
   <script src="js/ml-plots.js"></script>
   <script src="js/phylogeny.js"></script>
+  <script src="js/figure-export.js"></script>
+  <script src="js/notebooks.js"></script>
 </body>
 </html>

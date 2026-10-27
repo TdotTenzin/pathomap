@@ -19,6 +19,7 @@ import pytest
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 HARNESS = REPO_ROOT / "tests" / "frontend" / "database_checks.js"
+FIGURE_HARNESS = REPO_ROOT / "tests" / "frontend" / "figure_export_checks.js"
 
 # The harness loads the real frontend sources, so a missing or renamed file is a
 # hard failure rather than a skip.
@@ -63,6 +64,22 @@ def test_database_frontend_checks(node: str) -> None:
         )
 
 
+def test_figure_export_checks(node: str) -> None:
+    """Run the headless figure-export harness and surface any failed assertion."""
+    result = subprocess.run(
+        [node, str(FIGURE_HARNESS)],
+        cwd=REPO_ROOT,
+        capture_output=True,
+        text=True,
+        timeout=120,
+    )
+    if result.returncode != 0:
+        pytest.fail(
+            "figure-export checks failed:\n"
+            f"{result.stdout}\n{result.stderr}".strip()
+        )
+
+
 @pytest.mark.parametrize(
     "script",
     [
@@ -74,6 +91,8 @@ def test_database_frontend_checks(node: str) -> None:
         "js/ml-plots.js",
         "js/phylogeny.js",
         "js/data-loader.js",
+        "js/figure-export.js",
+        "js/notebooks.js",
     ],
 )
 def test_script_parses(node: str, script: str) -> None:

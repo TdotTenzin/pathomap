@@ -513,6 +513,12 @@ function _sourceMlPredictions() {
   return TOOLKIT_DATA.ml_predictions || [];
 }
 
+// Real PubMed references fetched from NCBI E-utilities by
+// scripts/fetch_literature.py and exported into the offline payload.
+function _sourceLiterature() {
+  return TOOLKIT_DATA.literature || [];
+}
+
 /* ---------------------------------------------------------------------------
    Maturation timeline tour — builds the stage buttons consumed by
    activateStage()/closeTimeline() from the timelineData definitions.
@@ -778,6 +784,25 @@ function toggleAPCard(cardId, nameOrIndex) {
           html += "<tr><td>" + _escapeHtml(e.effector_name) + "</td><td>" + _escapeHtml(e.type || "—") + "</td><td>" + _escapeHtml(e.host_target || "—") + "</td><td>" + _escapeHtml(e.mechanism || "—") + "</td></tr>";
         });
         html += '</tbody></table></div>';
+      }
+
+      // Literature (real PubMed records; links open in a new tab)
+      var lit = _sourceLiterature().filter(function(l) {
+        return (l.pathogen_name || l.pathogen) === name;
+      });
+      if (lit.length) {
+        html += '<div class="article-section"><h4>Literature <span class="badge badge-gray">' + lit.length + '</span></h4><ul class="literature-list">';
+        lit.forEach(function(l) {
+          var pmid = l.pubmed_id || "";
+          var url = l.pubmed_url || (pmid ? "https://pubmed.ncbi.nlm.nih.gov/" + pmid + "/" : "");
+          var cite = _escapeHtml(l.authors || "") + (l.year ? " (" + _escapeHtml(l.year) + ")" : "");
+          html += '<li class="literature-item">'
+            + '<a class="literature-title" href="' + _escapeHtml(url) + '" target="_blank" rel="noopener noreferrer">' + _escapeHtml(l.title || "") + '</a>'
+            + '<div class="literature-cite"><em>' + _escapeHtml(l.journal || "") + '</em>' + (cite ? " \u2014 " + cite : "") + '</div>'
+            + '<div class="literature-pmid">PMID: <a href="' + _escapeHtml(url) + '" target="_blank" rel="noopener noreferrer">' + _escapeHtml(pmid) + '</a></div>'
+            + '</li>';
+        });
+        html += '</ul></div>';
       }
 
       // ML prediction

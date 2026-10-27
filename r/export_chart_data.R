@@ -10,7 +10,7 @@ data_dir <- "data/charts"
 dir.create(data_dir, showWarnings = FALSE, recursive = TRUE)
 
 # 1. Effector counts by pathogen
-effectors <- read.csv("src/hostpathogen/data/seed/effectors.csv")
+effectors <- read.csv("src/pathomap/data/seed/effectors.csv")
 eff_counts <- effectors %>%
   group_by(pathogen_name) %>%
   summarise(count = n()) %>%
@@ -19,7 +19,7 @@ write_json(eff_counts, file.path(data_dir, "effector_counts.json"), pretty = TRU
 cat("1/5 Effector counts written\n")
 
 # 2. pH timeline from maturation stages
-stages <- read.csv("src/hostpathogen/data/seed/maturation_stages.csv") %>%
+stages <- read.csv("src/pathomap/data/seed/maturation_stages.csv") %>%
   arrange(stage_order) %>%
   mutate(
     ph_avg = (ph_min + ph_max) / 2
@@ -34,7 +34,7 @@ write_json(hubs, file.path(data_dir, "hub_proteins.json"), pretty = TRUE)
 cat("3/5 Hub proteins written\n")
 
 # 4. Strategy distribution
-pathogens <- read.csv("src/hostpathogen/data/seed/pathogens.csv")
+pathogens <- read.csv("src/pathomap/data/seed/pathogens.csv")
 strategies <- pathogens %>%
   group_by(strategy) %>%
   summarise(count = n())

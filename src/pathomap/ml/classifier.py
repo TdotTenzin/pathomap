@@ -19,11 +19,10 @@ import re
 import numpy as np
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import classification_report
 from sklearn.model_selection import StratifiedKFold, train_test_split
-from sklearn.metrics import classification_report, confusion_matrix
 
 from pathomap.data.loader import to_df
-
 
 FEATURE_NAMES = [
     "n_effectors",
@@ -231,6 +230,149 @@ def plot_feature_importance(model: RandomForestClassifier) -> dict:
 
 
 # ---------------------------------------------------------------------------
+# Statistical Rigor: Permutation Testing & Bootstrap Confidence Intervals
+# ---------------------------------------------------------------------------
+
+
+def permutation_test(
+    X: pd.DataFrame,
+    y: pd.Series,
+    n_permutations: int = 1000,
+    test_size: float = 0.2,
+    random_state: int = 42,
+) -> dict:
+    """
+    Test whether the classifier beats chance with a label-permutation test.
+
+    The null hypothesis is that there is no real X-y relationship, so the model
+    performs no better than chance on unseen data.
+
+    Method (the valid formulation):
+    1. Split the data once into a stratified train/test set.
+    2. Fit on the real training labels and score on the held-out test set with
+       its TRUE labels -> the observed accuracy.
+    3. Repeatedly shuffle the TRAINING labels only, refit on the same training
+       rows, and score against the same TRUE held-out labels. Shuffling the
+       training labels destroys any real signal, so these scores approximate
+       the null distribution.
+    4. p = fraction of permuted scores >= observed (with a +1 correction).
+
+    Scoring every model on the same held-out set under the true labels is what
+    makes the comparison meaningful. Scoring a permuted model against its own
+    shuffled labels would only measure how well a forest memorises noise and
+    would produce a spurious p-value near 1.0.
+
+    Parameters:
+        X: Feature matrix
+        y: True labels
+        n_permutations: Number of label permutations (default 1000)
+        test_size: Fraction held out for scoring
+        random_state: Random seed for reproducibility
+
+    Returns:
+        Dictionary with actual_score, p_value, null_distribution and an
+        interpretation string.
+    """
+    rng = np.random.default_rng(random_state)
+
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y, test_size=test_size, random_state=random_state, stratify=y,
+    )
+
+    def _fit_and_score(train_labels) -> float:
+        model = RandomForestClassifier(
+            n_estimators=100, random_state=random_state, class_weight="balanced",
+        )
+        model.fit(X_train, train_labels)
+        return float(model.score(X_test, y_test))
+
+    # Step 1: observed accuracy on genuinely unseen, correctly-labelled data.
+    actual_score = _fit_and_score(y_train)
+
+    # Step 2-4: null distribution from permuted training labels.
+    null_scores = np.empty(n_permutations, dtype=float)
+    for i in range(n_permutations):
+        permuted = pd.Series(rng.permutation(np.asarray(y_train)), index=y_train.index)
+        null_scores[i] = _fit_and_score(permuted)
+
+    # Step 5: permutation p-value (+1 correction so p is never exactly 0).
+    p_value = (int(np.sum(null_scores >= actual_score)) + 1) / (n_permutations + 1)
+
+    is_significant = p_value < 0.05
+    interpretation = (
+        "Model performs significantly better than random chance (p < 0.05)"
+        if is_significant
+        else "Model does not perform significantly better than random chance (p >= 0.05)"
+    )
+
+    return {
+        "actual_score": round(float(actual_score), 4),
+        "p_value": round(float(p_value), 4),
+        "is_significant": is_significant,
+        "interpretation": interpretation,
+        "n_train": int(len(y_train)),
+        "n_test": int(len(y_test)),
+        "null_distribution": {
+            "mean": round(float(np.mean(null_scores)), 4),
+            "std": round(float(np.std(null_scores)), 4),
+            "min": round(float(np.min(null_scores)), 4),
+            "max": round(float(np.max(null_scores)), 4),
+        },
+        "n_permutations": n_permutations,
+    }
+
+
+def bootstrap_confidence_interval(
+    scores: list[float],
+    n_bootstrap: int = 1000,
+    alpha: float = 0.05,
+    random_state: int = 42,
+) -> dict:
+    """
+    Calculate bootstrap confidence interval for a set of scores.
+
+    Bootstrapping estimates the uncertainty in a statistic by repeatedly
+    resampling the data with replacement. This gives us confidence intervals
+    that are more robust than assuming a normal distribution.
+
+    Parameters:
+        scores: List of scores (e.g., cross-validation accuracies)
+        n_bootstrap: Number of bootstrap samples (default 1000)
+        alpha: Significance level (default 0.05 for 95% CI)
+        random_state: Random seed for reproducibility
+
+    Returns:
+        Dictionary with lower bound, upper bound, mean, and standard error
+    """
+    rng = np.random.default_rng(random_state)
+    scores = np.asarray(scores, dtype=float)
+    if scores.size == 0:
+        raise ValueError("scores must be a non-empty sequence")
+
+    # Resample with replacement n_bootstrap times
+    boot_means = np.empty(n_bootstrap, dtype=float)
+    for i in range(n_bootstrap):
+        boot_sample = rng.choice(scores, scores.size, replace=True)
+        boot_means[i] = boot_sample.mean()
+
+    # Calculate percentiles for confidence interval
+    lower = np.percentile(boot_means, alpha / 2 * 100)
+    upper = np.percentile(boot_means, (1 - alpha / 2) * 100)
+
+    # Standard error (standard deviation of bootstrap means)
+    standard_error = np.std(boot_means)
+
+    return {
+        "lower": round(float(lower), 4),
+        "upper": round(float(upper), 4),
+        "mean": round(float(np.mean(scores)), 4),
+        "standard_error": round(float(standard_error), 4),
+        "n_bootstrap": n_bootstrap,
+        "confidence_level": round((1 - alpha) * 100),
+    }
+
+
+# ---------------------------------------------------------------------------
 # Cross-validation + classifier comparison (N=54 -> 5-fold CV)
 # ---------------------------------------------------------------------------
 
@@ -239,10 +381,10 @@ _STRATIFIED_KWARGS = {"n_splits": 5, "shuffle": True, "random_state": 42}
 
 def compare_classifiers(random_state: int = 42) -> list[dict]:
     from sklearn.ensemble import RandomForestClassifier
-    from sklearn.svm import SVC
     from sklearn.linear_model import LogisticRegression
-    from sklearn.neighbors import KNeighborsClassifier
     from sklearn.model_selection import cross_val_score
+    from sklearn.neighbors import KNeighborsClassifier
+    from sklearn.svm import SVC
 
     X, y = extract_features()
 

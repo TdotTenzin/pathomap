@@ -5,15 +5,16 @@ Imports the unified app from api/index.py and adds static file serving.
 Vercel uses api/index.py directly via vercel.json rewrites.
 """
 
-from pathlib import Path
+import html
 import sys
+from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))
 
-from fastapi.responses import HTMLResponse
-from fastapi.staticfiles import StaticFiles
-
 from api.index import app  # noqa: F401 — re-export for uvicorn
+from fastapi.responses import HTMLResponse
+from fastapi.routing import APIRoute
+from fastapi.staticfiles import StaticFiles
 
 BASE = Path(__file__).resolve().parent
 
@@ -33,105 +34,101 @@ async def root():
     return HTMLResponse(index_path.read_text(encoding="utf-8"))
 
 
-@app.get("/dashboard", response_class=HTMLResponse, include_in_schema=False)
-async def api_dashboard():
-    return HTMLResponse(HTML_DASHBOARD)
+_GROUP_TITLES = {
+    "pathogens": "Pathogens & Literature",
+    "effectors": "Effectors",
+    "host-proteins": "Host Proteins",
+    "trafficking": "Trafficking",
+    "interactome": "Interactome",
+    "enrichment": "Enrichment",
+    "sequence": "Sequence Analysis",
+    "ml": "Machine Learning",
+    "novel-findings": "Novel Findings",
+    "literature": "Literature",
+    "notebooks": "Notebooks",
+    "stats": "Stats",
+}
 
 
-HTML_DASHBOARD = """<!DOCTYPE html>
+def _dashboard_sections() -> dict[str, list[tuple[str, str, str]]]:
+    """Group every /api route by its resource so the dashboard cannot go stale."""
+    groups: dict[str, list[tuple[str, str, str]]] = {}
+    for route in app.routes:
+        if not isinstance(route, APIRoute) or not route.path.startswith("/api"):
+            continue
+        methods = [m for m in route.methods if m not in ("HEAD", "OPTIONS")]
+        if not methods:
+            continue
+        parts = [p for p in route.path.split("/") if p]
+        key = parts[1] if len(parts) > 1 else "root"
+        desc = route.summary or (route.name or "").replace("_", " ")
+        groups.setdefault(key, []).append((methods[0], route.path, desc))
+    for rows in groups.values():
+        rows.sort(key=lambda r: r[1])
+    return groups
+
+
+def _dashboard_html() -> str:
+    cards = []
+    for key in sorted(_dashboard_sections()):
+        rows = _dashboard_sections()[key]
+        title = _GROUP_TITLES.get(key, key.replace("-", " ").title())
+        items = []
+        for method, path, desc in rows:
+            cls = "get" if method == "GET" else "post"
+            items.append(
+                '<div class="endpoint">'
+                f'<span class="method {cls}">{html.escape(method)}</span>'
+                f'<span class="path">{html.escape(path)}</span>'
+                f'<span class="desc">{html.escape(desc)}</span>'
+                "</div>"
+            )
+        cards.append(
+            f'<div class="card"><h2>{html.escape(title)}</h2>' + "".join(items) + "</div>"
+        )
+    return "\n".join(cards)
+
+
+_DASHBOARD_TEMPLATE = """<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PathoMap API Dashboard</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-           background: #f8fafc; color: #1e293b; line-height: 1.6; }
-    .container { max-width: 960px; margin: 0 auto; padding: 24px; }
-    h1 { font-size: 1.75rem; margin-bottom: 8px; color: #0f172a; }
-    h1 small { font-size: 0.9rem; font-weight: 400; color: #64748b; }
-    p { color: #475569; margin-bottom: 24px; }
-    .card { background: #fff; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,.1);
-            padding: 20px; margin-bottom: 16px; }
-    .card h2 { font-size: 1.1rem; margin-bottom: 12px; color: #0f172a; }
-    .card code { background: #f1f5f9; padding: 2px 6px; border-radius: 4px;
-                 font-size: 0.85rem; }
-    .endpoint { padding: 8px 0; border-bottom: 1px solid #e2e8f0; display: flex;
-                align-items: center; gap: 12px; }
-    .endpoint:last-child { border-bottom: none; }
-    .method { font-weight: 600; padding: 2px 8px; border-radius: 4px;
+    * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+    body {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+           background: #f8fafc; color: #1e293b; line-height: 1.6; }}
+    .container {{ max-width: 960px; margin: 0 auto; padding: 24px; }}
+    h1 {{ font-size: 1.75rem; margin-bottom: 8px; color: #0f172a; }}
+    h1 small {{ font-size: 0.9rem; font-weight: 400; color: #64748b; }}
+    p {{ color: #475569; margin-bottom: 24px; }}
+    .card {{ background: #fff; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,.1);
+            padding: 20px; margin-bottom: 16px; }}
+    .card h2 {{ font-size: 1.1rem; margin-bottom: 12px; color: #0f172a; }}
+    .card code {{ background: #f1f5f9; padding: 2px 6px; border-radius: 4px;
+                 font-size: 0.85rem; }}
+    .endpoint {{ padding: 8px 0; border-bottom: 1px solid #e2e8f0; display: flex;
+                align-items: center; gap: 12px; }}
+    .endpoint:last-child {{ border-bottom: none; }}
+    .method {{ font-weight: 600; padding: 2px 8px; border-radius: 4px;
               font-size: 0.75rem; text-transform: uppercase; min-width: 52px;
-              text-align: center; }
-    .get { background: #dbeafe; color: #1d4ed8; }
-    .post { background: #dcfce7; color: #15803d; }
-    .path { font-family: monospace; font-size: 0.9rem; color: #334155; }
-    .desc { font-size: 0.85rem; color: #64748b; }
-    a { color: #2563eb; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .footer { text-align: center; color: #94a3b8; font-size: 0.85rem;
-              padding: 24px 0; }
+              text-align: center; }}
+    .get {{ background: #dbeafe; color: #1d4ed8; }}
+    .post {{ background: #dcfce7; color: #15803d; }}
+    .path {{ font-family: monospace; font-size: 0.9rem; color: #334155; }}
+    .desc {{ font-size: 0.85rem; color: #64748b; }}
+    a {{ color: #2563eb; text-decoration: none; }}
+    a:hover {{ text-decoration: underline; }}
+    .footer {{ text-align: center; color: #94a3b8; font-size: 0.85rem;
+              padding: 24px 0; }}
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>PathoMap <small>API v0.4.0</small></h1>
+    <h1>PathoMap <small>API v{version}</small></h1>
     <p>REST API for the curated host&ndash;pathogen dataset served to the PathoMap site. Data is sourced from <code>pathomap.db</code>.</p>
-
-    <div class="card">
-      <h2>Pathogens</h2>
-      <div class="endpoint"><span class="method get">GET</span><span class="path">/api/pathogens</span><span class="desc">List all pathogens</span></div>
-      <div class="endpoint"><span class="method get">GET</span><span class="path">/api/pathogens/{name}</span><span class="desc">Get pathogen details</span></div>
-      <div class="endpoint"><span class="method get">GET</span><span class="path">/api/pathogens/{name}/effectors</span><span class="desc">List effectors for a pathogen</span></div>
-    </div>
-
-    <div class="card">
-      <h2>Effectors & Host Proteins</h2>
-      <div class="endpoint"><span class="method get">GET</span><span class="path">/api/effectors?pathogen=</span><span class="desc">List effectors (optional filter)</span></div>
-      <div class="endpoint"><span class="method get">GET</span><span class="path">/api/host-proteins</span><span class="desc">List all host proteins</span></div>
-      <div class="endpoint"><span class="method get">GET</span><span class="path">/api/host-proteins/{name}</span><span class="desc">Host protein details + targeting info</span></div>
-    </div>
-
-    <div class="card">
-      <h2>Trafficking</h2>
-      <div class="endpoint"><span class="method get">GET</span><span class="path">/api/trafficking/stages</span><span class="desc">Phagosome maturation stages with markers</span></div>
-      <div class="endpoint"><span class="method post">POST</span><span class="path">/api/trafficking/predict-stage</span><span class="desc">Predict stage from marker list</span></div>
-      <div class="endpoint"><span class="method post">POST</span><span class="path">/api/trafficking/trajectory</span><span class="desc">Predict trajectory from marker time series</span></div>
-    </div>
-
-    <div class="card">
-      <h2>Interactome</h2>
-      <div class="endpoint"><span class="method get">GET</span><span class="path">/api/interactome/stats</span><span class="desc">Network summary statistics</span></div>
-      <div class="endpoint"><span class="method get">GET</span><span class="path">/api/interactome/hubs?top_n=10</span><span class="desc">Top hub host proteins</span></div>
-      <div class="endpoint"><span class="method get">GET</span><span class="path">/api/interactome/pathogen/{name}</span><span class="desc">Pathogen subgraph (nodes + edges)</span></div>
-    </div>
-
-    <div class="card">
-      <h2>Enrichment</h2>
-      <div class="endpoint"><span class="method get">GET</span><span class="path">/api/enrichment/pathogen/{name}</span><span class="desc">Pathway enrichment for a pathogen</span></div>
-      <div class="endpoint"><span class="method post">POST</span><span class="path">/api/enrichment/overrepresentation</span><span class="desc">Custom enrichment from gene list</span></div>
-    </div>
-
-    <div class="card">
-      <h2>Machine Learning</h2>
-      <div class="endpoint"><span class="method get">GET</span><span class="path">/api/ml/features</span><span class="desc">Feature matrix for all pathogens</span></div>
-      <div class="endpoint"><span class="method get">GET</span><span class="path">/api/ml/predict/{pathogen_name}</span><span class="desc">Predict evasion strategy</span></div>
-      <div class="endpoint"><span class="method get">GET</span><span class="path">/api/ml/pca</span><span class="desc">PCA on host expression data</span></div>
-      <div class="endpoint"><span class="method get">GET</span><span class="path">/api/ml/umap?n_neighbors=5&min_dist=0.3</span><span class="desc">UMAP embedding</span></div>
-      <div class="endpoint"><span class="method get">GET</span><span class="path">/api/ml/pathogen-pca</span><span class="desc">PCA on pathogen effector features</span></div>
-      <div class="endpoint"><span class="method get">GET</span><span class="path">/api/ml/phylogeny</span><span class="desc">Effector phylogenetic tree (Newick)</span></div>
-      <div class="endpoint"><span class="method get">GET</span><span class="path">/api/ml/compare-classifiers</span><span class="desc">Compare 4 classifiers via LOOCV</span></div>
-      <div class="endpoint"><span class="method get">GET</span><span class="path">/api/ml/cross-validate</span><span class="desc">Detailed LOOCV report for RF</span></div>
-      <div class="endpoint"><span class="method get">GET</span><span class="path">/api/ml/grid-search</span><span class="desc">Hyperparameter grid search for RF</span></div>
-    </div>
-
-    <div class="card">
-      <h2>Stats &amp; Search</h2>
-      <div class="endpoint"><span class="method get">GET</span><span class="path">/api/stats</span><span class="desc">Database summary statistics</span></div>
-      <div class="endpoint"><span class="method get">GET</span><span class="path">/api/search</span><span class="desc">Search pathogens</span></div>
-      <div class="endpoint"><span class="method get">GET</span><span class="path">/api/bootstrap</span><span class="desc">All data for page initialization</span></div>
-    </div>
-
+{sections}
     <div class="card">
       <h2>Interactive Docs</h2>
       <p style="margin-bottom:0"><a href="/docs" target="_blank">Swagger UI &rarr;</a> &middot; <a href="/redoc" target="_blank">ReDoc &rarr;</a></p>
@@ -143,6 +140,13 @@ HTML_DASHBOARD = """<!DOCTYPE html>
   </div>
 </body>
 </html>"""
+
+
+@app.get("/dashboard", response_class=HTMLResponse, include_in_schema=False)
+async def api_dashboard():
+    return HTMLResponse(
+        _DASHBOARD_TEMPLATE.format(version=app.version, sections=_dashboard_html())
+    )
 
 
 if __name__ == "__main__":

@@ -16,10 +16,8 @@ Optimizations:
   - Module-level caching of sequences and tree
 """
 
-import io
-import random
 import hashlib
-from pathlib import Path
+import io
 
 import numpy as np
 from Bio import Phylo, SeqIO
@@ -204,8 +202,8 @@ def _align_sequences(records: list[SeqRecord]) -> MultipleSeqAlignment:
 
 
 def fetch_uniprot_sequences(query: str = "typeIII secretion system effector") -> list[SeqRecord]:
-    import urllib.request
     import urllib.error
+    import urllib.request
 
     url = (
         f"https://rest.uniprot.org/uniprotkb/stream?"

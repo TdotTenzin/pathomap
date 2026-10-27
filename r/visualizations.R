@@ -144,7 +144,7 @@ make_effector_barchart <- function() {
 
   library(RSQLite)
 
-  db_file <- file.path("src", "hostpathogen", "data", "hostpathogen.db")
+  db_file <- file.path("src", "pathomap", "data", "pathomap.db")
   con <- dbConnect(SQLite(), db_file)
 
   effector_counts <- dbGetQuery(con, "

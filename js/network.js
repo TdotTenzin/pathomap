@@ -84,6 +84,8 @@ function refreshNetworkSection() {
   var target = stillThere ? prev : (list.length ? list[0].name : "");
   select.value = target;
 
+  _populateNetworkCompare(list);
+
   if (target) {
     loadNetworkGraph(target);
   } else {
@@ -94,12 +96,30 @@ function refreshNetworkSection() {
   }
 }
 
+function _populateNetworkCompare(list) {
+  ["network-compare-a", "network-compare-b"].forEach(function(id) {
+    var sel = document.getElementById(id);
+    if (!sel) return;
+    var prev = sel.value;
+    sel.innerHTML = "<option value=''>— Select —</option>";
+    list.forEach(function(p) {
+      var o = document.createElement("option");
+      o.value = p.name;
+      o.textContent = p.name;
+      sel.appendChild(o);
+    });
+    if (prev) sel.value = prev;
+  });
+}
+
 function loadNetworkGraph(pathogenName) {
   var container = document.getElementById("interactome-graph");
   if (!container) return;
 
   var placeholder = document.getElementById("select-pathogen-hint");
   if (pathogenName && placeholder) placeholder.style.display = "none";
+
+  renderNetworkMetrics(pathogenName);
 
   var data = _buildNetworkData(pathogenName);
   container.innerHTML = "";
@@ -342,6 +362,116 @@ function _renderNetworkLegend(svg, pathogenName, color, width) {
   stats.append("text")
     .attr("font-size", 11).attr("fill", "#94a3b8")
     .text("Drag nodes to explore · hover to highlight");
+}
+
+/* ---------------------------------------------------------------------------
+   Advanced network metrics panel (task 9)
+
+   Basic topology is computed locally so it works offline; the richer metrics
+   (betweenness, closeness, eigenvector, clustering, modularity) come from the
+   live API endpoint /api/interactome/metrics/{pathogen}.
+   --------------------------------------------------------------------------- */
+
+function _localNetworkMetrics(pathogenName) {
+  var data = _buildNetworkData(pathogenName);
+  var n = data.nodes.length;
+  var e = data.edges.length;
+  var eff = data.nodes.filter(function(d) { return d.type === "effector"; }).length;
+  return {
+    n_nodes: n,
+    n_effectors: eff,
+    n_hosts: n - eff,
+    n_edges: e,
+    density: n > 1 ? (2 * e) / (n * (n - 1)) : 0,
+    avg_degree: n ? (2 * e) / n : 0
+  };
+}
+
+function _fmt(x, digits) {
+  if (x === null || x === undefined) return "—";
+  return (typeof x === "number") ? x.toFixed(digits === undefined ? 3 : digits) : String(x);
+}
+
+function _metricsHTML(pathogenName, local, live) {
+  var rows = [
+    ["Nodes", local.n_nodes],
+    ["Effectors", local.n_effectors],
+    ["Host proteins", local.n_hosts],
+    ["Edges (interactions)", local.n_edges],
+    ["Density", _fmt(local.density)],
+    ["Avg. degree", _fmt(local.avg_degree, 2)]
+  ];
+  if (live) {
+    rows.push(["Avg. clustering", _fmt(live.avg_clustering)]);
+    rows.push(["Communities", live.n_communities]);
+    rows.push(["Modularity", _fmt(live.modularity)]);
+    rows.push(["Degree assortativity", _fmt(live.assortativity)]);
+  }
+  var html = "<h4 class='network-metrics-title'>Network metrics &mdash; " + pathogenName + "</h4>";
+  html += "<table class='network-metrics-table'><tbody>";
+  rows.forEach(function(r) {
+    html += "<tr><th>" + r[0] + "</th><td>" + r[1] + "</td></tr>";
+  });
+  html += "</tbody></table>";
+
+  if (live && live.top_betweenness && live.top_betweenness.length) {
+    html += "<p class='network-metrics-sub'>Top nodes by betweenness centrality</p>";
+    html += "<table class='network-metrics-table'><thead><tr><th>Node</th><th>Type</th>" +
+            "<th>Betweenness</th><th>Degree</th></tr></thead><tbody>";
+    live.top_betweenness.slice(0, 8).forEach(function(r) {
+      html += "<tr><td>" + r.node + "</td><td>" + r.type + "</td><td>" +
+              _fmt(r.betweenness, 4) + "</td><td>" + r.degree + "</td></tr>";
+    });
+    html += "</tbody></table>";
+  } else if (!live) {
+    html += "<p class='network-metrics-note'>Betweenness, closeness, clustering and " +
+            "modularity are computed by the live API and are unavailable offline.</p>";
+  }
+  return html;
+}
+
+function renderNetworkMetrics(pathogenName) {
+  var box = document.getElementById("network-metrics");
+  if (!box) return;
+  if (!pathogenName) { box.innerHTML = ""; return; }
+
+  var local = _localNetworkMetrics(pathogenName);
+  box.innerHTML = _metricsHTML(pathogenName, local, null);
+
+  fetch("/api/interactome/metrics/" + encodeURIComponent(pathogenName))
+    .then(function(r) { if (!r.ok) throw new Error("status " + r.status); return r.json(); })
+    .then(function(live) { box.innerHTML = _metricsHTML(pathogenName, local, live); })
+    .catch(function() { /* offline: keep the local basics */ });
+}
+
+function compareSelectedNetworks() {
+  var a = document.getElementById("network-compare-a");
+  var b = document.getElementById("network-compare-b");
+  var out = document.getElementById("network-compare-result");
+  if (!a || !b || !out) return;
+  if (!a.value || !b.value) { out.textContent = "Select two pathogens to compare."; return; }
+
+  out.textContent = "Comparing…";
+  fetch("/api/interactome/compare?pathogen_a=" + encodeURIComponent(a.value) +
+        "&pathogen_b=" + encodeURIComponent(b.value))
+    .then(function(r) { if (!r.ok) throw new Error("status " + r.status); return r.json(); })
+    .then(function(res) {
+      var c = res.comparison;
+      out.innerHTML =
+        "<table class='network-metrics-table'><tbody>" +
+        "<tr><th>Node Jaccard</th><td>" + _fmt(c.node_jaccard) + "</td></tr>" +
+        "<tr><th>Edge Jaccard</th><td>" + _fmt(c.edge_jaccard) + "</td></tr>" +
+        "<tr><th>Shared nodes</th><td>" + c.common_nodes + "</td></tr>" +
+        "<tr><th>Shared edges</th><td>" + c.shared_edges + "</td></tr>" +
+        "<tr><th>Shared-neighbour similarity</th><td>" + _fmt(c.shared_neighbor_similarity) + "</td></tr>" +
+        "<tr><th>Graph edit distance</th><td>" +
+          (c.graph_edit_distance === null ? (c.graph_edit_distance_note || "n/a") : c.graph_edit_distance) +
+        "</td></tr>" +
+        "</tbody></table>";
+    })
+    .catch(function() {
+      out.textContent = "Network comparison requires the live API and is unavailable offline.";
+    });
 }
 
 // Hook into init

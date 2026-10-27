@@ -5,10 +5,10 @@ Tests for the enrichment module (over-representation analysis).
 from math import comb
 
 from pathomap.enrichment import (
+    _build_pathway_db,
     _hypergeom_sf,
     overrepresentation_analysis,
     targeted_pathways_by_pathogen,
-    _build_pathway_db,
 )
 
 

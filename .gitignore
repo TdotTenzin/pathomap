@@ -7,13 +7,24 @@ __pycache__/
 *.egg-info/
 
 # Databases (uncomment to keep db out of git — Vercel deployment needs it committed)
-# src/hostpathogen/data/hostpathogen.db
+# src/pathomap/data/pathomap.db
 
 # misc
 npm-debug.log
 yarn-error.log
 
+# Build artifacts
+dist/
+
 # System Files
 .DS_Store
 Thumbs.db
 .vercel
+
+# Tooling/cache
+.opencode/
+.kombai/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+__pycache__/

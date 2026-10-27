@@ -15,8 +15,32 @@
 var _dbActive = null;   // id of the visible table
 var _dbSort = {};       // id -> {key, dir}
 
+/* External-database links. These are live queries built from a record's own
+   name or accession at render time — never stored identifiers — so the site
+   points at the databases without asserting that a specific curated record
+   exists (which would be fabrication). */
+var DB_EXTERNAL = {
+  uniprot: function (acc) {
+    return acc
+      ? "https://www.uniprot.org/uniprotkb/" + encodeURIComponent(acc) + "/entry"
+      : null;
+  },
+  phiBase: function (gene) {
+    return gene
+      ? "http://www.phi-base.org/searchFacet.htm?queryTerm=" + encodeURIComponent(gene)
+      : null;
+  },
+  intact: function (term) {
+    return term
+      ? "https://www.ebi.ac.uk/intact/search?query=" + encodeURIComponent(term)
+      : null;
+  }
+};
+
 /* Table descriptors. `columns` names the row keys in TOOLKIT_DATA; `num`
-   columns sort numerically rather than as text. */
+   columns sort numerically rather than as text. A column with an `href`
+   function renders as an external link instead of plain text: the value shown
+   is `linkText(row)` when provided, otherwise `row[key]`. */
 var DB_TABLES = [
   {
     id: "pathogens",
@@ -46,7 +70,8 @@ var DB_TABLES = [
       { key: "effector_name", label: "Effector" },
       { key: "type",          label: "Type" },
       { key: "host_target",   label: "Host Target" },
-      { key: "mechanism",     label: "Mechanism", long: true }
+      { key: "mechanism",     label: "Mechanism", long: true },
+      { label: "PHI-base",    href: function (row) { return DB_EXTERNAL.phiBase(row.effector_name); } }
     ],
     sql: "SELECT p.name AS pathogen_name, e.name AS effector_name,\n" +
          "       e.type, e.host_target, e.mechanism\n" +
@@ -63,9 +88,10 @@ var DB_TABLES = [
       { key: "full_name",    label: "Full Name", long: true },
       { key: "pathway",      label: "Pathway" },
       { key: "localization", label: "Localization" },
-      { key: "function",     label: "Function", long: true }
+      { key: "function",     label: "Function", long: true },
+      { key: "uniprot_id",   label: "UniProt", href: function (row) { return DB_EXTERNAL.uniprot(row.uniprot_id); } }
     ],
-    sql: "SELECT name, full_name, function, localization, pathway\n" +
+    sql: "SELECT name, full_name, function, localization, pathway, uniprot_id\n" +
          "FROM host_proteins\n" +
          "ORDER BY name;"
   },
@@ -77,7 +103,8 @@ var DB_TABLES = [
       { key: "pathogen",         label: "Pathogen" },
       { key: "effector",         label: "Effector" },
       { key: "host_protein",     label: "Host Protein" },
-      { key: "interaction_type", label: "Interaction" }
+      { key: "interaction_type", label: "Interaction" },
+      { label: "IntAct",         href: function (row) { return DB_EXTERNAL.intact(row.host_protein); } }
     ],
     sql: "SELECT p.name AS pathogen, e.name AS effector,\n" +
          "       hp.name AS host_protein, et.interaction_type\n" +
@@ -146,6 +173,7 @@ function _dbFiltered(table) {
   if (q) {
     rows = rows.filter(function (row) {
       return table.columns.some(function (col) {
+        if (!col.key) return false;   // derived link columns are not searchable
         var v = row[col.key];
         return v !== undefined && v !== null &&
                String(v).toLowerCase().indexOf(q) !== -1;
@@ -215,6 +243,10 @@ function _dbRenderHead(table) {
   if (!head) return;
   var sort = _dbSort[table.id];
   head.innerHTML = table.columns.map(function (col) {
+    // Derived link columns hold no stored value, so they cannot be sorted.
+    if (col.href && !col.key) {
+      return '<th scope="col" class="db-linked">' + _escapeHtml(col.label) + "</th>";
+    }
     var state = (sort && sort.key === col.key) ? sort.dir : "";
     var arrow = state === "asc" ? " ▲" : (state === "desc" ? " ▼" : "");
     return '<th scope="col"' +
@@ -223,6 +255,18 @@ function _dbRenderHead(table) {
            ' aria-sort="' + (state === "asc" ? "ascending" : state === "desc" ? "descending" : "none") + '">' +
            _escapeHtml(col.label) + arrow + "</th>";
   }).join("");
+}
+
+/* A cell that links out to an external database (UniProt, PHI-base, IntAct).
+   The href is computed per row; a null href renders the same em-dash as an
+   empty value, so records without the relevant identifier degrade cleanly. */
+function _dbLinkCell(row, col) {
+  var url = col.href(row);
+  if (!url) return '<td class="db-empty">&mdash;</td>';
+  var text = col.linkText ? col.linkText(row) : (col.key ? row[col.key] : col.label);
+  return '<td class="db-link"><a href="' + _escapeHtml(url) +
+         '" target="_blank" rel="noopener noreferrer">' +
+         _escapeHtml(text || col.label) + "</a></td>";
 }
 
 function _dbRenderBody(table, rows) {
@@ -237,7 +281,10 @@ function _dbRenderBody(table, rows) {
   for (var i = 0; i < rows.length; i++) {
     html += "<tr>";
     for (var c = 0; c < table.columns.length; c++) {
-      html += _dbCell(rows[i][table.columns[c].key], table.columns[c]);
+      var col = table.columns[c];
+      html += col.href
+        ? _dbLinkCell(rows[i], col)
+        : _dbCell(rows[i][col.key], col);
     }
     html += "</tr>";
   }
@@ -300,9 +347,14 @@ function _dbDownload() {
   var table = null;
   DB_TABLES.forEach(function (t) { if (t.id === _dbActive) table = t; });
   if (!table) return;
+  // Derived link columns carry no stored value, so they are omitted from CSV —
+  // the accession/id columns they wrap are exported instead.
+  var cols = table.columns
+    .filter(function (c) { return c.key; })
+    .map(function (c) { return { key: c.key, label: c.label }; });
   _downloadCSV(
     _dbFiltered(table),
-    table.columns.map(function (c) { return { key: c.key, label: c.label }; }),
+    cols,
     btn.getAttribute("data-db-file") || (table.id + ".csv")
   );
 }

@@ -2,7 +2,6 @@
 
 import csv
 import pathlib
-import textwrap
 
 SEED_DIR = pathlib.Path(__file__).parent
 
@@ -562,7 +561,7 @@ def generate_all():
         [e for e in EFFECTORS])
     write_csv("host_proteins.csv",
         ["name", "full_name", "function", "localization", "pathway"],
-        [(n, f, fn, l, p) for (n, f, fn, l, p) in HOST_PROTEINS])
+        [(n, f, fn, loc, p) for (n, f, fn, loc, p) in HOST_PROTEINS])
     write_csv("effector_targets.csv",
         ["pathogen_name", "effector_name", "host_protein_name", "interaction_type"],
         [t for t in EFFECTOR_TARGETS])

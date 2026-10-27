@@ -27,7 +27,7 @@ trafficking and phagosome maturation.
 # Count records from the database
 library(RSQLite)
 
-db_file <- file.path("..", "src", "hostpathogen", "data", "hostpathogen.db")
+db_file <- file.path("..", "src", "pathomap", "data", "pathomap.db")
 con <- dbConnect(SQLite(), db_file)
 
 tables <- c("pathogens", "host_proteins", "effectors", "effector_targets", "maturation_stages")

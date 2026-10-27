@@ -5,11 +5,11 @@ Tests for the data loader module (SQLite helpers).
 import sqlite3
 
 from pathomap.data.loader import (
+    DB_PATH,
+    close_connection,
+    get_connection,
     query,
     to_df,
-    get_connection,
-    close_connection,
-    DB_PATH,
 )
 
 

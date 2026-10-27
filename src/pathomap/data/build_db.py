@@ -1,6 +1,6 @@
 import csv
-import sqlite3
 import pathlib
+import sqlite3
 
 SEED_DIR = pathlib.Path(__file__).parent / "seed"
 DB_PATH = pathlib.Path(__file__).parent / "pathomap.db"
@@ -22,7 +22,8 @@ CREATE TABLE IF NOT EXISTS host_proteins (
     full_name TEXT,
     function TEXT,
     localization TEXT,
-    pathway TEXT
+    pathway TEXT,
+    uniprot_id TEXT
 );
 
 CREATE TABLE IF NOT EXISTS maturation_stages (
@@ -104,8 +105,8 @@ def build():
 
     host_proteins = load_csv("host_proteins.csv")
     con.executemany(
-        "INSERT INTO host_proteins (name, full_name, function, localization, pathway) "
-        "VALUES (:name, :full_name, :function, :localization, :pathway)",
+        "INSERT INTO host_proteins (name, full_name, function, localization, pathway, uniprot_id) "
+        "VALUES (:name, :full_name, :function, :localization, :pathway, :uniprot_id)",
         host_proteins,
     )
 

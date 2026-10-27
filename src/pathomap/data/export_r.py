@@ -48,7 +48,6 @@ def export_counts():
 
     # Assign log2 fold changes: first 10 genes are DE
     log2fc = np.zeros(n_genes)
-    de_genes = selected[:10]
     for i in range(10):
         log2fc[i] = np.random.choice([-2.5, -2.0, -1.8, 1.8, 2.0, 2.5])
 

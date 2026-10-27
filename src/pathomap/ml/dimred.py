@@ -11,9 +11,10 @@ Optimizations:
   - Graceful fallback when umap-learn is not installed
 """
 
+from pathlib import Path
+
 import numpy as np
 import pandas as pd
-from pathlib import Path
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
 
