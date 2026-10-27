@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PathoMap</title>
+  <title>PathoMap - Microbial Genomics, Hosts &amp; Ecology</title>
+  <meta name="description" content="PathoMap maps the connections between microbial genomes, biological interactions, evolution and ecological environments.">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/components.css">
@@ -11,15 +12,88 @@
 </head>
 <body>
   <nav>
-    <div class="nav-container">
-      <div class="nav-brand">PathoMap</div>
+    <div class="container nav-inner">
+      <a class="nav-brand" href="#hero">PathoMap</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#database">Database</a></li>
+      </ul>
+      <button class="dark-toggle" id="dark-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9790;</button>
     </div>
   </nav>
+
+  <header id="hero">
+    <div class="container">
+      <h1 class="hero-title">PathoMap</h1>
+      <p class="hero-subtitle">
+        PathoMap is a curated host&ndash;pathogen interaction dataset. Browse pathogens, effectors, host proteins, and their interactions, along with trafficking stages and derived analyses.
+      </p>
+
+      <div class="research-objective">
+        <p class="section-label">Research Objective</p>
+        <h3 class="research-question">
+          Can the amino acid sequence features of bacterial effector proteins predict their pathogen's intracellular survival strategy?
+        </h3>
+        <ul class="research-list">
+          <li>
+            <strong>Background:</strong> Intracellular pathogens evade phagolysosomal killing by arresting maturation, escaping to the cytosol, rerouting vesicles, or remodeling vacuoles; some remain extracellular.
+            <ul>
+              <li>Arrest phagosome maturation</li>
+              <li>Escape into the cytosol</li>
+              <li>Reroute trafficking away from lysosomes</li>
+              <li>Modify the vacuole into a pathogen-specific compartment</li>
+              <li>Persist extracellularly</li>
+            </ul>
+          </li>
+          <li><strong>Methods:</strong> Compute hydrophobicity, intrinsic disorder, and charge from effector sequences.</li>
+          <li><strong>Approach:</strong> Train and evaluate a machine learning classifier on curated effector data to predict intracellular survival strategy.</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
   <main>
     <section id="database" class="section">
-      <div class="container"></div>
+      <div class="container">
+        <header class="section-header">
+          <p class="section-label">Database</p>
+          <h2 class="section-title">Browse the Curated Dataset</h2>
+          <p class="section-subtitle">
+            The same SQLite database that powers the API, exposed as sortable tables.
+            Click a column heading to sort, type to filter.
+          </p>
+        </header>
+
+        <div class="db-toolbar">
+          <div class="db-tabs" id="db-tabs" role="tablist" aria-label="Database tables"></div>
+          <div class="db-toolbar-right">
+            <input id="db-search" class="tool-input db-search" type="search" placeholder="Filter rows&hellip;" autocomplete="off" aria-label="Filter table rows">
+            <button type="button" id="db-download" class="tool-btn tool-btn-sm">Download CSV</button>
+          </div>
+        </div>
+
+        <p class="db-status">
+          <span id="db-count">&nbsp;</span>
+          <span class="db-status-hint" id="db-hint"></span>
+        </p>
+
+        <div class="db-table-wrap">
+          <table class="db-table" id="db-table">
+            <thead>
+              <tr id="db-head"></tr>
+            </thead>
+            <tbody id="db-body"></tbody>
+          </table>
+        </div>
+
+        <details class="db-sql">
+          <summary>SQL behind this table</summary>
+          <pre id="db-sql"><code></code></pre>
+        </details>
+      </div>
     </section>
   </main>
+
   <script type="module" src="js/main.js"></script>
 </body>
 </html>
