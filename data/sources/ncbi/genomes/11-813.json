@@ -1,0 +1,152 @@
+{
+  "tax_id": 813,
+  "query": "?filters.reference_only=true",
+  "selected": {
+    "accession": "GCF_000008725.1",
+    "current_accession": "GCF_000008725.1",
+    "paired_accession": "GCA_000008725.1",
+    "source_database": "SOURCE_DATABASE_REFSEQ",
+    "organism": {
+      "tax_id": 272561,
+      "organism_name": "Chlamydia trachomatis D/UW-3/CX",
+      "infraspecific_names": {
+        "strain": "D/UW-3/CX"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Complete Genome",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCA_000008725.1",
+        "status": "current",
+        "annotation_name": "Annotation submitted by ChGP"
+      },
+      "assembly_name": "ASM872v1",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJNA45",
+              "title": "Serovar D strain that causes pharyngitis, bronchitis and pneumonitis",
+              "parent_accessions": [
+                "PRJNA15722"
+              ]
+            },
+            {
+              "accession": "PRJNA15722",
+              "title": "Comparison of serovar A and D variants of Chlamydia trachomatis"
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJNA45",
+      "release_date": "2001-01-09",
+      "submitter": "ChGP",
+      "refseq_category": "reference genome",
+      "biosample": {
+        "accession": "SAMN02603114",
+        "last_updated": "2015-05-18T13:18:33.323",
+        "publication_date": "2014-01-30T11:19:33.133",
+        "submission_date": "2014-01-30T11:19:33.133",
+        "sample_ids": [
+          {
+            "label": "Sample name",
+            "value": "AE001273"
+          }
+        ],
+        "description": {
+          "title": "Sample from Chlamydia trachomatis D/UW-3/CX",
+          "organism": {
+            "tax_id": 272561,
+            "organism_name": "Chlamydia trachomatis D/UW-3/CX"
+          }
+        },
+        "owner": {
+          "name": "NCBI"
+        },
+        "models": [
+          "Generic"
+        ],
+        "bioprojects": [
+          {
+            "accession": "PRJNA45"
+          }
+        ],
+        "package": "Generic.1.0",
+        "attributes": [
+          {
+            "name": "strain",
+            "value": "D/UW-3/CX"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2014-01-30T11:19:33.133"
+        },
+        "strain": "D/UW-3/CX"
+      }
+    },
+    "assembly_stats": {
+      "total_number_of_chromosomes": 1,
+      "total_sequence_length": "1042519",
+      "total_ungapped_length": "1042519",
+      "number_of_contigs": 1,
+      "contig_n50": 1042519,
+      "contig_l50": 1,
+      "number_of_scaffolds": 1,
+      "scaffold_n50": 1042519,
+      "scaffold_l50": 1,
+      "number_of_component_sequences": 1,
+      "atgc_count": "1042519",
+      "gc_count": "430636",
+      "gc_percent": 41.5
+    },
+    "annotation_info": {
+      "name": "Annotation submitted by NCBI RefSeq",
+      "provider": "NCBI RefSeq",
+      "release_date": "2016-08-03",
+      "stats": {
+        "gene_counts": {
+          "total": 935,
+          "protein_coding": 887,
+          "non_coding": 45,
+          "pseudogene": 3
+        }
+      }
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Chlamydia trachomatis",
+      "checkm_species_tax_id": 813,
+      "checkm_marker_set_rank": "species",
+      "checkm_version": "v1.2.4",
+      "completeness": 98.98,
+      "contamination": 2.22,
+      "completeness_percentile": 90.3382
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "species_match",
+      "submitted_organism": "Chlamydia trachomatis D/UW-3/CX",
+      "submitted_species": "Chlamydia trachomatis",
+      "category": "category_na",
+      "submitted_ani_match": {
+        "assembly": "GCA_000012125.1",
+        "organism_name": "Chlamydia trachomatis A/HAR-13",
+        "category": "type",
+        "ani": 99.6,
+        "assembly_coverage": 99.88,
+        "type_assembly_coverage": 98.98
+      },
+      "best_ani_match": {
+        "assembly": "GCA_000012125.1",
+        "organism_name": "Chlamydia trachomatis",
+        "category": "type",
+        "ani": 99.6,
+        "assembly_coverage": 99.88,
+        "type_assembly_coverage": 98.98
+      },
+      "comment": "na"
+    }
+  }
+}

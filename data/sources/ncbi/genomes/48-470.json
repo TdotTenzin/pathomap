@@ -1,0 +1,211 @@
+{
+  "tax_id": 470,
+  "query": "?filters.reference_only=true",
+  "selected": {
+    "accession": "GCF_009035845.1",
+    "current_accession": "GCF_009035845.1",
+    "paired_accession": "GCA_009035845.1",
+    "source_database": "SOURCE_DATABASE_REFSEQ",
+    "organism": {
+      "tax_id": 470,
+      "organism_name": "Acinetobacter baumannii",
+      "infraspecific_names": {
+        "strain": "ATCC 19606"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Complete Genome",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCA_009035845.1",
+        "status": "current",
+        "annotation_name": "Annotation submitted by University of Technology Sydney"
+      },
+      "assembly_name": "ASM903584v1",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJNA557095",
+              "title": "Acinetobacter baumannii Genome sequencing and assembly"
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJNA557095",
+      "release_date": "2019-10-16",
+      "submitter": "University of Technology Sydney",
+      "refseq_category": "reference genome",
+      "sequencing_tech": "Illumina MiSeq; Oxford Nanopore MiniION",
+      "assembly_method": "Hybrid assembly v. July-31",
+      "biosample": {
+        "accession": "SAMN12389466",
+        "last_updated": "2026-08-27T12:20:33.578",
+        "publication_date": "2019-10-09T00:00:00.000",
+        "submission_date": "2019-07-29T04:26:04.903",
+        "sample_ids": [
+          {
+            "label": "Sample name",
+            "value": "ATCC 19606"
+          },
+          {
+            "db": "SRA",
+            "value": "SRS5492515"
+          }
+        ],
+        "description": {
+          "title": "Pathogen: clinical or host-associated sample from Acinetobacter baumannii",
+          "organism": {
+            "tax_id": 470,
+            "organism_name": "Acinetobacter baumannii"
+          },
+          "comment": "Complete genome sequence of Acinetobacter baumannii ATCC 19606"
+        },
+        "owner": {
+          "name": "University of Technology Sydney",
+          "contacts": [
+            {}
+          ]
+        },
+        "models": [
+          "Pathogen.cl"
+        ],
+        "bioprojects": [
+          {
+            "accession": "PRJNA557095"
+          }
+        ],
+        "package": "Pathogen.cl.1.0",
+        "attributes": [
+          {
+            "name": "strain",
+            "value": "ATCC 19606"
+          },
+          {
+            "name": "culture_collection",
+            "value": "ATCC:19606"
+          },
+          {
+            "name": "collected_by",
+            "value": "not applicable"
+          },
+          {
+            "name": "collection_date",
+            "value": "1948"
+          },
+          {
+            "name": "geo_loc_name",
+            "value": "USA:Georgia, Atlanta"
+          },
+          {
+            "name": "host",
+            "value": "Homo sapiens"
+          },
+          {
+            "name": "host_disease",
+            "value": "UTI"
+          },
+          {
+            "name": "isolation_source",
+            "value": "urine"
+          },
+          {
+            "name": "lat_lon",
+            "value": "33.7490 N 84.3880 W"
+          },
+          {
+            "name": "type-material",
+            "value": "type strain of Acinetobacter baumannii"
+          },
+          {
+            "name": "component_organism",
+            "value": "Acinetobacter phage vB_AbaS_LC1"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2019-10-09T06:38:01.543"
+        },
+        "collected_by": "not applicable",
+        "collection_date": "1948",
+        "geo_loc_name": "USA:Georgia, Atlanta",
+        "host": "Homo sapiens",
+        "host_disease": "UTI",
+        "isolation_source": "urine",
+        "lat_lon": "33.7490 N 84.3880 W",
+        "strain": "ATCC 19606"
+      },
+      "comments": "The annotation was added by the NCBI Prokaryotic Genome Annotation Pipeline (PGAP). Information about PGAP can be found here: https://www.ncbi.nlm.nih.gov/genome/annotation_prok/"
+    },
+    "assembly_stats": {
+      "total_number_of_chromosomes": 3,
+      "total_sequence_length": "3999136",
+      "total_ungapped_length": "3999136",
+      "number_of_contigs": 3,
+      "contig_n50": 3981941,
+      "contig_l50": 1,
+      "number_of_scaffolds": 3,
+      "scaffold_n50": 3981941,
+      "scaffold_l50": 1,
+      "number_of_component_sequences": 3,
+      "atgc_count": "3999136",
+      "gc_count": "1565600",
+      "gc_percent": 39,
+      "genome_coverage": "100"
+    },
+    "annotation_info": {
+      "name": "GCF_009035845.1-RS_2026_03_31",
+      "provider": "NCBI RefSeq",
+      "release_date": "2026-03-31",
+      "stats": {
+        "gene_counts": {
+          "total": 3832,
+          "protein_coding": 3682,
+          "non_coding": 96,
+          "pseudogene": 54
+        }
+      },
+      "method": "Best-placed reference protein set; GeneMarkS-2+",
+      "pipeline": "NCBI Prokaryotic Genome Annotation Pipeline (PGAP)",
+      "software_version": "6.10"
+    },
+    "type_material": {
+      "type_label": "TYPE_MATERIAL",
+      "type_display_text": "assembly from type material"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Acinetobacter baumannii",
+      "checkm_species_tax_id": 470,
+      "checkm_marker_set_rank": "species",
+      "checkm_version": "v1.2.4",
+      "completeness": 99.52,
+      "contamination": 0.06,
+      "completeness_percentile": 35.0405
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "species_match",
+      "submitted_organism": "Acinetobacter baumannii",
+      "submitted_species": "Acinetobacter baumannii",
+      "category": "type",
+      "submitted_ani_match": {
+        "assembly": "GCA_009759685.1",
+        "organism_name": "Acinetobacter baumannii",
+        "category": "type",
+        "ani": 99.99,
+        "assembly_coverage": 99.78,
+        "type_assembly_coverage": 100
+      },
+      "best_ani_match": {
+        "assembly": "GCA_009759685.1",
+        "organism_name": "Acinetobacter baumannii",
+        "category": "type",
+        "ani": 99.99,
+        "assembly_coverage": 99.78,
+        "type_assembly_coverage": 100
+      },
+      "comment": "na"
+    }
+  }
+}

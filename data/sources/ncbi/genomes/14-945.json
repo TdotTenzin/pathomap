@@ -1,0 +1,147 @@
+{
+  "tax_id": 945,
+  "query": "?filters.reference_only=true",
+  "selected": {
+    "accession": "GCF_000013145.1",
+    "current_accession": "GCF_000013145.1",
+    "paired_accession": "GCA_000013145.1",
+    "source_database": "SOURCE_DATABASE_REFSEQ",
+    "organism": {
+      "tax_id": 205920,
+      "organism_name": "Ehrlichia chaffeensis str. Arkansas",
+      "infraspecific_names": {
+        "strain": "Arkansas"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Complete Genome",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCA_000013145.1",
+        "status": "current",
+        "annotation_name": "Annotation submitted by TIGR"
+      },
+      "assembly_name": "ASM1314v1",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJNA325",
+              "title": "Causes human monocytic ehrlichiosis"
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJNA325",
+      "release_date": "2006-02-21",
+      "submitter": "TIGR",
+      "refseq_category": "reference genome",
+      "biosample": {
+        "accession": "SAMN02604010",
+        "last_updated": "2019-06-20T16:49:42.690",
+        "publication_date": "2014-01-30T00:00:00.000",
+        "submission_date": "2014-01-30T14:54:15.233",
+        "sample_ids": [
+          {
+            "label": "Sample name",
+            "value": "CP000236"
+          }
+        ],
+        "description": {
+          "title": "Sample from Ehrlichia chaffeensis str. Arkansas",
+          "organism": {
+            "tax_id": 205920,
+            "organism_name": "Ehrlichia chaffeensis str. Arkansas"
+          }
+        },
+        "owner": {
+          "name": "NCBI"
+        },
+        "models": [
+          "Generic"
+        ],
+        "bioprojects": [
+          {
+            "accession": "PRJNA325"
+          }
+        ],
+        "package": "Generic.1.0",
+        "attributes": [
+          {
+            "name": "strain",
+            "value": "Arkansas"
+          },
+          {
+            "name": "type-material",
+            "value": "type strain of Ehrlichia chaffeensis"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2014-01-30T14:54:15.233"
+        },
+        "strain": "Arkansas"
+      }
+    },
+    "assembly_stats": {
+      "total_number_of_chromosomes": 1,
+      "total_sequence_length": "1176248",
+      "total_ungapped_length": "1176248",
+      "number_of_contigs": 1,
+      "contig_n50": 1176248,
+      "contig_l50": 1,
+      "number_of_scaffolds": 1,
+      "scaffold_n50": 1176248,
+      "scaffold_l50": 1,
+      "number_of_component_sequences": 1,
+      "atgc_count": "1176248",
+      "gc_count": "354059",
+      "gc_percent": 30
+    },
+    "annotation_info": {
+      "name": "GCF_000013145.1-RS_2025_01_08",
+      "provider": "NCBI RefSeq",
+      "release_date": "2025-01-08",
+      "stats": {
+        "gene_counts": {
+          "total": 974,
+          "protein_coding": 914,
+          "non_coding": 43,
+          "pseudogene": 17
+        }
+      },
+      "method": "Best-placed reference protein set; GeneMarkS-2+",
+      "pipeline": "NCBI Prokaryotic Genome Annotation Pipeline (PGAP)",
+      "software_version": "6.9"
+    },
+    "type_material": {
+      "type_label": "TYPE_MATERIAL",
+      "type_display_text": "assembly from type material"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Ehrlichia",
+      "checkm_species_tax_id": 945,
+      "checkm_marker_set_rank": "genus",
+      "checkm_version": "v1.2.4",
+      "completeness": 99.46,
+      "contamination": 0.25
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "below_threshold_mismatch",
+      "submitted_organism": "Ehrlichia chaffeensis str. Arkansas",
+      "submitted_species": "Ehrlichia chaffeensis",
+      "category": "type",
+      "best_ani_match": {
+        "assembly": "GCA_000632845.1",
+        "organism_name": "Ehrlichia japonica",
+        "category": "type",
+        "ani": 86.9,
+        "assembly_coverage": 61.19,
+        "type_assembly_coverage": 62.65
+      },
+      "comment": "Assembly is the type_strain, no match is expected"
+    }
+  }
+}

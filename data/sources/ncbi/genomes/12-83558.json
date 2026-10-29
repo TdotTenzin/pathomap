@@ -1,0 +1,156 @@
+{
+  "tax_id": 83558,
+  "query": "?filters.reference_only=true",
+  "selected": {
+    "accession": "GCF_000007205.1",
+    "current_accession": "GCF_000007205.1",
+    "paired_accession": "GCA_000007205.1",
+    "source_database": "SOURCE_DATABASE_REFSEQ",
+    "organism": {
+      "tax_id": 182082,
+      "organism_name": "Chlamydia pneumoniae TW-183",
+      "infraspecific_names": {
+        "strain": "TW-183"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Complete Genome",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCA_000007205.1",
+        "status": "current",
+        "annotation_name": "Annotation submitted by ALTANA Pharma"
+      },
+      "assembly_name": "ASM720v1",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJNA420",
+              "title": "Causes pharyngitis, bronchitis and pneumonitis"
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJNA420",
+      "release_date": "2003-07-25",
+      "submitter": "ALTANA Pharma",
+      "refseq_category": "reference genome",
+      "biosample": {
+        "accession": "SAMN02602979",
+        "last_updated": "2019-06-20T16:49:26.110",
+        "publication_date": "2014-01-30T00:00:00.000",
+        "submission_date": "2014-01-30T11:19:22.026",
+        "sample_ids": [
+          {
+            "label": "Sample name",
+            "value": "AE009440"
+          }
+        ],
+        "description": {
+          "title": "Sample from Chlamydia pneumoniae TW-183",
+          "organism": {
+            "tax_id": 182082,
+            "organism_name": "Chlamydia pneumoniae TW-183"
+          }
+        },
+        "owner": {
+          "name": "NCBI"
+        },
+        "models": [
+          "Generic"
+        ],
+        "bioprojects": [
+          {
+            "accession": "PRJNA420"
+          }
+        ],
+        "package": "Generic.1.0",
+        "attributes": [
+          {
+            "name": "strain",
+            "value": "TW-183"
+          },
+          {
+            "name": "biovar",
+            "value": "TWAR"
+          },
+          {
+            "name": "note",
+            "value": "type strain of Chlamydophila pneumoniae"
+          },
+          {
+            "name": "type-material",
+            "value": "type strain of Chlamydia pneumoniae"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2014-01-30T11:19:22.027"
+        },
+        "strain": "TW-183"
+      }
+    },
+    "assembly_stats": {
+      "total_number_of_chromosomes": 1,
+      "total_sequence_length": "1225935",
+      "total_ungapped_length": "1225935",
+      "number_of_contigs": 1,
+      "contig_n50": 1225935,
+      "contig_l50": 1,
+      "number_of_scaffolds": 1,
+      "scaffold_n50": 1225935,
+      "scaffold_l50": 1,
+      "number_of_component_sequences": 1,
+      "atgc_count": "1225935",
+      "gc_count": "497438",
+      "gc_percent": 40.5
+    },
+    "annotation_info": {
+      "name": "GCF_000007205.1-RS_2025_03_28",
+      "provider": "NCBI RefSeq",
+      "release_date": "2025-03-28",
+      "stats": {
+        "gene_counts": {
+          "total": 1093,
+          "protein_coding": 1039,
+          "non_coding": 44,
+          "pseudogene": 10
+        }
+      },
+      "method": "Best-placed reference protein set; GeneMarkS-2+",
+      "pipeline": "NCBI Prokaryotic Genome Annotation Pipeline (PGAP)",
+      "software_version": "6.9"
+    },
+    "type_material": {
+      "type_label": "TYPE_MATERIAL",
+      "type_display_text": "assembly from type material"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Chlamydophila pneumoniae",
+      "checkm_species_tax_id": 83558,
+      "checkm_marker_set_rank": "species",
+      "checkm_version": "v1.2.4",
+      "completeness": 98.34,
+      "contamination": 0.3,
+      "completeness_percentile": 23.5294
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "below_threshold_mismatch",
+      "submitted_organism": "Chlamydia pneumoniae TW-183",
+      "submitted_species": "Chlamydia pneumoniae",
+      "category": "type",
+      "best_ani_match": {
+        "assembly": "GCA_900239945.1",
+        "organism_name": "Chlamydia serpentis",
+        "category": "type",
+        "ani": 81.93,
+        "assembly_coverage": 58,
+        "type_assembly_coverage": 58.95
+      },
+      "comment": "Assembly is the type_strain, no match is expected"
+    }
+  }
+}

@@ -1,0 +1,239 @@
+{
+  "tax_id": 727,
+  "query": "?filters.reference_only=true",
+  "selected": {
+    "accession": "GCF_020736045.1",
+    "current_accession": "GCF_020736045.1",
+    "paired_accession": "GCA_020736045.1",
+    "source_database": "SOURCE_DATABASE_REFSEQ",
+    "organism": {
+      "tax_id": 727,
+      "organism_name": "Haemophilus influenzae",
+      "infraspecific_names": {
+        "strain": "FDAARGOS_1560"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Complete Genome",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCA_020736045.1",
+        "status": "current",
+        "annotation_name": "NCBI Prokaryotic Genome Annotation Pipeline (PGAP)"
+      },
+      "assembly_name": "ASM2073604v1",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJNA231221",
+              "title": "FDA-ARGOS is a database with public quality-controlled reference genomes for diagnostic use and regulatory science",
+              "parent_accessions": [
+                "PRJNA608517"
+              ]
+            },
+            {
+              "accession": "PRJNA608517",
+              "title": "The Lactobacillus genus, a use case for Bactopia."
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJNA231221",
+      "release_date": "2021-11-03",
+      "submitter": "US Food and Drug Administration",
+      "refseq_category": "reference genome",
+      "sequencing_tech": "Pacbio; Illumina",
+      "assembly_method": "SMRT v. 9.0.0, HGAP v. 4.0",
+      "biosample": {
+        "accession": "SAMN22091657",
+        "last_updated": "2026-08-27T14:28:06.136",
+        "publication_date": "2021-10-06T00:00:00.000",
+        "submission_date": "2021-10-06T15:31:04.913",
+        "sample_ids": [
+          {
+            "label": "Sample name",
+            "value": "FDAARGOS_1560"
+          },
+          {
+            "db": "SRA",
+            "value": "SRS11211577"
+          }
+        ],
+        "description": {
+          "title": "Pathogen: clinical or host-associated sample from Haemophilus influenzae",
+          "organism": {
+            "tax_id": 727,
+            "organism_name": "Haemophilus influenzae"
+          },
+          "comment": "DSM 4690"
+        },
+        "owner": {
+          "name": "FDA-ARGOS Database"
+        },
+        "models": [
+          "Pathogen.cl"
+        ],
+        "bioprojects": [
+          {
+            "accession": "PRJNA231221"
+          }
+        ],
+        "package": "Pathogen.cl.1.0",
+        "attributes": [
+          {
+            "name": "strain",
+            "value": "FDAARGOS_1560"
+          },
+          {
+            "name": "collected_by",
+            "value": "missing"
+          },
+          {
+            "name": "collection_date",
+            "value": "missing"
+          },
+          {
+            "name": "geo_loc_name",
+            "value": "Germany: Braunschweig"
+          },
+          {
+            "name": "isolation_source",
+            "value": "missing"
+          },
+          {
+            "name": "lat_lon",
+            "value": "not applicable"
+          },
+          {
+            "name": "culture_collection",
+            "value": "DSM:4690"
+          },
+          {
+            "name": "host",
+            "value": "missing"
+          },
+          {
+            "name": "host_age",
+            "value": "missing"
+          },
+          {
+            "name": "host_description",
+            "value": "not applicable"
+          },
+          {
+            "name": "host_disease",
+            "value": "missing"
+          },
+          {
+            "name": "host_disease_outcome",
+            "value": "missing"
+          },
+          {
+            "name": "host_disease_stage",
+            "value": "missing"
+          },
+          {
+            "name": "host_health_state",
+            "value": "missing"
+          },
+          {
+            "name": "host_sex",
+            "value": "missing"
+          },
+          {
+            "name": "identification method",
+            "value": "Phenotypic and Molecular Methods"
+          },
+          {
+            "name": "type-material",
+            "value": "type strain of Haemophilus influenzae"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2021-10-06T15:31:04.915"
+        },
+        "collected_by": "missing",
+        "collection_date": "missing",
+        "geo_loc_name": "Germany: Braunschweig",
+        "host": "missing",
+        "host_disease": "missing",
+        "isolation_source": "missing",
+        "lat_lon": "not applicable",
+        "strain": "FDAARGOS_1560"
+      },
+      "comments": "The annotation was added by the NCBI Prokaryotic Genome Annotation Pipeline (PGAP). Information about PGAP can be found here: https://www.ncbi.nlm.nih.gov/genome/annotation_prok/"
+    },
+    "assembly_stats": {
+      "total_number_of_chromosomes": 1,
+      "total_sequence_length": "1890662",
+      "total_ungapped_length": "1890662",
+      "number_of_contigs": 1,
+      "contig_n50": 1890662,
+      "contig_l50": 1,
+      "number_of_scaffolds": 1,
+      "scaffold_n50": 1890662,
+      "scaffold_l50": 1,
+      "number_of_component_sequences": 1,
+      "atgc_count": "1890662",
+      "gc_count": "722706",
+      "gc_percent": 38,
+      "genome_coverage": "3327.27"
+    },
+    "annotation_info": {
+      "name": "GCF_020736045.1-RS_2025_12_09",
+      "provider": "NCBI RefSeq",
+      "release_date": "2025-12-09",
+      "stats": {
+        "gene_counts": {
+          "total": 1888,
+          "protein_coding": 1756,
+          "non_coding": 82,
+          "pseudogene": 50
+        }
+      },
+      "method": "Best-placed reference protein set; GeneMarkS-2+",
+      "pipeline": "NCBI Prokaryotic Genome Annotation Pipeline (PGAP)",
+      "software_version": "6.10"
+    },
+    "type_material": {
+      "type_label": "TYPE_MATERIAL",
+      "type_display_text": "assembly from type material"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Haemophilus influenzae",
+      "checkm_species_tax_id": 727,
+      "checkm_marker_set_rank": "species",
+      "checkm_version": "v1.2.4",
+      "completeness": 99.29,
+      "contamination": 0.02,
+      "completeness_percentile": 52.381
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "species_match",
+      "submitted_organism": "Haemophilus influenzae",
+      "submitted_species": "Haemophilus influenzae",
+      "category": "type",
+      "submitted_ani_match": {
+        "assembly": "GCA_001457655.1",
+        "organism_name": "Haemophilus influenzae",
+        "category": "type",
+        "ani": 99.99,
+        "assembly_coverage": 100,
+        "type_assembly_coverage": 100
+      },
+      "best_ani_match": {
+        "assembly": "GCA_001457655.1",
+        "organism_name": "Haemophilus influenzae",
+        "category": "type",
+        "ani": 99.99,
+        "assembly_coverage": 100,
+        "type_assembly_coverage": 100
+      },
+      "comment": "na"
+    }
+  }
+}

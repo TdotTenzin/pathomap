@@ -1,0 +1,148 @@
+{
+  "tax_id": 948,
+  "query": "reference_only+refseq",
+  "evaluated_refseq": true,
+  "selected": {
+    "accession": "GCF_000013125.1",
+    "current_accession": "GCF_000013125.1",
+    "paired_accession": "GCA_000013125.1",
+    "source_database": "SOURCE_DATABASE_REFSEQ",
+    "organism": {
+      "tax_id": 212042,
+      "organism_name": "Anaplasma phagocytophilum str. HZ",
+      "infraspecific_names": {
+        "strain": "HZ"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Complete Genome",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCA_000013125.1",
+        "status": "current",
+        "annotation_name": "Annotation submitted by TIGR"
+      },
+      "assembly_name": "ASM1312v1",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJNA336",
+              "title": "Obligate intracellular pathogen that causes human granulocytic anaplasmosis"
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJNA336",
+      "release_date": "2006-02-21",
+      "submitter": "TIGR",
+      "biosample": {
+        "accession": "SAMN02604015",
+        "last_updated": "2015-05-18T13:20:01.083",
+        "publication_date": "2014-01-30T14:54:15.787",
+        "submission_date": "2014-01-30T14:54:15.787",
+        "sample_ids": [
+          {
+            "label": "Sample name",
+            "value": "CP000235"
+          }
+        ],
+        "description": {
+          "title": "Sample from Anaplasma phagocytophilum str. HZ",
+          "organism": {
+            "tax_id": 212042,
+            "organism_name": "Anaplasma phagocytophilum str. HZ"
+          }
+        },
+        "owner": {
+          "name": "NCBI"
+        },
+        "models": [
+          "Generic"
+        ],
+        "bioprojects": [
+          {
+            "accession": "PRJNA336"
+          }
+        ],
+        "package": "Generic.1.0",
+        "attributes": [
+          {
+            "name": "strain",
+            "value": "HZ"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2014-01-30T14:54:15.787"
+        },
+        "strain": "HZ"
+      }
+    },
+    "assembly_stats": {
+      "total_number_of_chromosomes": 1,
+      "total_sequence_length": "1471282",
+      "total_ungapped_length": "1471282",
+      "number_of_contigs": 1,
+      "contig_n50": 1471282,
+      "contig_l50": 1,
+      "number_of_scaffolds": 1,
+      "scaffold_n50": 1471282,
+      "scaffold_l50": 1,
+      "number_of_component_sequences": 1,
+      "atgc_count": "1471282",
+      "gc_count": "612582",
+      "gc_percent": 41.5
+    },
+    "annotation_info": {
+      "name": "GCF_000013125.1-RS_2025_01_08",
+      "provider": "NCBI RefSeq",
+      "release_date": "2025-01-08",
+      "stats": {
+        "gene_counts": {
+          "total": 1161,
+          "protein_coding": 1017,
+          "non_coding": 44,
+          "pseudogene": 100
+        }
+      },
+      "method": "Best-placed reference protein set; GeneMarkS-2+",
+      "pipeline": "NCBI Prokaryotic Genome Annotation Pipeline (PGAP)",
+      "software_version": "6.9"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Anaplasma",
+      "checkm_species_tax_id": 948,
+      "checkm_marker_set_rank": "genus",
+      "checkm_version": "v1.2.4",
+      "completeness": 98.59,
+      "contamination": 2.13,
+      "completeness_percentile": 79.5455
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "species_match",
+      "submitted_organism": "Anaplasma phagocytophilum str. HZ",
+      "submitted_species": "Anaplasma phagocytophilum",
+      "category": "category_na",
+      "submitted_ani_match": {
+        "assembly": "GCA_000964685.1",
+        "organism_name": "Anaplasma phagocytophilum str. Webster",
+        "category": "type",
+        "ani": 99.74,
+        "assembly_coverage": 99.14,
+        "type_assembly_coverage": 98.59
+      },
+      "best_ani_match": {
+        "assembly": "GCA_000964685.1",
+        "organism_name": "Anaplasma phagocytophilum",
+        "category": "type",
+        "ani": 99.74,
+        "assembly_coverage": 99.14,
+        "type_assembly_coverage": 98.59
+      },
+      "comment": "na"
+    }
+  }
+}

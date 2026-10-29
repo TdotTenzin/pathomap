@@ -1,0 +1,179 @@
+{
+  "tax_id": 235,
+  "query": "reference_only+refseq",
+  "evaluated_refseq": true,
+  "selected": {
+    "accession": "GCF_000740135.1",
+    "current_accession": "GCF_000740135.1",
+    "paired_accession": "GCA_000740135.1",
+    "source_database": "SOURCE_DATABASE_REFSEQ",
+    "organism": {
+      "tax_id": 235,
+      "organism_name": "Brucella abortus",
+      "infraspecific_names": {
+        "strain": "BDW"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Complete Genome",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCA_000740135.1",
+        "status": "current",
+        "annotation_name": "Annotation submitted by Los Alamos National Laboratory"
+      },
+      "assembly_name": "ASM74013v1",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJNA243872",
+              "title": "Brucella abortus strain:BDW Genome sequencing"
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJNA243872",
+      "release_date": "2014-08-15",
+      "submitter": "Los Alamos National Laboratory",
+      "sequencing_tech": "Illumina; 454",
+      "assembly_method": "Newbler v. 2.6; Velvet v. 1.2.08; Allpaths v. 39750; Phrap v. SPS - 4.24",
+      "biosample": {
+        "accession": "SAMN02767917",
+        "last_updated": "2026-08-30T02:28:48.671",
+        "publication_date": "2014-08-16T00:00:00.000",
+        "submission_date": "2014-05-08T13:08:45.936",
+        "sample_ids": [
+          {
+            "label": "Sample name",
+            "value": "BDW"
+          }
+        ],
+        "description": {
+          "title": "Microbe sample from Brucella abortus",
+          "organism": {
+            "tax_id": 235,
+            "organism_name": "Brucella abortus"
+          }
+        },
+        "owner": {
+          "name": "Los Alamos National Laboratory",
+          "contacts": [
+            {}
+          ]
+        },
+        "models": [
+          "Microbe, viral or environmental"
+        ],
+        "bioprojects": [
+          {
+            "accession": "PRJNA243872"
+          }
+        ],
+        "package": "Microbe.1.0",
+        "attributes": [
+          {
+            "name": "strain",
+            "value": "BDW"
+          },
+          {
+            "name": "collection_date",
+            "value": "missing"
+          },
+          {
+            "name": "geo_loc_name",
+            "value": "missing"
+          },
+          {
+            "name": "isolation_source",
+            "value": "missing"
+          },
+          {
+            "name": "biomaterial_provider",
+            "value": "USAMRIID"
+          },
+          {
+            "name": "sample_type",
+            "value": "missing"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2014-08-16T06:52:04.887"
+        },
+        "biomaterial_provider": "USAMRIID",
+        "collection_date": "missing",
+        "geo_loc_name": "missing",
+        "isolation_source": "missing",
+        "strain": "BDW"
+      },
+      "comments": "Source DNA available from USAMRIID\nThe annotation was added by the NCBI Prokaryotic Genome Annotation Pipeline (PGAP). Information about PGAP can be found here: https://www.ncbi.nlm.nih.gov/genome/annotation_prok/"
+    },
+    "assembly_stats": {
+      "total_number_of_chromosomes": 2,
+      "total_sequence_length": "3289500",
+      "total_ungapped_length": "3289500",
+      "number_of_contigs": 2,
+      "contig_n50": 2128683,
+      "contig_l50": 1,
+      "number_of_scaffolds": 2,
+      "scaffold_n50": 2128683,
+      "scaffold_l50": 1,
+      "number_of_component_sequences": 2,
+      "atgc_count": "3289498",
+      "gc_count": "1882030",
+      "gc_percent": 57,
+      "genome_coverage": "161"
+    },
+    "annotation_info": {
+      "name": "GCF_000740135.1-RS_2026_01_15",
+      "provider": "NCBI RefSeq",
+      "release_date": "2026-01-15",
+      "stats": {
+        "gene_counts": {
+          "total": 3239,
+          "protein_coding": 2995,
+          "non_coding": 68,
+          "pseudogene": 176
+        }
+      },
+      "method": "Best-placed reference protein set; GeneMarkS-2+",
+      "pipeline": "NCBI Prokaryotic Genome Annotation Pipeline (PGAP)",
+      "software_version": "6.10"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Brucella abortus",
+      "checkm_species_tax_id": 235,
+      "checkm_marker_set_rank": "species",
+      "checkm_version": "v1.2.4",
+      "completeness": 98.88,
+      "contamination": 0.64,
+      "completeness_percentile": 89.1648
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "species_match",
+      "submitted_organism": "Brucella abortus",
+      "submitted_species": "Brucella abortus",
+      "category": "category_na",
+      "submitted_ani_match": {
+        "assembly": "GCA_900446005.1",
+        "organism_name": "Brucella abortus",
+        "category": "type",
+        "ani": 99.97,
+        "assembly_coverage": 99.67,
+        "type_assembly_coverage": 99.91
+      },
+      "best_ani_match": {
+        "assembly": "GCA_900446005.1",
+        "organism_name": "Brucella abortus",
+        "category": "type",
+        "ani": 99.97,
+        "assembly_coverage": 99.67,
+        "type_assembly_coverage": 99.91
+      },
+      "comment": "na"
+    }
+  }
+}

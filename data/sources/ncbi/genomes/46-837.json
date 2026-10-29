@@ -1,0 +1,155 @@
+{
+  "tax_id": 837,
+  "query": "?filters.reference_only=true",
+  "selected": {
+    "accession": "GCF_000010505.1",
+    "current_accession": "GCF_000010505.1",
+    "paired_accession": "GCA_000010505.1",
+    "source_database": "SOURCE_DATABASE_REFSEQ",
+    "organism": {
+      "tax_id": 431947,
+      "organism_name": "Porphyromonas gingivalis ATCC 33277",
+      "infraspecific_names": {
+        "strain": "ATCC 33277"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Complete Genome",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCA_000010505.1",
+        "status": "current",
+        "annotation_name": "Annotation submitted by Kitasato University"
+      },
+      "assembly_name": "ASM1050v1",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJDA19051",
+              "title": "Associated with severe and chronic periodontal disease"
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJDA19051",
+      "release_date": "2008-05-20",
+      "submitter": "Kitasato University",
+      "refseq_category": "reference genome",
+      "biosample": {
+        "accession": "SAMD00060922",
+        "last_updated": "2020-08-20T20:44:27.000",
+        "publication_date": "2016-09-27T00:00:00.000",
+        "submission_date": "2016-09-28T01:00:29.610",
+        "description": {
+          "title": "Generic sample from Porphyromonas gingivalis ATCC 33277",
+          "organism": {
+            "tax_id": 431947,
+            "organism_name": "Porphyromonas gingivalis ATCC 33277"
+          }
+        },
+        "owner": {
+          "name": "DDBJ"
+        },
+        "models": [
+          "Generic"
+        ],
+        "bioprojects": [
+          {
+            "accession": "PRJDA19051"
+          }
+        ],
+        "package": "Generic.1.0",
+        "attributes": [
+          {
+            "name": "sample_name",
+            "value": "AP009380"
+          },
+          {
+            "name": "strain",
+            "value": "ATCC 33277"
+          },
+          {
+            "name": "type-material",
+            "value": "type strain of Bacteroides gingivalis"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2016-09-28T01:00:29.610"
+        },
+        "sample_name": "AP009380",
+        "strain": "ATCC 33277"
+      }
+    },
+    "assembly_stats": {
+      "total_number_of_chromosomes": 1,
+      "total_sequence_length": "2354886",
+      "total_ungapped_length": "2354886",
+      "number_of_contigs": 1,
+      "contig_n50": 2354886,
+      "contig_l50": 1,
+      "number_of_scaffolds": 1,
+      "scaffold_n50": 2354886,
+      "scaffold_l50": 1,
+      "number_of_component_sequences": 1,
+      "atgc_count": "2354886",
+      "gc_count": "1138806",
+      "gc_percent": 48.5
+    },
+    "annotation_info": {
+      "name": "GCF_000010505.1-RS_2024_12_09",
+      "provider": "NCBI RefSeq",
+      "release_date": "2024-12-09",
+      "stats": {
+        "gene_counts": {
+          "total": 2097,
+          "protein_coding": 1943,
+          "non_coding": 67,
+          "pseudogene": 87
+        }
+      },
+      "method": "Best-placed reference protein set; GeneMarkS-2+",
+      "pipeline": "NCBI Prokaryotic Genome Annotation Pipeline (PGAP)",
+      "software_version": "6.9"
+    },
+    "type_material": {
+      "type_label": "TYPE_MATERIAL",
+      "type_display_text": "assembly from type material"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Porphyromonas gingivalis",
+      "checkm_species_tax_id": 837,
+      "checkm_marker_set_rank": "species",
+      "checkm_version": "v1.2.4",
+      "completeness": 98,
+      "contamination": 0.55,
+      "completeness_percentile": 21.0526
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "species_match",
+      "submitted_organism": "Porphyromonas gingivalis ATCC 33277",
+      "submitted_species": "Porphyromonas gingivalis",
+      "category": "type",
+      "submitted_ani_match": {
+        "assembly": "GCA_002892575.1",
+        "organism_name": "Porphyromonas gingivalis ATCC 33277",
+        "category": "type",
+        "ani": 99.99,
+        "assembly_coverage": 99.54,
+        "type_assembly_coverage": 98.5
+      },
+      "best_ani_match": {
+        "assembly": "GCA_002892575.1",
+        "organism_name": "Porphyromonas gingivalis",
+        "category": "type",
+        "ani": 99.99,
+        "assembly_coverage": 99.54,
+        "type_assembly_coverage": 98.5
+      },
+      "comment": "na"
+    }
+  }
+}

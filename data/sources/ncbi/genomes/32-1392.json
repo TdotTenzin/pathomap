@@ -1,0 +1,159 @@
+{
+  "tax_id": 1392,
+  "query": "?filters.reference_only=true",
+  "selected": {
+    "accession": "GCF_000008445.1",
+    "current_accession": "GCF_000008445.1",
+    "paired_accession": "GCA_000008445.1",
+    "source_database": "SOURCE_DATABASE_REFSEQ",
+    "organism": {
+      "tax_id": 261594,
+      "organism_name": "Bacillus anthracis str. 'Ames Ancestor'",
+      "infraspecific_names": {
+        "strain": "Ames Ancestor; A2084"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Complete Genome",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCA_000008445.1",
+        "status": "current",
+        "annotation_name": "Annotation submitted by J. Craig Venter Institute"
+      },
+      "assembly_name": "ASM844v1",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJNA10784",
+              "title": "Endospore-forming bacteria that causes anthrax and is gold standard for comparative genomics",
+              "parent_accessions": [
+                "PRJNA13641"
+              ]
+            },
+            {
+              "accession": "PRJNA13641",
+              "title": "Comparison of virulent and avirulent Bacillus genomes"
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJNA10784",
+      "release_date": "2004-07-09",
+      "submitter": "J. Craig Venter Institute",
+      "refseq_category": "reference genome",
+      "biosample": {
+        "accession": "SAMN02603433",
+        "last_updated": "2015-05-18T13:18:45.757",
+        "publication_date": "2014-01-30T14:21:29.580",
+        "submission_date": "2014-01-30T14:21:29.580",
+        "sample_ids": [
+          {
+            "label": "Sample name",
+            "value": "AE017334"
+          }
+        ],
+        "description": {
+          "title": "Sample from Bacillus anthracis str. 'Ames Ancestor'",
+          "organism": {
+            "tax_id": 261594,
+            "organism_name": "Bacillus anthracis str. 'Ames Ancestor'"
+          }
+        },
+        "owner": {
+          "name": "NCBI"
+        },
+        "models": [
+          "Generic"
+        ],
+        "bioprojects": [
+          {
+            "accession": "PRJNA10784"
+          }
+        ],
+        "package": "Generic.1.0",
+        "attributes": [
+          {
+            "name": "strain",
+            "value": "Ames Ancestor; A2084"
+          },
+          {
+            "name": "note",
+            "value": "MLVA types GT62 and A3.b"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2014-01-30T14:21:29.580"
+        },
+        "strain": "Ames Ancestor; A2084"
+      }
+    },
+    "assembly_stats": {
+      "total_number_of_chromosomes": 3,
+      "total_sequence_length": "5503926",
+      "total_ungapped_length": "5503926",
+      "number_of_contigs": 3,
+      "contig_n50": 5227419,
+      "contig_l50": 1,
+      "number_of_scaffolds": 3,
+      "scaffold_n50": 5227419,
+      "scaffold_l50": 1,
+      "number_of_component_sequences": 3,
+      "atgc_count": "5503926",
+      "gc_count": "1939746",
+      "gc_percent": 35
+    },
+    "annotation_info": {
+      "name": "GCF_000008445.1-RS_2025_03_27",
+      "provider": "NCBI RefSeq",
+      "release_date": "2025-03-27",
+      "stats": {
+        "gene_counts": {
+          "total": 5763,
+          "protein_coding": 5234,
+          "non_coding": 133,
+          "pseudogene": 396
+        }
+      },
+      "method": "Best-placed reference protein set; GeneMarkS-2+",
+      "pipeline": "NCBI Prokaryotic Genome Annotation Pipeline (PGAP)",
+      "software_version": "6.9"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Bacillus anthracis",
+      "checkm_species_tax_id": 1392,
+      "checkm_marker_set_rank": "species",
+      "checkm_version": "v1.2.4",
+      "completeness": 98.76,
+      "contamination": 0.48,
+      "completeness_percentile": 80.2671
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "species_match",
+      "submitted_organism": "Bacillus anthracis str. 'Ames Ancestor'",
+      "submitted_species": "Bacillus anthracis",
+      "category": "category_na",
+      "submitted_ani_match": {
+        "assembly": "GCA_022221345.1",
+        "organism_name": "Bacillus anthracis",
+        "category": "suspected_type",
+        "ani": 99.97,
+        "assembly_coverage": 99.97,
+        "type_assembly_coverage": 99.93
+      },
+      "best_ani_match": {
+        "assembly": "GCA_022221345.1",
+        "organism_name": "Bacillus anthracis",
+        "category": "suspected_type",
+        "ani": 99.97,
+        "assembly_coverage": 99.97,
+        "type_assembly_coverage": 99.93
+      },
+      "comment": "na"
+    }
+  }
+}

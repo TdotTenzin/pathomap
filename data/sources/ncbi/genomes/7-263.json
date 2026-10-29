@@ -1,0 +1,178 @@
+{
+  "tax_id": 263,
+  "query": "?filters.reference_only=true",
+  "selected": {
+    "accession": "GCF_000833355.1",
+    "current_accession": "GCF_000833355.1",
+    "paired_accession": "GCA_000833355.1",
+    "source_database": "SOURCE_DATABASE_REFSEQ",
+    "organism": {
+      "tax_id": 1450527,
+      "organism_name": "Francisella tularensis subsp. novicida D9876",
+      "infraspecific_names": {
+        "strain": "D9876"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Complete Genome",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCA_000833355.1",
+        "status": "current",
+        "annotation_name": "Annotation submitted by Los Alamos National Laboratory"
+      },
+      "assembly_name": "ASM83335v1",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJNA235892",
+              "title": "Francisella tularensis subsp. novicida D9876 Genome sequencing"
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJNA235892",
+      "release_date": "2015-02-06",
+      "submitter": "Los Alamos National Laboratory",
+      "refseq_category": "reference genome",
+      "sequencing_tech": "Illumina; 454",
+      "assembly_method": "Newbler v. 2.6; Velvet v. 1.2.08; Allpaths v. 44837; Phrap v. SPS - 4.24",
+      "biosample": {
+        "accession": "SAMN03092276",
+        "last_updated": "2026-08-30T02:40:24.910",
+        "publication_date": "2014-10-02T00:00:00.000",
+        "submission_date": "2014-10-02T11:30:05.266",
+        "sample_ids": [
+          {
+            "label": "Sample name",
+            "value": "FAD"
+          },
+          {
+            "db": "SRA",
+            "value": "SRS1040901"
+          }
+        ],
+        "description": {
+          "title": "Microbe sample Francisella tularensis subsp. novicida D9876 GA99-3548",
+          "organism": {
+            "tax_id": 1450527,
+            "organism_name": "Francisella tularensis subsp. novicida D9876"
+          }
+        },
+        "owner": {
+          "name": "Los Alamos National Laboratory",
+          "contacts": [
+            {}
+          ]
+        },
+        "models": [
+          "Microbe, viral or environmental"
+        ],
+        "bioprojects": [
+          {
+            "accession": "PRJNA235892"
+          }
+        ],
+        "package": "Microbe.1.0",
+        "attributes": [
+          {
+            "name": "strain",
+            "value": "D9876"
+          },
+          {
+            "name": "collection_date",
+            "value": "missing"
+          },
+          {
+            "name": "geo_loc_name",
+            "value": "USA: LA"
+          },
+          {
+            "name": "isolation_source",
+            "value": "lymph node"
+          },
+          {
+            "name": "sample_type",
+            "value": "missing"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2014-10-02T11:30:05.267"
+        },
+        "collection_date": "missing",
+        "geo_loc_name": "USA: LA",
+        "isolation_source": "lymph node",
+        "strain": "D9876"
+      },
+      "comments": "The DNA was obtained from USAMRIID\nThe annotation was added by the NCBI Prokaryotic Genome Annotation Pipeline (PGAP). Information about PGAP can be found here: https://www.ncbi.nlm.nih.gov/genome/annotation_prok/"
+    },
+    "assembly_stats": {
+      "total_number_of_chromosomes": 1,
+      "total_sequence_length": "1870206",
+      "total_ungapped_length": "1870206",
+      "number_of_contigs": 1,
+      "contig_n50": 1870206,
+      "contig_l50": 1,
+      "number_of_scaffolds": 1,
+      "scaffold_n50": 1870206,
+      "scaffold_l50": 1,
+      "number_of_component_sequences": 1,
+      "atgc_count": "1870206",
+      "gc_count": "607411",
+      "gc_percent": 32.5,
+      "genome_coverage": "340"
+    },
+    "annotation_info": {
+      "name": "GCF_000833355.1-RS_2025_11_20",
+      "provider": "NCBI RefSeq",
+      "release_date": "2025-11-20",
+      "stats": {
+        "gene_counts": {
+          "total": 1814,
+          "protein_coding": 1734,
+          "non_coding": 52,
+          "pseudogene": 28
+        }
+      },
+      "method": "Best-placed reference protein set; GeneMarkS-2+",
+      "pipeline": "NCBI Prokaryotic Genome Annotation Pipeline (PGAP)",
+      "software_version": "6.10"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Francisella tularensis",
+      "checkm_species_tax_id": 263,
+      "checkm_marker_set_rank": "species",
+      "checkm_version": "v1.2.4",
+      "completeness": 99.59,
+      "contamination": 0.84,
+      "completeness_percentile": 99.8968
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "derived_species_match",
+      "submitted_organism": "Francisella tularensis subsp. novicida D9876",
+      "submitted_species": "Francisella tularensis",
+      "category": "category_na",
+      "submitted_ani_match": {
+        "assembly": "GCA_000014645.1",
+        "organism_name": "Francisella tularensis subsp. novicida U112",
+        "category": "type",
+        "ani": 98.64,
+        "assembly_coverage": 93.68,
+        "type_assembly_coverage": 91.73
+      },
+      "best_ani_match": {
+        "assembly": "GCA_000014645.1",
+        "organism_name": "Francisella tularensis",
+        "category": "type",
+        "ani": 98.64,
+        "assembly_coverage": 93.68,
+        "type_assembly_coverage": 91.73
+      },
+      "comment": "na"
+    }
+  }
+}

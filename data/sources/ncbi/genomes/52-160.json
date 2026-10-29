@@ -1,0 +1,156 @@
+{
+  "tax_id": 160,
+  "query": "reference_only+refseq",
+  "evaluated_refseq": true,
+  "selected": {
+    "accession": "GCF_000008605.1",
+    "current_accession": "GCF_000008605.1",
+    "paired_accession": "GCA_000008605.1",
+    "source_database": "SOURCE_DATABASE_REFSEQ",
+    "organism": {
+      "tax_id": 243276,
+      "organism_name": "Treponema pallidum subsp. pallidum str. Nichols",
+      "infraspecific_names": {
+        "strain": "Nichols"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Complete Genome",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCA_000008605.1",
+        "status": "current",
+        "annotation_name": "Annotation submitted by US DOE Joint Genome Institute (JGI-PGF)"
+      },
+      "assembly_name": "ASM860v1",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJNA5",
+              "title": "Causative agent of syphilis"
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJNA5",
+      "release_date": "1999-12-22",
+      "submitter": "US DOE Joint Genome Institute (JGI-PGF)",
+      "biosample": {
+        "accession": "SAMN02604348",
+        "last_updated": "2026-06-21T02:06:18.188",
+        "publication_date": "2014-01-30T00:00:00.000",
+        "submission_date": "2014-01-30T15:13:26.630",
+        "sample_ids": [
+          {
+            "label": "Sample name",
+            "value": "AE000520"
+          }
+        ],
+        "description": {
+          "title": "Sample from Treponema pallidum subsp. pallidum str. Nichols",
+          "organism": {
+            "tax_id": 243276,
+            "organism_name": "Treponema pallidum subsp. pallidum str. Nichols"
+          }
+        },
+        "owner": {
+          "name": "NCBI"
+        },
+        "models": [
+          "Generic"
+        ],
+        "bioprojects": [
+          {
+            "accession": "PRJNA5"
+          }
+        ],
+        "package": "Generic.1.0",
+        "attributes": [
+          {
+            "name": "strain",
+            "value": "Nichols"
+          },
+          {
+            "name": "type-material",
+            "value": "type strain of Treponema pallidum"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2014-01-30T15:13:26.630"
+        },
+        "strain": "Nichols"
+      }
+    },
+    "assembly_stats": {
+      "total_number_of_chromosomes": 1,
+      "total_sequence_length": "1138011",
+      "total_ungapped_length": "1138011",
+      "number_of_contigs": 1,
+      "contig_n50": 1138011,
+      "contig_l50": 1,
+      "number_of_scaffolds": 1,
+      "scaffold_n50": 1138011,
+      "scaffold_l50": 1,
+      "number_of_component_sequences": 1,
+      "atgc_count": "1137944",
+      "gc_count": "600552",
+      "gc_percent": 53
+    },
+    "annotation_info": {
+      "name": "GCF_000008605.1-RS_2025_03_02",
+      "provider": "NCBI RefSeq",
+      "release_date": "2025-03-02",
+      "stats": {
+        "gene_counts": {
+          "total": 1062,
+          "protein_coding": 986,
+          "non_coding": 54,
+          "pseudogene": 22
+        }
+      },
+      "method": "Best-placed reference protein set; GeneMarkS-2+",
+      "pipeline": "NCBI Prokaryotic Genome Annotation Pipeline (PGAP)",
+      "software_version": "6.9"
+    },
+    "type_material": {
+      "type_label": "TYPE_MATERIAL",
+      "type_display_text": "assembly from type material"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Treponema pallidum",
+      "checkm_species_tax_id": 160,
+      "checkm_marker_set_rank": "species",
+      "checkm_version": "v1.2.4",
+      "completeness": 98.28,
+      "contamination": 1.43,
+      "completeness_percentile": 22.9787
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "derived_species_match",
+      "submitted_organism": "Treponema pallidum subsp. pallidum str. Nichols",
+      "submitted_species": "Treponema pallidum",
+      "category": "type",
+      "submitted_ani_match": {
+        "assembly": "GCA_000410535.2",
+        "organism_name": "Treponema pallidum subsp. pallidum str. Nichols",
+        "category": "type",
+        "ani": 99.97,
+        "assembly_coverage": 99.99,
+        "type_assembly_coverage": 99.85
+      },
+      "best_ani_match": {
+        "assembly": "GCA_000410535.2",
+        "organism_name": "Treponema pallidum",
+        "category": "type",
+        "ani": 99.97,
+        "assembly_coverage": 99.99,
+        "type_assembly_coverage": 99.85
+      },
+      "comment": "na"
+    }
+  }
+}

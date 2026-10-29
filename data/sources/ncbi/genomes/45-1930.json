@@ -1,0 +1,197 @@
+{
+  "tax_id": 1930,
+  "query": "reference_only+refseq",
+  "evaluated_refseq": true,
+  "selected": {
+    "accession": "GCF_000091305.1",
+    "current_accession": "GCF_000091305.1",
+    "paired_accession": "GCA_000091305.1",
+    "source_database": "SOURCE_DATABASE_REFSEQ",
+    "organism": {
+      "tax_id": 680198,
+      "organism_name": "Streptomyces scabiei 87.22",
+      "infraspecific_names": {
+        "strain": "87.22"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Complete Genome",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCA_000091305.1",
+        "status": "current",
+        "annotation_name": "Annotation submitted by Wellcome Trust Sanger Institute"
+      },
+      "assembly_name": "ASM9130v1",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJEA40749",
+              "title": "Streptomyces scabiei 87.22 genome sequencing"
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJEA40749",
+      "release_date": "2009-10-06",
+      "submitter": "Wellcome Trust Sanger Institute",
+      "biosample": {
+        "accession": "SAMEA2272773",
+        "last_updated": "2021-08-20T06:56:29.000",
+        "publication_date": "2013-12-19T00:00:00.000",
+        "submission_date": "2013-12-20T12:44:00.253",
+        "sample_ids": [
+          {
+            "db": "SRA",
+            "value": "ERS380170"
+          }
+        ],
+        "description": {
+          "title": "BioSample entry for genome collection GCA_000091305",
+          "organism": {
+            "tax_id": 680198,
+            "organism_name": "Streptomyces scabiei 87.22"
+          }
+        },
+        "owner": {
+          "name": "EBI"
+        },
+        "models": [
+          "Generic"
+        ],
+        "package": "Generic.1.0",
+        "attributes": [
+          {
+            "name": "ENA-CHECKLIST",
+            "value": "ERC000011"
+          },
+          {
+            "name": "ENA-FIRST-PUBLIC",
+            "value": "2013-12-19"
+          },
+          {
+            "name": "ENA-LAST-UPDATE",
+            "value": "2013-12-09"
+          },
+          {
+            "name": "External Id",
+            "value": "SAMEA2272773"
+          },
+          {
+            "name": "INSDC center alias",
+            "value": "EBI"
+          },
+          {
+            "name": "INSDC center name",
+            "value": "European Bioinformatics Institute"
+          },
+          {
+            "name": "INSDC first public",
+            "value": "2013-12-19T12:09:22Z"
+          },
+          {
+            "name": "INSDC last update",
+            "value": "2013-12-09T15:24:13Z"
+          },
+          {
+            "name": "INSDC status",
+            "value": "public"
+          },
+          {
+            "name": "strain",
+            "value": "87.22"
+          },
+          {
+            "name": "Submitter Id",
+            "value": "GCA_000091305"
+          },
+          {
+            "name": "broker name",
+            "value": "European Nucleotide Archive"
+          },
+          {
+            "name": "individual_name",
+            "value": "GCA_000091305"
+          },
+          {
+            "name": "sample_name",
+            "value": "GCA_000091305"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2015-03-02T06:57:02.277"
+        },
+        "sample_name": "GCA_000091305",
+        "strain": "87.22"
+      },
+      "comments": "The annotation was added by the NCBI Prokaryotic Genome Annotation Pipeline (PGAP). Information about PGAP can be found here: https://www.ncbi.nlm.nih.gov/genome/annotation_prok/"
+    },
+    "assembly_stats": {
+      "total_number_of_chromosomes": 1,
+      "total_sequence_length": "10148695",
+      "total_ungapped_length": "10148695",
+      "number_of_contigs": 1,
+      "contig_n50": 10148695,
+      "contig_l50": 1,
+      "number_of_scaffolds": 1,
+      "scaffold_n50": 10148695,
+      "scaffold_l50": 1,
+      "number_of_component_sequences": 1,
+      "atgc_count": "10148695",
+      "gc_count": "7251530",
+      "gc_percent": 71.5
+    },
+    "annotation_info": {
+      "name": "GCF_000091305.1-RS_2025_12_12",
+      "provider": "NCBI RefSeq",
+      "release_date": "2025-12-12",
+      "stats": {
+        "gene_counts": {
+          "total": 8908,
+          "protein_coding": 8605,
+          "non_coding": 94,
+          "pseudogene": 209
+        }
+      },
+      "method": "Best-placed reference protein set; GeneMarkS-2+",
+      "pipeline": "NCBI Prokaryotic Genome Annotation Pipeline (PGAP)",
+      "software_version": "6.10"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Streptomyces",
+      "checkm_species_tax_id": 1930,
+      "checkm_marker_set_rank": "genus",
+      "checkm_version": "v1.2.4",
+      "completeness": 100,
+      "contamination": 0.76,
+      "completeness_percentile": 62.1622
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "species_match",
+      "submitted_organism": "Streptomyces scabiei 87.22",
+      "submitted_species": "Streptomyces scabiei",
+      "category": "category_na",
+      "submitted_ani_match": {
+        "assembly": "GCA_051172975.1",
+        "organism_name": "Streptomyces scabiei",
+        "category": "type",
+        "ani": 99.48,
+        "assembly_coverage": 94.03,
+        "type_assembly_coverage": 94.65
+      },
+      "best_ani_match": {
+        "assembly": "GCA_051172975.1",
+        "organism_name": "Streptomyces scabiei",
+        "category": "type",
+        "ani": 99.48,
+        "assembly_coverage": 94.03,
+        "type_assembly_coverage": 94.65
+      },
+      "comment": "na"
+    }
+  }
+}

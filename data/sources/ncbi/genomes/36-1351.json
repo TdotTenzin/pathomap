@@ -1,0 +1,173 @@
+{
+  "tax_id": 1351,
+  "query": "reference_only+refseq",
+  "evaluated_refseq": true,
+  "selected": {
+    "accession": "GCF_006494835.1",
+    "current_accession": "GCF_006494835.1",
+    "paired_accession": "GCA_006494835.1",
+    "source_database": "SOURCE_DATABASE_REFSEQ",
+    "organism": {
+      "tax_id": 1351,
+      "organism_name": "Enterococcus faecalis",
+      "infraspecific_names": {
+        "strain": "VE14089"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Complete Genome",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCA_006494835.1",
+        "status": "current"
+      },
+      "assembly_name": "ASM649483v1",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJNA532354",
+              "title": "Enterococcus faecalis strain:VE14089 Genome sequencing"
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJNA532354",
+      "release_date": "2019-06-27",
+      "submitter": "INRA Jouy-en-Josas",
+      "sequencing_tech": "SOLiD",
+      "assembly_method": "Tablet v. 01-2013",
+      "biosample": {
+        "accession": "SAMN11397621",
+        "last_updated": "2021-02-28T07:12:58.671",
+        "publication_date": "2019-06-29T00:00:00.000",
+        "submission_date": "2019-04-11T10:07:04.883",
+        "sample_ids": [
+          {
+            "label": "Sample name",
+            "value": "Enterococcus faecalis strain VE14089"
+          }
+        ],
+        "description": {
+          "title": "Microbe sample from Enterococcus faecalis",
+          "organism": {
+            "tax_id": 1351,
+            "organism_name": "Enterococcus faecalis"
+          }
+        },
+        "owner": {
+          "name": "INRA Jouy-en-Josas",
+          "contacts": [
+            {}
+          ]
+        },
+        "models": [
+          "Microbe, viral or environmental"
+        ],
+        "package": "Microbe.1.0",
+        "attributes": [
+          {
+            "name": "strain",
+            "value": "VE14089"
+          },
+          {
+            "name": "host",
+            "value": "Homo sapiens"
+          },
+          {
+            "name": "isolation_source",
+            "value": "blood"
+          },
+          {
+            "name": "collection_date",
+            "value": "2004-07"
+          },
+          {
+            "name": "geo_loc_name",
+            "value": "France"
+          },
+          {
+            "name": "sample_type",
+            "value": "Bacteria"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2019-06-29T00:37:56.020"
+        },
+        "collection_date": "2004-07",
+        "geo_loc_name": "France",
+        "host": "Homo sapiens",
+        "isolation_source": "blood",
+        "strain": "VE14089"
+      },
+      "comments": "Bacteria and source DNA available from L. Rigottier-Gois, UMR Micalis, INRA Jouy-en-Josas, France\nThe annotation was added by the NCBI Prokaryotic Genome Annotation Pipeline (PGAP). Information about PGAP can be found here: https://www.ncbi.nlm.nih.gov/genome/annotation_prok/"
+    },
+    "assembly_stats": {
+      "total_number_of_chromosomes": 1,
+      "total_sequence_length": "3238854",
+      "total_ungapped_length": "3238854",
+      "number_of_contigs": 1,
+      "contig_n50": 3238854,
+      "contig_l50": 1,
+      "number_of_scaffolds": 1,
+      "scaffold_n50": 3238854,
+      "scaffold_l50": 1,
+      "number_of_component_sequences": 1,
+      "atgc_count": "3238854",
+      "gc_count": "1214336",
+      "gc_percent": 37.5,
+      "genome_coverage": "12"
+    },
+    "annotation_info": {
+      "name": "GCF_006494835.1-RS_2025_09_08",
+      "provider": "NCBI RefSeq",
+      "release_date": "2025-09-08",
+      "stats": {
+        "gene_counts": {
+          "total": 3224,
+          "protein_coding": 3082,
+          "non_coding": 83,
+          "pseudogene": 59
+        }
+      },
+      "method": "Best-placed reference protein set; GeneMarkS-2+",
+      "pipeline": "NCBI Prokaryotic Genome Annotation Pipeline (PGAP)",
+      "software_version": "6.10"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Enterococcus faecalis",
+      "checkm_species_tax_id": 1351,
+      "checkm_marker_set_rank": "species",
+      "checkm_version": "v1.2.4",
+      "completeness": 99.33,
+      "contamination": 0.22,
+      "completeness_percentile": 38.0826
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "species_match",
+      "submitted_organism": "Enterococcus faecalis",
+      "submitted_species": "Enterococcus faecalis",
+      "category": "category_na",
+      "submitted_ani_match": {
+        "assembly": "GCA_022869705.1",
+        "organism_name": "Enterococcus faecalis",
+        "category": "type",
+        "ani": 99.01,
+        "assembly_coverage": 80.25,
+        "type_assembly_coverage": 90.66
+      },
+      "best_ani_match": {
+        "assembly": "GCA_022869705.1",
+        "organism_name": "Enterococcus faecalis",
+        "category": "type",
+        "ani": 99.01,
+        "assembly_coverage": 80.25,
+        "type_assembly_coverage": 90.66
+      },
+      "comment": "na"
+    }
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "tax_id": 1765,
+  "query": "?filters.assembly_source=refseq",
+  "selected": {
+    "accession": "GCF_005156105.1",
+    "current_accession": "GCF_005156105.1",
+    "paired_accession": "GCA_005156105.1",
+    "source_database": "SOURCE_DATABASE_REFSEQ",
+    "organism": {
+      "tax_id": 1765,
+      "organism_name": "Mycobacterium tuberculosis variant bovis",
+      "infraspecific_names": {
+        "strain": "Danish 1331"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Complete Genome",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCA_005156105.1",
+        "status": "current",
+        "annotation_name": "Annotation submitted by Academia Sinica"
+      },
+      "assembly_name": "ASM515610v1",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJNA494982",
+              "title": "Mycobacterium tuberculosis variant bovis Genome sequencing and assembly"
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJNA494982",
+      "release_date": "2019-05-06",
+      "submitter": "Academia Sinica",
+      "sequencing_tech": "Illumina MiSeq; PacBio RSII",
+      "assembly_method": "SPAdes v. 3.9.0",
+      "biosample": {
+        "accession": "SAMN10219708",
+        "last_updated": "2019-04-30T12:09:31.486",
+        "publication_date": "2019-02-25T00:00:00.000",
+        "submission_date": "2018-10-09T03:10:07.713",
+        "sample_ids": [
+          {
+            "label": "Sample name",
+            "value": "Mycobacterium bovis BCG Danish 1331 (NIBSC 07/270)"
+          },
+          {
+            "db": "SRA",
+            "value": "SRS3890342"
+          }
+        ],
+        "description": {
+          "title": "Danish 1331 WT",
+          "organism": {
+            "tax_id": 1765,
+            "organism_name": "Mycobacterium tuberculosis variant bovis"
+          },
+          "comment": "Keywords: GSC:MIxS;MIGS:6.0"
+        },
+        "owner": {
+          "name": "Academia Sinica",
+          "contacts": [
+            {}
+          ]
+        },
+        "models": [
+          "MIGS.ba"
+        ],
+        "bioprojects": [
+          {
+            "accession": "PRJNA494982"
+          }
+        ],
+        "package": "MIGS.ba.6.0",
+        "attributes": [
+          {
+            "name": "strain",
+            "value": "Danish 1331"
+          },
+          {
+            "name": "collection_date",
+            "value": "2016"
+          },
+          {
+            "name": "env_broad_scale",
+            "value": "area of developed space"
+          },
+          {
+            "name": "env_local_scale",
+            "value": "single strain cell culture"
+          },
+          {
+            "name": "env_medium",
+            "value": "cultured cell population"
+          },
+          {
+            "name": "geo_loc_name",
+            "value": "Belgium: Ghent"
+          },
+          {
+            "name": "isol_growth_condt",
+            "value": "PMID: 9921466"
+          },
+          {
+            "name": "lat_lon",
+            "value": "51.3 N 3.44 E"
+          },
+          {
+            "name": "num_replicons",
+            "value": "1"
+          },
+          {
+            "name": "ref_biomaterial",
+            "value": "WHO/BS/09.2114"
+          },
+          {
+            "name": "sample_type",
+            "value": "bacterial culture"
+          },
+          {
+            "name": "age",
+            "value": "4 day culture"
+          },
+          {
+            "name": "analyte_type",
+            "value": "DNA"
+          },
+          {
+            "name": "growth_med",
+            "value": "Middlebrook 7H9 broth (Difco) supplemented with 0.05% Tween-80 and Middlebrook OADC"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2019-02-25T01:50:03.987"
+        },
+        "age": "4 day culture",
+        "collection_date": "2016",
+        "geo_loc_name": "Belgium: Ghent",
+        "lat_lon": "51.3 N 3.44 E",
+        "strain": "Danish 1331"
+      },
+      "comments": "Bacteria and source DNA available from NIBSC 07-270\nThe annotation was added by the NCBI Prokaryotic Genome Annotation Pipeline (PGAP). Information about PGAP can be found here: https://www.ncbi.nlm.nih.gov/genome/annotation_prok/"
+    },
+    "assembly_stats": {
+      "total_number_of_chromosomes": 1,
+      "total_sequence_length": "4411814",
+      "total_ungapped_length": "4411814",
+      "number_of_contigs": 1,
+      "contig_n50": 4411814,
+      "contig_l50": 1,
+      "number_of_scaffolds": 1,
+      "scaffold_n50": 4411814,
+      "scaffold_l50": 1,
+      "number_of_component_sequences": 1,
+      "atgc_count": "4411814",
+      "gc_count": "2896512",
+      "gc_percent": 65.5,
+      "genome_coverage": "290"
+    },
+    "annotation_info": {
+      "name": "GCF_005156105.1-RS_2025_04_25",
+      "provider": "NCBI RefSeq",
+      "release_date": "2025-04-25",
+      "stats": {
+        "gene_counts": {
+          "total": 4145,
+          "protein_coding": 3857,
+          "non_coding": 51,
+          "pseudogene": 237
+        }
+      },
+      "method": "Best-placed reference protein set; GeneMarkS-2+",
+      "pipeline": "NCBI Prokaryotic Genome Annotation Pipeline (PGAP)",
+      "software_version": "6.10"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Mycobacterium tuberculosis",
+      "checkm_species_tax_id": 1773,
+      "checkm_marker_set_rank": "species",
+      "checkm_version": "v1.2.3",
+      "completeness": 95.5,
+      "contamination": 2.84,
+      "completeness_percentile": 5.65516
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "species_match",
+      "submitted_organism": "Mycobacterium tuberculosis variant bovis",
+      "submitted_species": "Mycobacterium tuberculosis",
+      "category": "category_na",
+      "submitted_ani_match": {
+        "assembly": "GCA_002982225.1",
+        "organism_name": "Mycobacterium tuberculosis variant caprae",
+        "category": "type",
+        "ani": 99.9,
+        "assembly_coverage": 96.04,
+        "type_assembly_coverage": 98.43
+      },
+      "best_ani_match": {
+        "assembly": "GCA_002982225.1",
+        "organism_name": "Mycobacterium tuberculosis",
+        "category": "type",
+        "ani": 99.9,
+        "assembly_coverage": 96.04,
+        "type_assembly_coverage": 98.43
+      },
+      "comment": "na"
+    }
+  }
+}

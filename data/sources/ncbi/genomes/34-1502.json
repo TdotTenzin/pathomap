@@ -1,0 +1,244 @@
+{
+  "tax_id": 1502,
+  "query": "?filters.reference_only=true",
+  "selected": {
+    "accession": "GCF_016027375.1",
+    "current_accession": "GCF_016027375.1",
+    "paired_accession": "GCA_016027375.1",
+    "source_database": "SOURCE_DATABASE_REFSEQ",
+    "organism": {
+      "tax_id": 1502,
+      "organism_name": "Clostridium perfringens",
+      "infraspecific_names": {
+        "strain": "FDAARGOS_903"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Complete Genome",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCA_016027375.1",
+        "status": "current",
+        "annotation_name": "NCBI Prokaryotic Genome Annotation Pipeline (PGAP)"
+      },
+      "assembly_name": "ASM1602737v1",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJNA231221",
+              "title": "FDA-ARGOS is a database with public quality-controlled reference genomes for diagnostic use and regulatory science",
+              "parent_accessions": [
+                "PRJNA608517"
+              ]
+            },
+            {
+              "accession": "PRJNA608517",
+              "title": "The Lactobacillus genus, a use case for Bactopia."
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJNA231221",
+      "release_date": "2020-12-14",
+      "submitter": "US Food and Drug Administration",
+      "refseq_category": "reference genome",
+      "sequencing_tech": "Pacbio; Illumina",
+      "assembly_method": "SMRT v. 6.0.0, HGAP v. 4",
+      "biosample": {
+        "accession": "SAMN13450433",
+        "last_updated": "2026-08-27T12:31:42.913",
+        "publication_date": "2019-12-02T00:00:00.000",
+        "submission_date": "2019-12-02T16:17:06.830",
+        "sample_ids": [
+          {
+            "label": "Sample name",
+            "value": "FDAARGOS_903"
+          },
+          {
+            "db": "SRA",
+            "value": "SRS6866235"
+          }
+        ],
+        "description": {
+          "title": "Pathogen: clinical or host-associated sample from Clostridium perfringens",
+          "organism": {
+            "tax_id": 1502,
+            "organism_name": "Clostridium perfringens"
+          },
+          "comment": "DSM 756"
+        },
+        "owner": {
+          "name": "FDA-ARGOS Database"
+        },
+        "models": [
+          "Pathogen.cl"
+        ],
+        "bioprojects": [
+          {
+            "accession": "PRJNA231221"
+          }
+        ],
+        "package": "Pathogen.cl.1.0",
+        "attributes": [
+          {
+            "name": "strain",
+            "value": "FDAARGOS_903"
+          },
+          {
+            "name": "isolate",
+            "value": "not applicable"
+          },
+          {
+            "name": "collected_by",
+            "value": "DSMZ"
+          },
+          {
+            "name": "collection_date",
+            "value": "missing"
+          },
+          {
+            "name": "geo_loc_name",
+            "value": "not applicable"
+          },
+          {
+            "name": "isolation_source",
+            "value": "missing"
+          },
+          {
+            "name": "lat_lon",
+            "value": "not applicable"
+          },
+          {
+            "name": "culture_collection",
+            "value": "DSM:756"
+          },
+          {
+            "name": "host",
+            "value": "missing"
+          },
+          {
+            "name": "host_age",
+            "value": "missing"
+          },
+          {
+            "name": "host_description",
+            "value": "not applicable"
+          },
+          {
+            "name": "host_disease",
+            "value": "missing"
+          },
+          {
+            "name": "host_disease_outcome",
+            "value": "missing"
+          },
+          {
+            "name": "host_disease_stage",
+            "value": "missing"
+          },
+          {
+            "name": "host_health_state",
+            "value": "missing"
+          },
+          {
+            "name": "host_sex",
+            "value": "missing"
+          },
+          {
+            "name": "identification method",
+            "value": "Phenotypic and Molecular Methods"
+          },
+          {
+            "name": "type-material",
+            "value": "type strain of Clostridium perfringens"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2019-12-02T16:17:06.833"
+        },
+        "collected_by": "DSMZ",
+        "collection_date": "missing",
+        "geo_loc_name": "not applicable",
+        "host": "missing",
+        "host_disease": "missing",
+        "isolate": "not applicable",
+        "isolation_source": "missing",
+        "lat_lon": "not applicable",
+        "strain": "FDAARGOS_903"
+      },
+      "comments": "The annotation was added by the NCBI Prokaryotic Genome Annotation Pipeline (PGAP). Information about PGAP can be found here: https://www.ncbi.nlm.nih.gov/genome/annotation_prok/"
+    },
+    "assembly_stats": {
+      "total_number_of_chromosomes": 2,
+      "total_sequence_length": "3355233",
+      "total_ungapped_length": "3355233",
+      "number_of_contigs": 2,
+      "contig_n50": 3300922,
+      "contig_l50": 1,
+      "number_of_scaffolds": 2,
+      "scaffold_n50": 3300922,
+      "scaffold_l50": 1,
+      "number_of_component_sequences": 2,
+      "atgc_count": "3355233",
+      "gc_count": "950678",
+      "gc_percent": 28.5,
+      "genome_coverage": "949.94"
+    },
+    "annotation_info": {
+      "name": "GCF_016027375.1-RS_2025_12_21",
+      "provider": "NCBI RefSeq",
+      "release_date": "2025-12-21",
+      "stats": {
+        "gene_counts": {
+          "total": 3064,
+          "protein_coding": 2906,
+          "non_coding": 128,
+          "pseudogene": 30
+        }
+      },
+      "method": "Best-placed reference protein set; GeneMarkS-2+",
+      "pipeline": "NCBI Prokaryotic Genome Annotation Pipeline (PGAP)",
+      "software_version": "6.10"
+    },
+    "type_material": {
+      "type_label": "TYPE_MATERIAL",
+      "type_display_text": "assembly from type material"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Clostridium perfringens",
+      "checkm_species_tax_id": 1502,
+      "checkm_marker_set_rank": "species",
+      "checkm_version": "v1.2.4",
+      "completeness": 96.42,
+      "contamination": 3.85,
+      "completeness_percentile": 43.1278
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "species_match",
+      "submitted_organism": "Clostridium perfringens",
+      "submitted_species": "Clostridium perfringens",
+      "category": "type",
+      "submitted_ani_match": {
+        "assembly": "GCA_000013285.1",
+        "organism_name": "Clostridium perfringens ATCC 13124",
+        "category": "type",
+        "ani": 99.08,
+        "assembly_coverage": 90.83,
+        "type_assembly_coverage": 93.58
+      },
+      "best_ani_match": {
+        "assembly": "GCA_000013285.1",
+        "organism_name": "Clostridium perfringens",
+        "category": "type",
+        "ani": 99.08,
+        "assembly_coverage": 90.83,
+        "type_assembly_coverage": 93.58
+      },
+      "comment": "na"
+    }
+  }
+}

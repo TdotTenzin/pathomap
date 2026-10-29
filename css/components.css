@@ -1,4 +1,4 @@
-﻿/* Components - Database skeleton */
+/* Components - Database skeleton */
 .db-toolbar {
   display: flex;
   align-items: center;
@@ -15,6 +15,7 @@
 }
 
 .db-tab {
+  font-family: var(--font);
   background: transparent;
   border: 1px solid transparent;
   color: var(--color-text-muted);
@@ -118,6 +119,7 @@
 .db-table {
   width: 100%;
   border-collapse: collapse;
+  font-family: var(--font);
   font-size: 0.875rem;
 }
 
@@ -126,6 +128,7 @@
 }
 
 .db-table th {
+  font-family: var(--font);
   text-align: left;
   font-weight: 600;
   color: var(--color-text);
@@ -137,6 +140,7 @@
 }
 
 .db-table td {
+  font-family: var(--font);
   padding: 10px 14px;
   border-bottom: 1px solid var(--color-border);
   color: var(--color-text);
@@ -151,14 +155,15 @@
   border-bottom: none;
 }
 
-.db-sql {
+.db-schema {
   margin-top: 16px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   background: var(--color-card);
 }
 
-.db-sql summary {
+.db-schema summary {
+  font-family: var(--font);
   padding: 10px 14px;
   cursor: pointer;
   font-size: 0.875rem;
@@ -166,22 +171,147 @@
   user-select: none;
 }
 
-.db-sql[open] summary {
+.db-schema[open] summary {
   border-bottom: 1px solid var(--color-border);
 }
 
-.db-sql pre {
-  margin: 0;
+.db-schema-body {
   padding: 14px;
   overflow-x: auto;
   background: var(--color-bg-alt);
 }
 
-.db-sql code {
+.schema-meta {
+  font-family: var(--font);
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  margin: 0 0 6px 0;
+}
+
+.schema-links {
+  font-family: var(--font);
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  margin: 0 0 12px 0;
+}
+
+.schema-table-wrap {
+  overflow-x: auto;
+}
+
+.schema-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font);
+  font-size: 0.8125rem;
+}
+
+.schema-table th {
+  text-align: left;
+  font-weight: 600;
+  color: var(--color-text);
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+
+.schema-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+  vertical-align: top;
+}
+
+.schema-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.schema-table code {
   background: transparent;
   padding: 0;
   font-size: 0.8125rem;
   color: var(--color-text);
+}
+
+.db-link {
+  color: var(--color-blue);
+  text-decoration: none;
+}
+
+.db-link:hover {
+  text-decoration: underline;
+}
+
+a.tool-btn {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* Upload */
+.db-upload-bar {
+  margin: 24px 0 18px 0;
+  padding: 16px 18px;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.db-upload-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.file-input-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.file-input-name {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.upload-input-inline {
+  font-family: var(--font);
+  font-size: 0.875rem;
+  color: var(--color-text);
+}
+
+.upload-status {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0;
+}
+
+.upload-status[data-state="success"] {
+  color: #15803d;
+}
+
+.upload-status[data-state="warning"] {
+  color: #b45309;
+}
+
+.upload-status[data-state="error"] {
+  color: #b91c1c;
+}
+
+[data-theme="dark"] .upload-status[data-state="success"] {
+  color: #4ade80;
+}
+
+[data-theme="dark"] .upload-status[data-state="warning"] {
+  color: #fbbf24;
+}
+
+[data-theme="dark"] .upload-status[data-state="error"] {
+  color: #f87171;
 }
 
 @media (max-width: 768px) {
@@ -202,4 +332,3 @@
     width: 100%;
   }
 }
-

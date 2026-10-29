@@ -1,0 +1,191 @@
+{
+  "tax_id": 520,
+  "query": "?filters.reference_only=true",
+  "selected": {
+    "accession": "GCF_004008975.1",
+    "current_accession": "GCF_004008975.1",
+    "paired_accession": "GCA_004008975.1",
+    "source_database": "SOURCE_DATABASE_REFSEQ",
+    "organism": {
+      "tax_id": 520,
+      "organism_name": "Bordetella pertussis",
+      "infraspecific_names": {
+        "strain": "H640"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Complete Genome",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCA_004008975.1",
+        "status": "current",
+        "annotation_name": "NCBI Prokaryotic Genome Annotation Pipeline (PGAP)"
+      },
+      "assembly_name": "ASM400897v1",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJNA279196",
+              "title": "Whole genome sequencing of Bordetella pertussis geographic and temporal diversity in the United States"
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJNA279196",
+      "release_date": "2019-01-09",
+      "submitter": "Centers for Disease Control and Prevention",
+      "refseq_category": "reference genome",
+      "sequencing_tech": "PacBio RSII; Illumina HiSeq",
+      "assembly_method": "HGAP v. 3",
+      "biosample": {
+        "accession": "SAMN08136977",
+        "last_updated": "2019-05-03T09:45:30.853",
+        "publication_date": "2019-01-01T00:52:43.193",
+        "submission_date": "2017-12-06T08:32:04.593",
+        "sample_ids": [
+          {
+            "label": "Sample name",
+            "value": "H640"
+          },
+          {
+            "db": "SRA",
+            "value": "SRS4717125"
+          }
+        ],
+        "description": {
+          "title": "Pathogen: clinical or host-associated sample from Bordetella pertussis",
+          "organism": {
+            "tax_id": 520,
+            "organism_name": "Bordetella pertussis"
+          }
+        },
+        "owner": {
+          "name": "Divison of Bacterial Diseases, Centers for Disease Control"
+        },
+        "models": [
+          "Pathogen.cl"
+        ],
+        "bioprojects": [
+          {
+            "accession": "PRJNA279196"
+          }
+        ],
+        "package": "Pathogen.cl.1.0",
+        "attributes": [
+          {
+            "name": "collected_by",
+            "value": "missing"
+          },
+          {
+            "name": "collection_date",
+            "value": "2010"
+          },
+          {
+            "name": "geo_loc_name",
+            "value": "USA: MI"
+          },
+          {
+            "name": "host",
+            "value": "Homo sapiens"
+          },
+          {
+            "name": "host_disease",
+            "value": "pertussis"
+          },
+          {
+            "name": "isolation_source",
+            "value": "missing"
+          },
+          {
+            "name": "lat_lon",
+            "value": "missing"
+          },
+          {
+            "name": "strain",
+            "value": "H640"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2019-01-01T00:52:43.193"
+        },
+        "collected_by": "missing",
+        "collection_date": "2010",
+        "geo_loc_name": "USA: MI",
+        "host": "Homo sapiens",
+        "host_disease": "pertussis",
+        "isolation_source": "missing",
+        "lat_lon": "missing",
+        "strain": "H640"
+      },
+      "comments": "Bacteria available from Margaret Williams\nThe annotation was added by the NCBI Prokaryotic Genome Annotation Pipeline (PGAP). Information about PGAP can be found here: https://www.ncbi.nlm.nih.gov/genome/annotation_prok/"
+    },
+    "assembly_stats": {
+      "total_number_of_chromosomes": 1,
+      "total_sequence_length": "4088701",
+      "total_ungapped_length": "4088701",
+      "number_of_contigs": 1,
+      "contig_n50": 4088701,
+      "contig_l50": 1,
+      "number_of_scaffolds": 1,
+      "scaffold_n50": 4088701,
+      "scaffold_l50": 1,
+      "number_of_component_sequences": 1,
+      "atgc_count": "4088701",
+      "gc_count": "2768936",
+      "gc_percent": 67.5,
+      "genome_coverage": "406"
+    },
+    "annotation_info": {
+      "name": "GCF_004008975.1-RS_2026_04_02",
+      "provider": "NCBI RefSeq",
+      "release_date": "2026-04-02",
+      "stats": {
+        "gene_counts": {
+          "total": 3965,
+          "protein_coding": 3625,
+          "non_coding": 64,
+          "pseudogene": 276
+        }
+      },
+      "method": "Best-placed reference protein set; GeneMarkS-2+",
+      "pipeline": "NCBI Prokaryotic Genome Annotation Pipeline (PGAP)",
+      "software_version": "6.10"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Bordetella pertussis",
+      "checkm_species_tax_id": 520,
+      "checkm_marker_set_rank": "species",
+      "checkm_version": "v1.2.5",
+      "completeness": 97.05,
+      "contamination": 0.51,
+      "completeness_percentile": 52.6017
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "species_match",
+      "submitted_organism": "Bordetella pertussis",
+      "submitted_species": "Bordetella pertussis",
+      "category": "category_na",
+      "submitted_ani_match": {
+        "assembly": "GCA_020736265.1",
+        "organism_name": "Bordetella pertussis",
+        "category": "type",
+        "ani": 99.87,
+        "assembly_coverage": 94.27,
+        "type_assembly_coverage": 94.09
+      },
+      "best_ani_match": {
+        "assembly": "GCA_020736265.1",
+        "organism_name": "Bordetella pertussis",
+        "category": "type",
+        "ani": 99.87,
+        "assembly_coverage": 94.27,
+        "type_assembly_coverage": 94.09
+      },
+      "comment": "na"
+    }
+  }
+}

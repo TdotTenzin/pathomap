@@ -1,0 +1,244 @@
+{
+  "tax_id": 38323,
+  "query": "?filters.reference_only=true",
+  "selected": {
+    "accession": "GCF_019930925.1",
+    "current_accession": "GCF_019930925.1",
+    "paired_accession": "GCA_019930925.1",
+    "source_database": "SOURCE_DATABASE_REFSEQ",
+    "organism": {
+      "tax_id": 38323,
+      "organism_name": "Bartonella henselae",
+      "infraspecific_names": {
+        "strain": "FDAARGOS_1462"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Complete Genome",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCA_019930925.1",
+        "status": "current",
+        "annotation_name": "NCBI Prokaryotic Genome Annotation Pipeline (PGAP)"
+      },
+      "assembly_name": "ASM1993092v1",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJNA231221",
+              "title": "FDA-ARGOS is a database with public quality-controlled reference genomes for diagnostic use and regulatory science",
+              "parent_accessions": [
+                "PRJNA608517"
+              ]
+            },
+            {
+              "accession": "PRJNA608517",
+              "title": "The Lactobacillus genus, a use case for Bactopia."
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJNA231221",
+      "release_date": "2021-09-12",
+      "submitter": "US Food and Drug Administration",
+      "refseq_category": "reference genome",
+      "sequencing_tech": "Pacbio; Illumina",
+      "assembly_method": "SMRT v. 9.0.0, HGAP v. 4.0",
+      "biosample": {
+        "accession": "SAMN20888879",
+        "last_updated": "2026-08-27T14:15:28.999",
+        "publication_date": "2021-08-20T00:00:00.000",
+        "submission_date": "2021-08-20T16:18:23.640",
+        "sample_ids": [
+          {
+            "label": "Sample name",
+            "value": "FDAARGOS_1462"
+          },
+          {
+            "db": "SRA",
+            "value": "SRS10498237"
+          }
+        ],
+        "description": {
+          "title": "Pathogen: clinical or host-associated sample from Bartonella henselae",
+          "organism": {
+            "tax_id": 38323,
+            "organism_name": "Bartonella henselae"
+          },
+          "comment": "DSM 28221"
+        },
+        "owner": {
+          "name": "FDA-ARGOS Database"
+        },
+        "models": [
+          "Pathogen.cl"
+        ],
+        "bioprojects": [
+          {
+            "accession": "PRJNA231221"
+          }
+        ],
+        "package": "Pathogen.cl.1.0",
+        "attributes": [
+          {
+            "name": "strain",
+            "value": "FDAARGOS_1462"
+          },
+          {
+            "name": "isolate",
+            "value": "not applicable"
+          },
+          {
+            "name": "collected_by",
+            "value": "missing"
+          },
+          {
+            "name": "collection_date",
+            "value": "missing"
+          },
+          {
+            "name": "geo_loc_name",
+            "value": "Germany: Braunschweig"
+          },
+          {
+            "name": "isolation_source",
+            "value": "missing"
+          },
+          {
+            "name": "lat_lon",
+            "value": "not applicable"
+          },
+          {
+            "name": "culture_collection",
+            "value": "DSM:28221"
+          },
+          {
+            "name": "host",
+            "value": "missing"
+          },
+          {
+            "name": "host_age",
+            "value": "missing"
+          },
+          {
+            "name": "host_description",
+            "value": "not applicable"
+          },
+          {
+            "name": "host_disease",
+            "value": "missing"
+          },
+          {
+            "name": "host_disease_outcome",
+            "value": "missing"
+          },
+          {
+            "name": "host_disease_stage",
+            "value": "missing"
+          },
+          {
+            "name": "host_health_state",
+            "value": "missing"
+          },
+          {
+            "name": "host_sex",
+            "value": "missing"
+          },
+          {
+            "name": "identification method",
+            "value": "Phenotypic and Molecular Methods"
+          },
+          {
+            "name": "type-material",
+            "value": "type strain of Rochalimaea henselae"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2021-08-20T16:18:23.642"
+        },
+        "collected_by": "missing",
+        "collection_date": "missing",
+        "geo_loc_name": "Germany: Braunschweig",
+        "host": "missing",
+        "host_disease": "missing",
+        "isolate": "not applicable",
+        "isolation_source": "missing",
+        "lat_lon": "not applicable",
+        "strain": "FDAARGOS_1462"
+      },
+      "comments": "The annotation was added by the NCBI Prokaryotic Genome Annotation Pipeline (PGAP). Information about PGAP can be found here: https://www.ncbi.nlm.nih.gov/genome/annotation_prok/"
+    },
+    "assembly_stats": {
+      "total_number_of_chromosomes": 1,
+      "total_sequence_length": "1946727",
+      "total_ungapped_length": "1946727",
+      "number_of_contigs": 1,
+      "contig_n50": 1946727,
+      "contig_l50": 1,
+      "number_of_scaffolds": 1,
+      "scaffold_n50": 1946727,
+      "scaffold_l50": 1,
+      "number_of_component_sequences": 1,
+      "atgc_count": "1946727",
+      "gc_count": "744756",
+      "gc_percent": 38.5,
+      "genome_coverage": "2944.23"
+    },
+    "annotation_info": {
+      "name": "GCF_019930925.1-RS_2025_12_09",
+      "provider": "NCBI RefSeq",
+      "release_date": "2025-12-09",
+      "stats": {
+        "gene_counts": {
+          "total": 1647,
+          "protein_coding": 1511,
+          "non_coding": 52,
+          "pseudogene": 84
+        }
+      },
+      "method": "Best-placed reference protein set; GeneMarkS-2+",
+      "pipeline": "NCBI Prokaryotic Genome Annotation Pipeline (PGAP)",
+      "software_version": "6.10"
+    },
+    "type_material": {
+      "type_label": "TYPE_MATERIAL",
+      "type_display_text": "assembly from type material"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Bartonella",
+      "checkm_species_tax_id": 38323,
+      "checkm_marker_set_rank": "genus",
+      "checkm_version": "v1.2.4",
+      "completeness": 99.95,
+      "contamination": 0.13,
+      "completeness_percentile": 41.791
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "species_match",
+      "submitted_organism": "Bartonella henselae",
+      "submitted_species": "Bartonella henselae",
+      "category": "type",
+      "submitted_ani_match": {
+        "assembly": "GCA_002735245.1",
+        "organism_name": "Bartonella henselae",
+        "category": "type",
+        "ani": 99.99,
+        "assembly_coverage": 100,
+        "type_assembly_coverage": 99.55
+      },
+      "best_ani_match": {
+        "assembly": "GCA_002735245.1",
+        "organism_name": "Bartonella henselae",
+        "category": "type",
+        "ani": 99.99,
+        "assembly_coverage": 100,
+        "type_assembly_coverage": 99.55
+      },
+      "comment": "na"
+    }
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "tax_id": 781,
+  "query": "?filters.reference_only=true",
+  "selected": {
+    "accession": "GCF_000007025.1",
+    "current_accession": "GCF_000007025.1",
+    "paired_accession": "GCA_000007025.1",
+    "source_database": "SOURCE_DATABASE_REFSEQ",
+    "organism": {
+      "tax_id": 272944,
+      "organism_name": "Rickettsia conorii str. Malish 7",
+      "infraspecific_names": {
+        "strain": "Malish 7"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Complete Genome",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCA_000007025.1",
+        "status": "current",
+        "annotation_name": "Annotation submitted by CNRS"
+      },
+      "assembly_name": "ASM702v1",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJNA42",
+              "title": "Obligate intracellular pathogen that causes Rocky Mountain Spotted Fever"
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJNA42",
+      "release_date": "2002-11-25",
+      "submitter": "CNRS",
+      "refseq_category": "reference genome",
+      "biosample": {
+        "accession": "SAMN02603141",
+        "last_updated": "2019-06-20T16:49:28.949",
+        "publication_date": "2014-01-30T00:00:00.000",
+        "submission_date": "2014-01-30T11:19:35.876",
+        "sample_ids": [
+          {
+            "label": "Sample name",
+            "value": "AE006914"
+          }
+        ],
+        "description": {
+          "title": "Sample from Rickettsia conorii str. Malish 7",
+          "organism": {
+            "tax_id": 272944,
+            "organism_name": "Rickettsia conorii str. Malish 7"
+          }
+        },
+        "owner": {
+          "name": "NCBI"
+        },
+        "models": [
+          "Generic"
+        ],
+        "bioprojects": [
+          {
+            "accession": "PRJNA42"
+          }
+        ],
+        "package": "Generic.1.0",
+        "attributes": [
+          {
+            "name": "strain",
+            "value": "Malish 7"
+          },
+          {
+            "name": "type-material",
+            "value": "type strain of Rickettsia conorii"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2014-01-30T11:19:35.877"
+        },
+        "strain": "Malish 7"
+      }
+    },
+    "assembly_stats": {
+      "total_number_of_chromosomes": 1,
+      "total_sequence_length": "1268755",
+      "total_ungapped_length": "1268755",
+      "number_of_contigs": 1,
+      "contig_n50": 1268755,
+      "contig_l50": 1,
+      "number_of_scaffolds": 1,
+      "scaffold_n50": 1268755,
+      "scaffold_l50": 1,
+      "number_of_component_sequences": 1,
+      "atgc_count": "1268755",
+      "gc_count": "411569",
+      "gc_percent": 32.5
+    },
+    "annotation_info": {
+      "name": "GCF_000007025.1-RS_2025_01_08",
+      "provider": "NCBI RefSeq",
+      "release_date": "2025-01-08",
+      "stats": {
+        "gene_counts": {
+          "total": 1468,
+          "protein_coding": 1331,
+          "non_coding": 40,
+          "pseudogene": 97
+        }
+      },
+      "method": "Best-placed reference protein set; GeneMarkS-2+",
+      "pipeline": "NCBI Prokaryotic Genome Annotation Pipeline (PGAP)",
+      "software_version": "6.9"
+    },
+    "type_material": {
+      "type_label": "TYPE_MATERIAL",
+      "type_display_text": "assembly from type material"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Rickettsia",
+      "checkm_species_tax_id": 781,
+      "checkm_marker_set_rank": "genus",
+      "checkm_version": "v1.2.4",
+      "completeness": 99.86,
+      "contamination": 0.23,
+      "completeness_percentile": 99.2126
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "derived_species_match",
+      "submitted_organism": "Rickettsia conorii str. Malish 7",
+      "submitted_species": "Rickettsia conorii",
+      "category": "suspected_type",
+      "submitted_ani_match": {
+        "assembly": "GCA_000261325.1",
+        "organism_name": "Rickettsia conorii subsp. caspia A-167",
+        "category": "suspected_type",
+        "ani": 99.12,
+        "assembly_coverage": 98.62,
+        "type_assembly_coverage": 99.28
+      },
+      "best_ani_match": {
+        "assembly": "GCA_000261325.1",
+        "organism_name": "Rickettsia conorii",
+        "category": "suspected_type",
+        "ani": 99.12,
+        "assembly_coverage": 98.62,
+        "type_assembly_coverage": 99.28
+      },
+      "comment": "na"
+    }
+  }
+}

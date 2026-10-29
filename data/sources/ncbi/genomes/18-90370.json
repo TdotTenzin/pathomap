@@ -1,0 +1,160 @@
+{
+  "tax_id": 90370,
+  "query": "?filters.assembly_source=refseq",
+  "selected": {
+    "accession": "GCF_000007545.1",
+    "current_accession": "GCF_000007545.1",
+    "paired_accession": "GCA_000007545.1",
+    "source_database": "SOURCE_DATABASE_REFSEQ",
+    "organism": {
+      "tax_id": 209261,
+      "organism_name": "Salmonella enterica subsp. enterica serovar Typhi str. Ty2",
+      "infraspecific_names": {
+        "strain": "Ty2"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Complete Genome",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCA_000007545.1",
+        "status": "current",
+        "annotation_name": "Annotation submitted by Univ. Wisconsin"
+      },
+      "assembly_name": "ASM754v1",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJNA371",
+              "title": "Human-specific Salmonella that causes Typhoid fever"
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJNA371",
+      "release_date": "2003-03-21",
+      "submitter": "Univ. Wisconsin",
+      "biosample": {
+        "accession": "SAMN02604095",
+        "last_updated": "2026-06-21T02:06:16.875",
+        "publication_date": "2014-01-30T00:00:00.000",
+        "submission_date": "2014-01-30T14:54:21.563",
+        "sample_ids": [
+          {
+            "label": "Sample name",
+            "value": "AE014613"
+          }
+        ],
+        "description": {
+          "title": "Sample from Salmonella enterica subsp. enterica serovar Typhi str. Ty2",
+          "organism": {
+            "tax_id": 209261,
+            "organism_name": "Salmonella enterica subsp. enterica serovar Typhi str. Ty2"
+          }
+        },
+        "owner": {
+          "name": "NCBI"
+        },
+        "models": [
+          "Generic"
+        ],
+        "bioprojects": [
+          {
+            "accession": "PRJNA371"
+          }
+        ],
+        "package": "Generic.1.0",
+        "attributes": [
+          {
+            "name": "strain",
+            "value": "Ty2"
+          },
+          {
+            "name": "serovar",
+            "value": "Typhi"
+          },
+          {
+            "name": "type-material",
+            "value": "type strain of Salmonella typhi"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2014-01-30T14:54:21.563"
+        },
+        "serovar": "Typhi",
+        "strain": "Ty2"
+      }
+    },
+    "assembly_stats": {
+      "total_number_of_chromosomes": 1,
+      "total_sequence_length": "4791961",
+      "total_ungapped_length": "4791961",
+      "number_of_contigs": 1,
+      "contig_n50": 4791961,
+      "contig_l50": 1,
+      "number_of_scaffolds": 1,
+      "scaffold_n50": 4791961,
+      "scaffold_l50": 1,
+      "number_of_component_sequences": 1,
+      "atgc_count": "4791950",
+      "gc_count": "2494291",
+      "gc_percent": 52
+    },
+    "annotation_info": {
+      "name": "GCF_000007545.1-RS_2024_06_26",
+      "provider": "NCBI RefSeq",
+      "release_date": "2024-06-26",
+      "stats": {
+        "gene_counts": {
+          "total": 4707,
+          "protein_coding": 4280,
+          "non_coding": 111,
+          "pseudogene": 316
+        }
+      },
+      "method": "Best-placed reference protein set; GeneMarkS-2+",
+      "pipeline": "NCBI Prokaryotic Genome Annotation Pipeline (PGAP)",
+      "software_version": "6.7"
+    },
+    "type_material": {
+      "type_label": "TYPE_MATERIAL_SYN",
+      "type_display_text": "assembly from heterotypic synonym type material"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Salmonella enterica",
+      "checkm_species_tax_id": 28901,
+      "checkm_marker_set_rank": "species",
+      "checkm_version": "v1.2.4",
+      "completeness": 98.63,
+      "contamination": 0.45,
+      "completeness_percentile": 11.8635
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "derived_species_match",
+      "submitted_organism": "Salmonella enterica subsp. enterica serovar Typhi str. Ty2",
+      "submitted_species": "Salmonella enterica",
+      "category": "synonym",
+      "submitted_ani_match": {
+        "assembly": "GCA_000006945.2",
+        "organism_name": "Salmonella enterica subsp. enterica serovar Typhimurium str. LT2",
+        "category": "type",
+        "ani": 98.5,
+        "assembly_coverage": 90.07,
+        "type_assembly_coverage": 87.17
+      },
+      "best_ani_match": {
+        "assembly": "GCA_000006945.2",
+        "organism_name": "Salmonella enterica",
+        "category": "type",
+        "ani": 98.5,
+        "assembly_coverage": 90.07,
+        "type_assembly_coverage": 87.17
+      },
+      "comment": "na"
+    }
+  }
+}
