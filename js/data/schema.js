@@ -1,5 +1,7 @@
+// Current schema version for the PathoMap dataset
 export const SCHEMA_VERSION = '2.0';
 
+// Valid values for gram stain classification
 export const GRAM_STAIN_VALUES = [
   'Gram-positive',
   'Gram-negative',
@@ -7,6 +9,7 @@ export const GRAM_STAIN_VALUES = [
   'unknown',
 ];
 
+// Valid values for intracellular survival strategies
 export const STRATEGY_VALUES = [
   'arrest',
   'escape',
@@ -16,6 +19,7 @@ export const STRATEGY_VALUES = [
   'unknown',
 ];
 
+// Valid values for genome assembly completeness levels
 export const ASSEMBLY_LEVEL_VALUES = [
   'Complete Genome',
   'Chromosome',
@@ -24,8 +28,10 @@ export const ASSEMBLY_LEVEL_VALUES = [
   'unknown',
 ];
 
+// Valid values for curation status
 export const CURATION_STATUS_VALUES = ['curated', 'needs_review'];
 
+// Metadata for all columns in the pathogens table
 export const COLUMN_META = [
   {
     key: 'pathogen_id',
@@ -183,12 +189,15 @@ export const COLUMN_META = [
   },
 ];
 
+// Map column keys to their display labels
 export const COLUMN_LABELS = Object.fromEntries(
   COLUMN_META.map((column) => [column.key, column.label])
 );
 
+// Array of all column keys in order
 export const PATHOGEN_COLUMNS = COLUMN_META.map((column) => column.key);
 
+// Columns to display in the main table view
 export const VISIBLE_COLUMNS = [
   'name',
   'species',
@@ -200,6 +209,7 @@ export const VISIBLE_COLUMNS = [
   'reference_doi',
 ];
 
+// Enum values keyed by their column names
 export const ENUMS = {
   gram_stain: GRAM_STAIN_VALUES,
   strategy: STRATEGY_VALUES,

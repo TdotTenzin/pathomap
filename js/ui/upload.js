@@ -2,8 +2,10 @@ import { DEFAULT_DATASET_URL, loadDataset, setDataset } from '../data/loader.js'
 import { SCHEMA_VERSION } from '../data/schema.js';
 import { validateDataset } from '../utils/dataset.js';
 
+// Callback to re-render the database view after data changes
 let renderCallback = () => {};
 
+// Set the status message in the upload UI
 export function setUploadStatus(message, state = '') {
   const el = document.getElementById('dataset-status');
   if (!el) return;
@@ -15,11 +17,13 @@ export function setUploadStatus(message, state = '') {
   }
 }
 
+// Generate a suffix message for validation warnings
 function warningSuffix(warnings) {
   if (!warnings.length) return '';
   return ` ${warnings.length} warning${warnings.length === 1 ? '' : 's'}.`;
 }
 
+// Validate and apply new dataset data
 function applyData(data, sourceLabel) {
   const result = validateDataset(data);
   if (!result.valid) {
@@ -41,6 +45,7 @@ function applyData(data, sourceLabel) {
   return true;
 }
 
+// Download a text blob as a file
 function downloadBlob(text, filename, type) {
   const blob = new Blob([text], { type });
   const url = URL.createObjectURL(blob);
@@ -53,12 +58,14 @@ function downloadBlob(text, filename, type) {
   URL.revokeObjectURL(url);
 }
 
+// Initialize upload UI with event listeners for file input and dataset loading
 export function initUpload({ render } = {}) {
   renderCallback = typeof render === 'function' ? render : () => {};
 
   const fileInput = document.getElementById('dataset-file');
   const fileName = document.getElementById('file-input-name');
 
+  // Handle file upload via file input
   if (fileInput) {
     fileInput.addEventListener('change', (event) => {
       const file = event.target.files && event.target.files[0];
@@ -80,6 +87,7 @@ export function initUpload({ render } = {}) {
     });
   }
 
+  // Load the built-in curated dataset
   const loadBuiltin = document.getElementById('dataset-load-builtin');
   if (loadBuiltin) {
     loadBuiltin.addEventListener('click', () => {
@@ -103,6 +111,7 @@ export function initUpload({ render } = {}) {
     });
   }
 
+  // Load the sample dataset
   const loadSample = document.getElementById('dataset-load-sample');
   if (loadSample) {
     loadSample.addEventListener('click', () => {
@@ -123,6 +132,7 @@ export function initUpload({ render } = {}) {
     });
   }
 
+  // Download a template JSON file for users to fill in
   const downloadTemplate = document.getElementById('dataset-download-template');
   if (downloadTemplate) {
     downloadTemplate.addEventListener('click', () => {

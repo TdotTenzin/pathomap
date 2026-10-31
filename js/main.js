@@ -3,6 +3,7 @@ import { initDatabase, renderDatabase } from './views/database.js';
 import { initUpload, setUploadStatus } from './ui/upload.js';
 
 (function () {
+  // Initialize dark mode theme from localStorage
   const root = document.documentElement;
   const toggle = document.getElementById('dark-toggle');
   const saved = localStorage.getItem('pathomap-theme');
@@ -12,6 +13,7 @@ import { initUpload, setUploadStatus } from './ui/upload.js';
     root.removeAttribute('data-theme');
   }
 
+  // Toggle dark mode on button click
   if (toggle) {
     toggle.addEventListener('click', function () {
       if (root.getAttribute('data-theme') === 'dark') {
@@ -24,6 +26,7 @@ import { initUpload, setUploadStatus } from './ui/upload.js';
     });
   }
 
+  // Boot the application: initialize components and load dataset
   async function boot() {
     initDatabase();
     initUpload({ render: renderDatabase });
@@ -45,6 +48,7 @@ import { initUpload, setUploadStatus } from './ui/upload.js';
     }
   }
 
+  // Wait for DOM to be ready before booting
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', boot);
   } else {

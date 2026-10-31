@@ -7,6 +7,7 @@ import {
   VISIBLE_COLUMNS,
 } from '../data/schema.js';
 
+// Available tables to display in the database view
 const TABLES = [
   {
     id: 'pathogens',
@@ -18,6 +19,7 @@ const TABLES = [
   },
 ];
 
+// Display labels for intracellular survival strategies
 const STRATEGY_LABELS = {
   arrest: 'Arrest',
   escape: 'Escape',
@@ -27,22 +29,28 @@ const STRATEGY_LABELS = {
   unknown: 'Unknown',
 };
 
+// Global state for database view (active table, search, sort, pagination)
 const state = {
   active: TABLES[0].id,
   search: '',
   sortKey: null,
   sortDir: 'asc',
+  page: 1,
+  pageSize: 10,
 };
 
+// Get table definition by ID, fallback to first table if not found
 function tableDef(id) {
   return TABLES.find((table) => table.id === id) || TABLES[0];
 }
 
+// Filter and sort rows based on current search and sort state
 function rowsFor(def) {
   const rows = getPathogens();
   const query = state.search.trim().toLowerCase();
   let out = rows;
 
+  // Apply search filter
   if (query) {
     out = rows.filter((row) =>
       def.columns.some((column) =>
@@ -51,6 +59,7 @@ function rowsFor(def) {
     );
   }
 
+  // Apply sorting
   if (state.sortKey) {
     const key = state.sortKey;
     const direction = state.sortDir === 'desc' ? -1 : 1;
@@ -72,6 +81,27 @@ function rowsFor(def) {
   return out;
 }
 
+// Paginate rows based on current page and page size
+function paginateRows(rows) {
+  const totalRows = rows.length;
+  const totalPages = Math.ceil(totalRows / state.pageSize);
+
+  // Ensure page is within valid bounds
+  state.page = Math.max(1, Math.min(state.page, Math.max(1, totalPages)));
+
+  const startIndex = (state.page - 1) * state.pageSize;
+  const endIndex = startIndex + state.pageSize;
+
+  return {
+    rows: rows.slice(startIndex, endIndex),
+    totalRows,
+    totalPages,
+    startIndex,
+    endIndex: Math.min(endIndex, totalRows),
+  };
+}
+
+// Render table tabs for switching between datasets
 function renderTabs() {
   const el = document.getElementById('db-tabs');
   if (!el) return;
@@ -89,6 +119,7 @@ function renderTabs() {
       state.search = '';
       state.sortKey = null;
       state.sortDir = 'asc';
+      state.page = 1;
       const search = document.getElementById('db-search');
       if (search) search.value = '';
       renderDatabase();
@@ -97,6 +128,7 @@ function renderTabs() {
   });
 }
 
+// Render table header with sortable columns
 function renderHead(def) {
   const el = document.getElementById('db-head');
   if (!el) return;
@@ -117,12 +149,14 @@ function renderHead(def) {
         state.sortKey = column;
         state.sortDir = 'asc';
       }
+      state.page = 1;
       renderDatabase();
     });
     el.appendChild(th);
   });
 }
 
+// Format column values for display (handles special cases like booleans, enums, numbers)
 function displayValue(column, value) {
   if (value === null || value === undefined || value === '') return '';
   if (column === 'acid_fast') return value ? 'Yes' : 'No';
@@ -133,11 +167,13 @@ function displayValue(column, value) {
   return String(value);
 }
 
+// Render table body with data rows
 function renderBody(def, rows) {
   const el = document.getElementById('db-body');
   if (!el) return;
   el.replaceChildren();
 
+  // Show empty state message if no rows
   if (!rows.length) {
     const tr = document.createElement('tr');
     const td = document.createElement('td');
@@ -150,6 +186,7 @@ function renderBody(def, rows) {
     return;
   }
 
+  // Render each row
   rows.forEach((row) => {
     const tr = document.createElement('tr');
     def.columns.forEach((column) => {
@@ -172,6 +209,7 @@ function renderBody(def, rows) {
   });
 }
 
+// Render status information (row count and description)
 function renderStatus(def, rows) {
   const count = document.getElementById('db-count');
   const hint = document.getElementById('db-hint');
@@ -183,6 +221,33 @@ function renderStatus(def, rows) {
   }
 }
 
+function renderPagination(pagination) {
+  const {
+    totalRows,
+    totalPages,
+    startIndex,
+    endIndex,
+  } = pagination;
+
+  const info = document.getElementById('db-pagination-info');
+  const pageInfo = document.getElementById('db-page-info');
+  const prevButton = document.getElementById('db-prev');
+  const nextButton = document.getElementById('db-next');
+  const pageSizeSelect = document.getElementById('db-page-size');
+
+  info.textContent = totalRows === 0
+    ? 'Showing 0 rows'
+    : `Showing ${startIndex + 1}-${endIndex} of ${totalRows}`;
+
+  pageInfo.textContent = `Page ${state.page} of ${Math.max(1, totalPages)}`;
+
+  prevButton.disabled = state.page === 1;
+  nextButton.disabled = state.page >= totalPages;
+
+  pageSizeSelect.value = String(state.pageSize);
+}
+
+// Create a styled link for schema documentation
 function schemaLink(label, href) {
   const link = document.createElement('a');
   link.className = 'db-link';
@@ -191,6 +256,7 @@ function schemaLink(label, href) {
   return link;
 }
 
+// Render schema documentation table with column metadata
 function renderSchema() {
   const body = document.getElementById('db-schema-body');
   if (!body) return;
@@ -263,22 +329,27 @@ function renderSchema() {
   body.appendChild(wrap);
 }
 
+// Main render function: updates all database view components
 export function renderDatabase() {
   const def = tableDef(state.active);
   const rows = rowsFor(def);
+  const pagination = paginateRows(rows);
   renderTabs();
   renderHead(def);
-  renderBody(def, rows);
+  renderBody(def, pagination.rows);
   renderStatus(def, rows);
+  renderPagination(pagination);
   renderSchema();
   return rows;
 }
 
+// Get current table definition and filtered rows
 export function getCurrentRows() {
   const def = tableDef(state.active);
   return { def, rows: rowsFor(def) };
 }
 
+// Convert rows to CSV format with proper escaping
 function toCsv(def, rows) {
   const escape = (value) => {
     const text = value === null || value === undefined ? '' : String(value);
@@ -290,6 +361,7 @@ function toCsv(def, rows) {
   return [header, ...lines].join('\n');
 }
 
+// Download current table as CSV file
 function downloadCsv() {
   const { def, rows } = getCurrentRows();
   const blob = new Blob([toCsv(def, rows)], { type: 'text/csv;charset=utf-8;' });
@@ -303,19 +375,33 @@ function downloadCsv() {
   URL.revokeObjectURL(url);
 }
 
+// Initialize database view with event listeners
 export function initDatabase() {
   renderDatabase();
 
-  const search = document.getElementById('db-search');
-  if (search) {
-    search.addEventListener('input', (event) => {
-      state.search = event.target.value;
-      renderDatabase();
-    });
-  }
+  document.getElementById('db-search').addEventListener('input', (event) => {
+    state.search = event.target.value;
+    state.page = 1;
+    renderDatabase();
+  });
 
-  const download = document.getElementById('db-download');
-  if (download) {
-    download.addEventListener('click', downloadCsv);
-  }
+  document.getElementById('db-page-size').addEventListener('change', (event) => {
+    state.pageSize = Number(event.target.value);
+    state.page = 1;
+    renderDatabase();
+  });
+
+  document.getElementById('db-prev').addEventListener('click', () => {
+    if (state.page > 1) {
+      state.page--;
+      renderDatabase();
+    }
+  });
+
+  document.getElementById('db-next').addEventListener('click', () => {
+    state.page++;
+    renderDatabase();
+  });
+
+  document.getElementById('db-download').addEventListener('click', downloadCsv);
 }

@@ -10,26 +10,31 @@
 
 export const DATA_SCHEMA_VERSION = SCHEMA_VERSION;
 
+// Convert a value to a trimmed string, defaulting to empty string
 function cleanString(value) {
   return value === null || value === undefined ? '' : String(value).trim();
 }
 
+// Convert a value to a trimmed string or null if empty
 function nullableString(value) {
   const text = cleanString(value);
   return text || null;
 }
 
+// Convert a value to a number or null if invalid
 function asNumber(value) {
   if (value === null || value === undefined || value === '') return null;
   const number = Number(value);
   return Number.isFinite(number) ? number : null;
 }
 
+// Convert a value to an integer or null if invalid
 function asInteger(value) {
   const number = asNumber(value);
   return number !== null && Number.isInteger(number) ? number : null;
 }
 
+// Convert a value to a boolean
 function asBoolean(value) {
   if (typeof value === 'boolean') return value;
   if (typeof value === 'number') return value !== 0;
@@ -37,14 +42,17 @@ function asBoolean(value) {
   return ['true', 'yes', '1', 'y'].includes(text);
 }
 
+// Infer genus from a pathogen name (first word)
 function inferGenus(name) {
   return name.split(/\s+/).filter(Boolean)[0] || '';
 }
 
+// Validate a dataset structure and return errors/warnings
 export function validateDataset(data) {
   const errors = [];
   const warnings = [];
 
+  // Check basic structure
   if (!data || typeof data !== 'object' || Array.isArray(data)) {
     return { valid: false, errors: ['Dataset must be a JSON object.'], warnings };
   }
@@ -59,6 +67,7 @@ export function validateDataset(data) {
     warnings.push('The pathogens array is empty.');
   }
 
+  // Warn about extra tables
   const extraTables = Object.keys(data).filter(
     (key) => !['meta', 'pathogens'].includes(key) && Array.isArray(data[key])
   );
@@ -68,9 +77,11 @@ export function validateDataset(data) {
     );
   }
 
+  // Track duplicates
   const seenNames = new Set();
   const seenIds = new Set();
 
+  // Validate each pathogen row
   data.pathogens.forEach((row, index) => {
     const label = `Row ${index + 1}`;
     if (!row || typeof row !== 'object' || Array.isArray(row)) {
@@ -92,6 +103,7 @@ export function validateDataset(data) {
       seenIds.add(id);
     }
 
+    // Validate enum values
     if (row.gram_stain !== undefined && !GRAM_STAIN_VALUES.includes(row.gram_stain)) {
       warnings.push(`${label}: unknown gram_stain "${row.gram_stain}".`);
     }
@@ -108,12 +120,14 @@ export function validateDataset(data) {
       warnings.push(`${label}: unknown curation_status "${row.curation_status}".`);
     }
 
+    // Validate numeric fields
     ['genome_size_mb', 'gc_content', 'n_contigs', 'tax_id'].forEach((key) => {
       if (row[key] !== undefined && row[key] !== null && row[key] !== '' && asNumber(row[key]) === null) {
         warnings.push(`${label}: ${key} is not numeric.`);
       }
     });
 
+    // Validate DOI format
     if (row.reference_doi && !cleanString(row.reference_doi).startsWith('10.')) {
       warnings.push(`${label}: reference_doi does not look like a DOI.`);
     }
@@ -122,6 +136,7 @@ export function validateDataset(data) {
   return { valid: errors.length === 0, errors, warnings };
 }
 
+// Normalize a dataset by cleaning, validating, and restructuring pathogen data
 export function normalizeDataset(data) {
   const sourceRows = Array.isArray(data?.pathogens) ? data.pathogens : [];
   const usedIds = new Set();
@@ -134,6 +149,7 @@ export function normalizeDataset(data) {
       const genus = cleanString(row.genus) || inferGenus(name);
       const species = cleanString(row.species) || name;
       let pathogenId = asInteger(row.pathogen_id);
+      // Assign new ID if missing, invalid, or duplicate
       if (
         pathogenId === null ||
         pathogenId <= 0 ||
@@ -145,6 +161,7 @@ export function normalizeDataset(data) {
       usedIds.add(pathogenId);
       nextId = Math.max(nextId, pathogenId + 1);
 
+      // Normalize all fields to expected types
       const normalized = {
         pathogen_id: pathogenId,
         name,
@@ -174,9 +191,11 @@ export function normalizeDataset(data) {
         last_updated: cleanString(row.last_updated),
       };
 
+      // Ensure only defined columns are included
       return Object.fromEntries(PATHOGEN_COLUMNS.map((key) => [key, normalized[key]]));
     });
 
+  // Build metadata object
   const meta = {
     dataset: 'pathomap',
     schema_version: SCHEMA_VERSION,

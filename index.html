@@ -58,11 +58,11 @@
           <div class="db-upload-actions">
             <label class="file-input-label" title="Upload a JSON file with a pathogens array">
               <input type="file" id="dataset-file" accept="application/json,.json" class="upload-input-inline" hidden>
-              <span class="tool-btn tool-btn-sm">Choose File</span>
+              <span class="tool-btn">Choose File</span>
               <span class="file-input-name" id="file-input-name"></span>
             </label>
-            <button type="button" id="dataset-load-builtin" class="tool-btn tool-btn-sm" title="Load the full NCBI-enriched pathogen table (data/pathomap-dataset.json)">Load Curated Dataset</button>
-            <button type="button" id="dataset-load-sample" class="tool-btn tool-btn-sm" title="Load a small test subset (data/sample-dataset.json, 5 pathogens)">Load Built-in Sample</button>
+            <button type="button" id="dataset-load-builtin" class="tool-btn" title="Load the full NCBI-enriched pathogen table (data/pathomap-dataset.json)">Load Curated Dataset</button>
+            <button type="button" id="dataset-load-sample" class="tool-btn" title="Load a small test subset (data/sample-dataset.json, 5 pathogens)">Load Built-in Sample</button>
           </div>
           <p id="dataset-status" class="upload-status"></p>
         </div>
@@ -70,8 +70,8 @@
         <div class="db-toolbar">
           <div class="db-tabs" id="db-tabs" role="tablist" aria-label="Database tables"></div>
           <div class="db-toolbar-right">
-            <input id="db-search" class="tool-input db-search" type="search" placeholder="Filter rows&hellip;" autocomplete="off" aria-label="Filter table rows">
-            <button type="button" id="db-download" class="tool-btn tool-btn-sm">Download CSV</button>
+            <input id="db-search" class="tool-input db-search" type="search" placeholder="Search&hellip;" autocomplete="off" aria-label="Filter table rows">
+            <button type="button" id="db-download" class="tool-btn">Download CSV</button>
           </div>
         </div>
 
@@ -79,6 +79,29 @@
           <span id="db-count">&nbsp;</span>
           <span class="db-status-hint" id="db-hint"></span>
         </p>
+
+        <div class="db-pagination" id="db-pagination">
+          <div class="db-pagination-info" id="db-pagination-info"></div>
+
+          <div class="db-pagination-controls">
+            <label for="db-page-size">Rows per page:</label>
+            <select id="db-page-size" class="tool-input">
+              <option value="10" selected>10</option>
+              <option value="25">25</option>
+              <option value="50">50</option>
+            </select>
+
+            <button type="button" id="db-prev" class="tool-btn tool-btn-sm">
+              Previous
+            </button>
+
+            <span id="db-page-info"></span>
+
+            <button type="button" id="db-next" class="tool-btn tool-btn-sm">
+              Next
+            </button>
+          </div>
+        </div>
 
         <div class="db-table-wrap">
           <table class="db-table" id="db-table">
