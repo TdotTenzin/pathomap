@@ -204,10 +204,14 @@ export function normalizeDataset(data) {
     .map((row) => {
       const normalized = {
         effector_name: cleanString(row.effector_name),
+        effector_name_class: cleanString(row.effector_name_class),
         pathogen_name: cleanString(row.pathogen_name),
         host_target: cleanString(row.host_target),
+        host_target_class: cleanString(row.host_target_class),
         type: cleanString(row.type),
+        type_class: cleanString(row.type_class),
         mechanism: cleanString(row.mechanism),
+        mechanism_class: cleanString(row.mechanism_class),
       };
 
       // Ensure only defined columns are included

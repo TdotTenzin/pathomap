@@ -38,7 +38,7 @@
       "genome_accession": "GCF_000006945.2",
       "assembly_level": "Complete Genome",
       "genome_size_mb": 4.95,
-      "gc_content": 52.0,
+      "gc_content": 52,
       "n_contigs": 2,
       "reference_doi": "10.1016/j.tim.2019.01.007",
       "description": "Resides in SCV; acquires LAMP1 but blocks hydrolase delivery; maintains non-degradative niche via SPI-2 T3SS effectors. SifA binds SKIP to displace Rab9, while SseJ deacylates cholesterol to prevent SCV-lysosome fusion. SCV matures into a LAMP1+ compartment that is non-degradative — Rab7 effectors (RILP, ORP1L) are decoupled from hydrolase delivery",
@@ -128,7 +128,7 @@
       "genome_accession": "GCF_000008445.1",
       "assembly_level": "Complete Genome",
       "genome_size_mb": 5.5,
-      "gc_content": 35.0,
+      "gc_content": 35,
       "n_contigs": 3,
       "reference_doi": "10.1038/s41579-019-0263-4",
       "description": "Anthrolysin O (ALO) enables phagosomal escape; lethal factor (LF) and edema factor (EF) modulate host. ALO is a cholesterol-dependent cytolysin that permeabilizes the phagosome. The tripartite toxin (PA + LF + EF) is the major virulence determinant: PA binds ANTXR1/2 to translocate LF (zinc metalloprotease cleaving MAPKKs) and EF (calmodulin-dependent adenylate cyclase) into the cytosol",
@@ -157,8 +157,8 @@
       "intracellular_niche": "Extracellular",
       "genome_accession": "GCF_009035845.1",
       "assembly_level": "Complete Genome",
-      "genome_size_mb": 4.0,
-      "gc_content": 39.0,
+      "genome_size_mb": 4,
+      "gc_content": 39,
       "n_contigs": 3,
       "reference_doi": "10.1038/s41579-019-0259-0",
       "description": "Multidrug-resistant nosocomial pathogen; survives on hospital surfaces and exhibits remarkable antibiotic resistance. OmpA is a major virulence factor that targets mitochondria to induce host cell death. Plc (phospholipase C) degrades host membrane phospholipids. CsuA/B pilus and Bap surface protein mediate biofilm formation on abiotic surfaces including medical devices",
@@ -235,189 +235,270 @@
       "effector_name": "OmpA",
       "type": "Outer membrane",
       "host_target": "Mitochondria",
-      "mechanism": "Porin; targeting host cell death"
+      "mechanism": "Porin; targeting host cell death",
+      "host_target_class": "organelle",
+      "type_class": "surface_protein",
+      "mechanism_class": "membrane_disruption"
     },
     {
       "pathogen_name": "Acinetobacter baumannii",
       "effector_name": "AbOmpA",
       "type": "Outer membrane",
       "host_target": "Host membranes",
-      "mechanism": "Biofilm-associated protein"
+      "mechanism": "Biofilm-associated protein",
+      "host_target_class": "cellular_structure",
+      "type_class": "surface_protein",
+      "mechanism_class": "intracellular_survival"
     },
     {
       "pathogen_name": "Acinetobacter baumannii",
       "effector_name": "CsuA/B",
       "type": "Pilus",
       "host_target": "Abiotic surfaces",
-      "mechanism": "Biofilm formation"
+      "mechanism": "Biofilm formation",
+      "host_target_class": "cellular_structure",
+      "type_class": "surface_protein",
+      "mechanism_class": "intracellular_survival"
     },
     {
       "pathogen_name": "Acinetobacter baumannii",
       "effector_name": "Bap",
       "type": "Surface protein",
       "host_target": "Host cells",
-      "mechanism": "Biofilm-associated protein"
+      "mechanism": "Biofilm-associated protein",
+      "host_target_class": "cellular_structure",
+      "type_class": "surface_protein",
+      "mechanism_class": "intracellular_survival"
     },
     {
       "pathogen_name": "Acinetobacter baumannii",
       "effector_name": "Plc",
       "type": "Phospholipase",
       "host_target": "Host membranes",
-      "mechanism": "Phospholipase C activity"
+      "mechanism": "Phospholipase C activity",
+      "host_target_class": "cellular_structure",
+      "type_class": "enzyme",
+      "mechanism_class": "membrane_disruption"
     },
     {
       "pathogen_name": "Anaplasma phagocytophilum",
       "effector_name": "Ats-1",
       "type": "T4SS",
       "host_target": "Rab5 / PI3P",
-      "mechanism": "Binds Rab5; anchors to inclusion membrane"
+      "mechanism": "Binds Rab5; anchors to inclusion membrane",
+      "host_target_class": "protein",
+      "type_class": "t4ss_effector",
+      "mechanism_class": "membrane_trafficking"
     },
     {
       "pathogen_name": "Anaplasma phagocytophilum",
       "effector_name": "AnkA",
       "type": "T4SS",
       "host_target": "MYADM / Abl-1",
-      "mechanism": "Ankyrin repeat; modulates host signaling"
+      "mechanism": "Ankyrin repeat; modulates host signaling",
+      "host_target_class": "protein",
+      "type_class": "t4ss_effector",
+      "mechanism_class": "signalling_modulation"
     },
     {
       "pathogen_name": "Anaplasma phagocytophilum",
       "effector_name": "p44/Msp2",
       "type": "Surface protein",
       "host_target": "P-selectin glycoprotein",
-      "mechanism": "Antigenic variation; immune evasion"
+      "mechanism": "Antigenic variation; immune evasion",
+      "host_target_class": "protein",
+      "type_class": "surface_protein",
+      "mechanism_class": "immune_evasion"
     },
     {
       "pathogen_name": "Bacillus anthracis",
       "effector_name": "ALO",
       "type": "Cholesterol-dependent",
       "host_target": "Cholesterol",
-      "mechanism": "Anthrolysin O; phagosomal escape"
+      "mechanism": "Anthrolysin O; phagosomal escape",
+      "host_target_class": "lipid",
+      "type_class": "toxin",
+      "mechanism_class": "membrane_disruption"
     },
     {
       "pathogen_name": "Bacillus anthracis",
       "effector_name": "LF",
       "type": "AB toxin",
       "host_target": "MAPKKs",
-      "mechanism": "Lethal factor; zinc metalloprotease"
+      "mechanism": "Lethal factor; zinc metalloprotease",
+      "host_target_class": "protein",
+      "type_class": "toxin",
+      "mechanism_class": "protein_modification"
     },
     {
       "pathogen_name": "Bacillus anthracis",
       "effector_name": "EF",
       "type": "AB toxin",
       "host_target": "CaM/adenylate cyclase",
-      "mechanism": "Edema factor; adenylyl cyclase"
+      "mechanism": "Edema factor; adenylyl cyclase",
+      "host_target_class": "protein",
+      "type_class": "toxin",
+      "mechanism_class": "signalling_modulation"
     },
     {
       "pathogen_name": "Bacillus anthracis",
       "effector_name": "PA",
       "type": "AB toxin",
       "host_target": "ANTXR1/2",
-      "mechanism": "Protective antigen; mediates uptake of LF/EF"
+      "mechanism": "Protective antigen; mediates uptake of LF/EF",
+      "host_target_class": "protein",
+      "type_class": "toxin",
+      "mechanism_class": "membrane_trafficking"
     },
     {
       "pathogen_name": "Bacillus anthracis",
       "effector_name": "CatB",
       "type": "Catalase",
       "host_target": "ROS",
-      "mechanism": "Resistance to oxidative burst"
+      "mechanism": "Resistance to oxidative burst",
+      "host_target_class": "metabolite",
+      "type_class": "enzyme",
+      "mechanism_class": "intracellular_survival"
     },
     {
       "pathogen_name": "Mycobacterium tuberculosis",
       "effector_name": "LAM",
       "type": "Glycolipid",
       "host_target": "Vps34",
-      "mechanism": "Inhibits Ca2+ signaling"
+      "mechanism": "Inhibits Ca2+ signaling",
+      "host_target_class": "protein",
+      "type_class": "surface_protein",
+      "mechanism_class": "signalling_modulation"
     },
     {
       "pathogen_name": "Mycobacterium tuberculosis",
       "effector_name": "SapM",
       "type": "Secreted phosphatase",
       "host_target": "PI3P",
-      "mechanism": "Dephosphorylates PI3P"
+      "mechanism": "Dephosphorylates PI3P",
+      "host_target_class": "lipid",
+      "type_class": "enzyme",
+      "mechanism_class": "protein_modification"
     },
     {
       "pathogen_name": "Mycobacterium tuberculosis",
       "effector_name": "MptpA",
       "type": "Secreted phosphatase",
       "host_target": "V-ATPase",
-      "mechanism": "Blocks V-ATPase trafficking"
+      "mechanism": "Blocks V-ATPase trafficking",
+      "host_target_class": "protein_complex",
+      "type_class": "enzyme",
+      "mechanism_class": "membrane_trafficking"
     },
     {
       "pathogen_name": "Mycobacterium tuberculosis",
       "effector_name": "MptpB",
       "type": "Secreted phosphatase",
       "host_target": "PI(3,5)P2",
-      "mechanism": "Hydrolyzes PI(3,5)P2"
+      "mechanism": "Hydrolyzes PI(3,5)P2",
+      "host_target_class": "lipid",
+      "type_class": "enzyme",
+      "mechanism_class": "protein_modification"
     },
     {
       "pathogen_name": "Mycobacterium tuberculosis",
       "effector_name": "Eis",
       "type": "Secreted protein",
       "host_target": "JNK/AMPK",
-      "mechanism": "Acetyltransferase; inhibits autophagy"
+      "mechanism": "Acetyltransferase; inhibits autophagy",
+      "host_target_class": "protein",
+      "type_class": "secreted_protein",
+      "mechanism_class": "immune_evasion"
     },
     {
       "pathogen_name": "Mycobacterium tuberculosis",
       "effector_name": "PknG",
       "type": "Ser/Thr kinase",
       "host_target": "Rab proteins",
-      "mechanism": "Phosphorylates host Rab GTPases"
+      "mechanism": "Phosphorylates host Rab GTPases",
+      "host_target_class": "protein_family",
+      "type_class": "enzyme",
+      "mechanism_class": "protein_modification"
     },
     {
       "pathogen_name": "Mycobacterium tuberculosis",
       "effector_name": "ESAT-6",
       "type": "T7SS (ESX-1)",
       "host_target": "Membrane",
-      "mechanism": "Pore-forming; promotes phagosomal escape"
+      "mechanism": "Pore-forming; promotes phagosomal escape",
+      "host_target_class": "cellular_structure",
+      "type_class": "secreted_protein",
+      "mechanism_class": "membrane_disruption"
     },
     {
       "pathogen_name": "Salmonella enterica serovar Typhimurium",
       "effector_name": "SopE",
       "type": "T3SS (SPI-1)",
       "host_target": "Cdc42 / Rac1",
-      "mechanism": "GEF for host Rho-family GTPases"
+      "mechanism": "GEF for host Rho-family GTPases",
+      "host_target_class": "protein",
+      "type_class": "t3ss_effector",
+      "mechanism_class": "protein_modification"
     },
     {
       "pathogen_name": "Salmonella enterica serovar Typhimurium",
       "effector_name": "SipA",
       "type": "T3SS (SPI-1)",
       "host_target": "Actin",
-      "mechanism": "Binds/stabilizes actin filaments"
+      "mechanism": "Binds/stabilizes actin filaments",
+      "host_target_class": "protein",
+      "type_class": "t3ss_effector",
+      "mechanism_class": "cytoskeletal_remodelling"
     },
     {
       "pathogen_name": "Salmonella enterica serovar Typhimurium",
       "effector_name": "SopB/SigD",
       "type": "T3SS (SPI-1)",
       "host_target": "PI(4,5)P2",
-      "mechanism": "Phosphatidylinositol phosphatase"
+      "mechanism": "Phosphatidylinositol phosphatase",
+      "host_target_class": "lipid",
+      "type_class": "t3ss_effector",
+      "mechanism_class": "protein_modification"
     },
     {
       "pathogen_name": "Salmonella enterica serovar Typhimurium",
       "effector_name": "SifA",
       "type": "T3SS (SPI-2)",
       "host_target": "SKIP",
-      "mechanism": "Binds SKIP displacing Rab9"
+      "mechanism": "Binds SKIP displacing Rab9",
+      "host_target_class": "protein",
+      "type_class": "t3ss_effector",
+      "mechanism_class": "membrane_trafficking"
     },
     {
       "pathogen_name": "Salmonella enterica serovar Typhimurium",
       "effector_name": "PipB2",
       "type": "T3SS (SPI-2)",
       "host_target": "Kinesin-1",
-      "mechanism": "Recruits kinesin-1 to SCV"
+      "mechanism": "Recruits kinesin-1 to SCV",
+      "host_target_class": "protein",
+      "type_class": "t3ss_effector",
+      "mechanism_class": "membrane_trafficking"
     },
     {
       "pathogen_name": "Salmonella enterica serovar Typhimurium",
       "effector_name": "SseJ",
       "type": "T3SS (SPI-2)",
       "host_target": "Cholesterol",
-      "mechanism": "Acyltransferase"
+      "mechanism": "Acyltransferase",
+      "host_target_class": "lipid",
+      "type_class": "t3ss_effector",
+      "mechanism_class": "protein_modification"
     },
     {
       "pathogen_name": "Salmonella enterica serovar Typhimurium",
       "effector_name": "SopD2",
       "type": "T3SS (SPI-2)",
       "host_target": "Rab7",
-      "mechanism": "Suppresses Rab7-dependent recruitment"
+      "mechanism": "Suppresses Rab7-dependent recruitment",
+      "host_target_class": "protein",
+      "type_class": "t3ss_effector",
+      "mechanism_class": "membrane_trafficking"
     }
   ]
 }

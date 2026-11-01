@@ -200,7 +200,6 @@ export const PATHOGEN_COLUMNS = COLUMN_META.map((column) => column.key);
 // Columns to display in the main table view
 export const VISIBLE_COLUMNS = [
   'name',
-  'species',
   'gram_stain',
   'acid_fast',
   'strategy',
@@ -219,6 +218,13 @@ export const EFFECTOR_COLUMNS_META = [
     source: 'PathoMap curation',
   },
   {
+    key: 'effector_name_class',
+    label: 'Effector Name Class',
+    type: 'string',
+    description: 'Protein family classification of the effector (kinase, phosphatase, protease, GTPase, lipase, phospholipase, deacetylase, acetyltransferase, adenylate_cyclase, metalloprotease, serine_protease, cysteine_protease, glycosyltransferase, methyltransferase, ubiquitin_ligase, deubiquitinase, helicase, nuclease, pore_forming, adhesin, surface_protein, membrane_protein, structural_protein, porin, flagellin, capsule, LPS, lipoprotein, toxin, antigen, effector, enzyme, invasin, secretion_component, virulence_factor, other).',
+    source: 'PathoMap curation',
+  },
+  {
     key: 'pathogen_name',
     label: 'Pathogen',
     type: 'string',
@@ -233,6 +239,13 @@ export const EFFECTOR_COLUMNS_META = [
     source: 'PathoMap curation',
   },
   {
+    key: 'host_target_class',
+    label: 'Host Target Class',
+    type: 'string',
+    description: 'Biological classification of the host target (protein, lipid, organelle, metabolite, nucleic acid, protein family, cellular structure, pathway).',
+    source: 'PathoMap curation',
+  },
+  {
     key: 'type',
     label: 'Type',
     type: 'string',
@@ -240,10 +253,24 @@ export const EFFECTOR_COLUMNS_META = [
     source: 'PathoMap curation',
   },
   {
+    key: 'type_class',
+    label: 'Type Class',
+    type: 'string',
+    description: 'Biological classification of the effector type (t3ss_effector, t4ss_effector, t6ss_effector, toxin, adhesin, secreted_protein, surface_protein, enzyme).',
+    source: 'PathoMap curation',
+  },
+  {
     key: 'mechanism',
     label: 'Mechanism',
     type: 'string',
     description: 'Mechanism of host-cell manipulation.',
+    source: 'PathoMap curation',
+  },
+  {
+    key: 'mechanism_class',
+    label: 'Mechanism Class',
+    type: 'string',
+    description: 'Biological classification of the mechanism (signalling_modulation, cytoskeletal_remodelling, membrane_trafficking, immune_evasion, cell_death_modulation, metabolic_manipulation, transcriptional_regulation, protein_modification, membrane_disruption, intracellular_survival, nutrient_acquisition).',
     source: 'PathoMap curation',
   },
 ];
@@ -258,6 +285,14 @@ export const EFFECTOR_COLUMNS = EFFECTOR_COLUMNS_META.map((column) => column.key
 export const EFFECTOR_VISIBLE_COLUMNS = [
   'effector_name',
   'pathogen_name',
+  'host_target',
+  'type',
+  'mechanism',
+];
+
+// Columns that should display classification badges in the UI
+export const EFFECTOR_CLASSIFICATION_COLUMNS = [
+  'effector_name',
   'host_target',
   'type',
   'mechanism',
@@ -359,4 +394,79 @@ export const ENUMS = {
   strategy: STRATEGY_VALUES,
   assembly_level: ASSEMBLY_LEVEL_VALUES,
   curation_status: CURATION_STATUS_VALUES,
+};
+
+// Classification labels for display
+export const CLASSIFICATION_LABELS = {
+  // Effector Name classifications (protein families)
+  kinase: 'Kinase',
+  phosphatase: 'Phosphatase',
+  protease: 'Protease',
+  GTPase: 'GTPase',
+  lipase: 'Lipase',
+  phospholipase: 'Phospholipase',
+  deacetylase: 'Deacetylase',
+  acetyltransferase: 'Acetyltransferase',
+  adenylate_cyclase: 'Adenylate cyclase',
+  metalloprotease: 'Metalloprotease',
+  serine_protease: 'Serine protease',
+  cysteine_protease: 'Cysteine protease',
+  glycosyltransferase: 'Glycosyltransferase',
+  methyltransferase: 'Methyltransferase',
+  ubiquitin_ligase: 'Ubiquitin ligase',
+  deubiquitinase: 'Deubiquitinase',
+  helicase: 'Helicase',
+  nuclease: 'Nuclease',
+  pore_forming: 'Pore-forming',
+  adhesin: 'Adhesin',
+  surface_protein: 'Surface protein',
+  membrane_protein: 'Membrane protein',
+  structural_protein: 'Structural protein',
+  porin: 'Porin',
+  flagellin: 'Flagellin',
+  capsule: 'Capsule',
+  LPS: 'LPS',
+  lipoprotein: 'Lipoprotein',
+  toxin: 'Toxin',
+  antigen: 'Antigen',
+  effector: 'Effector',
+  enzyme: 'Enzyme',
+  invasin: 'Invasin',
+  secretion_component: 'Secretion component',
+  virulence_factor: 'Virulence factor',
+  other: 'Other',
+
+  // Host Target classifications
+  protein: 'Protein',
+  protein_complex: 'Protein complex',
+  lipid: 'Lipid',
+  organelle: 'Organelle',
+  metabolite: 'Metabolite',
+  nucleic_acid: 'Nucleic acid',
+  protein_family: 'Protein family',
+  cellular_structure: 'Cellular structure',
+  pathway: 'Pathway',
+
+  // Type classifications
+  t3ss_effector: 'T3SS effector',
+  t4ss_effector: 'T4SS effector',
+  t6ss_effector: 'T6SS effector',
+  toxin: 'Toxin',
+  adhesin: 'Adhesin',
+  secreted_protein: 'Secreted protein',
+  surface_protein: 'Surface protein',
+  enzyme: 'Enzyme',
+
+  // Mechanism classifications
+  signalling_modulation: 'Signalling modulation',
+  cytoskeletal_remodelling: 'Cytoskeletal remodelling',
+  membrane_trafficking: 'Membrane trafficking',
+  immune_evasion: 'Immune evasion',
+  cell_death_modulation: 'Cell death modulation',
+  metabolic_manipulation: 'Metabolic manipulation',
+  transcriptional_regulation: 'Transcriptional regulation',
+  protein_modification: 'Protein modification',
+  membrane_disruption: 'Membrane disruption',
+  intracellular_survival: 'Intracellular survival',
+  nutrient_acquisition: 'Nutrient acquisition',
 };

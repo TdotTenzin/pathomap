@@ -9,6 +9,8 @@ import {
   EFFECTOR_COLUMN_LABELS,
   EFFECTOR_VISIBLE_COLUMNS,
   EFFECTOR_COLUMNS,
+  EFFECTOR_CLASSIFICATION_COLUMNS,
+  CLASSIFICATION_LABELS,
   HOST_PROTEIN_COLUMNS_META,
   HOST_PROTEIN_COLUMN_LABELS,
   HOST_PROTEIN_VISIBLE_COLUMNS,
@@ -192,6 +194,17 @@ function displayValue(column, value) {
   return String(value);
 }
 
+// Create a classification badge element
+function createClassificationBadge(classValue) {
+  if (!classValue || classValue === 'unknown') return null;
+
+  const badge = document.createElement('span');
+  badge.className = 'classification-badge';
+  badge.setAttribute('data-class', classValue);
+  badge.textContent = CLASSIFICATION_LABELS[classValue] || classValue;
+  return badge;
+}
+
 // Render table body with data rows
 function renderBody(def, rows) {
   const el = document.getElementById('db-body');
@@ -217,6 +230,8 @@ function renderBody(def, rows) {
     def.columns.forEach((column) => {
       const td = document.createElement('td');
       const value = row[column];
+
+      // Handle reference_doi links
       if (column === 'reference_doi' && value) {
         const link = document.createElement('a');
         link.className = 'db-link';
@@ -225,7 +240,25 @@ function renderBody(def, rows) {
         link.rel = 'noopener noreferrer';
         link.textContent = value;
         td.appendChild(link);
-      } else {
+      }
+      // Add classification badges for effector columns
+      else if (def.id === 'effectors' && EFFECTOR_CLASSIFICATION_COLUMNS.includes(column)) {
+        // Add the text value
+        const textSpan = document.createElement('span');
+        textSpan.textContent = displayValue(column, value);
+        td.appendChild(textSpan);
+
+        // Add classification badge if exists
+        const classColumn = column + '_class';
+        const classValue = row[classColumn];
+        const badge = createClassificationBadge(classValue);
+        if (badge) {
+          td.appendChild(document.createTextNode(' '));
+          td.appendChild(badge);
+        }
+      }
+      // Default handling
+      else {
         td.textContent = displayValue(column, value);
       }
       tr.appendChild(td);
