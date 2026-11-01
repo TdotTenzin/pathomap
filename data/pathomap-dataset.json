@@ -2,9 +2,11 @@
   "meta": {
     "dataset": "pathomap",
     "schema_version": "2.0",
-    "built_at": "2026-10-27T17:55:16Z",
+    "built_at": "2026-11-01T17:44:19Z",
     "tables": {
-      "pathogens": 54
+      "pathogens": 53,
+      "effectors": 246,
+      "host_proteins": 5
     },
     "sources": {
       "curation": "data/sources/pathogens_seed.json",
@@ -42,7 +44,7 @@
       "description": "Resides in SCV; acquires LAMP1 but blocks hydrolase delivery; maintains non-degradative niche via SPI-2 T3SS effectors. SifA binds SKIP to displace Rab9, while SseJ deacylates cholesterol to prevent SCV-lysosome fusion. SCV matures into a LAMP1+ compartment that is non-degradative — Rab7 effectors (RILP, ORP1L) are decoupled from hydrolase delivery",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 2,
@@ -72,7 +74,7 @@
       "description": "Phagosomal escape via LLO within ~30 min; replicates in cytosol; uses ActA for actin-based motility. LLO is pH-dependent: forms pores at acidic pH of early phagosomes but is inactivated at neutral cytosolic pH. ActA nucleates Arp2/3-dependent branched actin networks for cytoplasmic motility and cell-to-cell spread via double-membrane protrusions",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 3,
@@ -102,7 +104,7 @@
       "description": "Arrests phagosome at early stage; blocks Rab5-to-Rab7 conversion; maintains near-neutral pH (~6.4) by excluding V-ATPase. Secretes SapM phosphatase to deplete PI3P from phagosomal membranes, and lipoarabinomannan (LAM) inhibits Ca2+ signaling and Vps34 recruitment. PknG and PtpA further modulate host Rab trafficking to prevent lysosomal fusion",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 4,
@@ -132,7 +134,7 @@
       "description": "Redirects ER-derived vesicles to build LCV; bypasses endocytic pathway entirely via Dot/Icm T4SS. DrrA/SidM is a Rab1 GEF that activates Rab1 on the LCV, redirecting COPII vesicle traffic from ER to the pathogen vacuole. AnkX phosphocholinates Rab35 and Rab1, locking them in an inactive state — a post-translational block distinct from host regulation",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 5,
@@ -162,7 +164,7 @@
       "description": "Rapid phagosome lysis (<15 min) via IpaB pore; escapes to cytosol before early markers fully acquired. IpaB inserts into the phagosomal membrane and oligomerizes to form a translocation pore. In the cytosol, IcsB masks IcsA from the autophagy receptor LC3 to evade xenophagy. Uses IcsA/VirG to recruit N-WASP and Arp2/3 for actin-based motility",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 6,
@@ -192,7 +194,7 @@
       "description": "Resides in Brucella-containing vacuole (BCV) that interacts with ER; avoids lysosomal fusion via VirB T4SS. BtpA and BtpB are TIR-domain containing effectors that inhibit TLR2 signaling and MyD88 adaptor function. VceC activates the unfolded protein response, creating a replicative niche that balances ER stress signaling with survival",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 7,
@@ -200,7 +202,7 @@
       "genus": "Francisella",
       "species": "Francisella tularensis",
       "serovar": null,
-      "strain": null,
+      "strain": "subsp. novicida D9876",
       "tax_id": 263,
       "ncbi_scientific_name": "Francisella tularensis",
       "family": "Francisellaceae",
@@ -220,9 +222,9 @@
       "n_contigs": 1,
       "reference_doi": "10.3389/fcimb.2018.00123",
       "description": "Escapes phagosome within 30-60 min via acid-dependent mechanism; replicates in cytosol. IglC and IglD are essential T6SS components that mediate phagosomal disruption. Once cytosolic, Francisella evades autophagy detection by modifying its LPS structure and subverts host interferon responses through MglA-mediated virulence gene regulation",
-      "curation_notes": null,
+      "curation_notes": "Selected assembly is for Francisella tularensis subsp. novicida strain D9876, not the type subspecies (subsp. tularensis). Record should specify subspecies/strain explicitly.",
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 8,
@@ -252,7 +254,7 @@
       "description": "Resides in acidified Coxiella-containing vacuole (CCV) that fuses with lysosomes; requires acidic pH for replication — uniquely thrives in phagolysosomes. Cig57 subverts clathrin-mediated trafficking, while CvpB binds PI3P and Rab5 for CCV biogenesis. CirA and CirB intercept HOPS and exocyst tethering complexes for CCV expansion",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 9,
@@ -282,7 +284,7 @@
       "description": "Extracellular pathogen that resists phagocytosis via Yop T3SS effectors; blocks phagocytic uptake. YopH dephosphorylates FAK and p130Cas to disrupt focal adhesions, while YopJ acetylates MAPKK and IKK to block NF-kB and MAPK signaling. YopE acts as a GAP for RhoA, Rac1, and Cdc42 to paralyze actin dynamics",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 10,
@@ -312,7 +314,7 @@
       "description": "Extracellular pathogen; injects Yop effectors via T3SS to disrupt actin and block phagocytosis. Shares core Yop arsenal with Y. pestis including YopE (RhoGAP), YopH (PTPase), and YopJ (MAPKK acetyltransferase). YpkA/YopO binds actin and RhoA to further disrupt the cytoskeleton in infected cells",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 11,
@@ -342,7 +344,7 @@
       "description": "Resides in non-acidified inclusion that intercepts exocytic vesicles from Golgi; avoids endolysosomal fusion. Inc proteins (IncA, IncB, IncC) decorate the inclusion membrane and recruit Rab4, Rab6, and Rab11 to intercept Golgi-derived vesicles. CT229 acts as a ubiquitin ligase to modify host Rab proteins, blocking fusion with lysosomes",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 12,
@@ -372,7 +374,7 @@
       "description": "Similar inclusion-based intracellular niche; acquires sphingolipids from Golgi via T3SS inc proteins. IncA blocks SNARE-mediated fusion with lysosomes, while CPn0585 acts as a GEF for host Rab GTPases to redirect vesicular trafficking away from the endolysosomal pathway",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 13,
@@ -402,7 +404,7 @@
       "description": "Resides in non-fusogenic membrane-bound inclusion that acquires host-derived membrane via T4SS. Ats-1 binds Rab5 and PI3P to anchor the inclusion to early endosomal compartments, while AnkA modulates host signaling through interaction with MYADM and Abl-1 tyrosine kinase. p44/Msp2 undergoes antigenic variation to evade immune detection",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 14,
@@ -432,7 +434,7 @@
       "description": "Resides in early endosome-like inclusions that avoid lysosomal fusion; uses T4SS for effector translocation. TRP120 mimics Notch ligand to activate Notch signaling and promote host cell survival, while TRP32 activates the Wnt pathway. Ank200 is an ankyrin-repeat effector that modulates host gene expression from within the inclusion",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 15,
@@ -462,7 +464,7 @@
       "description": "Injectisome (VirB/VirD4 T4SS) translocates Bep effectors; subverts host cell functions including actin dynamics. BepA promotes F-actin fiber formation and has anti-apoptotic activity, while BepC activates PI3K/Akt signaling to promote endothelial cell proliferation. BepD and BepE modulate actin recruitment and protect against host cell death",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 16,
@@ -492,7 +494,7 @@
       "description": "Rapid phagosomal escape via hemolysin and phospholipase; replicates in cytosol; actin-based motility. RickA activates Arp2/3 to nucleate actin tails, while Sca2 acts as a formin-like actin nucleator for enhanced motility. TlyA and Pat1 are hemolysin and patatin-like phospholipase that mediate rapid phagosomal membrane disruption within minutes of entry",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 17,
@@ -522,7 +524,7 @@
       "description": "Phagosomal escape within 15 min; intracytosolic replication; actin tail formation via RickA and Sca2-mediated actin nucleation. Uses Pat1 phospholipase to disrupt phagosomal membranes. Causes Mediterranean spotted fever; transmitted by Rhipicephalus ticks with endothelial cells as primary target",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 18,
@@ -552,7 +554,7 @@
       "description": "Similar SCV-based strategy as S. enterica; SPI-2 effectors maintain vacuolar niche. Uses SopE to activate Cdc42 for entry, while SifA binds SKIP to maintain SCV integrity. SseF and SseG are SPI-2 effectors that position the SCV near the Golgi apparatus by recruiting microtubule motors, ensuring access to nutrient-rich vesicles",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 19,
@@ -582,7 +584,7 @@
       "description": "Extracellular opportunistic pathogen; injects ExoU/ExoS/ExoT via T3SS; cytotoxic to host cells. ExoU is a potent phospholipase A2 that causes rapid plasma membrane lysis, while ExoS and ExoT act as both RhoGAPs and ADP-ribosyltransferases. ExoY is an adenylate cyclase that disrupts actin dynamics by raising cAMP/cGMP levels in infected cells",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 20,
@@ -590,7 +592,7 @@
       "genus": "Escherichia",
       "species": "Escherichia coli",
       "serovar": null,
-      "strain": "K1",
+      "strain": "IHE3034",
       "tax_id": 562,
       "ncbi_scientific_name": "Escherichia coli",
       "family": "Enterobacteriaceae",
@@ -603,16 +605,16 @@
       "strategy_secondary": null,
       "strategy_evidence": null,
       "intracellular_niche": "Late endosomes/lysosomes",
-      "genome_accession": "GCF_000005845.2",
+      "genome_accession": "GCF_000025745.1",
       "assembly_level": "Complete Genome",
-      "genome_size_mb": 4.64,
+      "genome_size_mb": 5.11,
       "gc_content": 51.0,
       "n_contigs": 1,
       "reference_doi": "10.3389/fcimb.2020.00001",
       "description": "Survives within late endosomes/lysosomes by modulating Rab GTPase activity; K1 capsule prevents clearance. IbeA binds vimentin to mediate invasion of brain microvascular endothelial cells, enabling traversal of the blood-brain barrier. CNF1 deamidates RhoA, Rac1, and Cdc42, constitutively activating them to disrupt phagosome maturation",
-      "curation_notes": "K1 is a capsular serotype, not a subspecies. Use strain field.",
+      "curation_notes": "K1 is a capsular serotype, not a strain. Previous accession GCF_000005845.2 was for E. coli K-12 MG1655. Updated to GCF_000025745.1 for E. coli K1 strain IHE3034.",
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 21,
@@ -642,7 +644,7 @@
       "description": "Extracellular mucosal pathogen; type IV pili and Opa proteins mediate adhesion; resists intracellular killing. PorB is a voltage-gated porin that targets mitochondria and inhibits host cell apoptosis. Opa proteins bind CEACAM receptors to trigger bacterial uptake into non-phagocytic cells, where Neisseria can survive intracellularly",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 22,
@@ -672,7 +674,7 @@
       "description": "Encapsulated extracellular pathogen; survives in bloodstream and cerebrospinal fluid; type IV pili for adhesion. PorB and PorA are major outer membrane porins with anti-apoptotic activity. Opca binds CEACAM and fibronectin, while NadA mediates adhesion to epithelial cells. Capsular polysaccharide (serogroups A, B, C, W, Y) is essential for serum resistance",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 23,
@@ -702,7 +704,7 @@
       "description": "Extracellular respiratory pathogen; IgA protease and biofilm formation; survives intracellularly in some cell types. Hap autotransporter mediates adherence and microcolony formation via its serine protease activity. HMW1/HMW2 and Hia are high-molecular-weight adhesins that bind epithelial cells. P5 fimbriae bind ICAM-1 on activated respiratory epithelium",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 24,
@@ -732,7 +734,7 @@
       "description": "Extracellular respiratory pathogen; adenylate cyclase toxin and T3SS effectors modulate host immunity. Pertussis toxin (PTx) ADP-ribosylates Gi proteins to disrupt cAMP signaling, while CyaA is a bifunctional RTX toxin that enters phagocytes and generates supraphysiological cAMP levels. FHA mediates adhesion to CR3 integrins on macrophages",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 25,
@@ -762,7 +764,7 @@
       "description": "Non-invasive extracellular pathogen; cholera toxin (CTX) is an AB toxin that ADP-ribosylates Gs-alpha, causing constitutive adenylate cyclase activation and massive fluid secretion into the intestinal lumen. The toxin-coregulated pilus (TCP) is essential for intestinal colonization. T6SS (VSP locus) mediates interbacterial competition in the gut microbiome",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 26,
@@ -792,7 +794,7 @@
       "description": "Survives within Campylobacter-containing vacuole (CCV); uses T6SS and flagellar secretion. Cytolethal distending toxin (Cdt) is a DNase that causes host cell cycle arrest at G2/M phase. FlaA flagellin is glycosylated and activates TLR5, contributing to intestinal inflammation. CiaB and VirK are secreted factors that promote intracellular survival within the CCV",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 27,
@@ -822,7 +824,7 @@
       "description": "Gastric extracellular pathogen that colonizes the stomach mucosa; Cag T4SS injects CagA effector into host cells where it is phosphorylated and activates SHP-2 phosphatase, disrupting cell polarity and adhesion. VacA forms pores in host membranes and targets mitochondria to induce apoptosis. UreA neutralizes gastric acid by producing ammonia from urea",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 28,
@@ -852,7 +854,7 @@
       "description": "Escapes phagosome via phospholipase D activity; replicates in cytosol; subverts autophagy. Pld is a phospholipase D homolog that disrupts phagosomal membranes shortly after entry. ScaA and ScaC are autotransporter proteins mediating adhesion to host cells. Tsa56 is the major outer membrane protein involved in immune evasion. Causes scrub typhus transmitted by chiggers",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 29,
@@ -882,7 +884,7 @@
       "description": "Pore-forming toxins (Hla, PVL) enable phagosomal escape; some strains survive intracellularly. Hla (alpha-hemolysin) binds ADAM10 to form heptameric pores in host membranes, while PVL targets C5aR on neutrophils. Protein A (SpA) binds IgG Fc region and cross-links VH3-type B cell receptors, acting as a B-cell superantigen. Efb binds fibrinogen to form immune-evasive clots",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 30,
@@ -912,7 +914,7 @@
       "description": "Streptolysin O (SLO) enables phagosomal escape; replicates in cytosol; M protein for adhesion. SLO is a cholesterol-dependent cytolysin that forms large pores in phagosomal membranes. M protein binds Factor H and C4BP to evade complement opsonization. SpeA is a superantigen that bridges MHC class II and TCR V-beta regions, triggering massive cytokine release",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 31,
@@ -942,7 +944,7 @@
       "description": "Extracellular pathogen; pneumolysin (PLY) and polysaccharide capsule; can survive intracellularly. PLY is a cholesterol-dependent cytolysin that forms pores and activates the NLRP3 inflammasome. PspA binds lactoferrin to reduce iron availability for host defenses, while PspC binds Factor H for complement evasion. LytA autolysin releases pneumolysin during antibiotic-induced lysis",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 32,
@@ -972,7 +974,7 @@
       "description": "Anthrolysin O (ALO) enables phagosomal escape; lethal factor (LF) and edema factor (EF) modulate host. ALO is a cholesterol-dependent cytolysin that permeabilizes the phagosome. The tripartite toxin (PA + LF + EF) is the major virulence determinant: PA binds ANTXR1/2 to translocate LF (zinc metalloprotease cleaving MAPKKs) and EF (calmodulin-dependent adenylate cyclase) into the cytosol",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 33,
@@ -1002,7 +1004,7 @@
       "description": "Opportunistic pathogen capable of intracellular survival via pore-forming toxins including hemolysin BL (Hbl), non-hemolytic enterotoxin (Nhe), and cytotoxin K (CytK). These three-component pore-forming toxins cause membrane disruption and cell lysis. PC-PLC (phosphatidylcholine-hydrolyzing phospholipase C) contributes to membrane degradation and tissue necrosis",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 34,
@@ -1032,7 +1034,7 @@
       "description": "Extracellular pathogen causing gas gangrene and food poisoning; perfringolysin O (PFO) is a cholesterol-dependent cytolysin that forms large transmembrane pores. Alpha-toxin (PLC) is a zinc-dependent phospholipase C that hydrolyzes phosphatidylcholine and sphingomyelin, causing hemolysis and necrosis. CPE (C. perfringens enterotoxin) binds claudins to disrupt tight junctions",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 35,
@@ -1062,7 +1064,7 @@
       "description": "Extracellular toxigenic pathogen causing antibiotic-associated diarrhea and pseudomembranous colitis. TcdA and TcdB are large clostridial glucosyltransferases that inactivate Rho GTPases (RhoA, Rac1, Cdc42) by monoglucosylation, leading to actin cytoskeleton disruption and tight junction breakdown. Cdt (binary toxin) ADP-ribosylates actin, causing microtubule-based protrusions",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 36,
@@ -1092,7 +1094,7 @@
       "description": "Opportunistic extracellular pathogen causing nosocomial and device-associated infections; survives within macrophages. Cytolysin (Cyl) is a hemolytic/bactericidal toxin that lyses host cells. Gelatinase (GelE) degrades host ECM proteins for tissue invasion. Ace adhesin binds collagen for adherence to host tissues. Esp surface protein promotes biofilm formation",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 37,
@@ -1122,7 +1124,7 @@
       "description": "Extracellular respiratory pathogen; diphtheria toxin (DT) is an AB toxin that ADP-ribosylates elongation factor 2 (EF-2), inhibiting host protein synthesis and causing cell death. DT is encoded by a lysogenic beta-prophage — only toxigenic strains cause disease. FbpABC iron transporter scavenges host iron for bacterial growth. SpaABC pili mediate adhesion to respiratory epithelium",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 38,
@@ -1138,7 +1140,7 @@
       "class_name": "Actinomycetes",
       "phylum": "Actinomycetota",
       "gram_stain": "Gram-positive",
-      "acid_fast": false,
+      "acid_fast": true,
       "strategy": "arrest",
       "strategy_secondary": null,
       "strategy_evidence": null,
@@ -1150,9 +1152,9 @@
       "n_contigs": 1,
       "reference_doi": "10.1086/515160",
       "description": "Arrests phagosome maturation at early stage; blocks acidification; survives in macrophages. Mce (mammalian cell entry) proteins mediate invasion and intracellular survival. Phospholipase A (PLA) contributes to phagosomal membrane disruption, while superoxide dismutase (Sod) and catalase (Cat) neutralize host oxidative burst. Causes nocardiosis in immunocompromised patients",
-      "curation_notes": null,
+      "curation_notes": "Nocardia species are partially acid-fast due to mycolic acids in cell wall.",
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 39,
@@ -1168,7 +1170,7 @@
       "class_name": "Actinomycetes",
       "phylum": "Actinomycetota",
       "gram_stain": "Gram-positive",
-      "acid_fast": false,
+      "acid_fast": true,
       "strategy": "modified_compartment",
       "strategy_secondary": null,
       "strategy_evidence": null,
@@ -1180,9 +1182,9 @@
       "n_contigs": 3,
       "reference_doi": "10.1111/j.1365-2958.2012.08093.x",
       "description": "Resides in non-acidified Rhodococcus-containing vacuole (RCV); prevents lysosomal fusion via Vap proteins (VapA, VapB, VapC, VapD). VapA is the major virulence factor, a surface-expressed protein that modulates host vesicular trafficking and prevents lysosomal hydrolase delivery. Causes pneumonia in foals and opportunistic infections in immunocompromised humans",
-      "curation_notes": null,
+      "curation_notes": "Rhodococcus species are partially acid-fast due to mycolic acids in cell wall.",
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 40,
@@ -1212,7 +1214,7 @@
       "description": "Arrests phagosome maturation; survives in macrophages; causes Whipple disease — a rare systemic infection affecting the gastrointestinal tract and joints. TW surface proteins mediate adhesion and intracellular survival. The bacterium has a reduced genome and relies on host-derived amino acids and metabolites. Survives within macrophages by blocking acidification and lysosomal fusion",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 41,
@@ -1242,7 +1244,7 @@
       "description": "Similar to M. tuberculosis; arrests phagosome maturation at the early stage; uniquely inhabits Schwann cells and macrophages. LAM (lipoarabinomannan) inhibits Vps34 and Ca2+ signaling to block phagosome maturation. ML0098 modulates TLR signaling to prevent pro-inflammatory responses. Causes leprosy with tropism for peripheral nerves leading to demyelination",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 42,
@@ -1272,7 +1274,7 @@
       "description": "Intracellular pathogen causing tuberculosis in cattle; BCG (Bacille Calmette-Guerin) is an attenuated strain used as a vaccine against human TB. Arrests phagosome maturation by inhibiting V-ATPase recruitment and Rab7 acquisition. ESAT-6 and CFP-10 are T7SS (ESX-1) secreted effectors that mediate phagosomal permeabilization and intercellular spread",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 43,
@@ -1302,7 +1304,7 @@
       "description": "Opportunistic environmental mycobacterium causing disseminated disease in immunocompromised patients (especially advanced HIV/AIDS). Survives and replicates within macrophages by blocking phagosome acidification and lysosomal fusion via LAM-mediated inhibition of Vps34 and PI3P production. MAV_2941 is a secreted factor that promotes intracellular survival",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 44,
@@ -1332,37 +1334,7 @@
       "description": "Model organism for studying mycobacterial pathogenesis in zebrafish infection model. Arrests phagosome maturation and prevents acidification similar to M. tuberculosis. ESAT-6 (ESX-1 T7SS effector) forms pores in phagosomal membranes to promote permeabilization. MMPL7 is an efflux pump involved in drug resistance. Causes fish tuberculosis and granulomatous skin infections in humans",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
-    },
-    {
-      "pathogen_id": 45,
-      "name": "Streptomyces scabies",
-      "genus": "Streptomyces",
-      "species": "Streptomyces scabies",
-      "serovar": null,
-      "strain": null,
-      "tax_id": 1930,
-      "ncbi_scientific_name": "Streptomyces scabiei",
-      "family": "Streptomycetaceae",
-      "order_name": "Kitasatosporales",
-      "class_name": "Actinomycetes",
-      "phylum": "Actinomycetota",
-      "gram_stain": "Gram-positive",
-      "acid_fast": false,
-      "strategy": "extracellular",
-      "strategy_secondary": null,
-      "strategy_evidence": null,
-      "intracellular_niche": "Extracellular (plant pathogen)",
-      "genome_accession": "GCF_000091305.1",
-      "assembly_level": "Complete Genome",
-      "genome_size_mb": 10.15,
-      "gc_content": 71.5,
-      "n_contigs": 1,
-      "reference_doi": "10.1111/j.1365-2958.2012.08066.x",
-      "description": "Plant pathogen causing common scab disease in potato and other root crops. Produces thaxtomin A, a phytotoxin that inhibits cellulose biosynthesis in plant cell walls, leading to cell swelling and tissue necrosis. TxtA, TxtB, and TxtC are key synthetases in the thaxtomin biosynthesis pathway. Nec1 is a necrosis-inducing virulence factor that promotes plant tissue maceration",
-      "curation_notes": null,
-      "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 46,
@@ -1392,7 +1364,7 @@
       "description": "Oral keystone pathogen causing periodontitis; hijacks host endocytic pathway and survives within gingival epithelial cells. Gingipains (RgpA, RgpB, Kgp) are cysteine proteases that degrade host ECM proteins, activate PAR signaling, and subvert complement. FimA fimbriae bind CD14/TLR2 to trigger inflammatory signaling and promote intracellular invasion",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 47,
@@ -1422,7 +1394,7 @@
       "description": "Encapsulated nosocomial pathogen causing pneumonia and urinary tract infections; emerging hypervirulent strains with enhanced mucoviscosity. CPS (capsular polysaccharide) is the major antiphagocytic factor — over 80 serotypes known. LPS activates TLR4 triggering inflammatory responses. FimH (type 1) and MrkD (type 3) fimbriae mediate adhesion to host tissues and biofilm formation",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 48,
@@ -1452,7 +1424,7 @@
       "description": "Multidrug-resistant nosocomial pathogen; survives on hospital surfaces and exhibits remarkable antibiotic resistance. OmpA is a major virulence factor that targets mitochondria to induce host cell death. Plc (phospholipase C) degrades host membrane phospholipids. CsuA/B pilus and Bap surface protein mediate biofilm formation on abiotic surfaces including medical devices",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 49,
@@ -1482,7 +1454,7 @@
       "description": "Escapes phagosome via T3SS (T3SS-3); replicates in cytosol; induces actin polymerization for cell-to-cell spread. BopA is a T3SS translocon protein that mediates phagosomal escape, while BopE acts as a GEF for Cdc42 and Rac1 to induce membrane ruffling. BimA recruits actin to the bacterial surface for polymerization-based motility. Causes melioidosis in tropical regions",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 50,
@@ -1512,7 +1484,7 @@
       "description": "Survives in membrane-bound vacuole in macrophages; T6SS and T3SS effectors modulate host cell functions. Bat3 is a T6SS component that mediates effector translocation into host cells. AidA is a T4SS effector that promotes intracellular survival within the vacuole. CblA (cable pilus) and BcaA adhesin mediate binding to host epithelial cells and biofilm formation",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 51,
@@ -1542,7 +1514,7 @@
       "description": "Anaerobic commensal and opportunistic pathogen; enterotoxigenic strains produce BFT (B. fragilis toxin) — a zinc-dependent metalloprotease that cleaves E-cadherin, disrupting epithelial tight junctions and activating beta-catenin signaling. PsaA is a protective surface antigen. FimA fimbriae mediate adherence to host cells. SusC is part of the starch utilization system for nutrient acquisition",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 52,
@@ -1572,13 +1544,13 @@
       "description": "Highly invasive spirochete causing syphilis; capable of penetrating intact mucous membranes and disseminating throughout the body. TprK undergoes antigenic variation to evade host immune responses. Tp0751 (pallilysin) is a metalloprotease that degrades laminin and fibrinogen for tissue penetration. Has a minimal genome (~1.14 Mbp) with limited metabolic capacity, relying on host nutrients",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 53,
-      "name": "Borrelia burgdorferi",
-      "genus": "Borrelia",
-      "species": "Borrelia burgdorferi",
+      "name": "Borreliella burgdorferi",
+      "genus": "Borreliella",
+      "species": "Borreliella burgdorferi",
       "serovar": null,
       "strain": null,
       "tax_id": 139,
@@ -1600,9 +1572,9 @@
       "n_contigs": 13,
       "reference_doi": "10.1038/s41579-019-0306-x",
       "description": "Lyme disease spirochete transmitted by Ixodes ticks; disseminates through tissue and evades immune clearance. OspA and OspC are differentially expressed surface lipoproteins — OspA promotes tick midgut colonization while OspC is required for mammalian infection. VlsE undergoes segmental gene conversion to generate antigenic variation, enabling persistent infection. DbpA binds decorin for tissue adhesion",
-      "curation_notes": null,
+      "curation_notes": "NCBI has renamed genus from Borrelia to Borreliella for Lyme disease spirochetes.",
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 54,
@@ -1632,7 +1604,1793 @@
       "description": "Leptospirosis spirochete; invades through mucous membranes or skin abrasions; colonizes the renal tubules of reservoir hosts and is shed in urine. LipL32 is the major outer membrane lipoprotein involved in adhesion to host ECM. LenA binds complement Factor H to evade immune killing. Loa22 contains a collagen-binding domain for host tissue adherence. Causes Weil's disease in severe cases",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
+    }
+  ],
+  "effectors": [
+    {
+      "pathogen_name": "Acinetobacter baumannii",
+      "effector_name": "OmpA",
+      "type": "Outer membrane",
+      "host_target": "Mitochondria",
+      "mechanism": "Porin; targeting host cell death"
+    },
+    {
+      "pathogen_name": "Acinetobacter baumannii",
+      "effector_name": "AbOmpA",
+      "type": "Outer membrane",
+      "host_target": "Host membranes",
+      "mechanism": "Biofilm-associated protein"
+    },
+    {
+      "pathogen_name": "Acinetobacter baumannii",
+      "effector_name": "CsuA/B",
+      "type": "Pilus",
+      "host_target": "Abiotic surfaces",
+      "mechanism": "Biofilm formation"
+    },
+    {
+      "pathogen_name": "Acinetobacter baumannii",
+      "effector_name": "Bap",
+      "type": "Surface protein",
+      "host_target": "Host cells",
+      "mechanism": "Biofilm-associated protein"
+    },
+    {
+      "pathogen_name": "Acinetobacter baumannii",
+      "effector_name": "Plc",
+      "type": "Phospholipase",
+      "host_target": "Host membranes",
+      "mechanism": "Phospholipase C activity"
+    },
+    {
+      "pathogen_name": "Anaplasma phagocytophilum",
+      "effector_name": "Ats-1",
+      "type": "T4SS",
+      "host_target": "Rab5 / PI3P",
+      "mechanism": "Binds Rab5; anchors to inclusion membrane"
+    },
+    {
+      "pathogen_name": "Anaplasma phagocytophilum",
+      "effector_name": "AnkA",
+      "type": "T4SS",
+      "host_target": "MYADM / Abl-1",
+      "mechanism": "Ankyrin repeat; modulates host signaling"
+    },
+    {
+      "pathogen_name": "Anaplasma phagocytophilum",
+      "effector_name": "p44/Msp2",
+      "type": "Surface protein",
+      "host_target": "P-selectin glycoprotein",
+      "mechanism": "Antigenic variation; immune evasion"
+    },
+    {
+      "pathogen_name": "Bacillus anthracis",
+      "effector_name": "ALO",
+      "type": "Cholesterol-dependent",
+      "host_target": "Cholesterol",
+      "mechanism": "Anthrolysin O; phagosomal escape"
+    },
+    {
+      "pathogen_name": "Bacillus anthracis",
+      "effector_name": "LF",
+      "type": "AB toxin",
+      "host_target": "MAPKKs",
+      "mechanism": "Lethal factor; zinc metalloprotease"
+    },
+    {
+      "pathogen_name": "Bacillus anthracis",
+      "effector_name": "EF",
+      "type": "AB toxin",
+      "host_target": "CaM/adenylate cyclase",
+      "mechanism": "Edema factor; adenylyl cyclase"
+    },
+    {
+      "pathogen_name": "Bacillus anthracis",
+      "effector_name": "PA",
+      "type": "AB toxin",
+      "host_target": "ANTXR1/2",
+      "mechanism": "Protective antigen; mediates uptake of LF/EF"
+    },
+    {
+      "pathogen_name": "Bacillus anthracis",
+      "effector_name": "CatB",
+      "type": "Catalase",
+      "host_target": "ROS",
+      "mechanism": "Resistance to oxidative burst"
+    },
+    {
+      "pathogen_name": "Bacillus cereus",
+      "effector_name": "Hbl",
+      "type": "Pore-forming",
+      "host_target": "Membrane",
+      "mechanism": "Hemolysin BL; three-component toxin"
+    },
+    {
+      "pathogen_name": "Bacillus cereus",
+      "effector_name": "Nhe",
+      "type": "Pore-forming",
+      "host_target": "Membrane",
+      "mechanism": "Non-hemolytic enterotoxin"
+    },
+    {
+      "pathogen_name": "Bacillus cereus",
+      "effector_name": "CytK",
+      "type": "Pore-forming",
+      "host_target": "Membrane",
+      "mechanism": "Cytotoxin K; beta-barrel pore"
+    },
+    {
+      "pathogen_name": "Bacillus cereus",
+      "effector_name": "PC-PLC",
+      "type": "Phospholipase",
+      "host_target": "Membrane",
+      "mechanism": "Phosphatidylcholine-hydrolyzing"
+    },
+    {
+      "pathogen_name": "Bacteroides fragilis",
+      "effector_name": "BFT",
+      "type": "Metalloprotease",
+      "host_target": "E-cadherin",
+      "mechanism": "B. fragilis toxin; epithelial signaling"
+    },
+    {
+      "pathogen_name": "Bacteroides fragilis",
+      "effector_name": "PsaA",
+      "type": "Surface protein",
+      "host_target": "Host cells",
+      "mechanism": "Protection surface antigen"
+    },
+    {
+      "pathogen_name": "Bacteroides fragilis",
+      "effector_name": "FimA",
+      "type": "Fimbriae",
+      "host_target": "Host cells",
+      "mechanism": "Type A fimbriae"
+    },
+    {
+      "pathogen_name": "Bacteroides fragilis",
+      "effector_name": "SusC",
+      "type": "Nutrient transporter",
+      "host_target": "Host glycans",
+      "mechanism": "Starch utilization"
+    },
+    {
+      "pathogen_name": "Bartonella henselae",
+      "effector_name": "BepA",
+      "type": "T4SS (VirB)",
+      "host_target": "Host cell actin",
+      "mechanism": "F-actin fiber formation; anti-apoptotic"
+    },
+    {
+      "pathogen_name": "Bartonella henselae",
+      "effector_name": "BepB",
+      "type": "T4SS (VirB)",
+      "host_target": "Host membranes",
+      "mechanism": "Actin remodeling"
+    },
+    {
+      "pathogen_name": "Bartonella henselae",
+      "effector_name": "BepC",
+      "type": "T4SS (VirB)",
+      "host_target": "PI3K / Akt",
+      "mechanism": "Promotes endothelial cell proliferation"
+    },
+    {
+      "pathogen_name": "Bartonella henselae",
+      "effector_name": "BepD",
+      "type": "T4SS (VirB)",
+      "host_target": "Host membranes",
+      "mechanism": "F-actin recruitment"
+    },
+    {
+      "pathogen_name": "Bartonella henselae",
+      "effector_name": "BepE",
+      "type": "T4SS (VirB)",
+      "host_target": "Host apoptosis",
+      "mechanism": "Anti-apoptotic"
+    },
+    {
+      "pathogen_name": "Bordetella pertussis",
+      "effector_name": "PTx",
+      "type": "AB toxin",
+      "host_target": "Gi/adenylate cyclase",
+      "mechanism": "Pertussis toxin; ADP-ribosyltransferase"
+    },
+    {
+      "pathogen_name": "Bordetella pertussis",
+      "effector_name": "CyaA",
+      "type": "RTX toxin",
+      "host_target": "CaM/adenylate cyclase",
+      "mechanism": "Adenylate cyclase toxin; phagocyte entry"
+    },
+    {
+      "pathogen_name": "Bordetella pertussis",
+      "effector_name": "FHA",
+      "type": "Adhesin",
+      "host_target": "CR3 / integrins",
+      "mechanism": "Filamentous hemagglutinin"
+    },
+    {
+      "pathogen_name": "Bordetella pertussis",
+      "effector_name": "TCF",
+      "type": "Tracheal cytotoxin",
+      "host_target": "Ciliated cells",
+      "mechanism": "Disrupts ciliated epithelium"
+    },
+    {
+      "pathogen_name": "Bordetella pertussis",
+      "effector_name": "DNT",
+      "type": "Toxin",
+      "host_target": "Rho GTPases",
+      "mechanism": "Dermonecrotic toxin; constrictive activity"
+    },
+    {
+      "pathogen_name": "Borreliella burgdorferi",
+      "effector_name": "OspA",
+      "type": "Surface lipoprotein",
+      "host_target": "TLR2",
+      "mechanism": "Outer surface protein A"
+    },
+    {
+      "pathogen_name": "Borreliella burgdorferi",
+      "effector_name": "OspC",
+      "type": "Surface lipoprotein",
+      "host_target": "Host immune",
+      "mechanism": "Outer surface protein C"
+    },
+    {
+      "pathogen_name": "Borreliella burgdorferi",
+      "effector_name": "VlsE",
+      "type": "Surface protein",
+      "host_target": "Immune evasion",
+      "mechanism": "Antigenic variation locus"
+    },
+    {
+      "pathogen_name": "Borreliella burgdorferi",
+      "effector_name": "DbpA",
+      "type": "Adhesin",
+      "host_target": "Decorin",
+      "mechanism": "PAS domain; decorin-binding"
+    },
+    {
+      "pathogen_name": "Brucella abortus",
+      "effector_name": "VirB",
+      "type": "T4SS (VirB)",
+      "host_target": "ER membranes",
+      "mechanism": "Type IV secretion system structural component"
+    },
+    {
+      "pathogen_name": "Brucella abortus",
+      "effector_name": "BtpA",
+      "type": "T4SS effector",
+      "host_target": "TLR2",
+      "mechanism": "TIR-domain containing; inhibits TLR2 signaling"
+    },
+    {
+      "pathogen_name": "Brucella abortus",
+      "effector_name": "BtpB",
+      "type": "T4SS effector",
+      "host_target": "TIRAP/Mal",
+      "mechanism": "TIR-domain containing adaptor mimic"
+    },
+    {
+      "pathogen_name": "Brucella abortus",
+      "effector_name": "VceA",
+      "type": "T4SS effector",
+      "host_target": "Secretory pathway",
+      "mechanism": "Modulates host vesicular trafficking"
+    },
+    {
+      "pathogen_name": "Brucella abortus",
+      "effector_name": "VceC",
+      "type": "T4SS effector",
+      "host_target": "ER stress response",
+      "mechanism": "Activates unfolded protein response"
+    },
+    {
+      "pathogen_name": "Burkholderia cenocepacia",
+      "effector_name": "Bat3",
+      "type": "T6SS",
+      "host_target": "Host cells",
+      "mechanism": "T6SS component"
+    },
+    {
+      "pathogen_name": "Burkholderia cenocepacia",
+      "effector_name": "AidA",
+      "type": "T4SS effector",
+      "host_target": "Host membranes",
+      "mechanism": "Intracellular survival"
+    },
+    {
+      "pathogen_name": "Burkholderia cenocepacia",
+      "effector_name": "CblA",
+      "type": "Cable pilus",
+      "host_target": "Host cells",
+      "mechanism": "Adhesion factor"
+    },
+    {
+      "pathogen_name": "Burkholderia cenocepacia",
+      "effector_name": "BcaA",
+      "type": "Adhesin",
+      "host_target": "Host cells",
+      "mechanism": "Burkholderia adhesin"
+    },
+    {
+      "pathogen_name": "Burkholderia pseudomallei",
+      "effector_name": "BopA",
+      "type": "T3SS (T3SS-3)",
+      "host_target": "Host membranes",
+      "mechanism": "Translocon; phagosomal escape"
+    },
+    {
+      "pathogen_name": "Burkholderia pseudomallei",
+      "effector_name": "BopE",
+      "type": "T3SS (T3SS-3)",
+      "host_target": "Cdc42 / Rac1",
+      "mechanism": "GEF for Rho GTPases"
+    },
+    {
+      "pathogen_name": "Burkholderia pseudomallei",
+      "effector_name": "BprP",
+      "type": "Protease",
+      "host_target": "Host proteins",
+      "mechanism": "Serine protease"
+    },
+    {
+      "pathogen_name": "Burkholderia pseudomallei",
+      "effector_name": "BimA",
+      "type": "Surface protein",
+      "host_target": "Actin",
+      "mechanism": "Actin-based motility"
+    },
+    {
+      "pathogen_name": "Burkholderia pseudomallei",
+      "effector_name": "MprA",
+      "type": "Protease",
+      "host_target": "Host proteins",
+      "mechanism": "Metalloprotease"
+    },
+    {
+      "pathogen_name": "Campylobacter jejuni",
+      "effector_name": "Cdt",
+      "type": "Cytolethal distending",
+      "host_target": "Host DNA",
+      "mechanism": "DNase; cell cycle arrest"
+    },
+    {
+      "pathogen_name": "Campylobacter jejuni",
+      "effector_name": "FlaA",
+      "type": "Flagellin",
+      "host_target": "TLR5",
+      "mechanism": "Major flagellin; glycosylated"
+    },
+    {
+      "pathogen_name": "Campylobacter jejuni",
+      "effector_name": "CiaB",
+      "type": "Flagellar secretion",
+      "host_target": "Host cells",
+      "mechanism": "Campylobacter invasion antigen"
+    },
+    {
+      "pathogen_name": "Campylobacter jejuni",
+      "effector_name": "VirK",
+      "type": "Virulence factor",
+      "host_target": "Host membranes",
+      "mechanism": "Intracellular survival"
+    },
+    {
+      "pathogen_name": "Campylobacter jejuni",
+      "effector_name": "CfrA",
+      "type": "Iron transporter",
+      "host_target": "Host iron",
+      "mechanism": "Ferric enterobactin receptor"
+    },
+    {
+      "pathogen_name": "Chlamydia pneumoniae",
+      "effector_name": "IncA",
+      "type": "T3SS",
+      "host_target": "SNAREs",
+      "mechanism": "Similar inclusion membrane function"
+    },
+    {
+      "pathogen_name": "Chlamydia pneumoniae",
+      "effector_name": "CPn0585",
+      "type": "T3SS",
+      "host_target": "Rab GTPases",
+      "mechanism": "Guanine nucleotide exchange factor"
+    },
+    {
+      "pathogen_name": "Chlamydia pneumoniae",
+      "effector_name": "CPn0809",
+      "type": "T3SS",
+      "host_target": "Host membranes",
+      "mechanism": "Sphingolipid acquisition"
+    },
+    {
+      "pathogen_name": "Chlamydia trachomatis",
+      "effector_name": "IncA",
+      "type": "T3SS",
+      "host_target": "SNARE proteins",
+      "mechanism": "Inclusion membrane protein; blocks fusion"
+    },
+    {
+      "pathogen_name": "Chlamydia trachomatis",
+      "effector_name": "IncB",
+      "type": "T3SS",
+      "host_target": "Rab4",
+      "mechanism": "Recruits Rab4 to inclusion membrane"
+    },
+    {
+      "pathogen_name": "Chlamydia trachomatis",
+      "effector_name": "IncC",
+      "type": "T3SS",
+      "host_target": "Rab6 / Rab11",
+      "mechanism": "Recruits Golgi-derived vesicles"
+    },
+    {
+      "pathogen_name": "Chlamydia trachomatis",
+      "effector_name": "CT229",
+      "type": "T3SS",
+      "host_target": "Rab GTPases",
+      "mechanism": "Ubiquitin ligase; Rab protein modification"
+    },
+    {
+      "pathogen_name": "Chlamydia trachomatis",
+      "effector_name": "CT813",
+      "type": "T3SS",
+      "host_target": "Host membranes",
+      "mechanism": "Inclusion protein; lipid acquisition"
+    },
+    {
+      "pathogen_name": "Chlamydia trachomatis",
+      "effector_name": "CADD",
+      "type": "T3SS",
+      "host_target": "Host apoptosis",
+      "mechanism": "Anti-apoptotic; blocks host cell death"
+    },
+    {
+      "pathogen_name": "Clostridioides difficile",
+      "effector_name": "TcdA",
+      "type": "Large clostridial toxin",
+      "host_target": "Rho GTPases",
+      "mechanism": "Enterotoxin; glucosyltransferase"
+    },
+    {
+      "pathogen_name": "Clostridioides difficile",
+      "effector_name": "TcdB",
+      "type": "Large clostridial toxin",
+      "host_target": "Rho GTPases",
+      "mechanism": "Cytotoxin; glucosyltransferase"
+    },
+    {
+      "pathogen_name": "Clostridioides difficile",
+      "effector_name": "Cdt",
+      "type": "ADP-ribosyltransferase",
+      "host_target": "Actin",
+      "mechanism": "Binary toxin; actin depolymerization"
+    },
+    {
+      "pathogen_name": "Clostridioides difficile",
+      "effector_name": "FliC",
+      "type": "Flagellin",
+      "host_target": "TLR5",
+      "mechanism": "Flagellar protein; inflammatory"
+    },
+    {
+      "pathogen_name": "Clostridium perfringens",
+      "effector_name": "CTA",
+      "type": "AB toxin (CPE)",
+      "host_target": "Claudins",
+      "mechanism": "C. perfringens enterotoxin; tight junction"
+    },
+    {
+      "pathogen_name": "Clostridium perfringens",
+      "effector_name": "PFO",
+      "type": "Cholesterol-dependent",
+      "host_target": "Cholesterol",
+      "mechanism": "Perfringolysin O; pore-forming"
+    },
+    {
+      "pathogen_name": "Clostridium perfringens",
+      "effector_name": "PLC",
+      "type": "Phospholipase",
+      "host_target": "Membrane",
+      "mechanism": "Alpha-toxin; hemolysis and necrosis"
+    },
+    {
+      "pathogen_name": "Clostridium perfringens",
+      "effector_name": "NetB",
+      "type": "Pore-forming",
+      "host_target": "Host cells",
+      "mechanism": "Necrotic enteritis toxin B"
+    },
+    {
+      "pathogen_name": "Corynebacterium diphtheriae",
+      "effector_name": "DT",
+      "type": "AB toxin",
+      "host_target": "EF-2",
+      "mechanism": "Diphtheria toxin; ADP-ribosyltransferase"
+    },
+    {
+      "pathogen_name": "Corynebacterium diphtheriae",
+      "effector_name": "Fbp",
+      "type": "Iron transporter",
+      "host_target": "Host iron",
+      "mechanism": "Iron acquisition"
+    },
+    {
+      "pathogen_name": "Corynebacterium diphtheriae",
+      "effector_name": "SpaA",
+      "type": "Pilin",
+      "host_target": "Host cells",
+      "mechanism": "Shaft pilin; adherence"
+    },
+    {
+      "pathogen_name": "Corynebacterium diphtheriae",
+      "effector_name": "SpaB",
+      "type": "Pilin",
+      "host_target": "Host cells",
+      "mechanism": "Minor pilin; adherence"
+    },
+    {
+      "pathogen_name": "Coxiella burnetii",
+      "effector_name": "Cig57",
+      "type": "T4SS (Dot/Icm)",
+      "host_target": "Clathrin",
+      "mechanism": "Subverts clathrin-mediated trafficking"
+    },
+    {
+      "pathogen_name": "Coxiella burnetii",
+      "effector_name": "Cig2",
+      "type": "T4SS (Dot/Icm)",
+      "host_target": "Rab proteins",
+      "mechanism": "Interacts with host Rab GTPases"
+    },
+    {
+      "pathogen_name": "Coxiella burnetii",
+      "effector_name": "CvpB",
+      "type": "T4SS (Dot/Icm)",
+      "host_target": "PI3P / Rab5",
+      "mechanism": "Binds PI3P and Rab5 for CCV biogenesis"
+    },
+    {
+      "pathogen_name": "Coxiella burnetii",
+      "effector_name": "CirA",
+      "type": "T4SS (Dot/Icm)",
+      "host_target": "Exocyst complex",
+      "mechanism": "Modulates host vesicle tethering"
+    },
+    {
+      "pathogen_name": "Coxiella burnetii",
+      "effector_name": "CirB",
+      "type": "T4SS (Dot/Icm)",
+      "host_target": "HOPS complex",
+      "mechanism": "Intercepts tethering for CCV expansion"
+    },
+    {
+      "pathogen_name": "Ehrlichia chaffeensis",
+      "effector_name": "TRP120",
+      "type": "T4SS",
+      "host_target": "Notch pathway",
+      "mechanism": "Mimics Notch ligand; activates Notch signaling"
+    },
+    {
+      "pathogen_name": "Ehrlichia chaffeensis",
+      "effector_name": "TRP32",
+      "type": "T4SS",
+      "host_target": "Wnt pathway",
+      "mechanism": "Activates Wnt signaling for host survival"
+    },
+    {
+      "pathogen_name": "Ehrlichia chaffeensis",
+      "effector_name": "Ank200",
+      "type": "T4SS",
+      "host_target": "Host transcription",
+      "mechanism": "Ankyrin repeat; modulates gene expression"
+    },
+    {
+      "pathogen_name": "Enterococcus faecalis",
+      "effector_name": "Cyl",
+      "type": "Pore-forming toxin",
+      "host_target": "Membrane",
+      "mechanism": "Cytolysin; hemolytic/bactericidal"
+    },
+    {
+      "pathogen_name": "Enterococcus faecalis",
+      "effector_name": "Esp",
+      "type": "Surface protein",
+      "host_target": "Host cells",
+      "mechanism": "Enterococcal surface protein; biofilm"
+    },
+    {
+      "pathogen_name": "Enterococcus faecalis",
+      "effector_name": "GelE",
+      "type": "Gelatinase",
+      "host_target": "ECM proteins",
+      "mechanism": "Extracellular protease"
+    },
+    {
+      "pathogen_name": "Enterococcus faecalis",
+      "effector_name": "SprE",
+      "type": "Serine protease",
+      "host_target": "Host proteins",
+      "mechanism": "Immune evasion factor"
+    },
+    {
+      "pathogen_name": "Enterococcus faecalis",
+      "effector_name": "Ace",
+      "type": "Adhesin",
+      "host_target": "Collagen",
+      "mechanism": "Adherence to collagen"
+    },
+    {
+      "pathogen_name": "Escherichia coli K1",
+      "effector_name": "IbeA",
+      "type": "Invasin",
+      "host_target": "Vimentin",
+      "mechanism": "Invasion of brain microvascular endothelial cells"
+    },
+    {
+      "pathogen_name": "Escherichia coli K1",
+      "effector_name": "IbeB",
+      "type": "Invasin",
+      "host_target": "Host membranes",
+      "mechanism": "Invasion factor"
+    },
+    {
+      "pathogen_name": "Escherichia coli K1",
+      "effector_name": "OmpA",
+      "type": "Outer membrane",
+      "host_target": "GPI-anchored proteins",
+      "mechanism": "Invasion and intracellular survival"
+    },
+    {
+      "pathogen_name": "Escherichia coli K1",
+      "effector_name": "K1 capsule",
+      "type": "Polysaccharide",
+      "host_target": "Immune evasion",
+      "mechanism": "Antiphagocytic capsular polysaccharide"
+    },
+    {
+      "pathogen_name": "Escherichia coli K1",
+      "effector_name": "CNF1",
+      "type": "Toxin",
+      "host_target": "Rho GTPases",
+      "mechanism": "Deamidase; constitutive Rho activation"
+    },
+    {
+      "pathogen_name": "Francisella tularensis",
+      "effector_name": "IglC",
+      "type": "T6SS",
+      "host_target": "Phagosomal membrane",
+      "mechanism": "Essential for phagosomal escape"
+    },
+    {
+      "pathogen_name": "Francisella tularensis",
+      "effector_name": "IglD",
+      "type": "T6SS",
+      "host_target": "Phagosomal membrane",
+      "mechanism": "Component of T6SS apparatus"
+    },
+    {
+      "pathogen_name": "Francisella tularensis",
+      "effector_name": "IglE",
+      "type": "T6SS",
+      "host_target": "Vacuole",
+      "mechanism": "Contributes to phagosomal disruption"
+    },
+    {
+      "pathogen_name": "Francisella tularensis",
+      "effector_name": "MglA",
+      "type": "Regulator",
+      "host_target": "Transcription",
+      "mechanism": "Global virulence regulator"
+    },
+    {
+      "pathogen_name": "Francisella tularensis",
+      "effector_name": "FevR",
+      "type": "Regulator",
+      "host_target": "PP2C",
+      "mechanism": "Interacts with phosphatase; regulates gene expression"
+    },
+    {
+      "pathogen_name": "Haemophilus influenzae",
+      "effector_name": "Hap",
+      "type": "Autotransporter",
+      "host_target": "Extracellular matrix",
+      "mechanism": "Serine protease; adherence"
+    },
+    {
+      "pathogen_name": "Haemophilus influenzae",
+      "effector_name": "HMW1",
+      "type": "Adhesin",
+      "host_target": "Epithelial cells",
+      "mechanism": "High molecular weight adhesin"
+    },
+    {
+      "pathogen_name": "Haemophilus influenzae",
+      "effector_name": "HMW2",
+      "type": "Adhesin",
+      "host_target": "Epithelial cells",
+      "mechanism": "High molecular weight adhesin"
+    },
+    {
+      "pathogen_name": "Haemophilus influenzae",
+      "effector_name": "Hia",
+      "type": "Adhesin",
+      "host_target": "Host cells",
+      "mechanism": "Haemophilus IgA protease"
+    },
+    {
+      "pathogen_name": "Haemophilus influenzae",
+      "effector_name": "P5",
+      "type": "OMP",
+      "host_target": "ICAM-1",
+      "mechanism": "Adherence to activated epithelial cells"
+    },
+    {
+      "pathogen_name": "Helicobacter pylori",
+      "effector_name": "CagA",
+      "type": "T4SS effector",
+      "host_target": "SHP-2 / PAR1",
+      "mechanism": "Injected by T4SS; cell signaling disruption"
+    },
+    {
+      "pathogen_name": "Helicobacter pylori",
+      "effector_name": "VacA",
+      "type": "Pore-forming toxin",
+      "host_target": "Mitochondria / lysosomes",
+      "mechanism": "Vacuolating cytotoxin"
+    },
+    {
+      "pathogen_name": "Helicobacter pylori",
+      "effector_name": "UreA",
+      "type": "Urease",
+      "host_target": "Stomach acid",
+      "mechanism": "Neutralizes gastric pH"
+    },
+    {
+      "pathogen_name": "Helicobacter pylori",
+      "effector_name": "HtrA",
+      "type": "Serine protease",
+      "host_target": "E-cadherin",
+      "mechanism": "Cleaves E-cadherin; disrupts junctions"
+    },
+    {
+      "pathogen_name": "Helicobacter pylori",
+      "effector_name": "OipA",
+      "type": "Outer membrane",
+      "host_target": "IL-8 induction",
+      "mechanism": "Inflammatory activation"
+    },
+    {
+      "pathogen_name": "Klebsiella pneumoniae",
+      "effector_name": "CPS",
+      "type": "Polysaccharide",
+      "host_target": "Immune evasion",
+      "mechanism": "Capsular polysaccharide; antiphagocytic"
+    },
+    {
+      "pathogen_name": "Klebsiella pneumoniae",
+      "effector_name": "LPS",
+      "type": "Lipopolysaccharide",
+      "host_target": "TLR4",
+      "mechanism": "Endotoxin; inflammatory"
+    },
+    {
+      "pathogen_name": "Klebsiella pneumoniae",
+      "effector_name": "FimH",
+      "type": "Fimbrial adhesin",
+      "host_target": "Mannose receptors",
+      "mechanism": "Type 1 fimbriae; adhesion"
+    },
+    {
+      "pathogen_name": "Klebsiella pneumoniae",
+      "effector_name": "MrkD",
+      "type": "Fimbrial adhesin",
+      "host_target": "Extracellular matrix",
+      "mechanism": "Type 3 fimbriae; biofilm"
+    },
+    {
+      "pathogen_name": "Klebsiella pneumoniae",
+      "effector_name": "KPC",
+      "type": "Beta-lactamase",
+      "host_target": "Antibiotics",
+      "mechanism": "Carbapenem resistance"
+    },
+    {
+      "pathogen_name": "Legionella pneumophila",
+      "effector_name": "DrrA/SidM",
+      "type": "T4SS (Dot/Icm)",
+      "host_target": "Rab1",
+      "mechanism": "GEF and GDF for Rab1; AMPylates"
+    },
+    {
+      "pathogen_name": "Legionella pneumophila",
+      "effector_name": "AnkX",
+      "type": "T4SS (Dot/Icm)",
+      "host_target": "Rab1 / Rab35",
+      "mechanism": "FIC domain phosphocholinase"
+    },
+    {
+      "pathogen_name": "Legionella pneumophila",
+      "effector_name": "Lem3",
+      "type": "T4SS (Dot/Icm)",
+      "host_target": "Rab1",
+      "mechanism": "Dephosphocholinase"
+    },
+    {
+      "pathogen_name": "Legionella pneumophila",
+      "effector_name": "SidD",
+      "type": "T4SS (Dot/Icm)",
+      "host_target": "Rab1",
+      "mechanism": "DeAMPylase"
+    },
+    {
+      "pathogen_name": "Legionella pneumophila",
+      "effector_name": "LidA",
+      "type": "T4SS (Dot/Icm)",
+      "host_target": "Rab1",
+      "mechanism": "Binds/stabilizes active Rab1"
+    },
+    {
+      "pathogen_name": "Legionella pneumophila",
+      "effector_name": "SidC",
+      "type": "T4SS (Dot/Icm)",
+      "host_target": "ER membranes",
+      "mechanism": "Recruits ER vesicles to LCV"
+    },
+    {
+      "pathogen_name": "Legionella pneumophila",
+      "effector_name": "VipD",
+      "type": "T4SS (Dot/Icm)",
+      "host_target": "Endosomal Rab5/Rab22",
+      "mechanism": "Phospholipase A1; displaces from endosomes"
+    },
+    {
+      "pathogen_name": "Leptospira interrogans",
+      "effector_name": "LipL32",
+      "type": "Surface lipoprotein",
+      "host_target": "Host cells",
+      "mechanism": "Major outer membrane protein"
+    },
+    {
+      "pathogen_name": "Leptospira interrogans",
+      "effector_name": "LipL41",
+      "type": "Surface lipoprotein",
+      "host_target": "Host cells",
+      "mechanism": "Minor outer membrane protein"
+    },
+    {
+      "pathogen_name": "Leptospira interrogans",
+      "effector_name": "Loa22",
+      "type": "Surface protein",
+      "host_target": "Collagen",
+      "mechanism": "Adhesion to host ECM"
+    },
+    {
+      "pathogen_name": "Leptospira interrogans",
+      "effector_name": "LenA",
+      "type": "Surface protein",
+      "host_target": "Complement",
+      "mechanism": "Factor H binding"
+    },
+    {
+      "pathogen_name": "Listeria monocytogenes",
+      "effector_name": "LLO",
+      "type": "Toxin",
+      "host_target": "Cholesterol",
+      "mechanism": "Pore-forming cytolysin"
+    },
+    {
+      "pathogen_name": "Listeria monocytogenes",
+      "effector_name": "ActA",
+      "type": "Surface protein",
+      "host_target": "Arp2/3",
+      "mechanism": "Mimics host WASP"
+    },
+    {
+      "pathogen_name": "Listeria monocytogenes",
+      "effector_name": "InlA",
+      "type": "Invasin",
+      "host_target": "E-cadherin",
+      "mechanism": "Triggers zipper-mediated entry"
+    },
+    {
+      "pathogen_name": "Listeria monocytogenes",
+      "effector_name": "InlB",
+      "type": "Invasin",
+      "host_target": "Met receptor",
+      "mechanism": "Triggers PI3K and Rac1 signaling"
+    },
+    {
+      "pathogen_name": "Listeria monocytogenes",
+      "effector_name": "PlcA",
+      "type": "Phospholipase",
+      "host_target": "PI(4,5)P2",
+      "mechanism": "PI-PLC vacuolar escape"
+    },
+    {
+      "pathogen_name": "Listeria monocytogenes",
+      "effector_name": "PlcB",
+      "type": "Phospholipase",
+      "host_target": "Phosphatidylcholine",
+      "mechanism": "Broad-range phospholipase"
+    },
+    {
+      "pathogen_name": "Mycobacterium avium",
+      "effector_name": "LAM",
+      "type": "Glycolipid",
+      "host_target": "Vps34",
+      "mechanism": "Lipoarabinomannan; blocks signaling"
+    },
+    {
+      "pathogen_name": "Mycobacterium avium",
+      "effector_name": "MAV_2941",
+      "type": "Secreted protein",
+      "host_target": "Host cells",
+      "mechanism": "Intracellular survival factor"
+    },
+    {
+      "pathogen_name": "Mycobacterium bovis",
+      "effector_name": "LAM",
+      "type": "Glycolipid",
+      "host_target": "Vps34",
+      "mechanism": "Lipoarabinomannan"
+    },
+    {
+      "pathogen_name": "Mycobacterium bovis",
+      "effector_name": "ESAT-6",
+      "type": "T7SS (ESX-1)",
+      "host_target": "Membrane",
+      "mechanism": "Early secretory antigenic target"
+    },
+    {
+      "pathogen_name": "Mycobacterium bovis",
+      "effector_name": "CFP-10",
+      "type": "T7SS (ESX-1)",
+      "host_target": "Host cells",
+      "mechanism": "Culture filtrate protein 10"
+    },
+    {
+      "pathogen_name": "Mycobacterium bovis",
+      "effector_name": "MPB70",
+      "type": "Secreted protein",
+      "host_target": "Host immune",
+      "mechanism": "Major secreted antigen"
+    },
+    {
+      "pathogen_name": "Mycobacterium leprae",
+      "effector_name": "LAM",
+      "type": "Glycolipid",
+      "host_target": "Vps34",
+      "mechanism": "Similar to M. tuberculosis"
+    },
+    {
+      "pathogen_name": "Mycobacterium leprae",
+      "effector_name": "ML0098",
+      "type": "Secreted protein",
+      "host_target": "Host signaling",
+      "mechanism": "Modulates TLR signaling"
+    },
+    {
+      "pathogen_name": "Mycobacterium leprae",
+      "effector_name": "ML0840",
+      "type": "Secreted protein",
+      "host_target": "Host cells",
+      "mechanism": "Putative virulence factor"
+    },
+    {
+      "pathogen_name": "Mycobacterium leprae",
+      "effector_name": "ML2499",
+      "type": "Surface protein",
+      "host_target": "Schwann cells",
+      "mechanism": "Adhesion to Schwann cells"
+    },
+    {
+      "pathogen_name": "Mycobacterium marinum",
+      "effector_name": "LAM",
+      "type": "Glycolipid",
+      "host_target": "Vps34",
+      "mechanism": "Lipoarabinomannan"
+    },
+    {
+      "pathogen_name": "Mycobacterium marinum",
+      "effector_name": "ESAT-6",
+      "type": "T7SS (ESX-1)",
+      "host_target": "Membrane",
+      "mechanism": "Pore-forming; phagosomal permeabilization"
+    },
+    {
+      "pathogen_name": "Mycobacterium marinum",
+      "effector_name": "MMPL7",
+      "type": "Transport protein",
+      "host_target": "Drug resistance",
+      "mechanism": "Efflux pump"
+    },
+    {
+      "pathogen_name": "Mycobacterium tuberculosis",
+      "effector_name": "LAM",
+      "type": "Glycolipid",
+      "host_target": "Vps34",
+      "mechanism": "Inhibits Ca2+ signaling"
+    },
+    {
+      "pathogen_name": "Mycobacterium tuberculosis",
+      "effector_name": "SapM",
+      "type": "Secreted phosphatase",
+      "host_target": "PI3P",
+      "mechanism": "Dephosphorylates PI3P"
+    },
+    {
+      "pathogen_name": "Mycobacterium tuberculosis",
+      "effector_name": "MptpA",
+      "type": "Secreted phosphatase",
+      "host_target": "V-ATPase",
+      "mechanism": "Blocks V-ATPase trafficking"
+    },
+    {
+      "pathogen_name": "Mycobacterium tuberculosis",
+      "effector_name": "MptpB",
+      "type": "Secreted phosphatase",
+      "host_target": "PI(3,5)P2",
+      "mechanism": "Hydrolyzes PI(3,5)P2"
+    },
+    {
+      "pathogen_name": "Mycobacterium tuberculosis",
+      "effector_name": "Eis",
+      "type": "Secreted protein",
+      "host_target": "JNK/AMPK",
+      "mechanism": "Acetyltransferase; inhibits autophagy"
+    },
+    {
+      "pathogen_name": "Mycobacterium tuberculosis",
+      "effector_name": "PknG",
+      "type": "Ser/Thr kinase",
+      "host_target": "Rab proteins",
+      "mechanism": "Phosphorylates host Rab GTPases"
+    },
+    {
+      "pathogen_name": "Mycobacterium tuberculosis",
+      "effector_name": "ESAT-6",
+      "type": "T7SS (ESX-1)",
+      "host_target": "Membrane",
+      "mechanism": "Pore-forming; promotes phagosomal escape"
+    },
+    {
+      "pathogen_name": "Neisseria gonorrhoeae",
+      "effector_name": "PorB",
+      "type": "Porin",
+      "host_target": "Mitochondria",
+      "mechanism": "Voltage-gated porin; inhibits apoptosis"
+    },
+    {
+      "pathogen_name": "Neisseria gonorrhoeae",
+      "effector_name": "Opa",
+      "type": "Adhesin",
+      "host_target": "CEACAM family",
+      "mechanism": "Carcinoembryonic antigen receptor binding"
+    },
+    {
+      "pathogen_name": "Neisseria gonorrhoeae",
+      "effector_name": "PilE",
+      "type": "Type IV pilin",
+      "host_target": "CD46",
+      "mechanism": "Twitching motility; adherence"
+    },
+    {
+      "pathogen_name": "Neisseria gonorrhoeae",
+      "effector_name": "Ng-MIP",
+      "type": "Macrophage infectivity",
+      "host_target": "Host membranes",
+      "mechanism": "Porin activity"
+    },
+    {
+      "pathogen_name": "Neisseria gonorrhoeae",
+      "effector_name": "TspB",
+      "type": "Toxin",
+      "host_target": "Host cells",
+      "mechanism": "Neisserial toxin"
+    },
+    {
+      "pathogen_name": "Neisseria meningitidis",
+      "effector_name": "PorA",
+      "type": "Porin",
+      "host_target": "Host membranes",
+      "mechanism": "Major outer membrane porin"
+    },
+    {
+      "pathogen_name": "Neisseria meningitidis",
+      "effector_name": "PorB",
+      "type": "Porin",
+      "host_target": "Mitochondria",
+      "mechanism": "Voltage-gated; anti-apoptotic"
+    },
+    {
+      "pathogen_name": "Neisseria meningitidis",
+      "effector_name": "Opca",
+      "type": "Adhesin",
+      "host_target": "CEACAM/fibronectin",
+      "mechanism": "Adhesion and invasion"
+    },
+    {
+      "pathogen_name": "Neisseria meningitidis",
+      "effector_name": "NadA",
+      "type": "Adhesin",
+      "host_target": "Host cells",
+      "mechanism": "Neisserial adhesin A"
+    },
+    {
+      "pathogen_name": "Neisseria meningitidis",
+      "effector_name": "FetA",
+      "type": "Iron transporter",
+      "host_target": "Host iron",
+      "mechanism": "Lactoferrin receptor"
+    },
+    {
+      "pathogen_name": "Nocardia asteroides",
+      "effector_name": "Mce",
+      "type": "Mammalian cell entry",
+      "host_target": "Host membranes",
+      "mechanism": "Invasion and survival"
+    },
+    {
+      "pathogen_name": "Nocardia asteroides",
+      "effector_name": "PLA",
+      "type": "Phospholipase",
+      "host_target": "Host membranes",
+      "mechanism": "Phagosomal escape factor"
+    },
+    {
+      "pathogen_name": "Nocardia asteroides",
+      "effector_name": "Sod",
+      "type": "Superoxide dismutase",
+      "host_target": "ROS",
+      "mechanism": "Oxidative stress resistance"
+    },
+    {
+      "pathogen_name": "Nocardia asteroides",
+      "effector_name": "Cat",
+      "type": "Catalase",
+      "host_target": "H2O2",
+      "mechanism": "Hydrogen peroxide resistance"
+    },
+    {
+      "pathogen_name": "Orientia tsutsugamushi",
+      "effector_name": "ScaA",
+      "type": "Autotransporter",
+      "host_target": "Host cell adhesion",
+      "mechanism": "Surface cell antigen A"
+    },
+    {
+      "pathogen_name": "Orientia tsutsugamushi",
+      "effector_name": "ScaC",
+      "type": "Autotransporter",
+      "host_target": "Host cell adhesion",
+      "mechanism": "Surface cell antigen C"
+    },
+    {
+      "pathogen_name": "Orientia tsutsugamushi",
+      "effector_name": "HlyA",
+      "type": "Hemolysin",
+      "host_target": "Membrane",
+      "mechanism": "Putative hemolysin for escape"
+    },
+    {
+      "pathogen_name": "Orientia tsutsugamushi",
+      "effector_name": "Pld",
+      "type": "Phospholipase D",
+      "host_target": "Host membranes",
+      "mechanism": "Phagosomal escape"
+    },
+    {
+      "pathogen_name": "Orientia tsutsugamushi",
+      "effector_name": "Tsa56",
+      "type": "Surface protein",
+      "host_target": "Host immune evasion",
+      "mechanism": "Major outer membrane protein"
+    },
+    {
+      "pathogen_name": "Porphyromonas gingivalis",
+      "effector_name": "RgpA",
+      "type": "Cysteine protease",
+      "host_target": "Host proteins",
+      "mechanism": "Arginine-gingipain A"
+    },
+    {
+      "pathogen_name": "Porphyromonas gingivalis",
+      "effector_name": "RgpB",
+      "type": "Cysteine protease",
+      "host_target": "Host proteins",
+      "mechanism": "Arginine-gingipain B"
+    },
+    {
+      "pathogen_name": "Porphyromonas gingivalis",
+      "effector_name": "Kgp",
+      "type": "Cysteine protease",
+      "host_target": "Host proteins",
+      "mechanism": "Lysine-gingipain"
+    },
+    {
+      "pathogen_name": "Porphyromonas gingivalis",
+      "effector_name": "FimA",
+      "type": "Fimbriae",
+      "host_target": "CD14/TLR2",
+      "mechanism": "Major fimbrial subunit; adhesion"
+    },
+    {
+      "pathogen_name": "Porphyromonas gingivalis",
+      "effector_name": "HagA",
+      "type": "Hemagglutinin",
+      "host_target": "Host cells",
+      "mechanism": "Hemagglutinin A"
+    },
+    {
+      "pathogen_name": "Pseudomonas aeruginosa",
+      "effector_name": "ExoU",
+      "type": "T3SS",
+      "host_target": "Phospholipids",
+      "mechanism": "Phospholipase A2; rapid cell lysis"
+    },
+    {
+      "pathogen_name": "Pseudomonas aeruginosa",
+      "effector_name": "ExoS",
+      "type": "T3SS",
+      "host_target": "Rho / Ras",
+      "mechanism": "GAP and ADP-ribosyltransferase"
+    },
+    {
+      "pathogen_name": "Pseudomonas aeruginosa",
+      "effector_name": "ExoT",
+      "type": "T3SS",
+      "host_target": "Cdc42 / Rac1",
+      "mechanism": "GAP and ADP-ribosyltransferase"
+    },
+    {
+      "pathogen_name": "Pseudomonas aeruginosa",
+      "effector_name": "ExoY",
+      "type": "T3SS",
+      "host_target": "cAMP/cGMP",
+      "mechanism": "Adenylate cyclase; disrupts actin"
+    },
+    {
+      "pathogen_name": "Pseudomonas aeruginosa",
+      "effector_name": "ToxA",
+      "type": "Exotoxin",
+      "host_target": "EF-2",
+      "mechanism": "ADP-ribosyltransferase; protein synthesis inhibition"
+    },
+    {
+      "pathogen_name": "Pseudomonas aeruginosa",
+      "effector_name": "Alginate",
+      "type": "Exopolysaccharide",
+      "host_target": "Biofilm",
+      "mechanism": "Mucoid biofilm formation"
+    },
+    {
+      "pathogen_name": "Rhodococcus equi",
+      "effector_name": "VapA",
+      "type": "Surface protein",
+      "host_target": "Host membranes",
+      "mechanism": "Virulence-associated protein; phagosome survival"
+    },
+    {
+      "pathogen_name": "Rhodococcus equi",
+      "effector_name": "VapB",
+      "type": "Surface protein",
+      "host_target": "Host membranes",
+      "mechanism": "Alternative Vap variant"
+    },
+    {
+      "pathogen_name": "Rhodococcus equi",
+      "effector_name": "VapC",
+      "type": "Surface protein",
+      "host_target": "Host membranes",
+      "mechanism": "Vap family member"
+    },
+    {
+      "pathogen_name": "Rhodococcus equi",
+      "effector_name": "VapD",
+      "type": "Surface protein",
+      "host_target": "Host membranes",
+      "mechanism": "Vap family member"
+    },
+    {
+      "pathogen_name": "Rickettsia conorii",
+      "effector_name": "RickA",
+      "type": "Surface protein",
+      "host_target": "Arp2/3",
+      "mechanism": "Actin tail formation"
+    },
+    {
+      "pathogen_name": "Rickettsia conorii",
+      "effector_name": "Sca2",
+      "type": "Surface protein",
+      "host_target": "Actin",
+      "mechanism": "Actin-based motility"
+    },
+    {
+      "pathogen_name": "Rickettsia conorii",
+      "effector_name": "Pat1",
+      "type": "Patatin-like",
+      "host_target": "Phospholipids",
+      "mechanism": "Membrane disruption"
+    },
+    {
+      "pathogen_name": "Rickettsia rickettsii",
+      "effector_name": "RickA",
+      "type": "Surface protein",
+      "host_target": "Arp2/3",
+      "mechanism": "Actin polymerization; actin tails"
+    },
+    {
+      "pathogen_name": "Rickettsia rickettsii",
+      "effector_name": "Sca2",
+      "type": "Surface protein",
+      "host_target": "Actin",
+      "mechanism": "Formin-like actin nucleator"
+    },
+    {
+      "pathogen_name": "Rickettsia rickettsii",
+      "effector_name": "Pat1",
+      "type": "Patatin-like",
+      "host_target": "Phospholipids",
+      "mechanism": "Phospholipase; phagosomal escape"
+    },
+    {
+      "pathogen_name": "Rickettsia rickettsii",
+      "effector_name": "TlyA",
+      "type": "Hemolysin",
+      "host_target": "Membrane",
+      "mechanism": "Pore-forming hemolysin"
+    },
+    {
+      "pathogen_name": "Salmonella enterica serovar Typhimurium",
+      "effector_name": "SopE",
+      "type": "T3SS (SPI-1)",
+      "host_target": "Cdc42 / Rac1",
+      "mechanism": "GEF for host Rho-family GTPases"
+    },
+    {
+      "pathogen_name": "Salmonella enterica serovar Typhimurium",
+      "effector_name": "SipA",
+      "type": "T3SS (SPI-1)",
+      "host_target": "Actin",
+      "mechanism": "Binds/stabilizes actin filaments"
+    },
+    {
+      "pathogen_name": "Salmonella enterica serovar Typhimurium",
+      "effector_name": "SopB/SigD",
+      "type": "T3SS (SPI-1)",
+      "host_target": "PI(4,5)P2",
+      "mechanism": "Phosphatidylinositol phosphatase"
+    },
+    {
+      "pathogen_name": "Salmonella enterica serovar Typhimurium",
+      "effector_name": "SifA",
+      "type": "T3SS (SPI-2)",
+      "host_target": "SKIP",
+      "mechanism": "Binds SKIP displacing Rab9"
+    },
+    {
+      "pathogen_name": "Salmonella enterica serovar Typhimurium",
+      "effector_name": "PipB2",
+      "type": "T3SS (SPI-2)",
+      "host_target": "Kinesin-1",
+      "mechanism": "Recruits kinesin-1 to SCV"
+    },
+    {
+      "pathogen_name": "Salmonella enterica serovar Typhimurium",
+      "effector_name": "SseJ",
+      "type": "T3SS (SPI-2)",
+      "host_target": "Cholesterol",
+      "mechanism": "Acyltransferase"
+    },
+    {
+      "pathogen_name": "Salmonella enterica serovar Typhimurium",
+      "effector_name": "SopD2",
+      "type": "T3SS (SPI-2)",
+      "host_target": "Rab7",
+      "mechanism": "Suppresses Rab7-dependent recruitment"
+    },
+    {
+      "pathogen_name": "Salmonella enterica serovar Typhi",
+      "effector_name": "SopE",
+      "type": "T3SS (SPI-1)",
+      "host_target": "Cdc42",
+      "mechanism": "GEF for Cdc42"
+    },
+    {
+      "pathogen_name": "Salmonella enterica serovar Typhi",
+      "effector_name": "SifA",
+      "type": "T3SS (SPI-2)",
+      "host_target": "SKIP",
+      "mechanism": "SCV maintenance"
+    },
+    {
+      "pathogen_name": "Salmonella enterica serovar Typhi",
+      "effector_name": "PipB2",
+      "type": "T3SS (SPI-2)",
+      "host_target": "Kinesin-1",
+      "mechanism": "Recruits kinesin to SCV"
+    },
+    {
+      "pathogen_name": "Salmonella enterica serovar Typhi",
+      "effector_name": "SseF",
+      "type": "T3SS (SPI-2)",
+      "host_target": "Microtubules",
+      "mechanism": "SCV positioning near Golgi"
+    },
+    {
+      "pathogen_name": "Salmonella enterica serovar Typhi",
+      "effector_name": "SseG",
+      "type": "T3SS (SPI-2)",
+      "host_target": "Microtubules",
+      "mechanism": "SCV-Golgi association"
+    },
+    {
+      "pathogen_name": "Shigella flexneri",
+      "effector_name": "IpaB",
+      "type": "T3SS (translocon)",
+      "host_target": "Vacuolar membrane",
+      "mechanism": "Pore-forming translocator"
+    },
+    {
+      "pathogen_name": "Shigella flexneri",
+      "effector_name": "IpaC",
+      "type": "T3SS (translocon)",
+      "host_target": "Actin",
+      "mechanism": "Induces actin polymerization"
+    },
+    {
+      "pathogen_name": "Shigella flexneri",
+      "effector_name": "IcsA/VirG",
+      "type": "Autotransporter",
+      "host_target": "N-WASP / Arp2/3",
+      "mechanism": "Recruits N-WASP and Arp2/3"
+    },
+    {
+      "pathogen_name": "Shigella flexneri",
+      "effector_name": "IcsB",
+      "type": "T3SS",
+      "host_target": "LC3",
+      "mechanism": "Masks IcsA from autophagy receptor"
+    },
+    {
+      "pathogen_name": "Shigella flexneri",
+      "effector_name": "VirA",
+      "type": "T3SS",
+      "host_target": "Rab1",
+      "mechanism": "Rab1 GAP activity"
+    },
+    {
+      "pathogen_name": "Shigella flexneri",
+      "effector_name": "OspG",
+      "type": "T3SS",
+      "host_target": "Ubiquitin pathway",
+      "mechanism": "Kinase that inhibits NF-kB"
+    },
+    {
+      "pathogen_name": "Staphylococcus aureus",
+      "effector_name": "Hla",
+      "type": "Pore-forming toxin",
+      "host_target": "ADAM10",
+      "mechanism": "Alpha-hemolysin; heptameric pore"
+    },
+    {
+      "pathogen_name": "Staphylococcus aureus",
+      "effector_name": "Hlb",
+      "type": "Sphingomyelinase",
+      "host_target": "Sphingomyelin",
+      "mechanism": "Beta-hemolysin; SM hydrolysis"
+    },
+    {
+      "pathogen_name": "Staphylococcus aureus",
+      "effector_name": "PVL",
+      "type": "Pore-forming toxin",
+      "host_target": "C5aR / CD88",
+      "mechanism": "Panton-Valentine leukocidin"
+    },
+    {
+      "pathogen_name": "Staphylococcus aureus",
+      "effector_name": "SpA",
+      "type": "Surface protein",
+      "host_target": "IgG / VH3",
+      "mechanism": "Protein A; antibody binding"
+    },
+    {
+      "pathogen_name": "Staphylococcus aureus",
+      "effector_name": "Efb",
+      "type": "Secreted protein",
+      "host_target": "Fibrinogen",
+      "mechanism": "Immune evasion; clot formation"
+    },
+    {
+      "pathogen_name": "Streptococcus pneumoniae",
+      "effector_name": "PLY",
+      "type": "Cholesterol-dependent",
+      "host_target": "Cholesterol",
+      "mechanism": "Pneumolysin; pore-forming toxin"
+    },
+    {
+      "pathogen_name": "Streptococcus pneumoniae",
+      "effector_name": "PspA",
+      "type": "Surface protein",
+      "host_target": "Lactoferrin",
+      "mechanism": "Pneumococcal surface protein A"
+    },
+    {
+      "pathogen_name": "Streptococcus pneumoniae",
+      "effector_name": "PspC",
+      "type": "Surface protein",
+      "host_target": "Factor H",
+      "mechanism": "Complement evasion"
+    },
+    {
+      "pathogen_name": "Streptococcus pneumoniae",
+      "effector_name": "LytA",
+      "type": "Amidase",
+      "host_target": "Peptidoglycan",
+      "mechanism": "Autolysin; biofilm release"
+    },
+    {
+      "pathogen_name": "Streptococcus pneumoniae",
+      "effector_name": "NanA",
+      "type": "Neuraminidase",
+      "host_target": "Sialic acid",
+      "mechanism": "Cleaves host sialic acid"
+    },
+    {
+      "pathogen_name": "Streptococcus pyogenes",
+      "effector_name": "SLO",
+      "type": "Cholesterol-dependent",
+      "host_target": "Cholesterol",
+      "mechanism": "Streptolysin O; phagosomal escape"
+    },
+    {
+      "pathogen_name": "Streptococcus pyogenes",
+      "effector_name": "SLS",
+      "type": "Pore-forming",
+      "host_target": "Membrane",
+      "mechanism": "Streptolysin S; hemolytic"
+    },
+    {
+      "pathogen_name": "Streptococcus pyogenes",
+      "effector_name": "SpeB",
+      "type": "Cysteine protease",
+      "host_target": "Host proteins",
+      "mechanism": "Degrades extracellular matrix"
+    },
+    {
+      "pathogen_name": "Streptococcus pyogenes",
+      "effector_name": "M protein",
+      "type": "Surface protein",
+      "host_target": "Factor H / C4BP",
+      "mechanism": "Antiphagocytic; binds complement"
+    },
+    {
+      "pathogen_name": "Streptococcus pyogenes",
+      "effector_name": "SpeA",
+      "type": "Superantigen",
+      "host_target": "MHC II / TCR",
+      "mechanism": "Streptococcal pyrogenic exotoxin A"
+    },
+    {
+      "pathogen_name": "Treponema pallidum",
+      "effector_name": "TprK",
+      "type": "Surface protein",
+      "host_target": "Immune evasion",
+      "mechanism": "Antigenic variation; VMP-like"
+    },
+    {
+      "pathogen_name": "Treponema pallidum",
+      "effector_name": "Tp0751",
+      "type": "Pallilysin",
+      "host_target": "Laminin / fibrinogen",
+      "mechanism": "Metalloprotease; tissue penetration"
+    },
+    {
+      "pathogen_name": "Treponema pallidum",
+      "effector_name": "Tp0483",
+      "type": "Membrane protein",
+      "host_target": "Host cells",
+      "mechanism": "Cytoplasmic membrane protein"
+    },
+    {
+      "pathogen_name": "Treponema pallidum",
+      "effector_name": "FlaA",
+      "type": "Flagellin",
+      "host_target": "Host tissue",
+      "mechanism": "Periplasmic flagellar sheath"
+    },
+    {
+      "pathogen_name": "Tropheryma whipplei",
+      "effector_name": "TW1",
+      "type": "Surface protein",
+      "host_target": "Host cells",
+      "mechanism": "Adhesion factor"
+    },
+    {
+      "pathogen_name": "Tropheryma whipplei",
+      "effector_name": "TW2",
+      "type": "Surface protein",
+      "host_target": "Macrophages",
+      "mechanism": "Intracellular survival"
+    },
+    {
+      "pathogen_name": "Tropheryma whipplei",
+      "effector_name": "TW3",
+      "type": "Surface protein",
+      "host_target": "Immune modulation",
+      "mechanism": "Modulates host immune response"
+    },
+    {
+      "pathogen_name": "Vibrio cholerae",
+      "effector_name": "CTX",
+      "type": "AB toxin",
+      "host_target": "Gs/adenylate cyclase",
+      "mechanism": "Cholera toxin; ADP-ribosyltransferase"
+    },
+    {
+      "pathogen_name": "Vibrio cholerae",
+      "effector_name": "TCP",
+      "type": "Pilus",
+      "host_target": "Host intestinal cells",
+      "mechanism": "Toxin-coregulated pilus; colonization"
+    },
+    {
+      "pathogen_name": "Vibrio cholerae",
+      "effector_name": "VSP",
+      "type": "T6SS",
+      "host_target": "Host cells",
+      "mechanism": "Type VI secretion; effector translocation"
+    },
+    {
+      "pathogen_name": "Vibrio cholerae",
+      "effector_name": "HlyA",
+      "type": "Hemolysin",
+      "host_target": "Membrane",
+      "mechanism": "Pore-forming cytolysin"
+    },
+    {
+      "pathogen_name": "Vibrio cholerae",
+      "effector_name": "VvpE",
+      "type": "Protease",
+      "host_target": "Mucin",
+      "mechanism": "Mucinase; biofilm dispersal"
+    },
+    {
+      "pathogen_name": "Yersinia pestis",
+      "effector_name": "YopE",
+      "type": "T3SS (Ysc)",
+      "host_target": "Rho GTPases",
+      "mechanism": "GAP for RhoA, Rac1, Cdc42"
+    },
+    {
+      "pathogen_name": "Yersinia pestis",
+      "effector_name": "YopH",
+      "type": "T3SS (Ysc)",
+      "host_target": "FAK / p130Cas",
+      "mechanism": "Potent PTPase; disrupts focal adhesions"
+    },
+    {
+      "pathogen_name": "Yersinia pestis",
+      "effector_name": "YopJ",
+      "type": "T3SS (Ysc)",
+      "host_target": "MAPKK / IKK",
+      "mechanism": "Acetyltransferase; blocks NF-kB and MAPK"
+    },
+    {
+      "pathogen_name": "Yersinia pestis",
+      "effector_name": "YopM",
+      "type": "T3SS (Ysc)",
+      "host_target": "PRP kinases",
+      "mechanism": "Leucine-rich repeat; binds thrombin"
+    },
+    {
+      "pathogen_name": "Yersinia pestis",
+      "effector_name": "YopT",
+      "type": "T3SS (Ysc)",
+      "host_target": "Rho GTPases",
+      "mechanism": "Cysteine protease; cleaves prenylated Rho"
+    },
+    {
+      "pathogen_name": "Yersinia pestis",
+      "effector_name": "LcrV",
+      "type": "T3SS needle tip",
+      "host_target": "TLR2 / CD14",
+      "mechanism": "Modulates immune response"
+    },
+    {
+      "pathogen_name": "Yersinia pseudotuberculosis",
+      "effector_name": "YopE",
+      "type": "T3SS (Ysa/Ysc)",
+      "host_target": "Rho GTPases",
+      "mechanism": "GAP activity"
+    },
+    {
+      "pathogen_name": "Yersinia pseudotuberculosis",
+      "effector_name": "YopH",
+      "type": "T3SS (Ysa/Ysc)",
+      "host_target": "FAK / p130Cas",
+      "mechanism": "PTPase; host cell detachment"
+    },
+    {
+      "pathogen_name": "Yersinia pseudotuberculosis",
+      "effector_name": "YopJ",
+      "type": "T3SS (Ysa/Ysc)",
+      "host_target": "MAPKK",
+      "mechanism": "Blocks inflammatory signaling"
+    },
+    {
+      "pathogen_name": "Yersinia pseudotuberculosis",
+      "effector_name": "YpkA/YopO",
+      "type": "T3SS (Ysa/Ysc)",
+      "host_target": "Actin / RhoA",
+      "mechanism": "Ser/Thr kinase; actin binding"
+    }
+  ],
+  "host_proteins": [
+    {
+      "host_protein_id": 1,
+      "protein_name": "Ras-related protein Rab-5A",
+      "gene_name": "RAB5A",
+      "uniprot_id": "P20339",
+      "localization": "Early endosome",
+      "function": "Small GTPase that regulates early endosome fusion and trafficking",
+      "pathway": "Endocytic pathway",
+      "reference_doi": "10.1016/j.cell.2008.12.035",
+      "curation_status": "curated",
+      "last_updated": "2026-10-31"
+    },
+    {
+      "host_protein_id": 2,
+      "protein_name": "Ras-related protein Rab-7A",
+      "gene_name": "RAB7A",
+      "uniprot_id": "P51149",
+      "localization": "Late endosome / lysosome",
+      "function": "Small GTPase that regulates late endosomal/lysosomal trafficking and maturation",
+      "pathway": "Endocytic pathway",
+      "reference_doi": "10.1038/sj.onc.1205352",
+      "curation_status": "curated",
+      "last_updated": "2026-10-31"
+    },
+    {
+      "host_protein_id": 3,
+      "protein_name": "Myeloid-associated differentiation marker",
+      "gene_name": "MYADM",
+      "uniprot_id": "Q96S97",
+      "localization": "Plasma membrane",
+      "function": "Membrane protein involved in myeloid cell differentiation and signaling",
+      "pathway": null,
+      "reference_doi": "10.1186/1471-2121-10-1",
+      "curation_status": "curated",
+      "last_updated": "2026-10-31"
+    },
+    {
+      "host_protein_id": 4,
+      "protein_name": "Tyrosine-protein kinase ABL1",
+      "gene_name": "ABL1",
+      "uniprot_id": "P00519",
+      "localization": "Cytosol / nucleus",
+      "function": "Non-receptor tyrosine kinase involved in cell proliferation, differentiation, and adhesion",
+      "pathway": "Signal transduction",
+      "reference_doi": "10.1038/sj.onc.1206042",
+      "curation_status": "curated",
+      "last_updated": "2026-10-31"
+    },
+    {
+      "host_protein_id": 5,
+      "protein_name": "Lysosome-associated membrane glycoprotein 1",
+      "gene_name": "LAMP1",
+      "uniprot_id": "P11279",
+      "localization": "Lysosome / late endosome",
+      "function": "Major lysosomal membrane protein involved in lysosome biogenesis and autophagy",
+      "pathway": "Autophagy / lysosomal degradation",
+      "reference_doi": "10.1016/0955-0674(91)90032-C",
+      "curation_status": "curated",
+      "last_updated": "2026-10-31"
     }
   ]
 }

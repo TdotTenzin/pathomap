@@ -209,6 +209,150 @@ export const VISIBLE_COLUMNS = [
   'reference_doi',
 ];
 
+// Metadata for all columns in the effectors table
+export const EFFECTOR_COLUMNS_META = [
+  {
+    key: 'effector_name',
+    label: 'Name',
+    type: 'string',
+    description: 'Effector protein name.',
+    source: 'PathoMap curation',
+  },
+  {
+    key: 'pathogen_name',
+    label: 'Pathogen',
+    type: 'string',
+    description: 'Name of the pathogen that produces this effector.',
+    source: 'PathoMap curation',
+  },
+  {
+    key: 'host_target',
+    label: 'Host Target',
+    type: 'string',
+    description: 'Host protein or cellular component targeted by the effector.',
+    source: 'PathoMap curation',
+  },
+  {
+    key: 'type',
+    label: 'Type',
+    type: 'string',
+    description: 'Type of effector (e.g., T3SS, T4SS, toxin, adhesin).',
+    source: 'PathoMap curation',
+  },
+  {
+    key: 'mechanism',
+    label: 'Mechanism',
+    type: 'string',
+    description: 'Mechanism of host-cell manipulation.',
+    source: 'PathoMap curation',
+  },
+];
+
+// Map effector column keys to their display labels
+export const EFFECTOR_COLUMN_LABELS = Object.fromEntries(
+  EFFECTOR_COLUMNS_META.map((column) => [column.key, column.label])
+);
+
+export const EFFECTOR_COLUMNS = EFFECTOR_COLUMNS_META.map((column) => column.key);
+
+export const EFFECTOR_VISIBLE_COLUMNS = [
+  'effector_name',
+  'pathogen_name',
+  'host_target',
+  'type',
+  'mechanism',
+];
+
+// Metadata for all columns in the host_proteins table
+export const HOST_PROTEIN_COLUMNS_META = [
+  {
+    key: 'host_protein_id',
+    label: 'ID',
+    type: 'integer',
+    description: 'Stable internal identifier for the host protein.',
+    source: 'PathoMap curation',
+  },
+  {
+    key: 'protein_name',
+    label: 'Protein Name',
+    type: 'string',
+    description: 'Full protein name.',
+    source: 'UniProt / PathoMap curation',
+  },
+  {
+    key: 'gene_name',
+    label: 'Gene Name',
+    type: 'string',
+    description: 'Gene symbol or name.',
+    source: 'HGNC / PathoMap curation',
+  },
+  {
+    key: 'uniprot_id',
+    label: 'UniProt ID',
+    type: 'string',
+    description: 'UniProt protein identifier.',
+    source: 'UniProt',
+  },
+  {
+    key: 'localization',
+    label: 'Localization',
+    type: 'string',
+    description: 'Cellular localization (e.g., cytosol, membrane, nucleus, endosome).',
+    source: 'PathoMap curation',
+  },
+  {
+    key: 'function',
+    label: 'Function',
+    type: 'string',
+    description: 'Functional description of the protein.',
+    source: 'UniProt / PathoMap curation',
+  },
+  {
+    key: 'pathway',
+    label: 'Pathway',
+    type: 'string, nullable',
+    description: 'Pathways the protein participates in.',
+    source: 'PathoMap curation',
+  },
+  {
+    key: 'reference_doi',
+    label: 'Reference DOI',
+    type: 'string, nullable',
+    description: 'DOI for primary reference describing the protein.',
+    source: 'PathoMap curation',
+  },
+  {
+    key: 'curation_status',
+    label: 'Curation Status',
+    type: 'enum',
+    description: 'curated means all required fields were resolved; needs_review flags gaps.',
+    source: 'PathoMap curation',
+  },
+  {
+    key: 'last_updated',
+    label: 'Last Updated',
+    type: 'date',
+    description: 'Date the row was last rebuilt.',
+    source: 'Build script',
+  },
+];
+
+// Map host protein column keys to their display labels
+export const HOST_PROTEIN_COLUMN_LABELS = Object.fromEntries(
+  HOST_PROTEIN_COLUMNS_META.map((column) => [column.key, column.label])
+);
+
+export const HOST_PROTEIN_COLUMNS = HOST_PROTEIN_COLUMNS_META.map((column) => column.key);
+
+export const HOST_PROTEIN_VISIBLE_COLUMNS = [
+  'protein_name',
+  'gene_name',
+  'uniprot_id',
+  'localization',
+  'function',
+  'pathway',
+];
+
 // Enum values keyed by their column names
 export const ENUMS = {
   gram_stain: GRAM_STAIN_VALUES,

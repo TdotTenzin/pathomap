@@ -4,7 +4,7 @@ import { normalizeDataset } from '../utils/dataset.js';
 export const DEFAULT_DATASET_URL = 'data/pathomap-dataset.json';
 
 // In-memory dataset storage
-let dataset = normalizeDataset({ pathogens: [] });
+let dataset = normalizeDataset({ pathogens: [], effectors: [], host_proteins: [] });
 
 // Load dataset from a URL
 export async function loadDataset(url = DEFAULT_DATASET_URL) {
@@ -31,4 +31,14 @@ export function getDataset() {
 // Get the pathogens array from the current dataset
 export function getPathogens() {
   return dataset.pathogens;
+}
+
+// Get the effectors array from the current dataset
+export function getEffectors() {
+  return dataset.effectors || [];
+}
+
+// Get the host_proteins array from the current dataset
+export function getHostProteins() {
+  return dataset.host_proteins || [];
 }

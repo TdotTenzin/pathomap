@@ -6,6 +6,8 @@
   PATHOGEN_COLUMNS,
   SCHEMA_VERSION,
   STRATEGY_VALUES,
+  EFFECTOR_COLUMNS,
+  HOST_PROTEIN_COLUMNS,
 } from '../data/schema.js';
 
 export const DATA_SCHEMA_VERSION = SCHEMA_VERSION;
@@ -69,11 +71,11 @@ export function validateDataset(data) {
 
   // Warn about extra tables
   const extraTables = Object.keys(data).filter(
-    (key) => !['meta', 'pathogens'].includes(key) && Array.isArray(data[key])
+    (key) => !['meta', 'pathogens', 'effectors', 'host_proteins'].includes(key) && Array.isArray(data[key])
   );
   if (extraTables.length) {
     warnings.push(
-      `Only the pathogens table is used in this build; ignored: ${extraTables.join(', ')}.`
+      `Only the pathogens, effectors, and host_proteins tables are used in this build; ignored: ${extraTables.join(', ')}.`
     );
   }
 
@@ -195,15 +197,71 @@ export function normalizeDataset(data) {
       return Object.fromEntries(PATHOGEN_COLUMNS.map((key) => [key, normalized[key]]));
     });
 
+  // Normalize effectors
+  const sourceEffectors = Array.isArray(data?.effectors) ? data.effectors : [];
+  const effectors = sourceEffectors
+    .filter((row) => row && typeof row === 'object' && !Array.isArray(row))
+    .map((row) => {
+      const normalized = {
+        effector_name: cleanString(row.effector_name),
+        pathogen_name: cleanString(row.pathogen_name),
+        host_target: cleanString(row.host_target),
+        type: cleanString(row.type),
+        mechanism: cleanString(row.mechanism),
+      };
+
+      // Ensure only defined columns are included
+      return Object.fromEntries(EFFECTOR_COLUMNS.map((key) => [key, normalized[key]]));
+    });
+
+  // Normalize host_proteins
+  const sourceHostProteins = Array.isArray(data?.host_proteins) ? data.host_proteins : [];
+  const usedHostProteinIds = new Set();
+  let nextHostProteinId = 1;
+  const host_proteins = sourceHostProteins
+    .filter((row) => row && typeof row === 'object' && !Array.isArray(row))
+    .map((row) => {
+      let hostProteinId = asInteger(row.host_protein_id);
+      // Assign new ID if missing, invalid, or duplicate
+      if (
+        hostProteinId === null ||
+        hostProteinId <= 0 ||
+        usedHostProteinIds.has(hostProteinId)
+      ) {
+        while (usedHostProteinIds.has(nextHostProteinId)) nextHostProteinId += 1;
+        hostProteinId = nextHostProteinId;
+      }
+      usedHostProteinIds.add(hostProteinId);
+      nextHostProteinId = Math.max(nextHostProteinId, hostProteinId + 1);
+
+      const normalized = {
+        host_protein_id: hostProteinId,
+        protein_name: cleanString(row.protein_name),
+        gene_name: cleanString(row.gene_name),
+        uniprot_id: cleanString(row.uniprot_id),
+        localization: cleanString(row.localization),
+        function: cleanString(row.function),
+        pathway: nullableString(row.pathway),
+        reference_doi: nullableString(row.reference_doi),
+        curation_status: CURATION_STATUS_VALUES.includes(row.curation_status)
+          ? row.curation_status
+          : 'needs_review',
+        last_updated: cleanString(row.last_updated),
+      };
+
+      // Ensure only defined columns are included
+      return Object.fromEntries(HOST_PROTEIN_COLUMNS.map((key) => [key, normalized[key]]));
+    });
+
   // Build metadata object
   const meta = {
     dataset: 'pathomap',
     schema_version: SCHEMA_VERSION,
     ...(data?.meta && typeof data.meta === 'object' ? data.meta : {}),
-    tables: { pathogens: pathogens.length },
+    tables: { pathogens: pathogens.length, effectors: effectors.length, host_proteins: host_proteins.length },
   };
 
-  return { meta, pathogens };
+  return { meta, pathogens, effectors, host_proteins };
 }
 
-export { PATHOGEN_COLUMNS, ENUMS };
+export { PATHOGEN_COLUMNS, EFFECTOR_COLUMNS, HOST_PROTEIN_COLUMNS, ENUMS };

@@ -34,9 +34,10 @@ import { initUpload, setUploadStatus } from './ui/upload.js';
     try {
       const dataset = await loadDataset();
       renderDatabase();
-      const count = dataset.pathogens.length;
+      const pathogenCount = dataset.pathogens.length;
+      const effectorCount = dataset.effectors?.length || 0;
       setUploadStatus(
-        `Loaded ${count} pathogen${count === 1 ? '' : 's'} from data/pathomap-dataset.json.`,
+        `Loaded ${pathogenCount} pathogen${pathogenCount === 1 ? '' : 's'} and ${effectorCount} effector${effectorCount === 1 ? '' : 's'} from data/pathomap-dataset.json.`,
         'success'
       );
     } catch (error) {

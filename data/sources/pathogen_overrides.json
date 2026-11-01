@@ -1,4 +1,15 @@
 {
-  "notes": "Manual overrides for NCBI lookups. Keys are pathogen_id values. Any provided field wins over the automatic lookup.",
-  "pathogens": {}
+  "notes": "Manual overrides for NCBI lookups. Keys are pathogen_id values. Explicit genome_accession values are fetched directly from NCBI Datasets so strain-specific records do not inherit a different strain's species-level representative assembly.",
+  "pathogens": {
+    "7": {
+      "strain": "SCHU S4",
+      "genome_accession": "GCF_000008985.1",
+      "curation_notes": "Pinned to the complete genome assembly for Francisella tularensis subsp. tularensis SCHU S4; regenerate metrics from this exact accession."
+    },
+    "20": {
+      "strain": "K1",
+      "genome_accession": "GCF_000471505.1",
+      "curation_notes": "Pinned to the Escherichia coli K1 assembly. The previous accession GCF_000005845.2 represented E. coli K-12 MG1655."
+    }
+  }
 }

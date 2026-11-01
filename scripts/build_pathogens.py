@@ -347,6 +347,34 @@ def genome_report(tax_id: int, pathogen_id: int, args: argparse.Namespace) -> di
     return best
 
 
+def genome_report_by_accession(
+    accession: str, pathogen_id: int, args: argparse.Namespace
+) -> dict:
+    """Fetch metadata for an explicitly curated assembly accession.
+
+    Use this for strain-specific pathogen records where a species-level
+    taxonomy lookup could otherwise select a different strain's genome.
+    """
+    cache = CACHE_DIR / "genomes" / f"{pathogen_id}-accession-{slug(accession)}.json"
+    url = f"{DATASETS}/genome/accession/{urllib.parse.quote(accession, safe='')}/dataset_report"
+    payload = http_json(url, args, cache)
+    reports = payload.get("reports") or []
+    report = next((item for item in reports if item.get("accession") == accession), None)
+    if report is None and len(reports) == 1:
+        report = reports[0]
+    if report is None:
+        raise BuildError(
+            f"NCBI Datasets did not return the explicitly requested assembly "
+            f"{accession!r} for pathogen_id {pathogen_id}"
+        )
+    returned_accession = report.get("accession")
+    if returned_accession and returned_accession != accession:
+        raise BuildError(
+            f"NCBI returned {returned_accession!r} for requested accession {accession!r}"
+        )
+    return report
+
+
 def build_rows(args: argparse.Namespace) -> list[dict]:
     seed = read_json(SEED_PATH)["pathogens"]
     overrides = read_json(OVERRIDES_PATH).get("pathogens", {}) if OVERRIDES_PATH.exists() else {}
@@ -374,7 +402,13 @@ def build_rows(args: argparse.Namespace) -> list[dict]:
         summary = summaries[tax_id]
         lineage = lineage_fields(summary)
 
-        report = genome_report(tax_id, int(seed["pathogen_id"]), args)
+        pinned_accession = override.get("genome_accession")
+        if pinned_accession:
+            report = genome_report_by_accession(
+                str(pinned_accession), int(seed["pathogen_id"]), args
+            )
+        else:
+            report = genome_report(tax_id, int(seed["pathogen_id"]), args)
         if report:
             info = report.get("assembly_info", {})
             stats = report.get("assembly_stats", {})

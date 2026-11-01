@@ -331,7 +331,7 @@
       "genus": "Escherichia",
       "species": "Escherichia coli",
       "serovar": "",
-      "strain": "K1",
+      "strain": "IHE3034",
       "gram_stain": "Gram-negative",
       "acid_fast": false,
       "strategy": "arrest",
@@ -341,7 +341,7 @@
       "strategy_secondary": null,
       "strategy_evidence": null,
       "intracellular_niche": "Late endosomes/lysosomes",
-      "curation_notes": "K1 is a capsular serotype, not a subspecies. Use strain field."
+      "curation_notes": "K1 is a capsular serotype, not a strain. Updated strain to IHE3034."
     },
     {
       "pathogen_id": 21,
@@ -640,7 +640,7 @@
       "species": "Nocardia asteroides",
       "serovar": "",
       "gram_stain": "Gram-positive",
-      "acid_fast": false,
+      "acid_fast": true,
       "strategy": "arrest",
       "reference_doi": "10.1086/515160",
       "description": "Arrests phagosome maturation at early stage; blocks acidification; survives in macrophages. Mce (mammalian cell entry) proteins mediate invasion and intracellular survival. Phospholipase A (PLA) contributes to phagosomal membrane disruption, while superoxide dismutase (Sod) and catalase (Cat) neutralize host oxidative burst. Causes nocardiosis in immunocompromised patients",
@@ -648,7 +648,7 @@
       "strategy_secondary": null,
       "strategy_evidence": null,
       "intracellular_niche": "Arrested phagosome (early stage)",
-      "curation_notes": null
+      "curation_notes": "Nocardia species are partially acid-fast due to mycolic acids in cell wall."
     },
     {
       "pathogen_id": 39,
@@ -657,7 +657,7 @@
       "species": "Rhodococcus equi",
       "serovar": "",
       "gram_stain": "Gram-positive",
-      "acid_fast": false,
+      "acid_fast": true,
       "strategy": "modified_compartment",
       "reference_doi": "10.1111/j.1365-2958.2012.08093.x",
       "description": "Resides in non-acidified Rhodococcus-containing vacuole (RCV); prevents lysosomal fusion via Vap proteins (VapA, VapB, VapC, VapD). VapA is the major virulence factor, a surface-expressed protein that modulates host vesicular trafficking and prevents lysosomal hydrolase delivery. Causes pneumonia in foals and opportunistic infections in immunocompromised humans",
@@ -666,7 +666,7 @@
       "strategy_secondary": null,
       "strategy_evidence": null,
       "intracellular_niche": "Rhodococcus-containing vacuole (RCV) - non-acidified",
-      "curation_notes": null
+      "curation_notes": "Rhodococcus species are partially acid-fast due to mycolic acids in cell wall."
     },
     {
       "pathogen_id": 40,
@@ -751,24 +751,6 @@
       "strategy_secondary": null,
       "strategy_evidence": null,
       "intracellular_niche": "Arrested phagosome",
-      "curation_notes": null
-    },
-    {
-      "pathogen_id": 45,
-      "name": "Streptomyces scabies",
-      "genus": "Streptomyces",
-      "species": "Streptomyces scabies",
-      "serovar": "",
-      "gram_stain": "Gram-positive",
-      "acid_fast": false,
-      "strategy": "extracellular",
-      "reference_doi": "10.1111/j.1365-2958.2012.08066.x",
-      "description": "Plant pathogen causing common scab disease in potato and other root crops. Produces thaxtomin A, a phytotoxin that inhibits cellulose biosynthesis in plant cell walls, leading to cell swelling and tissue necrosis. TxtA, TxtB, and TxtC are key synthetases in the thaxtomin biosynthesis pathway. Nec1 is a necrosis-inducing virulence factor that promotes plant tissue maceration",
-      "tax_name": "Streptomyces scabiei",
-      "strain": null,
-      "strategy_secondary": null,
-      "strategy_evidence": null,
-      "intracellular_niche": "Extracellular (plant pathogen)",
       "curation_notes": null
     },
     {
@@ -892,9 +874,9 @@
     },
     {
       "pathogen_id": 53,
-      "name": "Borrelia burgdorferi",
-      "genus": "Borrelia",
-      "species": "Borrelia burgdorferi",
+      "name": "Borreliella burgdorferi",
+      "genus": "Borreliella",
+      "species": "Borreliella burgdorferi",
       "serovar": "",
       "gram_stain": "Gram-negative",
       "acid_fast": false,
@@ -906,7 +888,7 @@
       "strategy_secondary": null,
       "strategy_evidence": null,
       "intracellular_niche": "Extracellular (disseminates through tissue)",
-      "curation_notes": null
+      "curation_notes": "NCBI has renamed genus from Borrelia to Borreliella for Lyme disease spirochetes."
     },
     {
       "pathogen_id": 54,

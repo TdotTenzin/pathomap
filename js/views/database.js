@@ -1,10 +1,18 @@
-import { getDataset, getPathogens } from '../data/loader.js';
+import { getDataset, getPathogens, getEffectors, getHostProteins } from '../data/loader.js';
 import {
   COLUMN_LABELS,
   COLUMN_META,
   PATHOGEN_COLUMNS,
   SCHEMA_VERSION,
   VISIBLE_COLUMNS,
+  EFFECTOR_COLUMNS_META,
+  EFFECTOR_COLUMN_LABELS,
+  EFFECTOR_VISIBLE_COLUMNS,
+  EFFECTOR_COLUMNS,
+  HOST_PROTEIN_COLUMNS_META,
+  HOST_PROTEIN_COLUMN_LABELS,
+  HOST_PROTEIN_VISIBLE_COLUMNS,
+  HOST_PROTEIN_COLUMNS,
 } from '../data/schema.js';
 
 // Available tables to display in the database view
@@ -16,6 +24,22 @@ const TABLES = [
       'Organisms with NCBI taxonomy, representative genome metadata, and intracellular survival strategy.',
     columns: VISIBLE_COLUMNS,
     exportColumns: PATHOGEN_COLUMNS,
+  },
+  {
+    id: 'effectors',
+    label: 'Effectors',
+    description:
+      'Pathogen-derived effector proteins, their host targets, molecular functions, and mechanisms of host-cell manipulation.',
+    columns: EFFECTOR_VISIBLE_COLUMNS,
+    exportColumns: EFFECTOR_COLUMNS,
+  },
+  {
+    id: 'host_proteins',
+    label: 'Host Proteins',
+    description:
+      'Host proteins targeted by pathogen effectors, with UniProt identifiers, cellular localization, and functional annotations.',
+    columns: HOST_PROTEIN_VISIBLE_COLUMNS,
+    exportColumns: HOST_PROTEIN_COLUMNS,
   },
 ];
 
@@ -46,7 +70,7 @@ function tableDef(id) {
 
 // Filter and sort rows based on current search and sort state
 function rowsFor(def) {
-  const rows = getPathogens();
+  const rows = def.id === 'effectors' ? getEffectors() : def.id === 'host_proteins' ? getHostProteins() : getPathogens();
   const query = state.search.trim().toLowerCase();
   let out = rows;
 
@@ -133,9 +157,10 @@ function renderHead(def) {
   const el = document.getElementById('db-head');
   if (!el) return;
   el.replaceChildren();
+  const labels = def.id === 'effectors' ? EFFECTOR_COLUMN_LABELS : def.id === 'host_proteins' ? HOST_PROTEIN_COLUMN_LABELS : COLUMN_LABELS;
   def.columns.forEach((column) => {
     const th = document.createElement('th');
-    const label = COLUMN_LABELS[column] || column.replace(/_/g, ' ');
+    const label = labels[column] || column.replace(/_/g, ' ');
     th.textContent = label;
     if (column === state.sortKey) {
       th.textContent += state.sortDir === 'asc' ? ' ▲' : ' ▼';
@@ -262,13 +287,17 @@ function renderSchema() {
   if (!body) return;
   body.replaceChildren();
 
+  const def = tableDef(state.active);
   const meta = getDataset().meta || {};
   const counts = meta.tables || {};
   const metaLine = document.createElement('p');
   metaLine.className = 'schema-meta';
+  const columnMeta = def.id === 'effectors' ? EFFECTOR_COLUMNS_META : def.id === 'host_proteins' ? HOST_PROTEIN_COLUMNS_META : COLUMN_META;
+  const tableLabel = def.id === 'effectors' ? 'effectors' : def.id === 'host_proteins' ? 'host proteins' : 'pathogens';
+  const count = def.id === 'effectors' ? (counts.effectors ?? getEffectors().length) : def.id === 'host_proteins' ? (counts.host_proteins ?? getHostProteins().length) : (counts.pathogens ?? getPathogens().length);
   metaLine.textContent = [
     `Schema ${meta.schema_version || SCHEMA_VERSION}`,
-    `${counts.pathogens ?? getPathogens().length} pathogens`,
+    `${count} ${tableLabel}`,
     meta.built_at ? `Built ${String(meta.built_at).slice(0, 10)}` : '',
   ]
     .filter(Boolean)
@@ -302,7 +331,7 @@ function renderSchema() {
   table.appendChild(thead);
 
   const tbody = document.createElement('tbody');
-  COLUMN_META.forEach((column) => {
+  columnMeta.forEach((column) => {
     const tr = document.createElement('tr');
     const field = document.createElement('td');
     const code = document.createElement('code');
@@ -356,7 +385,8 @@ function toCsv(def, rows) {
     return /[",\n]/.test(text) ? '"' + text.replace(/"/g, '""') + '"' : text;
   };
   const columns = def.exportColumns || def.columns;
-  const header = columns.map((column) => escape(COLUMN_LABELS[column] || column)).join(',');
+  const labels = def.id === 'effectors' ? EFFECTOR_COLUMN_LABELS : def.id === 'host_proteins' ? HOST_PROTEIN_COLUMN_LABELS : COLUMN_LABELS;
+  const header = columns.map((column) => escape(labels[column] || column)).join(',');
   const lines = rows.map((row) => columns.map((column) => escape(row[column])).join(','));
   return [header, ...lines].join('\n');
 }

@@ -2,9 +2,11 @@
   "meta": {
     "dataset": "pathomap",
     "schema_version": "2.0",
-    "built_at": "2026-10-27T17:55:16Z",
+    "built_at": "2026-11-01T17:44:19Z",
     "tables": {
-      "pathogens": 5
+      "pathogens": 5,
+      "host_proteins": 5,
+      "effectors": 27
     },
     "sources": {
       "curation": "data/sources/pathogens_seed.json",
@@ -42,7 +44,7 @@
       "description": "Resides in SCV; acquires LAMP1 but blocks hydrolase delivery; maintains non-degradative niche via SPI-2 T3SS effectors. SifA binds SKIP to displace Rab9, while SseJ deacylates cholesterol to prevent SCV-lysosome fusion. SCV matures into a LAMP1+ compartment that is non-degradative — Rab7 effectors (RILP, ORP1L) are decoupled from hydrolase delivery",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 3,
@@ -72,7 +74,7 @@
       "description": "Arrests phagosome at early stage; blocks Rab5-to-Rab7 conversion; maintains near-neutral pH (~6.4) by excluding V-ATPase. Secretes SapM phosphatase to deplete PI3P from phagosomal membranes, and lipoarabinomannan (LAM) inhibits Ca2+ signaling and Vps34 recruitment. PknG and PtpA further modulate host Rab trafficking to prevent lysosomal fusion",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 13,
@@ -102,7 +104,7 @@
       "description": "Resides in non-fusogenic membrane-bound inclusion that acquires host-derived membrane via T4SS. Ats-1 binds Rab5 and PI3P to anchor the inclusion to early endosomal compartments, while AnkA modulates host signaling through interaction with MYADM and Abl-1 tyrosine kinase. p44/Msp2 undergoes antigenic variation to evade immune detection",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 32,
@@ -132,7 +134,7 @@
       "description": "Anthrolysin O (ALO) enables phagosomal escape; lethal factor (LF) and edema factor (EF) modulate host. ALO is a cholesterol-dependent cytolysin that permeabilizes the phagosome. The tripartite toxin (PA + LF + EF) is the major virulence determinant: PA binds ANTXR1/2 to translocate LF (zinc metalloprotease cleaving MAPKKs) and EF (calmodulin-dependent adenylate cyclase) into the cytosol",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
     },
     {
       "pathogen_id": 48,
@@ -162,7 +164,260 @@
       "description": "Multidrug-resistant nosocomial pathogen; survives on hospital surfaces and exhibits remarkable antibiotic resistance. OmpA is a major virulence factor that targets mitochondria to induce host cell death. Plc (phospholipase C) degrades host membrane phospholipids. CsuA/B pilus and Bap surface protein mediate biofilm formation on abiotic surfaces including medical devices",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-31"
+    }
+  ],
+  "host_proteins": [
+    {
+      "host_protein_id": 1,
+      "protein_name": "Ras-related protein Rab-5A",
+      "gene_name": "RAB5A",
+      "uniprot_id": "P20339",
+      "localization": "Early endosome",
+      "function": "Small GTPase that regulates early endosome fusion and trafficking",
+      "pathway": "Endocytic pathway",
+      "reference_doi": "10.1016/j.cell.2008.12.035",
+      "curation_status": "curated",
+      "last_updated": "2026-10-31"
+    },
+    {
+      "host_protein_id": 2,
+      "protein_name": "Ras-related protein Rab-7A",
+      "gene_name": "RAB7A",
+      "uniprot_id": "P51149",
+      "localization": "Late endosome / lysosome",
+      "function": "Small GTPase that regulates late endosomal/lysosomal trafficking and maturation",
+      "pathway": "Endocytic pathway",
+      "reference_doi": "10.1038/sj.onc.1205352",
+      "curation_status": "curated",
+      "last_updated": "2026-10-31"
+    },
+    {
+      "host_protein_id": 3,
+      "protein_name": "Myeloid-associated differentiation marker",
+      "gene_name": "MYADM",
+      "uniprot_id": "Q96S97",
+      "localization": "Plasma membrane",
+      "function": "Membrane protein involved in myeloid cell differentiation and signaling",
+      "pathway": null,
+      "reference_doi": "10.1186/1471-2121-10-1",
+      "curation_status": "curated",
+      "last_updated": "2026-10-31"
+    },
+    {
+      "host_protein_id": 4,
+      "protein_name": "Tyrosine-protein kinase ABL1",
+      "gene_name": "ABL1",
+      "uniprot_id": "P00519",
+      "localization": "Cytosol / nucleus",
+      "function": "Non-receptor tyrosine kinase involved in cell proliferation, differentiation, and adhesion",
+      "pathway": "Signal transduction",
+      "reference_doi": "10.1038/sj.onc.1206042",
+      "curation_status": "curated",
+      "last_updated": "2026-10-31"
+    },
+    {
+      "host_protein_id": 5,
+      "protein_name": "Lysosome-associated membrane glycoprotein 1",
+      "gene_name": "LAMP1",
+      "uniprot_id": "P11279",
+      "localization": "Lysosome / late endosome",
+      "function": "Major lysosomal membrane protein involved in lysosome biogenesis and autophagy",
+      "pathway": "Autophagy / lysosomal degradation",
+      "reference_doi": "10.1016/0955-0674(91)90032-C",
+      "curation_status": "curated",
+      "last_updated": "2026-10-31"
+    }
+  ],
+  "effectors": [
+    {
+      "pathogen_name": "Acinetobacter baumannii",
+      "effector_name": "OmpA",
+      "type": "Outer membrane",
+      "host_target": "Mitochondria",
+      "mechanism": "Porin; targeting host cell death"
+    },
+    {
+      "pathogen_name": "Acinetobacter baumannii",
+      "effector_name": "AbOmpA",
+      "type": "Outer membrane",
+      "host_target": "Host membranes",
+      "mechanism": "Biofilm-associated protein"
+    },
+    {
+      "pathogen_name": "Acinetobacter baumannii",
+      "effector_name": "CsuA/B",
+      "type": "Pilus",
+      "host_target": "Abiotic surfaces",
+      "mechanism": "Biofilm formation"
+    },
+    {
+      "pathogen_name": "Acinetobacter baumannii",
+      "effector_name": "Bap",
+      "type": "Surface protein",
+      "host_target": "Host cells",
+      "mechanism": "Biofilm-associated protein"
+    },
+    {
+      "pathogen_name": "Acinetobacter baumannii",
+      "effector_name": "Plc",
+      "type": "Phospholipase",
+      "host_target": "Host membranes",
+      "mechanism": "Phospholipase C activity"
+    },
+    {
+      "pathogen_name": "Anaplasma phagocytophilum",
+      "effector_name": "Ats-1",
+      "type": "T4SS",
+      "host_target": "Rab5 / PI3P",
+      "mechanism": "Binds Rab5; anchors to inclusion membrane"
+    },
+    {
+      "pathogen_name": "Anaplasma phagocytophilum",
+      "effector_name": "AnkA",
+      "type": "T4SS",
+      "host_target": "MYADM / Abl-1",
+      "mechanism": "Ankyrin repeat; modulates host signaling"
+    },
+    {
+      "pathogen_name": "Anaplasma phagocytophilum",
+      "effector_name": "p44/Msp2",
+      "type": "Surface protein",
+      "host_target": "P-selectin glycoprotein",
+      "mechanism": "Antigenic variation; immune evasion"
+    },
+    {
+      "pathogen_name": "Bacillus anthracis",
+      "effector_name": "ALO",
+      "type": "Cholesterol-dependent",
+      "host_target": "Cholesterol",
+      "mechanism": "Anthrolysin O; phagosomal escape"
+    },
+    {
+      "pathogen_name": "Bacillus anthracis",
+      "effector_name": "LF",
+      "type": "AB toxin",
+      "host_target": "MAPKKs",
+      "mechanism": "Lethal factor; zinc metalloprotease"
+    },
+    {
+      "pathogen_name": "Bacillus anthracis",
+      "effector_name": "EF",
+      "type": "AB toxin",
+      "host_target": "CaM/adenylate cyclase",
+      "mechanism": "Edema factor; adenylyl cyclase"
+    },
+    {
+      "pathogen_name": "Bacillus anthracis",
+      "effector_name": "PA",
+      "type": "AB toxin",
+      "host_target": "ANTXR1/2",
+      "mechanism": "Protective antigen; mediates uptake of LF/EF"
+    },
+    {
+      "pathogen_name": "Bacillus anthracis",
+      "effector_name": "CatB",
+      "type": "Catalase",
+      "host_target": "ROS",
+      "mechanism": "Resistance to oxidative burst"
+    },
+    {
+      "pathogen_name": "Mycobacterium tuberculosis",
+      "effector_name": "LAM",
+      "type": "Glycolipid",
+      "host_target": "Vps34",
+      "mechanism": "Inhibits Ca2+ signaling"
+    },
+    {
+      "pathogen_name": "Mycobacterium tuberculosis",
+      "effector_name": "SapM",
+      "type": "Secreted phosphatase",
+      "host_target": "PI3P",
+      "mechanism": "Dephosphorylates PI3P"
+    },
+    {
+      "pathogen_name": "Mycobacterium tuberculosis",
+      "effector_name": "MptpA",
+      "type": "Secreted phosphatase",
+      "host_target": "V-ATPase",
+      "mechanism": "Blocks V-ATPase trafficking"
+    },
+    {
+      "pathogen_name": "Mycobacterium tuberculosis",
+      "effector_name": "MptpB",
+      "type": "Secreted phosphatase",
+      "host_target": "PI(3,5)P2",
+      "mechanism": "Hydrolyzes PI(3,5)P2"
+    },
+    {
+      "pathogen_name": "Mycobacterium tuberculosis",
+      "effector_name": "Eis",
+      "type": "Secreted protein",
+      "host_target": "JNK/AMPK",
+      "mechanism": "Acetyltransferase; inhibits autophagy"
+    },
+    {
+      "pathogen_name": "Mycobacterium tuberculosis",
+      "effector_name": "PknG",
+      "type": "Ser/Thr kinase",
+      "host_target": "Rab proteins",
+      "mechanism": "Phosphorylates host Rab GTPases"
+    },
+    {
+      "pathogen_name": "Mycobacterium tuberculosis",
+      "effector_name": "ESAT-6",
+      "type": "T7SS (ESX-1)",
+      "host_target": "Membrane",
+      "mechanism": "Pore-forming; promotes phagosomal escape"
+    },
+    {
+      "pathogen_name": "Salmonella enterica serovar Typhimurium",
+      "effector_name": "SopE",
+      "type": "T3SS (SPI-1)",
+      "host_target": "Cdc42 / Rac1",
+      "mechanism": "GEF for host Rho-family GTPases"
+    },
+    {
+      "pathogen_name": "Salmonella enterica serovar Typhimurium",
+      "effector_name": "SipA",
+      "type": "T3SS (SPI-1)",
+      "host_target": "Actin",
+      "mechanism": "Binds/stabilizes actin filaments"
+    },
+    {
+      "pathogen_name": "Salmonella enterica serovar Typhimurium",
+      "effector_name": "SopB/SigD",
+      "type": "T3SS (SPI-1)",
+      "host_target": "PI(4,5)P2",
+      "mechanism": "Phosphatidylinositol phosphatase"
+    },
+    {
+      "pathogen_name": "Salmonella enterica serovar Typhimurium",
+      "effector_name": "SifA",
+      "type": "T3SS (SPI-2)",
+      "host_target": "SKIP",
+      "mechanism": "Binds SKIP displacing Rab9"
+    },
+    {
+      "pathogen_name": "Salmonella enterica serovar Typhimurium",
+      "effector_name": "PipB2",
+      "type": "T3SS (SPI-2)",
+      "host_target": "Kinesin-1",
+      "mechanism": "Recruits kinesin-1 to SCV"
+    },
+    {
+      "pathogen_name": "Salmonella enterica serovar Typhimurium",
+      "effector_name": "SseJ",
+      "type": "T3SS (SPI-2)",
+      "host_target": "Cholesterol",
+      "mechanism": "Acyltransferase"
+    },
+    {
+      "pathogen_name": "Salmonella enterica serovar Typhimurium",
+      "effector_name": "SopD2",
+      "type": "T3SS (SPI-2)",
+      "host_target": "Rab7",
+      "mechanism": "Suppresses Rab7-dependent recruitment"
     }
   ]
 }
