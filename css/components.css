@@ -1,4 +1,26 @@
-/* Components - Database skeleton */
+/*
+  components.css - UI component styles for the PathoMap database browser.
+
+  Purpose: Styles every interactive/mounted component rendered by
+  js/views/database.js and js/ui/upload.js. Loaded AFTER base.css and
+  layout.css so it can override element defaults with component classes.
+
+  Contents:
+    - .db-toolbar / .db-tabs / .db-tab       Tab bar for switching tables.
+    - .tool-input / .tool-btn                 Generic search input and button styles.
+    - .db-status / .db-table-wrap / .db-table Row-count line and the main data table.
+    - .db-schema / .schema-*                  Collapsible data-dictionary panel.
+    - .classification-badge                   Color-coded badges for effector/host
+                                              classifications (light + dark variants,
+                                              keyed by [data-class="..."]).
+    - .db-upload-bar / .upload-status         Upload controls and status messages.
+    - .db-pagination                          Prev/Next pagination controls.
+    - @media 768px                            Mobile stacking for toolbar/pagination.
+
+  Note: badge colors are duplicated for dark mode under [data-theme="dark"] so
+  the same DOM works in both themes.
+*/
+
 .db-toolbar {
   display: flex;
   align-items: center;

@@ -1,4 +1,22 @@
-﻿/* Base - inspired by original design with compatibility improvements */
+﻿/*
+  base.css - Foundation layer of the PathoMap stylesheet cascade.
+
+  Purpose: Global reset, design tokens (CSS custom properties), theme variables,
+  and base element styles shared by every page. Loaded FIRST (before layout,
+  components, utilities) so later files can override or extend these defaults.
+
+  Contents:
+    - Universal box-sizing reset (border-box, zeroed margins/paddings).
+    - :root design tokens: colors (--color-*), font stack, radii, shadows, transitions.
+    - [data-theme="dark"] block: redefines the same tokens for dark mode
+      (toggled by adding data-theme="dark" to <html>; see js/main.js).
+    - Element defaults: html smooth-scroll, body typography, headings, paragraphs,
+      links (underlined, hover -> accent), and inline <code> styling.
+
+  Note: theme switching works by swapping the custom-property values under
+  [data-theme="dark"]; components never hardcode colors, they reference the vars.
+*/
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -98,4 +116,3 @@ code {
   border-radius: 4px;
   font-size: 0.9em;
 }
-

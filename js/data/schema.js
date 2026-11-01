@@ -1,5 +1,42 @@
+/*
+  schema.js - Central schema definitions for the PathoMap dataset (v2.0).
+
+  Purpose: Single source of truth for column metadata, enum values, visible
+  column lists, and classification display labels. Every other module imports
+  from here so column order, labels, and valid values stay consistent across
+  the table view, CSV export, validation, and the data-dictionary panel.
+
+  Exports (key groups):
+    - Schema version & enums:
+        SCHEMA_VERSION, GRAM_STAIN_VALUES, STRATEGY_VALUES,
+        ASSEMBLY_LEVEL_VALUES, CURATION_STATUS_VALUES, ENUMS
+    - Pathogen table:
+        COLUMN_META (full field docs), COLUMN_LABELS, PATHOGEN_COLUMNS,
+        VISIBLE_COLUMNS (columns shown in the UI)
+    - Effector table:
+        EFFECTOR_COLUMNS_META, EFFECTOR_COLUMN_LABELS, EFFECTOR_COLUMNS,
+        EFFECTOR_VISIBLE_COLUMNS, EFFECTOR_CLASSIFICATION_COLUMNS
+    - Host-protein table:
+        HOST_PROTEIN_COLUMNS_META, HOST_PROTEIN_COLUMN_LABELS,
+        HOST_PROTEIN_COLUMNS, HOST_PROTEIN_VISIBLE_COLUMNS
+    - Display helpers:
+        CLASSIFICATION_LABELS (raw enum value -> human-readable label)
+
+  Used by:
+    - js/utils/dataset.js      (validation + normalization)
+    - js/ui/upload.js          (template download uses SCHEMA_VERSION)
+    - js/views/database.js     (rendering, headers, CSV export, data dictionary)
+
+  Note: COLUMN_META entries are also rendered as the "Data dictionary" table
+  in the UI, so their `description` and `source` fields double as user docs.
+*/
+
 // Current schema version for the PathoMap dataset
 export const SCHEMA_VERSION = '2.0';
+
+// ---------------------------------------------------------------------------
+// Enum value lists (must match the CHECK constraints in data/schema.sql)
+// ---------------------------------------------------------------------------
 
 // Valid values for gram stain classification
 export const GRAM_STAIN_VALUES = [
@@ -30,6 +67,10 @@ export const ASSEMBLY_LEVEL_VALUES = [
 
 // Valid values for curation status
 export const CURATION_STATUS_VALUES = ['curated', 'needs_review'];
+
+// ---------------------------------------------------------------------------
+// Pathogens table metadata
+// ---------------------------------------------------------------------------
 
 // Metadata for all columns in the pathogens table
 export const COLUMN_META = [
@@ -208,6 +249,10 @@ export const VISIBLE_COLUMNS = [
   'reference_doi',
 ];
 
+// ---------------------------------------------------------------------------
+// Effectors table metadata
+// ---------------------------------------------------------------------------
+
 // Metadata for all columns in the effectors table
 export const EFFECTOR_COLUMNS_META = [
   {
@@ -298,6 +343,10 @@ export const EFFECTOR_CLASSIFICATION_COLUMNS = [
   'mechanism',
 ];
 
+// ---------------------------------------------------------------------------
+// Host proteins table metadata
+// ---------------------------------------------------------------------------
+
 // Metadata for all columns in the host_proteins table
 export const HOST_PROTEIN_COLUMNS_META = [
   {
@@ -387,6 +436,10 @@ export const HOST_PROTEIN_VISIBLE_COLUMNS = [
   'function',
   'pathway',
 ];
+
+// ---------------------------------------------------------------------------
+// Enum registry + human-readable classification labels
+// ---------------------------------------------------------------------------
 
 // Enum values keyed by their column names
 export const ENUMS = {

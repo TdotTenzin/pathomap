@@ -1,3 +1,32 @@
+-- ===========================================================================
+-- schema.sql - SQLite DDL for the PathoMap v2 database (data/pathomap.db)
+--
+-- Purpose: Defines the relational schema that mirrors the JSON dataset
+-- (data/pathomap-dataset.json). The site loads JSON, not this DB directly,
+-- but the SQLite file is exported alongside it for programmatic queries and
+-- the "Data dictionary" links in the UI.
+--
+-- Tables:
+--   pathogens  One row per organism: taxonomy (NCBI), Gram reaction,
+--              acid-fast flag, intracellular survival strategy, representative
+--              genome assembly metadata, curation status, and provenance.
+--   meta       Simple key/value store for dataset-level metadata (schema
+--              version, build timestamp, row counts, etc.).
+--
+-- Constraints:
+--   - CHECK constraints on gram_stain, strategy, assembly_level, and
+--     curation_status mirror the enum lists in js/data/schema.js.
+--   - pathogen_id is the primary key; name and tax_id are UNIQUE and NOT NULL.
+--
+-- Indexes:
+--   idx_pathogens_strategy, idx_pathogens_gram_stain, idx_pathogens_tax_id
+--   speed up the common filter/sort columns used in the UI.
+--
+-- Note: This DDL is generated/validated by the build scripts (see README);
+-- edit js/data/schema.js first if you need to change the canonical field set,
+-- then regenerate this file and the SQLite DB.
+-- ===========================================================================
+
 -- PathoMap v2 pathogens schema
 CREATE TABLE pathogens (
   pathogen_id        INTEGER PRIMARY KEY,
@@ -30,10 +59,12 @@ CREATE TABLE pathogens (
   last_updated       TEXT    NOT NULL
 );
 
+-- Indexes for the most common filter/sort columns
 CREATE INDEX idx_pathogens_strategy ON pathogens(strategy);
 CREATE INDEX idx_pathogens_gram_stain ON pathogens(gram_stain);
 CREATE INDEX idx_pathogens_tax_id ON pathogens(tax_id);
 
+-- Key/value store for dataset-level metadata (schema_version, built_at, etc.)
 CREATE TABLE meta (
   key   TEXT PRIMARY KEY,
   value TEXT NOT NULL

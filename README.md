@@ -2,43 +2,262 @@
 
 A curated host–pathogen dataset and browser, rebuilt from the bottom up.
 
-## Current release
+## Overview
 
-The database currently contains three tables:
-- **pathogens**: 53 organisms with NCBI taxonomy, representative genome assembly metadata, Gram reaction, acid-fast status, intracellular survival strategy, intracellular niche description, and the original curated descriptions. New fields include strain designation, secondary strategy, strategy evidence, NCBI scientific name, and curation notes.
-- **effectors**: 246 effector proteins linked to pathogens by name
+PathoMap is a web-based database browser for studying host–pathogen interactions. It catalogs bacterial pathogens, their effector proteins, and the host proteins they target, with enriched NCBI taxonomy and genome metadata.
+
+**Current dataset:**
+- **pathogens**: 53 organisms with NCBI taxonomy, genome assembly metadata, Gram reaction, acid-fast status, intracellular survival strategy, and curated descriptions
+- **effectors**: 246 effector proteins linked to pathogens
 - **host_proteins**: 5 host proteins targeted by effectors
 
-The v1 flat dataset is archived in `data/archive/v1/` and is not loaded by the site. Interaction and trafficking tables will be rebuilt one at a time.
+The application is a vanilla JavaScript single-page application with no build step or external dependencies.
 
-## Run
+---
 
-Serve the directory over HTTP so the browser can fetch the JSON dataset:
+## Directory Structure
+
+```
+host-pathogen-tracker/
+├── README.md                      # This file
+├── index.html                     # Main entry point (HTML structure)
+├── opencode.json                  # Project metadata
+├── plans.md                       # Development planning notes
+│
+├── css/                           # Stylesheets (loaded in order)
+│   ├── base.css                   # Base styles, variables, typography
+│   ├── layout.css                 # Layout structure (header, main, footer)
+│   ├── components.css             # UI component styles (tables, badges, upload)
+│   └── utilities.css              # Utility classes (spacing, colors, etc.)
+│
+├── js/                            # JavaScript application code
+│   ├── main.js                    # Application entry point and initialization
+│   ├── data/                      # Data loading and schema definitions
+│   │   ├── loader.js              # Dataset fetching, caching, and initial loading
+│   │   └── schema.js              # Schema metadata (columns, enums, validation rules)
+│   ├── utils/                     # Utility functions
+│   │   └── dataset.js            # Validation and normalization of uploaded datasets
+│   ├── ui/                        # UI components
+│   │   └── upload.js              # File upload interface and validation
+│   └── views/                     # Page views
+│       └── database.js            # Main database browser view (tables, search, filters)
+│
+├── data/                          # Data files (see data/README.md for details)
+│   ├── README.md                  # Data directory documentation
+│   ├── pathomap-dataset.json      # Main production dataset (generated)
+│   ├── sample-dataset.json        # Sample dataset for testing (5 pathogens)
+│   ├── pathomap.db                # SQLite database (generated)
+│   ├── schema.sql                 # SQL schema definition (generated)
+│   ├── classification-mapping.json # Classification mappings for categorization
+│   ├── schema/                    # JSON Schema definitions
+│   │   └── pathogens.schema.json  # Schema validation for pathogens dataset
+│   └── sources/                  # Source data for build pipeline
+│       ├── curated_data.json    # Curated pathogen data (manually maintained)
+│       ├── effectors_seed.json    # Effector data
+│       ├── host_proteins_seed.json # Host protein reference data
+│       ├── pathogen_overrides.json # Manual overrides for NCBI lookups
+│       └── ncbi/                  # NCBI API cache
+│           ├── README.md          # Cache documentation
+│           ├── genomes/           # Genome assembly data from NCBI Datasets
+│           ├── taxonomy/          # Taxonomy lineage data
+│           └── taxonomy_search/   # Search results for name-to-tax_id resolution
+│
+├── scripts/                       # Build scripts (Python)
+│   ├── build_pathogens.py         # Build pathogens table with NCBI enrichment
+│   └── build_effectors_host_proteins.py # Build effectors and host_proteins tables
+│
+└── docs/                          # Documentation
+    ├── DATASET.md                 # Dataset schema, enrichment rules, validation
+    ├── ROADMAP.md                 # Project roadmap and future plans
+    ├── STRUCTURE.md               # Technical architecture details
+    └── IA.md                      # Information architecture notes
+```
+
+---
+
+## Code Architecture
+
+### Frontend Architecture
+
+The application follows a modular vanilla JavaScript architecture:
+
+```
+index.html
+    ↓
+js/main.js (entry point)
+    ↓
+js/data/loader.js (load dataset)
+    ↓
+js/views/database.js (render UI)
+    ↓
+js/ui/upload.js (handle uploads)
+```
+
+**Key Modules:**
+
+| Module | Purpose | Key Functions |
+|--------|---------|---------------|
+| `js/main.js` | Application initialization, event routing | `init()`, route event handlers |
+| `js/data/loader.js` | Fetch dataset from server, cache in memory | `loadDataset()`, `setDataset()` |
+| `js/data/schema.js` | Schema metadata for all tables | `COLUMN_META`, `EFFECTOR_COLUMNS_META`, `HOST_PROTEIN_COLUMNS_META`, `ENUMS` |
+| `js/utils/dataset.js` | Validate and normalize user uploads | `validateDataset()`, `normalizeDataset()` |
+| `js/ui/upload.js` | File upload UI and validation flow | `handleUpload()`, display validation results |
+| `js/views/database.js` | Main database browser view | Render tables, handle search/filter, pagination |
+
+**Data Flow:**
+
+1. **Loading**: `loader.js` fetches `pathomap-dataset.json` from server
+2. **Validation**: User uploads are validated by `dataset.js` against schema
+3. **Rendering**: `database.js` uses `schema.js` metadata to render tables
+4. **Caching**: Dataset is cached in memory to avoid re-fetching
+
+### Build Pipeline
+
+The build pipeline transforms manually curated source data into production datasets:
+
+```
+data/sources/ (manual curation)
+    ↓
+scripts/build_pathogens.py (NCBI enrichment)
+    ↓
+data/pathomap-dataset.json (production)
+    ↓
+scripts/build_effectors_host_proteins.py (add effectors/host proteins)
+    ↓
+data/pathomap-dataset.json (final)
+```
+
+**Build Scripts:**
+
+| Script | Input | Output | Purpose |
+|--------|-------|--------|---------|
+| `build_pathogens.py` | `curated_data.json`, NCBI APIs | `pathomap-dataset.json`, `pathomap.db`, `schema.sql` | Enrich curated data with NCBI taxonomy and genome metadata |
+| `build_effectors_host_proteins.py` | `effectors_seed.json`, `host_proteins_seed.json`, existing dataset | Updated `pathomap-dataset.json` | Add effectors and host proteins tables to dataset |
+
+**NCBI Integration:**
+
+The build script automatically fetches data from NCBI APIs:
+- **NCBI Taxonomy**: Fetches lineage (phylum, class, order, family) for each pathogen
+- **NCBI Datasets**: Fetches genome assembly metadata (accession, size, GC content, assembly level)
+- **Caching**: Responses are cached in `data/sources/ncbi/` to avoid repeated API calls
+
+---
+
+## Key Files Explained
+
+### Application Files
+
+| File | Purpose | Why It Matters |
+|------|---------|----------------|
+| `index.html` | HTML structure for the single-page app | Defines the DOM layout, loads CSS/JS modules |
+| `js/main.js` | Application entry point | Initializes the app, sets up event listeners |
+| `js/data/schema.js` | Schema definitions | Central source of truth for table structure, columns, and enum values |
+| `js/data/loader.js` | Dataset loading | Handles fetching, caching, and initial validation of the dataset |
+| `js/views/database.js` | Main UI view | Renders the database browser, tables, search, and filters |
+| `js/utils/dataset.js` | Upload validation | Ensures user uploads match the expected schema |
+| `js/ui/upload.js` | Upload interface | Provides drag-and-drop upload and displays validation results |
+
+### Data Files
+
+| File | Purpose | Generated By |
+|------|---------|--------------|
+| `data/pathomap-dataset.json` | Main production dataset | `build_pathogens.py` + `build_effectors_host_proteins.py` |
+| `data/sample-dataset.json` | Sample dataset (5 pathogens) | Build scripts (subset of main dataset) |
+| `data/pathomap.db` | SQLite database | `build_pathogens.py` |
+| `data/schema.sql` | SQL schema definition | `build_pathogens.py` |
+| `data/classification-mapping.json` | Classification mappings | Manually maintained (used for categorization) |
+
+### Source Data Files
+
+| File | Purpose | Maintenance |
+|------|---------|-------------|
+| `data/sources/curated_data.json` | Curated pathogen data | Manually edited (primary source of truth) |
+| `data/sources/effectors_seed.json` | Effector data | Manually edited |
+| `data/sources/host_proteins_seed.json` | Host protein data | Manually edited |
+| `data/sources/pathogen_overrides.json` | Manual NCBI overrides | Manually edited (for problematic lookups) |
+
+### Build Scripts
+
+| Script | Purpose | Dependencies |
+|--------|---------|--------------|
+| `scripts/build_pathogens.py` | Build pathogens table with NCBI data | Python 3, internet connection (for NCBI APIs) |
+| `scripts/build_effectors_host_proteins.py` | Add effectors and host proteins | Python 3, existing pathogens dataset |
+
+---
+
+## Running the Application
+
+### Development Server
+
+Serve the directory over HTTP (required for browser to fetch JSON):
 
 ```powershell
 python -m http.server 8000
 ```
 
-Open <http://localhost:8000>.
+Open <http://localhost:8000> in your browser.
 
-## Data
+### Building the Dataset
 
-- `data/pathomap-dataset.json` — generated dataset loaded by the app
-- `data/sample-dataset.json` — five-pathogen sample with 27 effectors and 5 host proteins
-- `data/pathomap.db` — generated SQLite database
-- `data/schema.sql` — SQLite DDL
-- `data/sources/pathogens_seed.json` — curated base rows for pathogens
-- `data/sources/pathogen_overrides.json` — manual NCBI overrides
-- `data/sources/effectors_seed.json` — curated base rows for effectors
-- `data/sources/host_proteins_seed.json` — curated base rows for host proteins
-
-Rebuild and validate:
+**Rebuild the complete dataset:**
 
 ```powershell
+# Build pathogens table with NCBI enrichment
 python scripts/build_pathogens.py
-python scripts/build_pathogens.py --check
+
+# Add effectors and host proteins
 python scripts/build_effectors_host_proteins.py
+```
+
+**Validate without rebuilding:**
+
+```powershell
+python scripts/build_pathogens.py --check
 python scripts/build_effectors_host_proteins.py --check
 ```
 
-See [docs/DATASET.md](docs/DATASET.md) for the schema, enrichment rules, and validation details.
+**Refresh NCBI cache (force API calls):**
+
+```powershell
+python scripts/build_pathogens.py --refresh
+```
+
+**Use only cached data (no network):**
+
+```powershell
+python scripts/build_pathogens.py --no-network
+```
+
+---
+
+## Documentation
+
+- **[docs/DATASET.md](docs/DATASET.md)** - Detailed schema documentation, enrichment rules, and validation details
+- **[docs/STRUCTURE.md](docs/STRUCTURE.md)** - Technical architecture and data flow
+- **[docs/ROADMAP.md](docs/ROADMAP.md)** - Project roadmap and future plans
+- **[data/README.md](data/README.md)** - Data directory structure and file purposes
+- **[data/sources/ncbi/README.md](data/sources/ncbi/README.md)** - NCBI cache documentation
+
+---
+
+## Technology Stack
+
+- **Frontend**: Vanilla JavaScript (ES6 modules), HTML5, CSS3
+- **Backend**: None (static files served by HTTP server)
+- **Data**: JSON (primary), SQLite (generated)
+- **Build**: Python 3 scripts
+- **External APIs**: NCBI Taxonomy, NCBI Datasets (for enrichment)
+
+---
+
+## Contributing
+
+When adding new pathogens:
+
+1. Edit `data/sources/curated_data.json` to add the new pathogen
+2. Run `python scripts/build_pathogens.py --refresh` to fetch fresh NCBI data
+3. If the pathogen name doesn't match NCBI's database, add an override in `data/sources/pathogen_overrides.json`
+4. Add corresponding effectors to `data/sources/effectors_seed.json`
+5. Run `python scripts/build_effectors_host_proteins.py` to update the dataset
+
+See [data/README.md](data/README.md) and [data/sources/ncbi/README.md](data/sources/ncbi/README.md) for more details.

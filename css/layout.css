@@ -1,10 +1,36 @@
-﻿/* Layout */
+﻿/*
+  layout.css - Structural / page-level styles for PathoMap.
+
+  Purpose: Defines the macro layout of the page — the centered content
+  container, section spacing, sticky navigation bar, dark-mode toggle button,
+  and the hero banner with its research-objective card. Loaded AFTER base.css
+  (so it can use its tokens) and BEFORE components.css / utilities.css.
+
+  Contents:
+    - .container       Centered max-width (1100px) column with side padding.
+    - .section/-alt    Vertical rhythm for <section> blocks (+ scroll offset
+                       for the sticky nav) and an alternate background variant.
+    - .section-*       Header typography (label / title / subtitle) reused by
+                       each section heading.
+    - nav              Sticky, blurred top bar with brand, in-page links
+                       (animated underline on hover), and .dark-toggle button.
+    - #hero            Full-width gradient banner with decorative radial blobs
+                       (::before / ::after) and the research-objective card
+                       (.research-objective / .research-question / .research-list).
+    - @media 768px     Mobile adjustments (tighter padding, smaller type,
+                       compressed nav links).
+
+  Note: colors come from CSS custom properties defined in base.css, so both
+  light and dark themes are handled automatically.
+*/
+
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 28px;
 }
 
+/* scroll-margin-top offsets the sticky nav height so anchor jumps don't hide headings under it */
 .section {
   padding: 72px 0;
   scroll-margin-top: 72px;
@@ -42,7 +68,6 @@
   line-height: 1.6;
 }
 
-/* Nav */
 nav {
   position: sticky;
   top: 0;
@@ -128,7 +153,6 @@ nav .nav-links a:hover::after {
   border-color: var(--color-blue);
 }
 
-/* Hero */
 #hero {
   background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0c2d5a 100%);
   color: white;
@@ -261,4 +285,3 @@ nav .nav-links a:hover::after {
     font-size: 1.125rem;
   }
 }
-

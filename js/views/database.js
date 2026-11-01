@@ -1,3 +1,67 @@
+/*
+  database.js - Main database-browser view (tabs, table, search, sort,
+  pagination, CSV export, and the collapsible data dictionary).
+
+  Purpose: Renders the three dataset tables (pathogens / effectors /
+  host_proteins) into the #database section of index.html. All DOM updates go
+  through renderDatabase(), which is re-invoked on every state change (tab
+  switch, search keystroke, sort click, page nav).
+
+  Exports:
+    initDatabase()        Binds toolbar/search/pagination event listeners and
+                          performs the first render. Called once from main.js.
+    renderDatabase()      Recomputes filtered/sorted/paginated rows and redraws
+                          every sub-component. Returns the full filtered row
+                          array. Called by upload.js after data changes too.
+    getCurrentRows()      Returns { def, rows } for the active table (used by
+                          CSV export).
+
+  Internal state (module-scoped `state` object):
+    active   Current table id ('pathogens' | 'effectors' | 'host_proteins').
+    search   Lowercase search string; filters across all visible columns.
+    sortKey  Column key being sorted (null = no sort).
+    sortDir  'asc' or 'desc'.
+    page     1-based current page number.
+    pageSize Rows per page (10 / 25 / 50, from the select control).
+
+  Internal functions:
+    tableDef(id)          Look up a TABLES entry by id (falls back to first).
+    rowsFor(def)          Pull rows from the loader, apply search filter, then
+                          apply sort (numeric-aware, boolean-aware, localeCompare
+                          for strings).
+    paginateRows(rows)    Clamp state.page into range, slice the page window,
+                          and return { rows, totalRows, totalPages, start, end }.
+    renderTabs()          Draw the tab buttons; clicking resets search/sort/page.
+    renderHead(def)       Draw sortable <th> cells (▲/▼ indicator on active).
+    displayValue(col, v)  Format a cell for display (Yes/No for acid_fast,
+                          labels for strategy, fixed decimals for numbers).
+    createClassificationBadge(classValue)  Build a colored <span> for an
+                          effector/host-target classification, or null if
+                          unknown/empty.
+    renderBody(def, rows) Draw <tr> rows; special-cases reference_doi (link) and
+                          effector classification columns (badge next to text).
+    renderStatus(def, rows)  Update #db-count and #db-hint with row count/desc.
+    renderPagination(pagination)  Update the "Showing X–Y of Z" text, page info,
+                          and disable prev/next buttons at the ends.
+    schemaLink(label, href)  Small helper for styled doc links.
+    renderSchema()        Populate the <details> data dictionary from COLUMN_META
+                          (or effector/host-protein equivalents), including
+                          schema version, row count, and links to the SQL/JSON
+                          schema files.
+    toCsv(def, rows)      Serialize rows to CSV text, escaping quotes/commas/
+                          newlines per RFC 4180.
+    downloadCsv()         Trigger a browser download of the current table as
+                          pathomap-<table>.csv.
+
+  DOM elements it writes to (defined in index.html):
+    #db-tabs, #db-search, #db-page-size, #db-prev, #db-next, #db-download,
+    #db-count, #db-hint, #db-head, #db-body, #db-pagination-info,
+    #db-page-info, #db-schema-body
+
+  Note: All rendering is done via document.createElement (no innerHTML with
+  data), which avoids XSS from user-uploaded datasets.
+*/
+
 import { getDataset, getPathogens, getEffectors, getHostProteins } from '../data/loader.js';
 import {
   COLUMN_LABELS,
@@ -17,7 +81,8 @@ import {
   HOST_PROTEIN_COLUMNS,
 } from '../data/schema.js';
 
-// Available tables to display in the database view
+// Available tables to display in the database view (id, label, description,
+// visible columns for the UI, and full column list for CSV export)
 const TABLES = [
   {
     id: 'pathogens',
@@ -70,13 +135,16 @@ function tableDef(id) {
   return TABLES.find((table) => table.id === id) || TABLES[0];
 }
 
-// Filter and sort rows based on current search and sort state
+// Filter and sort rows based on current search and sort state.
+// Search matches any visible column (case-insensitive substring); sort is
+// numeric-aware for numbers, boolean-aware for booleans, and localeCompare
+// for strings/nulls.
 function rowsFor(def) {
   const rows = def.id === 'effectors' ? getEffectors() : def.id === 'host_proteins' ? getHostProteins() : getPathogens();
   const query = state.search.trim().toLowerCase();
   let out = rows;
 
-  // Apply search filter
+  // Apply search filter (matches if ANY visible column contains the query)
   if (query) {
     out = rows.filter((row) =>
       def.columns.some((column) =>
@@ -85,7 +153,7 @@ function rowsFor(def) {
     );
   }
 
-  // Apply sorting
+  // Apply sorting (numeric compare for numbers, locale-aware for text)
   if (state.sortKey) {
     const key = state.sortKey;
     const direction = state.sortDir === 'desc' ? -1 : 1;
@@ -107,12 +175,14 @@ function rowsFor(def) {
   return out;
 }
 
-// Paginate rows based on current page and page size
+// Paginate rows based on current page and page size.
+// Clamps state.page into [1, totalPages] so it never goes out of range, then
+// slices out just the rows for the current page window.
 function paginateRows(rows) {
   const totalRows = rows.length;
   const totalPages = Math.ceil(totalRows / state.pageSize);
 
-  // Ensure page is within valid bounds
+  // Ensure page is within valid bounds (handles shrink from deletes/filters)
   state.page = Math.max(1, Math.min(state.page, Math.max(1, totalPages)));
 
   const startIndex = (state.page - 1) * state.pageSize;
@@ -127,7 +197,7 @@ function paginateRows(rows) {
   };
 }
 
-// Render table tabs for switching between datasets
+// Render table tabs for switching between datasets (resets search/sort/page on switch)
 function renderTabs() {
   const el = document.getElementById('db-tabs');
   if (!el) return;
@@ -141,6 +211,7 @@ function renderTabs() {
     button.textContent = table.label;
     button.title = table.description;
     button.addEventListener('click', () => {
+      // Reset all view state when switching tables
       state.active = table.id;
       state.search = '';
       state.sortKey = null;
@@ -154,7 +225,7 @@ function renderTabs() {
   });
 }
 
-// Render table header with sortable columns
+// Render table header with sortable columns (click toggles asc/desc or sets a new sort)
 function renderHead(def) {
   const el = document.getElementById('db-head');
   if (!el) return;
@@ -164,6 +235,7 @@ function renderHead(def) {
     const th = document.createElement('th');
     const label = labels[column] || column.replace(/_/g, ' ');
     th.textContent = label;
+    // Show direction indicator on the active sort column
     if (column === state.sortKey) {
       th.textContent += state.sortDir === 'asc' ? ' ▲' : ' ▼';
     }
@@ -171,8 +243,10 @@ function renderHead(def) {
     th.title = 'Sort by ' + label;
     th.addEventListener('click', () => {
       if (state.sortKey === column) {
+        // Same column: flip direction
         state.sortDir = state.sortDir === 'asc' ? 'desc' : 'asc';
       } else {
+        // New column: start ascending
         state.sortKey = column;
         state.sortDir = 'asc';
       }
@@ -194,7 +268,7 @@ function displayValue(column, value) {
   return String(value);
 }
 
-// Create a classification badge element
+// Create a classification badge element (returns null for empty/unknown values)
 function createClassificationBadge(classValue) {
   if (!classValue || classValue === 'unknown') return null;
 
@@ -205,13 +279,16 @@ function createClassificationBadge(classValue) {
   return badge;
 }
 
-// Render table body with data rows
+// Render table body with data rows.
+// Special handling: reference_doi renders as an external link; effector
+// classification columns render the text value plus a colored badge for the
+// matching *_class column.
 function renderBody(def, rows) {
   const el = document.getElementById('db-body');
   if (!el) return;
   el.replaceChildren();
 
-  // Show empty state message if no rows
+  // Show empty state message if no rows (different text when filtered vs empty)
   if (!rows.length) {
     const tr = document.createElement('tr');
     const td = document.createElement('td');
@@ -224,7 +301,7 @@ function renderBody(def, rows) {
     return;
   }
 
-  // Render each row
+  // Render each row, column by column, with per-column special cases
   rows.forEach((row) => {
     const tr = document.createElement('tr');
     def.columns.forEach((column) => {
@@ -248,7 +325,7 @@ function renderBody(def, rows) {
         textSpan.textContent = displayValue(column, value);
         td.appendChild(textSpan);
 
-        // Add classification badge if exists
+        // Add classification badge if exists (looks up column + '_class')
         const classColumn = column + '_class';
         const classValue = row[classColumn];
         const badge = createClassificationBadge(classValue);
@@ -279,6 +356,7 @@ function renderStatus(def, rows) {
   }
 }
 
+// Update pagination info text, page indicator, and prev/next button states
 function renderPagination(pagination) {
   const {
     totalRows,
@@ -293,12 +371,14 @@ function renderPagination(pagination) {
   const nextButton = document.getElementById('db-next');
   const pageSizeSelect = document.getElementById('db-page-size');
 
+  // "Showing 1-10 of 53" style summary (handles the empty case)
   info.textContent = totalRows === 0
     ? 'Showing 0 rows'
     : `Showing ${startIndex + 1}-${endIndex} of ${totalRows}`;
 
   pageInfo.textContent = `Page ${state.page} of ${Math.max(1, totalPages)}`;
 
+  // Disable prev on first page, next on last page
   prevButton.disabled = state.page === 1;
   nextButton.disabled = state.page >= totalPages;
 
@@ -314,7 +394,10 @@ function schemaLink(label, href) {
   return link;
 }
 
-// Render schema documentation table with column metadata
+// Render schema documentation table with column metadata (the "Data dictionary"
+// <details> panel). Pulls COLUMN_META (or effector/host-protein equivalent)
+// for the active table and renders field/type/description/source rows plus
+// links to the SQL schema, SQLite DB, and JSON Schema files.
 function renderSchema() {
   const body = document.getElementById('db-schema-body');
   if (!body) return;
@@ -323,6 +406,7 @@ function renderSchema() {
   const def = tableDef(state.active);
   const meta = getDataset().meta || {};
   const counts = meta.tables || {};
+  // Meta line: "Schema 2.0 · 53 pathogens · Built 2024-…"
   const metaLine = document.createElement('p');
   metaLine.className = 'schema-meta';
   const columnMeta = def.id === 'effectors' ? EFFECTOR_COLUMNS_META : def.id === 'host_proteins' ? HOST_PROTEIN_COLUMNS_META : COLUMN_META;
@@ -337,6 +421,7 @@ function renderSchema() {
     .join(' · ');
   body.appendChild(metaLine);
 
+  // Links to the SQL schema, SQLite DB, and JSON Schema files
   const links = document.createElement('p');
   links.className = 'schema-links';
   links.append(
@@ -348,6 +433,7 @@ function renderSchema() {
   );
   body.appendChild(links);
 
+  // Build the field/type/description/source table
   const wrap = document.createElement('div');
   wrap.className = 'schema-table-wrap';
   const table = document.createElement('table');
@@ -391,7 +477,8 @@ function renderSchema() {
   body.appendChild(wrap);
 }
 
-// Main render function: updates all database view components
+// Main render function: updates all database view components in order
+// (tabs -> head -> body -> status -> pagination -> schema dictionary)
 export function renderDatabase() {
   const def = tableDef(state.active);
   const rows = rowsFor(def);
@@ -405,14 +492,15 @@ export function renderDatabase() {
   return rows;
 }
 
-// Get current table definition and filtered rows
+// Get current table definition and filtered rows (used by CSV export)
 export function getCurrentRows() {
   const def = tableDef(state.active);
   return { def, rows: rowsFor(def) };
 }
 
-// Convert rows to CSV format with proper escaping
+// Convert rows to CSV format with RFC 4180 escaping (quotes, commas, newlines)
 function toCsv(def, rows) {
+  // Escape a single field: wrap in quotes and double any inner quotes when needed
   const escape = (value) => {
     const text = value === null || value === undefined ? '' : String(value);
     return /[",\n]/.test(text) ? '"' + text.replace(/"/g, '""') + '"' : text;
@@ -424,7 +512,7 @@ function toCsv(def, rows) {
   return [header, ...lines].join('\n');
 }
 
-// Download current table as CSV file
+// Download current table as CSV file (creates a Blob and triggers browser download)
 function downloadCsv() {
   const { def, rows } = getCurrentRows();
   const blob = new Blob([toCsv(def, rows)], { type: 'text/csv;charset=utf-8;' });
@@ -438,22 +526,26 @@ function downloadCsv() {
   URL.revokeObjectURL(url);
 }
 
-// Initialize database view with event listeners
+// Initialize database view with event listeners for search, page-size,
+// prev/next, and CSV download. Performs the initial render.
 export function initDatabase() {
   renderDatabase();
 
+  // Search: filter on every keystroke, reset to page 1
   document.getElementById('db-search').addEventListener('input', (event) => {
     state.search = event.target.value;
     state.page = 1;
     renderDatabase();
   });
 
+  // Page-size selector: change page size, reset to page 1
   document.getElementById('db-page-size').addEventListener('change', (event) => {
     state.pageSize = Number(event.target.value);
     state.page = 1;
     renderDatabase();
   });
 
+  // Previous page button (clamped at page 1)
   document.getElementById('db-prev').addEventListener('click', () => {
     if (state.page > 1) {
       state.page--;
@@ -461,10 +553,12 @@ export function initDatabase() {
     }
   });
 
+  // Next page button (paginateRows clamps at the last page)
   document.getElementById('db-next').addEventListener('click', () => {
     state.page++;
     renderDatabase();
   });
 
+  // Download CSV for the current table + filter/sort state
   document.getElementById('db-download').addEventListener('click', downloadCsv);
 }

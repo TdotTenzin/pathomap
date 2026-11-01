@@ -1,4 +1,22 @@
-﻿/* Utilities */
+﻿/*
+  utilities.css - Small helper/utility classes for PathoMap.
+
+  Purpose: Single-purpose, low-specificity classes that can be mixed into any
+  markup for quick layout or accessibility fixes. Loaded LAST so these
+  utilities win over component/base rules when both apply.
+
+  Contents:
+    - .sr-only       Screen-reader-only text (visually hidden but accessible).
+    - .hidden        Force display:none (overrides other display rules).
+    - .flex          display:flex shorthand.
+    - .items-center  align-items:center.
+    - .justify-between justify-content:space-between.
+    - .gap-sm/.gap-md  Row/column gap helpers for flex containers.
+
+  Note: These are intentionally terse; most layout lives in layout.css and
+  components.css. Prefer the semantic classes over utilities when possible.
+*/
+
 .sr-only {
   position: absolute !important;
   width: 1px !important;

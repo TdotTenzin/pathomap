@@ -1,4 +1,41 @@
-﻿import {
+﻿/*
+  dataset.js - Validation and normalization utilities for PathoMap datasets.
+
+  Purpose: Cleans and validates raw JSON (from the curated file or a user
+  upload) into a consistent internal shape before it reaches the UI. Ensures
+  every pathogen/effector/host-protein row has the correct types, valid enum
+  values, and unique IDs regardless of input quality.
+
+  Exports:
+    DATA_SCHEMA_VERSION       Re-export of SCHEMA_VERSION.
+    validateDataset(data)     Returns { valid, errors[], warnings[] }.
+                              Errors block loading (structural problems);
+                              warnings are non-fatal (bad enums, dupes, etc.).
+    normalizeDataset(data)    Returns { meta, pathogens[], effectors[],
+                              host_proteins[] } with every field coerced to
+                              its expected type and unknown values defaulted.
+
+  Private helpers:
+    cleanString(v)    Coerce to trimmed string ('' for null/undefined).
+    nullableString(v) Same but returns null instead of '' when empty.
+    asNumber(v)       Parse float; null if not finite / empty.
+    asInteger(v)      Parse integer; null if not a whole number.
+    asBoolean(v)      Truthy coercion accepting true/1/'yes'/'y' strings.
+    inferGenus(name)  Fallback: first word of the organism name.
+
+  Normalization guarantees:
+    - pathogen_id / host_protein_id are unique positive integers (auto-assigned
+      when missing, non-positive, or duplicated).
+    - Enum fields (gram_stain, strategy, assembly_level, curation_status) fall
+      back to 'unknown' / 'needs_review' when the value isn't in the allowed set.
+    - Output rows contain ONLY the columns declared in schema.js (extras dropped).
+    - meta.tables always reflects the post-normalization row counts.
+
+  Used by: js/data/loader.js (setDataset/loadDataset) and js/ui/upload.js
+  (validateDataset before accepting an upload).
+*/
+
+import {
   ASSEMBLY_LEVEL_VALUES,
   CURATION_STATUS_VALUES,
   ENUMS,
@@ -12,31 +49,35 @@
 
 export const DATA_SCHEMA_VERSION = SCHEMA_VERSION;
 
+// ---------------------------------------------------------------------------
+// Type-coercion helpers (private)
+// ---------------------------------------------------------------------------
+
 // Convert a value to a trimmed string, defaulting to empty string
 function cleanString(value) {
   return value === null || value === undefined ? '' : String(value).trim();
 }
 
-// Convert a value to a trimmed string or null if empty
+// Convert a value to a trimmed string or null if empty (for nullable columns)
 function nullableString(value) {
   const text = cleanString(value);
   return text || null;
 }
 
-// Convert a value to a number or null if invalid
+// Convert a value to a number or null if invalid/empty
 function asNumber(value) {
   if (value === null || value === undefined || value === '') return null;
   const number = Number(value);
   return Number.isFinite(number) ? number : null;
 }
 
-// Convert a value to an integer or null if invalid
+// Convert a value to an integer or null if it's not a whole number
 function asInteger(value) {
   const number = asNumber(value);
   return number !== null && Number.isInteger(number) ? number : null;
 }
 
-// Convert a value to a boolean
+// Convert a value to a boolean (accepts true/false, 0/1, 'yes'/'no', 'y'/'n')
 function asBoolean(value) {
   if (typeof value === 'boolean') return value;
   if (typeof value === 'number') return value !== 0;
@@ -44,17 +85,21 @@ function asBoolean(value) {
   return ['true', 'yes', '1', 'y'].includes(text);
 }
 
-// Infer genus from a pathogen name (first word)
+// Infer genus from a pathogen name (first word) when the genus field is empty
 function inferGenus(name) {
   return name.split(/\s+/).filter(Boolean)[0] || '';
 }
 
-// Validate a dataset structure and return errors/warnings
+// ---------------------------------------------------------------------------
+// Validation
+// ---------------------------------------------------------------------------
+
+// Validate a dataset structure and return errors (fatal) + warnings (advisory)
 export function validateDataset(data) {
   const errors = [];
   const warnings = [];
 
-  // Check basic structure
+  // Check basic structure: must be a non-array object with a pathogens array
   if (!data || typeof data !== 'object' || Array.isArray(data)) {
     return { valid: false, errors: ['Dataset must be a JSON object.'], warnings };
   }
@@ -69,7 +114,7 @@ export function validateDataset(data) {
     warnings.push('The pathogens array is empty.');
   }
 
-  // Warn about extra tables
+  // Warn about unrecognized top-level arrays (ignored by the app)
   const extraTables = Object.keys(data).filter(
     (key) => !['meta', 'pathogens', 'effectors', 'host_proteins'].includes(key) && Array.isArray(data[key])
   );
@@ -79,11 +124,11 @@ export function validateDataset(data) {
     );
   }
 
-  // Track duplicates
+  // Track duplicates across rows for name and id uniqueness checks
   const seenNames = new Set();
   const seenIds = new Set();
 
-  // Validate each pathogen row
+  // Validate each pathogen row (structural errors vs advisory warnings)
   data.pathogens.forEach((row, index) => {
     const label = `Row ${index + 1}`;
     if (!row || typeof row !== 'object' || Array.isArray(row)) {
@@ -99,13 +144,14 @@ export function validateDataset(data) {
       seenNames.add(name.toLowerCase());
     }
 
+    // Duplicate IDs are warned (not errored) — normalizeDataset will reassign
     const id = asInteger(row.pathogen_id);
     if (id !== null) {
       if (seenIds.has(id)) warnings.push(`${label}: duplicate pathogen_id ${id}.`);
       seenIds.add(id);
     }
 
-    // Validate enum values
+    // Validate enum values (unknown values are warnings; normalize defaults them)
     if (row.gram_stain !== undefined && !GRAM_STAIN_VALUES.includes(row.gram_stain)) {
       warnings.push(`${label}: unknown gram_stain "${row.gram_stain}".`);
     }
@@ -122,14 +168,14 @@ export function validateDataset(data) {
       warnings.push(`${label}: unknown curation_status "${row.curation_status}".`);
     }
 
-    // Validate numeric fields
+    // Validate numeric fields (must parse to a finite number when present)
     ['genome_size_mb', 'gc_content', 'n_contigs', 'tax_id'].forEach((key) => {
       if (row[key] !== undefined && row[key] !== null && row[key] !== '' && asNumber(row[key]) === null) {
         warnings.push(`${label}: ${key} is not numeric.`);
       }
     });
 
-    // Validate DOI format
+    // DOIs should start with "10." per the DOI standard
     if (row.reference_doi && !cleanString(row.reference_doi).startsWith('10.')) {
       warnings.push(`${label}: reference_doi does not look like a DOI.`);
     }
@@ -138,7 +184,12 @@ export function validateDataset(data) {
   return { valid: errors.length === 0, errors, warnings };
 }
 
-// Normalize a dataset by cleaning, validating, and restructuring pathogen data
+// ---------------------------------------------------------------------------
+// Normalization
+// ---------------------------------------------------------------------------
+
+// Normalize a dataset: coerce types, dedupe IDs, apply enum fallbacks, and
+// restrict output to the columns declared in schema.js
 export function normalizeDataset(data) {
   const sourceRows = Array.isArray(data?.pathogens) ? data.pathogens : [];
   const usedIds = new Set();
@@ -151,7 +202,7 @@ export function normalizeDataset(data) {
       const genus = cleanString(row.genus) || inferGenus(name);
       const species = cleanString(row.species) || name;
       let pathogenId = asInteger(row.pathogen_id);
-      // Assign new ID if missing, invalid, or duplicate
+      // Assign a fresh ID if missing, non-positive, or already used
       if (
         pathogenId === null ||
         pathogenId <= 0 ||
@@ -163,7 +214,7 @@ export function normalizeDataset(data) {
       usedIds.add(pathogenId);
       nextId = Math.max(nextId, pathogenId + 1);
 
-      // Normalize all fields to expected types
+      // Normalize all fields: enums fall back to defaults, numbers to null
       const normalized = {
         pathogen_id: pathogenId,
         name,
@@ -193,11 +244,11 @@ export function normalizeDataset(data) {
         last_updated: cleanString(row.last_updated),
       };
 
-      // Ensure only defined columns are included
+      // Keep only declared columns (drops unknown/extra keys from input)
       return Object.fromEntries(PATHOGEN_COLUMNS.map((key) => [key, normalized[key]]));
     });
 
-  // Normalize effectors
+  // Normalize effectors (string-only columns; no ID or enum handling needed)
   const sourceEffectors = Array.isArray(data?.effectors) ? data.effectors : [];
   const effectors = sourceEffectors
     .filter((row) => row && typeof row === 'object' && !Array.isArray(row))
@@ -214,11 +265,11 @@ export function normalizeDataset(data) {
         mechanism_class: cleanString(row.mechanism_class),
       };
 
-      // Ensure only defined columns are included
+      // Keep only declared columns
       return Object.fromEntries(EFFECTOR_COLUMNS.map((key) => [key, normalized[key]]));
     });
 
-  // Normalize host_proteins
+  // Normalize host_proteins (same ID-dedup pattern as pathogens)
   const sourceHostProteins = Array.isArray(data?.host_proteins) ? data.host_proteins : [];
   const usedHostProteinIds = new Set();
   let nextHostProteinId = 1;
@@ -226,7 +277,7 @@ export function normalizeDataset(data) {
     .filter((row) => row && typeof row === 'object' && !Array.isArray(row))
     .map((row) => {
       let hostProteinId = asInteger(row.host_protein_id);
-      // Assign new ID if missing, invalid, or duplicate
+      // Assign a fresh ID if missing, non-positive, or already used
       if (
         hostProteinId === null ||
         hostProteinId <= 0 ||
@@ -253,11 +304,11 @@ export function normalizeDataset(data) {
         last_updated: cleanString(row.last_updated),
       };
 
-      // Ensure only defined columns are included
+      // Keep only declared columns
       return Object.fromEntries(HOST_PROTEIN_COLUMNS.map((key) => [key, normalized[key]]));
     });
 
-  // Build metadata object
+  // Merge caller meta with our own fields; tables[] always reflects final counts
   const meta = {
     dataset: 'pathomap',
     schema_version: SCHEMA_VERSION,
@@ -268,4 +319,5 @@ export function normalizeDataset(data) {
   return { meta, pathogens, effectors, host_proteins };
 }
 
+// Re-export column lists and enums for convenience (avoids deep imports)
 export { PATHOGEN_COLUMNS, EFFECTOR_COLUMNS, HOST_PROTEIN_COLUMNS, ENUMS };

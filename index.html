@@ -1,3 +1,25 @@
+<!--
+  PathoMap - Single-page host-pathogen dataset browser.
+
+  Purpose: Entry point for the PathoMap v2 web app. Defines the full page
+  structure that the JavaScript modules hydrate at runtime.
+
+  Structure:
+    - <nav>          Sticky top bar with brand, section links, and dark-mode toggle (#dark-toggle).
+    - <header#hero>  Landing hero with the project research objective (effector-sequence ML question).
+    - <main>         Database section (#database): upload bar, table tabs, search/CSV toolbar,
+                     row count/status line, pagination controls, empty data table shell,
+                     and a collapsible "Data dictionary" (<details>) for schema docs.
+
+  Key element IDs consumed by JS:
+    dataset-file, file-input-name, dataset-load-builtin, dataset-load-sample, dataset-status  -> js/ui/upload.js
+    db-tabs, db-search, db-download, db-count, db-hint, db-prev, db-next, db-page-size,
+    db-page-info, db-pagination-info, db-head, db-body, db-schema-body                       -> js/views/database.js
+    dark-toggle                                                                               -> js/main.js
+
+  Stylesheets are loaded in cascade order: base -> layout -> components -> utilities.
+  App script: js/main.js (type="module"). Requires serving over HTTP to fetch JSON data.
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +33,7 @@
   <link rel="stylesheet" href="css/utilities.css">
 </head>
 <body>
+  <!-- Sticky navigation: brand, in-page links, dark-mode toggle button -->
   <nav>
     <div class="container nav-inner">
       <a class="nav-brand" href="#hero">PathoMap</a>
@@ -22,6 +45,7 @@
     </div>
   </nav>
 
+  <!-- Hero: project title, subtitle, and research objective (ML on effector sequences) -->
   <header id="hero">
     <div class="container">
       <h1 class="hero-title">PathoMap</h1>
@@ -44,6 +68,7 @@
   </header>
 
   <main>
+    <!-- Database section: upload controls, table toolbar, pagination, table shell, schema docs -->
     <section id="database" class="section">
       <div class="container">
         <header class="section-header">
@@ -54,6 +79,7 @@
           </p>
         </header>
 
+        <!-- Upload bar: file picker, curated/sample dataset loaders, status message -->
         <div class="db-upload-bar">
           <div class="db-upload-actions">
             <label class="file-input-label" title="Upload a JSON file with a pathogens array">
@@ -67,6 +93,7 @@
           <p id="dataset-status" class="upload-status"></p>
         </div>
 
+        <!-- Toolbar: table tabs (populated by JS) + search box + CSV download -->
         <div class="db-toolbar">
           <div class="db-tabs" id="db-tabs" role="tablist" aria-label="Database tables"></div>
           <div class="db-toolbar-right">
@@ -103,6 +130,7 @@
           </div>
         </div>
 
+        <!-- Empty table shell; thead/tbody rows are rendered by js/views/database.js -->
         <div class="db-table-wrap">
           <table class="db-table" id="db-table">
             <thead>
@@ -112,6 +140,7 @@
           </table>
         </div>
 
+        <!-- Collapsible data dictionary; contents rendered by renderSchema() in database.js -->
         <details class="db-schema">
           <summary>Data dictionary</summary>
           <div id="db-schema-body" class="db-schema-body"></div>
