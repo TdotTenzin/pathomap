@@ -1,0 +1,407 @@
+{
+  "entryType": "UniProtKB unreviewed (TrEMBL)",
+  "primaryAccession": "Q5F7N0",
+  "uniProtkbId": "Q5F7N0_NEIG1",
+  "entryAudit": {
+    "firstPublicDate": "2015-10-14",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2015-10-14",
+    "entryVersion": 31,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 1.0,
+  "organism": {
+    "scientificName": "Neisseria gonorrhoeae (strain ATCC 700825 / FA 1090)",
+    "taxonId": 242231,
+    "evidences": [
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "EMBL",
+        "id": "AAW89807.1"
+      },
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "Proteomes",
+        "id": "UP000000535"
+      }
+    ],
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Betaproteobacteria",
+      "Neisseriales",
+      "Neisseriaceae",
+      "Neisseria"
+    ]
+  },
+  "proteinExistence": "4: Predicted",
+  "proteinDescription": {
+    "submissionNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAW89807.1"
+            }
+          ],
+          "value": "TspB"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "orfNames": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAW89807.1"
+            }
+          ],
+          "value": "NGO_1140"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 484,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 504,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "Phobius"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 323,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 408,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "Phobius"
+        }
+      ],
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "Proteomes",
+          "id": "UP000000535"
+        }
+      ],
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "Phobius"
+        }
+      ],
+      "id": "KW-0812",
+      "category": "Domain",
+      "name": "Transmembrane"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "Phobius"
+        }
+      ],
+      "id": "KW-1133",
+      "category": "Domain",
+      "name": "Transmembrane helix"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "CI-92V2JQAJ25B4S",
+        "citationType": "submission",
+        "authors": [
+          "Lewis L.A.",
+          "Gillaspy A.F.",
+          "McLaughlin R.E.",
+          "Gipson M.",
+          "Ducey T.F.",
+          "Ownbey T.",
+          "Hartman K.",
+          "Nydick C.",
+          "Carson M.B.",
+          "Vaughn J.",
+          "Thomson C.",
+          "Song L.",
+          "Lin S.",
+          "Yuan X.",
+          "Najar F.",
+          "Zhan M.",
+          "Ren Q.",
+          "Zhu H.",
+          "Qi S.",
+          "Kenton S.M.",
+          "Lai H.",
+          "White J.D.",
+          "Clifton S.",
+          "Roe B.A.",
+          "Dyer D.W."
+        ],
+        "title": "The complete genome sequence of Neisseria gonorrhoeae.",
+        "publicationDate": "MAR-2003",
+        "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "Proteomes",
+              "id": "UP000000535"
+            }
+          ],
+          "value": "ATCC 700825 / FA 1090",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "Proteomes",
+          "id": "UP000000535"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AE004969",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAW89807.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_010951201.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_002946.2"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q5F7N0",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "242231.NGO_1140",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "ngo:NGO_1140",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|242231.10.peg.1335",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_540609_0_0_4",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "CIWEHAE",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000000535",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR008708",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Neisseria_TspB"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF041109",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "VF_TspB_C_term"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR34403:SF14",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OS05G0225800 PROTEIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR34403",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TOL-PAL SYSTEM PROTEIN TOLA"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF05616",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Neisseria_TspB"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MMYSFEANANAVKISETLSVDTGQGAKVHKFVPKSSNIYSSDLTKAVDLTHIPTGAKARINAKITASVSRAGVLSGVGKLVRQGAKFGTRAVPYVGTALLAHDVYETFKEDIQARGCRYDPETDKFVKGYEYANCLWYEDERRINRTYGCYGVDSSIMRLMPDRSRFPEVKQLMESQMYRLARPFWNWRKEELNKLSSLDWNNFVLNRCTFDWNGGGCAVNKGDDFRAGASFSLGRNPKYKEEMDAKKPEEILSLKVDADPDKYIEATGYPGYSEKVEVAPGTKVNMGPVTDRNGNPVQVAATFGRDAQGNTTADVQVIPRPDLTPASAEAPHAQPLPEVSPAENPANNPDPDENPGTRPNPEPDPDLNPDANPDTDGQPGTSPDSPAVPDRPNGRHRKERKEGEDGGLSCDYFPEILACQEMGKPSDRMFHDISIPQVTDDKTWSSHNFLPSNGVCPQPKTFHVFGRQYRASYEPLCVFAEKIRFAVLLAFIIMSAFVVFGSLGGE",
+    "length": 507,
+    "molWeight": 56038,
+    "crc64": "EC03DBC617309E3A",
+    "md5": "10130987707F4D45DF25D3D19B512406"
+  },
+  "extraAttributes": {
+    "countByFeatureType": {
+      "Transmembrane": 1,
+      "Region": 1
+    },
+    "uniParcId": "UPI00004CE60D"
+  }
+}

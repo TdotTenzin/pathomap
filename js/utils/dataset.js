@@ -85,6 +85,30 @@ function asBoolean(value) {
   return ['true', 'yes', '1', 'y'].includes(text);
 }
 
+// Keep a value only when it is an array (used for domains, GO terms, etc.)
+function asArray(value) {
+  return Array.isArray(value) ? value : [];
+}
+
+// Keep a value only when it is a plain object (e.g. signal_peptide), else null
+function asObjectOrNull(value) {
+  return value && typeof value === 'object' && !Array.isArray(value) ? value : null;
+}
+
+// Shared enrichment fields added by the API build pipeline (sequence, molecular
+// features, domains, GO terms). Arrays default to [], scalars to null.
+function normalizeEnrichment(row) {
+  return {
+    sequence: nullableString(row.sequence),
+    sequence_length: asInteger(row.sequence_length),
+    molecular_weight_da: asNumber(row.molecular_weight_da),
+    isoelectric_point: asNumber(row.isoelectric_point),
+    gravy_score: asNumber(row.gravy_score),
+    domains: asArray(row.domains),
+    go_terms: asArray(row.go_terms),
+  };
+}
+
 // Infer genus from a pathogen name (first word) when the genus field is empty
 function inferGenus(name) {
   return name.split(/\s+/).filter(Boolean)[0] || '';
@@ -263,6 +287,10 @@ export function normalizeDataset(data) {
         type_class: cleanString(row.type_class),
         mechanism: cleanString(row.mechanism),
         mechanism_class: cleanString(row.mechanism_class),
+        uniprot_id: nullableString(row.uniprot_id),
+        ...normalizeEnrichment(row),
+        signal_peptide: asObjectOrNull(row.signal_peptide),
+        transmembrane_regions: asArray(row.transmembrane_regions),
       };
 
       // Keep only declared columns
@@ -294,9 +322,12 @@ export function normalizeDataset(data) {
         protein_name: cleanString(row.protein_name),
         gene_name: cleanString(row.gene_name),
         uniprot_id: cleanString(row.uniprot_id),
+        ...normalizeEnrichment(row),
         localization: cleanString(row.localization),
         function: cleanString(row.function),
         pathway: nullableString(row.pathway),
+        pathways_detailed: asArray(row.pathways_detailed),
+        interacting_partners: asArray(row.interacting_partners),
         reference_doi: nullableString(row.reference_doi),
         curation_status: CURATION_STATUS_VALUES.includes(row.curation_status)
           ? row.curation_status

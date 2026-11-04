@@ -1,0 +1,394 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "C0HKV8",
+  "uniProtkbId": "SIFA_AGRIP",
+  "entryAudit": {
+    "firstPublicDate": "2018-05-23",
+    "lastAnnotationUpdateDate": "2026-09-02",
+    "lastSequenceUpdateDate": "2018-05-23",
+    "entryVersion": 7,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 3.0,
+  "organism": {
+    "scientificName": "Agrotis ipsilon",
+    "commonName": "Black cutworm moth",
+    "taxonId": 56364,
+    "lineage": [
+      "Eukaryota",
+      "Metazoa",
+      "Ecdysozoa",
+      "Arthropoda",
+      "Altocrustacea",
+      "Allotriocarida",
+      "Hexapoda",
+      "Insecta",
+      "Pterygota",
+      "Neoptera",
+      "Eumetabola",
+      "Endopterygota",
+      "Aparaglossata",
+      "Panorpida",
+      "Lepidoptera",
+      "Glossata",
+      "Ditrysia",
+      "Noctuoidea",
+      "Noctuidae",
+      "Noctuinae",
+      "Noctuini",
+      "Agrotis"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000303",
+            "source": "PubMed",
+            "id": "29466015"
+          }
+        ],
+        "value": "Neuropeptide SIFamide"
+      },
+      "shortNames": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "29466015"
+            }
+          ],
+          "value": "SIFa"
+        }
+      ]
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "TYRKPPFNGSIF-amide"
+        }
+      }
+    ],
+    "flag": "Precursor"
+  },
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "Q6IGX9"
+            }
+          ],
+          "value": "Ligand for the neuropeptide SIFamide receptor"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000305"
+              }
+            ],
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "29466015"
+            }
+          ],
+          "value": "Expressed in antennal lobe (AL) and gnathal ganglion (GNG) with expression detected in most animals (at protein level). Not expressed in corpora cardiaca (CC) and corpora allata (CA) (at protein level)"
+        }
+      ],
+      "commentType": "TISSUE SPECIFICITY"
+    },
+    {
+      "commentType": "MASS SPECTROMETRY",
+      "method": "MALDI",
+      "molWeight": 1425.77,
+      "molWeightError": 0.0,
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "29466015"
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the FARP (FMRFamide related peptide) family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 22,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Peptide",
+      "location": {
+        "start": {
+          "value": 23,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 34,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Neuropeptide SIFamide",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "29466015"
+        }
+      ],
+      "featureId": "PRO_0000444274"
+    },
+    {
+      "type": "Propeptide",
+      "location": {
+        "start": {
+          "value": 38,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 70,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "featureId": "PRO_0000444275"
+    },
+    {
+      "type": "Modified residue",
+      "location": {
+        "start": {
+          "value": 34,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 34,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Phenylalanine amide",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "29466015"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0027",
+      "category": "PTM",
+      "name": "Amidation"
+    },
+    {
+      "id": "KW-0165",
+      "category": "PTM",
+      "name": "Cleavage on pair of basic residues"
+    },
+    {
+      "id": "KW-0903",
+      "category": "Technical term",
+      "name": "Direct protein sequencing"
+    },
+    {
+      "id": "KW-0527",
+      "category": "Molecular function",
+      "name": "Neuropeptide"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "29466015",
+        "citationType": "journal article",
+        "authors": [
+          "Diesner M.",
+          "Gallot A.",
+          "Binz H.",
+          "Gaertner C.",
+          "Vitecek S.",
+          "Kahnt J.",
+          "Schachtner J.",
+          "Jacquin-Joly E.",
+          "Gadenne C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "29466015"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1021/acs.jproteome.7b00779"
+          }
+        ],
+        "title": "Mating-induced differential peptidomics of neuropeptides and protein hormones in Agrotis ipsilon moths.",
+        "publicationDate": "2018",
+        "journal": "J. Proteome Res.",
+        "firstPage": "1397",
+        "lastPage": "1414",
+        "volume": "17"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [MRNA]",
+        "PROTEIN SEQUENCE OF 23-34",
+        "TISSUE SPECIFICITY",
+        "MASS SPECTROMETRY",
+        "IDENTIFICATION BY MASS SPECTROMETRY",
+        "AMIDATION AT PHE-34"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "AlphaFoldDB",
+      "id": "C0HKV8",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR061989",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SIFAMIDE"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF28856",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SIFAMIDE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MRFIVALCLFAIVMCIIHKAEGTYRKPPFNGSIFGKRGVVEYDTTGRALSALCEIASETCQAWYQTLENK",
+    "length": 70,
+    "molWeight": 7862,
+    "crc64": "5D4ADE9EE5225750",
+    "md5": "36C15574FA917BA826F45D9DF9FAE4CA"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "TISSUE SPECIFICITY": 1,
+      "MASS SPECTROMETRY": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Peptide": 1,
+      "Propeptide": 1,
+      "Modified residue": 1
+    },
+    "uniParcId": "UPI000D2F148F"
+  }
+}

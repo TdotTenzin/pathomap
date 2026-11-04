@@ -1,0 +1,1925 @@
+{
+  "entryType": "UniProtKB unreviewed (TrEMBL)",
+  "primaryAccession": "O68720",
+  "secondaryAccessions": [
+    "A0A0H2W052",
+    "A0A384KHT4",
+    "A0A5P8YM13",
+    "Q74YY5",
+    "Q7ARH8"
+  ],
+  "uniProtkbId": "O68720_YERPE",
+  "entryAudit": {
+    "firstPublicDate": "1998-08-01",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "1998-08-01",
+    "entryVersion": 168,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 2.0,
+  "organism": {
+    "scientificName": "Yersinia pestis",
+    "taxonId": 632,
+    "evidences": [
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "EMBL",
+        "id": "AAC62606.1"
+      }
+    ],
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Gammaproteobacteria",
+      "Enterobacterales",
+      "Yersiniaceae",
+      "Yersinia"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "ARBA",
+            "id": "ARBA00013064"
+          }
+        ],
+        "value": "protein-tyrosine-phosphatase"
+      },
+      "ecNumbers": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "ARBA",
+              "id": "ARBA00013064"
+            }
+          ],
+          "value": "3.1.3.48"
+        }
+      ]
+    }
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "AAC62606.1"
+          }
+        ],
+        "value": "yopH"
+      },
+      "synonyms": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAC69768.1"
+            }
+          ],
+          "value": "Y0013"
+        }
+      ],
+      "orderedLocusNames": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAS58536.1"
+            }
+          ],
+          "value": "YP_pCD17"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "O-phospho-L-tyrosyl-[protein] + H2O = L-tyrosyl-[protein] + phosphate",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:10684"
+          },
+          {
+            "database": "Rhea",
+            "id": "RHEA-COMP:10136"
+          },
+          {
+            "database": "Rhea",
+            "id": "RHEA-COMP:20101"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15377"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:43474"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:46858"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:61978"
+          }
+        ],
+        "ecNumber": "3.1.3.48",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "PROSITE-ProRule",
+            "id": "PRU10044"
+          }
+        ]
+      }
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "ARBA",
+                "id": "ARBA00004613"
+              }
+            ],
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 186,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 451,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Tyrosine-protein phosphatase",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000259",
+          "source": "PROSITE",
+          "id": "PS50055"
+        }
+      ]
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 366,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 451,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Tyrosine specific protein phosphatases",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000259",
+          "source": "PROSITE",
+          "id": "PS50056"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 127,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 194,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 130,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 141,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Low complexity",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 403,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 403,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Phosphocysteine intermediate",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU10044"
+        }
+      ]
+    }
+  ],
+  "geneLocations": [
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AAC62606.1"
+        },
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "Proteomes",
+          "id": "UP000001019"
+        }
+      ],
+      "value": "pCD1",
+      "geneEncodingType": "Plasmid"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "ADV16630.1"
+        }
+      ],
+      "value": "pCD1-pMT1",
+      "geneEncodingType": "Plasmid"
+    }
+  ],
+  "keywords": [
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1HUF"
+        },
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1QZ0"
+        }
+      ],
+      "id": "KW-0002",
+      "category": "Technical term",
+      "name": "3D-structure"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022801"
+        }
+      ],
+      "id": "KW-0378",
+      "category": "Molecular function",
+      "name": "Hydrolase"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AAC62606.1"
+        }
+      ],
+      "id": "KW-0614",
+      "category": "Technical term",
+      "name": "Plasmid"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022912"
+        }
+      ],
+      "id": "KW-0904",
+      "category": "Molecular function",
+      "name": "Protein phosphatase"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "Proteomes",
+          "id": "UP000001019"
+        }
+      ],
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022525"
+        }
+      ],
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00023026"
+        }
+      ],
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "9746557",
+        "citationType": "journal article",
+        "authors": [
+          "Perry R.D.",
+          "Straley S.C.",
+          "Fetherston J.D.",
+          "Rose D.J.",
+          "Gregor J.",
+          "Blattner F.R."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9746557"
+          }
+        ],
+        "title": "DNA sequencing and analysis of the low-Ca2+-response plasmid pCD1 of Yersinia pestis KIM5.",
+        "publicationDate": "1998",
+        "journal": "Infect. Immun.",
+        "firstPage": "4611",
+        "lastPage": "4623",
+        "volume": "66"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAC69768.1"
+            }
+          ],
+          "value": "KIM5",
+          "type": "STRAIN"
+        },
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAC69768.1"
+            }
+          ],
+          "value": "pCD1",
+          "type": "PLASMID"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AAC69768.1"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "9748454",
+        "citationType": "journal article",
+        "authors": [
+          "Hu P.",
+          "Elliott J.",
+          "McCready P.",
+          "Skowronski E.",
+          "Garnes J.",
+          "Kobayashi A.",
+          "Brubaker R.R.",
+          "Garcia E."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9748454"
+          }
+        ],
+        "title": "Structural organization of virulence-associated plasmids of Yersinia pestis.",
+        "publicationDate": "1998",
+        "journal": "J. Bacteriol.",
+        "firstPage": "5192",
+        "lastPage": "5202",
+        "volume": "180"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAC62606.1"
+            }
+          ],
+          "value": "KIM5",
+          "type": "STRAIN"
+        },
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAC62606.1"
+            }
+          ],
+          "value": "pCD1",
+          "type": "PLASMID"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AAC62606.1"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "11375498",
+        "citationType": "journal article",
+        "authors": [
+          "Evdokimov A.G.",
+          "Tropea J.E.",
+          "Routzahn K.M.",
+          "Copeland T.D.",
+          "Waugh D.S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11375498"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1107/s0907444901004875"
+          }
+        ],
+        "title": "Structure of the N-terminal domain of Yersinia pestis YopH at 2.0 A resolution.",
+        "publicationDate": "2001",
+        "journal": "Acta Crystallogr. D",
+        "firstPage": "793",
+        "lastPage": "799",
+        "volume": "57"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY (2.00 ANGSTROMS) OF 1-130"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1HUF"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "14609321",
+        "citationType": "journal article",
+        "authors": [
+          "Phan J.",
+          "Lee K.",
+          "Cherry S.",
+          "Tropea J.E.",
+          "Burke T.R.",
+          "Waugh D.S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "14609321"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1021/bi030156m"
+          }
+        ],
+        "title": "High-resolution structure of the Yersinia pestis protein tyrosine phosphatase YopH in complex with a phosphotyrosyl mimetic-containing hexapeptide.",
+        "publicationDate": "2003",
+        "journal": "Biochemistry",
+        "firstPage": "13113",
+        "lastPage": "13121",
+        "volume": "42"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY (1.50 ANGSTROMS) OF 164-468"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1QZ0"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "15368893",
+        "citationType": "journal article",
+        "authors": [
+          "Song Y.",
+          "Tong Z.",
+          "Wang J.",
+          "Wang L.",
+          "Guo Z.",
+          "Han Y.",
+          "Zhang J.",
+          "Pei D.",
+          "Zhou D.",
+          "Qin H.",
+          "Pang X.",
+          "Han Y.",
+          "Zhai J.",
+          "Li M.",
+          "Cui B.",
+          "Qi Z.",
+          "Jin L.",
+          "Dai R.",
+          "Chen F.",
+          "Li S.",
+          "Ye C.",
+          "Du Z.",
+          "Lin W.",
+          "Wang J.",
+          "Yu J.",
+          "Yang H.",
+          "Wang J.",
+          "Huang P.",
+          "Yang R."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15368893"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1093/dnares/11.3.179"
+          }
+        ],
+        "title": "Complete genome sequence of Yersinia pestis strain 91001, an isolate avirulent to humans.",
+        "publicationDate": "2004",
+        "journal": "DNA Res.",
+        "firstPage": "179",
+        "lastPage": "197",
+        "volume": "11"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAS58536.1"
+            }
+          ],
+          "value": "91001",
+          "type": "STRAIN"
+        },
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "Proteomes",
+              "id": "UP000001019"
+            }
+          ],
+          "value": "91001 / Biovar Mediaevalis",
+          "type": "STRAIN"
+        },
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "Proteomes",
+              "id": "UP000001019"
+            }
+          ],
+          "value": "pCD1",
+          "type": "PLASMID"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AAS58536.1"
+        },
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "Proteomes",
+          "id": "UP000001019"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "15262951",
+        "citationType": "journal article",
+        "authors": [
+          "Zhou D.",
+          "Tong Z.",
+          "Song Y.",
+          "Han Y.",
+          "Pei D.",
+          "Pang X.",
+          "Zhai J.",
+          "Li M.",
+          "Cui B.",
+          "Qi Z.",
+          "Jin L.",
+          "Dai R.",
+          "Du Z.",
+          "Wang J.",
+          "Guo Z.",
+          "Wang J.",
+          "Huang P.",
+          "Yang R."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15262951"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/JB.186.15.5147-5152.2004"
+          }
+        ],
+        "title": "Genetics of metabolic variations between Yersinia pestis biovars and the proposal of a new biovar, microtus.",
+        "publicationDate": "2004",
+        "journal": "J. Bacteriol.",
+        "firstPage": "5147",
+        "lastPage": "5152",
+        "volume": "186"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAS58536.1"
+            }
+          ],
+          "value": "91001",
+          "type": "STRAIN"
+        },
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "Proteomes",
+              "id": "UP000001019"
+            }
+          ],
+          "value": "91001 / Biovar Mediaevalis",
+          "type": "STRAIN"
+        },
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "Proteomes",
+              "id": "UP000001019"
+            }
+          ],
+          "value": "pCD1",
+          "type": "PLASMID"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AAS58536.1"
+        },
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "Proteomes",
+          "id": "UP000001019"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 7,
+      "citation": {
+        "id": "21197443",
+        "citationType": "journal article",
+        "authors": [
+          "Rajanna C.",
+          "Revazishvili T.",
+          "Rashid M.H.",
+          "Chubinidze S.",
+          "Bakanidze L.",
+          "Tsanava S.",
+          "Imnadze P.",
+          "Bishop-Lilly K.A.",
+          "Sozhamannan S.",
+          "Gibbons H.S.",
+          "Morris J.G.",
+          "Sulakvelidze A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "21197443"
+          }
+        ],
+        "title": "Characterization of pPCP1 plasmids in Yersinia pestis strains isolated from the former Soviet Union.",
+        "publicationDate": "2010",
+        "journal": "Int. J. Microbiol.",
+        "firstPage": "760819",
+        "lastPage": "760819",
+        "volume": "2010"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "ADV16630.1"
+            }
+          ],
+          "value": "C790",
+          "type": "STRAIN"
+        },
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "ADV16630.1"
+            }
+          ],
+          "value": "pCD1-pMT1",
+          "type": "PLASMID"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "ADV16630.1"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 8,
+      "citation": {
+        "id": "21697602",
+        "citationType": "journal article",
+        "authors": [
+          "Kim S.E.",
+          "Bahta M.",
+          "Lountos G.T.",
+          "Ulrich R.G.",
+          "Burke T.R.",
+          "Waugh D.S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "21697602"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1107/s0907444911018610"
+          }
+        ],
+        "title": "Isothiazolidinone (IZD) as a phosphoryl mimetic in inhibitors of the Yersinia pestis protein tyrosine phosphatase YopH.",
+        "publicationDate": "2011",
+        "journal": "Acta Crystallogr. D",
+        "firstPage": "639",
+        "lastPage": "645",
+        "volume": "67"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY (1.79 ANGSTROMS) OF 164-468"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2YDU"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 9,
+      "citation": {
+        "id": "21443195",
+        "citationType": "journal article",
+        "authors": [
+          "Bahta M.",
+          "Lountos G.T.",
+          "Dyas B.",
+          "Kim S.E.",
+          "Ulrich R.G.",
+          "Waugh D.S.",
+          "Burke T.R."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "21443195"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1021/jm200022g"
+          }
+        ],
+        "title": "Utilization of nitrophenylphosphates and oxime-based ligation for the development of nanomolar affinity inhibitors of the Yersinia pestis outer protein H (YopH) phosphatase.",
+        "publicationDate": "2011",
+        "journal": "J. Med. Chem.",
+        "firstPage": "2933",
+        "lastPage": "2943",
+        "volume": "54"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY (1.78 ANGSTROMS) OF 164-468"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2Y2F"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 10,
+      "citation": {
+        "id": "30110154",
+        "citationType": "journal article",
+        "authors": [
+          "Moise G.",
+          "Morales Y.",
+          "Beaumont V.",
+          "Caradonna T.",
+          "Loria J.P.",
+          "Johnson S.J.",
+          "Hengge A.C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "30110154"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1021/acs.biochem.8b00663"
+          }
+        ],
+        "title": "A YopH PTP1B Chimera Shows the Importance of the WPD-Loop Sequence to the Activity, Structure, and Dynamics of Protein Tyrosine Phosphatases.",
+        "publicationDate": "2018",
+        "journal": "Biochemistry",
+        "firstPage": "5315",
+        "lastPage": "5326",
+        "volume": "57"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY (1.85 ANGSTROMS) OF 164-468"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6DR1"
+        },
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6DR7"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 11,
+      "citation": {
+        "id": "34308419",
+        "citationType": "journal article",
+        "authors": [
+          "Shen R.",
+          "Crean R.M.",
+          "Johnson S.J.",
+          "Kamerlin S.C.L.",
+          "Hengge A.C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "34308419"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1021/jacsau.1c00054"
+          }
+        ],
+        "title": "Single Residue on the WPD-Loop Affects the pH Dependency of Catalysis in Protein Tyrosine Phosphatases.",
+        "publicationDate": "2021",
+        "journal": "JACS Au",
+        "firstPage": "646",
+        "lastPage": "659",
+        "volume": "1"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY (2.00 ANGSTROMS) OF 164-468"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7L0I"
+        },
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7L0M"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AF053946",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAC62606.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF074612",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAC69768.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AE017043",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAS58536.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "HQ612242",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ADV16630.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "T43622",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "T43622"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_002213278.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_004836.1"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "1HUF",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.00 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=1-130"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "1QZ0",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.50 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B=164-468"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2Y2F",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.78 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=164-468"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2YDU",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.79 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=164-468"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6DR1",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.50 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=164-468"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6DR7",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.85 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=164-468"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6DR9",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.95 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=164-468"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6DRB",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.75 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=164-468"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6DT6",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.10 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=164-468"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "7L0I",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.02 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=164-468"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "7L0M",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.00 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=164-468"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "O68720",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "MDposit",
+      "id": "O68720",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "MDRepo",
+      "id": "O68720",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "O68720",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BindingDB",
+      "id": "O68720",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "ChEMBL",
+      "id": "CHEMBL3646",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "DNASU",
+      "id": "1149274",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "310221752",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "ype:YPCD1.67c",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "ypj:CH55_4361",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "ypl:CH46_4374",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "ypv:BZ15_4329",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "ypw:CH59_4415",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|1028802.3.peg.274",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "COG5599",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Bacteria"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_583872_0_0_6",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "ACQYPLE",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OrthoDB",
+      "id": "6199520at2",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000001019",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Plasmid pCD1"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0004725",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:protein tyrosine phosphatase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-EC"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0141029",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:symbiont-mediated disruption of host focal adhesion"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:SigSci"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12819047"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0141083",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:symbiont-mediated suppression of host reactive oxygen species generation"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:SigSci"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12360191"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "24034616"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd14559",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PTP_YopH-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.90.190.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Protein tyrosine phosphatase superfamily"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.30.1570.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Protein-tyrosine phosphatase, YopH, N-terminal domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR029021",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Prot-tyrosine_phosphatase-like"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR050348",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Protein-Tyr_Phosphatase"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR015103",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ProtTyrPase_YopH_N"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036484",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ProtTyrPase_YopH_N_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR000242",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PTP_cat"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR016130",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Tyr_Pase_AS"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR003595",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Tyr_Pase_cat"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR000387",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Tyr_Pase_dom"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR003546",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Tyr_Pase_SptP/YopH"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR19134",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "RECEPTOR-TYPE TYROSINE-PROTEIN PHOSPHATASE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR19134:SF449",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TYROSINE-PROTEIN PHOSPHATASE 1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00102",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Y_phosphatase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF09013",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "YopH_N"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR01371",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "BACYPHPHTASE"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR00700",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PRTYPHPHTASE"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00194",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PTPc"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00404",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PTPc_motif"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF52799",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "(Phosphotyrosine protein) phosphatases II"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF64449",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "YopH tyrosine phosphatase N-terminal domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS00383",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TYR_PHOSPHATASE_1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS50056",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TYR_PHOSPHATASE_2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS50055",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TYR_PHOSPHATASE_PTP"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MNLSLSDLHRQVSRLVQQESGDCTGKLRGNVAANKETTFQGLTIASGARESEKVFAQTVLSHVANVVLTQEDTAKLLQSTVKHNLNNYDLRSVGNGNSVLVSLRSDQMTLQDAKVLLEAALRQESGARGHVSSHSHSALHAPGTPVREGLRSHLDPRTPPLPPRERPHTSGHHGAGEARATAPSTVSPYGPEARAELSSRLTTLRNTLAPATNDPRYLQACGGEKLNRFRDIQCCRQTAVRADLNANYIQVGNTRTIACQYPLQSQLESHFRMLAENRTPVLAVLASSSEIANQRFGMPDYFRQSGTYGSITVESKMTQQVGLGDGIMADMYTLTIREAGQKTISVPVVHVGNWPDQTAVSSEVTKALASLVDQTAETKRNMYESKGSSAVGDDSKLRPVIHCRAGVGRTAQLIGAMCMNDSRNSQLSVEDMVSQMRVQRNGIMVQKDEQLDVLIKLAEGQGRPLLNS",
+    "length": 468,
+    "molWeight": 50869,
+    "crc64": "9EA639C08197EA81",
+    "md5": "904DAC5EA388F73E7BC12E5A9EEA8C38"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "CATALYTIC ACTIVITY": 1,
+      "SUBCELLULAR LOCATION": 1
+    },
+    "countByFeatureType": {
+      "Domain": 2,
+      "Region": 1,
+      "Compositional bias": 1,
+      "Active site": 1
+    },
+    "uniParcId": "UPI00000D1266"
+  }
+}

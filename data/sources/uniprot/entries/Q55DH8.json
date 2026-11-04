@@ -1,0 +1,1417 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "Q55DH8",
+  "secondaryAccessions": [
+    "Q6TWC1",
+    "Q9U6L8"
+  ],
+  "uniProtkbId": "CATB_DICDI",
+  "entryAudit": {
+    "firstPublicDate": "2008-04-08",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2005-05-24",
+    "entryVersion": 125,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 4.0,
+  "organism": {
+    "scientificName": "Dictyostelium discoideum",
+    "commonName": "Social amoeba",
+    "taxonId": 44689,
+    "lineage": [
+      "Eukaryota",
+      "Amoebozoa",
+      "Evosea",
+      "Eumycetozoa",
+      "Dictyostelia",
+      "Dictyosteliales",
+      "Dictyosteliaceae",
+      "Dictyostelium"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Catalase-B"
+      },
+      "ecNumbers": [
+        {
+          "value": "1.11.1.6"
+        }
+      ]
+    }
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "catB"
+      },
+      "orfNames": [
+        {
+          "value": "DDB_G0269108"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "12788229"
+            }
+          ],
+          "value": "Occurs in almost all aerobically respiring organisms and serves to protect cells from the toxic effects of hydrogen peroxide. Its accumulation in prespore cells affords the spores protection from oxidation during prolonged dormancy. Required for normal developmental timing, possibly through a regulatory role in differentiation and morphogenesis"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "2 H2O2 = O2 + 2 H2O",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:20309"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15377"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15379"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:16240"
+          }
+        ],
+        "ecNumber": "1.11.1.6",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000255",
+            "source": "PROSITE-ProRule",
+            "id": "PRU10013"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "11004503"
+          }
+        ]
+      }
+    },
+    {
+      "commentType": "COFACTOR",
+      "cofactors": [
+        {
+          "name": "heme",
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250"
+            }
+          ],
+          "cofactorCrossReference": {
+            "database": "ChEBI",
+            "id": "CHEBI:30413"
+          }
+        }
+      ]
+    },
+    {
+      "commentType": "BIOPHYSICOCHEMICAL PROPERTIES",
+      "temperatureDependence": {
+        "texts": [
+          {
+            "value": "Thermostable. Still active after heating at 65 degrees Celsius for 15 minures."
+          }
+        ]
+      }
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "11004503"
+              }
+            ],
+            "value": "Cytoplasm",
+            "id": "SL-0086"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11004503"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11553701"
+            }
+          ],
+          "value": "Expressed initially during formation of apical tips in aggregates, accumulates rapidly during terminal cell differentiation, and peaks at about 21 hours. Expressed only in prespore cells"
+        }
+      ],
+      "commentType": "DEVELOPMENTAL STAGE"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "15075287"
+            }
+          ],
+          "value": "By srfA, in response to late development signals"
+        }
+      ],
+      "commentType": "INDUCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the catalase family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    },
+    {
+      "commentType": "SEQUENCE CAUTION",
+      "sequenceCautionType": "Erroneous initiation",
+      "sequence": "AAQ94087.1",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 692,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Catalase-B",
+      "featureId": "PRO_0000328239"
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 69,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 69,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU10013"
+        }
+      ]
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 142,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 142,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU10013"
+        }
+      ]
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 356,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 356,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "axial binding residue",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:30413"
+        },
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:18248"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250"
+        }
+      ],
+      "ligand": {
+        "name": "heme",
+        "id": "ChEBI:CHEBI:30413"
+      },
+      "ligandPart": {
+        "name": "Fe",
+        "id": "ChEBI:CHEBI:18248"
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0963",
+      "category": "Cellular component",
+      "name": "Cytoplasm"
+    },
+    {
+      "id": "KW-0349",
+      "category": "Ligand",
+      "name": "Heme"
+    },
+    {
+      "id": "KW-0376",
+      "category": "Biological process",
+      "name": "Hydrogen peroxide"
+    },
+    {
+      "id": "KW-0408",
+      "category": "Ligand",
+      "name": "Iron"
+    },
+    {
+      "id": "KW-0479",
+      "category": "Ligand",
+      "name": "Metal-binding"
+    },
+    {
+      "id": "KW-0560",
+      "category": "Molecular function",
+      "name": "Oxidoreductase"
+    },
+    {
+      "id": "KW-0575",
+      "category": "Molecular function",
+      "name": "Peroxidase"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "15075287",
+        "citationType": "journal article",
+        "authors": [
+          "Escalante R.",
+          "Iranfar N.",
+          "Sastre L.",
+          "Loomis W.F."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15075287"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/ec.3.2.564-566.2004"
+          }
+        ],
+        "title": "Identification of genes dependent on the MADS box transcription factor SrfA in Dictyostelium discoideum development.",
+        "publicationDate": "2004",
+        "journal": "Eukaryot. Cell",
+        "firstPage": "564",
+        "lastPage": "566",
+        "volume": "3"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]",
+        "INDUCTION BY SRFA"
+      ],
+      "referenceComments": [
+        {
+          "value": "AX4",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "15875012",
+        "citationType": "journal article",
+        "authors": [
+          "Eichinger L.",
+          "Pachebat J.A.",
+          "Gloeckner G.",
+          "Rajandream M.A.",
+          "Sucgang R.",
+          "Berriman M.",
+          "Song J.",
+          "Olsen R.",
+          "Szafranski K.",
+          "Xu Q.",
+          "Tunggal B.",
+          "Kummerfeld S.",
+          "Madera M.",
+          "Konfortov B.A.",
+          "Rivero F.",
+          "Bankier A.T.",
+          "Lehmann R.",
+          "Hamlin N.",
+          "Davies R.",
+          "Gaudet P.",
+          "Fey P.",
+          "Pilcher K.",
+          "Chen G.",
+          "Saunders D.",
+          "Sodergren E.J.",
+          "Davis P.",
+          "Kerhornou A.",
+          "Nie X.",
+          "Hall N.",
+          "Anjard C.",
+          "Hemphill L.",
+          "Bason N.",
+          "Farbrother P.",
+          "Desany B.",
+          "Just E.",
+          "Morio T.",
+          "Rost R.",
+          "Churcher C.M.",
+          "Cooper J.",
+          "Haydock S.",
+          "van Driessche N.",
+          "Cronin A.",
+          "Goodhead I.",
+          "Muzny D.M.",
+          "Mourier T.",
+          "Pain A.",
+          "Lu M.",
+          "Harper D.",
+          "Lindsay R.",
+          "Hauser H.",
+          "James K.D.",
+          "Quiles M.",
+          "Madan Babu M.",
+          "Saito T.",
+          "Buchrieser C.",
+          "Wardroper A.",
+          "Felder M.",
+          "Thangavelu M.",
+          "Johnson D.",
+          "Knights A.",
+          "Loulseged H.",
+          "Mungall K.L.",
+          "Oliver K.",
+          "Price C.",
+          "Quail M.A.",
+          "Urushihara H.",
+          "Hernandez J.",
+          "Rabbinowitsch E.",
+          "Steffen D.",
+          "Sanders M.",
+          "Ma J.",
+          "Kohara Y.",
+          "Sharp S.",
+          "Simmonds M.N.",
+          "Spiegler S.",
+          "Tivey A.",
+          "Sugano S.",
+          "White B.",
+          "Walker D.",
+          "Woodward J.R.",
+          "Winckler T.",
+          "Tanaka Y.",
+          "Shaulsky G.",
+          "Schleicher M.",
+          "Weinstock G.M.",
+          "Rosenthal A.",
+          "Cox E.C.",
+          "Chisholm R.L.",
+          "Gibbs R.A.",
+          "Loomis W.F.",
+          "Platzer M.",
+          "Kay R.R.",
+          "Williams J.G.",
+          "Dear P.H.",
+          "Noegel A.A.",
+          "Barrell B.G.",
+          "Kuspa A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15875012"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/nature03481"
+          }
+        ],
+        "title": "The genome of the social amoeba Dictyostelium discoideum.",
+        "publicationDate": "2005",
+        "journal": "Nature",
+        "firstPage": "43",
+        "lastPage": "57",
+        "volume": "435"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "AX4",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "11004503",
+        "citationType": "journal article",
+        "authors": [
+          "Garcia M.X.U.",
+          "Foote C.",
+          "van Es S.",
+          "Devreotes P.N.",
+          "Alexander S.",
+          "Alexander H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11004503"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/s0167-4781(00)00063-4"
+          }
+        ],
+        "title": "Differential developmental expression and cell type specificity of Dictyostelium catalases and their response to oxidative stress and UV-light.",
+        "publicationDate": "2000",
+        "journal": "Biochim. Biophys. Acta",
+        "firstPage": "295",
+        "lastPage": "310",
+        "volume": "1492"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [MRNA] OF 166-692",
+        "CATALYTIC ACTIVITY",
+        "SUBCELLULAR LOCATION",
+        "DEVELOPMENTAL STAGE"
+      ],
+      "referenceComments": [
+        {
+          "value": "AX3-1",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "11553701",
+        "citationType": "journal article",
+        "authors": [
+          "Iranfar N.",
+          "Fuller D.",
+          "Sasik R.",
+          "Hwa T.",
+          "Laub M.",
+          "Loomis W.F."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11553701"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1091/mbc.12.9.2590"
+          }
+        ],
+        "title": "Expression patterns of cell-type-specific genes in Dictyostelium.",
+        "publicationDate": "2001",
+        "journal": "Mol. Biol. Cell",
+        "firstPage": "2590",
+        "lastPage": "2600",
+        "volume": "12"
+      },
+      "referencePositions": [
+        "DEVELOPMENTAL STAGE"
+      ],
+      "referenceComments": [
+        {
+          "value": "NC-4",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "12788229",
+        "citationType": "journal article",
+        "authors": [
+          "Garcia M.X.U.",
+          "Alexander H.",
+          "Mahadeo D.",
+          "Cotter D.A.",
+          "Alexander S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "12788229"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/s0167-4889(03)00064-8"
+          }
+        ],
+        "title": "The Dictyostelium discoideum prespore-specific catalase B functions to control late development and to protect spore viability.",
+        "publicationDate": "2003",
+        "journal": "Biochim. Biophys. Acta",
+        "firstPage": "55",
+        "lastPage": "64",
+        "volume": "1641"
+      },
+      "referencePositions": [
+        "FUNCTION"
+      ],
+      "referenceComments": [
+        {
+          "value": "AX4",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AY386221",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAQ94087.1"
+        },
+        {
+          "key": "Status",
+          "value": "ALT_INIT"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AAFI02000005",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "EAL71903.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF183177",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAD55449.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "XP_646153.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "XM_641061.1"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q55DH8",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "Q55DH8",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "FunCoup",
+      "id": "Q55DH8",
+      "properties": [
+        {
+          "key": "Number of interactors",
+          "value": "276"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "44689.Q55DH8",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PeroxiBase",
+      "id": "4098",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "DdKat02"
+        }
+      ]
+    },
+    {
+      "database": "PaxDb",
+      "id": "44689-Q55DH8",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "8617104",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "ddi:DDB_G0269108",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "dictyBase",
+      "id": "DDB_G0269108",
+      "properties": [
+        {
+          "key": "GeneName",
+          "value": "catB"
+        }
+      ]
+    },
+    {
+      "database": "VEuPathDB",
+      "id": "AmoebaDB:DDB_G0269108",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "KOG0047",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Eukaryota"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_010645_3_0_1",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "InParanoid",
+      "id": "Q55DH8",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AADHHYE",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PhylomeDB",
+      "id": "Q55DH8",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PRO",
+      "id": "PR:Q55DH8",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000002195",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome 1"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005829",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cytosol"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:dictyBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "11004503"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0004096",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:catalase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:dictyBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "11004503"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0020037",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:heme binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0042744",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:hydrogen peroxide catabolic process"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:dictyBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "11004503"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0006979",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:response to oxidative stress"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0000302",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:response to reactive oxygen species"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:dictyBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "12788229"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0030587",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:sorocarp development"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:dictyBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "12788229"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd08155",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "catalase_clade_2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd03132",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "GATase1_catalase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "2.40.180.10:FF:000003",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "3.40.50.880:FF:000110",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.20.1370.20",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.40.50.880",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.40.180.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase core domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR018028",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR024708",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase_AS"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR024712",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase_clade2"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR043156",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase_clade2_helical"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR011614",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase_core"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR002226",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase_haem_BS"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR010582",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase_immune_responsive"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR041399",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase_large_C"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR020835",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR029062",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Class_I_gatase-like"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR42821",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CATALASE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR42821:SF1",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CATALASE-B"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00199",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF06628",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase-rel"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF18011",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase_C"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PIRSF",
+      "id": "PIRSF038927",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase_clade2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR00067",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CATALASE"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM01060",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF52317",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Class I glutamine amidotransferase-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF56634",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Heme-dependent catalase-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS00437",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CATALASE_1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS00438",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CATALASE_2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51402",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CATALASE_3"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MNKKLEQLEKFKTNDKNPVYSTTNTGVSLSDDANSLKAGPRGPTLLEDFVLREKITHFDHERIPERIVHARGTGAHGYFLSYKDHSKLTKADFLSKQDKKTPVFIRISTVQGPRGSADTVRDVHGFAVKFYTDEGNYDLVGNNMPVFFIQDASSFPDFVHAVKMEPQNEMPTGGSAHDTFYDFCGLKPESAHSVLWVMSDRGIPISLRHQQGFGVHSYRFINQEGKSTFVKLHWKPLSGTCSLLWDEAQKIAGKDCDYHRRRFWEDIESGDFPQWELGAQLLDEDLQKKFDFDILDPTKLIPEELTPVIPLGRMVIDRNPDNFFAETEQVAFCVSHVVPGIDFSNDPLLQGRIFSYLDTQLSRLGGPNFNEIPINRPVCPFANNQRDGIHRMTINKGGASYFPNSIDKGYPLLKEPSANKGGFRPYPENISGTKSYDRSETFEDHFSQATMFWNSMSQHEKNHIIAAYTFEISKCSRPEVRTRYVNNILVNIDSVLAEKVAKNLGVKIEPTSTKPIKKIMVKPSPALSQPNLLSGDIVSRRISVIIEKGVDYDDVINFKDDMEKRGAMVMLVSSTLAQVECSGGEMLSPKGTIIGNPSIFFDAVYVPKSTEEATKILSDDGNFLHYILEAFKHLKTIAFGGSVSVIKELLRLPQDHGLLLGNGYKDITEQFFYSLAHHRVWERESKVSKIPA",
+    "length": 692,
+    "molWeight": 78033,
+    "crc64": "C3522F583364686A",
+    "md5": "910A400BA0B812E2D271F76CF32C0B68"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "CATALYTIC ACTIVITY": 1,
+      "COFACTOR": 1,
+      "BIOPHYSICOCHEMICAL PROPERTIES": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "DEVELOPMENTAL STAGE": 1,
+      "INDUCTION": 1,
+      "SIMILARITY": 1,
+      "SEQUENCE CAUTION": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Active site": 2,
+      "Binding site": 1
+    },
+    "uniParcId": "UPI00004E4046"
+  }
+}

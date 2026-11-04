@@ -1,0 +1,526 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "O06949",
+  "uniProtkbId": "SOPE_SALDU",
+  "entryAudit": {
+    "firstPublicDate": "2005-04-12",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2007-01-23",
+    "entryVersion": 80,
+    "sequenceVersion": 3
+  },
+  "annotationScore": 3.0,
+  "organism": {
+    "scientificName": "Salmonella dublin",
+    "taxonId": 98360,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Gammaproteobacteria",
+      "Enterobacterales",
+      "Enterobacteriaceae",
+      "Salmonella"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Guanine nucleotide exchange factor SopE"
+      }
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "Effector protein SopE"
+        }
+      },
+      {
+        "fullName": {
+          "value": "Toxin SopE"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "sopE"
+      }
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250"
+            }
+          ],
+          "value": "Acts in concert with other proteins to mediate cellular responses leading to bacterial internalization. Activator for both CDC42 and RAC1 by directly engaging these Rho GTPases and acting as potent guanine nucleotide exchange factor (GEF). This activation results in actin cytoskeleton rearrangements and stimulates membrane ruffling, promoting bacterial entry into non-phagocytic cells (By similarity)"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "note": {
+        "texts": [
+          {
+            "value": "Secreted via the type III secretion system 1 (SPI-1 T3SS)"
+          }
+        ]
+      },
+      "subcellularLocations": [
+        {
+          "location": {
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "value": "Encoded within a lambda-like prophage region with similarity to GIFSY phages"
+        }
+      ],
+      "commentType": "MISCELLANEOUS"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the GEF (guanine exchange factor) SopE family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Initiator methionine",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Removed",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "8930917"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 2,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 240,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Guanine nucleotide exchange factor SopE",
+      "featureId": "PRO_0000220732"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 78,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 240,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "GEF catalytic domain",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0903",
+      "category": "Technical term",
+      "name": "Direct protein sequencing"
+    },
+    {
+      "id": "KW-0343",
+      "category": "Molecular function",
+      "name": "GTPase activation"
+    },
+    {
+      "id": "KW-0344",
+      "category": "Molecular function",
+      "name": "Guanine-nucleotide releasing factor"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "8930917",
+        "citationType": "journal article",
+        "authors": [
+          "Wood M.W.",
+          "Rosqvist R.",
+          "Mullan P.B.",
+          "Edwards M.H.",
+          "Galyov E.E."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8930917"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1046/j.1365-2958.1996.00116.x"
+          }
+        ],
+        "title": "SopE, a secreted protein of Salmonella dublin, is translocated into the target eukaryotic cell via a sip-dependent mechanism and promotes bacterial entry.",
+        "publicationDate": "1996",
+        "journal": "Mol. Microbiol.",
+        "firstPage": "327",
+        "lastPage": "338",
+        "volume": "22"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]",
+        "PROTEIN SEQUENCE OF 2-16; 40-44 AND 184-194"
+      ],
+      "referenceComments": [
+        {
+          "value": "2229",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "11545581",
+        "citationType": "journal article",
+        "authors": [
+          "Mirold S.",
+          "Rabsch W.",
+          "Tschaepe H.",
+          "Hardt W.-D."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11545581"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1006/jmbi.2001.4950"
+          }
+        ],
+        "title": "Transfer of the Salmonella type III effector sopE between unrelated phage families.",
+        "publicationDate": "2001",
+        "journal": "J. Mol. Biol.",
+        "firstPage": "7",
+        "lastPage": "16",
+        "volume": "312"
+      },
+      "referencePositions": [
+        "PROPHAGE-RELATED REGION"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "L78932",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAB51429.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "O06949",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "O06949",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "CAMPTPQ",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005085",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:guanyl-nucleotide exchange factor activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0030036",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:actin cytoskeleton organization"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.10.4120.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SopE-like, GEF domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR005414",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SopE"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR035949",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SopE-like_GEF_dom_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR016019",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SopE_GEF_dom"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR016018",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SopE_N_dom"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF011809",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "sopE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF011810",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "sopE2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF05364",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SecIII_SopE_N"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF07487",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SopE_GEF"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PIRSF",
+      "id": "PIRSF034781",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SecIII_sopE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR01593",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SOPEPROTEIN"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF81832",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SopE-like GEF domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MTKITLFPHNFRIQKQEATPLKEKSTEKNSLAKSILAVKNHFIKLNSKLSERFISHKNTESSATHFHRGSASEGRAVLTNKVVKNFMLQTLHDIDIRGSASKDPAYASQTREAILSAVYSKYKDQYCNLLISKGIDIAPFLKEIGEAAQNAGLPGATKNDVFSPSGAGANPFITPLITSAYSKYPHMFTSQHQKASFNIYAEKIIMTEVVPLFNECAMPTPQQFQQILENIANKYIQNTP",
+    "length": 240,
+    "molWeight": 26738,
+    "crc64": "CD951FCAA87930E3",
+    "md5": "DD43FD54F6DD3650B78133679CC3EFC7"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "MISCELLANEOUS": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Initiator methionine": 1,
+      "Chain": 1,
+      "Region": 1
+    },
+    "uniParcId": "UPI00000B409A"
+  }
+}

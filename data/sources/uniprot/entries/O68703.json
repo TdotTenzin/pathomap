@@ -1,0 +1,1104 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "O68703",
+  "uniProtkbId": "YOPT_YERPE",
+  "entryAudit": {
+    "firstPublicDate": "2003-08-29",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "1998-08-01",
+    "entryVersion": 140,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 4.0,
+  "organism": {
+    "scientificName": "Yersinia pestis",
+    "taxonId": 632,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Gammaproteobacteria",
+      "Enterobacterales",
+      "Yersiniaceae",
+      "Yersinia"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Cysteine protease YopT"
+      },
+      "ecNumbers": [
+        {
+          "value": "3.4.22.-"
+        }
+      ]
+    }
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "yopT"
+      },
+      "orderedLocusNames": [
+        {
+          "value": "YPCD1.20"
+        },
+        {
+          "value": "y5059"
+        },
+        {
+          "value": "y0065"
+        },
+        {
+          "value": "YP_pCD67"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "12062101"
+            }
+          ],
+          "value": "Cysteine protease, which is translocated into infected cells and plays a central role in pathogenesis by cleaving the C-terminus end of the human small GTPase RhoA/ARHA, a regulator of cytoskeleton. Once cleaved, ARHA loses its lipid modification, and is released from the cell membrane, leading to the subsequent disruption of actin cytoskeleton of the host cell"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "12062101"
+            }
+          ],
+          "value": "Interacts with human ARHA"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "note": {
+        "texts": [
+          {
+            "value": "In infected cells, it is cytoplasmic. Translocated into the host cell by the type III secretion apparatus with the help of the SycT chaperone"
+          }
+        ]
+      },
+      "subcellularLocations": [
+        {
+          "location": {
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the peptidase C58 family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 322,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Cysteine protease YopT",
+      "featureId": "PRO_0000192513"
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 139,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 139,
+          "modifier": "EXACT"
+        }
+      },
+      "description": ""
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 258,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 258,
+          "modifier": "EXACT"
+        }
+      },
+      "description": ""
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 274,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 274,
+          "modifier": "EXACT"
+        }
+      },
+      "description": ""
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 139,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 139,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Loss of function; abolishes the cleavage of ARHA.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12062101"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "C",
+        "alternativeSequences": [
+          "S"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 146,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 146,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Abolishes cytotoxicity.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12062101"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "W",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 165,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 165,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "No effect.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12062101"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "R",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 258,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 258,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Loss of function; abolishes the cleavage of ARHA.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12062101"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "H",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 274,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 274,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Loss of function; abolishes the cleavage of ARHA.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12062101"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "D",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 279,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 279,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "No effect.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12062101"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "E",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 300,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 300,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "No effect.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12062101"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "S",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    }
+  ],
+  "geneLocations": [
+    {
+      "value": "pCD1",
+      "geneEncodingType": "Plasmid"
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0378",
+      "category": "Molecular function",
+      "name": "Hydrolase"
+    },
+    {
+      "id": "KW-0614",
+      "category": "Technical term",
+      "name": "Plasmid"
+    },
+    {
+      "id": "KW-0645",
+      "category": "Molecular function",
+      "name": "Protease"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0788",
+      "category": "Molecular function",
+      "name": "Thiol protease"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "9746557",
+        "citationType": "journal article",
+        "authors": [
+          "Perry R.D.",
+          "Straley S.C.",
+          "Fetherston J.D.",
+          "Rose D.J.",
+          "Gregor J.",
+          "Blattner F.R."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9746557"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.66.10.4611-4623.1998"
+          }
+        ],
+        "title": "DNA sequencing and analysis of the low-Ca2+-response plasmid pCD1 of Yersinia pestis KIM5.",
+        "publicationDate": "1998",
+        "journal": "Infect. Immun.",
+        "firstPage": "4611",
+        "lastPage": "4623",
+        "volume": "66"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "KIM5 / Biovar Mediaevalis",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "9748454",
+        "citationType": "journal article",
+        "authors": [
+          "Hu P.",
+          "Elliott J.",
+          "McCready P.",
+          "Skowronski E.",
+          "Garnes J.",
+          "Kobayashi A.",
+          "Brubaker R.R.",
+          "Garcia E."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9748454"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.180.19.5192-5202.1998"
+          }
+        ],
+        "title": "Structural organization of virulence-associated plasmids of Yersinia pestis.",
+        "publicationDate": "1998",
+        "journal": "J. Bacteriol.",
+        "firstPage": "5192",
+        "lastPage": "5202",
+        "volume": "180"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "KIM5 / Biovar Mediaevalis",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "11586360",
+        "citationType": "journal article",
+        "authors": [
+          "Parkhill J.",
+          "Wren B.W.",
+          "Thomson N.R.",
+          "Titball R.W.",
+          "Holden M.T.G.",
+          "Prentice M.B.",
+          "Sebaihia M.",
+          "James K.D.",
+          "Churcher C.M.",
+          "Mungall K.L.",
+          "Baker S.",
+          "Basham D.",
+          "Bentley S.D.",
+          "Brooks K.",
+          "Cerdeno-Tarraga A.-M.",
+          "Chillingworth T.",
+          "Cronin A.",
+          "Davies R.M.",
+          "Davis P.",
+          "Dougan G.",
+          "Feltwell T.",
+          "Hamlin N.",
+          "Holroyd S.",
+          "Jagels K.",
+          "Karlyshev A.V.",
+          "Leather S.",
+          "Moule S.",
+          "Oyston P.C.F.",
+          "Quail M.A.",
+          "Rutherford K.M.",
+          "Simmonds M.",
+          "Skelton J.",
+          "Stevens K.",
+          "Whitehead S.",
+          "Barrell B.G."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11586360"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/35097083"
+          }
+        ],
+        "title": "Genome sequence of Yersinia pestis, the causative agent of plague.",
+        "publicationDate": "2001",
+        "journal": "Nature",
+        "firstPage": "523",
+        "lastPage": "527",
+        "volume": "413"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "CO-92 / Biovar Orientalis",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "15368893",
+        "citationType": "journal article",
+        "authors": [
+          "Song Y.",
+          "Tong Z.",
+          "Wang J.",
+          "Wang L.",
+          "Guo Z.",
+          "Han Y.",
+          "Zhang J.",
+          "Pei D.",
+          "Zhou D.",
+          "Qin H.",
+          "Pang X.",
+          "Han Y.",
+          "Zhai J.",
+          "Li M.",
+          "Cui B.",
+          "Qi Z.",
+          "Jin L.",
+          "Dai R.",
+          "Chen F.",
+          "Li S.",
+          "Ye C.",
+          "Du Z.",
+          "Lin W.",
+          "Wang J.",
+          "Yu J.",
+          "Yang H.",
+          "Wang J.",
+          "Huang P.",
+          "Yang R."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15368893"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1093/dnares/11.3.179"
+          }
+        ],
+        "title": "Complete genome sequence of Yersinia pestis strain 91001, an isolate avirulent to humans.",
+        "publicationDate": "2004",
+        "journal": "DNA Res.",
+        "firstPage": "179",
+        "lastPage": "197",
+        "volume": "11"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "91001 / Biovar Mediaevalis",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "12062101",
+        "citationType": "journal article",
+        "authors": [
+          "Shao F.",
+          "Merritt P.M.",
+          "Bao Z.",
+          "Innes R.W.",
+          "Dixon J.E."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "12062101"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/s0092-8674(02)00766-3"
+          }
+        ],
+        "title": "A Yersinia effector and a Pseudomonas avirulence protein define a family of cysteine proteases functioning in bacterial pathogenesis.",
+        "publicationDate": "2002",
+        "journal": "Cell",
+        "firstPage": "575",
+        "lastPage": "588",
+        "volume": "109"
+      },
+      "referencePositions": [
+        "ENZYME ACTIVITY",
+        "FUNCTION",
+        "INTERACTION WITH HUMAN ARHA",
+        "MUTAGENESIS OF CYS-139; TRP-146; ARG-165; HIS-258; ASP-274; GLU-279 AND SER-300"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AF074612",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAC69833.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF053946",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAC62582.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AL117189",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAB54897.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AE017043",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAS58582.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "T43601",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "T43601"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_002213006.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_004836.1"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "O68703",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "O68703",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "IntAct",
+      "id": "O68703",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "MEROPS",
+      "id": "C58.001",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "DNASU",
+      "id": "1149322",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblBacteria",
+      "id": "AAS58582",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAS58582"
+        },
+        {
+          "key": "GeneId",
+          "value": "YP_pCD67"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "310221706",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "ype:YPCD1.20",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "ypm:YP_pCD67",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|214092.21.peg.24",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "COG3177",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Bacteria"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_073575_0_0_6",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AHWIRNH",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OrthoDB",
+      "id": "6852685at2",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000000815",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Plasmid pCD1"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000001019",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Plasmid pCD1"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0004197",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:cysteine-type endopeptidase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0141030",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:symbiont-mediated perturbation of host actin cytoskeleton via filamentous actin depolymerization"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:SigSci"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "15847602"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd20498",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "C58_YopT"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.90.70.20",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR038765",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Papain-like_cys_pep_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR003951",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Peptidase_C58"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR006473",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Peptidase_C58_Yopt"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "TIGR01586",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "yopT_cys_prot"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF03543",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Peptidase_C58"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR01376",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "BACSURFANTGN"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF54001",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cysteine proteinases"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MNSIHGHYHIQLSNYSAGENLQSATLTEGVIGAHRVKVETALSHSNLQKKLSATIKHNQSGRSMLDRKLTSDGKANQRSSFTFSMIMYRMIHFVLSTRVPAVRESVANYGGNINFKFAQTKGAFLHKIIKHSDTASGVCEALCAHWIRSHAQGQSLFDQLYVGGRKGKFQIDTLYSIKQLQIDGCKADVDQDEVTLDWFKKNGISERMIERHCLLRPVDVTGTTESEGLDQLLNAILDTHGIGYGYKKIHLSGQMSAHAIAAYVNEKSGVTFFDPNFGEFHFSDKEKFRKWFTNSFWGNSMYHYPLGVGQRFRVLTFDSKEV",
+    "length": 322,
+    "molWeight": 36308,
+    "crc64": "2B964F437FBC8A63",
+    "md5": "EDC47B6954DFFC75CC612E6E016A99C7"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Active site": 3,
+      "Mutagenesis": 7
+    },
+    "uniParcId": "UPI00000D1251"
+  }
+}

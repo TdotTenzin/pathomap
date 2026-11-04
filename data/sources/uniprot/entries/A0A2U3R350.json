@@ -1,0 +1,845 @@
+{
+  "entryType": "UniProtKB unreviewed (TrEMBL)",
+  "primaryAccession": "A0A2U3R350",
+  "uniProtkbId": "A0A2U3R350_ORITS",
+  "entryAudit": {
+    "firstPublicDate": "2018-07-18",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2018-07-18",
+    "entryVersion": 28,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 2.0,
+  "organism": {
+    "scientificName": "Orientia tsutsugamushi str. Gilliam",
+    "taxonId": 1359184,
+    "evidences": [
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "EMBL",
+        "id": "SPR07654.1"
+      },
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "Proteomes",
+        "id": "UP000244959"
+      }
+    ],
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Alphaproteobacteria",
+      "Rickettsiales",
+      "Rickettsiaceae",
+      "Rickettsieae",
+      "Orientia"
+    ]
+  },
+  "proteinExistence": "4: Predicted",
+  "proteinDescription": {
+    "submissionNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "SPR07654.1"
+            }
+          ],
+          "value": "ScaA autotransporter protein"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "SPR07654.1"
+          }
+        ],
+        "value": "ScaA"
+      },
+      "orfNames": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "SPR07654.1"
+            }
+          ],
+          "value": "GILLIAM_01513"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 26,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "SignalP"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 27,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1518,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "SignalP"
+        }
+      ],
+      "featureId": "PRO_5054659403"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 1239,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1518,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Autotransporter",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000259",
+          "source": "PROSITE",
+          "id": "PS51208"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 27,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 223,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 329,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 398,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 1026,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1134,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 1166,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1189,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 32,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 49,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Low complexity",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 50,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 96,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Polar residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 112,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 155,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Polar residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 160,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 175,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Low complexity",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 329,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 350,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Polar residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 351,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 368,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Low complexity",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 1034,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1052,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Low complexity",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 1074,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1095,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Basic and acidic residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 1103,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1112,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Basic and acidic residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 1166,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1178,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Low complexity",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU10142"
+        }
+      ],
+      "id": "KW-0106",
+      "category": "Ligand",
+      "name": "Calcium"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00556"
+        }
+      ],
+      "id": "KW-1003",
+      "category": "Cellular component",
+      "name": "Cell membrane"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00556"
+        }
+      ],
+      "id": "KW-0998",
+      "category": "Cellular component",
+      "name": "Cell outer membrane"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00556"
+        }
+      ],
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU10142"
+        }
+      ],
+      "id": "KW-0479",
+      "category": "Ligand",
+      "name": "Metal-binding"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "Proteomes",
+          "id": "UP000244959"
+        }
+      ],
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "SignalP"
+        }
+      ],
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "CI-817F3JPGSE7L7",
+        "citationType": "submission",
+        "authors": [
+          "Batty M. E.",
+          "Batty M E."
+        ],
+        "publicationDate": "MAR-2018",
+        "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "Proteomes",
+              "id": "UP000244959"
+            }
+          ],
+          "value": "Gilliam",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "Proteomes",
+          "id": "UP000244959"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "LS398551",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "SPR07654.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_109234871.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NZ_LS398551.1"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000244959",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome I"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005509",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:calcium ion binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-UniRule"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0000987",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:cis-regulatory region sequence-specific DNA binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:TreeGrafter"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0000981",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:DNA-binding transcription factor activity, RNA polymerase II-specific"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:TreeGrafter"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0042594",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:response to starvation"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:TreeGrafter"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.40.128.130",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Autotransporter beta-domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR005546",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Autotransporte_beta"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036709",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Autotransporte_beta_dom_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR018247",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "EF_Hand_1_Ca_BS"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR026314",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "YLP_motif_con_p1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR13413",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "YLP MOTIF CONTAINING PROTEIN NUCLEAR PROTEIN ZAP"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR13413:SF0",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "YLP MOTIF-CONTAINING PROTEIN 1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF03797",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Autotransporter"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00869",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Autotransporter"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF103515",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Autotransporter"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF81995",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "beta-sandwich domain of Sec23/24"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51208",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "AUTOTRANSPORTER"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS00018",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "EF_HAND_1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MKNSRKISLIFFTTLFTISNITITQTADNDPSALSSSSGGLTGSGASQSNNTTESSNDNQGDTGSGATSNPSNPSNPIEGASGTSPATGASDTTGDSDAAGNKEAAGDDSVTDSGASQSNNTTESSNDNQGDTGSGATSNPSNPIEGASGTSPATGASDATGVTETTGGSATGGEVTDGKKPKKSPFKKLKELGSTLSLSGHTKPEEPSEGATGGKGSSTSTLKRIRKQLASSTLSLSSTTPKEPKAPIVLSNSANKYVEIKQNKGSGLQKIIIKQPEVSFDKMDGKNDSIEINVETDTKATVKGEDCTKVKLANFNLTDSELIVNNTSHSNSELETTSPITSSVSMPNLSDTDVSSSSSPPTRRSSSIIQPTGPQPFDLSFFSSTTHGGKTEGTDRSKFTGIGPFVVQSPTIVSSNLKICGNITVNKPLQLITVPPVVLKTLTVERSKLVPTKKSGVLKLQSDLTANIEGKDATIVTSGSNSSISFNKFGTQDNPIPVQVDGVLKLQAEMHPSDSNEVDMHASITPKKQSLSEVHFLNASNIDLTKYNVHGFIGTPDSVMGKIVIDGETMLNVSGNIYADKVKINSCSKVSRGSREMHGGIVLNGESYVGLAVPSIPNYGTIIVHGNPSTQHNPDHYKSMFYGNIGTSAKSLYSIKFAEHPNNPDGTRPYTKLLISHDKSVDKSSIYCSDIIFSHPEDTIDILSNAAVKGNIGTNGNSGGKIIVHSNSTLTHSGGDIGSSKFGGGNSLQTLLLRENASFFSMPDSNSIPCTGNIKEITAGTNSRIELNSNTDWKTNIIPAGHGVKFTMSQGSYSGNIGDKEKQMENVTLLPKSKKASLIEVEGSVHTHQCSISDKSSSRGEMMLLGDYTVTAQTSDGSGSINTGNAKVNLGLNTLTLVGDNINILGHKSKKGSSTNPEKFNKKSATVFSIAYTTNQDGTVETQGKLKLNKYHDPNNKIIVNVNHQGDLRDLSKHGTQTTLHPVDIDDTGNLSVNDLVYICDGKCKWQLVDGSDRKFVFAGLVDKKKKDKGDDSASGSSGSSVAPSARVSPEVSDDEEGSKDEGIQASAAPHLHTKDSAHSEQSQDKDHTEKPEDPTEAAIEELARRLDEPMPRSQRTAEQPQPDPAEHVQPVVAQPLAAGAGQQQQQQQQQQQQQQQQQQQQQQQQQQQQHVSSPSSDDQEQSSESAPALQPILQKFSSDAHLKSGVCATVAAISSIVESKAANNKSGSDIVSSGSNINKQSWNIWADGFFSNVNQQDHEHIQGYKTDISGISIGADKHLKNNAIIGAAISYAKFDTKHTDSRIEKINSNVYLLSLYGQYSFQSTTFIRGMVNVAKFSDDSKNSSLTLWQGHSYHGSLTVGHYFYPLKNNKKLTLVPTVGVRHSYFNTSGNESVDNSSNKTIGDRSHKALEGIIGISVEQLVANNANNNLNVLSTVYGYVHHNLYDCQDGAQLPNSNSTFNPDVITSREQCLHKTFYQLGVKLAIKRNIMDIGIACDVYLAEKYISHTGIIYAKASF",
+    "length": 1518,
+    "molWeight": 161605,
+    "crc64": "F41D99CC59F5F61D",
+    "md5": "F7C5A53F7C6226ED57ECE83AF920549C"
+  },
+  "extraAttributes": {
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1,
+      "Domain": 1,
+      "Region": 4,
+      "Compositional bias": 10
+    },
+    "uniParcId": "UPI000D5A640E"
+  }
+}

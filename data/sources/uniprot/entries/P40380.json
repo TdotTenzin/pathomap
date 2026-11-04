@@ -1,0 +1,1949 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "P40380",
+  "secondaryAccessions": [
+    "O74373"
+  ],
+  "uniProtkbId": "RUM1_SCHPO",
+  "entryAudit": {
+    "firstPublicDate": "1995-02-01",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2001-01-11",
+    "entryVersion": 140,
+    "sequenceVersion": 2
+  },
+  "annotationScore": 5.0,
+  "organism": {
+    "scientificName": "Schizosaccharomyces pombe (strain 972 / ATCC 24843)",
+    "commonName": "Fission yeast",
+    "taxonId": 284812,
+    "lineage": [
+      "Eukaryota",
+      "Fungi",
+      "Dikarya",
+      "Ascomycota",
+      "Taphrinomycotina",
+      "Schizosaccharomycetes",
+      "Schizosaccharomycetales",
+      "Schizosaccharomycetaceae",
+      "Schizosaccharomyces"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Cyclin-dependent kinase inhibitor rum1"
+      }
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "p25-rum1"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "rum1"
+      },
+      "orfNames": [
+        {
+          "value": "SPBC32F12.09"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "12135491"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "14653990"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "8121488"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "8521500"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "9303310"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "9430640"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "9472012"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "9614176"
+            }
+          ],
+          "value": "Regulator of cell cycle G1 phase progression. Ensures the correct sequence of S phase and mitosis in the cell by acting as an inhibitor of the cdc2 mitotic kinase. Probably interacts with cdc2 to inhibit its action until the cell mass for Start is reached. Determines the length of the pre-Start G1 period and prevents mitosis from happening in early G1 cells. Required for maintaining pheromone-induced G1 arrest. Acts as an adapter protein since interaction with cdc13 promotes cyclin proteolysis during G1. Becomes a target for degradation at the G1/S phase transition, following phosphorylation by cig1-associated cdc2 at the G1/S phase transition"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "14970237"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "9303310"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "9472012"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "9614176"
+            }
+          ],
+          "value": "Interacts with cdc13, cig2 and pop1"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "INTERACTION",
+      "interactions": [
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "P40380",
+            "intActId": "EBI-1187892"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "P10815",
+            "geneName": "cdc13",
+            "intActId": "EBI-1187843"
+          },
+          "numberOfExperiments": 5,
+          "organismDiffer": false
+        },
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "P40380",
+            "intActId": "EBI-1187892"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "P04551",
+            "geneName": "cdc2",
+            "intActId": "EBI-1187862"
+          },
+          "numberOfExperiments": 2,
+          "organismDiffer": false
+        },
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "P40380",
+            "intActId": "EBI-1187892"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "P36630",
+            "geneName": "cig2",
+            "intActId": "EBI-1149212"
+          },
+          "numberOfExperiments": 2,
+          "organismDiffer": false
+        }
+      ]
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "16823372"
+              }
+            ],
+            "value": "Nucleus",
+            "id": "SL-0191"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "14653990"
+            }
+          ],
+          "value": "Expression increases in nitrogen deprived environment, which is important to cause delay of the G1 phase of the cell cycle in response to nitrogen starvation"
+        }
+      ],
+      "commentType": "INDUCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "12135491"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "9303310"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "9430640"
+            }
+          ],
+          "value": "Phosphorylated by cig1-associated cdc2 which leads to increased stability. Phosphorylation by MAPK reduces cdc2 kinase inhibitor ability"
+        }
+      ],
+      "commentType": "PTM"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 230,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Cyclin-dependent kinase inhibitor rum1",
+      "featureId": "PRO_0000097531"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 25,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 43,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 118,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 67,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 147,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "CDK inhibitory and cyclin-binding"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 101,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 230,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Required for activity as a cdc2 kinase inhibitor"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 188,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 230,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 78,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 91,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Basic and acidic residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 93,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 102,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Polar residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 188,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 199,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Low complexity",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 219,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 230,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Basic and acidic residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Modified residue",
+      "location": {
+        "start": {
+          "value": 13,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 13,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Phosphothreonine; by MAPK",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12135491"
+        }
+      ]
+    },
+    {
+      "type": "Modified residue",
+      "location": {
+        "start": {
+          "value": 19,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 19,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Phosphoserine; by MAPK",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12135491"
+        }
+      ]
+    },
+    {
+      "type": "Modified residue",
+      "location": {
+        "start": {
+          "value": 58,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 58,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Phosphothreonine; by cdc2",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "9430640"
+        }
+      ]
+    },
+    {
+      "type": "Modified residue",
+      "location": {
+        "start": {
+          "value": 62,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 62,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Phosphothreonine; by cdc2",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "9430640"
+        }
+      ]
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 5,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 5,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "No effect on phenotype and no reduction in 32-P incorporation mediated by MAPK.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12135491"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "9430640"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "T",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 13,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 13,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "No effect on phenotype; when associated with A-16 and A-19. Reduced 32-P incorporation mediated by MAPK; when associated with A-19.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12135491"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "9430640"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "T",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 13,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 13,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Reduces activity as a cdc2 inhibitor; when associated with E-19.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12135491"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "9430640"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "T",
+        "alternativeSequences": [
+          "E"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 16,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 16,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "No effect on phenotype; when associated with A-13 and A-19. No reduction in 32-P incorporation mediated by MAPK.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12135491"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "9430640"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "T",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 19,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 19,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "No effect on phenotype; when associated with A-13 and A-16. Reduced 32-P incorporation mediated by MAPK; when associated with A-13.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12135491"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "9430640"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "S",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 19,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 19,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Reduces activity as a cdc2 inhibitor; when associated with E-13.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12135491"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "9430640"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "S",
+        "alternativeSequences": [
+          "E"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 58,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 58,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Reduces growth rate into small colonies containing many elongated cells. Phenotype enhances due to increased stability; when associated with A-62. No reduction in 32-P incorporation mediated by MAPK.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12135491"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "9430640"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "T",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 58,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 58,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Shift in mobility; when associated with S-62.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12135491"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "9430640"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "T",
+        "alternativeSequences": [
+          "S"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 62,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 62,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Reduces growth rate into small colonies containing many elongated cells. Phenotype enhances due to increased stability; when associated with A-58.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "9430640"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "T",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 62,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 62,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Shift in mobility; when associated with S-58.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "9430640"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "T",
+        "alternativeSequences": [
+          "S"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 110,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 110,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "No effect on phenotype.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "9430640"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "T",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 212,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 212,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "No effect on phenotype.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "9430640"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "S",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 72,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 73,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 1; CAA54786",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "ML",
+        "alternativeSequences": [
+          "IV"
+        ]
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0131",
+      "category": "Biological process",
+      "name": "Cell cycle"
+    },
+    {
+      "id": "KW-0539",
+      "category": "Cellular component",
+      "name": "Nucleus"
+    },
+    {
+      "id": "KW-0597",
+      "category": "PTM",
+      "name": "Phosphoprotein"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "8121488",
+        "citationType": "journal article",
+        "authors": [
+          "Moreno S.",
+          "Nurse P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8121488"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/367236a0"
+          }
+        ],
+        "title": "Regulation of progression through the G1 phase of the cell cycle by the rum1+ gene.",
+        "publicationDate": "1994",
+        "journal": "Nature",
+        "firstPage": "236",
+        "lastPage": "242",
+        "volume": "367"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [MRNA]",
+        "FUNCTION"
+      ],
+      "referenceComments": [
+        {
+          "value": "972 / ATCC 24843",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "11859360",
+        "citationType": "journal article",
+        "authors": [
+          "Wood V.",
+          "Gwilliam R.",
+          "Rajandream M.A.",
+          "Lyne M.H.",
+          "Lyne R.",
+          "Stewart A.",
+          "Sgouros J.G.",
+          "Peat N.",
+          "Hayles J.",
+          "Baker S.G.",
+          "Basham D.",
+          "Bowman S.",
+          "Brooks K.",
+          "Brown D.",
+          "Brown S.",
+          "Chillingworth T.",
+          "Churcher C.M.",
+          "Collins M.",
+          "Connor R.",
+          "Cronin A.",
+          "Davis P.",
+          "Feltwell T.",
+          "Fraser A.",
+          "Gentles S.",
+          "Goble A.",
+          "Hamlin N.",
+          "Harris D.E.",
+          "Hidalgo J.",
+          "Hodgson G.",
+          "Holroyd S.",
+          "Hornsby T.",
+          "Howarth S.",
+          "Huckle E.J.",
+          "Hunt S.",
+          "Jagels K.",
+          "James K.D.",
+          "Jones L.",
+          "Jones M.",
+          "Leather S.",
+          "McDonald S.",
+          "McLean J.",
+          "Mooney P.",
+          "Moule S.",
+          "Mungall K.L.",
+          "Murphy L.D.",
+          "Niblett D.",
+          "Odell C.",
+          "Oliver K.",
+          "O'Neil S.",
+          "Pearson D.",
+          "Quail M.A.",
+          "Rabbinowitsch E.",
+          "Rutherford K.M.",
+          "Rutter S.",
+          "Saunders D.",
+          "Seeger K.",
+          "Sharp S.",
+          "Skelton J.",
+          "Simmonds M.N.",
+          "Squares R.",
+          "Squares S.",
+          "Stevens K.",
+          "Taylor K.",
+          "Taylor R.G.",
+          "Tivey A.",
+          "Walsh S.V.",
+          "Warren T.",
+          "Whitehead S.",
+          "Woodward J.R.",
+          "Volckaert G.",
+          "Aert R.",
+          "Robben J.",
+          "Grymonprez B.",
+          "Weltjens I.",
+          "Vanstreels E.",
+          "Rieger M.",
+          "Schaefer M.",
+          "Mueller-Auer S.",
+          "Gabel C.",
+          "Fuchs M.",
+          "Duesterhoeft A.",
+          "Fritzc C.",
+          "Holzer E.",
+          "Moestl D.",
+          "Hilbert H.",
+          "Borzym K.",
+          "Langer I.",
+          "Beck A.",
+          "Lehrach H.",
+          "Reinhardt R.",
+          "Pohl T.M.",
+          "Eger P.",
+          "Zimmermann W.",
+          "Wedler H.",
+          "Wambutt R.",
+          "Purnelle B.",
+          "Goffeau A.",
+          "Cadieu E.",
+          "Dreano S.",
+          "Gloux S.",
+          "Lelaure V.",
+          "Mottier S.",
+          "Galibert F.",
+          "Aves S.J.",
+          "Xiang Z.",
+          "Hunt C.",
+          "Moore K.",
+          "Hurst S.M.",
+          "Lucas M.",
+          "Rochet M.",
+          "Gaillardin C.",
+          "Tallada V.A.",
+          "Garzon A.",
+          "Thode G.",
+          "Daga R.R.",
+          "Cruzado L.",
+          "Jimenez J.",
+          "Sanchez M.",
+          "del Rey F.",
+          "Benito J.",
+          "Dominguez A.",
+          "Revuelta J.L.",
+          "Moreno S.",
+          "Armstrong J.",
+          "Forsburg S.L.",
+          "Cerutti L.",
+          "Lowe T.",
+          "McCombie W.R.",
+          "Paulsen I.",
+          "Potashkin J.",
+          "Shpakovski G.V.",
+          "Ussery D.",
+          "Barrell B.G.",
+          "Nurse P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11859360"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/nature724"
+          }
+        ],
+        "title": "The genome sequence of Schizosaccharomyces pombe.",
+        "publicationDate": "2002",
+        "journal": "Nature",
+        "firstPage": "871",
+        "lastPage": "880",
+        "volume": "415"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "972 / ATCC 24843",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "8521500",
+        "citationType": "journal article",
+        "authors": [
+          "Correa-Bordes J.",
+          "Nurse P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8521500"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/0092-8674(95)90215-5"
+          }
+        ],
+        "title": "p25rum1 orders S phase and mitosis by acting as an inhibitor of the p34cdc2 mitotic kinase.",
+        "publicationDate": "1995",
+        "journal": "Cell",
+        "firstPage": "1001",
+        "lastPage": "1009",
+        "volume": "83"
+      },
+      "referencePositions": [
+        "FUNCTION"
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "9303310",
+        "citationType": "journal article",
+        "authors": [
+          "Correa-Bordes J.",
+          "Gulli M.P.",
+          "Nurse P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9303310"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1093/emboj/16.15.4657"
+          }
+        ],
+        "title": "p25rum1 promotes proteolysis of the mitotic B-cyclin p56cdc13 during G1 of the fission yeast cell cycle.",
+        "publicationDate": "1997",
+        "journal": "EMBO J.",
+        "firstPage": "4657",
+        "lastPage": "4664",
+        "volume": "16"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "INTERACTION WITH CDC13",
+        "PHOSPHORYLATION"
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "9430640",
+        "citationType": "journal article",
+        "authors": [
+          "Benito J.",
+          "Martin-Castellanos C.",
+          "Moreno S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9430640"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1093/emboj/17.2.482"
+          }
+        ],
+        "title": "Regulation of the G1 phase of the cell cycle by periodic stabilization and degradation of the p25rum1 CDK inhibitor.",
+        "publicationDate": "1998",
+        "journal": "EMBO J.",
+        "firstPage": "482",
+        "lastPage": "497",
+        "volume": "17"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "PHOSPHORYLATION AT THR-58 AND THR-62",
+        "MUTAGENESIS OF THR-5; THR-13; THR-16; SER-19; THR-58; THR-62; THR-110 AND SER-212"
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "9472012",
+        "citationType": "journal article",
+        "authors": [
+          "Sanchez-Diaz A.",
+          "Gonzalez I.",
+          "Arellano M.",
+          "Moreno S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9472012"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1242/jcs.111.6.843"
+          }
+        ],
+        "title": "The Cdk inhibitors p25rum1 and p40SIC1 are functional homologues that play similar roles in the regulation of the cell cycle in fission and budding yeast.",
+        "publicationDate": "1998",
+        "journal": "J. Cell Sci.",
+        "firstPage": "843",
+        "lastPage": "851",
+        "volume": "111"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "INTERACTION WITH CDC13",
+        "DOMAIN"
+      ]
+    },
+    {
+      "referenceNumber": 7,
+      "citation": {
+        "id": "9614176",
+        "citationType": "journal article",
+        "authors": [
+          "Stern B.",
+          "Nurse P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9614176"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1091/mbc.9.6.1309"
+          }
+        ],
+        "title": "Cyclin B proteolysis and the cyclin-dependent kinase inhibitor rum1p are required for pheromone-induced G1 arrest in fission yeast.",
+        "publicationDate": "1998",
+        "journal": "Mol. Biol. Cell",
+        "firstPage": "1309",
+        "lastPage": "1321",
+        "volume": "9"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "INTERACTION WITH CDC13 AND CIG2"
+      ]
+    },
+    {
+      "referenceNumber": 8,
+      "citation": {
+        "id": "12135491",
+        "citationType": "journal article",
+        "authors": [
+          "Matsuoka K.",
+          "Kiyokawa N.",
+          "Taguchi T.",
+          "Matsui J.",
+          "Suzuki T.",
+          "Mimori K.",
+          "Nakajima H.",
+          "Takenouchi H.",
+          "Weiran T.",
+          "Katagiri Y.U.",
+          "Fujimoto J."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "12135491"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1046/j.1432-1033.2002.03033.x"
+          }
+        ],
+        "title": "Rum1, an inhibitor of cyclin-dependent kinase in fission yeast, is negatively regulated by mitogen-activated protein kinase-mediated phosphorylation at Ser and Thr residues.",
+        "publicationDate": "2002",
+        "journal": "Eur. J. Biochem.",
+        "firstPage": "3511",
+        "lastPage": "3521",
+        "volume": "269"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "PHOSPHORYLATION AT THR-13 AND SER-19",
+        "MUTAGENESIS OF THR-5; THR-13; THR-16; SER-19 AND THR-58"
+      ]
+    },
+    {
+      "referenceNumber": 9,
+      "citation": {
+        "id": "14653990",
+        "citationType": "journal article",
+        "authors": [
+          "Daga R.R.",
+          "Bolanos P.",
+          "Moreno S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "14653990"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/j.cub.2003.10.061"
+          }
+        ],
+        "title": "Regulated mRNA stability of the Cdk inhibitor Rum1 links nutrient status to cell cycle progression.",
+        "publicationDate": "2003",
+        "journal": "Curr. Biol.",
+        "firstPage": "2015",
+        "lastPage": "2024",
+        "volume": "13"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "INDUCTION"
+      ]
+    },
+    {
+      "referenceNumber": 10,
+      "citation": {
+        "id": "14970237",
+        "citationType": "journal article",
+        "authors": [
+          "Yamano H.",
+          "Kominami K.",
+          "Harrison C.",
+          "Kitamura K.",
+          "Katayama S.",
+          "Dhut S.",
+          "Hunt T.",
+          "Toda T."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "14970237"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1074/jbc.m311060200"
+          }
+        ],
+        "title": "Requirement of the SCFPop1/Pop2 ubiquitin ligase for degradation of the fission yeast S phase cyclin Cig2.",
+        "publicationDate": "2004",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "18974",
+        "lastPage": "18980",
+        "volume": "279"
+      },
+      "referencePositions": [
+        "INTERACTION WITH POP1"
+      ]
+    },
+    {
+      "referenceNumber": 11,
+      "citation": {
+        "id": "16823372",
+        "citationType": "journal article",
+        "authors": [
+          "Matsuyama A.",
+          "Arai R.",
+          "Yashiroda Y.",
+          "Shirai A.",
+          "Kamata A.",
+          "Sekido S.",
+          "Kobayashi Y.",
+          "Hashimoto A.",
+          "Hamamoto M.",
+          "Hiraoka Y.",
+          "Horinouchi S.",
+          "Yoshida M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "16823372"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/nbt1222"
+          }
+        ],
+        "title": "ORFeome cloning and global analysis of protein localization in the fission yeast Schizosaccharomyces pombe.",
+        "publicationDate": "2006",
+        "journal": "Nat. Biotechnol.",
+        "firstPage": "841",
+        "lastPage": "847",
+        "volume": "24"
+      },
+      "referencePositions": [
+        "SUBCELLULAR LOCATION [LARGE SCALE ANALYSIS]"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "X77730",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAA54786.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "CU329671",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAA19370.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "S41043",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "S41043"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "T40233",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "T40233"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_596152.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NM_001022071.3"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "P40380",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BioGRID",
+      "id": "276195",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "35"
+        }
+      ]
+    },
+    {
+      "database": "FunCoup",
+      "id": "P40380",
+      "properties": [
+        {
+          "key": "Number of interactors",
+          "value": "5"
+        }
+      ]
+    },
+    {
+      "database": "IntAct",
+      "id": "P40380",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "5"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "284812.P40380",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "iPTMnet",
+      "id": "P40380",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PaxDb",
+      "id": "284812-P40380",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "2539640",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "spo:2539640",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PomBase",
+      "id": "SPBC32F12.09",
+      "properties": [
+        {
+          "key": "GeneName",
+          "value": "rum1"
+        }
+      ]
+    },
+    {
+      "database": "VEuPathDB",
+      "id": "FungiDB:SPBC32F12.09",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_1246003_0_0_1",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "InParanoid",
+      "id": "P40380",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "CNREQKS",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PRO",
+      "id": "PR:P40380",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000002485",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome II"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005634",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:nucleus"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "HDA:PomBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007005",
+          "source": "PubMed",
+          "id": "16823372"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0004861",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:cyclin-dependent protein serine/threonine kinase inhibitor activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:PomBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "8121488"
+        },
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "8598285"
+        },
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "9303310"
+        },
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "9430640"
+        },
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "9552380"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0031568",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:mitotic G1 cell size control checkpoint signaling"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:PomBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "8121488"
+        },
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "9552380"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:2000134",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:negative regulation of G1/S transition of mitotic cell cycle"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:PomBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "8521500"
+        },
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "8598285"
+        },
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "9430640"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0045930",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:negative regulation of mitotic cell cycle"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:PomBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "9303310"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:1903464",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:negative regulation of mitotic cell cycle DNA replication"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:PomBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "8521500"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:1903467",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:negative regulation of mitotic DNA replication initiation"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:PomBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "11937031"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0032436",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:positive regulation of proteasomal ubiquitin-dependent protein catabolic process"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:PomBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "9614176"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0007089",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:traversing start control point of mitotic cell cycle"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:PomBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "8121488"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR062409",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Rum1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF30839",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Rum1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MEPSTPPMRGLCTPSTPESPGSFKGVIDASLEGNSSIMIDEIPESDLPAPQVSTFPPTPAKTPKKQLLPNLMLQDRSNSLERCMEEDREHNPFLSSSDNQLLSRKKRKPTPPPSDGLYYVFRGKRIKKSFRPGTDLSTFKPKLLFADSAPSSSSDNPTSSVDLNDYSQIGILPPNLNSIGNKMFSLKSRVPSSSSGSFVAPPPQMRLPAYSSPQKSRSNTKDENRHNLLR",
+    "length": 230,
+    "molWeight": 25289,
+    "crc64": "C5199FE345F7484A",
+    "md5": "AE801DD2FED119C28ED49B1E1DC2C96F"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBUNIT": 1,
+      "INTERACTION": 3,
+      "SUBCELLULAR LOCATION": 1,
+      "INDUCTION": 1,
+      "PTM": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Region": 5,
+      "Compositional bias": 4,
+      "Modified residue": 4,
+      "Mutagenesis": 12,
+      "Sequence conflict": 1
+    },
+    "uniParcId": "UPI000013531D"
+  }
+}

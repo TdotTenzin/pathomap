@@ -1,0 +1,316 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "Q52243",
+  "uniProtkbId": "VAPD_AGGAC",
+  "entryAudit": {
+    "firstPublicDate": "1999-07-15",
+    "lastAnnotationUpdateDate": "2026-09-02",
+    "lastSequenceUpdateDate": "1996-11-01",
+    "entryVersion": 49,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 2.0,
+  "organism": {
+    "scientificName": "Aggregatibacter actinomycetemcomitans",
+    "commonName": "Actinobacillus actinomycetemcomitans",
+    "synonyms": [
+      "Haemophilus actinomycetemcomitans"
+    ],
+    "taxonId": 714,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Gammaproteobacteria",
+      "Pasteurellales",
+      "Pasteurellaceae",
+      "Aggregatibacter"
+    ]
+  },
+  "proteinExistence": "3: Inferred from homology",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Endoribonuclease VapD homolog"
+      },
+      "ecNumbers": [
+        {
+          "value": "3.1.-.-"
+        }
+      ]
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "Virulence-associated protein D homolog"
+        }
+      }
+    ]
+  },
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250"
+            }
+          ],
+          "value": "Cleaves ssRNA, mostly between U:A"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250"
+            }
+          ],
+          "value": "Homodimer"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the VapD ribonuclease family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 95,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Endoribonuclease VapD homolog",
+      "featureId": "PRO_0000217269"
+    }
+  ],
+  "geneLocations": [
+    {
+      "value": "pVT736-1",
+      "geneEncodingType": "Plasmid"
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0378",
+      "category": "Molecular function",
+      "name": "Hydrolase"
+    },
+    {
+      "id": "KW-0540",
+      "category": "Molecular function",
+      "name": "Nuclease"
+    },
+    {
+      "id": "KW-0614",
+      "category": "Technical term",
+      "name": "Plasmid"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "7543479",
+        "citationType": "journal article",
+        "authors": [
+          "Galli D.M.",
+          "Leblanc D.J."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "7543479"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.177.15.4474-4480.1995"
+          }
+        ],
+        "title": "Transcriptional analysis of rolling circle replicating plasmid pVT736-1: evidence for replication control by antisense RNA.",
+        "publicationDate": "1995",
+        "journal": "J. Bacteriol.",
+        "firstPage": "4474",
+        "lastPage": "4480",
+        "volume": "177"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "L24000",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAC37126.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q52243",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "Q52243",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0004518",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:nuclease activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0003723",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:RNA binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.30.70.240",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR016368",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "VapD"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR019199",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Virulence_VapD/CRISPR_Cas2"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF09827",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CRISPR_Cas2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PIRSF",
+      "id": "PIRSF002882",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "VapD"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MYAIAFDLEISELKKHYGDPYNNAYFEVKSELEKIGFEWTQGSVYLSKDPRNNLATVYKAINLLSNIDWFKHSVRDIRAFKVEDWSDFTEIVKTS",
+    "length": 95,
+    "molWeight": 11190,
+    "crc64": "3424348E815BF62A",
+    "md5": "D5C54105F953A65A367B215D36F04081"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBUNIT": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1
+    },
+    "uniParcId": "UPI000013810F"
+  }
+}

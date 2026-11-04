@@ -1,0 +1,994 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "P0C6D6",
+  "secondaryAccessions": [
+    "P29492",
+    "Q9KTQ8"
+  ],
+  "uniProtkbId": "TCPN_VIBCH",
+  "entryAudit": {
+    "firstPublicDate": "2008-02-26",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2008-02-26",
+    "entryVersion": 98,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 3.0,
+  "organism": {
+    "scientificName": "Vibrio cholerae serotype O1 (strain ATCC 39315 / El Tor Inaba N16961)",
+    "taxonId": 243277,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Gammaproteobacteria",
+      "Vibrionales",
+      "Vibrionaceae",
+      "Vibrio"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "TCP pilus virulence regulatory protein"
+      }
+    }
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "tcpN"
+      },
+      "synonyms": [
+        {
+          "value": "toxT"
+        }
+      ],
+      "orderedLocusNames": [
+        {
+          "value": "VC_0838"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "value": "Probable regulatory protein for the tcp operon"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "INTERACTION",
+      "interactions": [
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "P0C6D6",
+            "intActId": "EBI-15621125"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "P0C6D6",
+            "geneName": "tcpN",
+            "intActId": "EBI-15621125"
+          },
+          "numberOfExperiments": 2,
+          "organismDiffer": false
+        }
+      ]
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "value": "Cytoplasm",
+            "id": "SL-0086"
+          }
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 276,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "TCP pilus virulence regulatory protein",
+      "featureId": "PRO_0000194587"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 172,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 269,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "HTH araC/xylS-type",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00593"
+        }
+      ]
+    },
+    {
+      "type": "DNA binding",
+      "location": {
+        "start": {
+          "value": 189,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 210,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "H-T-H motif",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00593"
+        }
+      ]
+    },
+    {
+      "type": "DNA binding",
+      "location": {
+        "start": {
+          "value": 236,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 259,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "H-T-H motif",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00593"
+        }
+      ]
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 65,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 65,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 2; AAA27567",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "S",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 250,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 250,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 1; CAA45465",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "Y",
+        "alternativeSequences": [
+          "N"
+        ]
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0010",
+      "category": "Molecular function",
+      "name": "Activator"
+    },
+    {
+      "id": "KW-0963",
+      "category": "Cellular component",
+      "name": "Cytoplasm"
+    },
+    {
+      "id": "KW-0238",
+      "category": "Molecular function",
+      "name": "DNA-binding"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0804",
+      "category": "Biological process",
+      "name": "Transcription"
+    },
+    {
+      "id": "KW-0805",
+      "category": "Biological process",
+      "name": "Transcription regulation"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "1352761",
+        "citationType": "journal article",
+        "authors": [
+          "Ogierman M.A.",
+          "Manning P.A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "1352761"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/0378-1119(92)90634-2"
+          }
+        ],
+        "title": "Homology of TcpN, a putative regulatory protein of Vibrio cholerae, to the AraC family of transcriptional activators.",
+        "publicationDate": "1992",
+        "journal": "Gene",
+        "firstPage": "93",
+        "lastPage": "97",
+        "volume": "116"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "Classical Inaba Z17561 / Serotype O1",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "1400247",
+        "citationType": "journal article",
+        "authors": [
+          "Higgins D.E.",
+          "Nazareno E.",
+          "DiRita V.J."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "1400247"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.174.21.6974-6980.1992"
+          }
+        ],
+        "title": "The virulence gene activator ToxT from Vibrio cholerae is a member of the AraC family of transcriptional activators.",
+        "publicationDate": "1992",
+        "journal": "J. Bacteriol.",
+        "firstPage": "6974",
+        "lastPage": "6980",
+        "volume": "174"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 25870 / Classical Inaba 569B / Serotype O1",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "10952301",
+        "citationType": "journal article",
+        "authors": [
+          "Heidelberg J.F.",
+          "Eisen J.A.",
+          "Nelson W.C.",
+          "Clayton R.A.",
+          "Gwinn M.L.",
+          "Dodson R.J.",
+          "Haft D.H.",
+          "Hickey E.K.",
+          "Peterson J.D.",
+          "Umayam L.A.",
+          "Gill S.R.",
+          "Nelson K.E.",
+          "Read T.D.",
+          "Tettelin H.",
+          "Richardson D.L.",
+          "Ermolaeva M.D.",
+          "Vamathevan J.J.",
+          "Bass S.",
+          "Qin H.",
+          "Dragoi I.",
+          "Sellers P.",
+          "McDonald L.A.",
+          "Utterback T.R.",
+          "Fleischmann R.D.",
+          "Nierman W.C.",
+          "White O.",
+          "Salzberg S.L.",
+          "Smith H.O.",
+          "Colwell R.R.",
+          "Mekalanos J.J.",
+          "Venter J.C.",
+          "Fraser C.M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "10952301"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/35020000"
+          }
+        ],
+        "title": "DNA sequence of both chromosomes of the cholera pathogen Vibrio cholerae.",
+        "publicationDate": "2000",
+        "journal": "Nature",
+        "firstPage": "477",
+        "lastPage": "483",
+        "volume": "406"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 39315 / El Tor Inaba N16961",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "8097177",
+        "citationType": "journal article",
+        "authors": [
+          "Kaufman M.R.",
+          "Shaw C.E.",
+          "Jones I.D.",
+          "Taylor R.K."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8097177"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/0378-1119(93)90588-t"
+          }
+        ],
+        "title": "Biogenesis and regulation of the Vibrio cholerae toxin-coregulated pilus: analogies to other virulence factor secretory systems.",
+        "publicationDate": "1993",
+        "journal": "Gene",
+        "firstPage": "43",
+        "lastPage": "49",
+        "volume": "126"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 1-22"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "X64098",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAA45465.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "M93963",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA27565.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AE003852",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAF94001.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "L01623",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA27567.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "B45247",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "B45247"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "C82273",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "C82273"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "S23274",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "S23274"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_000579582.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_002505.1"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "P0C6D6",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "P0C6D6",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "DIP",
+      "id": "DIP-60864N",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "243277.VC_0838",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "DNASU",
+      "id": "2614505",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblBacteria",
+      "id": "AAF94001",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAF94001"
+        },
+        {
+          "key": "GeneId",
+          "value": "VC_0838"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "vch:VC_0838",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|243277.26.peg.799",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "COG2207",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Bacteria"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_1004526_0_0_6",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AGXKYLF",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000000584",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome I"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005737",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cytoplasm"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0003700",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:DNA-binding transcription factor activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0042802",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:identical protein binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IPI:IntAct"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000353",
+          "source": "PubMed",
+          "id": "17283330"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0000976",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:transcription cis-regulatory region binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0006355",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:regulation of DNA-templated transcription"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.60.120.810",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.10.10.60",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Homeodomain-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.10.10.1310",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ToxT, HTH1 motif"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR009057",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Homeodomain-like_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR018060",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "HTH_AraC"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR018062",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "HTH_AraC-typ_CS"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR044875",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ToxT_HTH1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR055025",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ToxT_N"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR020449",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Tscrpt_reg_AraC-type_HTH"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR43280",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ARAC-FAMILY TRANSCRIPTIONAL REGULATOR"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR43280:SF28",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "HTH-TYPE TRANSCRIPTIONAL ACTIVATOR RHAS"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00165",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "HTH_AraC"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF22404",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ToxT_N"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR00032",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "HTHARAC"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00342",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "HTH_ARAC"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF46689",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Homeodomain-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS00041",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "HTH_ARAC_FAMILY_1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS01124",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "HTH_ARAC_FAMILY_2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MIGKKSFQTNVYRMSKFDTYIFNNLYINDYKMFWIDSGIAKLIDKNCLVSYEINSSSIILLKKNSIQRFSLTSLSDENINVSVITISDSFIRSLKSYILGDLMIRNLYSENKDLLLWNCEHNDIAVLSEVVNGFREINYSDEFLKVFFSGFFSKVEKKYNSIFITDDLDAMEKISCLVKSDITRNWRWADICGELRTNRMILKKELESRGVKFRELINSIRISYSISLMKTGEFKIKQIAYQSGFASVSYFSTVFKSTMNVAPSEYLFMLTGVAEK",
+    "length": 276,
+    "molWeight": 32055,
+    "crc64": "0702B68C99680757",
+    "md5": "D89F157E6E8C06B77E414468EBE1FDF6"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "INTERACTION": 1,
+      "SUBCELLULAR LOCATION": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Domain": 1,
+      "DNA binding": 2,
+      "Sequence conflict": 2
+    },
+    "uniParcId": "UPI0000000A93"
+  }
+}

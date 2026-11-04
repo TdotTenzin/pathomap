@@ -1,0 +1,1308 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "P28784",
+  "secondaryAccessions": [
+    "Q45168"
+  ],
+  "uniProtkbId": "CPG1_PORGN",
+  "entryAudit": {
+    "firstPublicDate": "1992-12-01",
+    "lastAnnotationUpdateDate": "2025-04-09",
+    "lastSequenceUpdateDate": "1997-11-01",
+    "entryVersion": 109,
+    "sequenceVersion": 2
+  },
+  "annotationScore": 4.0,
+  "organism": {
+    "scientificName": "Porphyromonas gingivalis",
+    "commonName": "Bacteroides gingivalis",
+    "taxonId": 837,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Bacteroidota",
+      "Bacteroidia",
+      "Bacteroidales",
+      "Porphyromonadaceae",
+      "Porphyromonas"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Gingipain R1"
+      },
+      "ecNumbers": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "1527017"
+            }
+          ],
+          "value": "3.4.22.37"
+        }
+      ]
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "Arg-gingipain"
+        }
+      },
+      {
+        "fullName": {
+          "value": "Gingipain 1"
+        }
+      },
+      {
+        "fullName": {
+          "value": "RGP-1"
+        }
+      }
+    ],
+    "flag": "Precursor"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "rgpA"
+      },
+      "synonyms": [
+        {
+          "value": "rgp1"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "B2RKU0"
+            },
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Thiol protease. Acts synergistically with RgpB to catalyze the maturation of fimbrial subunits, such as FimA (By similarity). Its proteolytic activity is a major factor in both periodontal tissue destruction and in evasion of host defense mechanisms (Probable)"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "Hydrolysis of proteins and small molecule substrates, with a preference for Arg in P1.",
+        "ecNumber": "3.4.22.37",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "1527017"
+          }
+        ]
+      }
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "1527017"
+            }
+          ],
+          "value": "Requires cysteine for activation and Ca(2+) and/or Mg(2+) for stabilization. It is stimulated by glycine-containing dipeptides. It is resistant to inhibition by proteinase inhibitors in human plasma"
+        }
+      ],
+      "commentType": "ACTIVITY REGULATION"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "1527017"
+              },
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "7864651"
+              }
+            ],
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the peptidase C25 family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 24,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Propeptide",
+      "location": {
+        "start": {
+          "value": 25,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 227,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "1527017"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "7864651"
+        }
+      ],
+      "featureId": "PRO_0000026533"
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 228,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 991,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Gingipain R1",
+      "featureId": "PRO_0000026534"
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 438,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 438,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Proton donor",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250"
+        }
+      ]
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 471,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 471,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Nucleophile",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P95493"
+        }
+      ]
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 305,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 305,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29108"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P95493"
+        }
+      ],
+      "ligand": {
+        "name": "Ca(2+)",
+        "id": "ChEBI:CHEBI:29108",
+        "label": "1"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 327,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 327,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29108"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P95493"
+        }
+      ],
+      "ligand": {
+        "name": "Ca(2+)",
+        "id": "ChEBI:CHEBI:29108",
+        "label": "2"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 330,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 330,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29108"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P95493"
+        }
+      ],
+      "ligand": {
+        "name": "Ca(2+)",
+        "id": "ChEBI:CHEBI:29108",
+        "label": "2"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 332,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 332,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29108"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P95493"
+        }
+      ],
+      "ligand": {
+        "name": "Ca(2+)",
+        "id": "ChEBI:CHEBI:29108",
+        "label": "2"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 334,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 334,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29108"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P95493"
+        }
+      ],
+      "ligand": {
+        "name": "Ca(2+)",
+        "id": "ChEBI:CHEBI:29108",
+        "label": "2"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 388,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 388,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29108"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P95493"
+        }
+      ],
+      "ligand": {
+        "name": "Ca(2+)",
+        "id": "ChEBI:CHEBI:29108",
+        "label": "3"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 393,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 393,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29108"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P95493"
+        }
+      ],
+      "ligand": {
+        "name": "Ca(2+)",
+        "id": "ChEBI:CHEBI:29108",
+        "label": "3"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 476,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 476,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29108"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P95493"
+        }
+      ],
+      "ligand": {
+        "name": "Ca(2+)",
+        "id": "ChEBI:CHEBI:29108",
+        "label": "1"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 485,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 485,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29108"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P95493"
+        }
+      ],
+      "ligand": {
+        "name": "Ca(2+)",
+        "id": "ChEBI:CHEBI:29108",
+        "label": "1"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 519,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 519,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29108"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P95493"
+        }
+      ],
+      "ligand": {
+        "name": "Ca(2+)",
+        "id": "ChEBI:CHEBI:29108",
+        "label": "3"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 520,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 520,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29108"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P95493"
+        }
+      ],
+      "ligand": {
+        "name": "Ca(2+)",
+        "id": "ChEBI:CHEBI:29108",
+        "label": "4"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 523,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 523,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29108"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P95493"
+        }
+      ],
+      "ligand": {
+        "name": "Ca(2+)",
+        "id": "ChEBI:CHEBI:29108",
+        "label": "4"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 529,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 529,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29108"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P95493"
+        }
+      ],
+      "ligand": {
+        "name": "Ca(2+)",
+        "id": "ChEBI:CHEBI:29108",
+        "label": "4"
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 264,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 265,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 2; AA sequence",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "RT",
+        "alternativeSequences": [
+          "TK"
+        ]
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0106",
+      "category": "Ligand",
+      "name": "Calcium"
+    },
+    {
+      "id": "KW-0903",
+      "category": "Technical term",
+      "name": "Direct protein sequencing"
+    },
+    {
+      "id": "KW-0378",
+      "category": "Molecular function",
+      "name": "Hydrolase"
+    },
+    {
+      "id": "KW-0479",
+      "category": "Ligand",
+      "name": "Metal-binding"
+    },
+    {
+      "id": "KW-0645",
+      "category": "Molecular function",
+      "name": "Protease"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    },
+    {
+      "id": "KW-0788",
+      "category": "Molecular function",
+      "name": "Thiol protease"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    },
+    {
+      "id": "KW-0865",
+      "category": "PTM",
+      "name": "Zymogen"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "7864651",
+        "citationType": "journal article",
+        "authors": [
+          "Okamoto K.",
+          "Misumi Y.",
+          "Kadowaki T.",
+          "Yoneda M.",
+          "Yamamoto K.",
+          "Ikehara Y."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "7864651"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1006/abbi.1995.1123"
+          }
+        ],
+        "title": "Structural characterization of argingipain, a novel arginine-specific cysteine proteinase as a major periodontal pathogenic factor from Porphyromonas gingivalis.",
+        "publicationDate": "1995",
+        "journal": "Arch. Biochem. Biophys.",
+        "firstPage": "917",
+        "lastPage": "925",
+        "volume": "316"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]",
+        "PROTEIN SEQUENCE OF 228-290 AND 517-541",
+        "SUBCELLULAR LOCATION"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC BAA-1703 / FDC 381",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "1527017",
+        "citationType": "journal article",
+        "authors": [
+          "Chen Z.",
+          "Potempa J.",
+          "Polanowski A.",
+          "Wikstrom M.",
+          "Travis J."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "1527017"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/s0021-9258(19)37045-0"
+          }
+        ],
+        "title": "Purification and characterization of a 50-kDa cysteine proteinase (gingipain) from Porphyromonas gingivalis.",
+        "publicationDate": "1992",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "18896",
+        "lastPage": "18901",
+        "volume": "267"
+      },
+      "referencePositions": [
+        "PROTEIN SEQUENCE OF 228-270",
+        "SUBCELLULAR LOCATION",
+        "CATALYTIC ACTIVITY",
+        "ACTIVITY REGULATION"
+      ],
+      "referenceComments": [
+        {
+          "value": "HG66",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "D26470",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "BAA05484.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "I40229",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "I40229"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "P28784",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "P28784",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "MEROPS",
+      "id": "C25.001",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BRENDA",
+      "id": "3.4.22.37",
+      "properties": [
+        {
+          "key": "OrganismId",
+          "value": "756"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "1527017"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005509",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:calcium ion binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "1527017"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0004198",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:calcium-dependent cysteine-type endopeptidase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "1527017"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0006508",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:proteolysis"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "1527017"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd10913",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Peptidase_C25_N_gingipain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "2.60.40.3800:FF:000001",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Gingipain R2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "3.40.50.1460:FF:000031",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Gingipain R2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.60.40.3800",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.40.50.1460",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.40.50.10390",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Gingipain r, domain 1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.60.40.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Immunoglobulins"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR029030",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Caspase-like_dom_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR001769",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Gingipain"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR039392",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Gingipain_N"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR029031",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Gingipain_N_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR038490",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Gingipain_propep_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR013783",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Ig-like_fold"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR014756",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Ig_E-set"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR018832",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Pept_C25_gingipain_C"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR005536",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Peptidase_C25_Ig-like_domain"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR012600",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Propeptide_C25"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF10365",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "DUF2436"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF01364",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Peptidase_C25"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF03785",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Peptidase_C25_C"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF08126",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Propeptide_C25"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF52129",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Caspase-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF81296",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "E set domains"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MKNLNKFVSIALCSSLLGGMAFAQQTELGRNPNVRLLESTQQSVTKVQFRMDNLKFTEVQTPKGMAQVPTYTEGVNLSEKGMPTLPILSRSLAVSDTREMKVEVVSSKFIEKKNVLIAPSKGMIMRNEDPKKIPYVYGKSYSQNKFFPGEIATLDDPFILRDVRGQVVNFAPLQYNPVTKTLRIYTEITVAVSETSEQGKNILNKKGTFAGFEDTYKRMFMNYEPGRYTPVEEKQNGRMIVIVAKKYEGDIKDFVDWKNQRGLRTEVKVAEDIASPVTANAIQQFVKQEYEKEGNDLTYVLLVGDHKDIPAKITPGIKSDQVYGQIVGNDHYNEVFIGRFSCESKEDLKTQIDRTIHYERNITTEDKWLGQALCIASAEGGPSADNGESDIQHENVIANLLTQYGYTKIIKCYDPGVTPKNIIDAFNGGISLVNYTGHGSETAWGTSHFGTTHVKQLTNSNQLPFIFDVACVNGDFLFSMPCFAEALMRAQKDGKPTGTVAIIASTINQSWASPMRGQDEMNEILCEKHPNNIKRTFGGVTMNGMFAMVEKYKKDGEKMLDTWTVFGDPSLLVRTLVPTKMQVTAPAQINLTDASVNVSCDYNGAIATISANGKMFGSAVVENGTATINLTGLTNESTLTLTVVGYNKETVIKTINTNGEPNPYQPVSNLTATTQGQKVTLKWDAPSTKTNATTNTARSVDGIRELVLLSVSDAPELLRSGQAEIVLEAHDVWNDGSGYQILLDADHDQYGQVIPSDTHTLWPNCSVPANLFAPFEYTVPENADPSCSPTNMIMDGTASVNIPAGTYDFAIAAPQANAKIWIAGQGPTKEDDYVFEAGKKYHFLMKKMGSGDGTELTISEGGGSDYTYTVYRDGTKIKEGLTETTYRDAGMSAQSHEYCVEVKYAAGVSPKVCVDYIPDGVADVTAQKPYTLTVVGKTITVTCQGEAMIYDMNGRRLAAGRNTVVYTAQGGYYAVMVVVDGKSYVEKLAVK",
+    "length": 991,
+    "molWeight": 108782,
+    "crc64": "03EE3F43CEBE2544",
+    "md5": "0C0F7966E811E87AF6DC655320CDD49D"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "CATALYTIC ACTIVITY": 1,
+      "ACTIVITY REGULATION": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Propeptide": 1,
+      "Chain": 1,
+      "Active site": 2,
+      "Binding site": 13,
+      "Sequence conflict": 1
+    },
+    "uniParcId": "UPI000012829F"
+  }
+}

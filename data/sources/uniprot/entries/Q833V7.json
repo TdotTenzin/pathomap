@@ -1,0 +1,1868 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "Q833V7",
+  "secondaryAccessions": [
+    "A1E464",
+    "B5AN27",
+    "Q47786",
+    "Q9S385"
+  ],
+  "uniProtkbId": "GELE_ENTFA",
+  "entryAudit": {
+    "firstPublicDate": "2010-07-13",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2003-06-01",
+    "entryVersion": 110,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 4.0,
+  "organism": {
+    "scientificName": "Enterococcus faecalis (strain ATCC 700802 / V583)",
+    "taxonId": 226185,
+    "lineage": [
+      "Bacteria",
+      "Bacillati",
+      "Bacillota",
+      "Bacilli",
+      "Lactobacillales",
+      "Enterococcaceae",
+      "Enterococcus"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000303",
+            "source": "PubMed",
+            "id": "1846126"
+          },
+          {
+            "evidenceCode": "ECO:0000312",
+            "source": "EMBL",
+            "id": "ACF74544.2"
+          }
+        ],
+        "value": "Gelatinase"
+      },
+      "ecNumbers": [
+        {
+          "value": "3.4.24.30"
+        }
+      ]
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "8179636"
+            },
+            {
+              "evidenceCode": "ECO:0000312",
+              "source": "EMBL",
+              "id": "AAO81586.1"
+            }
+          ],
+          "value": "Coccolysin"
+        }
+      }
+    ],
+    "flag": "Precursor"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000303",
+            "source": "PubMed",
+            "id": "1846126"
+          },
+          {
+            "evidenceCode": "ECO:0000312",
+            "source": "EMBL",
+            "id": "ABL10087.1"
+          }
+        ],
+        "value": "gelE"
+      },
+      "orderedLocusNames": [
+        {
+          "value": "EF_1818"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "12775699"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "17261598"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "18941224"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "2536744"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "8179636"
+            }
+          ],
+          "value": "Metalloprotease capable of the hydrolysis of insoluble hydrophobic substrates. Hydrolyzes azocoll and gelatin and, at a lower rate, soluble and insoluble collagens. Does not cleave short synthetic peptides. Preferentially hydrolyzes the 24-Phe-|-Phe-25 bond in the insulin B-chain, followed by the 5-His-|-Leu-6 bond. Inactivates endothelin-1, primarily by cleavage of the 5-Ser-|-Leu-6 and 16-His-|-Leu-17 bonds. Hydrolyzes the alpha chain of C3 to generate a C3b-like protein. Inhibits complement-mediated hemolysis and opsinization of bacteria. Hydrolyzes the insect antimicrobial peptide cecropin. Decreases the length of E.faecalis chains via the activation of autolysin. Degrades polymerized fibrin"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "Preferential cleavage: Xaa-|-Leu, Xaa-|-Phe, Xaa-|-Tyr, Xaa-|-Ala.",
+        "ecNumber": "3.4.24.30",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "2536744"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "8179636"
+          }
+        ]
+      }
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "2536744"
+            }
+          ],
+          "value": "Inhibited by L-leucine hydroxamate and phosphoramidon. Not inhibited by phenylmethanesulfonyl fluoride. Reversibly inactivated by straight-chain aliphatic alcohols"
+        }
+      ],
+      "commentType": "ACTIVITY REGULATION"
+    },
+    {
+      "commentType": "BIOPHYSICOCHEMICAL PROPERTIES",
+      "phDependence": {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "2536744"
+              }
+            ],
+            "value": "Optimum pH is 7.2. Active from pH 6.0-8.0, activity decreases rapidly at more acidic pH values. Stable only above pH 5.6."
+          }
+        ]
+      }
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "17261598"
+              }
+            ],
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255"
+            }
+          ],
+          "value": "Belongs to the peptidase M4 family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    },
+    {
+      "commentType": "SEQUENCE CAUTION",
+      "sequenceCautionType": "Erroneous initiation",
+      "sequence": "AAA24778.1",
+      "note": "Truncated N-terminus.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ]
+    },
+    {
+      "commentType": "SEQUENCE CAUTION",
+      "sequenceCautionType": "Erroneous initiation",
+      "sequence": "ABL10087.1",
+      "note": "Truncated N-terminus.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ]
+    },
+    {
+      "commentType": "SEQUENCE CAUTION",
+      "sequenceCautionType": "Erroneous initiation",
+      "sequence": "BAA12802.1",
+      "note": "Truncated N-terminus.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 30,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Propeptide",
+      "location": {
+        "start": {
+          "value": 31,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 192,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "1846126"
+        }
+      ],
+      "featureId": "PRO_0000395367"
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 193,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 510,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Gelatinase",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "1846126"
+        }
+      ],
+      "featureId": "PRO_0000395368"
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 329,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 329,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P81177"
+        },
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU10095"
+        }
+      ]
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 419,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 419,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Proton donor",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P81177"
+        },
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU10095"
+        }
+      ]
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 324,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 324,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29108"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P81177"
+        }
+      ],
+      "ligand": {
+        "name": "Ca(2+)",
+        "id": "ChEBI:CHEBI:29108"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 328,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 328,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29105"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P81177"
+        },
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU10095"
+        }
+      ],
+      "ligand": {
+        "name": "Zn(2+)",
+        "id": "ChEBI:CHEBI:29105",
+        "note": "catalytic"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 332,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 332,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29105"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P81177"
+        },
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU10095"
+        }
+      ],
+      "ligand": {
+        "name": "Zn(2+)",
+        "id": "ChEBI:CHEBI:29105",
+        "note": "catalytic"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 352,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 352,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29105"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P81177"
+        },
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU10095"
+        }
+      ],
+      "ligand": {
+        "name": "Zn(2+)",
+        "id": "ChEBI:CHEBI:29105",
+        "note": "catalytic"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 376,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 376,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29108"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P81177"
+        }
+      ],
+      "ligand": {
+        "name": "Ca(2+)",
+        "id": "ChEBI:CHEBI:29108"
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 2,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 2,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 5; ACF74544",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {}
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 97,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 97,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 1; AAA24778, 2; BAA12802, 3; ABL10087 and 5; ACF74544",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "R",
+        "alternativeSequences": [
+          "K"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 130,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 130,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 1; AAA24778",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "I",
+        "alternativeSequences": [
+          "V"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 137,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 137,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 2; BAA12802",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "T",
+        "alternativeSequences": [
+          "N"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 159,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 159,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 3; ABL10087",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "V",
+        "alternativeSequences": [
+          "F"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 165,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 166,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 3; ABL10087",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "PT",
+        "alternativeSequences": [
+          "LI"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 206,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 206,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 1; AAA24778, 2; BAA12802 and 3; ABL10087",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "A",
+        "alternativeSequences": [
+          "T"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 248,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 249,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 1; AAA24778, 2; BAA12802 and 3; ABL10087",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "VA",
+        "alternativeSequences": [
+          "AT"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 248,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 248,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 5; ACF74544",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "V",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 255,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 255,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 1; AAA24778",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "V",
+        "alternativeSequences": [
+          "I"
+        ]
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0106",
+      "category": "Ligand",
+      "name": "Calcium"
+    },
+    {
+      "id": "KW-0903",
+      "category": "Technical term",
+      "name": "Direct protein sequencing"
+    },
+    {
+      "id": "KW-0378",
+      "category": "Molecular function",
+      "name": "Hydrolase"
+    },
+    {
+      "id": "KW-0479",
+      "category": "Ligand",
+      "name": "Metal-binding"
+    },
+    {
+      "id": "KW-0482",
+      "category": "Molecular function",
+      "name": "Metalloprotease"
+    },
+    {
+      "id": "KW-0645",
+      "category": "Molecular function",
+      "name": "Protease"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    },
+    {
+      "id": "KW-0862",
+      "category": "Ligand",
+      "name": "Zinc"
+    },
+    {
+      "id": "KW-0865",
+      "category": "PTM",
+      "name": "Zymogen"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "1846126",
+        "citationType": "journal article",
+        "authors": [
+          "Su Y.A.",
+          "Sulavik M.C.",
+          "He P.",
+          "Makinen K.K.",
+          "Makinen P.L.",
+          "Fiedler S.",
+          "Wirth R.",
+          "Clewell D.B."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "1846126"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.59.1.415-420.1991"
+          }
+        ],
+        "title": "Nucleotide sequence of the gelatinase gene (gelE) from Enterococcus faecalis subsp. liquefaciens.",
+        "publicationDate": "1991",
+        "journal": "Infect. Immun.",
+        "firstPage": "415",
+        "lastPage": "420",
+        "volume": "59"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]",
+        "PROTEIN SEQUENCE OF 193-200"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "1846126"
+            }
+          ],
+          "value": "OG1-10",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        },
+        {
+          "evidenceCode": "ECO:0000312",
+          "source": "EMBL",
+          "id": "AAA24778.1"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "16232519",
+        "citationType": "journal article",
+        "authors": [
+          "Kirimura K.",
+          "Kamigaki K.",
+          "Ebihara T.",
+          "Ishii Y.",
+          "Kanayama S.",
+          "Usami S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "16232519"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/s1389-1723(99)80115-7"
+          }
+        ],
+        "title": "Determination of nucleotide sequence related to the plasmid replication region in Enterococcus faecalis and its application to a new shuttle vector.",
+        "publicationDate": "1999",
+        "journal": "J. Biosci. Bioeng.",
+        "firstPage": "566",
+        "lastPage": "571",
+        "volume": "87"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 23655 / NBRC 3989 / NCDO 592",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        },
+        {
+          "evidenceCode": "ECO:0000312",
+          "source": "EMBL",
+          "id": "BAA12802.1"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "17261598",
+        "citationType": "journal article",
+        "authors": [
+          "Park S.Y.",
+          "Kim K.M.",
+          "Lee J.H.",
+          "Seo S.J.",
+          "Lee I.H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "17261598"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.01473-06"
+          }
+        ],
+        "title": "Extracellular gelatinase of Enterococcus faecalis destroys a defense system in insect hemolymph and human serum.",
+        "publicationDate": "2007",
+        "journal": "Infect. Immun.",
+        "firstPage": "1861",
+        "lastPage": "1869",
+        "volume": "75"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]",
+        "FUNCTION",
+        "SUBCELLULAR LOCATION"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "17261598"
+            }
+          ],
+          "value": "GM",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        },
+        {
+          "evidenceCode": "ECO:0000312",
+          "source": "EMBL",
+          "id": "ABL10087.1"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "12663927",
+        "citationType": "journal article",
+        "authors": [
+          "Paulsen I.T.",
+          "Banerjei L.",
+          "Myers G.S.A.",
+          "Nelson K.E.",
+          "Seshadri R.",
+          "Read T.D.",
+          "Fouts D.E.",
+          "Eisen J.A.",
+          "Gill S.R.",
+          "Heidelberg J.F.",
+          "Tettelin H.",
+          "Dodson R.J.",
+          "Umayam L.A.",
+          "Brinkac L.M.",
+          "Beanan M.J.",
+          "Daugherty S.C.",
+          "DeBoy R.T.",
+          "Durkin S.A.",
+          "Kolonay J.F.",
+          "Madupu R.",
+          "Nelson W.C.",
+          "Vamathevan J.J.",
+          "Tran B.",
+          "Upton J.",
+          "Hansen T.",
+          "Shetty J.",
+          "Khouri H.M.",
+          "Utterback T.R.",
+          "Radune D.",
+          "Ketchum K.A.",
+          "Dougherty B.A.",
+          "Fraser C.M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "12663927"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1126/science.1080613"
+          }
+        ],
+        "title": "Role of mobile DNA in the evolution of vancomycin-resistant Enterococcus faecalis.",
+        "publicationDate": "2003",
+        "journal": "Science",
+        "firstPage": "2071",
+        "lastPage": "2074",
+        "volume": "299"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 700802 / V583",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000312",
+          "source": "EMBL",
+          "id": "AAO81586.1"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "19222538",
+        "citationType": "journal article",
+        "authors": [
+          "Macovei L.",
+          "Ghosh A.",
+          "Thomas V.C.",
+          "Hancock L.E.",
+          "Mahmood S.",
+          "Zurek L."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "19222538"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1111/j.1462-2920.2009.01881.x"
+          }
+        ],
+        "title": "Enterococcus faecalis with the gelatinase phenotype regulated by the fsr operon and with biofilm-forming capacity are common in the agricultural environment.",
+        "publicationDate": "2009",
+        "journal": "Environ. Microbiol.",
+        "firstPage": "1540",
+        "lastPage": "1547",
+        "volume": "11"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 1-502"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000312",
+              "source": "EMBL",
+              "id": "ACF74544.2"
+            }
+          ],
+          "value": "H81",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        },
+        {
+          "evidenceCode": "ECO:0000312",
+          "source": "EMBL",
+          "id": "ACF74544.2"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "2536744",
+        "citationType": "journal article",
+        "authors": [
+          "Makinen P.L.",
+          "Clewell D.B.",
+          "An F.",
+          "Makinen K.K."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "2536744"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/s0021-9258(18)94069-x"
+          }
+        ],
+        "title": "Purification and substrate specificity of a strongly hydrophobic extracellular metalloendopeptidase ('gelatinase') from Streptococcus faecalis (strain 0G1-10).",
+        "publicationDate": "1989",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "3325",
+        "lastPage": "3334",
+        "volume": "264"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "CATALYTIC ACTIVITY",
+        "ACTIVITY REGULATION",
+        "BIOPHYSICOCHEMICAL PROPERTIES"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 7,
+      "citation": {
+        "id": "8179636",
+        "citationType": "journal article",
+        "authors": [
+          "Makinen P.L.",
+          "Makinen K.K."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8179636"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1006/bbrc.1994.1546"
+          }
+        ],
+        "title": "The Enterococcus faecalis extracellular metalloendopeptidase (EC 3.4.24.30; coccolysin) inactivates human endothelin at bonds involving hydrophobic amino acid residues.",
+        "publicationDate": "1994",
+        "journal": "Biochem. Biophys. Res. Commun.",
+        "firstPage": "981",
+        "lastPage": "985",
+        "volume": "200"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "CATALYTIC ACTIVITY"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 8,
+      "citation": {
+        "id": "12775699",
+        "citationType": "journal article",
+        "authors": [
+          "Waters C.M.",
+          "Antiporta M.H.",
+          "Murray B.E.",
+          "Dunny G.M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "12775699"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.185.12.3613-3623.2003"
+          }
+        ],
+        "title": "Role of the Enterococcus faecalis GelE protease in determination of cellular chain length, supernatant pheromone levels, and degradation of fibrin and misfolded surface proteins.",
+        "publicationDate": "2003",
+        "journal": "J. Bacteriol.",
+        "firstPage": "3613",
+        "lastPage": "3623",
+        "volume": "185"
+      },
+      "referencePositions": [
+        "FUNCTION"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 9,
+      "citation": {
+        "id": "18941224",
+        "citationType": "journal article",
+        "authors": [
+          "Park S.Y.",
+          "Shin Y.P.",
+          "Kim C.H.",
+          "Park H.J.",
+          "Seong Y.S.",
+          "Kim B.S.",
+          "Seo S.J.",
+          "Lee I.H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "18941224"
+          },
+          {
+            "database": "DOI",
+            "id": "10.4049/jimmunol.181.9.6328"
+          }
+        ],
+        "title": "Immune evasion of Enterococcus faecalis by an extracellular gelatinase that cleaves C3 and iC3b.",
+        "publicationDate": "2008",
+        "journal": "J. Immunol.",
+        "firstPage": "6328",
+        "lastPage": "6336",
+        "volume": "181"
+      },
+      "referencePositions": [
+        "FUNCTION"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "M37185",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA24778.1"
+        },
+        {
+          "key": "Status",
+          "value": "ALT_INIT"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "D85393",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "BAA12802.1"
+        },
+        {
+          "key": "Status",
+          "value": "ALT_INIT"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "EF105504",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ABL10087.1"
+        },
+        {
+          "key": "Status",
+          "value": "ALT_INIT"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AE016830",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAO81586.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "EU862241",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ACF74544.2"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "A43580",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "A43580"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_002369251.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_004668.1"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q833V7",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "Q833V7",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "IntAct",
+      "id": "Q833V7",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "226185.EF_1818",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BindingDB",
+      "id": "Q833V7",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "MEROPS",
+      "id": "M04.007",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PaxDb",
+      "id": "226185-EF_1818",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "DNASU",
+      "id": "1200704",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblBacteria",
+      "id": "AAO81586",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAO81586"
+        },
+        {
+          "key": "GeneId",
+          "value": "EF_1818"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "efa:EF1818",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|226185.9.peg.1708",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "COG3227",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Bacteria"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_008590_5_2_9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "TAHINDN",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000001415",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "17261598"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0004222",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:metalloendopeptidase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0006508",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:proteolysis"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd09597",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "M4_TLP"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.10.170.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.10.450.490",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.10.390.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Neutral Protease Domain 2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR011096",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FTP_domain"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR023612",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Peptidase_M4"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR027268",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Peptidase_M4/M1_CTD_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR001570",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Peptidase_M4_C_domain"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR013856",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Peptidase_M4_domain"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR050728",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Zinc_Metalloprotease_M4"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR33794",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "BACILLOLYSIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR33794:SF1",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "BACILLOLYSIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF07504",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FTP"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF01447",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Peptidase_M4"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF02868",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Peptidase_M4_C"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR00730",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "THERMOLYSIN"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF55486",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Metalloproteases ('zincins'), catalytic domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS00142",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ZINC_PROTEASE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MMKGNKILYILGTGIFVGSSCLFSSLFVAAEEQVYSESEVSTVLSKLEKEAISEAAAEQYTVVDRKEDAWGMKHLKLEKQTEGVTVDSDNVIIHLDRNGAVTSVTGNPVDQVVKIQSVDAIGEEGVKKIIASDNPETKDLVFLAIDKRVNNEGQLFYKVRVTSSPTGDPVSLVYKVNATDGTIMEKQDLTEHVGSEVTLKNSFQVAFNVPVEKSNTGIALHGTDNTGVYHAVVDGKNNYSIIQAPSLVALNQNAVDAYTHGKFVKTYYEDHFQRHSIDDRGMPILSVVDEQHPDAYDNAFWDGKAMRYGETSTPTGKTYASSLDVVGHEMTHGVTEHTAGLEYLGQSGALNESYSDLMGYIISGASNPEIGADTQSVDRKTGIRNLQTPSKHGQPETMAQYDDRARYKGTPYYDQGGVHYNSGIINRIGYTIIQNLGIEKAQTIFYSSLVNYLTPKAQFSDARDAMLAAAKVQYGDEAASVVSAAFNSAGIGAKEDIQVNQPSESVLVNE",
+    "length": 510,
+    "molWeight": 55504,
+    "crc64": "9E2E378D38BAC1D1",
+    "md5": "5406EE961D2B6D22DE3B6B26F94DFC21"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "CATALYTIC ACTIVITY": 1,
+      "ACTIVITY REGULATION": 1,
+      "BIOPHYSICOCHEMICAL PROPERTIES": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "SIMILARITY": 1,
+      "SEQUENCE CAUTION": 3
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Propeptide": 1,
+      "Chain": 1,
+      "Active site": 2,
+      "Binding site": 5,
+      "Sequence conflict": 10
+    },
+    "uniParcId": "UPI000005C316"
+  }
+}

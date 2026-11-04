@@ -1,0 +1,983 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "Q56740",
+  "uniProtkbId": "LEP4_VIBVU",
+  "entryAudit": {
+    "firstPublicDate": "2000-05-30",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "1996-11-01",
+    "entryVersion": 139,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 3.0,
+  "organism": {
+    "scientificName": "Vibrio vulnificus (strain CMCP6)",
+    "taxonId": 216895,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Gammaproteobacteria",
+      "Vibrionales",
+      "Vibrionaceae",
+      "Vibrio"
+    ]
+  },
+  "proteinExistence": "3: Inferred from homology",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Prepilin leader peptidase/N-methyltransferase"
+      }
+    },
+    "includes": [
+      {
+        "recommendedName": {
+          "fullName": {
+            "value": "Leader peptidase"
+          },
+          "ecNumbers": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000250",
+                  "source": "UniProtKB",
+                  "id": "P22610"
+                }
+              ],
+              "value": "3.4.23.43"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "value": "Prepilin peptidase"
+            }
+          }
+        ]
+      },
+      {
+        "recommendedName": {
+          "fullName": {
+            "value": "N-methyltransferase"
+          },
+          "ecNumbers": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000250",
+                  "source": "UniProtKB",
+                  "id": "P22610"
+                }
+              ],
+              "value": "2.1.1.-"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "vvpD"
+      },
+      "orderedLocusNames": [
+        {
+          "value": "VV1_1623"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "P22610"
+            }
+          ],
+          "value": "Plays an essential role in type IV pili and type II pseudopili formation by proteolytically removing the leader sequence from substrate proteins and subsequently monomethylating the alpha-amino group of the newly exposed N-terminal phenylalanine"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "Typically cleaves a -Gly-|-Phe- bond to release an N-terminal, basic peptide of 5-8 residues from type IV prepilin, and then N-methylates the new N-terminal amino group, the methyl donor being S-adenosyl-L-methionine.",
+        "ecNumber": "3.4.23.43",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000250",
+            "source": "UniProtKB",
+            "id": "P22610"
+          }
+        ]
+      }
+    },
+    {
+      "commentType": "COFACTOR",
+      "cofactors": [
+        {
+          "name": "Zn(2+)",
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "P22610"
+            }
+          ],
+          "cofactorCrossReference": {
+            "database": "ChEBI",
+            "id": "CHEBI:29105"
+          }
+        }
+      ],
+      "note": {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250",
+                "source": "UniProtKB",
+                "id": "P22610"
+              }
+            ],
+            "value": "Zinc is required for the N-terminal methylation of the mature pilin, but not for signal peptide cleavage."
+          }
+        ]
+      }
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250",
+                "source": "UniProtKB",
+                "id": "P22610"
+              }
+            ],
+            "value": "Cell inner membrane",
+            "id": "SL-0037"
+          },
+          "topology": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250",
+                "source": "UniProtKB",
+                "id": "P22610"
+              }
+            ],
+            "value": "Multi-pass membrane protein",
+            "id": "SL-9909"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "18604505"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "9826339"
+            }
+          ],
+          "value": "Deletion mutants are unable to secrete several extracellular degradative enzymes including the cytolysin/hemolysin tthat remains in the periplasmic space (PubMed:18604505). It results also in significant decreases in host cell cytotoxicity, adherence and virulence in a mouse mode (PubMed:9826339)"
+        }
+      ],
+      "commentType": "DISRUPTION PHENOTYPE"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the peptidase A24 family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 289,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Prepilin leader peptidase/N-methyltransferase",
+      "featureId": "PRO_0000192630"
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 10,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 30,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 102,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 122,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 126,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 146,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 182,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 202,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 227,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 247,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 254,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 274,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 70,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 70,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29105"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P22610"
+        }
+      ],
+      "ligand": {
+        "name": "Zn(2+)",
+        "id": "ChEBI:CHEBI:29105"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 73,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 73,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29105"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P22610"
+        }
+      ],
+      "ligand": {
+        "name": "Zn(2+)",
+        "id": "ChEBI:CHEBI:29105"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 95,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 95,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29105"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P22610"
+        }
+      ],
+      "ligand": {
+        "name": "Zn(2+)",
+        "id": "ChEBI:CHEBI:29105"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 98,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 98,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29105"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P22610"
+        }
+      ],
+      "ligand": {
+        "name": "Zn(2+)",
+        "id": "ChEBI:CHEBI:29105"
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0997",
+      "category": "Cellular component",
+      "name": "Cell inner membrane"
+    },
+    {
+      "id": "KW-1003",
+      "category": "Cellular component",
+      "name": "Cell membrane"
+    },
+    {
+      "id": "KW-0378",
+      "category": "Molecular function",
+      "name": "Hydrolase"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-0479",
+      "category": "Ligand",
+      "name": "Metal-binding"
+    },
+    {
+      "id": "KW-0489",
+      "category": "Molecular function",
+      "name": "Methyltransferase"
+    },
+    {
+      "id": "KW-0511",
+      "category": "Molecular function",
+      "name": "Multifunctional enzyme"
+    },
+    {
+      "id": "KW-0645",
+      "category": "Molecular function",
+      "name": "Protease"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0949",
+      "category": "Ligand",
+      "name": "S-adenosyl-L-methionine"
+    },
+    {
+      "id": "KW-0808",
+      "category": "Molecular function",
+      "name": "Transferase"
+    },
+    {
+      "id": "KW-0812",
+      "category": "Domain",
+      "name": "Transmembrane"
+    },
+    {
+      "id": "KW-1133",
+      "category": "Domain",
+      "name": "Transmembrane helix"
+    },
+    {
+      "id": "KW-0862",
+      "category": "Ligand",
+      "name": "Zinc"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "CI-CKLB57365BH2Q",
+        "citationType": "submission",
+        "authors": [
+          "Strom M.S.",
+          "Lara J.C."
+        ],
+        "publicationDate": "FEB-1996",
+        "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "MO6-24",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "9826339",
+        "citationType": "journal article",
+        "authors": [
+          "Paranjpye R.N.",
+          "Lara J.C.",
+          "Pepe J.C.",
+          "Pepe C.M.",
+          "Strom M.S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9826339"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.66.12.5659-5668.1998"
+          }
+        ],
+        "title": "The type IV leader peptidase/N-methyltransferase of Vibrio vulnificus controls factors required for adherence to HEp-2 cells and virulence in iron-overloaded mice.",
+        "publicationDate": "1998",
+        "journal": "Infect. Immun.",
+        "firstPage": "5659",
+        "lastPage": "5668",
+        "volume": "66"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]",
+        "FUNCTION",
+        "DISRUPTION PHENOTYPE"
+      ],
+      "referenceComments": [
+        {
+          "value": "C7184",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "CI-EIG5UDHQRCFG3",
+        "citationType": "submission",
+        "authors": [
+          "Rhee J.H.",
+          "Kim S.Y.",
+          "Chung S.S.",
+          "Kim J.J.",
+          "Moon Y.H.",
+          "Jeong H.",
+          "Choy H.E."
+        ],
+        "title": "Complete genome sequence of Vibrio vulnificus CMCP6.",
+        "publicationDate": "DEC-2002",
+        "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "CMCP6",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "18604505",
+        "citationType": "journal article",
+        "authors": [
+          "Park J.",
+          "Ryu S.Y.",
+          "Kim C.M.",
+          "Shin S.H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "18604505"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1007/s12275-008-0058-6"
+          }
+        ],
+        "title": "Two forms of Vibrio vulnificus metalloprotease VvpE are secreted via the type II general secretion system.",
+        "publicationDate": "2008",
+        "journal": "J. Microbiol.",
+        "firstPage": "338",
+        "lastPage": "343",
+        "volume": "46"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "DISRUPTION PHENOTYPE"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "U48808",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA91206.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF070934",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAC23601.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AE016795",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAO10042.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_011079548.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_004459.3"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q56740",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "MEROPS",
+      "id": "A24.001",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "vvu:VV1_1623",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_057101_0_0_6",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AACHAPI",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000002275",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome I"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005886",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:plasma membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISS:UniProtKB"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0004190",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:aspartic-type endopeptidase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISS:UniProtKB"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "1.20.120.1220:FF:000001",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Type 4 prepilin-like proteins leader peptide-processing enzyme"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.20.120.1220",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR014032",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Peptidase_A24A_bac"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR000045",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Prepilin_IV_endopep_pep"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR010627",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Prepilin_pept_A24_N"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR050882",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Prepilin_peptidase/N-MTase"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR30487:SF0",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PREPILIN LEADER PEPTIDASE_N-METHYLTRANSFERASE-RELATED"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR30487",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TYPE 4 PREPILIN-LIKE PROTEINS LEADER PEPTIDE-PROCESSING ENZYME"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF06750",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "A24_N_bact"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF01478",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Peptidase_A24"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR00864",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PREPILNPTASE"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MDALQYYPWLYIGLASLFGLLVGSFLNVVIYRLPKIMELEWRQECAESFPEYNITPPTETLTLSTPRSSCPSCHTPIRVRDNIPVFSWLALRGKCHHCQTKISARYPFVEALSAFLCGLVAWKFGYAPITVALIGFTLVLIAATFIDLDTMLLPDQLTLPLTWTGIALALLEISPVSLQDSVFGAMAGYLCLWSVYHLFRLLTGKEGMGYGDFKLLAALGAWLGWQYLPMIILLSSVVGLIFGLIQLRLQKQGIEMAFPFGPYLAIAGWVALMWGDSLMSWYLNYLIGA",
+    "length": 289,
+    "molWeight": 32295,
+    "crc64": "0B3479B870F9C6B0",
+    "md5": "74D9EC864A15231923B3D2867AA2A413"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "CATALYTIC ACTIVITY": 1,
+      "COFACTOR": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "DISRUPTION PHENOTYPE": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Transmembrane": 6,
+      "Binding site": 4
+    },
+    "uniParcId": "UPI0000058D0C"
+  }
+}

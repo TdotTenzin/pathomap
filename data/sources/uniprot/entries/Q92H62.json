@@ -1,0 +1,607 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "Q92H62",
+  "uniProtkbId": "RICKA_RICCN",
+  "entryAudit": {
+    "firstPublicDate": "2006-10-31",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2006-10-31",
+    "entryVersion": 92,
+    "sequenceVersion": 2
+  },
+  "annotationScore": 3.0,
+  "organism": {
+    "scientificName": "Rickettsia conorii (strain ATCC VR-613 / Malish 7)",
+    "taxonId": 272944,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Alphaproteobacteria",
+      "Rickettsiales",
+      "Rickettsiaceae",
+      "Rickettsieae",
+      "Rickettsia",
+      "spotted fever group"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Arp2/3 complex-activating protein rickA"
+      }
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "Actin polymerization protein rickA"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "rickA"
+      },
+      "orderedLocusNames": [
+        {
+          "value": "RC0909"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "14749835"
+            }
+          ],
+          "value": "Recruits and activates the Arp2/3 complex, which in turn leads to actin polymerization, promoting Rickettsia motility during infection"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "14749835"
+            }
+          ],
+          "value": "Homodimer"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "14749835"
+              }
+            ],
+            "value": "Cell surface",
+            "id": "SL-0310"
+          }
+        }
+      ]
+    },
+    {
+      "commentType": "SEQUENCE CAUTION",
+      "sequenceCautionType": "Erroneous initiation",
+      "sequence": "AAL03447.1",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 517,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Arp2/3 complex-activating protein rickA",
+      "featureId": "PRO_0000259652"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 406,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 423,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "WH2"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 313,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 441,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 444,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 477,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Central and acidic domains"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 461,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 517,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 319,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 340,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Pro residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 347,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 378,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Pro residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 463,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 479,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Low complexity",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 500,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 517,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Polar residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0009",
+      "category": "Molecular function",
+      "name": "Actin-binding"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "11557893",
+        "citationType": "journal article",
+        "authors": [
+          "Ogata H.",
+          "Audic S.",
+          "Renesto-Audiffren P.",
+          "Fournier P.-E.",
+          "Barbe V.",
+          "Samson D.",
+          "Roux V.",
+          "Cossart P.",
+          "Weissenbach J.",
+          "Claverie J.-M.",
+          "Raoult D."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11557893"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1126/science.1061471"
+          }
+        ],
+        "title": "Mechanisms of evolution in Rickettsia conorii and R. prowazekii.",
+        "publicationDate": "2001",
+        "journal": "Science",
+        "firstPage": "2093",
+        "lastPage": "2098",
+        "volume": "293"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC VR-613 / Malish 7",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "14749835",
+        "citationType": "journal article",
+        "authors": [
+          "Gouin E.",
+          "Egile C.",
+          "Dehoux P.",
+          "Villiers V.",
+          "Adams J.",
+          "Gertler F.",
+          "Li R.",
+          "Cossart P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "14749835"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/nature02318"
+          }
+        ],
+        "title": "The RickA protein of Rickettsia conorii activates the Arp2/3 complex.",
+        "publicationDate": "2004",
+        "journal": "Nature",
+        "firstPage": "457",
+        "lastPage": "461",
+        "volume": "427"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "SUBUNIT",
+        "SUBCELLULAR LOCATION"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC VR-613 / Malish 7",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AE006914",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAL03447.1"
+        },
+        {
+          "key": "Status",
+          "value": "ALT_INIT"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "E97813",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "E97813"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_041471735.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_003103.1"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q92H62",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "Q92H62",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "928848",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "rco:RC0909",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|272944.4.peg.1033",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_567284_0_0_5",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "ADHMTAK",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000000816",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009986",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cell surface"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "6.10.280.150",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR051661",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Actin_filament_regulator"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR47102",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PROTEIN BNI1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR47102:SF2",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PROTEIN BNI1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR01217",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PRICHEXTENSN"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MVKEIDINKLLAQENNALNTILSQVNELCKQNKQLQGLIEIQNETKELEKEHNRSLPWFKRFVKTVSNVKYILIKSEEQLTNEAIKYNNKILKDIDNKIYNIAEKSAPLKQALQEEIEKNFKDLTKKDLSKDQRARLSEVFFSYKSKPERFSALHMTNPLQFINAEALEKQYNSLNATKQNIQNLISANSNIKELKEIQKQVAEIRAEVPHTFFEKLNNIWQNVKNVFVNNSEQVLAKNKESNTRTIRKIDEQLYKTKHKFEELIENKERNIKDIIAKLPDNEKLQKIVSNLTNHMASQKEPILANASLAKPLENNITPPSPLPENNIPSPPPPPPPSPLPENNIPSSPPPPPPPPLPENNIPSPPPPPPPPPPPPMAPAQAETLSKPIESTTVKKLANQPRPSIDTSDLMREIAGPKKLKKVEFDPNTGKPVAHSHSKPAQNVNALSGLESIFARRAVIKVSDSSSSESDSGNWSDVSVNRNKSKMLKTKGERDAKMTTHAQKINNRNSQNPSFVR",
+    "length": 517,
+    "molWeight": 58359,
+    "crc64": "97ED615E0957D130",
+    "md5": "0DA2599B68A3256E554BBAA262DCC116"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "SEQUENCE CAUTION": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Domain": 1,
+      "Region": 3,
+      "Compositional bias": 4
+    },
+    "uniParcId": "UPI0000E570E8"
+  }
+}

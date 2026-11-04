@@ -1,0 +1,585 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "P11764",
+  "uniProtkbId": "FMM2_NEIGO",
+  "entryAudit": {
+    "firstPublicDate": "1989-10-01",
+    "lastAnnotationUpdateDate": "2026-09-02",
+    "lastSequenceUpdateDate": "1989-10-01",
+    "entryVersion": 101,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 3.0,
+  "organism": {
+    "scientificName": "Neisseria gonorrhoeae",
+    "taxonId": 485,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Betaproteobacteria",
+      "Neisseriales",
+      "Neisseriaceae",
+      "Neisseria"
+    ]
+  },
+  "proteinExistence": "3: Inferred from homology",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Type IV major pilin protein PilE"
+      }
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "Pilin"
+        }
+      }
+    ],
+    "flag": "Precursor"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "pilE"
+      }
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "P02974"
+            }
+          ],
+          "value": "Major component of the type IV pilus (T4P) that plays a role in cellular adherence, microcolony formation, resistance to neutrophil mediated killing, twitching motility as well as transformation. Mediates the attachment and the formation of bacterial microcolonies on host epithelial cells. Mechanistically, pili retractation induces host NF-kappa-B activation in infected cells, which is temporally associated with the formation of gonococcal microcolonies"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "value": "The pili are polar flexible filaments of about 5.4 nanometers diameter and 2.5 micrometers average length; they consist of only a single polypeptide chain arranged in a helical configuration of five subunits per turn in the assembled pilus"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "value": "Fimbrium",
+            "id": "SL-0113"
+          }
+        },
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255"
+              }
+            ],
+            "value": "Membrane",
+            "id": "SL-0162"
+          },
+          "topology": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255"
+              }
+            ],
+            "value": "Single-pass membrane protein",
+            "id": "SL-9904"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the N-Me-Phe pilin family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Propeptide",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 7,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Leader sequence",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01070"
+        }
+      ],
+      "featureId": "PRO_0000024156"
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 8,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 167,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Type IV major pilin protein PilE",
+      "featureId": "PRO_0000024157"
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 8,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 28,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Modified residue",
+      "location": {
+        "start": {
+          "value": 8,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 8,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-methylphenylalanine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01070"
+        }
+      ]
+    },
+    {
+      "type": "Glycosylation",
+      "location": {
+        "start": {
+          "value": 70,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 70,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "O-linked (GlcNAc...) serine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250"
+        }
+      ],
+      "featureId": ""
+    },
+    {
+      "type": "Disulfide bond",
+      "location": {
+        "start": {
+          "value": 127,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 160,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0130",
+      "category": "Biological process",
+      "name": "Cell adhesion"
+    },
+    {
+      "id": "KW-1015",
+      "category": "PTM",
+      "name": "Disulfide bond"
+    },
+    {
+      "id": "KW-0281",
+      "category": "Cellular component",
+      "name": "Fimbrium"
+    },
+    {
+      "id": "KW-0325",
+      "category": "PTM",
+      "name": "Glycoprotein"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-0488",
+      "category": "PTM",
+      "name": "Methylation"
+    },
+    {
+      "id": "KW-0812",
+      "category": "Domain",
+      "name": "Transmembrane"
+    },
+    {
+      "id": "KW-1133",
+      "category": "Domain",
+      "name": "Transmembrane helix"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "2894335",
+        "citationType": "journal article",
+        "authors": [
+          "Perry A.C.F.",
+          "Nicholson I.J.",
+          "Saunders J.R."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "2894335"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/0378-1119(87)90216-2"
+          }
+        ],
+        "title": "Structural analysis of the pilE region of Neisseria gonorrhoeae P9.",
+        "publicationDate": "1987",
+        "journal": "Gene",
+        "firstPage": "85",
+        "lastPage": "92",
+        "volume": "60"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "P9-2",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "M18245",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA25473.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "A29611",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "A29611"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "P11764",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "P11764",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GlyCosmos",
+      "id": "P11764",
+      "properties": [
+        {
+          "key": "glycosylation",
+          "value": "1 site, No reported glycans"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0016020",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009289",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:pilus"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0007155",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:cell adhesion"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.30.700.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Glycoprotein, Type 4 Pilin"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR012902",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "N_methyl_site"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR001082",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Pilin"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR045584",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Pilin-like"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "TIGR02532",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "IV_pilin_GFxxxE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR30093",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "GENERAL SECRETION PATHWAY PROTEIN G"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR30093:SF34",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PREPILIN PEPTIDASE-DEPENDENT PROTEIN D"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF07963",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "N_methyl"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00114",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Pilin"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF54523",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Pili subunits"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS00409",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PROKAR_NTER_METHYL"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MNTLQKGFTLIELMIVIAIVGILAAVALPAYQDYTARAQVSEAILLAEGQKSAVTEYYLNHGIWPKDNTSAGVASSSSIKGKYVKEVKVENGVVTATMNSSNVNKEIQGKKLSLWAKRQDGSVKWFCGQPVTRNAKDDTVTADATGNDGKIDTKHLPSTCRDNFDAS",
+    "length": 167,
+    "molWeight": 18010,
+    "crc64": "E8E20659089F78E5",
+    "md5": "D6F8CCEE6E96A29284E1C9A524247520"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Propeptide": 1,
+      "Chain": 1,
+      "Transmembrane": 1,
+      "Modified residue": 1,
+      "Glycosylation": 1,
+      "Disulfide bond": 1
+    },
+    "uniParcId": "UPI000012AAA6"
+  }
+}

@@ -1,0 +1,542 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "Q48445",
+  "uniProtkbId": "YC19_KLEPN",
+  "entryAudit": {
+    "firstPublicDate": "1997-11-01",
+    "lastAnnotationUpdateDate": "2026-09-02",
+    "lastSequenceUpdateDate": "1997-11-01",
+    "entryVersion": 96,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 2.0,
+  "organism": {
+    "scientificName": "Klebsiella pneumoniae",
+    "taxonId": 573,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Gammaproteobacteria",
+      "Enterobacterales",
+      "Enterobacteriaceae",
+      "Klebsiella",
+      "Klebsiella pneumoniae complex"
+    ]
+  },
+  "proteinExistence": "3: Inferred from homology",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Protein in cps region"
+      }
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "ORF19"
+        }
+      }
+    ],
+    "flag": "Fragment"
+  },
+  "comments": [
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000305"
+              }
+            ],
+            "value": "Cell membrane",
+            "id": "SL-0039"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "In the C-terminal section; belongs to the CorC/HlyC family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 320,
+          "modifier": "OUTSIDE"
+        }
+      },
+      "description": "Protein in cps region",
+      "featureId": "PRO_0000088385"
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 4,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 24,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 121,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 183,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "CBS 1",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00703"
+        }
+      ]
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 186,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 244,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "CBS 2",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00703"
+        }
+      ]
+    },
+    {
+      "type": "Non-terminal residue",
+      "location": {
+        "start": {
+          "value": 320,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 320,
+          "modifier": "EXACT"
+        }
+      },
+      "description": ""
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0129",
+      "category": "Domain",
+      "name": "CBS domain"
+    },
+    {
+      "id": "KW-1003",
+      "category": "Cellular component",
+      "name": "Cell membrane"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-0677",
+      "category": "Domain",
+      "name": "Repeat"
+    },
+    {
+      "id": "KW-0812",
+      "category": "Domain",
+      "name": "Transmembrane"
+    },
+    {
+      "id": "KW-1133",
+      "category": "Domain",
+      "name": "Transmembrane helix"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "7896702",
+        "citationType": "journal article",
+        "authors": [
+          "Arakawa Y.",
+          "Wacharotayankun R.",
+          "Nagatsuka T.",
+          "Ito H.",
+          "Kato N.",
+          "Ohta M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "7896702"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.177.7.1788-1796.1995"
+          }
+        ],
+        "title": "Genomic organization of the Klebsiella pneumoniae cps region responsible for serotype K2 capsular polysaccharide synthesis in the virulent strain Chedid.",
+        "publicationDate": "1995",
+        "journal": "J. Bacteriol.",
+        "firstPage": "1788",
+        "lastPage": "1796",
+        "volume": "177"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "Chedid",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "D21242",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "BAA21009.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q48445",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "Q48445",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005886",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:plasma membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0050660",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:flavin adenine dinucleotide binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd04590",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CBS_pair_CorC_HlyC_assoc"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "3.10.580.10:FF:000011",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TerC family inner membrane protein"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.30.465.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.10.580.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CBS-domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR000644",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CBS_dom"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR046342",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CBS_dom_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036318",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FAD-bd_PCMH-like_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR016169",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FAD-bd_PCMH_sub2"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR044751",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Ion_transp-like_CBS"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR005170",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Transptr-assoc_dom"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR22777",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "HEMOLYSIN-RELATED"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR22777:SF30",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "UPF0053 PROTEIN YEGH"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00571",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CBS"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF03471",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CorC_HlyC"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF54631",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CBS-domain pair"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF56176",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FAD-binding/transporter-associated domain-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51371",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CBS"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "2"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MILCLSFLLMIGFSLIAEGFSFIIPKGYLYAAIGFSVMIEALNQLAQFNRRRFLSANMTLRQRTTEAVMNLLSGQKEKAELDADTASLVADQDQHPLFNPQERLMIERVLNLNQRSVSSIMTSRHDIERINLSAPEEEIRSLVEKNQHTRLVVTGGKDNEDLLGVVHVIDLLQQSLRQEPLDLQALVRQPLVFPEGLPLLSALEQFRQARTHFAFVVDEFGSVEGIVTLSDVMETIAGNLPNEVEEIDARHDIQHHQDGSWTVNGHMPLEDLVQYVPLPLDDKREYHTVAGLLMEYLQHVPQWGRPLRLTVIPCARCRST",
+    "length": 320,
+    "molWeight": 36282,
+    "crc64": "23F964B82E058D72",
+    "md5": "BEEAB623543DE6B973567872958D0801"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "SUBCELLULAR LOCATION": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Transmembrane": 1,
+      "Domain": 2,
+      "Non-terminal residue": 1
+    },
+    "uniParcId": "UPI000013A44F"
+  }
+}

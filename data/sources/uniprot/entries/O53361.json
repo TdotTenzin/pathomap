@@ -1,0 +1,1423 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "O53361",
+  "secondaryAccessions": [
+    "F2GKY3",
+    "I6X6Y4",
+    "Q7D5Q7"
+  ],
+  "uniProtkbId": "SAPM_MYCTU",
+  "entryAudit": {
+    "firstPublicDate": "2017-02-15",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "1998-06-01",
+    "entryVersion": 153,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 5.0,
+  "organism": {
+    "scientificName": "Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)",
+    "taxonId": 83332,
+    "lineage": [
+      "Bacteria",
+      "Bacillati",
+      "Actinomycetota",
+      "Actinomycetes",
+      "Mycobacteriales",
+      "Mycobacteriaceae",
+      "Mycobacterium",
+      "Mycobacterium tuberculosis complex"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000303",
+            "source": "PubMed",
+            "id": "15753315"
+          }
+        ],
+        "value": "Phosphatidylinositol-3-phosphatase"
+      },
+      "shortNames": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "15753315"
+            }
+          ],
+          "value": "PI3P phosphatase"
+        }
+      ],
+      "ecNumbers": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "15753315"
+            }
+          ],
+          "value": "3.1.3.64"
+        }
+      ]
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "11073936"
+            }
+          ],
+          "value": "Acid phosphatase SapM"
+        },
+        "ecNumbers": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "11073936"
+              }
+            ],
+            "value": "3.1.3.2"
+          }
+        ]
+      },
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "11073936"
+            }
+          ],
+          "value": "Secreted acid phosphatase"
+        }
+      }
+    ],
+    "flag": "Precursor"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000303",
+            "source": "PubMed",
+            "id": "11073936"
+          }
+        ],
+        "value": "sapM"
+      },
+      "orderedLocusNames": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000312",
+              "source": "EMBL",
+              "id": "CCP46129.1"
+            }
+          ],
+          "value": "Rv3310"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11073936"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "15753315"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "23923000"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "25896765"
+            }
+          ],
+          "value": "Virulence factor that plays an important role in blocking phagosome-lysosome fusion and thus participates in the intracellular survival of the pathogen (PubMed:15753315, PubMed:23923000). Acts as a phosphatase that dephosphorylates phosphatidylinositol 3-phosphate (PI3P), a membrane trafficking regulatory lipid essential for phagosomal acquisition of lysosomal constituents (PubMed:15753315). Therefore, SapM eliminates PI3P from the phagosomal membrane by catalyzing its hydrolysis, and thus contributes to inhibition of phagosome maturation (PubMed:15753315). Also interferes with autophagy: SapM blocks autophagosome-lysosome fusion in macrophages by binding to the small GTPase RAB7, which prevents RAB7 from being involved in this process and thus negatively regulates autophagy flux (PubMed:25896765). In vitro, displays phosphatase activity with broad specificity; can dephosphorylate a variety of phosphoester substrates, with the highest activity against phosphoenolpyruvate, glycerophosphate, GTP, NADPH, phosphotyrosine and trehalose-6-phosphate (PubMed:11073936). In contrast, the enzyme exhibits poor activity against glucose-6-phosphate, phosphothreonine, and a number of nucleotides (NADP, ATP, AMP, and GMP) (PubMed:11073936)"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "a phosphate monoester + H2O = an alcohol + phosphate",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:15017"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15377"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:30879"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:43474"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:67140"
+          }
+        ],
+        "ecNumber": "3.1.3.2",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "11073936"
+          }
+        ]
+      }
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "a 1,2-diacyl-sn-glycero-3-phospho-(1D-myo-inositol-3-phosphate) + H2O = a 1,2-diacyl-sn-glycero-3-phospho-(1D-myo-inositol) + phosphate",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:12316"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15377"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:43474"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:57880"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:58088"
+          }
+        ],
+        "ecNumber": "3.1.3.64",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "15753315"
+          }
+        ]
+      }
+    },
+    {
+      "commentType": "COFACTOR",
+      "cofactors": [
+        {
+          "name": "a metal cation",
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "11073936"
+            }
+          ],
+          "cofactorCrossReference": {
+            "database": "ChEBI",
+            "id": "CHEBI:25213"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11073936"
+            }
+          ],
+          "value": "Phosphatase activity is inhibited in vitro by low concentrations of several heavy metals (zinc chloride, sodium molybdate, magnesium chloride, and copper sulfate) and moderately high concentrations (>8 mM) of EDTA"
+        }
+      ],
+      "commentType": "ACTIVITY REGULATION"
+    },
+    {
+      "commentType": "BIOPHYSICOCHEMICAL PROPERTIES",
+      "kineticParameters": {
+        "maximumVelocities": [
+          {
+            "velocity": 2100000.0,
+            "unit": "nmol/h/mg",
+            "enzyme": "enzyme with p-nitrophenyl phosphate as substrate",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "11073936"
+              }
+            ]
+          }
+        ],
+        "michaelisConstants": [
+          {
+            "constant": 0.43,
+            "unit": "mM",
+            "substrate": "p-nitrophenyl phosphate",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "11073936"
+              }
+            ]
+          }
+        ]
+      },
+      "phDependence": {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "11073936"
+              }
+            ],
+            "value": "Optimum pH is 6.5-7.5. Significant phosphatase activity is observed between pH 5.5 and 8.0."
+          }
+        ]
+      }
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11073936"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "25896765"
+            }
+          ],
+          "value": "Monomer (PubMed:11073936). SapM interacts with host RAB7 via its C-terminus (PubMed:25896765)"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "note": {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000305",
+                "source": "PubMed",
+                "id": "15753315"
+              }
+            ],
+            "value": "It remains to be determined how SapM, once secreted into the phagosomal lumen, gains access to PI3P within the cytofacial membrane leaflet. It is possible that SapM is exported to the cytosolic side, or alternatively there may be a mechanism for PI3P presentation to SapM remaining on the luminal side"
+          }
+        ]
+      },
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "11073936"
+              },
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "15753315"
+              }
+            ],
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        },
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000305",
+                "source": "PubMed",
+                "id": "15753315"
+              }
+            ],
+            "value": "Host cytoplasmic vesicle, host phagosome",
+            "id": "SL-0432"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "25896765"
+            }
+          ],
+          "value": "The C-terminus of SapM is required for interaction with RAB7 and SapM-mediated autophagy block"
+        }
+      ],
+      "commentType": "DOMAIN"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "23923000"
+            }
+          ],
+          "value": "Strain lacking this gene is defective in the arrest of phagosomal maturation as well as for growth in human THP-1 macrophages. The mutant strain is severely attenuated for growth in the lungs and spleen of guinea pigs and has a significantly reduced ability to cause pathological damage in the host when compared with the parental strain. Also, the guinea pigs infected with the mutant strain exhibit a significantly enhanced survival when compared with M.tuberculosis infected animals"
+        }
+      ],
+      "commentType": "DISRUPTION PHENOTYPE"
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 43,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "11073936"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 44,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 299,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Phosphatidylinositol-3-phosphatase",
+      "featureId": "PRO_5008778597"
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0903",
+      "category": "Technical term",
+      "name": "Direct protein sequencing"
+    },
+    {
+      "id": "KW-1036",
+      "category": "Cellular component",
+      "name": "Host cytoplasmic vesicle"
+    },
+    {
+      "id": "KW-0378",
+      "category": "Molecular function",
+      "name": "Hydrolase"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "9634230",
+        "citationType": "journal article",
+        "authors": [
+          "Cole S.T.",
+          "Brosch R.",
+          "Parkhill J.",
+          "Garnier T.",
+          "Churcher C.M.",
+          "Harris D.E.",
+          "Gordon S.V.",
+          "Eiglmeier K.",
+          "Gas S.",
+          "Barry C.E. III",
+          "Tekaia F.",
+          "Badcock K.",
+          "Basham D.",
+          "Brown D.",
+          "Chillingworth T.",
+          "Connor R.",
+          "Davies R.M.",
+          "Devlin K.",
+          "Feltwell T.",
+          "Gentles S.",
+          "Hamlin N.",
+          "Holroyd S.",
+          "Hornsby T.",
+          "Jagels K.",
+          "Krogh A.",
+          "McLean J.",
+          "Moule S.",
+          "Murphy L.D.",
+          "Oliver S.",
+          "Osborne J.",
+          "Quail M.A.",
+          "Rajandream M.A.",
+          "Rogers J.",
+          "Rutter S.",
+          "Seeger K.",
+          "Skelton S.",
+          "Squares S.",
+          "Squares R.",
+          "Sulston J.E.",
+          "Taylor K.",
+          "Whitehead S.",
+          "Barrell B.G."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9634230"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/31159"
+          }
+        ],
+        "title": "Deciphering the biology of Mycobacterium tuberculosis from the complete genome sequence.",
+        "publicationDate": "1998",
+        "journal": "Nature",
+        "firstPage": "537",
+        "lastPage": "544",
+        "volume": "393"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 25618 / H37Rv",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "11073936",
+        "citationType": "journal article",
+        "authors": [
+          "Saleh M.T.",
+          "Belisle J.T."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11073936"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.182.23.6850-6853.2000"
+          }
+        ],
+        "title": "Secretion of an acid phosphatase (SapM) by Mycobacterium tuberculosis that is similar to eukaryotic acid phosphatases.",
+        "publicationDate": "2000",
+        "journal": "J. Bacteriol.",
+        "firstPage": "6850",
+        "lastPage": "6853",
+        "volume": "182"
+      },
+      "referencePositions": [
+        "PROTEIN SEQUENCE OF 44-55",
+        "IDENTIFICATION BY MASS SPECTROMETRY",
+        "FUNCTION",
+        "CATALYTIC ACTIVITY",
+        "BIOPHYSICOCHEMICAL PROPERTIES",
+        "SUBSTRATE SPECIFICITY",
+        "COFACTOR",
+        "ACTIVITY REGULATION",
+        "SUBCELLULAR LOCATION",
+        "SUBUNIT"
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "15753315",
+        "citationType": "journal article",
+        "authors": [
+          "Vergne I.",
+          "Chua J.",
+          "Lee H.H.",
+          "Lucas M.",
+          "Belisle J.",
+          "Deretic V."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15753315"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1073/pnas.0409716102"
+          }
+        ],
+        "title": "Mechanism of phagolysosome biogenesis block by viable Mycobacterium tuberculosis.",
+        "publicationDate": "2005",
+        "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+        "firstPage": "4033",
+        "lastPage": "4038",
+        "volume": "102"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "CATALYTIC ACTIVITY",
+        "SUBCELLULAR LOCATION"
+      ],
+      "referenceComments": [
+        {
+          "value": "H37Rv",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "21969609",
+        "citationType": "journal article",
+        "authors": [
+          "Kelkar D.S.",
+          "Kumar D.",
+          "Kumar P.",
+          "Balakrishnan L.",
+          "Muthusamy B.",
+          "Yadav A.K.",
+          "Shrivastava P.",
+          "Marimuthu A.",
+          "Anand S.",
+          "Sundaram H.",
+          "Kingsbury R.",
+          "Harsha H.C.",
+          "Nair B.",
+          "Prasad T.S.",
+          "Chauhan D.S.",
+          "Katoch K.",
+          "Katoch V.M.",
+          "Kumar P.",
+          "Chaerkady R.",
+          "Ramachandran S.",
+          "Dash D.",
+          "Pandey A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "21969609"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1074/mcp.m111.011445"
+          }
+        ],
+        "title": "Proteogenomic analysis of Mycobacterium tuberculosis by high resolution mass spectrometry.",
+        "publicationDate": "2011",
+        "journal": "Mol. Cell. Proteomics",
+        "firstPage": "M111.011627",
+        "lastPage": "M111.011627",
+        "volume": "10"
+      },
+      "referencePositions": [
+        "IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS]"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 25618 / H37Rv",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "23923000",
+        "citationType": "journal article",
+        "authors": [
+          "Puri R.V.",
+          "Reddy P.V.",
+          "Tyagi A.K."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "23923000"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1371/journal.pone.0070514"
+          }
+        ],
+        "title": "Secreted acid phosphatase (SapM) of Mycobacterium tuberculosis is indispensable for arresting phagosomal maturation and growth of the pathogen in guinea pig tissues.",
+        "publicationDate": "2013",
+        "journal": "PLoS ONE",
+        "firstPage": "E70514",
+        "lastPage": "E70514",
+        "volume": "8"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "DISRUPTION PHENOTYPE"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 35801 / TMC 107 / Erdman",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "25896765",
+        "citationType": "journal article",
+        "authors": [
+          "Hu D.",
+          "Wu J.",
+          "Wang W.",
+          "Mu M.",
+          "Zhao R.",
+          "Xu X.",
+          "Chen Z.",
+          "Xiao J.",
+          "Hu F.",
+          "Yang Y.",
+          "Zhang R."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "25896765"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/j.bbrc.2015.04.051"
+          }
+        ],
+        "title": "Autophagy regulation revealed by SapM-induced block of autophagosome-lysosome fusion via binding RAB7.",
+        "publicationDate": "2015",
+        "journal": "Biochem. Biophys. Res. Commun.",
+        "firstPage": "401",
+        "lastPage": "407",
+        "volume": "461"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "INTERACTION WITH RAB7",
+        "DOMAIN"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AL123456",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CCP46129.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_217827.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_000962.3"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_003900013.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_000962.3"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "O53361",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "O53361",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "FunCoup",
+      "id": "O53361",
+      "properties": [
+        {
+          "key": "Number of interactors",
+          "value": "8"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "83332.Rv3310",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PaxDb",
+      "id": "83332-Rv3310",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "DNASU",
+      "id": "887988",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "887988",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "mtu:Rv3310",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "mtv:RVBD_3310",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|83332.111.peg.3693",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "TubercuList",
+      "id": "Rv3310",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "COG3511",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Bacteria"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_027977_3_0_11",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "InParanoid",
+      "id": "O53361",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "ACPMNLG",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OrthoDB",
+      "id": "345880at2",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Reactome",
+      "id": "R-HSA-9636383",
+      "properties": [
+        {
+          "key": "PathwayName",
+          "value": "Prevention of phagosomal-lysosomal fusion"
+        }
+      ]
+    },
+    {
+      "database": "Reactome",
+      "id": "R-HSA-9636569",
+      "properties": [
+        {
+          "key": "PathwayName",
+          "value": "Suppression of autophagy"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000001584",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome"
+        }
+      ]
+    },
+    {
+      "database": "AbasyAtlas",
+      "id": "O53361",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005737",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cytoplasm"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "TAS:Reactome"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005829",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cytosol"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "TAS:Reactome"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:MTBBASE"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "11073936"
+        },
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "15753315"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0044161",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:host cell cytoplasmic vesicle"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009274",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:peptidoglycan-based cell wall"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:MTBBASE"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "11073936"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0003993",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:acid phosphatase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:MTBBASE"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "11073936"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0016791",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:phosphatase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "TAS:Reactome"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0034480",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:phosphatidylcholine phospholipase C activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0004438",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:phosphatidylinositol-3-phosphate phosphatase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:MTBBASE"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "15753315"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0050189",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:phosphoenolpyruvate phosphatase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:MTBBASE"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "11073936"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0050192",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:phosphoglycerate phosphatase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:MTBBASE"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "11073936"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0004805",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:trehalose-phosphatase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:MTBBASE"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "11073936"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0006742",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:NADP+ catabolic process"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:MTBBASE"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "11073936"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0046854",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:phosphatidylinositol phosphate biosynthetic process"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:MTBBASE"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "15753315"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0052170",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:symbiont-mediated suppression of host innate immune response"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "TAS:Reactome"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.40.720.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Alkaline Phosphatase, subunit A"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR017850",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Alkaline_phosphatase_core_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR007312",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Phosphoesterase"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR31956:SF1",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "NON-SPECIFIC PHOSPHOLIPASE C1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR31956",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "NON-SPECIFIC PHOSPHOLIPASE C4-RELATED"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF04185",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Phosphoesterase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF53649",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Alkaline phosphatase-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MLRGIQALSRPLTRVYRALAVIGVLAASLLASWVGAVPQVGLAASALPTFAHVVIVVEENRSQAAIIGNKSAPFINSLAANGAMMAQAFAETHPSEPNYLALFAGNTFGLTKNTCPVNGGALPNLGSELLSAGYTFMGFAEDLPAVGSTVCSAGKYARKHVPWVNFSNVPTTLSVPFSAFPKPQNYPGLPTVSFVIPNADNDMHDGSIAQGDAWLNRHLSAYANWAKTNNSLLVVTWDEDDGSSRNQIPTVFYGAHVRPGTYNETISHYNVLSTLEQIYGLPKTGYATNAPPITDIWGD",
+    "length": 299,
+    "molWeight": 31807,
+    "crc64": "C5E8C49CF62C8BF8",
+    "md5": "4E17365E76FDC1589D933001722D8C9C"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "CATALYTIC ACTIVITY": 2,
+      "COFACTOR": 1,
+      "ACTIVITY REGULATION": 1,
+      "BIOPHYSICOCHEMICAL PROPERTIES": 1,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "DOMAIN": 1,
+      "DISRUPTION PHENOTYPE": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1
+    },
+    "uniParcId": "UPI00000D5FD8"
+  }
+}

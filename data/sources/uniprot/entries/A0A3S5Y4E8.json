@@ -1,0 +1,792 @@
+{
+  "entryType": "UniProtKB unreviewed (TrEMBL)",
+  "primaryAccession": "A0A3S5Y4E8",
+  "uniProtkbId": "A0A3S5Y4E8_RHOE1",
+  "entryAudit": {
+    "firstPublicDate": "2019-04-10",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2019-04-10",
+    "entryVersion": 34,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 2.0,
+  "organism": {
+    "scientificName": "Rhodococcus equi (strain 103S)",
+    "commonName": "Prescottella equi",
+    "taxonId": 685727,
+    "evidences": [
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "EMBL",
+        "id": "CBH47397.1"
+      },
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "Proteomes",
+        "id": "UP001154400"
+      }
+    ],
+    "lineage": [
+      "Bacteria",
+      "Bacillati",
+      "Actinomycetota",
+      "Actinomycetes",
+      "Mycobacteriales",
+      "Nocardiaceae",
+      "Prescottella"
+    ]
+  },
+  "proteinExistence": "3: Inferred from homology",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "ARBA",
+            "id": "ARBA00071584"
+          }
+        ],
+        "value": "Protein PhoH2"
+      },
+      "ecNumbers": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "ARBA",
+              "id": "ARBA00066581"
+            }
+          ],
+          "value": "5.6.2.5"
+        }
+      ]
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "ARBA",
+              "id": "ARBA00076032"
+            }
+          ],
+          "value": "RNA 5'-3' helicase PhoH2"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "CBH47397.1"
+          }
+        ],
+        "value": "phoH"
+      },
+      "orfNames": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "CBH47397.1"
+            }
+          ],
+          "value": "REQ_13070"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "ATP + H2O = ADP + phosphate + H(+)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:13065"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15377"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:30616"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:43474"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:456216"
+          }
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "ARBA",
+            "id": "ARBA00049360"
+          }
+        ]
+      }
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "GTP + H2O = GDP + phosphate + H(+)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:19669"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15377"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:37565"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:43474"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:58189"
+          }
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "ARBA",
+            "id": "ARBA00048548"
+          }
+        ]
+      }
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "n ATP + n H2O + wound RNA = n ADP + n phosphate + unwound RNA.",
+        "ecNumber": "5.6.2.5",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "ARBA",
+            "id": "ARBA00052583"
+          }
+        ]
+      }
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "ARBA",
+              "id": "ARBA00060962"
+            }
+          ],
+          "value": "In the C-terminal section; belongs to the PhoH family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "ARBA",
+              "id": "ARBA00046345"
+            }
+          ],
+          "value": "In the N-terminal section; belongs to the PINc/VapC protein family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 8,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 135,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "PIN",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000259",
+          "source": "SMART",
+          "id": "SM00670"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022840"
+        }
+      ],
+      "id": "KW-0067",
+      "category": "Ligand",
+      "name": "ATP-binding"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00023134"
+        }
+      ],
+      "id": "KW-0342",
+      "category": "Ligand",
+      "name": "GTP-binding"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022801"
+        }
+      ],
+      "id": "KW-0378",
+      "category": "Molecular function",
+      "name": "Hydrolase"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00023235"
+        }
+      ],
+      "id": "KW-0413",
+      "category": "Molecular function",
+      "name": "Isomerase"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022842"
+        }
+      ],
+      "id": "KW-0460",
+      "category": "Ligand",
+      "name": "Magnesium"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022723"
+        }
+      ],
+      "id": "KW-0479",
+      "category": "Ligand",
+      "name": "Metal-binding"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022722"
+        }
+      ],
+      "id": "KW-0540",
+      "category": "Molecular function",
+      "name": "Nuclease"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022741"
+        }
+      ],
+      "id": "KW-0547",
+      "category": "Ligand",
+      "name": "Nucleotide-binding"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "Proteomes",
+          "id": "UP001154400"
+        }
+      ],
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022649"
+        }
+      ],
+      "id": "KW-1277",
+      "category": "Biological process",
+      "name": "Toxin-antitoxin system"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "20941392",
+        "citationType": "journal article",
+        "authors": [
+          "Letek M.",
+          "Gonzalez P.",
+          "Macarthur I.",
+          "Rodriguez H.",
+          "Freeman T.C.",
+          "Valero-Rello A.",
+          "Blanco M.",
+          "Buckley T.",
+          "Cherevach I.",
+          "Fahey R.",
+          "Hapeshi A.",
+          "Holdstock J.",
+          "Leadon D.",
+          "Navas J.",
+          "Ocampo A.",
+          "Quail M.A.",
+          "Sanders M.",
+          "Scortti M.M.",
+          "Prescott J.F.",
+          "Fogarty U.",
+          "Meijer W.G.",
+          "Parkhill J.",
+          "Bentley S.D.",
+          "Vazquez-Boland J.A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "20941392"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1371/journal.pgen.1001145"
+          }
+        ],
+        "title": "The genome of a pathogenic rhodococcus: cooptive virulence underpinned by key gene acquisitions.",
+        "publicationDate": "2010",
+        "journal": "PLoS Genet.",
+        "firstPage": "E1001145",
+        "lastPage": "E1001145",
+        "volume": "6"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "CBH47397.1"
+            },
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "Proteomes",
+              "id": "UP001154400"
+            }
+          ],
+          "value": "103S",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "CBH47397.1"
+        },
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "Proteomes",
+          "id": "UP001154400"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "FN563149",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CBH47397.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_005514633.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_014659.1"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "A0A3S5Y4E8",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "req:REQ_13070",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AACIEMT",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP001154400",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005829",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cytosol"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:TreeGrafter"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0032574",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:5'-3' RNA helicase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-EC"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005524",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:ATP binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd09883",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PIN_VapC_PhoHL-ATPase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "3.40.50.300:FF:000215",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ATP-binding protein"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.40.50.1010",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "5'-nuclease"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.40.50.300",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "P-loop containing nucleotide triphosphate hydrolases"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR027417",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "P-loop_NTPase"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR003714",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PhoH"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR051451",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PhoH2-like"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR029060",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PIN-like_dom_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR002716",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PIN_dom"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR30473:SF2",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PIN DOMAIN-CONTAINING PROTEIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR30473",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PROTEIN PHOH"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF02562",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PhoH"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF13638",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PIN_4"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00670",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PINc"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF52540",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "P-loop containing nucleoside triphosphate hydrolases"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF88723",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PIN domain-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MTAISSVRTYVLDTSVLLSDPWAVSRFAEHEVVLPLIVISELEDKRHHHELGWFAREALRMLDDLRLEFGRLDRPVPIGTENGTLQVELNHTDPSVLPVGFRTDSNDSRILACALNLAAEGKDVVLVSKDIPLRVKAGAVGLPADEFRAHDVVPSGWTGMTEIDVSSEFIDQLFSEGVVDLDEARELPCHTGIRLLGGRSSALGRVTPDKRVQLVRGEREAFGLHGRSAEQRVALDLLLDESIGIVSLGGKAGTGKSALALTAGLEAVLERRSHRKIVVFRPLYAVGGQELGYLPGSESEKMGPWAQAVFDTLDGLASPEVMEEVLSRGMLEVLPLTHIRGRSLHDSFVIVDEAQSLERNVLLTVLSRLGTGSRVVLTHDVAQRDNLRVGRHDGVAAVIEKLKGHPLFAHVTLTRSERSPIAALVTEMLEEFGPA",
+    "length": 435,
+    "molWeight": 47416,
+    "crc64": "E692889CCAE3F77E",
+    "md5": "2D6EB5ABAF9A6FE166D1D8D1ABBDC3EB"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "CATALYTIC ACTIVITY": 3,
+      "SIMILARITY": 2
+    },
+    "countByFeatureType": {
+      "Domain": 1
+    },
+    "uniParcId": "UPI0001D1F4F6"
+  }
+}

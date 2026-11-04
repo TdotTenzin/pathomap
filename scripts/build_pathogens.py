@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build the PathoMap pathogens table.
 
-The curated seed in ``data/sources/curated_data.json`` is enriched with
+The curated seed in ``data/sources/pathogens_seed.json`` is enriched with
 NCBI Taxonomy and NCBI Datasets (representative genome) data, validated, and
 written to:
 
@@ -33,7 +33,7 @@ from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
-SEED_PATH = ROOT / "data" / "sources" / "curated_data.json"
+SEED_PATH = ROOT / "data" / "sources" / "pathogens_seed.json"
 OVERRIDES_PATH = ROOT / "data" / "sources" / "pathogen_overrides.json"
 CACHE_DIR = ROOT / "data" / "sources" / "ncbi"
 DATASET_PATH = ROOT / "data" / "pathomap-dataset.json"
@@ -572,7 +572,7 @@ def dataset_payload(rows: list[dict]) -> dict:
             "built_at": dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
             "tables": {"pathogens": len(rows)},
             "sources": {
-                "curation": "data/sources/curated_data.json",
+                "curation": "data/sources/pathogens_seed.json",
                 "overrides": "data/sources/pathogen_overrides.json",
                 "ncbi_taxonomy": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/",
                 "ncbi_datasets": "https://api.ncbi.nlm.nih.gov/datasets/v2alpha/",

@@ -1,0 +1,3440 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "O95832",
+  "uniProtkbId": "CLD1_HUMAN",
+  "entryAudit": {
+    "firstPublicDate": "2000-05-30",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "1999-05-01",
+    "entryVersion": 203,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 5.0,
+  "organism": {
+    "scientificName": "Homo sapiens",
+    "commonName": "Human",
+    "taxonId": 9606,
+    "lineage": [
+      "Eukaryota",
+      "Metazoa",
+      "Chordata",
+      "Craniata",
+      "Vertebrata",
+      "Euteleostomi",
+      "Mammalia",
+      "Eutheria",
+      "Euarchontoglires",
+      "Primates",
+      "Haplorrhini",
+      "Catarrhini",
+      "Hominidae",
+      "Homo"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Claudin-1"
+      }
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "Senescence-associated epithelial membrane protein"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "CLDN1"
+      },
+      "synonyms": [
+        {
+          "value": "CLD1"
+        },
+        {
+          "value": "SEMP1"
+        }
+      ],
+      "orfNames": [
+        {
+          "value": "UNQ481/PRO944"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "23407391"
+            }
+          ],
+          "value": "Claudins function as major constituents of the tight junction complexes that regulate the permeability of epithelia. While some claudin family members play essential roles in the formation of impermeable barriers, others mediate the permeability to ions and small molecules. Often, several claudin family members are coexpressed and interact with each other, and this determines the overall permeability. CLDN1 is required to prevent the paracellular diffusion of small molecules through tight junctions in the epidermis and is required for the normal barrier function of the skin. Required for normal water homeostasis and to prevent excessive water loss through the skin, probably via an indirect effect on the expression levels of other proteins, since CLDN1 itself seems to be dispensable for water barrier formation in keratinocyte tight junctions (PubMed:23407391)"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "17325668"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "20375010"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "24038151"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "24074594"
+            }
+          ],
+          "value": "(Microbial infection) Acts as a co-receptor for hepatitis C virus (HCV) in hepatocytes (PubMed:17325668, PubMed:20375010, PubMed:24038151). Associates with CD81 and the CLDN1-CD81 receptor complex is essential for HCV entry into host cell (PubMed:20375010). Acts as a receptor for dengue virus (PubMed:24074594)"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "O88551"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "20375010"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "21516087"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "23704991"
+            }
+          ],
+          "value": "Homopolymers interact with CLDN3, but not CLDN2, homopolymers. Can form homo- and heteropolymers with other claudin family members (PubMed:23704991). Directly interacts with TJP1/ZO-1, TJP2/ZO-2 and TJP3/ZO-3. Interacts with MPDZ and PATJ (By similarity). Interacts with OCLN, CLDN4, CLDN6 and CLDN9 (PubMed:20375010). Interacts with CD81 (PubMed:20375010, PubMed:21516087)"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "24038151"
+            }
+          ],
+          "value": "(Microbial infection) Interacts with hepatitis c virus heterodimer E1/E2"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "24074594"
+            }
+          ],
+          "value": "(Microbial infection) Interacts with dengue virus small envelope protein M"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "INTERACTION",
+      "interactions": [
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "O95832",
+            "intActId": "EBI-723889"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "Q02410",
+            "geneName": "APBA1",
+            "intActId": "EBI-368690"
+          },
+          "numberOfExperiments": 2,
+          "organismDiffer": false
+        },
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "O95832",
+            "intActId": "EBI-723889"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "Q99767",
+            "geneName": "APBA2",
+            "intActId": "EBI-81711"
+          },
+          "numberOfExperiments": 2,
+          "organismDiffer": false
+        },
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "O95832",
+            "intActId": "EBI-723889"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "Q07108",
+            "geneName": "CD69",
+            "intActId": "EBI-2836595"
+          },
+          "numberOfExperiments": 3,
+          "organismDiffer": false
+        },
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "O95832",
+            "intActId": "EBI-723889"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "P11912",
+            "geneName": "CD79A",
+            "intActId": "EBI-7797864"
+          },
+          "numberOfExperiments": 3,
+          "organismDiffer": false
+        },
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "O95832",
+            "intActId": "EBI-723889"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "Q12959",
+            "geneName": "DLG1",
+            "intActId": "EBI-357481"
+          },
+          "numberOfExperiments": 3,
+          "organismDiffer": false
+        },
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "O95832",
+            "intActId": "EBI-723889"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "Q15700",
+            "geneName": "DLG2",
+            "intActId": "EBI-80426"
+          },
+          "numberOfExperiments": 2,
+          "organismDiffer": false
+        },
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "O95832",
+            "intActId": "EBI-723889"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "Q92796",
+            "geneName": "DLG3",
+            "intActId": "EBI-80440"
+          },
+          "numberOfExperiments": 3,
+          "organismDiffer": false
+        },
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "O95832",
+            "intActId": "EBI-723889"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "P78352",
+            "geneName": "DLG4",
+            "intActId": "EBI-80389"
+          },
+          "numberOfExperiments": 2,
+          "organismDiffer": false
+        },
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "O95832",
+            "intActId": "EBI-723889"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "Q8TBE3",
+            "geneName": "FNDC9",
+            "intActId": "EBI-12142257"
+          },
+          "numberOfExperiments": 3,
+          "organismDiffer": false
+        },
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "O95832",
+            "intActId": "EBI-723889"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "Q68DX3",
+            "geneName": "FRMPD2",
+            "intActId": "EBI-53993476"
+          },
+          "numberOfExperiments": 3,
+          "organismDiffer": false
+        },
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "O95832",
+            "intActId": "EBI-723889"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "A4D2P6",
+            "geneName": "GRID2IP",
+            "intActId": "EBI-15893226"
+          },
+          "numberOfExperiments": 2,
+          "organismDiffer": false
+        },
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "O95832",
+            "intActId": "EBI-723889"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "Q9Y3R0",
+            "geneName": "GRIP1",
+            "intActId": "EBI-5349621"
+          },
+          "numberOfExperiments": 4,
+          "organismDiffer": false
+        },
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "O95832",
+            "intActId": "EBI-723889"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "Q9C0E4",
+            "geneName": "GRIP2",
+            "intActId": "EBI-949557"
+          },
+          "numberOfExperiments": 4,
+          "organismDiffer": false
+        },
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "O95832",
+            "intActId": "EBI-723889"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "Q14005",
+            "geneName": "IL16",
+            "intActId": "EBI-2831580"
+          },
+          "numberOfExperiments": 3,
+          "organismDiffer": false
+        },
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "O95832",
+            "intActId": "EBI-723889"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "Q8TBB1",
+            "geneName": "LNX1",
+            "intActId": "EBI-739832"
+          },
+          "numberOfExperiments": 3,
+          "organismDiffer": false
+        },
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "O95832",
+            "intActId": "EBI-723889"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "Q8N448",
+            "geneName": "LNX2",
+            "intActId": "EBI-2340947"
+          },
+          "numberOfExperiments": 2,
+          "organismDiffer": false
+        },
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "O95832",
+            "intActId": "EBI-723889"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "Q86UL8",
+            "geneName": "MAGI2",
+            "intActId": "EBI-311035"
+          },
+          "numberOfExperiments": 4,
+          "organismDiffer": false
+        },
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "O95832",
+            "intActId": "EBI-723889"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "O75970",
+            "geneName": "MPDZ",
+            "intActId": "EBI-821405"
+          },
+          "numberOfExperiments": 3,
+          "organismDiffer": false
+        },
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "O95832",
+            "intActId": "EBI-723889"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "Q96HJ5",
+            "geneName": "MS4A3",
+            "intActId": "EBI-12806656"
+          },
+          "numberOfExperiments": 3,
+          "organismDiffer": false
+        },
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "O95832",
+            "intActId": "EBI-723889"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "Q86UT5",
+            "geneName": "NHERF4",
+            "intActId": "EBI-8744528"
+          },
+          "numberOfExperiments": 2,
+          "organismDiffer": false
+        },
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "O95832",
+            "intActId": "EBI-723889"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "Q8NI35",
+            "geneName": "PATJ",
+            "intActId": "EBI-724390"
+          },
+          "numberOfExperiments": 8,
+          "organismDiffer": false
+        },
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "O95832",
+            "intActId": "EBI-723889"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "Q5T2W1",
+            "geneName": "PDZK1",
+            "intActId": "EBI-349819"
+          },
+          "numberOfExperiments": 3,
+          "organismDiffer": false
+        },
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "O95832",
+            "intActId": "EBI-723889"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "Q14160",
+            "geneName": "SCRIB",
+            "intActId": "EBI-357345"
+          },
+          "numberOfExperiments": 3,
+          "organismDiffer": false
+        },
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "O95832",
+            "intActId": "EBI-723889"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "Q07157",
+            "geneName": "TJP1",
+            "intActId": "EBI-79553"
+          },
+          "numberOfExperiments": 2,
+          "organismDiffer": false
+        },
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "O95832",
+            "intActId": "EBI-723889"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "Q7Z7N9",
+            "geneName": "TMEM179B",
+            "intActId": "EBI-11724423"
+          },
+          "numberOfExperiments": 3,
+          "organismDiffer": false
+        },
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "O95832",
+            "intActId": "EBI-723889"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "Q9P0T7",
+            "geneName": "TMEM9",
+            "intActId": "EBI-723976"
+          },
+          "numberOfExperiments": 3,
+          "organismDiffer": false
+        },
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "O95832",
+            "intActId": "EBI-723889"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "Q9P202",
+            "geneName": "WHRN",
+            "intActId": "EBI-310886"
+          },
+          "numberOfExperiments": 3,
+          "organismDiffer": false
+        }
+      ]
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "note": {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "20375010"
+              }
+            ],
+            "value": "Associates with CD81 and the CLDN1-CD81 complex localizes to the basolateral cell membrane"
+          }
+        ]
+      },
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "20375010"
+              },
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "23407391"
+              },
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "30734065"
+              }
+            ],
+            "value": "Cell junction, tight junction",
+            "id": "SL-0265"
+          }
+        },
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "23704991"
+              }
+            ],
+            "value": "Cell membrane",
+            "id": "SL-0039"
+          },
+          "topology": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255"
+              }
+            ],
+            "value": "Multi-pass membrane protein",
+            "id": "SL-9909"
+          }
+        },
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "20375010"
+              }
+            ],
+            "value": "Basolateral cell membrane",
+            "id": "SL-0026"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "9931503"
+            }
+          ],
+          "value": "Strongly expressed in liver and kidney. Expressed in heart, brain, spleen, lung and testis"
+        }
+      ],
+      "commentType": "TISSUE SPECIFICITY"
+    },
+    {
+      "commentType": "DISEASE",
+      "disease": {
+        "diseaseId": "Ichthyosis-sclerosing cholangitis neonatal syndrome",
+        "diseaseAccession": "DI-00590",
+        "acronym": "NISCH",
+        "description": "A rare autosomal recessive complex ichthyosis syndrome characterized by scalp hypotrichosis, scarring alopecia, mild diffuse ichthyosis, sclerosing cholangitis and leukocyte vacuolization.",
+        "diseaseCrossReference": {
+          "database": "MIM",
+          "id": "607626"
+        },
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "15521008"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "16619213"
+          }
+        ]
+      },
+      "note": {
+        "texts": [
+          {
+            "value": "The disease is caused by variants affecting the gene represented in this entry"
+          }
+        ]
+      }
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the claudin family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 211,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Claudin-1",
+      "featureId": "PRO_0000144729"
+    },
+    {
+      "type": "Topological domain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 7,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Cytoplasmic",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 8,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 28,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Topological domain",
+      "location": {
+        "start": {
+          "value": 29,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 81,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Extracellular",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 82,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 102,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Topological domain",
+      "location": {
+        "start": {
+          "value": 103,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 115,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Cytoplasmic",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 116,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 136,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Topological domain",
+      "location": {
+        "start": {
+          "value": 137,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 163,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Extracellular",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 164,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 184,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Topological domain",
+      "location": {
+        "start": {
+          "value": 185,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 211,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Cytoplasmic",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 192,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 211,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 210,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 211,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Interactions with TJP1, TJP2, TJP3 and PATJ",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250"
+        }
+      ]
+    },
+    {
+      "type": "Disulfide bond",
+      "location": {
+        "start": {
+          "value": 54,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 64,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250"
+        }
+      ]
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 32,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 32,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Loss of HCV receptor activity. Significant loss of interaction with CD81. Reduced interaction with OCLN.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "17325668"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "20375010"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "I",
+        "alternativeSequences": [
+          "M"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 48,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 48,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Loss of HCV receptor activity. Significant loss of interaction with CD81. Reduced interaction with OCLN. According to PubMed:17325668 no effect observed on HCV infection susceptibility in cell culture.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "17325668"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "20375010"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "E",
+        "alternativeSequences": [
+          "K"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 62,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 62,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 2; AAD22962",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "I",
+        "alternativeSequences": [
+          "V"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 135,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 135,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 2; AAD22962",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "V",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0965",
+      "category": "Cellular component",
+      "name": "Cell junction"
+    },
+    {
+      "id": "KW-1003",
+      "category": "Cellular component",
+      "name": "Cell membrane"
+    },
+    {
+      "id": "KW-1015",
+      "category": "PTM",
+      "name": "Disulfide bond"
+    },
+    {
+      "id": "KW-1183",
+      "category": "Molecular function",
+      "name": "Host cell receptor for virus entry"
+    },
+    {
+      "id": "KW-0945",
+      "category": "Biological process",
+      "name": "Host-virus interaction"
+    },
+    {
+      "id": "KW-0977",
+      "category": "Disease",
+      "name": "Ichthyosis"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-1267",
+      "category": "Technical term",
+      "name": "Proteomics identification"
+    },
+    {
+      "id": "KW-0675",
+      "category": "Molecular function",
+      "name": "Receptor"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0796",
+      "category": "Cellular component",
+      "name": "Tight junction"
+    },
+    {
+      "id": "KW-0812",
+      "category": "Domain",
+      "name": "Transmembrane"
+    },
+    {
+      "id": "KW-1133",
+      "category": "Domain",
+      "name": "Transmembrane helix"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "9931503",
+        "citationType": "journal article",
+        "authors": [
+          "Swisshelm K.L.",
+          "Machl A.",
+          "Planitzer S.",
+          "Robertson R.",
+          "Kubbies M.",
+          "Hosier S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9931503"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/s0378-1119(98)00553-8"
+          }
+        ],
+        "title": "SEMP1, a senescence-associated cDNA isolated from human mammary epithelial cells, is a member of an epithelial membrane protein superfamily.",
+        "publicationDate": "1999",
+        "journal": "Gene",
+        "firstPage": "285",
+        "lastPage": "295",
+        "volume": "226"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [MRNA]",
+        "TISSUE SPECIFICITY"
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "CI-289213EU9Q5LD",
+        "citationType": "submission",
+        "authors": [
+          "Mitic L.M.",
+          "Anderson J.M."
+        ],
+        "title": "Human claudin-1 isolated from Caco-2 mRNA.",
+        "publicationDate": "DEC-1998",
+        "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [MRNA]"
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "10828592",
+        "citationType": "journal article",
+        "authors": [
+          "Halford S.",
+          "Spencer P.",
+          "Greenwood J.",
+          "Winton H.",
+          "Hunt D.M.",
+          "Adamson P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "10828592"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1159/000015553"
+          }
+        ],
+        "title": "Assignment of claudin-1 (CLDN1) to human chromosome 3q28-->q29 with somatic cell hybrids.",
+        "publicationDate": "2000",
+        "journal": "Cytogenet. Cell Genet.",
+        "firstPage": "217",
+        "lastPage": "217",
+        "volume": "88"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [MRNA]"
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "11071387",
+        "citationType": "journal article",
+        "authors": [
+          "Kraemer F.",
+          "White K.",
+          "Kubbies M.",
+          "Swisshelm K.L.",
+          "Weber B.H.F."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11071387"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1007/s004390000375"
+          }
+        ],
+        "title": "Genomic organization of claudin-1 and its assessment in hereditary and sporadic breast cancer.",
+        "publicationDate": "2000",
+        "journal": "Hum. Genet.",
+        "firstPage": "249",
+        "lastPage": "256",
+        "volume": "107"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "12975309",
+        "citationType": "journal article",
+        "authors": [
+          "Clark H.F.",
+          "Gurney A.L.",
+          "Abaya E.",
+          "Baker K.",
+          "Baldwin D.T.",
+          "Brush J.",
+          "Chen J.",
+          "Chow B.",
+          "Chui C.",
+          "Crowley C.",
+          "Currell B.",
+          "Deuel B.",
+          "Dowd P.",
+          "Eaton D.",
+          "Foster J.S.",
+          "Grimaldi C.",
+          "Gu Q.",
+          "Hass P.E.",
+          "Heldens S.",
+          "Huang A.",
+          "Kim H.S.",
+          "Klimowski L.",
+          "Jin Y.",
+          "Johnson S.",
+          "Lee J.",
+          "Lewis L.",
+          "Liao D.",
+          "Mark M.R.",
+          "Robbie E.",
+          "Sanchez C.",
+          "Schoenfeld J.",
+          "Seshagiri S.",
+          "Simmons L.",
+          "Singh J.",
+          "Smith V.",
+          "Stinson J.",
+          "Vagts A.",
+          "Vandlen R.L.",
+          "Watanabe C.",
+          "Wieand D.",
+          "Woods K.",
+          "Xie M.-H.",
+          "Yansura D.G.",
+          "Yi S.",
+          "Yu G.",
+          "Yuan J.",
+          "Zhang M.",
+          "Zhang Z.",
+          "Goddard A.D.",
+          "Wood W.I.",
+          "Godowski P.J.",
+          "Gray A.M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "12975309"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1101/gr.1293003"
+          }
+        ],
+        "title": "The secreted protein discovery initiative (SPDI), a large-scale effort to identify novel human secreted and transmembrane proteins: a bioinformatics assessment.",
+        "publicationDate": "2003",
+        "journal": "Genome Res.",
+        "firstPage": "2265",
+        "lastPage": "2270",
+        "volume": "13"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA]"
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "CI-D49P6QQO8F5LU",
+        "citationType": "submission",
+        "authors": [
+          "Ebert L.",
+          "Schick M.",
+          "Neubert P.",
+          "Schatten R.",
+          "Henze S.",
+          "Korn B."
+        ],
+        "title": "Cloning of human full open reading frames in Gateway(TM) system entry vector (pDONR201).",
+        "publicationDate": "JUN-2004",
+        "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA]"
+      ]
+    },
+    {
+      "referenceNumber": 7,
+      "citation": {
+        "id": "15489334",
+        "citationType": "journal article",
+        "authoringGroup": [
+          "The MGC Project Team"
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15489334"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1101/gr.2596504"
+          }
+        ],
+        "title": "The status, quality, and expansion of the NIH full-length cDNA project: the Mammalian Gene Collection (MGC).",
+        "publicationDate": "2004",
+        "journal": "Genome Res.",
+        "firstPage": "2121",
+        "lastPage": "2127",
+        "volume": "14"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "Urinary bladder",
+          "type": "TISSUE"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 8,
+      "citation": {
+        "id": "15521008",
+        "citationType": "journal article",
+        "authors": [
+          "Hadj-Rabia S.",
+          "Baala L.",
+          "Vabres P.",
+          "Hamel-Teillac D.",
+          "Jacquemin E.",
+          "Fabre M.",
+          "Lyonnet S.",
+          "De Prost Y.",
+          "Munnich A.",
+          "Hadchouel M.",
+          "Smahi A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15521008"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1053/j.gastro.2004.07.022"
+          }
+        ],
+        "title": "Claudin-1 gene mutations in neonatal sclerosing cholangitis associated with ichthyosis: a tight junction disease.",
+        "publicationDate": "2004",
+        "journal": "Gastroenterology",
+        "firstPage": "1386",
+        "lastPage": "1390",
+        "volume": "127"
+      },
+      "referencePositions": [
+        "INVOLVEMENT IN NISCH"
+      ]
+    },
+    {
+      "referenceNumber": 9,
+      "citation": {
+        "id": "16619213",
+        "citationType": "journal article",
+        "authors": [
+          "Feldmeyer L.",
+          "Huber M.",
+          "Fellmann F.",
+          "Beckmann J.S.",
+          "Frenk E.",
+          "Hohl D."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "16619213"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1002/humu.20333"
+          }
+        ],
+        "title": "Confirmation of the origin of NISCH syndrome.",
+        "publicationDate": "2006",
+        "journal": "Hum. Mutat.",
+        "firstPage": "408",
+        "lastPage": "410",
+        "volume": "27"
+      },
+      "referencePositions": [
+        "INVOLVEMENT IN NISCH"
+      ]
+    },
+    {
+      "referenceNumber": 10,
+      "citation": {
+        "id": "17325668",
+        "citationType": "journal article",
+        "authors": [
+          "Evans M.J.",
+          "von Hahn T.",
+          "Tscherne D.M.",
+          "Syder A.J.",
+          "Panis M.",
+          "Wolk B.",
+          "Hatziioannou T.",
+          "McKeating J.A.",
+          "Bieniasz P.D.",
+          "Rice C.M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "17325668"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/nature05654"
+          }
+        ],
+        "title": "Claudin-1 is a hepatitis C virus co-receptor required for a late step in entry.",
+        "publicationDate": "2007",
+        "journal": "Nature",
+        "firstPage": "801",
+        "lastPage": "805",
+        "volume": "446"
+      },
+      "referencePositions": [
+        "FUNCTION (MICROBIAL INFECTION)",
+        "MUTAGENESIS OF ILE-32 AND GLU-48"
+      ]
+    },
+    {
+      "referenceNumber": 11,
+      "citation": {
+        "id": "20375010",
+        "citationType": "journal article",
+        "authors": [
+          "Harris H.J.",
+          "Davis C.",
+          "Mullins J.G.",
+          "Hu K.",
+          "Goodall M.",
+          "Farquhar M.J.",
+          "Mee C.J.",
+          "McCaffrey K.",
+          "Young S.",
+          "Drummer H.",
+          "Balfe P.",
+          "McKeating J.A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "20375010"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1074/jbc.m110.104836"
+          }
+        ],
+        "title": "Claudin association with CD81 defines hepatitis C virus entry.",
+        "publicationDate": "2010",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "21092",
+        "lastPage": "21102",
+        "volume": "285"
+      },
+      "referencePositions": [
+        "FUNCTION (MICROBIAL INFECTION)",
+        "SUBCELLULAR LOCATION",
+        "INTERACTION WITH OCLN; CD81; CLDN4; CLDN6 AND CLDN9",
+        "MUTAGENESIS OF ILE-32 AND GLU-48"
+      ]
+    },
+    {
+      "referenceNumber": 12,
+      "citation": {
+        "id": "21269460",
+        "citationType": "journal article",
+        "authors": [
+          "Burkard T.R.",
+          "Planyavsky M.",
+          "Kaupe I.",
+          "Breitwieser F.P.",
+          "Buerckstuemmer T.",
+          "Bennett K.L.",
+          "Superti-Furga G.",
+          "Colinge J."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "21269460"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1186/1752-0509-5-17"
+          }
+        ],
+        "title": "Initial characterization of the human central proteome.",
+        "publicationDate": "2011",
+        "journal": "BMC Syst. Biol.",
+        "firstPage": "17",
+        "lastPage": "17",
+        "volume": "5"
+      },
+      "referencePositions": [
+        "IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS]"
+      ]
+    },
+    {
+      "referenceNumber": 13,
+      "citation": {
+        "id": "21516087",
+        "citationType": "journal article",
+        "authors": [
+          "Lupberger J.",
+          "Zeisel M.B.",
+          "Xiao F.",
+          "Thumann C.",
+          "Fofana I.",
+          "Zona L.",
+          "Davis C.",
+          "Mee C.J.",
+          "Turek M.",
+          "Gorke S.",
+          "Royer C.",
+          "Fischer B.",
+          "Zahid M.N.",
+          "Lavillette D.",
+          "Fresquet J.",
+          "Cosset F.L.",
+          "Rothenberg S.M.",
+          "Pietschmann T.",
+          "Patel A.H.",
+          "Pessaux P.",
+          "Doffoel M.",
+          "Raffelsberger W.",
+          "Poch O.",
+          "McKeating J.A.",
+          "Brino L.",
+          "Baumert T.F."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "21516087"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/nm.2341"
+          }
+        ],
+        "title": "EGFR and EphA2 are host factors for hepatitis C virus entry and possible targets for antiviral therapy.",
+        "publicationDate": "2011",
+        "journal": "Nat. Med.",
+        "firstPage": "589",
+        "lastPage": "595",
+        "volume": "17"
+      },
+      "referencePositions": [
+        "INTERACTION WITH CD81"
+      ]
+    },
+    {
+      "referenceNumber": 14,
+      "citation": {
+        "id": "23407391",
+        "citationType": "journal article",
+        "authors": [
+          "Kirschner N.",
+          "Rosenthal R.",
+          "Furuse M.",
+          "Moll I.",
+          "Fromm M.",
+          "Brandner J.M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "23407391"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/jid.2012.507"
+          }
+        ],
+        "title": "Contribution of tight junction proteins to ion, macromolecule, and water barrier in keratinocytes.",
+        "publicationDate": "2013",
+        "journal": "J. Invest. Dermatol.",
+        "firstPage": "1161",
+        "lastPage": "1169",
+        "volume": "133"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "SUBCELLULAR LOCATION"
+      ]
+    },
+    {
+      "referenceNumber": 15,
+      "citation": {
+        "id": "24074594",
+        "citationType": "journal article",
+        "authors": [
+          "Che P.",
+          "Tang H.",
+          "Li Q."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "24074594"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/j.virol.2013.08.009"
+          }
+        ],
+        "title": "The interaction between claudin-1 and dengue viral prM/M protein for its entry.",
+        "publicationDate": "2013",
+        "journal": "Virology",
+        "firstPage": "303",
+        "lastPage": "313",
+        "volume": "446"
+      },
+      "referencePositions": [
+        "FUNCTION (MICROBIAL INFECTION)",
+        "INTERACTION WITH DENGUE VIRUS SMALL ENVELOPE PROTEIN M"
+      ]
+    },
+    {
+      "referenceNumber": 16,
+      "citation": {
+        "id": "23704991",
+        "citationType": "journal article",
+        "authors": [
+          "Bonander N.",
+          "Jamshad M.",
+          "Oberthuer D.",
+          "Clare M.",
+          "Barwell J.",
+          "Hu K.",
+          "Farquhar M.J.",
+          "Stamataki Z.",
+          "Harris H.J.",
+          "Dierks K.",
+          "Dafforn T.R.",
+          "Betzel C.",
+          "McKeating J.A.",
+          "Bill R.M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "23704991"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1371/journal.pone.0064517"
+          }
+        ],
+        "title": "Production, purification and characterization of recombinant, full-length human claudin-1.",
+        "publicationDate": "2013",
+        "journal": "PLoS ONE",
+        "firstPage": "E64517",
+        "lastPage": "E64517",
+        "volume": "8"
+      },
+      "referencePositions": [
+        "SUBCELLULAR LOCATION",
+        "SUBUNIT"
+      ]
+    },
+    {
+      "referenceNumber": 17,
+      "citation": {
+        "id": "24038151",
+        "citationType": "journal article",
+        "authors": [
+          "Douam F.",
+          "Dao Thi V.L.",
+          "Maurin G.",
+          "Fresquet J.",
+          "Mompelat D.",
+          "Zeisel M.B.",
+          "Baumert T.F.",
+          "Cosset F.L.",
+          "Lavillette D."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "24038151"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1002/hep.26733"
+          }
+        ],
+        "title": "Critical interaction between E1 and E2 glycoproteins determines binding and fusion properties of hepatitis C virus during cell entry.",
+        "publicationDate": "2014",
+        "journal": "Hepatology",
+        "firstPage": "776",
+        "lastPage": "788",
+        "volume": "59"
+      },
+      "referencePositions": [
+        "INTERACTION WITH HCV HETERODIMER E1/E2 (MICROBIAL INFECTION)",
+        "FUNCTION (MICROBIAL INFECTION)"
+      ]
+    },
+    {
+      "referenceNumber": 18,
+      "citation": {
+        "id": "30734065",
+        "citationType": "journal article",
+        "authors": [
+          "Berndt P.",
+          "Winkler L.",
+          "Cording J.",
+          "Breitkreuz-Korff O.",
+          "Rex A.",
+          "Dithmer S.",
+          "Rausch V.",
+          "Blasig R.",
+          "Richter M.",
+          "Sporbert A.",
+          "Wolburg H.",
+          "Blasig I.E.",
+          "Haseloff R.F."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "30734065"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1007/s00018-019-03030-7"
+          }
+        ],
+        "title": "Tight junction proteins at the blood-brain barrier: far more than claudin-5.",
+        "publicationDate": "2019",
+        "journal": "Cell. Mol. Life Sci.",
+        "firstPage": "1987",
+        "lastPage": "2002",
+        "volume": "76"
+      },
+      "referencePositions": [
+        "SUBCELLULAR LOCATION"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AF101051",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAD16433.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF115546",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAD22962.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF134160",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAF61393.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF260406",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAK20945.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF260403",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAK20945.1"
+        },
+        {
+          "key": "Status",
+          "value": "JOINED"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF260404",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAK20945.1"
+        },
+        {
+          "key": "Status",
+          "value": "JOINED"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF260405",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAK20945.1"
+        },
+        {
+          "key": "Status",
+          "value": "JOINED"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AY358652",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAQ89015.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "CR457138",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAG33419.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "BC012471",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAH12471.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "CCDS",
+      "id": "CCDS3295.1",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_066924.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NM_021101.5"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "O95832",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "O95832",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BioGRID",
+      "id": "114533",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "26"
+        }
+      ]
+    },
+    {
+      "database": "CORUM",
+      "id": "O95832",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "FunCoup",
+      "id": "O95832",
+      "properties": [
+        {
+          "key": "Number of interactors",
+          "value": "401"
+        }
+      ]
+    },
+    {
+      "database": "IntAct",
+      "id": "O95832",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "87"
+        }
+      ]
+    },
+    {
+      "database": "NDEx",
+      "id": "IQUERY-CP-CLDN1",
+      "properties": [
+        {
+          "key": "Evidences",
+          "value": "12 NDEx IQuery Curated Pathways"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "9606.ENSP00000295522",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "TCDB",
+      "id": "1.H.1.1.14",
+      "properties": [
+        {
+          "key": "FamilyName",
+          "value": "the claudin tight junction (claudin1) family"
+        }
+      ]
+    },
+    {
+      "database": "GlyCosmos",
+      "id": "O95832",
+      "properties": [
+        {
+          "key": "glycosylation",
+          "value": "4 sites, No reported glycans"
+        }
+      ]
+    },
+    {
+      "database": "GlyGen",
+      "id": "O95832",
+      "properties": [
+        {
+          "key": "glycosylation",
+          "value": "4 sites"
+        }
+      ]
+    },
+    {
+      "database": "iPTMnet",
+      "id": "O95832",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PhosphoSitePlus",
+      "id": "O95832",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SwissPalm",
+      "id": "O95832",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BioMuta",
+      "id": "CLDN1",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "jPOST",
+      "id": "O95832",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "MassIVE",
+      "id": "O95832",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PaxDb",
+      "id": "9606-ENSP00000295522",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PeptideAtlas",
+      "id": "O95832",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "ProteomicsDB",
+      "id": "51077",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Pumba",
+      "id": "O95832",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Antibodypedia",
+      "id": "3613",
+      "properties": [
+        {
+          "key": "antibodies",
+          "value": "917 antibodies from 48 providers"
+        }
+      ]
+    },
+    {
+      "database": "DNASU",
+      "id": "9076",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Ensembl",
+      "id": "ENST00000295522.4",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ENSP00000295522.3"
+        },
+        {
+          "key": "GeneId",
+          "value": "ENSG00000163347.6"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "9076",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "hsa:9076",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "MANE-Select",
+      "id": "ENST00000295522.4",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ENSP00000295522.3"
+        },
+        {
+          "key": "RefSeqNucleotideId",
+          "value": "NM_021101.5"
+        },
+        {
+          "key": "RefSeqProteinId",
+          "value": "NP_066924.1"
+        }
+      ]
+    },
+    {
+      "database": "UCSC",
+      "id": "uc003fsh.4",
+      "properties": [
+        {
+          "key": "OrganismName",
+          "value": "human"
+        }
+      ]
+    },
+    {
+      "database": "AGR",
+      "id": "HGNC:2032",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "ClinPGx",
+      "id": "PA26557",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "CTD",
+      "id": "9076",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "DisGeNET",
+      "id": "9076",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GeneCards",
+      "id": "CLDN1",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "HGNC",
+      "id": "HGNC:2032",
+      "properties": [
+        {
+          "key": "GeneName",
+          "value": "CLDN1"
+        }
+      ]
+    },
+    {
+      "database": "HPA",
+      "id": "ENSG00000163347",
+      "properties": [
+        {
+          "key": "ExpressionPatterns",
+          "value": "Tissue enhanced (liver, skin)"
+        }
+      ]
+    },
+    {
+      "database": "MalaCards",
+      "id": "CLDN1",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "MIM",
+      "id": "603718",
+      "properties": [
+        {
+          "key": "Type",
+          "value": "gene"
+        }
+      ]
+    },
+    {
+      "database": "MIM",
+      "id": "607626",
+      "properties": [
+        {
+          "key": "Type",
+          "value": "phenotype"
+        }
+      ]
+    },
+    {
+      "database": "OpenTargets",
+      "id": "ENSG00000163347",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Orphanet",
+      "id": "59303",
+      "properties": [
+        {
+          "key": "Disease",
+          "value": "Neonatal ichthyosis-sclerosing cholangitis syndrome"
+        }
+      ]
+    },
+    {
+      "database": "VEuPathDB",
+      "id": "HostDB:ENSG00000163347",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "ENOG502R7HF",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Eukaryota"
+        }
+      ]
+    },
+    {
+      "database": "GeneTree",
+      "id": "ENSGT00940000155387",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_076370_2_3_1",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "InParanoid",
+      "id": "O95832",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AACMCII",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OrthoDB",
+      "id": "10025519at2759",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PAN-GO",
+      "id": "O95832",
+      "properties": [
+        {
+          "key": "Number of GO annotations",
+          "value": "5 GO annotations based on evolutionary models"
+        }
+      ]
+    },
+    {
+      "database": "PhylomeDB",
+      "id": "O95832",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PathwayCommons",
+      "id": "O95832",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Reactome",
+      "id": "R-HSA-420029",
+      "properties": [
+        {
+          "key": "PathwayName",
+          "value": "Tight junction interactions"
+        }
+      ]
+    },
+    {
+      "database": "Reactome",
+      "id": "R-HSA-9918485",
+      "properties": [
+        {
+          "key": "PathwayName",
+          "value": "Dengue Virus Attachment and Entry"
+        }
+      ]
+    },
+    {
+      "database": "SignaLink",
+      "id": "O95832",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Agora",
+      "id": "ENSG00000163347",
+      "properties": [
+        {
+          "key": "NominatedTarget",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BioGRID-ORCS",
+      "id": "9076",
+      "properties": [
+        {
+          "key": "hits",
+          "value": "15 hits in 1151 CRISPR screens"
+        }
+      ]
+    },
+    {
+      "database": "ChiTaRS",
+      "id": "CLDN1",
+      "properties": [
+        {
+          "key": "OrganismName",
+          "value": "human"
+        }
+      ]
+    },
+    {
+      "database": "GeneWiki",
+      "id": "CLDN1",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GenomeRNAi",
+      "id": "9076",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Pharos",
+      "id": "O95832",
+      "properties": [
+        {
+          "key": "DevelopmentLevel",
+          "value": "Tbio"
+        }
+      ]
+    },
+    {
+      "database": "PRO",
+      "id": "PR:O95832",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000005640",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome 3"
+        }
+      ]
+    },
+    {
+      "database": "RNAct",
+      "id": "O95832",
+      "properties": [
+        {
+          "key": "moleculeType",
+          "value": "protein"
+        }
+      ]
+    },
+    {
+      "database": "Bgee",
+      "id": "ENSG00000163347",
+      "properties": [
+        {
+          "key": "ExpressionPatterns",
+          "value": "Expressed in upper leg skin and 140 other cell types or tissues"
+        }
+      ]
+    },
+    {
+      "database": "ExpressionAtlas",
+      "id": "O95832",
+      "properties": [
+        {
+          "key": "ExpressionPatterns",
+          "value": "baseline and differential"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0016324",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:apical plasma membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:Ensembl"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0016323",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:basolateral plasma membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "20375010"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005923",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:bicellular tight junction"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "20375010"
+        },
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "23407391"
+        },
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "25849148"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0010008",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:endosome membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "TAS:Reactome"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0016328",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:lateral plasma membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:Ensembl"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0016020",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "TAS:ProtInc"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000304",
+          "source": "PubMed",
+          "id": "9931503"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005886",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:plasma membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:ARUK-UCL"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "11090614"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0032991",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:protein-containing complex"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "25849148"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0070160",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:tight junction"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:ARUK-UCL"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "30734065"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0042802",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:identical protein binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IPI:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000353",
+          "source": "PubMed",
+          "id": "25849148"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005198",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:structural molecule activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0001618",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:virus receptor activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "20375010"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0070830",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:bicellular tight junction assembly"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "25849148"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0016338",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:calcium-independent cell-cell adhesion"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISS:UniProtKB"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0034331",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:cell junction maintenance"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISS:ARUK-UCL"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0045216",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:cell-cell junction organization"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:MGI"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "20164257"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:1903545",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:cellular response to butyrate"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:Ensembl"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0071284",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:cellular response to lead ion"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:Ensembl"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0071560",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:cellular response to transforming growth factor beta stimulus"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:Ensembl"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0071356",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:cellular response to tumor necrosis factor"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:Ensembl"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0071346",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:cellular response to type II interferon"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:Ensembl"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0008065",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:establishment of blood-nerve barrier"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:Ensembl"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0090557",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:establishment of endothelial intestinal barrier"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:Ensembl"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0061436",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:establishment of skin barrier"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "23407391"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0097421",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:liver regeneration"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:Ensembl"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0035633",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:maintenance of blood-brain barrier"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "NAS:ARUK-UCL"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000303",
+          "source": "PubMed",
+          "id": "30280653"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:1903348",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:positive regulation of bicellular tight junction assembly"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:Ensembl"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0030335",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:positive regulation of cell migration"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:ARUK-UCL"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "28412298"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0060054",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:positive regulation of epithelial cell proliferation involved in wound healing"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:ARUK-UCL"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "28412298"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0090303",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:positive regulation of wound healing"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:ARUK-UCL"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "28412298"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0051259",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:protein complex oligomerization"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:ARUK-UCL"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "23704991"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0071548",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:response to dexamethasone"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:Ensembl"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0045471",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:response to ethanol"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:Ensembl"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0070673",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:response to interleukin-18"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:Ensembl"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0032496",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:response to lipopolysaccharide"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:Ensembl"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009636",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:response to toxic substance"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:Ensembl"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0061772",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:xenobiotic transport across blood-nerve barrier"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:Ensembl"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "1.20.140.150:FF:000001",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Claudin"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.20.140.150",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR006187",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Claudin"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR003548",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Claudin1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR017974",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Claudin_CS"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR004031",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PMP22/EMP/MP20/Claudin"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR12002",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CLAUDIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00822",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PMP22_Claudin"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR01077",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CLAUDIN"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR01377",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CLAUDIN1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS01346",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CLAUDIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MANAGLQLLGFILAFLGWIGAIVSTALPQWRIYSYAGDNIVTAQAMYEGLWMSCVSQSTGQIQCKVFDSLLNLSSTLQATRALMVVGILLGVIAIFVATVGMKCMKCLEDDEVQKMRMAVIGGAIFLLAGLAILVATAWYGNRIVQEFYDPMTPVNARYEFGQALFTGWAAASLCLLGGALLCCSCPRKTTSYPTPRPYPKPAPSSGKDYV",
+    "length": 211,
+    "molWeight": 22744,
+    "crc64": "07269000E6C214F0",
+    "md5": "FC088DE5FAF46E844EAF974705A6993F"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 2,
+      "SUBUNIT": 3,
+      "INTERACTION": 27,
+      "SUBCELLULAR LOCATION": 1,
+      "TISSUE SPECIFICITY": 1,
+      "DISEASE": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Topological domain": 5,
+      "Transmembrane": 4,
+      "Region": 2,
+      "Disulfide bond": 1,
+      "Mutagenesis": 2,
+      "Sequence conflict": 2
+    },
+    "uniParcId": "UPI0000046D1E"
+  }
+}

@@ -1,0 +1,4599 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "P0DJM0",
+  "secondaryAccessions": [
+    "P25146",
+    "Q45GD5",
+    "Q45GD6",
+    "Q48748",
+    "Q48749",
+    "Q48750",
+    "Q48752",
+    "Q9EXG2"
+  ],
+  "uniProtkbId": "INLA_LISMO",
+  "entryAudit": {
+    "firstPublicDate": "2012-09-05",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2012-09-05",
+    "entryVersion": 75,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 5.0,
+  "organism": {
+    "scientificName": "Listeria monocytogenes serovar 1/2a (strain ATCC BAA-679 / EGD-e)",
+    "taxonId": 169963,
+    "lineage": [
+      "Bacteria",
+      "Bacillati",
+      "Bacillota",
+      "Bacilli",
+      "Caryophanales",
+      "Listeriaceae",
+      "Listeria"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000303",
+            "source": "PubMed",
+            "id": "1905979"
+          }
+        ],
+        "value": "Internalin A"
+      }
+    },
+    "flag": "Precursor"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000303",
+            "source": "PubMed",
+            "id": "1905979"
+          }
+        ],
+        "value": "inlA"
+      },
+      "orderedLocusNames": [
+        {
+          "value": "lmo0433"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "10406800"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "1905979"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "8601315"
+            }
+          ],
+          "value": "Mediates the entry of L.monocytogenes into host intestinal epithelial cells; transformation with inlA alone allows L.innocua (a non-invasive species) to be taken up by host cells (PubMed:10406800, PubMed:1905979, PubMed:8601315). Binds to human receptor cadherin-1 (E-cadherin, CDH1); the chicken homolog of cadherin-1 but not cadherin-2 function as receptors (PubMed:8601315). Mouse cadherin-1 is not a receptor, however mutating a single surface-exposed residue (Glu-172 to Pro in mouse) allows cadherin-1 to act as a receptor for InlA (PubMed:10406800)"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "8601315"
+            }
+          ],
+          "value": "Bacterial uptake is inhibited by EDTA and by anti-E-cadherin antibodies"
+        }
+      ],
+      "commentType": "ACTIVITY REGULATION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "12526809"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "17540170"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "17715295"
+            }
+          ],
+          "value": "Interacts with host (human) cadherin-1 (CDH1) (PubMed:12526809, PubMed:17540170, PubMed:17715295). The formation of the complex between inlA and cadherin-1 is calcium-dependent (PubMed:12526809). Mutagenesis studies show it is possible to increase the affinity of InlA for CDH1 by rational engineering of InlA residues (PubMed:17715295)"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "INTERACTION",
+      "interactions": [
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "P0DJM0",
+            "intActId": "EBI-1035388"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "P12830",
+            "geneName": "CDH1",
+            "intActId": "EBI-727477"
+          },
+          "numberOfExperiments": 3,
+          "organismDiffer": true
+        }
+      ]
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "note": {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "21725001"
+              },
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "22837151"
+              }
+            ],
+            "value": "In the absence of SrtA in exponential phase some protein is still anchored to the cell wall and a very small amount is secreted while overall protein levels are the same in the srtA mutant; in stationary phase almost no protein accumulates (PubMed:22837151). During exponential growth detected on the cell surface as a series of dots in a helical pattern, it is excluded from the septum; if expression is increased it accumulates at cell poles (PubMed:21725001). The helical pattern of InlA does not overlap with that of InlH, InlJ or Hbp2 (SvpA) (PubMed:21725001). In stationary phase colocalizes with InlH at cell poles and at the septum, the location shift requires SigB (PubMed:21725001)"
+          }
+        ]
+      },
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255",
+                "source": "PROSITE-ProRule",
+                "id": "PRU00477"
+              },
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "10736172"
+              },
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "11929538"
+              },
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "20176794"
+              },
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "21725001"
+              },
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "22837151"
+              }
+            ],
+            "value": "Secreted, cell wall",
+            "id": "SL-0041"
+          },
+          "topology": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255",
+                "source": "PROSITE-ProRule",
+                "id": "PRU00477"
+              },
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "10736172"
+              },
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "11929538"
+              }
+            ],
+            "value": "Peptidoglycan-anchor",
+            "id": "SL-9900"
+          }
+        },
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "11854224"
+              },
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "20176794"
+              }
+            ],
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "16247833"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "20176794"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "21725001"
+            }
+          ],
+          "value": "More prevalent in stationary than exponential phase (at protein level) (PubMed:16247833, PubMed:21725001). Levels maybe post-transcriptionally decreased by InlH; disruption of inlH in some strains (EGD-e and EGD-2) leads to increased levels of InlA (at protein level) (PubMed:20176794)"
+        }
+      ],
+      "commentType": "INDUCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "12526809"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "17540170"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "17715295"
+            }
+          ],
+          "value": "Consists of an N-terminal cap, a leucine-rich repeat domain (LRR), and an Ig-like interrepeat domain"
+        }
+      ],
+      "commentType": "DOMAIN"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "10406800"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11929538"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "1905979"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "8601315"
+            }
+          ],
+          "value": "Deletion of both inlA and inlB prevents bacterial uptake by human enterocyte-like cell line Caco-2 (PubMed:1905979). Deletion of inlA alone decreases host cell entry; the reduction varies from 98% to none depending on the cell line tested (PubMed:10406800, PubMed:11929538, PubMed:8601315)"
+        }
+      ],
+      "commentType": "DISRUPTION PHENOTYPE"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the internalin family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    },
+    {
+      "commentType": "SEQUENCE CAUTION",
+      "sequenceCautionType": "Frameshift",
+      "sequence": "AAA25289.1",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305",
+          "source": "PubMed",
+          "id": "7934917"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 35,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "11854224"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 36,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 770,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Internalin A",
+      "featureId": "PRO_0000005609"
+    },
+    {
+      "type": "Propeptide",
+      "location": {
+        "start": {
+          "value": 771,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 800,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Removed by sortase A",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00477"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "11929538"
+        },
+        {
+          "evidenceCode": "ECO:0000305",
+          "source": "PubMed",
+          "id": "11854224"
+        },
+        {
+          "evidenceCode": "ECO:0000305",
+          "source": "PubMed",
+          "id": "16247833"
+        },
+        {
+          "evidenceCode": "ECO:0000305",
+          "source": "PubMed",
+          "id": "22837151"
+        }
+      ],
+      "featureId": "PRO_0000005610"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 36,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 76,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRRNT"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 77,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 98,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 1"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 99,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 120,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 2"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 121,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 142,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 3"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 143,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 164,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 4"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 165,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 186,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 5"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 187,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 207,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 6"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 208,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 229,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 7"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 230,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 251,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 8"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 252,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 273,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 9"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 274,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 295,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 10"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 296,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 317,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 11"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 318,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 339,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 12"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 340,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 361,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 13"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 362,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 383,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 14"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 384,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 405,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 15"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 416,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 505,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRRCT"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 518,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 587,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "B-1"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 588,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 657,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "B-2"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 658,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 706,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "B-3"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 518,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 706,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "3 X approximate tandem repeats, type B"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 705,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 757,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Motif",
+      "location": {
+        "start": {
+          "value": 767,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 771,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LPXTG sorting signal",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00477"
+        },
+        {
+          "evidenceCode": "ECO:0000305",
+          "source": "PubMed",
+          "id": "10736172"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 711,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 753,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Low complexity",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Modified residue",
+      "location": {
+        "start": {
+          "value": 770,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 770,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Pentaglycyl murein peptidoglycan amidated threonine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00477"
+        },
+        {
+          "evidenceCode": "ECO:0000305",
+          "source": "PubMed",
+          "id": "10736172"
+        }
+      ]
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 3,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 3,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: H4",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "K",
+        "alternativeSequences": [
+          "R"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 19,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 19,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: H4",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "F",
+        "alternativeSequences": [
+          "L"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 51,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 51,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: EGD-SmR / Serovar 1/2a",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "T",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 94,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 94,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: EGD-SmR / Serovar 1/2a, F4233 /Serotype 1/2b, F6789 / Serotype 1/2b, F5782 / Serotype 4b and H4",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "V",
+        "alternativeSequences": [
+          "L"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 118,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 118,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: EGD-SmR / Serovar 1/2a, F4233 /Serotype 1/2b, F6789 / Serotype 1/2b, F5782 / Serotype 4b and H4",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "N",
+        "alternativeSequences": [
+          "D"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 142,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 142,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: F5782 / Serotype 4b and H4",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "T",
+        "alternativeSequences": [
+          "S"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 187,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 187,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: EGD-SmR / Serovar 1/2a, F4233 /Serotype 1/2b, F6789 / Serotype 1/2b and H4",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "S",
+        "alternativeSequences": [
+          "N"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 193,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 193,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: F5782 / Serotype 4b, F4233 /Serotype 1/2b and F6789 / Serotype 1/2b",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "F",
+        "alternativeSequences": [
+          "L"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 253,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 253,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: F4233 / Serotype 1/2b and F6789 /Serotype 1/2b",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "L",
+        "alternativeSequences": [
+          "W"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 292,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 292,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: F4233 / Serotype 1/2b and F5782 /Serotype 4b",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "S",
+        "alternativeSequences": [
+          "P"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 292,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 292,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: F6789 / Serotype 1/2b",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "S",
+        "alternativeSequences": [
+          "R"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 321,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 321,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: H4",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "N",
+        "alternativeSequences": [
+          "S"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 381,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 381,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: H4",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "N",
+        "alternativeSequences": [
+          "S"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 416,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 416,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: F4233 / Serotype 1/2b, F6789 /Serotype 1/2b and F5782 / Serotype 4b",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "A",
+        "alternativeSequences": [
+          "E"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 454,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 454,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: EGD-SmR / Serovar 1/2a and H4",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "T",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 474,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 474,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: H4",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "S",
+        "alternativeSequences": [
+          "N"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 476,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 476,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: H4",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "P",
+        "alternativeSequences": [
+          "S"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 500,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 500,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: EGD-SmR / Serovar 1/2a and H4",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "V",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 530,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 530,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: H4",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "H",
+        "alternativeSequences": [
+          "Y"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 558,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 558,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: H4",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "N",
+        "alternativeSequences": [
+          "D"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 573,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 573,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: EGD-SmR / Serovar 1/2a",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "D",
+        "alternativeSequences": [
+          "E"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 594,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 594,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: EGD-SmR / Serovar 1/2a",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "A",
+        "alternativeSequences": [
+          "P"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 648,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 648,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: H4",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "S",
+        "alternativeSequences": [
+          "T"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 664,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 664,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: H4",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "A",
+        "alternativeSequences": [
+          "T"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 729,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 729,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: H4",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "P",
+        "alternativeSequences": [
+          "S"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 738,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 738,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: H4",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "D",
+        "alternativeSequences": [
+          "N"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 781,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 781,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: H4",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "L",
+        "alternativeSequences": [
+          "I"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 790,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 790,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: H4",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "M",
+        "alternativeSequences": [
+          "V"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 150,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 150,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "No longer binds human cadherin-1 (CDH1) domain 1.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12526809"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "F",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 192,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 192,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "40-fold increased affinity for human CDH1 domain 1. 6700-fold increased affinity for CDH1, better adhesion to human Caco cells, 1000-fold more virulent in mice; when associated with S-369.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "17540170"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "17715295"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "S",
+        "alternativeSequences": [
+          "N"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 194,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 194,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Increased affinity for human CDH1 domain 1.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "17715295"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "G",
+        "alternativeSequences": [
+          "SS"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 343,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 343,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "No longer binds human CDH1 domain 1.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12526809"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "Y",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 347,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 347,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Decreased affinity for human CDH1 domain 1.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12526809"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "Y",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 367,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 367,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "No longer binds human CDH1 domain 1.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12526809"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "F",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 369,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 369,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Increased affinity for human CDH1 domain 1.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12526809"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "17715295"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "Y",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 369,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 369,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "170-fold increased affinity for human CDH1 domain 1. 6700-fold increased affinity for CDH1, better adhesion to human Caco cells, 1000-fold more virulent in mice; when associated with N-192.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "17540170"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "17715295"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "Y",
+        "alternativeSequences": [
+          "S"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 387,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 387,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "No longer binds human CDH1 domain 1.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12526809"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "W",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 44,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 47,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 51,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 60,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 68,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 70,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 72,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 76,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 80,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 82,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 94,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 96,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 102,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 104,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 114,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 116,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 124,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 126,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 136,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 138,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 146,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 148,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 158,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 160,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 167,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 176,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 180,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 182,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 189,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 196,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 201,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 203,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 211,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 213,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 223,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 227,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 232,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 235,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 245,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 249,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 255,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 257,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 267,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 271,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 276,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 279,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 289,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 291,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 298,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 301,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 311,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 313,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 320,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 323,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 333,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 337,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 343,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 345,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 355,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 359,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 365,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 367,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 377,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 379,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 387,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 389,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 399,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 401,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 409,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 411,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 415,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 418,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 429,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 431,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 445,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 447,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 448,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 450,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 452,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 454,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 457,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 459,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 467,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 479,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 482,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 493,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0002",
+      "category": "Technical term",
+      "name": "3D-structure"
+    },
+    {
+      "id": "KW-0134",
+      "category": "Cellular component",
+      "name": "Cell wall"
+    },
+    {
+      "id": "KW-0903",
+      "category": "Technical term",
+      "name": "Direct protein sequencing"
+    },
+    {
+      "id": "KW-0433",
+      "category": "Domain",
+      "name": "Leucine-rich repeat"
+    },
+    {
+      "id": "KW-0572",
+      "category": "PTM",
+      "name": "Peptidoglycan-anchor"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0677",
+      "category": "Domain",
+      "name": "Repeat"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "1905979",
+        "citationType": "journal article",
+        "authors": [
+          "Gaillard J.-L.",
+          "Berche P.",
+          "Frehel C.",
+          "Gouin E.",
+          "Cossart P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "1905979"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/0092-8674(91)90009-n"
+          }
+        ],
+        "title": "Entry of L. monocytogenes into cells is mediated by internalin, a repeat protein reminiscent of surface antigens from Gram-positive cocci.",
+        "publicationDate": "1991",
+        "journal": "Cell",
+        "firstPage": "1127",
+        "lastPage": "1141",
+        "volume": "65"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]",
+        "FUNCTION",
+        "DOMAIN",
+        "DISRUPTION PHENOTYPE"
+      ],
+      "referenceComments": [
+        {
+          "value": "EGD-SmR / Serovar 1/2a",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "7934917",
+        "citationType": "journal article",
+        "authors": [
+          "Dramsi S.",
+          "Dehoux P.",
+          "Cossart P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "7934917"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1111/j.1365-2958.1993.tb01241.x"
+          }
+        ],
+        "title": "Common features of Gram-positive bacterial proteins involved in cell recognition.",
+        "publicationDate": "1993",
+        "journal": "Mol. Microbiol.",
+        "firstPage": "1119",
+        "lastPage": "1121",
+        "volume": "9"
+      },
+      "referencePositions": [
+        "SEQUENCE REVISION TO N-TERMINUS"
+      ],
+      "referenceComments": [
+        {
+          "value": "EGD-SmR / Serovar 1/2a",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "CI-AGUDFGQEDHIPV",
+        "citationType": "submission",
+        "authors": [
+          "Hain T.",
+          "Pashalidis P.",
+          "Hudel M.",
+          "Chakraborty T.",
+          "Domann E."
+        ],
+        "title": "Nucleotide sequence of the internalin operon from Listeria monocytogenes EGD.",
+        "publicationDate": "OCT-1998",
+        "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "EGD / Mackaness / Serovar 1/2a",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "CI-9ODID57MKD8KE",
+        "citationType": "submission",
+        "authors": [
+          "Jiang L.",
+          "Xu J.",
+          "Chen N.",
+          "Chen X.",
+          "Fang W."
+        ],
+        "publicationDate": "JUL-2005",
+        "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "H4",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "11679669",
+        "citationType": "journal article",
+        "authors": [
+          "Glaser P.",
+          "Frangeul L.",
+          "Buchrieser C.",
+          "Rusniok C.",
+          "Amend A.",
+          "Baquero F.",
+          "Berche P.",
+          "Bloecker H.",
+          "Brandt P.",
+          "Chakraborty T.",
+          "Charbit A.",
+          "Chetouani F.",
+          "Couve E.",
+          "de Daruvar A.",
+          "Dehoux P.",
+          "Domann E.",
+          "Dominguez-Bernal G.",
+          "Duchaud E.",
+          "Durant L.",
+          "Dussurget O.",
+          "Entian K.-D.",
+          "Fsihi H.",
+          "Garcia-del Portillo F.",
+          "Garrido P.",
+          "Gautier L.",
+          "Goebel W.",
+          "Gomez-Lopez N.",
+          "Hain T.",
+          "Hauf J.",
+          "Jackson D.",
+          "Jones L.-M.",
+          "Kaerst U.",
+          "Kreft J.",
+          "Kuhn M.",
+          "Kunst F.",
+          "Kurapkat G.",
+          "Madueno E.",
+          "Maitournam A.",
+          "Mata Vicente J.",
+          "Ng E.",
+          "Nedjari H.",
+          "Nordsiek G.",
+          "Novella S.",
+          "de Pablos B.",
+          "Perez-Diaz J.-C.",
+          "Purcell R.",
+          "Remmel B.",
+          "Rose M.",
+          "Schlueter T.",
+          "Simoes N.",
+          "Tierrez A.",
+          "Vazquez-Boland J.-A.",
+          "Voss H.",
+          "Wehland J.",
+          "Cossart P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11679669"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1126/science.1063447"
+          }
+        ],
+        "title": "Comparative genomics of Listeria species.",
+        "publicationDate": "2001",
+        "journal": "Science",
+        "firstPage": "849",
+        "lastPage": "852",
+        "volume": "294"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC BAA-679 / EGD-e",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "11854224",
+        "citationType": "journal article",
+        "authors": [
+          "Garandeau C.",
+          "Reglier-Poupet H.",
+          "Dubail I.",
+          "Beretti J.L.",
+          "Berche P.",
+          "Charbit A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11854224"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.70.3.1382-1390.2002"
+          }
+        ],
+        "title": "The sortase SrtA of Listeria monocytogenes is involved in processing of internalin and in virulence.",
+        "publicationDate": "2002",
+        "journal": "Infect. Immun.",
+        "firstPage": "1382",
+        "lastPage": "1390",
+        "volume": "70"
+      },
+      "referencePositions": [
+        "PROTEIN SEQUENCE OF 36-40",
+        "SUBCELLULAR LOCATION",
+        "PROCESSING BY SRTA"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC BAA-679 / EGD-e",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 7,
+      "citation": {
+        "id": "9541569",
+        "citationType": "journal article",
+        "authors": [
+          "Vines A.",
+          "Swaminathan B."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9541569"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1007/s002849900315"
+          }
+        ],
+        "title": "Identification and characterization of nucleotide sequence differences in three virulence-associated genes of Listeria monocytogenes strains representing clinically important serotypes.",
+        "publicationDate": "1998",
+        "journal": "Curr. Microbiol.",
+        "firstPage": "309",
+        "lastPage": "318",
+        "volume": "36"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 73-418"
+      ],
+      "referenceComments": [
+        {
+          "value": "F4233 / Serotype 1/2b",
+          "type": "STRAIN"
+        },
+        {
+          "value": "F5782 / Serotype 4b",
+          "type": "STRAIN"
+        },
+        {
+          "value": "F6789 / Serotype 1/2b",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 8,
+      "citation": {
+        "id": "10736172",
+        "citationType": "journal article",
+        "authors": [
+          "Dhar G.",
+          "Faull K.F.",
+          "Schneewind O."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "10736172"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1021/bi992347o"
+          }
+        ],
+        "title": "Anchor structure of cell wall surface proteins in Listeria monocytogenes.",
+        "publicationDate": "2000",
+        "journal": "Biochemistry",
+        "firstPage": "3725",
+        "lastPage": "3733",
+        "volume": "39"
+      },
+      "referencePositions": [
+        "PROTEIN SEQUENCE OF 764-770",
+        "SUBCELLULAR LOCATION",
+        "SORTING SIGNAL",
+        "CELL WALL ANCHORING"
+      ],
+      "referenceComments": [
+        {
+          "value": "EGD / Mackaness / Serovar 1/2a",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 9,
+      "citation": {
+        "id": "8601315",
+        "citationType": "journal article",
+        "authors": [
+          "Mengaud J.",
+          "Ohayon H.",
+          "Gounon P.",
+          "Mege R.M.",
+          "Cossart P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8601315"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/s0092-8674(00)81070-3"
+          }
+        ],
+        "title": "E-cadherin is the receptor for internalin, a surface protein required for entry of L. monocytogenes into epithelial cells.",
+        "publicationDate": "1996",
+        "journal": "Cell",
+        "firstPage": "923",
+        "lastPage": "932",
+        "volume": "84"
+      },
+      "referencePositions": [
+        "IDENTIFICATION OF HOST RECEPTOR",
+        "FUNCTION",
+        "ACTIVITY REGULATION",
+        "INTERACTION WITH HUMAN CDH1",
+        "DISRUPTION PHENOTYPE"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC BAA-679 / EGD-e",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 10,
+      "citation": {
+        "id": "10406800",
+        "citationType": "journal article",
+        "authors": [
+          "Lecuit M.",
+          "Dramsi S.",
+          "Gottardi C.",
+          "Fedor-Chaiken M.",
+          "Gumbiner B.",
+          "Cossart P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "10406800"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1093/emboj/18.14.3956"
+          }
+        ],
+        "title": "A single amino acid in E-cadherin responsible for host specificity towards the human pathogen Listeria monocytogenes.",
+        "publicationDate": "1999",
+        "journal": "EMBO J.",
+        "firstPage": "3956",
+        "lastPage": "3963",
+        "volume": "18"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "HOST SPECIFICITY",
+        "DISRUPTION PHENOTYPE"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC BAA-679 / EGD-e",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 11,
+      "citation": {
+        "id": "11929538",
+        "citationType": "journal article",
+        "authors": [
+          "Bierne H.",
+          "Mazmanian S.K.",
+          "Trost M.",
+          "Pucciarelli M.G.",
+          "Liu G.",
+          "Dehoux P.",
+          "Jansch L.",
+          "Garcia-del Portillo F.",
+          "Schneewind O.",
+          "Cossart P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11929538"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1046/j.1365-2958.2002.02798.x"
+          }
+        ],
+        "title": "Inactivation of the srtA gene in Listeria monocytogenes inhibits anchoring of surface proteins and affects virulence.",
+        "publicationDate": "2002",
+        "journal": "Mol. Microbiol.",
+        "firstPage": "869",
+        "lastPage": "881",
+        "volume": "43"
+      },
+      "referencePositions": [
+        "PROCESSING BY SRTA",
+        "SUBCELLULAR LOCATION",
+        "DISRUPTION PHENOTYPE"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC BAA-679 / EGD-e",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 12,
+      "citation": {
+        "id": "16247833",
+        "citationType": "journal article",
+        "authors": [
+          "Pucciarelli M.G.",
+          "Calvo E.",
+          "Sabet C.",
+          "Bierne H.",
+          "Cossart P.",
+          "Garcia-del Portillo F."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "16247833"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1002/pmic.200402075"
+          }
+        ],
+        "title": "Identification of substrates of the Listeria monocytogenes sortases A and B by a non-gel proteomic analysis.",
+        "publicationDate": "2005",
+        "journal": "Proteomics",
+        "firstPage": "4808",
+        "lastPage": "4817",
+        "volume": "5"
+      },
+      "referencePositions": [
+        "IDENTIFICATION BY MASS SPECTROMETRY",
+        "PROCESSING BY SRTA"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC BAA-679 / EGD-e",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 13,
+      "citation": {
+        "id": "20176794",
+        "citationType": "journal article",
+        "authors": [
+          "Personnic N.",
+          "Bruck S.",
+          "Nahori M.A.",
+          "Toledo-Arana A.",
+          "Nikitas G.",
+          "Lecuit M.",
+          "Dussurget O.",
+          "Cossart P.",
+          "Bierne H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "20176794"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.01096-09"
+          }
+        ],
+        "title": "The stress-induced virulence protein InlH controls interleukin-6 production during murine listeriosis.",
+        "publicationDate": "2010",
+        "journal": "Infect. Immun.",
+        "firstPage": "1979",
+        "lastPage": "1989",
+        "volume": "78"
+      },
+      "referencePositions": [
+        "SUBCELLULAR LOCATION",
+        "INDUCTION"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC BAA-679 / EGD-e",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 14,
+      "citation": {
+        "id": "21725001",
+        "citationType": "journal article",
+        "authors": [
+          "Bruck S.",
+          "Personnic N.",
+          "Prevost M.C.",
+          "Cossart P.",
+          "Bierne H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "21725001"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.01154-10"
+          }
+        ],
+        "title": "Regulated shift from helical to polar localization of Listeria monocytogenes cell wall-anchored proteins.",
+        "publicationDate": "2011",
+        "journal": "J. Bacteriol.",
+        "firstPage": "4425",
+        "lastPage": "4437",
+        "volume": "193"
+      },
+      "referencePositions": [
+        "SUBCELLULAR LOCATION",
+        "INDUCTION"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC BAA-679 / EGD-e",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 15,
+      "citation": {
+        "id": "22837151",
+        "citationType": "journal article",
+        "authors": [
+          "Mariscotti J.F.",
+          "Quereda J.J.",
+          "Pucciarelli M.G."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "22837151"
+          },
+          {
+            "database": "DOI",
+            "id": "10.2436/20.1501.01.157"
+          }
+        ],
+        "title": "Contribution of sortase A to the regulation of Listeria monocytogenes LPXTG surface proteins.",
+        "publicationDate": "2012",
+        "journal": "Int. Microbiol.",
+        "firstPage": "43",
+        "lastPage": "51",
+        "volume": "15"
+      },
+      "referencePositions": [
+        "SUBCELLULAR LOCATION",
+        "PROCESSING BY SRTA"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC BAA-679 / EGD-e",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 16,
+      "citation": {
+        "id": "12526809",
+        "citationType": "journal article",
+        "authors": [
+          "Schubert W.-D.",
+          "Urbanke C.",
+          "Ziehm T.",
+          "Beier V.",
+          "Machner M.P.",
+          "Domann E.",
+          "Wehland J.",
+          "Chakraborty T.",
+          "Heinz D.W."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "12526809"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/s0092-8674(02)01136-4"
+          }
+        ],
+        "title": "Structure of internalin, a major invasion protein of Listeria monocytogenes, in complex with its human receptor E-cadherin.",
+        "publicationDate": "2002",
+        "journal": "Cell",
+        "firstPage": "825",
+        "lastPage": "836",
+        "volume": "111"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY ALONE AND IN COMPLEX WITH HUMAN CDH1",
+        "SUBUNIT",
+        "DOMAIN",
+        "MUTAGENESIS OF PHE-150; TYR-343; TYR-347; PHE-367; TYR-369 AND TRP-387"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC BAA-679 / EGD-e",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "1O6S"
+        },
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "1O6T"
+        },
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "1O6V"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 17,
+      "citation": {
+        "id": "17540170",
+        "citationType": "journal article",
+        "authors": [
+          "Wollert T.",
+          "Pasche B.",
+          "Rochon M.",
+          "Deppenmeier S.",
+          "van den Heuvel J.",
+          "Gruber A.D.",
+          "Heinz D.W.",
+          "Lengeling A.",
+          "Schubert W.D."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "17540170"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/j.cell.2007.03.049"
+          }
+        ],
+        "title": "Extending the host range of Listeria monocytogenes by rational protein design.",
+        "publicationDate": "2007",
+        "journal": "Cell",
+        "firstPage": "891",
+        "lastPage": "902",
+        "volume": "129"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY IN COMPLEX WITH HUMAN OR MOUSE CDH1",
+        "SUBUNIT",
+        "DOMAIN",
+        "MUTAGENESIS OF SER-192 AND TYR-369"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "2OMV"
+        },
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "2OMW"
+        },
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "2OMY"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 18,
+      "citation": {
+        "id": "17715295",
+        "citationType": "journal article",
+        "authors": [
+          "Wollert T.",
+          "Heinz D.W.",
+          "Schubert W.D."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "17715295"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1073/pnas.0702199104"
+          }
+        ],
+        "title": "Thermodynamically reengineering the listerial invasion complex InlA/E-cadherin.",
+        "publicationDate": "2007",
+        "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+        "firstPage": "13960",
+        "lastPage": "13965",
+        "volume": "104"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY IN COMPLEX WITH HUMAN CDH1",
+        "SUBUNIT",
+        "DOMAIN",
+        "MUTAGENESIS OF SER-192; GLY-194 AND TYR-369"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "2OMT"
+        },
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "2OMU"
+        },
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "2OMX"
+        },
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "2OMZ"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "M67471",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA25289.1"
+        },
+        {
+          "key": "Status",
+          "value": "ALT_FRAME"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AJ012346",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAC20628.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "DQ132794",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAZ53235.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AL591975",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAC98512.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "U25448",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA69530.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "U25451",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA69533.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "U25454",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA69536.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "AB1129",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "AB1129"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_463962.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_003210.1"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_010989462.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_003210.1"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "1O6S",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.80 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=35-496"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "1O6T",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.60 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=36-496"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "1O6V",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.50 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B=35-496"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2OMT",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.00 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=36-496"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2OMU",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.80 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=36-496"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2OMV",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.90 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=36-495"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2OMW",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.85 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=36-496"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2OMX",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.70 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=36-496"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2OMY",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.70 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=36-495"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2OMZ",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.60 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=36-495"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "8H62",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.91 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=36-496"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "8H63",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.53 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=36-496"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "8H64",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.35 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/C/E/G=36-496"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "P0DJM0",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "P0DJM0",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "IntAct",
+      "id": "P0DJM0",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "169963.gene:17593084",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "TCDB",
+      "id": "8.A.43.1.12",
+      "properties": [
+        {
+          "key": "FamilyName",
+          "value": "the neat-domain containing methaemoglobin heme sequestration (n-mhs) family"
+        }
+      ]
+    },
+    {
+      "database": "PaxDb",
+      "id": "169963-gene:17593084",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "ABCD",
+      "id": "P0DJM0",
+      "properties": [
+        {
+          "key": "antibodies",
+          "value": "2 sequenced antibodies"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblBacteria",
+      "id": "CAC98512",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAC98512"
+        },
+        {
+          "key": "GeneId",
+          "value": "CAC98512"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "985151",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "lmo:lmo0433",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|169963.11.peg.446",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "COG4886",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Bacteria"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_019447_3_0_9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AAVSMWI",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OrthoDB",
+      "id": "2364935at2",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PhylomeDB",
+      "id": "P0DJM0",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BioCyc",
+      "id": "LMON169963:LMO0433-MONOMER",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Reactome",
+      "id": "R-HSA-8876493",
+      "properties": [
+        {
+          "key": "PathwayName",
+          "value": "InlA-mediated entry of Listeria monocytogenes into host cells"
+        }
+      ]
+    },
+    {
+      "database": "EvolutionaryTrace",
+      "id": "P0DJM0",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PHI-base",
+      "id": "PHI:124374",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PHI-base",
+      "id": "PHI:9300",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PHI-base",
+      "id": "PHI:9365",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PHI-base",
+      "id": "PHI:9817",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000000817",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "11854224"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "20176794"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009274",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:peptidoglycan-based cell wall"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "TAS:Reactome"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "3.80.10.10:FF:001164",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "GH01279p"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "2.60.40.1220:FF:000002",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Internalin A"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "2.60.40.4270:FF:000001",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Internalin A"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.60.40.1220",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.60.40.4270",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Listeria-Bacteroides repeat domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "3"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.80.10.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Ribonuclease Inhibitor"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR014755",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cu-Rt/internalin_Ig-like"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR014756",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Ig_E-set"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR012569",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Inl_IR"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR047600",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "InlA"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR013378",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "InlB-like_B-rpt"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR024634",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Internalin_N"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR001611",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Leu-rich_rpt"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR025875",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Leu-rich_rpt_4"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR003591",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Leu-rich_rpt_typical-subtyp"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR042229",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Listeria/Bacterioides_rpt_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR019931",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LPXTG_anchor"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR032675",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LRR_dom_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR050836",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SDS22/Internalin_LRR"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF033189",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "internalin_A"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "TIGR02543",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "List_Bact_rpt"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "3"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "TIGR01167",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LPXTG_anchor"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR46652",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LEUCINE-RICH REPEAT AND IQ DOMAIN-CONTAINING PROTEIN 1-RELATED"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR46652:SF3",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LEUCINE-RICH REPEAT-CONTAINING PROTEIN 9"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF09479",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Flg_new"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "3"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00746",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Gram_pos_anchor"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF12354",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Internalin_N"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF12799",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LRR_4"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "6"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF08191",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LRR_adjacent"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00365",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LRR_SD22"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "13"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00369",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LRR_TYP"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "12"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF81296",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "E set domains"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF52058",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "L domain-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS50847",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "GRAM_POS_ANCHORING"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51450",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LRR"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "14"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MRKKRYVWLKSILVAILVFGSGVWINTSNGTNAQAATITQDTPINQIFTDTALAEKMKTVLGKTNVTDTVSQTDLDQVTTLQADRLGIKSIDGVEYLNNLTQINFSNNQLTDITPLKNLTKLVDILMNNNQIADITPLANLTNLTGLTLFNNQITDIDPLKNLTNLNRLELSSNTISDISALSGLTSLQQLSFGNQVTDLKPLANLTTLERLDISSNKVSDISVLAKLTNLESLIATNNQISDITPLGILTNLDELSLNGNQLKDIGTLASLTNLTDLDLANNQISNLAPLSGLTKLTELKLGANQISNISPLAGLTALTNLELNENQLEDISPISNLKNLTYLTLYFNNISDISPVSSLTKLQRLFFYNNKVSDVSSLANLTNINWLSAGHNQISDLTPLANLTRITQLGLNDQAWTNAPVNYKANVSIPNTVKNVTGALIAPATISDGGSYTEPDITWNLPSYTNEVSYTFSQPVTIGKGTTTFSGTVTQPLKAIFNVKFHVDGKETTKEVEAGNLLTEPAKPVKEGHTFVGWFDAQTGGTKWNFSTDKMPTNDINLYAQFSINSYTATFDNDGVTTSQTVDYQGLLQEPTAPTKEGYTFKGWYDAKTGGDKWDFATSKMPAKNITLYAQYSANSYTATFDVDGKSTTQAVDYQGLLKEPKAPTKAGYTFKGWYDEKTDGKKWDFATDKMPANDITLYAQFTKNPVAPPTTGGNTPPTTNNGGNTTPPSANIPGSDTSNTSTGNSASTTSTMNAYDPYNSKEASLPTTGDSDNALYLLLGLLAVGTAMALTKKARASK",
+    "length": 800,
+    "molWeight": 86493,
+    "crc64": "4D1B03A5CF7CCDE3",
+    "md5": "4A877C282A40FF3B8124168C79313A67"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "ACTIVITY REGULATION": 1,
+      "SUBUNIT": 1,
+      "INTERACTION": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "INDUCTION": 1,
+      "DOMAIN": 1,
+      "DISRUPTION PHENOTYPE": 1,
+      "SIMILARITY": 1,
+      "SEQUENCE CAUTION": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1,
+      "Propeptide": 1,
+      "Domain": 2,
+      "Repeat": 18,
+      "Region": 2,
+      "Motif": 1,
+      "Compositional bias": 1,
+      "Modified residue": 1,
+      "Natural variant": 28,
+      "Mutagenesis": 9,
+      "Helix": 19,
+      "Beta strand": 24
+    },
+    "uniParcId": "UPI000012D683"
+  }
+}

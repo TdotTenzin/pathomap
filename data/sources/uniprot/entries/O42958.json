@@ -1,0 +1,1002 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "O42958",
+  "uniProtkbId": "PAT1_SCHPO",
+  "entryAudit": {
+    "firstPublicDate": "2009-05-05",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2009-09-22",
+    "entryVersion": 126,
+    "sequenceVersion": 2
+  },
+  "annotationScore": 4.0,
+  "organism": {
+    "scientificName": "Schizosaccharomyces pombe (strain 972 / ATCC 24843)",
+    "commonName": "Fission yeast",
+    "taxonId": 284812,
+    "lineage": [
+      "Eukaryota",
+      "Fungi",
+      "Dikarya",
+      "Ascomycota",
+      "Taphrinomycotina",
+      "Schizosaccharomycetes",
+      "Schizosaccharomycetales",
+      "Schizosaccharomycetaceae",
+      "Schizosaccharomyces"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000305"
+          }
+        ],
+        "value": "Deadenylation-dependent mRNA-decapping factor pdc2"
+      }
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "DNA topoisomerase 2-associated protein PAT1 homolog pdc2"
+        }
+      },
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "28031482"
+            }
+          ],
+          "value": "Partner of decapping enzyme protein 2"
+        }
+      },
+      {
+        "fullName": {
+          "value": "Protein PAT1 homolog pdc2"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000303",
+            "source": "PubMed",
+            "id": "28031482"
+          }
+        ],
+        "value": "pdc2"
+      },
+      "orfNames": [
+        {
+          "value": "SPBC19G7.10c"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "P25644"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "28031482"
+            }
+          ],
+          "value": "Activator of decapping that functions as a general and active mechanism of translational repression and required for P-body formation (PubMed:28031482). Stabilizes the 3' terminus of mRNAs and modulates the rates of mRNA-decapping that occur following deadenylation. Might be required for promoting the formation or the stabilization of the pre-initiation translation complexes. Necessary for accurate chromosome transmission during cell division (By similarity). Together with lsm1, recruits the deadenylase ccr4 to P-bodies (PubMed:28031482)"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "28031482"
+            }
+          ],
+          "value": "Interacts with dcp2. Interacts with lsm1; via C-terminus"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "note": {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "16823372"
+              },
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "28031482"
+              }
+            ],
+            "value": "Is concentrated in several cytoplasmic foci called P bodies (or cytoplasmic processing bodies) which represent sites of mRNA decapping and 5' to 3' exonucleotidic decay"
+          }
+        ]
+      },
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "16823372"
+              },
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "28031482"
+              }
+            ],
+            "value": "Cytoplasm",
+            "id": "SL-0086"
+          }
+        },
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "28031482"
+              }
+            ],
+            "value": "Nucleus",
+            "id": "SL-0191"
+          }
+        },
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "16823372"
+              },
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "28031482"
+              }
+            ],
+            "value": "Cytoplasm, P-body",
+            "id": "SL-0230"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the PAT1 family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 754,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Deadenylation-dependent mRNA-decapping factor pdc2",
+      "featureId": "PRO_0000372628"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 499,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 754,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Interaction with lsm1",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "28031482"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0963",
+      "category": "Cellular component",
+      "name": "Cytoplasm"
+    },
+    {
+      "id": "KW-0507",
+      "category": "Biological process",
+      "name": "mRNA processing"
+    },
+    {
+      "id": "KW-0539",
+      "category": "Cellular component",
+      "name": "Nucleus"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0678",
+      "category": "Molecular function",
+      "name": "Repressor"
+    },
+    {
+      "id": "KW-0694",
+      "category": "Molecular function",
+      "name": "RNA-binding"
+    },
+    {
+      "id": "KW-0810",
+      "category": "Biological process",
+      "name": "Translation regulation"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "11859360",
+        "citationType": "journal article",
+        "authors": [
+          "Wood V.",
+          "Gwilliam R.",
+          "Rajandream M.A.",
+          "Lyne M.H.",
+          "Lyne R.",
+          "Stewart A.",
+          "Sgouros J.G.",
+          "Peat N.",
+          "Hayles J.",
+          "Baker S.G.",
+          "Basham D.",
+          "Bowman S.",
+          "Brooks K.",
+          "Brown D.",
+          "Brown S.",
+          "Chillingworth T.",
+          "Churcher C.M.",
+          "Collins M.",
+          "Connor R.",
+          "Cronin A.",
+          "Davis P.",
+          "Feltwell T.",
+          "Fraser A.",
+          "Gentles S.",
+          "Goble A.",
+          "Hamlin N.",
+          "Harris D.E.",
+          "Hidalgo J.",
+          "Hodgson G.",
+          "Holroyd S.",
+          "Hornsby T.",
+          "Howarth S.",
+          "Huckle E.J.",
+          "Hunt S.",
+          "Jagels K.",
+          "James K.D.",
+          "Jones L.",
+          "Jones M.",
+          "Leather S.",
+          "McDonald S.",
+          "McLean J.",
+          "Mooney P.",
+          "Moule S.",
+          "Mungall K.L.",
+          "Murphy L.D.",
+          "Niblett D.",
+          "Odell C.",
+          "Oliver K.",
+          "O'Neil S.",
+          "Pearson D.",
+          "Quail M.A.",
+          "Rabbinowitsch E.",
+          "Rutherford K.M.",
+          "Rutter S.",
+          "Saunders D.",
+          "Seeger K.",
+          "Sharp S.",
+          "Skelton J.",
+          "Simmonds M.N.",
+          "Squares R.",
+          "Squares S.",
+          "Stevens K.",
+          "Taylor K.",
+          "Taylor R.G.",
+          "Tivey A.",
+          "Walsh S.V.",
+          "Warren T.",
+          "Whitehead S.",
+          "Woodward J.R.",
+          "Volckaert G.",
+          "Aert R.",
+          "Robben J.",
+          "Grymonprez B.",
+          "Weltjens I.",
+          "Vanstreels E.",
+          "Rieger M.",
+          "Schaefer M.",
+          "Mueller-Auer S.",
+          "Gabel C.",
+          "Fuchs M.",
+          "Duesterhoeft A.",
+          "Fritzc C.",
+          "Holzer E.",
+          "Moestl D.",
+          "Hilbert H.",
+          "Borzym K.",
+          "Langer I.",
+          "Beck A.",
+          "Lehrach H.",
+          "Reinhardt R.",
+          "Pohl T.M.",
+          "Eger P.",
+          "Zimmermann W.",
+          "Wedler H.",
+          "Wambutt R.",
+          "Purnelle B.",
+          "Goffeau A.",
+          "Cadieu E.",
+          "Dreano S.",
+          "Gloux S.",
+          "Lelaure V.",
+          "Mottier S.",
+          "Galibert F.",
+          "Aves S.J.",
+          "Xiang Z.",
+          "Hunt C.",
+          "Moore K.",
+          "Hurst S.M.",
+          "Lucas M.",
+          "Rochet M.",
+          "Gaillardin C.",
+          "Tallada V.A.",
+          "Garzon A.",
+          "Thode G.",
+          "Daga R.R.",
+          "Cruzado L.",
+          "Jimenez J.",
+          "Sanchez M.",
+          "del Rey F.",
+          "Benito J.",
+          "Dominguez A.",
+          "Revuelta J.L.",
+          "Moreno S.",
+          "Armstrong J.",
+          "Forsburg S.L.",
+          "Cerutti L.",
+          "Lowe T.",
+          "McCombie W.R.",
+          "Paulsen I.",
+          "Potashkin J.",
+          "Shpakovski G.V.",
+          "Ussery D.",
+          "Barrell B.G.",
+          "Nurse P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11859360"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/nature724"
+          }
+        ],
+        "title": "The genome sequence of Schizosaccharomyces pombe.",
+        "publicationDate": "2002",
+        "journal": "Nature",
+        "firstPage": "871",
+        "lastPage": "880",
+        "volume": "415"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "972 / ATCC 24843",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "16823372",
+        "citationType": "journal article",
+        "authors": [
+          "Matsuyama A.",
+          "Arai R.",
+          "Yashiroda Y.",
+          "Shirai A.",
+          "Kamata A.",
+          "Sekido S.",
+          "Kobayashi Y.",
+          "Hashimoto A.",
+          "Hamamoto M.",
+          "Hiraoka Y.",
+          "Horinouchi S.",
+          "Yoshida M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "16823372"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/nbt1222"
+          }
+        ],
+        "title": "ORFeome cloning and global analysis of protein localization in the fission yeast Schizosaccharomyces pombe.",
+        "publicationDate": "2006",
+        "journal": "Nat. Biotechnol.",
+        "firstPage": "841",
+        "lastPage": "847",
+        "volume": "24"
+      },
+      "referencePositions": [
+        "SUBCELLULAR LOCATION [LARGE SCALE ANALYSIS]"
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "28031482",
+        "citationType": "journal article",
+        "authors": [
+          "Wang C.Y.",
+          "Wang Y.T.",
+          "Hsiao W.Y.",
+          "Wang S.W."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "28031482"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1261/rna.059766.116"
+          }
+        ],
+        "title": "Involvement of fission yeast Pdc2 in RNA degradation and P-body function.",
+        "publicationDate": "2017",
+        "journal": "RNA",
+        "firstPage": "493",
+        "lastPage": "503",
+        "volume": "23"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "SUBCELLULAR LOCATION",
+        "INTERACTION WITH DCP2",
+        "IDENTIFICATION BY MASS SPECTROMETRY"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "CU329671",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAA17064.2"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "T39841",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "T39841"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_595976.2",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NM_001021884.4"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "O42958",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "O42958",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BioGRID",
+      "id": "277297",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "25"
+        }
+      ]
+    },
+    {
+      "database": "FunCoup",
+      "id": "O42958",
+      "properties": [
+        {
+          "key": "Number of interactors",
+          "value": "176"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "284812.O42958",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "iPTMnet",
+      "id": "O42958",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PaxDb",
+      "id": "284812-O42958",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "2540778",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "spo:2540778",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PomBase",
+      "id": "SPBC19G7.10c",
+      "properties": [
+        {
+          "key": "GeneName",
+          "value": "pdc2"
+        }
+      ]
+    },
+    {
+      "database": "VEuPathDB",
+      "id": "FungiDB:SPBC19G7.10c",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "KOG4592",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Eukaryota"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_012622_1_0_1",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "InParanoid",
+      "id": "O42958",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AADMHSY",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PhylomeDB",
+      "id": "O42958",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Reactome",
+      "id": "R-SPO-430039",
+      "properties": [
+        {
+          "key": "PathwayName",
+          "value": "mRNA decay by 5' to 3' exoribonuclease"
+        }
+      ]
+    },
+    {
+      "database": "CD-CODE",
+      "id": "0808F6DD",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "P-body"
+        }
+      ]
+    },
+    {
+      "database": "PRO",
+      "id": "PR:O42958",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000002485",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome II"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005737",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cytoplasm"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "28031482"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005829",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cytosol"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "HDA:PomBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007005",
+          "source": "PubMed",
+          "id": "16823372"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005634",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:nucleus"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "28031482"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0000932",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:P-body"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IPI:PomBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000353",
+          "source": "PubMed",
+          "id": "28031482"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0030674",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:protein-macromolecule adaptor activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0000290",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:deadenylation-dependent decapping of nuclear-transcribed mRNA"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:PomBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "28031482"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0017148",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:negative regulation of translation"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0033962",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:P-body assembly"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR039900",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Pat1-like"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR019167",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PAT1_dom"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR21551:SF0",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PROTEIN ASSOCIATED WITH TOPO II RELATED-1, ISOFORM A"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR21551",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TOPOISOMERASE II-ASSOCIATED PROTEIN PAT1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF09770",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PAT1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "2"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MSFFGFNTTLPKENMFPNEGQLEEDGIDFEETYDDLGNQLNEAGDELNDETFGVSAGSIGRDFDFSGTTAQASAQLEDEQYQINQQNIFAKPVKPASSELPQVSRLNGASQFPSREPASTAINKLSDLQPMASIWENIVPEKPAIIPPEVASLQDRLGAQPSEKVFSLQELEEQLLNSMTAPKPPSQPAIPIVPSEMAAQVTRENISSLDPAISAASIGNVTFGQPNIPSTTTDFAGLAAPNMVHPSQAIPNPVMQPSLVPQMPYPQNGMYNPSVAPPASLVNLFQQEQLIQNQNLDEKRQKLERDHMLMAQCAGLMTRSDKSFIARIQISQLMSEDPESDDFYYRVYSIIRGRKPSEEEASHFIQTYLGPSNNRRRGRRSENPMQKLQQQLQRLVSSAKERPKATQLSLEGALGKIAVNTVRTPRQLLNVKRPTEPASSNSSLNNFSGFSTKKDVLHAIEKVYDLLLDFEQALRKASTLETTDQEQIDTWKTTLSEKLESIWKALYINESLEASSKTRPPFISIISHPKGMRLLPRLFPHLSKEQQISILKVVVYNFDSLDIVLRGTFDVNGELPLDVVSEMSSFTQFIIPPLLTIVNELDLETINNLFSQLLNRTNAVYLIQTKIGLSFLTLFISRAEILKQSGTVNQNEKEEWENTFNVMFNRVKGHFSTVFPPPNARAYADESYPWEFLAACATAASSEQHFTLVSETRDRVLDNIITSKRAPSEIAVVRISNVNLFLNAMGLDARQLSA",
+    "length": 754,
+    "molWeight": 84117,
+    "crc64": "EB226989F3D8E53A",
+    "md5": "A3058CAAC7C75D61AA9656BD5C77B2EB"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Region": 1
+    },
+    "uniParcId": "UPI0001B06285"
+  }
+}

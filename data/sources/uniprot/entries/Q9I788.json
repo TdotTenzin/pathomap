@@ -1,0 +1,1697 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "Q9I788",
+  "uniProtkbId": "EXOT_PSEAE",
+  "entryAudit": {
+    "firstPublicDate": "2020-10-07",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2001-03-01",
+    "entryVersion": 125,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 4.0,
+  "organism": {
+    "scientificName": "Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)",
+    "taxonId": 208964,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Gammaproteobacteria",
+      "Pseudomonadales",
+      "Pseudomonadaceae",
+      "Pseudomonas"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Exoenzyme T"
+      }
+    },
+    "includes": [
+      {
+        "recommendedName": {
+          "fullName": {
+            "value": "GTPase-activating protein"
+          },
+          "shortNames": [
+            {
+              "value": "GAP"
+            }
+          ]
+        }
+      },
+      {
+        "recommendedName": {
+          "fullName": {
+            "value": "ADP-ribosyltransferase"
+          },
+          "shortNames": [
+            {
+              "value": "ADPRT"
+            }
+          ],
+          "ecNumbers": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "11298647"
+                },
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "12807879"
+                }
+              ],
+              "value": "2.4.2.31"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "exoT"
+      },
+      "orderedLocusNames": [
+        {
+          "value": "PA0044"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11298647"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11895987"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "12807879"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "14688136"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "26020630"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "26451042"
+            }
+          ],
+          "value": "Bifunctional effector protein that is secreted and delivered by the type III secretion system into eukaryotic target cells. ADP-ribosylates several eukaryotic proteins including CT10 regulator of kinase (Crk) proteins (PubMed:12807879). In turn, induces atypical anoikis apoptosis by transforming Crk adaptor protein into a cytotoxin (PubMed:26020630). Affects host cell morphology by disrupting the actin cytoskeleton (PubMed:14688136). In addition to this activity, acts via its N-terminal region as a GTPase-activating protein (GAP) for host Rho GTPases including RhoA, Rac1, Cdc42 and Ras (PubMed:11895987). The bacterial Rho-GAP domain activity induces mitochondrial disruption in the target host cell by activating host caspases 3 and 9 that execute cellular death (PubMed:26451042). This activity also causes stress fiber disassembly (PubMed:11895987)"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "L-arginyl-[protein] + NAD(+) = N(omega)-(ADP-D-ribosyl)-L-arginyl-[protein] + nicotinamide + H(+)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:19149"
+          },
+          {
+            "database": "Rhea",
+            "id": "RHEA-COMP:10532"
+          },
+          {
+            "database": "Rhea",
+            "id": "RHEA-COMP:15087"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:17154"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:29965"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:57540"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:142554"
+          }
+        ],
+        "ecNumber": "2.4.2.31",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "11298647"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "12807879"
+          }
+        ]
+      }
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "24387107"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "30224724"
+            }
+          ],
+          "value": "Interacts with chaperone protein SpcS; this interaction maintains ExoT in a secretion competent state within the cytoplasm (PubMed:24387107). Interacts with host YWHAB (PubMed:30224724)"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "note": {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000305"
+              }
+            ],
+            "value": "Secreted via type III secretion system (T3SS) and delivered into the host cytoplasm"
+          }
+        ]
+      },
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "24387107"
+              }
+            ],
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "Reference",
+              "id": "Ref.10"
+            }
+          ],
+          "value": "By host YWHAB"
+        }
+      ],
+      "commentType": "INDUCTION"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 457,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Exoenzyme T",
+      "featureId": "PRO_0000451080"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 99,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 232,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Bacterial Rho-GAP",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01404"
+        }
+      ]
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 242,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 418,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "TR mART core",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01340"
+        }
+      ]
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 322,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 322,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01340"
+        }
+      ]
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 346,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 346,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01340"
+        }
+      ]
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 385,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 385,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01340"
+        }
+      ]
+    },
+    {
+      "type": "Site",
+      "location": {
+        "start": {
+          "value": 149,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 149,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Arginine finger; crucial for GTP hydrolysis by stabilizing the transition state",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01404"
+        }
+      ]
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 149,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 149,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Loss of GAP activity.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "11298647"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "11895987"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12807879"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "R",
+        "alternativeSequences": [
+          "K"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 383,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 383,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Loss of ADP-ribosyltransferase activity; when associated with D-385.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12807879"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "14688136"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "E",
+        "alternativeSequences": [
+          "D"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 385,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 385,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Loss of ADP-ribosyltransferase activity; when associated with D-383.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12807879"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "14688136"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "E",
+        "alternativeSequences": [
+          "D"
+        ]
+      }
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 29,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 32,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "4JMF"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 36,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 41,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "4JMF"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 53,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 57,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "4JMF"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 59,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 61,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "4JMF"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 66,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 76,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "4JMF"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0002",
+      "category": "Technical term",
+      "name": "3D-structure"
+    },
+    {
+      "id": "KW-0328",
+      "category": "Molecular function",
+      "name": "Glycosyltransferase"
+    },
+    {
+      "id": "KW-0343",
+      "category": "Molecular function",
+      "name": "GTPase activation"
+    },
+    {
+      "id": "KW-0548",
+      "category": "Molecular function",
+      "name": "Nucleotidyltransferase"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0800",
+      "category": "Molecular function",
+      "name": "Toxin"
+    },
+    {
+      "id": "KW-0808",
+      "category": "Molecular function",
+      "name": "Transferase"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "10984043",
+        "citationType": "journal article",
+        "authors": [
+          "Stover C.K.",
+          "Pham X.-Q.T.",
+          "Erwin A.L.",
+          "Mizoguchi S.D.",
+          "Warrener P.",
+          "Hickey M.J.",
+          "Brinkman F.S.L.",
+          "Hufnagle W.O.",
+          "Kowalik D.J.",
+          "Lagrou M.",
+          "Garber R.L.",
+          "Goltry L.",
+          "Tolentino E.",
+          "Westbrock-Wadman S.",
+          "Yuan Y.",
+          "Brody L.L.",
+          "Coulter S.N.",
+          "Folger K.R.",
+          "Kas A.",
+          "Larbig K.",
+          "Lim R.M.",
+          "Smith K.A.",
+          "Spencer D.H.",
+          "Wong G.K.-S.",
+          "Wu Z.",
+          "Paulsen I.T.",
+          "Reizer J.",
+          "Saier M.H. Jr.",
+          "Hancock R.E.W.",
+          "Lory S.",
+          "Olson M.V."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "10984043"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/35023079"
+          }
+        ],
+        "title": "Complete genome sequence of Pseudomonas aeruginosa PAO1, an opportunistic pathogen.",
+        "publicationDate": "2000",
+        "journal": "Nature",
+        "firstPage": "959",
+        "lastPage": "964",
+        "volume": "406"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "11298647",
+        "citationType": "journal article",
+        "authors": [
+          "Sundin C.",
+          "Henriksson M.L.",
+          "Hallberg B.",
+          "Forsberg A.",
+          "Frithz-Lindsten E."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11298647"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1046/j.1462-5822.2001.00108.x"
+          }
+        ],
+        "title": "Exoenzyme T of Pseudomonas aeruginosa elicits cytotoxicity without interfering with Ras signal transduction.",
+        "publicationDate": "2001",
+        "journal": "Cell. Microbiol.",
+        "firstPage": "237",
+        "lastPage": "246",
+        "volume": "3"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "MUTAGENESIS OF ARG-149",
+        "CATALYTIC ACTIVITY"
+      ],
+      "referenceComments": [
+        {
+          "value": "388",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "11895987",
+        "citationType": "journal article",
+        "authors": [
+          "Kazmierczak B.I.",
+          "Engel J.N."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11895987"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.70.4.2198-2205.2002"
+          }
+        ],
+        "title": "Pseudomonas aeruginosa ExoT acts in vivo as a GTPase-activating protein for RhoA, Rac1, and Cdc42.",
+        "publicationDate": "2002",
+        "journal": "Infect. Immun.",
+        "firstPage": "2198",
+        "lastPage": "2205",
+        "volume": "70"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "MUTAGENESIS OF ARG-149"
+      ],
+      "referenceComments": [
+        {
+          "value": "PA103",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "12807879",
+        "citationType": "journal article",
+        "authors": [
+          "Sun J.",
+          "Barbieri J.T."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "12807879"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1074/jbc.m304290200"
+          }
+        ],
+        "title": "Pseudomonas aeruginosa ExoT ADP-ribosylates CT10 regulator of kinase (Crk) proteins.",
+        "publicationDate": "2003",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "32794",
+        "lastPage": "32800",
+        "volume": "278"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "CATALYTIC ACTIVITY",
+        "MUTAGENESIS OF ARG-149; GLU-383 AND GLU-385"
+      ],
+      "referenceComments": [
+        {
+          "value": "PA103",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "14688136",
+        "citationType": "journal article",
+        "authors": [
+          "Garrity-Ryan L.",
+          "Shafikhani S.",
+          "Balachandran P.",
+          "Nguyen L.",
+          "Oza J.",
+          "Jakobsen T.",
+          "Sargent J.",
+          "Fang X.",
+          "Cordwell S.",
+          "Matthay M.A.",
+          "Engel J.N."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "14688136"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.72.1.546-558.2004"
+          }
+        ],
+        "title": "The ADP ribosyltransferase domain of Pseudomonas aeruginosa ExoT contributes to its biological activities.",
+        "publicationDate": "2004",
+        "journal": "Infect. Immun.",
+        "firstPage": "546",
+        "lastPage": "558",
+        "volume": "72"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "MUTAGENESIS OF GLU-383 AND GLU-385"
+      ],
+      "referenceComments": [
+        {
+          "value": "PA103",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "26451042",
+        "citationType": "journal article",
+        "authors": [
+          "Wood S.J.",
+          "Goldufsky J.W.",
+          "Bello D.",
+          "Masood S.",
+          "Shafikhani S.H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "26451042"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1074/jbc.m115.689950"
+          }
+        ],
+        "title": "Pseudomonas aeruginosa ExoT Induces Mitochondrial Apoptosis in Target Host Cells in a Manner That Depends on Its GTPase-activating Protein (GAP) Domain Activity.",
+        "publicationDate": "2015",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "29063",
+        "lastPage": "29073",
+        "volume": "290"
+      },
+      "referencePositions": [
+        "FUNCTION"
+      ],
+      "referenceComments": [
+        {
+          "value": "PA103",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 7,
+      "citation": {
+        "id": "26020630",
+        "citationType": "journal article",
+        "authors": [
+          "Wood S.",
+          "Goldufsky J.",
+          "Shafikhani S.H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "26020630"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1371/journal.ppat.1004934"
+          }
+        ],
+        "title": "Pseudomonas aeruginosa ExoT Induces Atypical Anoikis Apoptosis in Target Host Cells by Transforming Crk Adaptor Protein into a Cytotoxin.",
+        "publicationDate": "2015",
+        "journal": "PLoS Pathog.",
+        "firstPage": "e1004934",
+        "lastPage": "e1004934",
+        "volume": "11"
+      },
+      "referencePositions": [
+        "FUNCTION"
+      ],
+      "referenceComments": [
+        {
+          "value": "PA103",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 8,
+      "citation": {
+        "id": "24387107",
+        "citationType": "journal article",
+        "authors": [
+          "Dey S.",
+          "Datta S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "24387107"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1111/febs.12704"
+          }
+        ],
+        "title": "Interfacial residues of SpcS chaperone affects binding of effector toxin ExoT in Pseudomonas aeruginosa: novel insights from structural and computational studies.",
+        "publicationDate": "2014",
+        "journal": "FEBS J.",
+        "firstPage": "1267",
+        "lastPage": "1280",
+        "volume": "281"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY",
+        "INTERACTION WITH SPCS",
+        "SUBCELLULAR LOCATION"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "4JMF"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 9,
+      "citation": {
+        "id": "30224724",
+        "citationType": "journal article",
+        "authors": [
+          "Karlberg T.",
+          "Hornyak P.",
+          "Pinto A.F.",
+          "Milanova S.",
+          "Ebrahimi M.",
+          "Lindberg M.",
+          "Pullen N.",
+          "Nordstrom A.",
+          "Loverli E.",
+          "Caraballo R.",
+          "Wong E.V.",
+          "Nareoja K.",
+          "Thorsell A.G.",
+          "Elofsson M.",
+          "De La Cruz E.M.",
+          "Bjorkegren C.",
+          "Schuler H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "30224724"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/s41467-018-06194-1"
+          }
+        ],
+        "title": "14-3-3 proteins activate Pseudomonas exotoxins-S and -T by chaperoning a hydrophobic surface.",
+        "publicationDate": "2018",
+        "journal": "Nat. Commun.",
+        "firstPage": "3785",
+        "lastPage": "3785",
+        "volume": "9"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY",
+        "INDUCTION BY HOST YWHAB",
+        "INTERACTION WITH HOST YWHAB"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "6GNN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 10,
+      "citation": {
+        "id": "CI-5CLPMKMBPAABK",
+        "citationType": "submission",
+        "authors": [
+          "Datta S.",
+          "Mondal A."
+        ],
+        "title": "Structure of ExoT-SpcS Complex from Pseudomonas aeruginosa.",
+        "publicationDate": "MAR-2019",
+        "submissionDatabase": "PDB data bank"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "6JNP"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AE004091",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAG03434.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "G83639",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "G83639"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_248734.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_002516.2"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_003114583.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_002516.2"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "4JMF",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.10 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=28-77"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6GNN",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "3.79 A"
+        },
+        {
+          "key": "Chains",
+          "value": "C=235-457"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6JNP",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.26 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/D=23-79"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q9I788",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "Q9I788",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "208964.PA0044",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "TCDB",
+      "id": "1.C.106.4.2",
+      "properties": [
+        {
+          "key": "FamilyName",
+          "value": "the bacillus thuringiensis vegetative insecticidal protein-2 (vip2) family"
+        }
+      ]
+    },
+    {
+      "database": "PaxDb",
+      "id": "208964-PA0044",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "DNASU",
+      "id": "878350",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "878350",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "pae:PA0044",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|208964.12.peg.45",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PseudoCAP",
+      "id": "PA0044",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_603900_0_0_6",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "InParanoid",
+      "id": "Q9I788",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "DKGTDMR",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OrthoDB",
+      "id": "5918307at2",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BioCyc",
+      "id": "PAER208964:G1FZ6-46-MONOMER",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PHI-base",
+      "id": "PHI:11504",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PHI-base",
+      "id": "PHI:12237",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000002438",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome"
+        }
+      ]
+    },
+    {
+      "database": "AbasyAtlas",
+      "id": "Q9I788",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "24387107"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005096",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:GTPase activator activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0106274",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:NAD+-protein-arginine ADP-ribosyltransferase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "11298647"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12807879"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0141029",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:symbiont-mediated disruption of host focal adhesion"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:SigSci"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "26020630"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd00219",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ToxGAP"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "6.10.250.2690",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.90.176.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Toxin ADP-ribosyltransferase, Chain A, domain 1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.20.120.260",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Virulence factor YopE uncharacterised domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR003540",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ADP-ribosyltransferase"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR050999",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ADP-ribosyltransferase_ARG"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR003537",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "YopE-like"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR014773",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "YopE_GAP_dom"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR037168",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "YopE_GAP_dom_sf"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR10339",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ADP-RIBOSYLTRANSFERASE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR10339:SF25",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SECRETED EXOENZYME S"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF03496",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ADPrib_exo_Tox"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF03545",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "YopE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR01372",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "YERSINIAYOPE"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF56399",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ADP-ribosylation"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF47233",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Bacterial GAP domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS52059",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "BACT_RHOGAP"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51996",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TR_MART"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MHIQSSQQNPSFVAELSQAVAGRLGQVEARQVATPREAQQLAQRQEAPKGEGLLSRLGAALARPFVAIIEWLGKLLGSRAHAATQAPLSRQDAPPAASLSAAEIKQMMLQKALPLTLGGLGKASELATLTAERLAKDHTRLASGDGALRSLATALVGIRDGSRIEASRTQAARLLEQSVGGIALQQWGTAGGAASQHVLSASPEQLREIAVQLHAVMDKVALLRHAVESEVKGEPVDKALADGLVEHFGLEAEQYLGEHPDGPYSDAEVMALGLYTNGEYQHLNRSLRQGRELDAGQALIDRGMSAAFEKSGPAEQVVKTFRGTQGRDAFEAVKEGQVGHDAGYLSTSRDPGVARSFAGQGTITTLFGRSGIDVSEISIEGDEQEILYDKGTDMRVLLSAKDGQGVTRRVLEEATLGERSGHGEGLLDALDLATGTDRSGKPQEQDLRLRMRGLDLA",
+    "length": 457,
+    "molWeight": 48515,
+    "crc64": "6516FD2152E5CD6A",
+    "md5": "9C3E9C529BE7C480C6A67250786B8BF1"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "CATALYTIC ACTIVITY": 1,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "INDUCTION": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Domain": 2,
+      "Active site": 3,
+      "Site": 1,
+      "Mutagenesis": 3,
+      "Beta strand": 2,
+      "Helix": 3
+    },
+    "uniParcId": "UPI00000C4EFE"
+  }
+}

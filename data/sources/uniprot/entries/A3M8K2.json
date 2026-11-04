@@ -1,0 +1,616 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "A3M8K2",
+  "uniProtkbId": "OMP38_ACIBT",
+  "entryAudit": {
+    "firstPublicDate": "2007-06-12",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2007-06-12",
+    "entryVersion": 95,
+    "sequenceVersion": 2
+  },
+  "annotationScore": 2.0,
+  "organism": {
+    "scientificName": "Acinetobacter baumannii (strain ATCC 17978 / DSM 105126 / CIP 53.77 / LMG 1025 / NCDC KC755 / 5377)",
+    "taxonId": 400667,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Gammaproteobacteria",
+      "Moraxellales",
+      "Moraxellaceae",
+      "Acinetobacter",
+      "Acinetobacter calcoaceticus/baumannii complex"
+    ]
+  },
+  "proteinExistence": "3: Inferred from homology",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Outer membrane protein Omp38"
+      }
+    },
+    "flag": "Precursor"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "omp38"
+      },
+      "orderedLocusNames": [
+        {
+          "value": "A1S_2840"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "Q6RYW5"
+            }
+          ],
+          "value": "Porin. Induces apoptosis in human cells through caspases-dependent and AIF-dependent pathways. Purified Omp38 enters the cells and localizes to the mitochondria, which leads to a release of pro-apoptotic molecules such as cytochrome c and AIF (apoptosis-inducing factor)"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "Q6RYW5"
+            }
+          ],
+          "value": "Homotrimer"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250",
+                "source": "UniProtKB",
+                "id": "Q6RYW5"
+              }
+            ],
+            "value": "Cell outer membrane",
+            "id": "SL-0040"
+          },
+          "topology": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000305"
+              }
+            ],
+            "value": "Multi-pass membrane protein",
+            "id": "SL-9909"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the outer membrane OOP (TC 1.B.6) superfamily"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 19,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 20,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 356,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Outer membrane protein Omp38",
+      "featureId": "PRO_0000290209"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 221,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 339,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "OmpA-like",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00473"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0053",
+      "category": "Biological process",
+      "name": "Apoptosis"
+    },
+    {
+      "id": "KW-0998",
+      "category": "Cellular component",
+      "name": "Cell outer membrane"
+    },
+    {
+      "id": "KW-0406",
+      "category": "Biological process",
+      "name": "Ion transport"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-0626",
+      "category": "Molecular function",
+      "name": "Porin"
+    },
+    {
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    },
+    {
+      "id": "KW-0812",
+      "category": "Domain",
+      "name": "Transmembrane"
+    },
+    {
+      "id": "KW-1134",
+      "category": "Domain",
+      "name": "Transmembrane beta strand"
+    },
+    {
+      "id": "KW-0813",
+      "category": "Biological process",
+      "name": "Transport"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "17344419",
+        "citationType": "journal article",
+        "authors": [
+          "Smith M.G.",
+          "Gianoulis T.A.",
+          "Pukatzki S.",
+          "Mekalanos J.J.",
+          "Ornston L.N.",
+          "Gerstein M.",
+          "Snyder M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "17344419"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1101/gad.1510307"
+          }
+        ],
+        "title": "New insights into Acinetobacter baumannii pathogenesis revealed by high-density pyrosequencing and transposon mutagenesis.",
+        "publicationDate": "2007",
+        "journal": "Genes Dev.",
+        "firstPage": "601",
+        "lastPage": "614",
+        "volume": "21"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 17978 / DSM 105126 / CIP 53.77 / LMG 1025 / NCDC KC755 / 5377",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "CP000521",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ABO13246.2"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_000777879.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NZ_CACVBA010000001.1"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "A3M8K2",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "A3M8K2",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "acb:A1S_2840",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_031536_1_0_6",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "ACVPQYE",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009279",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cell outer membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISS:UniProtKB"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd07185",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OmpA_C-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.40.160.20",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.30.1330.60",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OmpA-like domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR050330",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Bact_OuterMem_StrucFunc"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR027385",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Beta-barrel_OMP"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR011250",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OMP/PagP_B-barrel"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR054882",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Omp38"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR006664",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OMP_bac"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR006665",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OmpA-like"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036737",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OmpA-like_sf"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF045788",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Omp38Acinit"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR30329:SF21",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LIPOPROTEIN YIAD-RELATED"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR30329",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "STATOR ELEMENT OF FLAGELLAR MOTOR COMPLEX"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF13505",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OMP_b-brl"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00691",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OmpA"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR01021",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OMPADOMAIN"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF56925",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OMPA-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF103088",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OmpA-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51123",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OMPA_2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MKLSRIALATMLVAAPLAAANAGVTVTPLLLGYTFQDSQHNNGGKDGNLTNGPELQDDLFVGAALGIELTPWLGFEAEYNQVKGDVDGASAGAEYKQKQINGNFYVTSDLITKNYDSKIKPYVLLGAGHYKYDFDGVNRGTRGTSEEGTLGNAGVGAFWRLNDALSLRTEARATYNADEEFWNYTALAGLNVVLGGHLKPAAPVVEVAPVEPTPVTPQPQELTEDLNMELRVFFDTNKSNIKDQYKPEIAKVAEKLSEYPNATARIEGHTDNTGPRKLNERLSLARANSVKSALVNEYNVDASRLSTQGFAWDQPIADNKTKEGRAMNRRVFATITGSRTVVVQPGQEAAAPAAAQ",
+    "length": 356,
+    "molWeight": 38450,
+    "crc64": "F6E43F86B793642E",
+    "md5": "93E6223A1C20E8373CACE2ECD8CF7967"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1,
+      "Domain": 1
+    },
+    "uniParcId": "UPI0001529A67"
+  }
+}

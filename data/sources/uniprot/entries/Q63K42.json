@@ -1,0 +1,586 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "Q63K42",
+  "uniProtkbId": "BOPA_BURPS",
+  "entryAudit": {
+    "firstPublicDate": "2008-07-22",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2004-10-25",
+    "entryVersion": 78,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 2.0,
+  "organism": {
+    "scientificName": "Burkholderia pseudomallei (strain K96243)",
+    "taxonId": 272560,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Betaproteobacteria",
+      "Burkholderiales",
+      "Burkholderiaceae",
+      "Burkholderia",
+      "pseudomallei group"
+    ]
+  },
+  "proteinExistence": "3: Inferred from homology",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Effector protein BopA"
+      }
+    }
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "bopA"
+      },
+      "orderedLocusNames": [
+        {
+          "value": "BPSS1524"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "15289563"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "18483470"
+            }
+          ],
+          "value": "Plays a role in mediating bacterial evasion from the host autophagic pathway"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "note": {
+        "texts": [
+          {
+            "value": "Secreted via the bsa type III secretion system"
+          }
+        ]
+      },
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "15289563"
+              }
+            ],
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the BopA/IcsB family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 512,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Effector protein BopA",
+      "featureId": "PRO_0000344022"
+    },
+    {
+      "type": "Coiled coil",
+      "location": {
+        "start": {
+          "value": 347,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 377,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0175",
+      "category": "Domain",
+      "name": "Coiled coil"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "15377794",
+        "citationType": "journal article",
+        "authors": [
+          "Holden M.T.G.",
+          "Titball R.W.",
+          "Peacock S.J.",
+          "Cerdeno-Tarraga A.-M.",
+          "Atkins T.",
+          "Crossman L.C.",
+          "Pitt T.",
+          "Churcher C.",
+          "Mungall K.L.",
+          "Bentley S.D.",
+          "Sebaihia M.",
+          "Thomson N.R.",
+          "Bason N.",
+          "Beacham I.R.",
+          "Brooks K.",
+          "Brown K.A.",
+          "Brown N.F.",
+          "Challis G.L.",
+          "Cherevach I.",
+          "Chillingworth T.",
+          "Cronin A.",
+          "Crossett B.",
+          "Davis P.",
+          "DeShazer D.",
+          "Feltwell T.",
+          "Fraser A.",
+          "Hance Z.",
+          "Hauser H.",
+          "Holroyd S.",
+          "Jagels K.",
+          "Keith K.E.",
+          "Maddison M.",
+          "Moule S.",
+          "Price C.",
+          "Quail M.A.",
+          "Rabbinowitsch E.",
+          "Rutherford K.",
+          "Sanders M.",
+          "Simmonds M.",
+          "Songsivilai S.",
+          "Stevens K.",
+          "Tumapa S.",
+          "Vesaratchavest M.",
+          "Whitehead S.",
+          "Yeats C.",
+          "Barrell B.G.",
+          "Oyston P.C.F.",
+          "Parkhill J."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15377794"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1073/pnas.0403302101"
+          }
+        ],
+        "title": "Genomic plasticity of the causative agent of melioidosis, Burkholderia pseudomallei.",
+        "publicationDate": "2004",
+        "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+        "firstPage": "14240",
+        "lastPage": "14245",
+        "volume": "101"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "K96243",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "15289563",
+        "citationType": "journal article",
+        "authors": [
+          "Stevens M.P.",
+          "Haque A.",
+          "Atkins T.",
+          "Hill J.",
+          "Wood M.W.",
+          "Easton A.",
+          "Nelson M.",
+          "Underwood-Fowler C.",
+          "Titball R.W.",
+          "Bancroft G.J.",
+          "Galyov E.E."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15289563"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1099/mic.0.27146-0"
+          }
+        ],
+        "title": "Attenuated virulence and protective efficacy of a Burkholderia pseudomallei bsa type III secretion mutant in murine models of melioidosis.",
+        "publicationDate": "2004",
+        "journal": "Microbiology",
+        "firstPage": "2669",
+        "lastPage": "2676",
+        "volume": "150"
+      },
+      "referencePositions": [
+        "ROLE IN VIRULENCE",
+        "SUBCELLULAR LOCATION"
+      ],
+      "referenceComments": [
+        {
+          "value": "576",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "18483470",
+        "citationType": "journal article",
+        "authors": [
+          "Cullinane M.",
+          "Gong L.",
+          "Li X.",
+          "Lazar-Adler N.",
+          "Tra T.",
+          "Wolvetang E.",
+          "Prescott M.",
+          "Boyce J.D.",
+          "Devenish R.J.",
+          "Adler B."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "18483470"
+          },
+          {
+            "database": "DOI",
+            "id": "10.4161/auto.6246"
+          }
+        ],
+        "title": "Stimulation of autophagy suppresses the intracellular survival of Burkholderia pseudomallei in mammalian cell lines.",
+        "publicationDate": "2008",
+        "journal": "Autophagy",
+        "firstPage": "744",
+        "lastPage": "753",
+        "volume": "4"
+      },
+      "referencePositions": [
+        "ROLE IN EVADING HOST AUTOPHAGIC PATHWAY"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "BX571966",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAH38997.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_004528810.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_006351.1"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q63K42",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "272560.BPSS1524",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "bps:BPSS1524",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|272560.51.peg.4878",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "ENOG5032XT2",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Bacteria"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AEHFVPY",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000000605",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome 2"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "4.10.1330.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "non globular Virulence effector SptP domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR061958",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "BopA_C"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR011070",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Globular_prot_asu/bsu"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR059883",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "IcsB/BopA_M"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR015203",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SptP_N"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR044899",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SptP_N_sf"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF29598",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "BopA_C"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF27349",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "IcsB_M"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF09119",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SicP-binding"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF56568",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Non-globular alpha+beta subunits of globular proteins"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MINVDAFVASARSGARVVVGGDARGPVVSAARLGMKERLFAFLAHVPLLKHCDAVRRYAEQVRMENRRSLEVFVLALSKRYGPEGAKAAFDYGARRDGAPLDQRRVRNMVSIAEHFHGTGDAKPLARQMVFRSWECRGLDHPGHASLTIKNQADADAGRHVYEHVSWWPNQRLGSKEHFDRIEPKTLDGYRIDKRSEISSATEQRLREGDAARRKILADGFKYANQDERHDARFFPRAGQKLDKDAEWGLSARKVYFPAIGFNHDRRDTDRPRAFVLFGLNEAAMLRDARTVKEGAKSGELMYQMISKKENCASMALRVLRAGGAEHFVPYTAAWISEDPNHAHAYALAVQARIDALNQRRADVERRCERLRDSASVRQAWRAFSEAGGASASPLAEDAGRGRASAHMRQARLDEHAREVERIGAYFAELSAGRSGKHRDRADAALADAMKRCAPSARDDVAALTRKASVLVETLGRHLDAPPPSDSSALRRLAAHAMIGRIEAFMAAAIAA",
+    "length": 512,
+    "molWeight": 56832,
+    "crc64": "CB47108F4B11D8FC",
+    "md5": "5D7E40C2133F6E020C32D8F93855AB6F"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Coiled coil": 1
+    },
+    "uniParcId": "UPI000043BD16"
+  }
+}

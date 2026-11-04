@@ -15,14 +15,20 @@ data/
 ├── schema/                                # JSON Schema definitions
 │   └── pathogens.schema.json             # Schema validation for pathogens dataset
 └── sources/                               # Source data for build pipeline
-    ├── curated_data.json               # Curated pathogen data (manually maintained)
+    ├── README.md                          # Source file documentation (incl. effector mapping)
+    ├── pathogens_seed.json              # Curated pathogen data (manually maintained)
     ├── effectors_seed.json               # Effector data
     ├── host_proteins_seed.json           # Host protein reference data
     ├── pathogen_overrides.json           # Manual overrides for NCBI lookups
-    └── ncbi/                             # NCBI API cache
-        ├── genomes/                      # Genome assembly data from NCBI Datasets
-        ├── taxonomy/                     # Taxonomy lineage data
-        └── taxonomy_search/              # Search results for name-to-tax_id resolution
+    ├── effector_uniprot_mapping.json     # Effector name -> UniProt accession mapping
+    ├── ncbi/                             # NCBI API cache
+    │   ├── genomes/                      # Genome assembly data from NCBI Datasets
+    │   ├── taxonomy/                     # Taxonomy lineage data
+    │   └── taxonomy_search/              # Search results for name-to-tax_id resolution
+    ├── uniprot/                          # UniProt API cache (entries/sequences/search)
+    ├── interpro/matches/                 # InterPro domain annotation cache
+    ├── pfam/matches/                     # Pfam domain annotation cache
+    └── string/                           # STRING cache (ids/ and interactions/)
 ```
 
 ## Production Data Files
@@ -44,10 +50,11 @@ The `sources/` directory contains the raw data used to build the production data
 
 ### Manually Curated Files
 
-- **curated_data.json**: Curated base pathogen data. This is the primary source of truth for pathogen information.
+- **pathogens_seed.json**: Curated base pathogen data. This is the primary source of truth for pathogen information.
 - **effectors_seed.json**: Effector data linked to pathogens.
 - **host_proteins_seed.json**: Host protein reference data.
 - **pathogen_overrides.json**: Manual overrides for specific NCBI lookups (e.g., pinned genome accessions for specific strains).
+- **effector_uniprot_mapping.json**: Maps effector names to UniProt accessions for API enrichment (see `sources/README.md`).
 
 ### NCBI Cache
 
@@ -56,6 +63,12 @@ The `ncbi/` directory contains cached responses from NCBI APIs to avoid repeated
 - **genomes/**: Genome assembly data from NCBI Datasets API. Files are named `{pathogen_id}-{tax_id}.json` or `{pathogen_id}-{tax_id}-refseq.json` (for RefSeq-specific queries).
 - **taxonomy/**: Taxonomy lineage data from NCBI Taxonomy database. Files are named `{tax_id}.json`.
 - **taxonomy_search/**: Search results from NCBI E-utilities API to resolve pathogen names to tax IDs. Files are named `{pathogen_id}-{sanitized-name}.json`.
+
+### Protein API Cache
+
+The `uniprot/`, `interpro/`, `pfam/`, and `string/` directories cache protein
+enrichment responses used by `build_effectors_host_proteins.py`. See
+`docs/API_ENRICHMENT.md` for the full layout and rate-limit notes.
 
 ## Building the Dataset
 
@@ -70,4 +83,17 @@ Options:
 - `--refresh`: Refresh NCBI cache (force API calls)
 - `--no-network`: Use only cached NCBI data (no API calls)
 
-See `scripts/build_pathogens.py` for more details.
+To add effectors and host proteins (with UniProt enrichment):
+
+```bash
+python scripts/build_effectors_host_proteins.py
+```
+
+Options:
+- `--check`: Validate without writing output files
+- `--enrich-effectors`: Also enrich effectors via UniProt mapping/search
+- `--refresh`: Force fresh API calls (ignore protein API caches)
+- `--no-network`: Use only cached protein API responses
+
+See `scripts/build_effectors_host_proteins.py` and `docs/API_ENRICHMENT.md`
+for more details.

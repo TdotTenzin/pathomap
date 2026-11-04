@@ -1,0 +1,421 @@
+{
+  "entryType": "UniProtKB unreviewed (TrEMBL)",
+  "primaryAccession": "B4ELG0",
+  "uniProtkbId": "B4ELG0_BURCJ",
+  "entryAudit": {
+    "firstPublicDate": "2008-09-23",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2008-09-23",
+    "entryVersion": 62,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 1.0,
+  "organism": {
+    "scientificName": "Burkholderia cenocepacia (strain ATCC BAA-245 / DSM 16553 / LMG 16656 / NCTC 13227 / J2315 / CF5610)",
+    "commonName": "Burkholderia cepacia (strain J2315)",
+    "taxonId": 216591,
+    "evidences": [
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "EMBL",
+        "id": "CAR56625.1"
+      },
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "Proteomes",
+        "id": "UP000001035"
+      }
+    ],
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Betaproteobacteria",
+      "Burkholderiales",
+      "Burkholderiaceae",
+      "Burkholderia",
+      "Burkholderia cepacia complex"
+    ]
+  },
+  "proteinExistence": "4: Predicted",
+  "proteinDescription": {
+    "submissionNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "CAR56625.1"
+            }
+          ],
+          "value": "Giant cable pilus"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "CAR56625.1"
+          }
+        ],
+        "value": "cblA"
+      },
+      "orfNames": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "CAR56625.1"
+            }
+          ],
+          "value": "BCAM2761"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 19,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "SignalP"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 20,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 166,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "SignalP"
+        }
+      ],
+      "featureId": "PRO_5002801601"
+    }
+  ],
+  "keywords": [
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "Proteomes",
+          "id": "UP000001035"
+        }
+      ],
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "SignalP"
+        }
+      ],
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "18931103",
+        "citationType": "journal article",
+        "authors": [
+          "Holden M.T.",
+          "Seth-Smith H.M.",
+          "Crossman L.C.",
+          "Sebaihia M.",
+          "Bentley S.D.",
+          "Cerdeno-Tarraga A.M.",
+          "Thomson N.R.",
+          "Bason N.",
+          "Quail M.A.",
+          "Sharp S.",
+          "Cherevach I.",
+          "Churcher C.",
+          "Goodhead I.",
+          "Hauser H.",
+          "Holroyd N.",
+          "Mungall K.",
+          "Scott P.",
+          "Walker D.",
+          "White B.",
+          "Rose H.",
+          "Iversen P.",
+          "Mil-Homens D.",
+          "Rocha E.P.",
+          "Fialho A.M.",
+          "Baldwin A.",
+          "Dowson C.",
+          "Barrell B.G.",
+          "Govan J.R.",
+          "Vandamme P.",
+          "Hart C.A.",
+          "Mahenthiralingam E.",
+          "Parkhill J."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "18931103"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/JB.01230-08"
+          }
+        ],
+        "title": "The genome of Burkholderia cenocepacia J2315, an epidemic pathogen of cystic fibrosis patients.",
+        "publicationDate": "2009",
+        "journal": "J. Bacteriol.",
+        "firstPage": "261",
+        "lastPage": "277",
+        "volume": "191"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "Proteomes",
+              "id": "UP000001035"
+            }
+          ],
+          "value": "ATCC BAA-245 / DSM 16553 / LMG 16656 / NCTC 13227 / J2315 / CF5610",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "CAR56625.1"
+        },
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "Proteomes",
+          "id": "UP000001035"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AM747721",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAR56625.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_006485048.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_011001.1"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "B4ELG0",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "bcj:BCAM2761",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "ENOG5031RDB",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Bacteria"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_129877_0_0_4",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "DFMPGKG",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BioCyc",
+      "id": "BCEN216591:G1G1V-6885-MONOMER",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000001035",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome 2"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009289",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:pilus"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.60.40.2040",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CFA/I fimbrial subunit E, pilin domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR007540",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Fimbrial_CS1-type"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF038252",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "cable_major"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF04449",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Fimbrial_CS1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MLKYVPIAAAALMSMSAYAVQKDITVTANVDTTLEMLSADGSALPTTMQMQYLPGTGLQAAVVNTKIFTNDKAKDLQIRLATAPALKNQTSPGAAEIPLSVKLGETELTTTAATLKTAELFPGELAQGSNVLALSIGQKKVEAVTASGSYQGLVSVIVTQSAASGS",
+    "length": 166,
+    "molWeight": 17048,
+    "crc64": "084DE11704AD3A29",
+    "md5": "513FA446BEA2C922DF48C258BC098018"
+  },
+  "extraAttributes": {
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1
+    },
+    "uniParcId": "UPI00000B2588"
+  }
+}

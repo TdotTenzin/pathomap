@@ -1,0 +1,813 @@
+{
+  "entryType": "UniProtKB unreviewed (TrEMBL)",
+  "primaryAccession": "Q92H50",
+  "uniProtkbId": "Q92H50_RICCN",
+  "entryAudit": {
+    "firstPublicDate": "2001-12-01",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2001-12-01",
+    "entryVersion": 107,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 2.0,
+  "organism": {
+    "scientificName": "Rickettsia conorii (strain ATCC VR-613 / Malish 7)",
+    "taxonId": 272944,
+    "evidences": [
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "EMBL",
+        "id": "AAL03460.1"
+      },
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "Proteomes",
+        "id": "UP000000816"
+      }
+    ],
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Alphaproteobacteria",
+      "Rickettsiales",
+      "Rickettsiaceae",
+      "Rickettsieae",
+      "Rickettsia",
+      "spotted fever group"
+    ]
+  },
+  "proteinExistence": "3: Inferred from homology",
+  "proteinDescription": {
+    "submissionNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAL03460.1"
+            }
+          ],
+          "value": "Patatin b1"
+        },
+        "ecNumbers": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "source": "EMBL",
+                "id": "AAL03460.1"
+              }
+            ],
+            "value": "2.3.1.129"
+          }
+        ]
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "AAL03460.1"
+          }
+        ],
+        "value": "pat1"
+      },
+      "orderedLocusNames": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAL03460.1"
+            }
+          ],
+          "value": "RC0922"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "ARBA",
+              "id": "ARBA00010240"
+            }
+          ],
+          "value": "Belongs to the patatin family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 12,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 211,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "PNPLA",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000259",
+          "source": "PROSITE",
+          "id": "PS51635"
+        }
+      ]
+    },
+    {
+      "type": "Motif",
+      "location": {
+        "start": {
+          "value": 16,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 21,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "GXGXXG",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01161"
+        }
+      ]
+    },
+    {
+      "type": "Motif",
+      "location": {
+        "start": {
+          "value": 48,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 52,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "GXSXG",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01161"
+        }
+      ]
+    },
+    {
+      "type": "Motif",
+      "location": {
+        "start": {
+          "value": 198,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 200,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "DGA/G",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01161"
+        }
+      ]
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 50,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 50,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Nucleophile",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01161"
+        }
+      ]
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 198,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 198,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Proton acceptor",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01161"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AAL03460.1"
+        }
+      ],
+      "id": "KW-0012",
+      "category": "Molecular function",
+      "name": "Acyltransferase"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01161"
+        }
+      ],
+      "id": "KW-0378",
+      "category": "Molecular function",
+      "name": "Hydrolase"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01161"
+        }
+      ],
+      "id": "KW-0442",
+      "category": "Biological process",
+      "name": "Lipid degradation"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00023098"
+        },
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01161"
+        }
+      ],
+      "id": "KW-0443",
+      "category": "Biological process",
+      "name": "Lipid metabolism"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "Proteomes",
+          "id": "UP000000816"
+        }
+      ],
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AAL03460.1"
+        }
+      ],
+      "id": "KW-0808",
+      "category": "Molecular function",
+      "name": "Transferase"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "11030655",
+        "citationType": "journal article",
+        "authors": [
+          "Ogata H.",
+          "Audic S.",
+          "Barbe V.",
+          "Artiguenave F.",
+          "Fournier P.E.",
+          "Raoult D.",
+          "Claverie J.M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11030655"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1126/science.290.5490.347"
+          }
+        ],
+        "title": "Selfish DNA in protein-coding genes of Rickettsia.",
+        "publicationDate": "2000",
+        "journal": "Science",
+        "firstPage": "347",
+        "lastPage": "350",
+        "volume": "290"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "Proteomes",
+              "id": "UP000000816"
+            }
+          ],
+          "value": "ATCC VR-613 / Malish 7",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AAL03460.1"
+        },
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "Proteomes",
+          "id": "UP000000816"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "11253208",
+        "citationType": "journal article",
+        "authors": [
+          "Ogata H.",
+          "Audic S.",
+          "Claverie J.-M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11253208"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1126/science.291.5502.252"
+          }
+        ],
+        "title": "Selfish DNA and the origin of genes.",
+        "publicationDate": "2001",
+        "journal": "Science",
+        "firstPage": "252",
+        "lastPage": "253",
+        "volume": "291"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "Proteomes",
+              "id": "UP000000816"
+            }
+          ],
+          "value": "ATCC VR-613 / Malish 7",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AAL03460.1"
+        },
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "Proteomes",
+          "id": "UP000000816"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "11557893",
+        "citationType": "journal article",
+        "authors": [
+          "Ogata H.",
+          "Audic S.",
+          "Renesto-Audiffren P.",
+          "Fournier P.-E.",
+          "Barbe V.",
+          "Samson D.",
+          "Roux V.",
+          "Cossart P.",
+          "Weissenbach J.",
+          "Claverie J.-M.",
+          "Raoult D."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11557893"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1126/science.1061471"
+          }
+        ],
+        "title": "Mechanisms of evolution in Rickettsia conorii and R. prowazekii.",
+        "publicationDate": "2001",
+        "journal": "Science",
+        "firstPage": "2093",
+        "lastPage": "2098",
+        "volume": "293"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "Proteomes",
+              "id": "UP000000816"
+            }
+          ],
+          "value": "ATCC VR-613 / Malish 7",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AAL03460.1"
+        },
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "Proteomes",
+          "id": "UP000000816"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AE006914",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAL03460.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "B97815",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "B97815"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_010977521.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_003103.1"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q92H50",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "Q92H50",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "927765",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "rco:RC0922",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|272944.4.peg.1049",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_043395_0_0_5",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AHDIFPT",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000000816",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0008780",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:acyl-[acyl-carrier-protein]-UDP-N-acetylglucosamine O-acyltransferase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-EC"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0004620",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:glycerophospholipase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:TreeGrafter"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0047372",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:monoacylglycerol lipase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:TreeGrafter"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0016042",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:lipid catabolic process"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-UniRule"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd07199",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Pat17_PNPLA8_PNPLA9_like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.40.1090.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cytosolic phospholipase A2 catalytic domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR016035",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Acyl_Trfase/lysoPLipase"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR002641",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PNPLA_dom"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR32176",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "XYLOSE ISOMERASE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR32176:SF92",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "XYLOSE ISOMERASE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF01734",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Patatin"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF52151",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FabD/lysophospholipase-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51635",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PNPLA"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MVEINNNKISLALFEGGGVKGNIHLEKLKIMEQITGKSTCEIFDFTGGTSVGGLISILLNLPDPNNPGKPLFSAAQAQELFEEMAHNIFPVGLTFRKLWSFNGLFSHKFSPEPLVKLLKAYCKDYTLKDLIGDVVVTGYDLNNKQNPLMTFSTIDARQSEENDYYLSDIIQGITAAPGYFPSHHFRNITNTKSHKIIDGGVYANDPTLQTWQLLKENNYNIENALYLSLKEENNDDYQTVCCGGGMLELVKNNMPAKILAATQQADEKTAQSIFGNKLIEIATYIPEKHSEMSDSSTENLQALKEFAKKSIYGSSTFRNIPYNEKFKEAIDKIITNYNANNPNDQIVMNDFYKELFHINTSNNALDKSFEQEEDIANNEDAVKTLIAQALDSKDIEPGKKELLADIKEFFNPFIEKNPEAKVDIENFLHEVKNLTLAEIENGIVTFKEARLKWQAEQNNLDIFSSCSMEALKEDMTLEGEEHTDDVQGYL",
+    "length": 490,
+    "molWeight": 55228,
+    "crc64": "4142B8254B5A92BA",
+    "md5": "F97F2118E3736CD2347539D861E583E1"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Domain": 1,
+      "Motif": 3,
+      "Active site": 2
+    },
+    "uniParcId": "UPI00000CBF44"
+  }
+}

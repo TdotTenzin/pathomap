@@ -1,0 +1,1215 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "B5I920",
+  "uniProtkbId": "RPH_STRX2",
+  "entryAudit": {
+    "firstPublicDate": "2024-03-27",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2008-10-14",
+    "entryVersion": 63,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 3.0,
+  "organism": {
+    "scientificName": "Streptomyces sviceus (strain ATCC 29083 / DSM 924 / JCM 4929 / NBRC 13980 / NCIMB 11184 / NRRL 5439 / UC 5370)",
+    "taxonId": 463191,
+    "lineage": [
+      "Bacteria",
+      "Bacillati",
+      "Actinomycetota",
+      "Actinomycetes",
+      "Kitasatosporales",
+      "Streptomycetaceae",
+      "Streptomyces"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000305"
+          }
+        ],
+        "value": "Rifampicin phosphotransferase"
+      },
+      "ecNumbers": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "24778229"
+            }
+          ],
+          "value": "2.7.9.6"
+        }
+      ]
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Rifampin phosphotransferase"
+        },
+        "shortNames": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "source": "PubMed",
+                "id": "24778229"
+              }
+            ],
+            "value": "RIF phosphotransferase"
+          }
+        ]
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000303",
+            "source": "PubMed",
+            "id": "24778229"
+          }
+        ],
+        "value": "rph"
+      },
+      "synonyms": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "24778229"
+            }
+          ],
+          "value": "rph-Ss"
+        }
+      ],
+      "orfNames": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000312",
+              "source": "EMBL",
+              "id": "EDY61575.1"
+            }
+          ],
+          "value": "SSEG_08155"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "24778229"
+            }
+          ],
+          "value": "Catalyzes the phosphorylation of rifampicin, also known as rifampin (RIF), leading to its inactivation (PubMed:24778229). Confers high level resistance to a variety of clinically used rifamycin antibiotics (PubMed:24778229). Does not show phosphoenolpyruvate (PEP) synthase activity (PubMed:24778229)"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "rifampicin + ATP + H2O = 21-phosphorifampicin + AMP + phosphate + 2 H(+)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:56304"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15377"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:30616"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:43474"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:71365"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:140195"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:456215"
+          }
+        ],
+        "ecNumber": "2.7.9.6",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "24778229"
+          }
+        ]
+      },
+      "physiologicalReactions": [
+        {
+          "directionType": "left-to-right",
+          "reactionCrossReference": {
+            "database": "Rhea",
+            "id": "RHEA:56305"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "24778229"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commentType": "BIOPHYSICOCHEMICAL PROPERTIES",
+      "kineticParameters": {
+        "michaelisConstants": [
+          {
+            "constant": 0.12,
+            "unit": "uM",
+            "substrate": "RIF",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "24778229"
+              }
+            ]
+          },
+          {
+            "constant": 11.07,
+            "unit": "uM",
+            "substrate": "ATP",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "24778229"
+              }
+            ]
+          }
+        ],
+        "note": {
+          "texts": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "24778229"
+                }
+              ],
+              "value": "kcat is 0.53 sec(-1)."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "A0A0X1KHF9"
+            }
+          ],
+          "value": "Contains three domains: an N-terminal ATP-binding domain, a large central rifampicin (RIF)-binding domain and a small C-terminal swivel phosphohistidine domain that harbors the conserved histidine residue essential for phosphate transfer"
+        }
+      ],
+      "commentType": "DOMAIN"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "24778229"
+            }
+          ],
+          "value": "Disruption mutant fails to inactivate RIF (PubMed:24778229). Mutant displays a modest twofold decrease in RIF minimum inhibitory concentrations (MICs) compared with the wild-type strain (PubMed:24778229)"
+        }
+      ],
+      "commentType": "DISRUPTION PHENOTYPE"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the rifampicin phosphotransferase family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 868,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Rifampicin phosphotransferase",
+      "featureId": "PRO_0000459649"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 5,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 317,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "ATP-binding",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "A0A0X1KHF9"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 330,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 755,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Rifampicin-binding",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "A0A0X1KHF9"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 410,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 430,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 768,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 866,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Swivel phosphohistidine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "A0A0X1KHF9"
+        }
+      ]
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 826,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 826,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Tele-phosphohistidine intermediate",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "A0A0X1KHF9"
+        }
+      ]
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 26,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 26,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:30616"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "A0A0X1KHF9"
+        }
+      ],
+      "ligand": {
+        "name": "ATP",
+        "id": "ChEBI:CHEBI:30616"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 120,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 120,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:30616"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "A0A0X1KHF9"
+        }
+      ],
+      "ligand": {
+        "name": "ATP",
+        "id": "ChEBI:CHEBI:30616"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 135,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 135,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:30616"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "A0A0X1KHF9"
+        }
+      ],
+      "ligand": {
+        "name": "ATP",
+        "id": "ChEBI:CHEBI:30616"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 139,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 139,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:30616"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "A0A0X1KHF9"
+        }
+      ],
+      "ligand": {
+        "name": "ATP",
+        "id": "ChEBI:CHEBI:30616"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 186,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 186,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:30616"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "A0A0X1KHF9"
+        }
+      ],
+      "ligand": {
+        "name": "ATP",
+        "id": "ChEBI:CHEBI:30616"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 300,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 300,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:30616"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "A0A0X1KHF9"
+        }
+      ],
+      "ligand": {
+        "name": "ATP",
+        "id": "ChEBI:CHEBI:30616"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 312,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 312,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:30616"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "A0A0X1KHF9"
+        }
+      ],
+      "ligand": {
+        "name": "ATP",
+        "id": "ChEBI:CHEBI:30616"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 314,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 314,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:30616"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "A0A0X1KHF9"
+        }
+      ],
+      "ligand": {
+        "name": "ATP",
+        "id": "ChEBI:CHEBI:30616"
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0046",
+      "category": "Biological process",
+      "name": "Antibiotic resistance"
+    },
+    {
+      "id": "KW-0067",
+      "category": "Ligand",
+      "name": "ATP-binding"
+    },
+    {
+      "id": "KW-0418",
+      "category": "Molecular function",
+      "name": "Kinase"
+    },
+    {
+      "id": "KW-0547",
+      "category": "Ligand",
+      "name": "Nucleotide-binding"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0808",
+      "category": "Molecular function",
+      "name": "Transferase"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "CI-DD74OF48QTJ4F",
+        "citationType": "submission",
+        "authoringGroup": [
+          "The Broad Institute Genome Sequencing Platform",
+          "Broad Institute Microbial Sequencing Center"
+        ],
+        "authors": [
+          "Fischbach M.",
+          "Godfrey P.",
+          "Ward D.",
+          "Young S.",
+          "Zeng Q.",
+          "Koehrsen M.",
+          "Alvarado L.",
+          "Berlin A.M.",
+          "Bochicchio J.",
+          "Borenstein D.",
+          "Chapman S.B.",
+          "Chen Z.",
+          "Engels R.",
+          "Freedman E.",
+          "Gellesch M.",
+          "Goldberg J.",
+          "Griggs A.",
+          "Gujja S.",
+          "Heilman E.R.",
+          "Heiman D.I.",
+          "Hepburn T.A.",
+          "Howarth C.",
+          "Jen D.",
+          "Larson L.",
+          "Lewis B.",
+          "Mehta T.",
+          "Park D.",
+          "Pearson M.",
+          "Richards J.",
+          "Roberts A.",
+          "Saif S.",
+          "Shea T.D.",
+          "Shenoy N.",
+          "Sisk P.",
+          "Stolte C.",
+          "Sykes S.N.",
+          "Thomson T.",
+          "Walk T.",
+          "White J.",
+          "Yandava C.",
+          "Straight P.",
+          "Clardy J.",
+          "Hung D.",
+          "Kolter R.",
+          "Mekalanos J.",
+          "Walker S.",
+          "Walsh C.T.",
+          "Wieland-Brown L.C.",
+          "Haas B.",
+          "Nusbaum C.",
+          "Birren B."
+        ],
+        "title": "The genome sequence of Streptomyces sviceus strain ATCC 29083.",
+        "publicationDate": "OCT-2009",
+        "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 29083 / DSM 924 / JCM 4929 / NBRC 13980 / NCIMB 11184 / NRRL 5439 / UC 5370",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "24778229",
+        "citationType": "journal article",
+        "authors": [
+          "Spanogiannopoulos P.",
+          "Waglechner N.",
+          "Koteva K.",
+          "Wright G.D."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "24778229"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1073/pnas.1402358111"
+          }
+        ],
+        "title": "A rifamycin inactivating phosphotransferase family shared by environmental and pathogenic bacteria.",
+        "publicationDate": "2014",
+        "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+        "firstPage": "7102",
+        "lastPage": "7107",
+        "volume": "111"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "CATALYTIC ACTIVITY",
+        "BIOPHYSICOCHEMICAL PROPERTIES",
+        "DISRUPTION PHENOTYPE"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 29083 / DSM 924 / JCM 4929 / NBRC 13980 / NCIMB 11184 / NRRL 5439 / UC 5370",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "CM000951",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "EDY61575.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "B5I920",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "B5I920",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "463191.SSEG_08155",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "COG0574",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Bacteria"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "COG3848",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Bacteria"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_005950_0_0_11",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OrthoDB",
+      "id": "9765468at2",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000002785",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005524",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:ATP binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0016301",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:kinase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "3.30.1490.20:FF:000010",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Phosphoenolpyruvate synthase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "3.50.30.10:FF:000007",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Phosphoenolpyruvate synthase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.30.1490.20",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ATP-grasp fold, A domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.30.470.20",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ATP-grasp fold, B domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.50.30.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Phosphohistidine domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR013815",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ATP_grasp_subdomain_1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR008279",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PEP-util_enz_mobile_dom"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR051549",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PEP_Utilizing_Enz"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036637",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Phosphohistidine_dom_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR002192",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PPDK_AMP/ATP-bd"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF004879",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ppsA"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF004877",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PRK06241.1-2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF041857",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "RIF_Ptrans_rph"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR43615",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PHOSPHOENOLPYRUVATE SYNTHASE-RELATED"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR43615:SF1",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PPDK_N DOMAIN-CONTAINING PROTEIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00391",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PEP-utilizers"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF01326",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PPDK_N"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF27448",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Rph_4th"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF56059",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Glutathione synthetase ATP-binding domain-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF52009",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Phosphohistidine domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MNNVTERYVLDLQEIDESQVAVVGGKGAHLGSLSRIEGIRVPAGFCVTTDAYRRVVAQSPSLDAQLEELSRVSPDDQEAIRTLSAEIRRTVEEIAVPDDLAGAITRALARSGERTAYAVRSSATAEDLPTASFAGQQDTYLNVVGPAAILRHISRCWASLFTERAVTYRRRNGIDDRTVRMAVVVQQMVFPHASGILFTADPVSGNRTVATVDAGFGLGEALVSGLVNPDVFKVRHGEVVARTISAKQREVHALLAGGTREVPIDAQRQQQPALTDAQAVRLVELGRRIEARFGRPQDIEWCLVDDDFHIVQSRPITTLFPVPESADQENHVYVSVGHQQMMTDPMKPLGLSMWQQTAMVRMHEAGGRLFVDVTQRLAAPASRAGLLDLMGRGDPLVRDALETVLDREDFVPSLPDAPPAGPRAGAAPEPVATDPAVVTGLIERSQASLAALRRDVLTKTGPELFDFLPTAFEEHKRVLTDPLNFKAIMAGMEATWWLNDKLEEWLGEKNAADTLTLSAPGNVTSEMGLALLDVADVIRPHPQVVEFLAGVEDDDFLDELAKVPGGTEARDAIEAYLDRYGMRCVGEIDITRPRWSERPGTLVPVILDNVRNFEPGAARRRFEQGLQQARKKEQEVLSRLRALPDGERKADETKGMIDRVRTFIGYREYPKYDIISRYFVYKQALMAEAERLAQAGVLAEKEDVFYLTFEEFHDVVRTRQIDDRLVRQRKDAFRAYQALTPPRVLTSDGEALTGAYRRDDVPDGALIGLPVSTGTVEGRARVILDMAEADLEAGDILVTTFTDPSWSPLFVAVAGLVTEVGGLMTHGAVIAREYGLPAVVGVEQATRRIRDGQRIRVHGTDGYIEILS",
+    "length": 868,
+    "molWeight": 95513,
+    "crc64": "80660774FB165E33",
+    "md5": "52DDF43C5EAF7D18F781BDB93BCBBA40"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "CATALYTIC ACTIVITY": 1,
+      "BIOPHYSICOCHEMICAL PROPERTIES": 1,
+      "DOMAIN": 1,
+      "DISRUPTION PHENOTYPE": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Region": 4,
+      "Active site": 1,
+      "Binding site": 8
+    },
+    "uniParcId": "UPI0001804074"
+  }
+}

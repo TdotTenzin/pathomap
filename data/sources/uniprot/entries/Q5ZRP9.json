@@ -1,0 +1,981 @@
+{
+  "entryType": "UniProtKB unreviewed (TrEMBL)",
+  "primaryAccession": "Q5ZRP9",
+  "uniProtkbId": "Q5ZRP9_LEGPH",
+  "entryAudit": {
+    "firstPublicDate": "2004-11-23",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2004-11-23",
+    "entryVersion": 110,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 2.0,
+  "organism": {
+    "scientificName": "Legionella pneumophila subsp. pneumophila (strain Philadelphia 1 / ATCC 33152 / DSM 7513)",
+    "taxonId": 272624,
+    "evidences": [
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "EMBL",
+        "id": "AAU28879.1"
+      },
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "Proteomes",
+        "id": "UP000000609"
+      }
+    ],
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Gammaproteobacteria",
+      "Legionellales",
+      "Legionellaceae",
+      "Legionella"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "submissionNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAU28879.1"
+            }
+          ],
+          "value": "VipD"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "AAU28879.1"
+          }
+        ],
+        "value": "vipD"
+      },
+      "orderedLocusNames": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAU28879.1"
+            }
+          ],
+          "value": "lpg2831"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "ARBA",
+                "id": "ARBA00004370"
+              }
+            ],
+            "value": "Membrane",
+            "id": "SL-0162"
+          }
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 38,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 301,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "PNPLA",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000259",
+          "source": "PROSITE",
+          "id": "PS51635"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 597,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 621,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Motif",
+      "location": {
+        "start": {
+          "value": 42,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 47,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "GXGXXG",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01161"
+        }
+      ]
+    },
+    {
+      "type": "Motif",
+      "location": {
+        "start": {
+          "value": 71,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 75,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "GXSXG",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01161"
+        }
+      ]
+    },
+    {
+      "type": "Motif",
+      "location": {
+        "start": {
+          "value": 288,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 290,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "DGA/G",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01161"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 597,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 612,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Basic and acidic residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 73,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 73,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Nucleophile",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01161"
+        }
+      ]
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 288,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 288,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Proton acceptor",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01161"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "4AKF"
+        },
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "4KYI"
+        }
+      ],
+      "id": "KW-0002",
+      "category": "Technical term",
+      "name": "3D-structure"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022801"
+        },
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01161"
+        }
+      ],
+      "id": "KW-0378",
+      "category": "Molecular function",
+      "name": "Hydrolase"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022963"
+        },
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01161"
+        }
+      ],
+      "id": "KW-0442",
+      "category": "Biological process",
+      "name": "Lipid degradation"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00023098"
+        },
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01161"
+        }
+      ],
+      "id": "KW-0443",
+      "category": "Biological process",
+      "name": "Lipid metabolism"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00023136"
+        }
+      ],
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "Proteomes",
+          "id": "UP000000609"
+        }
+      ],
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022692"
+        }
+      ],
+      "id": "KW-0812",
+      "category": "Domain",
+      "name": "Transmembrane"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022989"
+        }
+      ],
+      "id": "KW-1133",
+      "category": "Domain",
+      "name": "Transmembrane helix"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "15448271",
+        "citationType": "journal article",
+        "authors": [
+          "Chien M.",
+          "Morozova I.",
+          "Shi S.",
+          "Sheng H.",
+          "Chen J.",
+          "Gomez S.M.",
+          "Asamani G.",
+          "Hill K.",
+          "Nuara J.",
+          "Feder M.",
+          "Rineer J.",
+          "Greenberg J.J.",
+          "Steshenko V.",
+          "Park S.H.",
+          "Zhao B.",
+          "Teplitskaya E.",
+          "Edwards J.R.",
+          "Pampou S.",
+          "Georghiou A.",
+          "Chou I.C.",
+          "Iannuccilli W.",
+          "Ulz M.E.",
+          "Kim D.H.",
+          "Geringer-Sameth A.",
+          "Goldsberry C.",
+          "Morozov P.",
+          "Fischer S.G.",
+          "Segal G.",
+          "Qu X.",
+          "Rzhetsky A.",
+          "Zhang P.",
+          "Cayanis E.",
+          "De Jong P.J.",
+          "Ju J.",
+          "Kalachikov S.",
+          "Shuman H.A.",
+          "Russo J.J."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15448271"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1126/science.1099776"
+          }
+        ],
+        "title": "The genomic sequence of the accidental pathogen Legionella pneumophila.",
+        "publicationDate": "2004",
+        "journal": "Science",
+        "firstPage": "1966",
+        "lastPage": "1968",
+        "volume": "305"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "Proteomes",
+              "id": "UP000000609"
+            }
+          ],
+          "value": "Philadelphia 1 / ATCC 33152 / DSM 7513",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AAU28879.1"
+        },
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "Proteomes",
+          "id": "UP000000609"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "23271971",
+        "citationType": "journal article",
+        "authors": [
+          "Ku B.",
+          "Lee K.H.",
+          "Park W.S.",
+          "Yang C.S.",
+          "Ge J.",
+          "Lee S.G.",
+          "Cha S.S.",
+          "Shao F.",
+          "Heo W.D.",
+          "Jung J.U.",
+          "Oh B.H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "23271971"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1371/journal.ppat.1003082"
+          }
+        ],
+        "title": "VipD of Legionella pneumophila targets activated Rab5 and Rab22 to interfere with endosomal trafficking in macrophages.",
+        "publicationDate": "2012",
+        "journal": "PLoS Pathog.",
+        "firstPage": "e1003082",
+        "lastPage": "e1003082",
+        "volume": "8"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY (2.90 ANGSTROMS) OF 1-575"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "4AKF"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "25114243",
+        "citationType": "journal article",
+        "authors": [
+          "Lucas M.",
+          "Gaspar A.H.",
+          "Pallara C.",
+          "Rojas A.L.",
+          "Fernandez-Recio J.",
+          "Machner M.P.",
+          "Hierro A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "25114243"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1073/pnas.1405391111"
+          }
+        ],
+        "title": "Structural basis for the recruitment and activation of the Legionella phospholipase VipD by the host GTPase Rab5.",
+        "publicationDate": "2014",
+        "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+        "firstPage": "E3514",
+        "lastPage": "E3523",
+        "volume": "111"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY (3.08 ANGSTROMS) OF 19-564"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "4KYI"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AE017354",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAU28879.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_010948518.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_002942.5"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "4AKF",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.90 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=1-575"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "4KYI",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "3.08 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/C/E/G=19-564"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q5ZRP9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "Q5ZRP9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "IntAct",
+      "id": "Q5ZRP9",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "272624.lpg2831",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PaxDb",
+      "id": "272624-lpg2831",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "57036829",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "lpn:lpg2831",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|272624.6.peg.3016",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "COG1752",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Bacteria"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_443982_0_0_6",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OrthoDB",
+      "id": "7021815at2",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000000609",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0016787",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:hydrolase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-UniRule"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0016042",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:lipid catabolic process"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-UniRule"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:1990215",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:symbiont-mediated perturbation of host vesicle-mediated transport"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:SigSci"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "23271971"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "24616501"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd07207",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Pat_ExoU_VipD_like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.40.1090.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cytosolic phospholipase A2 catalytic domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR016035",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Acyl_Trfase/lysoPLipase"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR052580",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Lipid_Hydrolase"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR002641",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PNPLA_dom"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR054392",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "VipD-like_C"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR46394",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ANNEXIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR46394:SF1",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PNPLA DOMAIN-CONTAINING PROTEIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF01734",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Patatin"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF22140",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "VipD-like_C"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF52151",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FabD/lysophospholipase-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51635",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PNPLA"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MKLAEIMTKSRKLKRNLLEISKTEAGQYSVSAPEHKGLVLSGGGAKGISYLGMIQALQERGKIKNLTHVSGASAGAMTASILAVGMDIKDIKKLIEGLDITKLLDNSGVGFRARGDRFRNILDVIYMMQMKKHLESVQQPIPPEQQMNYGILKQKIALYEDKLSRAGIVINNVDDIINLTKSVKDLEKLDKALNSIPTELKGAKGEQLENPRLTLGDLGRLRELLPEENKHLIKNLSVVVTNQTKHELERYSEDTTPQQSIAQVVQWSGAHPVLFVPGRNAKGEYIADGGILDNMPEIEGLDREEVLCVKAEAGTAFEDRVNKAKQSAMEAISWFKARMDSLVEATIGGKWLHATSSVLNREKVYYNIDNMIYINTGEVTTTNTSPTPEQRARAVKNGYDQTMQLLDSHKQTFDHPLMAILYIGHDKLKDALIDEKSEKEIFEASAHAQAILHLQEQIVKEMNDGDYSSVQNYLDQIEDILTVDAKMDDIQKEKAFALCIKQVNFLSEGKLETYLNKVEAEAKAAAEPSWATKILNLLWAPIEWVVSLFKGPAQDFKVEVQPEPVKVSTSENQETVSNQKDINPAVEYRKIIAEVRREHTDPSPSLQEKERVGLSTTFGGH",
+    "length": 621,
+    "molWeight": 69282,
+    "crc64": "B9512E0E82088D8B",
+    "md5": "D1080225606CFCF5727BDF5462AA2B68"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "SUBCELLULAR LOCATION": 1
+    },
+    "countByFeatureType": {
+      "Domain": 1,
+      "Region": 1,
+      "Motif": 3,
+      "Compositional bias": 1,
+      "Active site": 2
+    },
+    "uniParcId": "UPI0000442AB8"
+  }
+}

@@ -1,0 +1,1783 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "A9N5G2",
+  "uniProtkbId": "NAPA_SALPB",
+  "entryAudit": {
+    "firstPublicDate": "2008-05-20",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2008-02-05",
+    "entryVersion": 92,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 4.0,
+  "organism": {
+    "scientificName": "Salmonella paratyphi B (strain ATCC BAA-1250 / SPB7)",
+    "taxonId": 1016998,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Gammaproteobacteria",
+      "Enterobacterales",
+      "Enterobacteriaceae",
+      "Salmonella"
+    ]
+  },
+  "proteinExistence": "3: Inferred from homology",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000255",
+            "source": "HAMAP-Rule",
+            "id": "MF_01630"
+          }
+        ],
+        "value": "Periplasmic nitrate reductase"
+      },
+      "ecNumbers": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_01630"
+            }
+          ],
+          "value": "1.9.6.1"
+        }
+      ]
+    },
+    "flag": "Precursor"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000255",
+            "source": "HAMAP-Rule",
+            "id": "MF_01630"
+          }
+        ],
+        "value": "napA"
+      },
+      "orderedLocusNames": [
+        {
+          "value": "SPAB_00733"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_01630"
+            }
+          ],
+          "value": "Catalytic subunit of the periplasmic nitrate reductase complex NapAB. Receives electrons from NapB and catalyzes the reduction of nitrate to nitrite"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "2 Fe(II)-[cytochrome] + nitrate + 2 H(+) = 2 Fe(III)-[cytochrome] + nitrite + H2O",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:12909"
+          },
+          {
+            "database": "Rhea",
+            "id": "RHEA-COMP:11777"
+          },
+          {
+            "database": "Rhea",
+            "id": "RHEA-COMP:11778"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15377"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:16301"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:17632"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:29033"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:29034"
+          }
+        ],
+        "ecNumber": "1.9.6.1",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000255",
+            "source": "HAMAP-Rule",
+            "id": "MF_01630"
+          }
+        ]
+      }
+    },
+    {
+      "commentType": "COFACTOR",
+      "cofactors": [
+        {
+          "name": "[4Fe-4S] cluster",
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_01630"
+            }
+          ],
+          "cofactorCrossReference": {
+            "database": "ChEBI",
+            "id": "CHEBI:49883"
+          }
+        }
+      ],
+      "note": {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255",
+                "source": "HAMAP-Rule",
+                "id": "MF_01630"
+              }
+            ],
+            "value": "Binds 1 [4Fe-4S] cluster."
+          }
+        ]
+      }
+    },
+    {
+      "commentType": "COFACTOR",
+      "cofactors": [
+        {
+          "name": "Mo-bis(molybdopterin guanine dinucleotide)",
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_01630"
+            }
+          ],
+          "cofactorCrossReference": {
+            "database": "ChEBI",
+            "id": "CHEBI:60539"
+          }
+        }
+      ],
+      "note": {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255",
+                "source": "HAMAP-Rule",
+                "id": "MF_01630"
+              }
+            ],
+            "value": "Binds 1 molybdenum-bis(molybdopterin guanine dinucleotide) (Mo-bis-MGD) cofactor per subunit."
+          }
+        ]
+      }
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_01630"
+            }
+          ],
+          "value": "Component of the periplasmic nitrate reductase NapAB complex composed of NapA and NapB"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255",
+                "source": "HAMAP-Rule",
+                "id": "MF_01630"
+              }
+            ],
+            "value": "Periplasm",
+            "id": "SL-0200"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_01630"
+            }
+          ],
+          "value": "Predicted to be exported by the Tat system. The position of the signal peptide cleavage has not been experimentally proven"
+        }
+      ],
+      "commentType": "PTM"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_01630"
+            }
+          ],
+          "value": "Belongs to the prokaryotic molybdopterin-containing oxidoreductase family. NasA/NapA/NarB subfamily"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 31,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Tat-type signal",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01630"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 32,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 828,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Periplasmic nitrate reductase",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01630"
+        }
+      ],
+      "featureId": "PRO_1000088119"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 39,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 95,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "4Fe-4S Mo/W bis-MGD-type",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01630"
+        }
+      ]
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 46,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 46,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:49883"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01630"
+        }
+      ],
+      "ligand": {
+        "name": "[4Fe-4S] cluster",
+        "id": "ChEBI:CHEBI:49883"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 49,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 49,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:49883"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01630"
+        }
+      ],
+      "ligand": {
+        "name": "[4Fe-4S] cluster",
+        "id": "ChEBI:CHEBI:49883"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 53,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 53,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:49883"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01630"
+        }
+      ],
+      "ligand": {
+        "name": "[4Fe-4S] cluster",
+        "id": "ChEBI:CHEBI:49883"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 81,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 81,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:49883"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01630"
+        }
+      ],
+      "ligand": {
+        "name": "[4Fe-4S] cluster",
+        "id": "ChEBI:CHEBI:49883"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 83,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 83,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:60539"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01630"
+        }
+      ],
+      "ligand": {
+        "name": "Mo-bis(molybdopterin guanine dinucleotide)",
+        "id": "ChEBI:CHEBI:60539"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 150,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 150,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:60539"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01630"
+        }
+      ],
+      "ligand": {
+        "name": "Mo-bis(molybdopterin guanine dinucleotide)",
+        "id": "ChEBI:CHEBI:60539"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 175,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 175,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:60539"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01630"
+        }
+      ],
+      "ligand": {
+        "name": "Mo-bis(molybdopterin guanine dinucleotide)",
+        "id": "ChEBI:CHEBI:60539"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 179,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 179,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:60539"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01630"
+        }
+      ],
+      "ligand": {
+        "name": "Mo-bis(molybdopterin guanine dinucleotide)",
+        "id": "ChEBI:CHEBI:60539"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 212,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 219,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:60539"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01630"
+        }
+      ],
+      "ligand": {
+        "name": "Mo-bis(molybdopterin guanine dinucleotide)",
+        "id": "ChEBI:CHEBI:60539"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 243,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 247,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:60539"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01630"
+        }
+      ],
+      "ligand": {
+        "name": "Mo-bis(molybdopterin guanine dinucleotide)",
+        "id": "ChEBI:CHEBI:60539"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 262,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 264,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:60539"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01630"
+        }
+      ],
+      "ligand": {
+        "name": "Mo-bis(molybdopterin guanine dinucleotide)",
+        "id": "ChEBI:CHEBI:60539"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 372,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 372,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:60539"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01630"
+        }
+      ],
+      "ligand": {
+        "name": "Mo-bis(molybdopterin guanine dinucleotide)",
+        "id": "ChEBI:CHEBI:60539"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 376,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 376,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:60539"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01630"
+        }
+      ],
+      "ligand": {
+        "name": "Mo-bis(molybdopterin guanine dinucleotide)",
+        "id": "ChEBI:CHEBI:60539"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 482,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 482,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:60539"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01630"
+        }
+      ],
+      "ligand": {
+        "name": "Mo-bis(molybdopterin guanine dinucleotide)",
+        "id": "ChEBI:CHEBI:60539"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 508,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 509,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:60539"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01630"
+        }
+      ],
+      "ligand": {
+        "name": "Mo-bis(molybdopterin guanine dinucleotide)",
+        "id": "ChEBI:CHEBI:60539"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 531,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 531,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:60539"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01630"
+        }
+      ],
+      "ligand": {
+        "name": "Mo-bis(molybdopterin guanine dinucleotide)",
+        "id": "ChEBI:CHEBI:60539"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 558,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 558,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:60539"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01630"
+        }
+      ],
+      "ligand": {
+        "name": "Mo-bis(molybdopterin guanine dinucleotide)",
+        "id": "ChEBI:CHEBI:60539"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 718,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 727,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:60539"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01630"
+        }
+      ],
+      "ligand": {
+        "name": "Mo-bis(molybdopterin guanine dinucleotide)",
+        "id": "ChEBI:CHEBI:60539"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 794,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 794,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01630"
+        }
+      ],
+      "ligand": {
+        "name": "substrate"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 802,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 802,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:60539"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01630"
+        }
+      ],
+      "ligand": {
+        "name": "Mo-bis(molybdopterin guanine dinucleotide)",
+        "id": "ChEBI:CHEBI:60539"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 819,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 819,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:60539"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01630"
+        }
+      ],
+      "ligand": {
+        "name": "Mo-bis(molybdopterin guanine dinucleotide)",
+        "id": "ChEBI:CHEBI:60539"
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0004",
+      "category": "Ligand",
+      "name": "4Fe-4S"
+    },
+    {
+      "id": "KW-0249",
+      "category": "Biological process",
+      "name": "Electron transport"
+    },
+    {
+      "id": "KW-0408",
+      "category": "Ligand",
+      "name": "Iron"
+    },
+    {
+      "id": "KW-0411",
+      "category": "Ligand",
+      "name": "Iron-sulfur"
+    },
+    {
+      "id": "KW-0479",
+      "category": "Ligand",
+      "name": "Metal-binding"
+    },
+    {
+      "id": "KW-0500",
+      "category": "Ligand",
+      "name": "Molybdenum"
+    },
+    {
+      "id": "KW-0534",
+      "category": "Biological process",
+      "name": "Nitrate assimilation"
+    },
+    {
+      "id": "KW-0560",
+      "category": "Molecular function",
+      "name": "Oxidoreductase"
+    },
+    {
+      "id": "KW-0574",
+      "category": "Cellular component",
+      "name": "Periplasm"
+    },
+    {
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    },
+    {
+      "id": "KW-0813",
+      "category": "Biological process",
+      "name": "Transport"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "CI-77U3EV9AK3RQA",
+        "citationType": "submission",
+        "authoringGroup": [
+          "The Salmonella enterica serovar Paratyphi B Genome Sequencing Project"
+        ],
+        "authors": [
+          "McClelland M.",
+          "Sanderson E.K.",
+          "Porwollik S.",
+          "Spieth J.",
+          "Clifton W.S.",
+          "Fulton R.",
+          "Cordes M.",
+          "Wollam A.",
+          "Shah N.",
+          "Pepin K.",
+          "Bhonagiri V.",
+          "Nash W.",
+          "Johnson M.",
+          "Thiruvilangam P.",
+          "Wilson R."
+        ],
+        "publicationDate": "NOV-2007",
+        "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC BAA-1250 / SPB7",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "CP000886",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ABX66158.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_000778090.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_010102.1"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "A9N5G2",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "A9N5G2",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "spq:SPAB_00733",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|1016998.12.peg.687",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_000422_13_4_6",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AAHFQKI",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BioCyc",
+      "id": "SENT1016998:SPAB_RS03035-MONOMER",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0016020",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:TreeGrafter"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009325",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:nitrate reductase complex"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:TreeGrafter"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0042597",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:periplasmic space"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0051539",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:4 iron, 4 sulfur cluster binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009055",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:electron transfer activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-UniRule"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005506",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:iron ion binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-UniRule"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0030151",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:molybdenum ion binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0043546",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:molybdopterin cofactor binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0050140",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:nitrate reductase (cytochrome) activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-EC"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0045333",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:cellular respiration"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-ARBA"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0006777",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:Mo-molybdopterin cofactor biosynthetic process"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-UniRule"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0042128",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:nitrate assimilation"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-UniRule"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd02791",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "MopB_CT_Nitrate-R-NapA-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd02754",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "MopB_Nitrate-R-NapA-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "2.40.40.20:FF:000005",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Periplasmic nitrate reductase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "3.40.228.10:FF:000001",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Periplasmic nitrate reductase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.40.40.20",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.30.200.210",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.40.50.740",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.40.228.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Dimethylsulfoxide Reductase, domain 2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "HAMAP",
+      "id": "MF_01630",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Nitrate_reduct_NapA"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR009010",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Asp_de-COase-like_dom_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR041957",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CT_Nitrate-R-NapA-like"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR006657",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "MoPterin_dinucl-bd_dom"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR006656",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Mopterin_OxRdtase"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR006963",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Mopterin_OxRdtase_4Fe-4S_dom"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR027467",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "MopterinOxRdtase_cofactor_BS"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR010051",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Periplasm_NO3_reductase_lsu"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR006311",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TAT_signal"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR019546",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TAT_signal_bac_arc"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "TIGR01706",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "NAPA"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF010055",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "napA"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "TIGR01409",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TAT_signal_seq"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR43105:SF11",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PERIPLASMIC NITRATE REDUCTASE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR43105",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "RESPIRATORY NITRATE REDUCTASE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF04879",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Molybdop_Fe4S4"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00384",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Molybdopterin"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF01568",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Molydop_binding"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00926",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Molybdop_Fe4S4"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF50692",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ADC-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF53706",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Formate dehydrogenase/DMSO reductase, domains 1-3"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51669",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "4FE4S_MOW_BIS_MGD"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS00551",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "MOLYBDOPTERIN_PROK_1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51318",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TAT"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MKLSRRSFMKANAVAAAAAAAGLSVPGVARAVVGQQEAIKWDKAPCRFCGTGCGVLVGTQQGRVVACQGDPDAPVNRGLNCIKGYFLPKIMYGKDRLTQPMLRMKDGSYHKDGEFTPVSWEQAFDVMEEKFKTALKEKGPEAIGMFGSGQWTIWEGYAAAKLFKAGFRSNNIDPNARHCMASAVVGFMRTFGMDEPMGCYDDIEQADAFVLWGSNMAEMHPILWSRITNRRLSDPNVKVAVLSTFQHRSFELADNGIVFTPQSDLVILNYIANYIIQNNAVNQDFFTKHVNLRKGATDIGYGLRPTHPLEKAAKNPGSDASEPMSFDEYKAFVAEYTLDKTAEMTGVPKDQLEQLAQLYADPNKRVISYWTMGFNQHTRGVWANNLVYNLHLLTGKISQPGCGPFSLTGQPSACGTAREVGTFSHRLPADMVVTNEKHRDICEKHWQIPAGTIPAKVGLHAVAQDRALKDGKLNVYWVMCNNNMQAGPNINEDRMPGWRDPRNFIIVSDPYPTVSALSADLILPTAMWVEKEGAYGNAERRTQFWRQQIKAPGEAKSDLWQLVQFSRRFKTEEVWPEALLAQKPELRGKTLYDVLFATPAVSKFPLSELKEDQLNDESRELGFYLQKGLFEEYAWFGRGHGHDLAPFDDYHNARGLRWPVVEGKETQWRYSEGNDPYVKAGEGYKFYGKPDGKAVIFALPFEPAAESPDNEYDLWLSTGRVLEHWHTGSMTRRVPELHRAFPEAVVFIHPLDAKARDLRRGDKVKVSSRRGEVISIVETRGRNRPPQGLVYMPFFDAAQLVNNLTLDATDPLSKETDFKKCAVKLAKV",
+    "length": 828,
+    "molWeight": 92858,
+    "crc64": "81739A3FECE5D836",
+    "md5": "40BC19E26D79246EEF059086F59F5FBA"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "CATALYTIC ACTIVITY": 1,
+      "COFACTOR": 2,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "PTM": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1,
+      "Domain": 1,
+      "Binding site": 21
+    },
+    "uniParcId": "UPI0000059B9F"
+  }
+}

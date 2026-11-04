@@ -265,6 +265,46 @@
   text-decoration: underline;
 }
 
+/* Collapsible amino-acid sequence display in the table body */
+.sequence-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  max-width: 300px;
+}
+
+.sequence-preview {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.8em;
+  line-height: 1.4;
+  word-break: break-all;
+}
+
+.sequence-toggle {
+  font-size: 0.7rem;
+  padding: 0.1rem 0.4rem;
+}
+
+/* Collapsible domain list in the table body */
+.domain-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  max-width: 320px;
+}
+
+.domain-preview {
+  line-height: 1.4;
+}
+
+.domain-toggle {
+  font-size: 0.7rem;
+  padding: 0.1rem 0.4rem;
+}
+
+
 /* Classification badges */
 .classification-badge {
   display: inline-flex;

@@ -1,0 +1,1338 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "O68718",
+  "secondaryAccessions": [
+    "A0A6B3T9G8"
+  ],
+  "uniProtkbId": "YOPJ_YERPE",
+  "entryAudit": {
+    "firstPublicDate": "2020-12-02",
+    "lastAnnotationUpdateDate": "2026-09-02",
+    "lastSequenceUpdateDate": "1998-08-01",
+    "entryVersion": 72,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 3.0,
+  "organism": {
+    "scientificName": "Yersinia pestis",
+    "taxonId": 632,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Gammaproteobacteria",
+      "Enterobacterales",
+      "Yersiniaceae",
+      "Yersinia"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000305"
+          }
+        ],
+        "value": "Serine/threonine-protein acetyltransferase YopJ"
+      },
+      "ecNumbers": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "22802624"
+            }
+          ],
+          "value": "2.3.1.-"
+        }
+      ]
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Virulence factor YopJ"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000303",
+            "source": "PubMed",
+            "id": "20430892"
+          }
+        ],
+        "value": "yopJ"
+      },
+      "synonyms": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "9748454"
+            }
+          ],
+          "value": "Y0010"
+        },
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "9746557"
+            }
+          ],
+          "value": "yopP"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "20430892"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "22563435"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "22802624"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "26810037"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "30361383"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "30381458"
+            }
+          ],
+          "value": "Serine/threonine-protein acetyltransferase translocated into infected cells, which inhibits the host immune response and induces cell death by mediating acetylation of target proteins (PubMed:20430892, PubMed:22563435, PubMed:22802624, PubMed:26810037). Inhibits the MAPK and NF-kappa-B signaling pathways by acetylating protein-kinases such as MAP2K1, MAP2K6, MAP3K7/TAK1 and I-kappa-B kinase (CHUK/IKKA and IKBKB) on serine and threonine residues critical for their activation by phosphorylation, thereby preventing protein-kinase activation (PubMed:20430892, PubMed:22802624). Promotes pyroptosis, a programmed cell death, in host cells by mediating acetylation of MAP3K7/TAK1: MAP3K7/TAK1 inactivation triggers activation of caspase-8 (CASP8), followed by CASP8-dependent cleavage of gasdermin-D (GSDMD) and induction of pyroptosis (PubMed:30361383, PubMed:30381458)"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "L-threonyl-[protein] + acetyl-CoA = O-acetyl-L-threonyl-[protein] + CoA",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:65340"
+          },
+          {
+            "database": "Rhea",
+            "id": "RHEA-COMP:11060"
+          },
+          {
+            "database": "Rhea",
+            "id": "RHEA-COMP:16780"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:30013"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:57287"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:57288"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:141025"
+          }
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "22802624"
+          }
+        ]
+      },
+      "physiologicalReactions": [
+        {
+          "directionType": "left-to-right",
+          "reactionCrossReference": {
+            "database": "Rhea",
+            "id": "RHEA:65341"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "22802624"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "L-seryl-[protein] + acetyl-CoA = O-acetyl-L-seryl-[protein] + CoA",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:59392"
+          },
+          {
+            "database": "Rhea",
+            "id": "RHEA-COMP:9863"
+          },
+          {
+            "database": "Rhea",
+            "id": "RHEA-COMP:15352"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:29999"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:57287"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:57288"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:141128"
+          }
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "22802624"
+          }
+        ]
+      },
+      "physiologicalReactions": [
+        {
+          "directionType": "left-to-right",
+          "reactionCrossReference": {
+            "database": "Rhea",
+            "id": "RHEA:59393"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "22802624"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commentType": "COFACTOR",
+      "cofactors": [
+        {
+          "name": "1D-myo-inositol hexakisphosphate",
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "20430892"
+            }
+          ],
+          "cofactorCrossReference": {
+            "database": "ChEBI",
+            "id": "CHEBI:58130"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "Q6VE93"
+            }
+          ],
+          "value": "1D-myo-inositol hexakisphosphate activates protein-acetyltransferase activity via an allosteric mechanism: 1D-myo-inositol hexakisphosphate-binding induces a conformational rearrangement that stimulates the interaction with acetyl-CoA"
+        }
+      ],
+      "commentType": "ACTIVITY REGULATION"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "note": {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250",
+                "source": "UniProtKB",
+                "id": "P0DUD0"
+              }
+            ],
+            "value": "Secreted via type III secretion system (T3SS)"
+          }
+        ]
+      },
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250",
+                "source": "UniProtKB",
+                "id": "P0DUD0"
+              }
+            ],
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the acetyltransferase YopJ family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 288,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Serine/threonine-protein acetyltransferase YopJ",
+      "featureId": "PRO_0000451623"
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 109,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 109,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q6VE93"
+        }
+      ]
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 128,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 128,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q6VE93"
+        }
+      ]
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 172,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 172,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305",
+          "source": "PubMed",
+          "id": "20430892"
+        },
+        {
+          "evidenceCode": "ECO:0000305",
+          "source": "PubMed",
+          "id": "22802624"
+        }
+      ]
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 109,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 109,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:57287"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q6VE93"
+        }
+      ],
+      "ligand": {
+        "name": "CoA",
+        "id": "ChEBI:CHEBI:57287"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 167,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 168,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:57287"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q6VE93"
+        }
+      ],
+      "ligand": {
+        "name": "CoA",
+        "id": "ChEBI:CHEBI:57287"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 182,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 185,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:58130"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q6VE93"
+        }
+      ],
+      "ligand": {
+        "name": "1D-myo-inositol hexakisphosphate",
+        "id": "ChEBI:CHEBI:58130"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 224,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 225,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:58130"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q6VE93"
+        }
+      ],
+      "ligand": {
+        "name": "1D-myo-inositol hexakisphosphate",
+        "id": "ChEBI:CHEBI:58130"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 227,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 230,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:57287"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q6VE93"
+        }
+      ],
+      "ligand": {
+        "name": "CoA",
+        "id": "ChEBI:CHEBI:57287"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 257,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 257,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:58130"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q6VE93"
+        }
+      ],
+      "ligand": {
+        "name": "1D-myo-inositol hexakisphosphate",
+        "id": "ChEBI:CHEBI:58130"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 266,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 270,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:57287"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q6VE93"
+        }
+      ],
+      "ligand": {
+        "name": "CoA",
+        "id": "ChEBI:CHEBI:57287"
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 172,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 172,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Abolished serine/threonine-protein acetyltransferase activity.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "20430892"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "22802624"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "C",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    }
+  ],
+  "geneLocations": [
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000312",
+          "source": "EMBL",
+          "id": "AAC62603.1"
+        }
+      ],
+      "value": "pCD1",
+      "geneEncodingType": "Plasmid"
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0012",
+      "category": "Molecular function",
+      "name": "Acyltransferase"
+    },
+    {
+      "id": "KW-0614",
+      "category": "Technical term",
+      "name": "Plasmid"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0808",
+      "category": "Molecular function",
+      "name": "Transferase"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "9746557",
+        "citationType": "journal article",
+        "authors": [
+          "Perry R.D.",
+          "Straley S.C.",
+          "Fetherston J.D.",
+          "Rose D.J.",
+          "Gregor J.",
+          "Blattner F.R."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9746557"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.66.10.4611-4623.1998"
+          }
+        ],
+        "title": "DNA sequencing and analysis of the low-Ca2+-response plasmid pCD1 of Yersinia pestis KIM5.",
+        "publicationDate": "1998",
+        "journal": "Infect. Immun.",
+        "firstPage": "4611",
+        "lastPage": "4623",
+        "volume": "66"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "KIM5 / Biovar Mediaevalis",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "9748454",
+        "citationType": "journal article",
+        "authors": [
+          "Hu P.",
+          "Elliott J.",
+          "McCready P.",
+          "Skowronski E.",
+          "Garnes J.",
+          "Kobayashi A.",
+          "Brubaker R.R.",
+          "Garcia E."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9748454"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.180.19.5192-5202.1998"
+          }
+        ],
+        "title": "Structural organization of virulence-associated plasmids of Yersinia pestis.",
+        "publicationDate": "1998",
+        "journal": "J. Bacteriol.",
+        "firstPage": "5192",
+        "lastPage": "5202",
+        "volume": "180"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "KIM5 / Biovar Mediaevalis",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "CI-C9I2E7JEC6CD2",
+        "citationType": "submission",
+        "authors": [
+          "Balykova A.",
+          "Alhova Z.",
+          "Eroshenko G.",
+          "Kukleva L.",
+          "Chervyakova N.",
+          "Kyturev V."
+        ],
+        "publicationDate": "FEB-2020",
+        "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "31",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "CI-7CPIAFTR207RR",
+        "citationType": "submission",
+        "authors": [
+          "Eroshenko G.",
+          "Alhova Z.A.",
+          "Balykova A.",
+          "Kukleva L.",
+          "Chervyakova N.",
+          "Krasnov Y.",
+          "Kyturev V."
+        ],
+        "publicationDate": "FEB-2020",
+        "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "578",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "20430892",
+        "citationType": "journal article",
+        "authors": [
+          "Mittal R.",
+          "Peak-Chew S.Y.",
+          "Sade R.S.",
+          "Vallis Y.",
+          "McMahon H.T."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "20430892"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1074/jbc.m110.126581"
+          }
+        ],
+        "title": "The acetyltransferase activity of the bacterial toxin YopJ of Yersinia is activated by eukaryotic host cell inositol hexakisphosphate.",
+        "publicationDate": "2010",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "19927",
+        "lastPage": "19934",
+        "volume": "285"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "COFACTOR",
+        "ACTIVE SITE",
+        "MUTAGENESIS OF CYS-172"
+      ],
+      "referenceComments": [
+        {
+          "value": "KIM5 / Biovar Mediaevalis",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "22563435",
+        "citationType": "journal article",
+        "authors": [
+          "Zheng Y.",
+          "Lilo S.",
+          "Mena P.",
+          "Bliska J.B."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "22563435"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1371/journal.pone.0036019"
+          }
+        ],
+        "title": "YopJ-induced caspase-1 activation in Yersinia-infected macrophages: independent of apoptosis, linked to necrosis, dispensable for innate host defense.",
+        "publicationDate": "2012",
+        "journal": "PLoS ONE",
+        "firstPage": "e36019",
+        "lastPage": "e36019",
+        "volume": "7"
+      },
+      "referencePositions": [
+        "FUNCTION"
+      ],
+      "referenceComments": [
+        {
+          "value": "KIM5 / Biovar Mediaevalis",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 7,
+      "citation": {
+        "id": "22802624",
+        "citationType": "journal article",
+        "authors": [
+          "Paquette N.",
+          "Conlon J.",
+          "Sweet C.",
+          "Rus F.",
+          "Wilson L.",
+          "Pereira A.",
+          "Rosadini C.V.",
+          "Goutagny N.",
+          "Weber A.N.",
+          "Lane W.S.",
+          "Shaffer S.A.",
+          "Maniatis S.",
+          "Fitzgerald K.A.",
+          "Stuart L.",
+          "Silverman N."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "22802624"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1073/pnas.1008203109"
+          }
+        ],
+        "title": "Serine/threonine acetylation of TGFbeta-activated kinase (TAK1) by Yersinia pestis YopJ inhibits innate immune signaling.",
+        "publicationDate": "2012",
+        "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+        "firstPage": "12710",
+        "lastPage": "12715",
+        "volume": "109"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "CATALYTIC ACTIVITY",
+        "ACTIVE SITE",
+        "MUTAGENESIS OF CYS-172"
+      ],
+      "referenceComments": [
+        {
+          "value": "KIM5 / Biovar Mediaevalis",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 8,
+      "citation": {
+        "id": "26810037",
+        "citationType": "journal article",
+        "authors": [
+          "Schoberle T.J.",
+          "Chung L.K.",
+          "McPhee J.B.",
+          "Bogin B.",
+          "Bliska J.B."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "26810037"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.00843-15"
+          }
+        ],
+        "title": "Uncovering an Important Role for YopJ in the Inhibition of Caspase-1 in Activated Macrophages and Promoting Yersinia pseudotuberculosis Virulence.",
+        "publicationDate": "2016",
+        "journal": "Infect. Immun.",
+        "firstPage": "1062",
+        "lastPage": "1072",
+        "volume": "84"
+      },
+      "referencePositions": [
+        "FUNCTION"
+      ],
+      "referenceComments": [
+        {
+          "value": "KIM5 / Biovar Mediaevalis",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 9,
+      "citation": {
+        "id": "30381458",
+        "citationType": "journal article",
+        "authors": [
+          "Sarhan J.",
+          "Liu B.C.",
+          "Muendlein H.I.",
+          "Li P.",
+          "Nilson R.",
+          "Tang A.Y.",
+          "Rongvaux A.",
+          "Bunnell S.C.",
+          "Shao F.",
+          "Green D.R.",
+          "Poltorak A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "30381458"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1073/pnas.1809548115"
+          }
+        ],
+        "title": "Caspase-8 induces cleavage of gasdermin D to elicit pyroptosis during Yersinia infection.",
+        "publicationDate": "2018",
+        "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+        "firstPage": "E10888",
+        "lastPage": "E10897",
+        "volume": "115"
+      },
+      "referencePositions": [
+        "FUNCTION"
+      ]
+    },
+    {
+      "referenceNumber": 10,
+      "citation": {
+        "id": "30361383",
+        "citationType": "journal article",
+        "authors": [
+          "Orning P.",
+          "Weng D.",
+          "Starheim K.",
+          "Ratner D.",
+          "Best Z.",
+          "Lee B.",
+          "Brooks A.",
+          "Xia S.",
+          "Wu H.",
+          "Kelliher M.A.",
+          "Berger S.B.",
+          "Gough P.J.",
+          "Bertin J.",
+          "Proulx M.M.",
+          "Goguen J.D.",
+          "Kayagaki N.",
+          "Fitzgerald K.A.",
+          "Lien E."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "30361383"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1126/science.aau2818"
+          }
+        ],
+        "title": "Pathogen blockade of TAK1 triggers caspase-8-dependent cleavage of gasdermin D and cell death.",
+        "publicationDate": "2018",
+        "journal": "Science",
+        "firstPage": "1064",
+        "lastPage": "1069",
+        "volume": "362"
+      },
+      "referencePositions": [
+        "FUNCTION"
+      ],
+      "referenceComments": [
+        {
+          "value": "KIM5 / Biovar Mediaevalis",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AF053946",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAC62603.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF074612",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAC69766.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "JAAIKW010000129",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "NEX98940.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "JAAIKY010000170",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "NEY10904.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "T43620",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "T43620"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_002224250.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_004836.1"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "O68718",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "O68718",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "MEROPS",
+      "id": "C55.001",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|632.152.peg.4449",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISS:UniProtKB"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR005083",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "YopJ-like"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF011898",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PRK15371.1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF040632",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "YopJ_YopP_only"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF03421",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Acetyltransf_14"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MIGPISQINISGGLSEKETSSLISNEELKNIITQLETDISDGSWFHKNYSRMDVEVMPALVIQANNKYPEMNLNLVTSPLDLSIEIKNVIENGVRSSRFIINMGEGGIHFSVIDYKHINGKTSLILFEPANFNSMGPAMLAIRTKTAIERYQLPDCHFSMVEMDIQRSSSECGIFSLALAKKLYIERDSLLKIHEDNIKGILSDGENPLPHDKLDPYLPVTFYKHTQGKKRLNEYLNTNPQGVGTVVNKKNETIVNRFDNNKSIVDGKELSVSVHKKRIAEYKTLLKV",
+    "length": 288,
+    "molWeight": 32453,
+    "crc64": "5A3AFB9F10CA8B78",
+    "md5": "4C5DAF09E01CA91181EC40AC4A417462"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "CATALYTIC ACTIVITY": 2,
+      "COFACTOR": 1,
+      "ACTIVITY REGULATION": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Active site": 3,
+      "Binding site": 7,
+      "Mutagenesis": 1
+    },
+    "uniParcId": "UPI00000AF61B"
+  }
+}

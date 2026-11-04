@@ -1,0 +1,681 @@
+{
+  "entryType": "UniProtKB unreviewed (TrEMBL)",
+  "primaryAccession": "Q84FI6",
+  "uniProtkbId": "Q84FI6_BACCE",
+  "entryAudit": {
+    "firstPublicDate": "2003-06-01",
+    "lastAnnotationUpdateDate": "2026-09-02",
+    "lastSequenceUpdateDate": "2003-06-01",
+    "entryVersion": 57,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 3.0,
+  "organism": {
+    "scientificName": "Bacillus cereus",
+    "taxonId": 1396,
+    "evidences": [
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "EMBL",
+        "id": "AAO40751.1"
+      }
+    ],
+    "lineage": [
+      "Bacteria",
+      "Bacillati",
+      "Bacillota",
+      "Bacilli",
+      "Caryophanales",
+      "Bacillaceae",
+      "Bacillus",
+      "Bacillus cereus group"
+    ]
+  },
+  "proteinExistence": "3: Inferred from homology",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "ARBA",
+            "id": "ARBA00018391"
+          }
+        ],
+        "value": "Phospholipase C"
+      },
+      "ecNumbers": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "ARBA",
+              "id": "ARBA00012018"
+            }
+          ],
+          "value": "3.1.4.3"
+        }
+      ]
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "ARBA",
+              "id": "ARBA00081890"
+            }
+          ],
+          "value": "Cereolysin A"
+        }
+      },
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "ARBA",
+              "id": "ARBA00031285"
+            }
+          ],
+          "value": "Phosphatidylcholine cholinephosphohydrolase"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "AAO40751.1"
+          }
+        ],
+        "value": "pc-plc"
+      }
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "ARBA",
+              "id": "ARBA00055871"
+            }
+          ],
+          "value": "Required, with sphingomyelinase, to effect target cell lysis (hemolysis)"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "a 1,2-diacyl-sn-glycero-3-phosphocholine + H2O = phosphocholine + a 1,2-diacyl-sn-glycerol + H(+)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:10604"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15377"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:17815"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:57643"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:295975"
+          }
+        ],
+        "ecNumber": "3.1.4.3",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "ARBA",
+            "id": "ARBA00047492"
+          }
+        ]
+      }
+    },
+    {
+      "commentType": "COFACTOR",
+      "cofactors": [
+        {
+          "name": "Zn(2+)",
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "ARBA",
+              "id": "ARBA00001947"
+            }
+          ],
+          "cofactorCrossReference": {
+            "database": "ChEBI",
+            "id": "CHEBI:29105"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "ARBA",
+              "id": "ARBA00011245"
+            }
+          ],
+          "value": "Monomer"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "PROSITE-ProRule",
+              "id": "PRU00678"
+            }
+          ],
+          "value": "Belongs to the bacterial zinc-metallophospholipase C family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 24,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "SignalP"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 25,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 283,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Phospholipase C",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "SignalP"
+        }
+      ],
+      "featureId": "PRO_5004298558"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 36,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 283,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Zn-dependent PLC",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000259",
+          "source": "PROSITE",
+          "id": "PS51346"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022852"
+        }
+      ],
+      "id": "KW-0204",
+      "category": "Biological process",
+      "name": "Cytolysis"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022735"
+        }
+      ],
+      "id": "KW-0354",
+      "category": "Biological process",
+      "name": "Hemolysis"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022801"
+        }
+      ],
+      "id": "KW-0378",
+      "category": "Molecular function",
+      "name": "Hydrolase"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022723"
+        }
+      ],
+      "id": "KW-0479",
+      "category": "Ligand",
+      "name": "Metal-binding"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022729"
+        },
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "SignalP"
+        }
+      ],
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022833"
+        }
+      ],
+      "id": "KW-0862",
+      "category": "Ligand",
+      "name": "Zinc"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00023145"
+        }
+      ],
+      "id": "KW-0865",
+      "category": "PTM",
+      "name": "Zymogen"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "14573681",
+        "citationType": "journal article",
+        "authors": [
+          "Pomerantsev A.P.",
+          "Kalnin K.V.",
+          "Osorio M.",
+          "Leppla S.H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "14573681"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/IAI.71.11.6591-6606.2003"
+          }
+        ],
+        "title": "Phosphatidylcholine-specific phospholipase C and sphingomyelinase activities in bacteria of the Bacillus cereus group.",
+        "publicationDate": "2003",
+        "journal": "Infect. Immun.",
+        "firstPage": "6591",
+        "lastPage": "6606",
+        "volume": "71"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAO40751.1"
+            }
+          ],
+          "value": "569",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AAO40751.1"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AY195600",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAO40751.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q84FI6",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "Q84FI6",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0034480",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:phosphatidylcholine phospholipase C activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-EC"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0008270",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:zinc ion binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0001897",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:symbiont-mediated cytolysis of host cell"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "TAS:SigSci"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000304",
+          "source": "PubMed",
+          "id": "23748204"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd11009",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Zn_dep_PLPC"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "1.10.575.10:FF:000001",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Phospholipase C"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.10.575.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "P1 Nuclease"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR008947",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PLipase_C/P1_nuclease_dom_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR029002",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PLPC/GPLD1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR001531",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Zn_PLipaseC"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00882",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Zn_dep_PLPC"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR00479",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PRPHPHLPASEC"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00770",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Zn_dep_PLPC"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF48537",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Phospholipase C/P1 nuclease"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS00384",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PROKAR_ZN_DEPEND_PLPC_1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51346",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PROKAR_ZN_DEPEND_PLPC_2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MKKKVLALAAAITLVAPLQNVAFAHENDGGSKIKIVHRWSAEDKHKEGVNSHLWIVNRAIDIMSRNKTLVKQDRVALLNEWRTELENGIYAADYENPYYDNSTFASHFYDPDNGKTYIPYAKQAKETGAKYFKLAGESYKNKDMKQAFFYLGLSLHYLGDVNQPMHAANFTNLSYPQGFHSKYENFVDTIKDNYKVTDGNGYWNWKGTNPEDWIHGAAVVAKQDYAGIVNDNTKDWFVRAAVSQEYADKWRAEVTPMTGKRLMDAQRVTAGYIQLWFDTYGDR",
+    "length": 283,
+    "molWeight": 32450,
+    "crc64": "28978F200D5B9FC8",
+    "md5": "4C40B96AA9B103F6784310B8701B965A"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "CATALYTIC ACTIVITY": 1,
+      "COFACTOR": 1,
+      "SUBUNIT": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1,
+      "Domain": 1
+    },
+    "uniParcId": "UPI00000062EC"
+  }
+}

@@ -1,0 +1,544 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "P20148",
+  "uniProtkbId": "OMPB2_NEIGO",
+  "entryAudit": {
+    "firstPublicDate": "1991-02-01",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "1991-02-01",
+    "entryVersion": 105,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 3.0,
+  "organism": {
+    "scientificName": "Neisseria gonorrhoeae",
+    "taxonId": 485,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Betaproteobacteria",
+      "Neisseriales",
+      "Neisseriaceae",
+      "Neisseria"
+    ]
+  },
+  "proteinExistence": "3: Inferred from homology",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Major outer membrane protein P.IB"
+      },
+      "shortNames": [
+        {
+          "value": "PIB"
+        },
+        {
+          "value": "Protein IB"
+        }
+      ]
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "Porin"
+        }
+      }
+    ],
+    "flag": "Precursor"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "porB"
+      }
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "value": "Serves as a slightly cation selective porin. Major antigen on the gonococcal cell surface and it may have pathogenic properties in addition to its porin activity"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "value": "Homotrimer"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "value": "Cell outer membrane",
+            "id": "SL-0040"
+          },
+          "topology": {
+            "value": "Multi-pass membrane protein",
+            "id": "SL-9909"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the Gram-negative porin family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 19,
+          "modifier": "EXACT"
+        }
+      },
+      "description": ""
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 20,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 348,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Major outer membrane protein P.IB",
+      "featureId": "PRO_0000025278"
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0998",
+      "category": "Cellular component",
+      "name": "Cell outer membrane"
+    },
+    {
+      "id": "KW-0406",
+      "category": "Biological process",
+      "name": "Ion transport"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-0626",
+      "category": "Molecular function",
+      "name": "Porin"
+    },
+    {
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    },
+    {
+      "id": "KW-0812",
+      "category": "Domain",
+      "name": "Transmembrane"
+    },
+    {
+      "id": "KW-1134",
+      "category": "Domain",
+      "name": "Transmembrane beta strand"
+    },
+    {
+      "id": "KW-0813",
+      "category": "Biological process",
+      "name": "Transport"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "2825179",
+        "citationType": "journal article",
+        "authors": [
+          "Gotschlich E.C.",
+          "Seiff M.E.",
+          "Blake M.S.",
+          "Koomey M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "2825179"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1073/pnas.84.22.8135"
+          }
+        ],
+        "title": "Porin protein of Neisseria gonorrhoeae: cloning and gene structure.",
+        "publicationDate": "1987",
+        "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+        "firstPage": "8135",
+        "lastPage": "8139",
+        "volume": "84"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "R10",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "J03017",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA25500.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "A39920",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "A39920"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "P20148",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "P20148",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AMYQNFD",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009279",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cell outer membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0015288",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:porin activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0034220",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:monoatomic ion transmembrane transport"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd00342",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "gram_neg_porins"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "2.40.160.10:FF:000023",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Outer membrane protein II"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.40.160.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Porin"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR050298",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Gram-neg_bact_OMP"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR033900",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Gram_neg_porin_domain"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR023614",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Porin_dom_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR001702",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Porin_Gram-ve"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR013793",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Porin_Gram-ve_CS"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR002299",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Porin_Neis"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF040479",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "porin_porB_Neis"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR34501:SF9",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "MAJOR OUTER MEMBRANE PROTEIN P.IA"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR34501",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PROTEIN YDDL-RELATED"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00267",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Porin_1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR00182",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ECOLNEIPORIN"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR00184",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "NEISSPPORIN"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF56935",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Porins"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS00576",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "GRAM_NEG_PORIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MKKSLIALTLAALPVAAMADVTLYGAIKAGVQTYRSVEHTDGKVSKVETGSEIADFGSKIGFKGQEDLGNGLKAVWQLEQGASVAGTNTGWGNKQSFVGLKGGFGTIRAGSLNSPLKNTGANVNAWESGKFTGNVLEISGMAQREHRYLSVRYDSPEFAGFSGSVQYAPKDNSGSNGESYHVGLNYQNSGFFAQYAGLFQRYGEGTKKIEYDDQTYSIPSLFVEKLQVHRLVGGYDNNALYVSVAAQQQDAKLYGAMSGNSHNSQTEVAATAAYRFGNVTPRVSYAHGFKGTVDSANHDNTYDQVVVGAEYDFSKRTSALVSAGWLQGGKGADKIVSTASAVVLRHKF",
+    "length": 348,
+    "molWeight": 37173,
+    "crc64": "4F8473BC713704B1",
+    "md5": "1FBA3E9A389B84D287C4B782CA96FD4D"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1
+    },
+    "uniParcId": "UPI0000130CD5"
+  }
+}

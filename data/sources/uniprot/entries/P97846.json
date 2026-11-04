@@ -1,0 +1,2791 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "P97846",
+  "uniProtkbId": "CNTP1_RAT",
+  "entryAudit": {
+    "firstPublicDate": "2001-12-05",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "1997-05-01",
+    "entryVersion": 193,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 5.0,
+  "organism": {
+    "scientificName": "Rattus norvegicus",
+    "commonName": "Rat",
+    "taxonId": 10116,
+    "lineage": [
+      "Eukaryota",
+      "Metazoa",
+      "Chordata",
+      "Craniata",
+      "Vertebrata",
+      "Euteleostomi",
+      "Mammalia",
+      "Eutheria",
+      "Euarchontoglires",
+      "Glires",
+      "Rodentia",
+      "Myomorpha",
+      "Muroidea",
+      "Muridae",
+      "Murinae",
+      "Rattus"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Contactin-associated protein 1"
+      },
+      "shortNames": [
+        {
+          "value": "Caspr"
+        },
+        {
+          "value": "Caspr1"
+        }
+      ]
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "Neurexin IV"
+        }
+      },
+      {
+        "fullName": {
+          "value": "Neurexin-4"
+        }
+      },
+      {
+        "fullName": {
+          "value": "Paranodin"
+        }
+      },
+      {
+        "fullName": {
+          "value": "p190"
+        }
+      }
+    ],
+    "flag": "Precursor"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "Cntnap1"
+      },
+      "synonyms": [
+        {
+          "value": "Caspr"
+        },
+        {
+          "value": "Nrxn4"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "O54991"
+            }
+          ],
+          "value": "Required, with CNTNAP2, for radial and longitudinal organization of myelinated axons. Plays a role in the formation of functional distinct domains critical for saltatory conduction of nerve impulses in myelinated nerve fibers. Demarcates the paranodal region of the axo-glial junction. In association with contactin involved in the signaling between axons and myelinating glial cells"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "9118959"
+            }
+          ],
+          "value": "Interacts with CNTN1/contactin in cis form"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000305"
+              }
+            ],
+            "value": "Membrane",
+            "id": "SL-0162"
+          },
+          "topology": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000305"
+              }
+            ],
+            "value": "Single-pass type I membrane protein",
+            "id": "SL-9905"
+          }
+        },
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "9396755"
+              }
+            ],
+            "value": "Cell junction, paranodal septate junction",
+            "id": "SL-0192"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11512672"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "9396755"
+            }
+          ],
+          "value": "Predominantly expressed in brain. In myelinated nerve fibers of the CNS predominantly found in paranodal axoglial junctions. In unmyelinated nerve fibers of the CNS diffusely distributed along the entire surface. Weak expression is detected in ovary, pancreas, colon, lung, heart, intestine and testis"
+        }
+      ],
+      "commentType": "TISSUE SPECIFICITY"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "9396755"
+            }
+          ],
+          "value": "Detected on postnatal day 7 in cerebellum. Follows a caudorostral progression according to the myelination process. Appears to redistribute from the internode to the paranodal region during myelin compaction and maturation (PubMed:9396755). Expression reaches maximal levels between days 14 and 18 and remains at the same levels until adulthood"
+        }
+      ],
+      "commentType": "DEVELOPMENTAL STAGE"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the neurexin family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 20,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 21,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1381,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Contactin-associated protein 1",
+      "featureId": "PRO_0000019505"
+    },
+    {
+      "type": "Topological domain",
+      "location": {
+        "start": {
+          "value": 21,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1284,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Extracellular",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 1285,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1305,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Topological domain",
+      "location": {
+        "start": {
+          "value": 1306,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1381,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Cytoplasmic",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 26,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 169,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "F5/8 type C",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00081"
+        }
+      ]
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 204,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 356,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Laminin G-like 1",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00122"
+        }
+      ]
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 390,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 539,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Laminin G-like 2",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00122"
+        }
+      ]
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 544,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 576,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "EGF-like 1",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00076"
+        }
+      ]
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 577,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 796,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Fibrinogen C-terminal",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00739"
+        }
+      ]
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 814,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 958,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Laminin G-like 3",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00122"
+        }
+      ]
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 962,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 996,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "EGF-like 2",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00076"
+        }
+      ]
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 1089,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1251,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Laminin G-like 4",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00122"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 1317,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1381,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Motif",
+      "location": {
+        "start": {
+          "value": 1329,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1366,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "SH3-binding",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 1319,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1329,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Basic and acidic residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 1334,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1363,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Pro residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Modified residue",
+      "location": {
+        "start": {
+          "value": 1380,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1380,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Phosphoserine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "O54991"
+        }
+      ]
+    },
+    {
+      "type": "Glycosylation",
+      "location": {
+        "start": {
+          "value": 121,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 121,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-linked (GlcNAc...) asparagine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ],
+      "featureId": ""
+    },
+    {
+      "type": "Glycosylation",
+      "location": {
+        "start": {
+          "value": 129,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 129,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-linked (GlcNAc...) asparagine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ],
+      "featureId": ""
+    },
+    {
+      "type": "Glycosylation",
+      "location": {
+        "start": {
+          "value": 277,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 277,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-linked (GlcNAc...) asparagine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PubMed",
+          "id": "24090084"
+        }
+      ],
+      "featureId": ""
+    },
+    {
+      "type": "Glycosylation",
+      "location": {
+        "start": {
+          "value": 421,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 421,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-linked (GlcNAc...) asparagine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ],
+      "featureId": ""
+    },
+    {
+      "type": "Glycosylation",
+      "location": {
+        "start": {
+          "value": 500,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 500,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-linked (GlcNAc...) asparagine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PubMed",
+          "id": "24090084"
+        }
+      ],
+      "featureId": ""
+    },
+    {
+      "type": "Glycosylation",
+      "location": {
+        "start": {
+          "value": 519,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 519,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-linked (GlcNAc...) asparagine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ],
+      "featureId": ""
+    },
+    {
+      "type": "Glycosylation",
+      "location": {
+        "start": {
+          "value": 598,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 598,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-linked (GlcNAc...) asparagine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PubMed",
+          "id": "24090084"
+        }
+      ],
+      "featureId": ""
+    },
+    {
+      "type": "Glycosylation",
+      "location": {
+        "start": {
+          "value": 654,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 654,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-linked (GlcNAc...) asparagine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ],
+      "featureId": ""
+    },
+    {
+      "type": "Glycosylation",
+      "location": {
+        "start": {
+          "value": 665,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 665,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-linked (GlcNAc...) asparagine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ],
+      "featureId": ""
+    },
+    {
+      "type": "Glycosylation",
+      "location": {
+        "start": {
+          "value": 764,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 764,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-linked (GlcNAc...) asparagine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ],
+      "featureId": ""
+    },
+    {
+      "type": "Glycosylation",
+      "location": {
+        "start": {
+          "value": 805,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 805,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-linked (GlcNAc...) asparagine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ],
+      "featureId": ""
+    },
+    {
+      "type": "Glycosylation",
+      "location": {
+        "start": {
+          "value": 844,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 844,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-linked (GlcNAc...) asparagine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ],
+      "featureId": ""
+    },
+    {
+      "type": "Glycosylation",
+      "location": {
+        "start": {
+          "value": 861,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 861,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-linked (GlcNAc...) asparagine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ],
+      "featureId": ""
+    },
+    {
+      "type": "Glycosylation",
+      "location": {
+        "start": {
+          "value": 949,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 949,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-linked (GlcNAc...) asparagine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ],
+      "featureId": ""
+    },
+    {
+      "type": "Glycosylation",
+      "location": {
+        "start": {
+          "value": 957,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 957,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-linked (GlcNAc...) asparagine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ],
+      "featureId": ""
+    },
+    {
+      "type": "Glycosylation",
+      "location": {
+        "start": {
+          "value": 1079,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1079,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-linked (GlcNAc...) asparagine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ],
+      "featureId": ""
+    },
+    {
+      "type": "Glycosylation",
+      "location": {
+        "start": {
+          "value": 1148,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1148,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-linked (GlcNAc...) asparagine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ],
+      "featureId": ""
+    },
+    {
+      "type": "Disulfide bond",
+      "location": {
+        "start": {
+          "value": 26,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 169,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250"
+        }
+      ]
+    },
+    {
+      "type": "Disulfide bond",
+      "location": {
+        "start": {
+          "value": 324,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 356,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250"
+        }
+      ]
+    },
+    {
+      "type": "Disulfide bond",
+      "location": {
+        "start": {
+          "value": 507,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 539,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250"
+        }
+      ]
+    },
+    {
+      "type": "Disulfide bond",
+      "location": {
+        "start": {
+          "value": 545,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 556,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250"
+        }
+      ]
+    },
+    {
+      "type": "Disulfide bond",
+      "location": {
+        "start": {
+          "value": 550,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 565,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250"
+        }
+      ]
+    },
+    {
+      "type": "Disulfide bond",
+      "location": {
+        "start": {
+          "value": 567,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 577,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250"
+        }
+      ]
+    },
+    {
+      "type": "Disulfide bond",
+      "location": {
+        "start": {
+          "value": 931,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 958,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250"
+        }
+      ]
+    },
+    {
+      "type": "Disulfide bond",
+      "location": {
+        "start": {
+          "value": 962,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 975,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250"
+        }
+      ]
+    },
+    {
+      "type": "Disulfide bond",
+      "location": {
+        "start": {
+          "value": 969,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 984,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250"
+        }
+      ]
+    },
+    {
+      "type": "Disulfide bond",
+      "location": {
+        "start": {
+          "value": 986,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 996,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250"
+        }
+      ]
+    },
+    {
+      "type": "Disulfide bond",
+      "location": {
+        "start": {
+          "value": 1210,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1251,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0130",
+      "category": "Biological process",
+      "name": "Cell adhesion"
+    },
+    {
+      "id": "KW-0965",
+      "category": "Cellular component",
+      "name": "Cell junction"
+    },
+    {
+      "id": "KW-1015",
+      "category": "PTM",
+      "name": "Disulfide bond"
+    },
+    {
+      "id": "KW-0245",
+      "category": "Domain",
+      "name": "EGF-like domain"
+    },
+    {
+      "id": "KW-0325",
+      "category": "PTM",
+      "name": "Glycoprotein"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-0597",
+      "category": "PTM",
+      "name": "Phosphoprotein"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0677",
+      "category": "Domain",
+      "name": "Repeat"
+    },
+    {
+      "id": "KW-0729",
+      "category": "Domain",
+      "name": "SH3-binding"
+    },
+    {
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    },
+    {
+      "id": "KW-0812",
+      "category": "Domain",
+      "name": "Transmembrane"
+    },
+    {
+      "id": "KW-1133",
+      "category": "Domain",
+      "name": "Transmembrane helix"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "9118959",
+        "citationType": "journal article",
+        "authors": [
+          "Peles E.",
+          "Nativ M.",
+          "Lustig M.",
+          "Grumet M.",
+          "Schilling J.",
+          "Martinez R.",
+          "Plowman G.D.",
+          "Schlessinger J."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9118959"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1093/emboj/16.5.978"
+          }
+        ],
+        "title": "Identification of a novel contactin-associated transmembrane receptor with multiple domains implicated in protein-protein interactions.",
+        "publicationDate": "1997",
+        "journal": "EMBO J.",
+        "firstPage": "978",
+        "lastPage": "988",
+        "volume": "16"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [MRNA]",
+        "INTERACTION WITH CONTACTIN"
+      ],
+      "referenceComments": [
+        {
+          "value": "Pituitary tumor",
+          "type": "TISSUE"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "9292722",
+        "citationType": "journal article",
+        "authors": [
+          "Menegoz M.",
+          "Gaspar P.",
+          "Le Bert M.",
+          "Galvez T.",
+          "Burgaya F.",
+          "Palfrey C.",
+          "Ezan P.",
+          "Arnos F.",
+          "Girault J.-A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9292722"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/s0896-6273(00)80942-3"
+          }
+        ],
+        "title": "Paranodin, a glycoprotein of neuronal paranodal membranes.",
+        "publicationDate": "1997",
+        "journal": "Neuron",
+        "firstPage": "319",
+        "lastPage": "331",
+        "volume": "19"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [MRNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "Sprague-Dawley",
+          "type": "STRAIN"
+        },
+        {
+          "value": "Brain",
+          "type": "TISSUE"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "9396755",
+        "citationType": "journal article",
+        "authors": [
+          "Einheber S.",
+          "Zanazzi G.",
+          "Ching W.",
+          "Scherer S.",
+          "Milner T.A.",
+          "Peles E.",
+          "Salzer J.L."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9396755"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1083/jcb.139.6.1495"
+          }
+        ],
+        "title": "The axonal membrane protein Caspr, a homologue of neurexin IV, is a component of the septate-like paranodal junctions that assemble during myelination.",
+        "publicationDate": "1997",
+        "journal": "J. Cell Biol.",
+        "firstPage": "1495",
+        "lastPage": "1506",
+        "volume": "139"
+      },
+      "referencePositions": [
+        "CHARACTERIZATION",
+        "TISSUE SPECIFICITY",
+        "SUBCELLULAR LOCATION",
+        "DEVELOPMENTAL STAGE"
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "11512672",
+        "citationType": "journal article",
+        "authors": [
+          "Arroyo E.J.",
+          "Xu T.",
+          "Poliak S.",
+          "Watson M.",
+          "Peles E.",
+          "Scherer S.S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11512672"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1007/s004410100403"
+          }
+        ],
+        "title": "Internodal specializations of myelinated axons in the central nervous system.",
+        "publicationDate": "2001",
+        "journal": "Cell Tissue Res.",
+        "firstPage": "53",
+        "lastPage": "66",
+        "volume": "305"
+      },
+      "referencePositions": [
+        "TISSUE SPECIFICITY"
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "22673903",
+        "citationType": "journal article",
+        "authors": [
+          "Lundby A.",
+          "Secher A.",
+          "Lage K.",
+          "Nordsborg N.B.",
+          "Dmytriyev A.",
+          "Lundby C.",
+          "Olsen J.V."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "22673903"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/ncomms1871"
+          }
+        ],
+        "title": "Quantitative maps of protein phosphorylation sites across 14 different rat organs and tissues.",
+        "publicationDate": "2012",
+        "journal": "Nat. Commun.",
+        "firstPage": "876",
+        "lastPage": "876",
+        "volume": "3"
+      },
+      "referencePositions": [
+        "IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS]"
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "24090084",
+        "citationType": "journal article",
+        "authors": [
+          "Parker B.L.",
+          "Thaysen-Andersen M.",
+          "Solis N.",
+          "Scott N.E.",
+          "Larsen M.R.",
+          "Graham M.E.",
+          "Packer N.H.",
+          "Cordwell S.J."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "24090084"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1021/pr400783j"
+          }
+        ],
+        "title": "Site-specific glycan-peptide analysis for determination of N-glycoproteome heterogeneity.",
+        "publicationDate": "2013",
+        "journal": "J. Proteome Res.",
+        "firstPage": "5791",
+        "lastPage": "5800",
+        "volume": "12"
+      },
+      "referencePositions": [
+        "GLYCOSYLATION [LARGE SCALE ANALYSIS] AT ASN-277; ASN-500 AND ASN-598",
+        "IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS]"
+      ],
+      "referenceComments": [
+        {
+          "value": "Brain",
+          "type": "TISSUE"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "U87224",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAB48482.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF000114",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAC53342.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "T31083",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "T31083"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_114450.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NM_032061.2"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "P97846",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "P97846",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BioGRID",
+      "id": "249874",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "4"
+        }
+      ]
+    },
+    {
+      "database": "FunCoup",
+      "id": "P97846",
+      "properties": [
+        {
+          "key": "Number of interactors",
+          "value": "1979"
+        }
+      ]
+    },
+    {
+      "database": "IntAct",
+      "id": "P97846",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "10116.ENSRNOP00000027505",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GlyCosmos",
+      "id": "P97846",
+      "properties": [
+        {
+          "key": "glycosylation",
+          "value": "18 sites, 3 glycans"
+        }
+      ]
+    },
+    {
+      "database": "GlyGen",
+      "id": "P97846",
+      "properties": [
+        {
+          "key": "glycosylation",
+          "value": "19 sites, 3 N-linked glycans (4 sites), 1 O-linked glycan (1 site)"
+        }
+      ]
+    },
+    {
+      "database": "iPTMnet",
+      "id": "P97846",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PhosphoSitePlus",
+      "id": "P97846",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "jPOST",
+      "id": "P97846",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PaxDb",
+      "id": "10116-ENSRNOP00000027505",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "ABCD",
+      "id": "P97846",
+      "properties": [
+        {
+          "key": "antibodies",
+          "value": "1 sequenced antibody"
+        }
+      ]
+    },
+    {
+      "database": "Ensembl",
+      "id": "ENSRNOT00055056635",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ENSRNOP00055046741"
+        },
+        {
+          "key": "GeneId",
+          "value": "ENSRNOG00055032755"
+        }
+      ]
+    },
+    {
+      "database": "Ensembl",
+      "id": "ENSRNOT00060023045",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ENSRNOP00060018262"
+        },
+        {
+          "key": "GeneId",
+          "value": "ENSRNOG00060013504"
+        }
+      ]
+    },
+    {
+      "database": "Ensembl",
+      "id": "ENSRNOT00065052846",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ENSRNOP00065043413"
+        },
+        {
+          "key": "GeneId",
+          "value": "ENSRNOG00065030662"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "84008",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "rno:84008",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "UCSC",
+      "id": "RGD:70902",
+      "properties": [
+        {
+          "key": "OrganismName",
+          "value": "rat"
+        }
+      ]
+    },
+    {
+      "database": "AGR",
+      "id": "RGD:70902",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "CTD",
+      "id": "8506",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "RGD",
+      "id": "70902",
+      "properties": [
+        {
+          "key": "GeneName",
+          "value": "Cntnap1"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "KOG3516",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Eukaryota"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_003504_1_0_1",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "InParanoid",
+      "id": "P97846",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AAVQYWN",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OrthoDB",
+      "id": "26719at2759",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PhylomeDB",
+      "id": "P97846",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PRO",
+      "id": "PR:P97846",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000002494",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome 10"
+        }
+      ]
+    },
+    {
+      "database": "Bgee",
+      "id": "ENSRNOG00000020277",
+      "properties": [
+        {
+          "key": "ExpressionPatterns",
+          "value": "Expressed in cerebellum and 20 other cell types or tissues"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0030424",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:axon"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:RGD"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "9292722"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0098978",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:glutamatergic synapse"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISO:RGD"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0033010",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:paranodal junction"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0033270",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:paranode region of axon"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:BHF-UCL"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "10624965"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005886",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:plasma membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0048786",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:presynaptic active zone"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:SynGO"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "19187093"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0045202",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:synapse"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0017124",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:SH3 domain binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:RGD"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "9118959"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0007409",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:axonogenesis"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISO:RGD"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0022010",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:central nervous system myelination"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISS:UniProtKB"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0007010",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:cytoskeleton organization"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISS:BHF-UCL"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0007005",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:mitochondrion organization"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISO:RGD"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0042552",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:myelination"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISO:RGD"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0022011",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:myelination in peripheral nervous system"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISS:UniProtKB"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0007399",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:nervous system development"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0098529",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:neuromuscular junction development, skeletal muscle fiber"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISO:RGD"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0050905",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:neuromuscular process"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISO:RGD"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0050885",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:neuromuscular process controlling balance"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISS:BHF-UCL"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0050884",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:neuromuscular process controlling posture"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISS:BHF-UCL"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0031175",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:neuron projection development"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISO:RGD"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0048812",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:neuron projection morphogenesis"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISS:BHF-UCL"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0019227",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:neuronal action potential propagation"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISS:BHF-UCL"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0030913",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:paranodal junction assembly"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISS:BHF-UCL"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:1990227",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:paranodal junction maintenance"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISO:RGD"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0097106",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:postsynaptic density organization"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISO:RGD"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0071205",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:protein localization to juxtaparanode region of axon"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISS:UniProtKB"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0002175",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:protein localization to paranode region of axon"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISS:BHF-UCL"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0090128",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:regulation of synapse maturation"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISO:RGD"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0007165",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:signal transduction"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd00054",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "EGF_CA"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd00057",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FA58C"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd00110",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LamG"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "4"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "2.60.120.200:FF:000082",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Contactin associated protein 1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "2.60.120.200:FF:000099",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Contactin associated protein 1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "2.60.120.1000:FF:000005",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Contactin associated protein-like 2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "2.60.120.260:FF:000016",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Contactin-associated protein-like 4 isoform 1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "2.60.120.200:FF:000026",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "contactin-associated protein-like 4 isoform X1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "2.10.25.10:FF:000015",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "neurexin-1 isoform X1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.60.120.1000",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.60.120.200",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "4"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.60.120.260",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Galactose-binding domain-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.10.25.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Laminin"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR013320",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ConA-like_dom_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR000742",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "EGF"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR000421",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FA58C"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036056",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Fibrinogen-like_C"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR002181",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Fibrinogen_a/b/g_C_dom"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR008979",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Galactose-bd-like_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR001791",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Laminin_G"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR003585",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Neurexin-like"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR050372",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Neurexin-related_CASP"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR15036:SF43",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CONTACTIN-ASSOCIATED PROTEIN 1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR15036",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PIKACHURIN-LIKE PROTEIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00754",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "F5_F8_type_C"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF02210",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Laminin_G_2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "4"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00294",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "4.1m"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00231",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FA58C"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00282",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LamG"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "4"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF49899",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Concanavalin A-like lectins/glucanases"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "4"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF57196",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "EGF/Laminin"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF56496",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Fibrinogen C-terminal domain-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF49785",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Galactose-binding domain-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS50026",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "EGF_3"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS01285",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FA58C_1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS01286",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FA58C_2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS50022",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FA58C_3"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51406",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FIBRINOGEN_C_2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS50025",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LAM_G_DOMAIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "4"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MMSLRLFSILLAAVVSGAQGWGYYGCNEELVGPLYARSLGASSYYGLFTTARFARLHGISGWSPRIGDPNPWLQIDLMKKHRIRAVATQGAFNSWDWVTRYMLLYGDRVDSWTPFYQQGHNATFFGNVNDSAVVRHDLHYHFTARYIRIVPLAWNPRGKIGLRLGIYGCPYTSNILYFDGDDAISYRFQRGASQSLWDVFAFSFKTEEKDGLLLHTEGSQGDYVTLELQGAHLLLHMSLGSSPIQPRPGHTTVSAGGVLNDLSWHYVRVDRYGREANLTLDGYVHRFVLNGDFERLNLENEIFIGGLVGAARKNLAYRHNFRGCIENVIYNRINIAEMAVQRHSRITFEGNVAFRCLDPVPHPINFGGPHNFVQVPGFPRRGRLAVSFRFRTWDLTGLLLFSRLGDGLGHVELMLSEGQVNVSIAQTGRKKLQFAAGYRLNDGFWHEVNFVAQENHAVISIDDVEGAEVRVSYPLLIRTGTSYFFGGCPKPASRWGCHSNQTAFHGCMELLKVDGQLVNLTLVEFRKLGYFAEVLFDTCGITDRCSPNMCEHDGRCYQSWDDFICYCELTGYKGVTCHEPLYKESCEAYRLSGKYSGNYTIDPDGSGPLKPFVVYCDIRENRAWTVVRHDRLWTTRVTGSSMDRPFLGAIQYWNASWEEVSALANASQHCEQWIEFSCYNSRLLNTAGGYPYSFWIGRNEEQHFYWGGSQPGIQRCACGLDQSCIDPALHCNCDADQPQWRTDKGLLTFVDHLPVTQVVIGDTNRSSSEAQFFLRPLRCYGDRNSWNTISFRTGAALRFPPIRANHSLDVSFYFRTSAPSGVFLENMGGPFCQWRRPYVRVELNTSRDVVFAFDIGNGDENLTVHSDDFEFNDDEWHLVRAEINVKQARLRVDHRPWVLRPMPLQTYIWLEYDQPLYVGSAELKRRPFVGCLRAMRLNGVTLNLEGRANASEGTFPNCTGHCTHPRFPCFHGGRCVERYSYYTCDCDLTAFDGPYCNHDIGGFFETGTWMRYNLQSALRSAAQEFSHMLSRPVPGYEPGYIPGYDTPGYVPGYHGPGYRLPDYPRPGRPVPGYRGPVYNVTGEEVSFSFSTSSAPAVLLYVSSFVRDYMAVLIKEDGTLQLRYQLGTSPYVYQLTTRPVTDGQPHSVNITRVYRNLFIQVDYFPLTEQKFSLLVDSQLDSPKALYLGRVMETGVIDPEIQRYNTPGFSGCLSGVRFNNVAPLKTHFRTPRPMTAELAEAMRVQGELSESNCGAMPRLVSEVPPELDPWYLPPDFPYYHDDGWIAILLGFLVAFLLLGLVGMLVLFYLQNHRYKGSYHTNEPKATHDSHPGGKAPLPPSGPAQAPAPTPAPTQVPTPAPAPASGPGPRDQNLPQILEESRSE",
+    "length": 1381,
+    "molWeight": 155868,
+    "crc64": "BC1CE83DB57C1BA4",
+    "md5": "68B18C216B4237D5C05A9B04DFD75497"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "TISSUE SPECIFICITY": 1,
+      "DEVELOPMENTAL STAGE": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1,
+      "Topological domain": 2,
+      "Transmembrane": 1,
+      "Domain": 8,
+      "Region": 1,
+      "Motif": 1,
+      "Compositional bias": 2,
+      "Modified residue": 1,
+      "Glycosylation": 17,
+      "Disulfide bond": 11
+    },
+    "uniParcId": "UPI00001285F7"
+  }
+}

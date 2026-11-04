@@ -1,0 +1,1873 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "Q56061",
+  "uniProtkbId": "SIFA_SALTY",
+  "entryAudit": {
+    "firstPublicDate": "1997-11-01",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "1997-11-01",
+    "entryVersion": 117,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 5.0,
+  "organism": {
+    "scientificName": "Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)",
+    "taxonId": 99287,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Gammaproteobacteria",
+      "Enterobacterales",
+      "Enterobacteriaceae",
+      "Salmonella"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Secreted effector protein SifA"
+      }
+    }
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "sifA"
+      },
+      "orderedLocusNames": [
+        {
+          "value": "STM1224"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "12010459"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "15905402"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "18996344"
+            }
+          ],
+          "value": "Effector proteins function to alter host cell physiology and promote bacterial survival in host tissues. This protein is required for endosomal tubulation and formation of Salmonella-induced filaments (Sifs), which are filamentous structures containing lysosomal membrane glycoproteins within epithelial cells. Sif formation is concomitant with intracellular bacterial replication"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "15905402"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "18996344"
+            }
+          ],
+          "value": "Interacts with host PLEKHM2. Interacts with SseJ; the interaction is indirect"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "INTERACTION",
+      "interactions": [
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "Q56061",
+            "intActId": "EBI-10765408"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "Q8IWE5",
+            "geneName": "PLEKHM2",
+            "intActId": "EBI-726484"
+          },
+          "numberOfExperiments": 3,
+          "organismDiffer": true
+        }
+      ]
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "note": {
+        "texts": [
+          {
+            "value": "Secreted via type III secretion system 2 (SPI-2 T3SS), and delivered into the host cytoplasm. It associates with membranes and colocalizes with microtubules along the length of Sifs in infected cells"
+          }
+        ]
+      },
+      "subcellularLocations": [
+        {
+          "location": {
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        },
+        {
+          "location": {
+            "value": "Host cytoplasm",
+            "id": "SL-0381"
+          }
+        },
+        {
+          "location": {
+            "value": "Host cell membrane",
+            "id": "SL-0375"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "12949164"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "19858298"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "21059643"
+            }
+          ],
+          "value": "Very highly expressed in host macrophages and when grown in an acidic environment; repressed by H-NS and induced by SsrB (PubMed:12949164, PubMed:19858298, PubMed:21059643). Repressed in conditions of high calcium and by osmotic stress (PubMed:12949164)"
+        }
+      ],
+      "commentType": "INDUCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "16849798"
+            }
+          ],
+          "value": "Domains throughout the protein, and not only the N-terminus, are required for secretion and translocation. Both N- and C-terminal domains are also required for formation of tubules"
+        }
+      ],
+      "commentType": "DOMAIN"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "8861213"
+            }
+          ],
+          "value": "Cells lacking this gene do not produce Sifs in epithelial cells and show attenuated virulence in mice"
+        }
+      ],
+      "commentType": "DISRUPTION PHENOTYPE"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the Sif family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 336,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Secreted effector protein SifA",
+      "featureId": "PRO_0000097760"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 330,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Interaction with host PLEKHM2"
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 130,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 130,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Loss of interaction with host PLEKHM2. Fails to induce host endosomal tubulation; when associated with D-131.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "18996344"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "L",
+        "alternativeSequences": [
+          "D"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 131,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 131,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Alters interaction with host PLEKHM2. Fails to induce host endosomal tubulation; when associated with D-130.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "18996344"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "M",
+        "alternativeSequences": [
+          "D"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 197,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 197,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Fails to induce host endosomal tubulation; when associated with A-201.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "18996344"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "W",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 201,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 201,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Fails to induce host endosomal tubulation; when associated with A-197.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "18996344"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "E",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 25,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 34,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3CXB"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 35,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 37,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3CXB"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 42,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 54,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3CXB"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 55,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 58,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3CXB"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 62,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 75,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3CXB"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 78,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 81,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3CXB"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 84,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 87,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3CXB"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 89,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 91,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3CXB"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 96,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 101,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3CXB"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 107,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 114,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3CXB"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 116,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 123,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3CXB"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 126,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 132,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3CXB"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 145,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 153,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3CXB"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 154,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 157,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3CXB"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 158,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 167,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3CXB"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 169,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 171,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3CXB"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 174,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 177,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3CXB"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 180,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 187,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3CXB"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 190,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 192,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3CXB"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 194,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 196,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3CXB"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 197,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 220,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3CXB"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 221,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 223,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3CXB"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 228,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 241,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3CXB"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 258,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 267,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3CXB"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 270,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 272,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3HW2"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 273,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 276,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3HW2"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 283,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 303,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3CXB"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 307,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 324,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3CXB"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0002",
+      "category": "Technical term",
+      "name": "3D-structure"
+    },
+    {
+      "id": "KW-1032",
+      "category": "Cellular component",
+      "name": "Host cell membrane"
+    },
+    {
+      "id": "KW-1035",
+      "category": "Cellular component",
+      "name": "Host cytoplasm"
+    },
+    {
+      "id": "KW-1043",
+      "category": "Cellular component",
+      "name": "Host membrane"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "8861213",
+        "citationType": "journal article",
+        "authors": [
+          "Stein M.A.",
+          "Leung K.Y.",
+          "Zwick M.",
+          "Garcia-Del Portillo F.",
+          "Finlay B.B."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8861213"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1111/j.1365-2958.1996.tb02497.x"
+          }
+        ],
+        "title": "Identification of a Salmonella virulence gene required for formation of filamentous structures containing lysosomal membrane glycoproteins within epithelial cells.",
+        "publicationDate": "1996",
+        "journal": "Mol. Microbiol.",
+        "firstPage": "151",
+        "lastPage": "164",
+        "volume": "20"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]",
+        "DISRUPTION PHENOTYPE"
+      ],
+      "referenceComments": [
+        {
+          "value": "SL1344",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "11677609",
+        "citationType": "journal article",
+        "authors": [
+          "McClelland M.",
+          "Sanderson K.E.",
+          "Spieth J.",
+          "Clifton S.W.",
+          "Latreille P.",
+          "Courtney L.",
+          "Porwollik S.",
+          "Ali J.",
+          "Dante M.",
+          "Du F.",
+          "Hou S.",
+          "Layman D.",
+          "Leonard S.",
+          "Nguyen C.",
+          "Scott K.",
+          "Holmes A.",
+          "Grewal N.",
+          "Mulvaney E.",
+          "Ryan E.",
+          "Sun H.",
+          "Florea L.",
+          "Miller W.",
+          "Stoneking T.",
+          "Nhan M.",
+          "Waterston R.",
+          "Wilson R.K."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11677609"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/35101614"
+          }
+        ],
+        "title": "Complete genome sequence of Salmonella enterica serovar Typhimurium LT2.",
+        "publicationDate": "2001",
+        "journal": "Nature",
+        "firstPage": "852",
+        "lastPage": "856",
+        "volume": "413"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "LT2 / SGSC1412 / ATCC 700720",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "10861017",
+        "citationType": "journal article",
+        "authors": [
+          "Miao E.A.",
+          "Miller S.I."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "10861017"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1073/pnas.97.13.7539"
+          }
+        ],
+        "title": "A conserved amino acid sequence directing intracellular type III secretion by Salmonella typhimurium.",
+        "publicationDate": "2000",
+        "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+        "firstPage": "7539",
+        "lastPage": "7544",
+        "volume": "97"
+      },
+      "referencePositions": [
+        "SECRETION VIA TYPE III SECRETION SYSTEM"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 14028s / SGSG 2262",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "12010459",
+        "citationType": "journal article",
+        "authors": [
+          "Brumell J.H.",
+          "Goosney D.L.",
+          "Finlay B.B."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "12010459"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1034/j.1600-0854.2002.30604.x"
+          }
+        ],
+        "title": "SifA, a type III secreted effector of Salmonella typhimurium, directs Salmonella-induced filament (Sif) formation along microtubules.",
+        "publicationDate": "2002",
+        "journal": "Traffic",
+        "firstPage": "407",
+        "lastPage": "415",
+        "volume": "3"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "SUBCELLULAR LOCATION",
+        "SECRETION VIA TYPE III SECRETION SYSTEM"
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "15905402",
+        "citationType": "journal article",
+        "authors": [
+          "Boucrot E.",
+          "Henry T.",
+          "Borg J.-P.",
+          "Gorvel J.-P.",
+          "Meresse S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15905402"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1126/science.1110225"
+          }
+        ],
+        "title": "The intracellular fate of Salmonella depends on the recruitment of kinesin.",
+        "publicationDate": "2005",
+        "journal": "Science",
+        "firstPage": "1174",
+        "lastPage": "1178",
+        "volume": "308"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "INTERACTION WITH HOST PLEKHM2"
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "16849798",
+        "citationType": "journal article",
+        "authors": [
+          "Brown N.F.",
+          "Szeto J.",
+          "Jiang X.",
+          "Coombes B.K.",
+          "Finlay B.B.",
+          "Brumell J.H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "16849798"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1099/mic.0.28995-0"
+          }
+        ],
+        "title": "Mutational analysis of Salmonella translocated effector members SifA and SopD2 reveals domains implicated in translocation, subcellular localization and function.",
+        "publicationDate": "2006",
+        "journal": "Microbiology",
+        "firstPage": "2323",
+        "lastPage": "2343",
+        "volume": "152"
+      },
+      "referencePositions": [
+        "DOMAIN"
+      ],
+      "referenceComments": [
+        {
+          "value": "SL1344",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 7,
+      "citation": {
+        "id": "12949164",
+        "citationType": "journal article",
+        "authors": [
+          "Garmendia J.",
+          "Beuzon C.R.",
+          "Ruiz-Albert J.",
+          "Holden D.W."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "12949164"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1099/mic.0.26397-0"
+          }
+        ],
+        "title": "The roles of SsrA-SsrB and OmpR-EnvZ in the regulation of genes encoding the Salmonella typhimurium SPI-2 type III secretion system.",
+        "publicationDate": "2003",
+        "journal": "Microbiology",
+        "firstPage": "2385",
+        "lastPage": "2396",
+        "volume": "149"
+      },
+      "referencePositions": [
+        "INDUCTION"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "12949164"
+            }
+          ],
+          "value": "ATCC 14028 / SGSC 2980 / CDC 6516-60 / NCTC 12023",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 8,
+      "citation": {
+        "id": "19858298",
+        "citationType": "journal article",
+        "authors": [
+          "Xu X.",
+          "Hensel M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "19858298"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.00931-09"
+          }
+        ],
+        "title": "Systematic analysis of the SsrAB virulon of Salmonella enterica.",
+        "publicationDate": "2010",
+        "journal": "Infect. Immun.",
+        "firstPage": "49",
+        "lastPage": "58",
+        "volume": "78"
+      },
+      "referencePositions": [
+        "INDUCTION"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "19858298"
+            }
+          ],
+          "value": "ATCC 14028 / SGSC 2980 / CDC 6516-60 / NCTC 12023",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 9,
+      "citation": {
+        "id": "21059643",
+        "citationType": "journal article",
+        "authors": [
+          "Walthers D.",
+          "Li Y.",
+          "Liu Y.",
+          "Anand G.",
+          "Yan J.",
+          "Kenney L.J."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "21059643"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1074/jbc.m110.164962"
+          }
+        ],
+        "title": "Salmonella enterica response regulator SsrB relieves H-NS silencing by displacing H-NS bound in polymerization mode and directly activates transcription.",
+        "publicationDate": "2011",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "1895",
+        "lastPage": "1902",
+        "volume": "286"
+      },
+      "referencePositions": [
+        "INDUCTION"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "21059643"
+            }
+          ],
+          "value": "14028s",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 10,
+      "citation": {
+        "id": "18996344",
+        "citationType": "journal article",
+        "authors": [
+          "Ohlson M.B.",
+          "Huang Z.",
+          "Alto N.M.",
+          "Blanc M.-P.",
+          "Dixon J.E.",
+          "Chai J.",
+          "Miller S.I."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "18996344"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/j.chom.2008.08.012"
+          }
+        ],
+        "title": "Structure and function of Salmonella SifA indicate that its interactions with SKIP, SseJ, and RhoA family GTPases induce endosomal tubulation.",
+        "publicationDate": "2008",
+        "journal": "Cell Host Microbe",
+        "firstPage": "434",
+        "lastPage": "446",
+        "volume": "4"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY IN COMPLEX WITH HOST PLEKHM2",
+        "FUNCTION",
+        "SUBCELLULAR LOCATION",
+        "MUTAGENESIS OF LEU-130; MET-131; TRP-197 AND GLU-201"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "U51867",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA97467.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AE006468",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAL20153.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "S71033",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "S71033"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_460194.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_003197.2"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_001520468.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_003197.2"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "3CXB",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.60 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=1-336"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "3HW2",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "3.30 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=1-336"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q56061",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "Q56061",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "DIP",
+      "id": "DIP-46411N",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "IntAct",
+      "id": "Q56061",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "99287.STM1224",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PaxDb",
+      "id": "99287-STM1224",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "1252742",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "stm:STM1224",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|99287.12.peg.1294",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_826077_0_0_6",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AFTCEVM",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PhylomeDB",
+      "id": "Q56061",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BioCyc",
+      "id": "SENT99287:STM1224-MONOMER",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EvolutionaryTrace",
+      "id": "Q56061",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000001014",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0030430",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:host cell cytoplasm"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0020002",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:host cell plasma membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0141028",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:symbiont-mediated perturbation of host microtubule cytoskeleton"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:GO_Central"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "18996344"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0141127",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:symbiont-mediated perturbation of host Rab small GTPase signal transduction"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:AgBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "18787122"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0044082",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:symbiont-mediated perturbation of host small GTPase-mediated signal transduction"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:GO_Central"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "18996344"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.30.390.70",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Salmonella typhimurium protein"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.30.2440.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Secreted effector protein SifA"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.10.1740.30",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Secreted effector protein SifA helical domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR010637",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Sif"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR044928",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SifA_C_sf"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF007045",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "sifA"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF06767",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Sif"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MPITIGNGFLKSEILTNSPRNTKEAWWKVLWEKIKDFFFSTGKAKADRCLHEMLFAERAPTRERLTEIFFELKELACASQRDRFQVHNPHENDATIILRIMDQNEENELLRITQNTDTFSCEVMGNLYFLMKDRPDILKSHPQMTAMIKRRYSEIVDYPLPSTLCLNPAGAPILSVPLDNIEGYLYTELRKGHLDGWKAQEKATYLAAKIQSGIEKTTRILHHANISESTQQNAFLETMAMCGLKQLEIPPPHTHIPIEKMVKEVLLADKTFQAFLVTDPSTSQSMLAEIVEAISDQVFHAIFRIDPQAIQKMAEEQLTTLHVRSEQQSGCLCCFL",
+    "length": 336,
+    "molWeight": 38498,
+    "crc64": "83C6185148A774B9",
+    "md5": "B1C8B7F1F7E7A61DE520A0E0771E2E38"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBUNIT": 1,
+      "INTERACTION": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "INDUCTION": 1,
+      "DOMAIN": 1,
+      "DISRUPTION PHENOTYPE": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Region": 1,
+      "Mutagenesis": 4,
+      "Helix": 13,
+      "Beta strand": 11,
+      "Turn": 4
+    },
+    "uniParcId": "UPI0000049ED6"
+  }
+}

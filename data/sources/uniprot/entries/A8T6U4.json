@@ -1,0 +1,429 @@
+{
+  "entryType": "UniProtKB unreviewed (TrEMBL)",
+  "primaryAccession": "A8T6U4",
+  "uniProtkbId": "A8T6U4_LEPIR",
+  "entryAudit": {
+    "firstPublicDate": "2008-01-15",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2008-01-15",
+    "entryVersion": 34,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 1.0,
+  "organism": {
+    "scientificName": "Leptospira interrogans serovar Grippotyphosa",
+    "taxonId": 280498,
+    "evidences": [
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "EMBL",
+        "id": "ABV55233.1"
+      }
+    ],
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Spirochaetota",
+      "Leptospiria",
+      "Leptospirales",
+      "Leptospiraceae",
+      "Leptospira"
+    ]
+  },
+  "proteinExistence": "4: Predicted",
+  "proteinDescription": {
+    "submissionNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "ABV55233.1"
+            }
+          ],
+          "value": "LenA"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "ABV55233.1"
+          }
+        ],
+        "value": "lenA"
+      }
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 28,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "SignalP"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 29,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 240,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00303"
+        },
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "SignalP"
+        }
+      ],
+      "featureId": "PRO_5049844752"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 79,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 211,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "DUF1554",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000259",
+          "source": "Pfam",
+          "id": "PF07588"
+        }
+      ]
+    },
+    {
+      "type": "Lipidation",
+      "location": {
+        "start": {
+          "value": 29,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 29,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-palmitoyl cysteine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00303"
+        }
+      ]
+    },
+    {
+      "type": "Lipidation",
+      "location": {
+        "start": {
+          "value": 29,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 29,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "S-diacylglycerol cysteine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00303"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00303"
+        }
+      ],
+      "id": "KW-0449",
+      "category": "PTM",
+      "name": "Lipoprotein"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00303"
+        }
+      ],
+      "id": "KW-0564",
+      "category": "PTM",
+      "name": "Palmitate"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00303"
+        },
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "SignalP"
+        }
+      ],
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "18000555",
+        "citationType": "journal article",
+        "authors": [
+          "Stevenson B.",
+          "Choy H.A.",
+          "Pinne M.",
+          "Rotondi M.L.",
+          "Miller M.C.",
+          "Demoll E.",
+          "Kraiczy P.",
+          "Cooley A.E.",
+          "Creamer T.P.",
+          "Suchard M.A.",
+          "Brissette C.A.",
+          "Verma A.",
+          "Haake D.A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "18000555"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1371/journal.pone.0001188"
+          }
+        ],
+        "title": "Leptospira interrogans endostatin-like outer membrane proteins bind host fibronectin, laminin and regulators of complement.",
+        "publicationDate": "2007",
+        "journal": "PLoS ONE",
+        "firstPage": "e1188",
+        "lastPage": "e1188",
+        "volume": "2"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "ABV55233.1"
+            }
+          ],
+          "value": "Andaman",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "ABV55233.1"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "EF999884",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ABV55233.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "A8T6U4",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.10.100.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Mannose-Binding Protein A, subunit A"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR016186",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "C-type_lectin-like/link_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR016187",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CTDL_fold"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR011448",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "DUF1554"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF047482",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OM_LenAB_fam"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF07588",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "DUF1554"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF56436",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "C-type lectin-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51257",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PROKAR_LIPOPROTEIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MNLKQGNKILKTIFLTLLIGSVVCALYSCGDKKEEDNSELLLFLLNSLGSSNNTSTPVVTSCKDASFCRTFIATNNGAGYNGNLGGIFGADAKCAAAKSSSLTGAYKALIVDGPTGRQVISALDGSVDKKDWVLYPNKQYRRSDGTTITFTTNANSIVIDNLQNGIDSGTQKFFWNGLGNNVGFLWEPLSNCNNWNSTDGLITGQAGNTTELQADITPEGAFTVDNHACNTNLNLLCVEQ",
+    "length": 240,
+    "molWeight": 25601,
+    "crc64": "D792CA30FCAC17BA",
+    "md5": "9EBBE211C203BA021EFABC85E6BBDAEE"
+  },
+  "extraAttributes": {
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1,
+      "Domain": 1,
+      "Lipidation": 2
+    },
+    "uniParcId": "UPI00015FEB26"
+  }
+}

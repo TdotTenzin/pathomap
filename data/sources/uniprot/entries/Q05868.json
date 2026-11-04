@@ -1,0 +1,721 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "Q05868",
+  "secondaryAccessions": [
+    "Q50207"
+  ],
+  "uniProtkbId": "MPT51_MYCLE",
+  "entryAudit": {
+    "firstPublicDate": "1995-11-01",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2001-04-27",
+    "entryVersion": 116,
+    "sequenceVersion": 2
+  },
+  "annotationScore": 2.0,
+  "organism": {
+    "scientificName": "Mycobacterium leprae (strain TN)",
+    "taxonId": 272631,
+    "lineage": [
+      "Bacteria",
+      "Bacillati",
+      "Actinomycetota",
+      "Actinomycetes",
+      "Mycobacteriales",
+      "Mycobacteriaceae",
+      "Mycobacterium"
+    ]
+  },
+  "proteinExistence": "3: Inferred from homology",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "MPT51 antigen"
+      }
+    },
+    "flag": "Precursor"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "mpt51"
+      },
+      "orderedLocusNames": [
+        {
+          "value": "ML0098"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250"
+            }
+          ],
+          "value": "May have a role in host tissue attachment, whereby ligands may include the serum protein fibronectin and small sugars"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250"
+            }
+          ],
+          "value": "Homodimer"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250"
+              }
+            ],
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the mycobacterial A85 antigen family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 36,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 37,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 301,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "MPT51 antigen",
+      "featureId": "PRO_0000000229"
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 41,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 41,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 1; BAA09079",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "S",
+        "alternativeSequences": [
+          "F"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 286,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 301,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 1; BAA09079",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "APQLAAMSGDIVGAIR",
+        "alternativeSequences": [
+          "GAAVGCYVGRYRRRHSLGRNQWHGRCCGDEPVSCMGRARMVSGEHRHRTPYVHRNLPRDLPILLAGDPEWSRKCHVSATESSPGRLPCRWRPSWRWPLWLW"
+        ]
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0012",
+      "category": "Molecular function",
+      "name": "Acyltransferase"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    },
+    {
+      "id": "KW-0808",
+      "category": "Molecular function",
+      "name": "Transferase"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "CI-5A4NCLELSBQA",
+        "citationType": "submission",
+        "authors": [
+          "Yin Y."
+        ],
+        "title": "Studies of MPT51 like protein of Mycobacterium leprae.",
+        "publicationDate": "MAY-1995",
+        "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "Thai53",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "11234002",
+        "citationType": "journal article",
+        "authors": [
+          "Cole S.T.",
+          "Eiglmeier K.",
+          "Parkhill J.",
+          "James K.D.",
+          "Thomson N.R.",
+          "Wheeler P.R.",
+          "Honore N.",
+          "Garnier T.",
+          "Churcher C.M.",
+          "Harris D.E.",
+          "Mungall K.L.",
+          "Basham D.",
+          "Brown D.",
+          "Chillingworth T.",
+          "Connor R.",
+          "Davies R.M.",
+          "Devlin K.",
+          "Duthoy S.",
+          "Feltwell T.",
+          "Fraser A.",
+          "Hamlin N.",
+          "Holroyd S.",
+          "Hornsby T.",
+          "Jagels K.",
+          "Lacroix C.",
+          "Maclean J.",
+          "Moule S.",
+          "Murphy L.D.",
+          "Oliver K.",
+          "Quail M.A.",
+          "Rajandream M.A.",
+          "Rutherford K.M.",
+          "Rutter S.",
+          "Seeger K.",
+          "Simon S.",
+          "Simmonds M.",
+          "Skelton J.",
+          "Squares R.",
+          "Squares S.",
+          "Stevens K.",
+          "Taylor K.",
+          "Whitehead S.",
+          "Woodward J.R.",
+          "Barrell B.G."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11234002"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/35059006"
+          }
+        ],
+        "title": "Massive gene decay in the leprosy bacillus.",
+        "publicationDate": "2001",
+        "journal": "Nature",
+        "firstPage": "1007",
+        "lastPage": "1011",
+        "volume": "409"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "TN",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "8359887",
+        "citationType": "journal article",
+        "authors": [
+          "Rinke de Wit T.F.",
+          "Bekelie S.",
+          "Osland A.",
+          "Wieles B.",
+          "Janson A.A.M.",
+          "Thole J.E.R."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8359887"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.61.9.3642-3647.1993"
+          }
+        ],
+        "title": "The Mycobacterium leprae antigen 85 complex gene family: identification of the genes for the 85A, 85C, and related MPT51 proteins.",
+        "publicationDate": "1993",
+        "journal": "Infect. Immun.",
+        "firstPage": "3642",
+        "lastPage": "3647",
+        "volume": "61"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 1-220"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "D50488",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "BAA09079.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AL583917",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAC29606.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "Z21949",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAA79947.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "B86921",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "B86921"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "S32111",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "S32111"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_010907521.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_002677.1"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q05868",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "Q05868",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "272631.gene:17573910",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "ESTHER",
+      "id": "mycle-mpt5",
+      "properties": [
+        {
+          "key": "FamilyName",
+          "value": "A85-Mycolyl-transferase"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "mle:ML0098",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|272631.5.peg.152",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Leproma",
+      "id": "ML0098",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "COG0627",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Bacteria"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_026624_3_1_11",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AAMIGYC",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OrthoDB",
+      "id": "4366784at2",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PRO",
+      "id": "PR:Q05868",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000000806",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0016747",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:acyltransferase activity, transferring groups other than amino-acyl groups"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:TreeGrafter"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.40.50.1820",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "alpha/beta hydrolase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR029058",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "AB_hydrolase_fold"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR000801",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Esterase-like"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR050583",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Mycobacterial_A85_antigen"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR48098:SF1",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "DIACYLGLYCEROL ACYLTRANSFERASE_MYCOLYLTRANSFERASE AG85A"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR48098",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ENTEROCHELIN ESTERASE-RELATED"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00756",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Esterase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF53474",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "alpha/beta-Hydrolases"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MRGLSAVVRVLCVAALAVGVFAAAVLLAGTAGNAKAAGYESLMVPSNAMGRDIPVAFMAGGPHAVYLLDAFNAALDVSNWVTAGNAMTTLGGRGISVVAPAGGAYSMYTNWENDGSKQWDTFLSSELPDWLATKRGLAPDGHAAVGASQGGYAALALAAFHPDRFGFAGSLSGFVYPSSTNYNGAILAGLQQFGGIDGNGMWGAPQLGRWKWHDPYVHASLLAQNNTRVWVYSPMTMGGDIDAMIGQAVASMGSSREFYQQYRSVGGHNGHFDFSGGGDNGWGAWAPQLAAMSGDIVGAIR",
+    "length": 301,
+    "molWeight": 31191,
+    "crc64": "3E6866C805BFAB28",
+    "md5": "E1E0A01B9DA1BC190CD79FB4A6D76F2F"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1,
+      "Sequence conflict": 2
+    },
+    "uniParcId": "UPI000012F4B7"
+  }
+}

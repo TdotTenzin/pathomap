@@ -1,0 +1,351 @@
+{
+  "entryType": "UniProtKB unreviewed (TrEMBL)",
+  "primaryAccession": "B9WZQ4",
+  "uniProtkbId": "B9WZQ4_CAMJU",
+  "entryAudit": {
+    "firstPublicDate": "2009-04-14",
+    "lastAnnotationUpdateDate": "2026-09-02",
+    "lastSequenceUpdateDate": "2009-04-14",
+    "entryVersion": 50,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 1.0,
+  "organism": {
+    "scientificName": "Campylobacter jejuni",
+    "taxonId": 197,
+    "evidences": [
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "EMBL",
+        "id": "BAH23931.1"
+      }
+    ],
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Campylobacterota",
+      "Epsilonproteobacteria",
+      "Campylobacterales",
+      "Campylobacteraceae",
+      "Campylobacter"
+    ]
+  },
+  "proteinExistence": "4: Predicted",
+  "proteinDescription": {
+    "submissionNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "BAH23931.1"
+            },
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "EAK6413140.1"
+            }
+          ],
+          "value": "CiaB"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "BAH23931.1"
+          }
+        ],
+        "value": "ciaB"
+      },
+      "orfNames": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "EAK6413140.1"
+            }
+          ],
+          "value": "B7A03_03760"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 599,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "DUF7897",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000259",
+          "source": "Pfam",
+          "id": "PF25448"
+        }
+      ]
+    },
+    {
+      "type": "Coiled coil",
+      "location": {
+        "start": {
+          "value": 84,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 111,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "Coils"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "Coils"
+        }
+      ],
+      "id": "KW-0175",
+      "category": "Domain",
+      "name": "Coiled coil"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "19322829",
+        "citationType": "journal article",
+        "authors": [
+          "Onozato J.",
+          "Kumagai A.",
+          "Sekizuka T.",
+          "Tazumi A.",
+          "Moore J.E.",
+          "Millar B.C.",
+          "Matsuda M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "19322829"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1002/jobm.200800214"
+          }
+        ],
+        "title": "Cloning, sequencing and expression of full-length Campylobacter invasion antigen B gene operon from Campylobacter lari.",
+        "publicationDate": "2009",
+        "journal": "J. Basic Microbiol.",
+        "firstPage": "342",
+        "lastPage": "349",
+        "volume": "49"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "BAH23931.1"
+            }
+          ],
+          "value": "JCM 2013",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "BAH23931.1"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "CI-FOCB9EK3PH8EK",
+        "citationType": "submission",
+        "authoringGroup": [
+          "NARMS: The National Antimicrobial Resistance Monitoring System"
+        ],
+        "publicationDate": "MAY-2018",
+        "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "EAK6413140.1"
+            }
+          ],
+          "value": "CVM N62988",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "EAK6413140.1"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AB433216",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "BAH23931.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AACHYE010000005",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "EAK6413140.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_002889606.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NZ_CAJGWR010000018.1"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "B9WZQ4",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|197.5165.peg.889",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR057219",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "DUF7897"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF033805",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "invasion_CiaB"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF25448",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "DUF7897"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MNNFKEIAKLVRKYKERNNALYEFLDKEDVGEYFRSLISLSELKQDKTTMLAILRRLVDLKEENLVQEWKKNNFKEDKIIELKHKFYEEVRKFYEKEHQNLINEIKEKKLLNNFYQSLIQGVHNIGLIMNIFEISWTKEIIEKNNKILSTQFPNLDDAMEFLRKNHLYQKTPEGEICERSYGVLVRIGNLWKFVPYARFFENEILKLEFAFENMIDQLKIFASSEEEKAYIEYFEKLKLAFCEKDEDRVIKAWQEAEFAWMKVKSPLQVGHPLEYYEDNYTHAVALEWDIRIEDENDFDVLKFGNEIKESFEHVYKNIGLEDCELEKEVLSNIEKTQLYICTPMIFYGAELKGLFSAQVVPNDEFVSSKAGKKIFAFINFVYENAKTKPFMKISSEVFDKEFLDFGRNILFYQEKIWKRVYEVSTIGHEFGHIFFIANDTEKTMNQSGFFKNIEEYKATTGGLINFFYHEQDDLIMPVFHELIKRAIGLISWQRVDEVRPYYTEGLIHLSLLFESEVLIFENNNLKINFDLGYYEKFKELTLKNYHELAKHYALRLDAKEFLSRFCEIEDNIFLPIMPKCKEFVKFYYDLYEKIGNEIDNSGEFERYKKK",
+    "length": 610,
+    "molWeight": 73137,
+    "crc64": "4ECB92B83BC422E8",
+    "md5": "80D39A55160EDBE1BCC216F6D1B8BD13"
+  },
+  "extraAttributes": {
+    "countByFeatureType": {
+      "Domain": 1,
+      "Coiled coil": 1
+    },
+    "uniParcId": "UPI000195C350"
+  }
+}

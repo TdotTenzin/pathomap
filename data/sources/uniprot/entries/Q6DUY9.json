@@ -1,0 +1,769 @@
+{
+  "entryType": "UniProtKB unreviewed (TrEMBL)",
+  "primaryAccession": "Q6DUY9",
+  "uniProtkbId": "Q6DUY9_ANAPH",
+  "entryAudit": {
+    "firstPublicDate": "2004-08-16",
+    "lastAnnotationUpdateDate": "2026-06-10",
+    "lastSequenceUpdateDate": "2004-08-16",
+    "entryVersion": 42,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 1.0,
+  "organism": {
+    "scientificName": "Anaplasma phagocytophilum",
+    "commonName": "Ehrlichia phagocytophila",
+    "taxonId": 948,
+    "evidences": [
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "EMBL",
+        "id": "AAT67052.1"
+      }
+    ],
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Alphaproteobacteria",
+      "Rickettsiales",
+      "Anaplasmataceae",
+      "Anaplasma",
+      "phagocytophilum group"
+    ]
+  },
+  "proteinExistence": "4: Predicted",
+  "proteinDescription": {
+    "submissionNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAZ16405.1"
+            }
+          ],
+          "value": "Major surface protein 2"
+        }
+      },
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAT67052.1"
+            }
+          ],
+          "value": "Msp2"
+        }
+      }
+    ],
+    "flag": "Fragment"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "AHJ60152.1"
+          }
+        ],
+        "value": "p44"
+      },
+      "synonyms": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAZ16405.1"
+            }
+          ],
+          "value": "msp2"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 102,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Msp4/OMP-like",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000259",
+          "source": "Pfam",
+          "id": "PF01617"
+        }
+      ]
+    },
+    {
+      "type": "Non-terminal residue",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AAT67052.1"
+        }
+      ]
+    },
+    {
+      "type": "Non-terminal residue",
+      "location": {
+        "start": {
+          "value": 111,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 111,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AAT67052.1"
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "CI-4G4JL60VL52T5",
+        "citationType": "submission",
+        "authors": [
+          "Rymaszewska A.",
+          "Skotarczak B."
+        ],
+        "title": "Analysis of sequence msp2 gene in Anaplasma phagocytophilum from Poland.",
+        "publicationDate": "JUN-2005",
+        "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAZ16406.1"
+            }
+          ],
+          "value": "KDR-1",
+          "type": "STRAIN"
+        },
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAZ16405.1"
+            }
+          ],
+          "value": "ST-128",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AAZ16405.1"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "16293433",
+        "citationType": "journal article",
+        "authors": [
+          "Skoracki M.",
+          "Michalik J.",
+          "Skotarczak B.",
+          "Rymaszewska A.",
+          "Sikora B.",
+          "Hofman T.",
+          "Wodecka B.",
+          "Sawczuk M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "16293433"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/j.micinf.2005.06.029"
+          }
+        ],
+        "title": "First detection of Anaplasma phagocytophilum in quill mites (Acari: Syringophilidae) parasitizing passerine birds.",
+        "publicationDate": "2006",
+        "journal": "Microbes Infect.",
+        "firstPage": "303",
+        "lastPage": "307",
+        "volume": "8"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AAT67052.1"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "CI-7EHBN6E2RF8G1",
+        "citationType": "submission",
+        "authors": [
+          "Adamska M."
+        ],
+        "title": "Sequence analysis of the msp2 gene of Anaplasma phagocytophilum.",
+        "publicationDate": "NOV-2006",
+        "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "ABL75395.1"
+            }
+          ],
+          "value": "D2S-B",
+          "type": "STRAIN"
+        },
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "ABL75396.1"
+            }
+          ],
+          "value": "D3K-B",
+          "type": "STRAIN"
+        },
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "ABL75380.1"
+            }
+          ],
+          "value": "S1K-A",
+          "type": "STRAIN"
+        },
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "ABL75382.1"
+            }
+          ],
+          "value": "S1K-B",
+          "type": "STRAIN"
+        },
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "ABL75384.1"
+            }
+          ],
+          "value": "S1K-D",
+          "type": "STRAIN"
+        },
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "ABL75381.1"
+            }
+          ],
+          "value": "S2S-A",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "ABL75380.1"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "24605473",
+        "citationType": "journal article",
+        "authors": [
+          "Prusinski M.A.",
+          "Kokas J.E.",
+          "Hukey K.T.",
+          "Kogut S.J.",
+          "Lee J.",
+          "Backenson P.B."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "24605473"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1603/ME13101"
+          }
+        ],
+        "title": "Prevalence of Borrelia burgdorferi (Spirochaetales: Spirochaetaceae), Anaplasma phagocytophilum (Rickettsiales: Anaplasmataceae), and babesia microti (Piroplasmida: Babesiidae) in Ixodes scapularis (Acari: Ixodidae) collected from recreational lands in the Hudson valley region, New York State.",
+        "publicationDate": "2014",
+        "journal": "J. Med. Entomol.",
+        "firstPage": "226",
+        "lastPage": "236",
+        "volume": "51"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AHJ60152.1"
+            }
+          ],
+          "value": "03021331",
+          "type": "STRAIN"
+        },
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AHJ60153.1"
+            }
+          ],
+          "value": "03027644",
+          "type": "STRAIN"
+        },
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AHJ60154.1"
+            }
+          ],
+          "value": "03119658",
+          "type": "STRAIN"
+        },
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AHJ60156.1"
+            }
+          ],
+          "value": "04071235",
+          "type": "STRAIN"
+        },
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AHJ60155.1"
+            }
+          ],
+          "value": "04079438",
+          "type": "STRAIN"
+        },
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AHJ60157.1"
+            }
+          ],
+          "value": "04111020",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AHJ60152.1"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AY642115",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAT67052.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "DQ105671",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAZ16405.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "DQ105672",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAZ16406.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "EF143796",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ABL75380.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "EF143797",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ABL75381.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "EF143798",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ABL75382.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "EF143800",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ABL75384.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "EF143811",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ABL75395.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "EF143812",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ABL75396.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "KC954737",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AHJ60152.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "KC954738",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AHJ60153.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "KC954739",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AHJ60154.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "KC954740",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AHJ60155.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "KC954741",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AHJ60156.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "KC954742",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AHJ60157.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q6DUY9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR002566",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Msp4_OMP-like"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF01617",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Surface_Ag_2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "PAFSKIRDFSIRESNGETKAVYPYLKDGKSVKLESHKFDWNTPDPRIGFKDNMLVAMEGSVGYGIGGARVELEIGYERFKTKGIRDSGSKEDEADTVYLLAKELAYDVVTG",
+    "length": 111,
+    "molWeight": 12372,
+    "crc64": "D4B9135092BD36B6",
+    "md5": "CCC8A51120E27CE8765B8DF9410BFCC2"
+  },
+  "extraAttributes": {
+    "countByFeatureType": {
+      "Domain": 1,
+      "Non-terminal residue": 2
+    },
+    "uniParcId": "UPI00003BEDCF"
+  }
+}

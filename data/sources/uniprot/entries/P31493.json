@@ -1,0 +1,1324 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "P31493",
+  "uniProtkbId": "YOPE_YERPE",
+  "entryAudit": {
+    "firstPublicDate": "1993-07-01",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "1993-07-01",
+    "entryVersion": 165,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 3.0,
+  "organism": {
+    "scientificName": "Yersinia pestis",
+    "taxonId": 632,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Gammaproteobacteria",
+      "Enterobacterales",
+      "Yersiniaceae",
+      "Yersinia"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Outer membrane virulence protein YopE"
+      }
+    }
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "yopE"
+      },
+      "synonyms": [
+        {
+          "value": "yop25"
+        }
+      ],
+      "orderedLocusNames": [
+        {
+          "value": "YPCD1.06"
+        },
+        {
+          "value": "y5068"
+        },
+        {
+          "value": "y0077"
+        },
+        {
+          "value": "YP_pCD81"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "value": "Essential virulence determinant; cytotoxic effector, involved in resistance to phagocytosis"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "value": "Cell outer membrane",
+            "id": "SL-0040"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "value": "At 37 degrees Celsius in the absence of calcium"
+        }
+      ],
+      "commentType": "INDUCTION"
+    },
+    {
+      "texts": [
+        {
+          "value": "N-terminal is important for export, C-terminal is indispensable for virulence"
+        }
+      ],
+      "commentType": "MISCELLANEOUS"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the YopE family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 219,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Outer membrane virulence protein YopE",
+      "featureId": "PRO_0000066366"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 101,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 219,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Bacterial Rho-GAP",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01404"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 37,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 8,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 32,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Low complexity",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Site",
+      "location": {
+        "start": {
+          "value": 144,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 144,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Arginine finger; crucial for GTP hydrolysis by stabilizing the transition state",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01404"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 102,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 121,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1HY5"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 126,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 136,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1HY5"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 142,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 156,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1HY5"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 159,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 170,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1HY5"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 171,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 173,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1HY5"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 178,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 182,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1HY5"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 184,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 186,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1HY5"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 187,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 192,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1HY5"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 193,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 195,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1HY5"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 199,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 211,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1HY5"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 213,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 218,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1HY5"
+        }
+      ]
+    }
+  ],
+  "geneLocations": [
+    {
+      "value": "pCD1",
+      "geneEncodingType": "Plasmid"
+    },
+    {
+      "value": "pYV019",
+      "geneEncodingType": "Plasmid"
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0002",
+      "category": "Technical term",
+      "name": "3D-structure"
+    },
+    {
+      "id": "KW-0998",
+      "category": "Cellular component",
+      "name": "Cell outer membrane"
+    },
+    {
+      "id": "KW-0343",
+      "category": "Molecular function",
+      "name": "GTPase activation"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-0614",
+      "category": "Technical term",
+      "name": "Plasmid"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "2307658",
+        "citationType": "journal article",
+        "authors": [
+          "Forsberg A.",
+          "Wolf-Watz H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "2307658"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.172.3.1547-1555.1990"
+          }
+        ],
+        "title": "Genetic analysis of the yopE region of Yersinia spp.: identification of a novel conserved locus, yerA, regulating yopE expression.",
+        "publicationDate": "1990",
+        "journal": "J. Bacteriol.",
+        "firstPage": "1547",
+        "lastPage": "1555",
+        "volume": "172"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "EV 76",
+          "type": "STRAIN"
+        },
+        {
+          "value": "pYV019",
+          "type": "PLASMID"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "9746557",
+        "citationType": "journal article",
+        "authors": [
+          "Perry R.D.",
+          "Straley S.C.",
+          "Fetherston J.D.",
+          "Rose D.J.",
+          "Gregor J.",
+          "Blattner F.R."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9746557"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.66.10.4611-4623.1998"
+          }
+        ],
+        "title": "DNA sequencing and analysis of the low-Ca2+-response plasmid pCD1 of Yersinia pestis KIM5.",
+        "publicationDate": "1998",
+        "journal": "Infect. Immun.",
+        "firstPage": "4611",
+        "lastPage": "4623",
+        "volume": "66"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "KIM5 / Biovar Mediaevalis",
+          "type": "STRAIN"
+        },
+        {
+          "value": "pCD1",
+          "type": "PLASMID"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "9748454",
+        "citationType": "journal article",
+        "authors": [
+          "Hu P.",
+          "Elliott J.",
+          "McCready P.",
+          "Skowronski E.",
+          "Garnes J.",
+          "Kobayashi A.",
+          "Brubaker R.R.",
+          "Garcia E."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9748454"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.180.19.5192-5202.1998"
+          }
+        ],
+        "title": "Structural organization of virulence-associated plasmids of Yersinia pestis.",
+        "publicationDate": "1998",
+        "journal": "J. Bacteriol.",
+        "firstPage": "5192",
+        "lastPage": "5202",
+        "volume": "180"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "KIM5 / Biovar Mediaevalis",
+          "type": "STRAIN"
+        },
+        {
+          "value": "pCD1",
+          "type": "PLASMID"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "11586360",
+        "citationType": "journal article",
+        "authors": [
+          "Parkhill J.",
+          "Wren B.W.",
+          "Thomson N.R.",
+          "Titball R.W.",
+          "Holden M.T.G.",
+          "Prentice M.B.",
+          "Sebaihia M.",
+          "James K.D.",
+          "Churcher C.M.",
+          "Mungall K.L.",
+          "Baker S.",
+          "Basham D.",
+          "Bentley S.D.",
+          "Brooks K.",
+          "Cerdeno-Tarraga A.-M.",
+          "Chillingworth T.",
+          "Cronin A.",
+          "Davies R.M.",
+          "Davis P.",
+          "Dougan G.",
+          "Feltwell T.",
+          "Hamlin N.",
+          "Holroyd S.",
+          "Jagels K.",
+          "Karlyshev A.V.",
+          "Leather S.",
+          "Moule S.",
+          "Oyston P.C.F.",
+          "Quail M.A.",
+          "Rutherford K.M.",
+          "Simmonds M.",
+          "Skelton J.",
+          "Stevens K.",
+          "Whitehead S.",
+          "Barrell B.G."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11586360"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/35097083"
+          }
+        ],
+        "title": "Genome sequence of Yersinia pestis, the causative agent of plague.",
+        "publicationDate": "2001",
+        "journal": "Nature",
+        "firstPage": "523",
+        "lastPage": "527",
+        "volume": "413"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "CO-92 / Biovar Orientalis",
+          "type": "STRAIN"
+        },
+        {
+          "value": "pCD1",
+          "type": "PLASMID"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "15368893",
+        "citationType": "journal article",
+        "authors": [
+          "Song Y.",
+          "Tong Z.",
+          "Wang J.",
+          "Wang L.",
+          "Guo Z.",
+          "Han Y.",
+          "Zhang J.",
+          "Pei D.",
+          "Zhou D.",
+          "Qin H.",
+          "Pang X.",
+          "Han Y.",
+          "Zhai J.",
+          "Li M.",
+          "Cui B.",
+          "Qi Z.",
+          "Jin L.",
+          "Dai R.",
+          "Chen F.",
+          "Li S.",
+          "Ye C.",
+          "Du Z.",
+          "Lin W.",
+          "Wang J.",
+          "Yu J.",
+          "Yang H.",
+          "Wang J.",
+          "Huang P.",
+          "Yang R."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15368893"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1093/dnares/11.3.179"
+          }
+        ],
+        "title": "Complete genome sequence of Yersinia pestis strain 91001, an isolate avirulent to humans.",
+        "publicationDate": "2004",
+        "journal": "DNA Res.",
+        "firstPage": "179",
+        "lastPage": "197",
+        "volume": "11"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "91001 / Biovar Mediaevalis",
+          "type": "STRAIN"
+        },
+        {
+          "value": "pCD1",
+          "type": "PLASMID"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "M34279",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA27672.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF074612",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAC69818.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF053946",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAC62587.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AL117189",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAB54883.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AE017043",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAS58592.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "T43605",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "T43605"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_002229754.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_004836.1"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "1HY5",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.25 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B=90-219"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "P31493",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BMRB",
+      "id": "P31493",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "P31493",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "IntAct",
+      "id": "P31493",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "database": "DNASU",
+      "id": "1149332",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblBacteria",
+      "id": "AAS58592",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAS58592"
+        },
+        {
+          "key": "GeneId",
+          "value": "YP_pCD81"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "310221694",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "ype:YPCD1.06",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "ypm:YP_pCD81",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|214092.21.peg.8",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "COG5599",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Bacteria"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_121002_0_0_6",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "CQGLMQF",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OrthoDB",
+      "id": "5918307at2",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EvolutionaryTrace",
+      "id": "P31493",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000000815",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Plasmid pCD1"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000001019",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Plasmid pCD1"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009279",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cell outer membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005096",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:GTPase activator activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0050765",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:negative regulation of phagocytosis"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:CACAO"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "20148901"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0141030",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:symbiont-mediated perturbation of host actin cytoskeleton via filamentous actin depolymerization"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:SigSci"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "11680787"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd00219",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ToxGAP"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "1.20.120.260:FF:000001",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Outer membrane virulence protein YopE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.20.120.260",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Virulence factor YopE uncharacterised domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR003537",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "YopE-like"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR014773",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "YopE_GAP_dom"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR037168",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "YopE_GAP_dom_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR015110",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "YopE_N_dom"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF03545",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "YopE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF09020",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "YopE_N"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR01372",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "YERSINIAYOPE"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF47233",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Bacterial GAP domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF69635",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Type III secretory system chaperone-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS52059",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "BACT_RHOGAP"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MKISSFISTSLPLPTSVSGSSSVGEMSGRSVSQQTSDQYANNLAGRTESPQGSSLASRIIERLSSVAHSVIGFIQRMFSEGSHKPVVTPAPTPAQMPSPTSFSDSIKQLAAETLPKYMQQLNSLDAEMLQKNHDQFATGSGPLRGSITQCQGLMQFCGGELQAEASAILNTPVCGIPFSQWGTIGGAASAYVASGVDLTQAANEIKGLAQQMQKLLSLM",
+    "length": 219,
+    "molWeight": 22987,
+    "crc64": "8E07FF064947B60D",
+    "md5": "32D1CD5F7845CB4F6FDD8640547B9BAF"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "INDUCTION": 1,
+      "MISCELLANEOUS": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Domain": 1,
+      "Region": 1,
+      "Compositional bias": 1,
+      "Site": 1,
+      "Helix": 8,
+      "Beta strand": 2,
+      "Turn": 1
+    },
+    "uniParcId": "UPI000013BCAD"
+  }
+}

@@ -10,7 +10,7 @@ rebuilt one at a time, starting with the root table.
 
 | Path | Kind | Purpose |
 |---|---|---|
-| `data/sources/curated_data.json` | Source | Curated base rows migrated from v1 (identity, Gram reaction, strategy, DOI, description). |
+| `data/sources/pathogens_seed.json` | Source | Curated base rows migrated from v1 (identity, Gram reaction, strategy, DOI, description). |
 | `data/sources/pathogen_overrides.json` | Source | Manual overrides for NCBI lookups. Keys are `pathogen_id` values; any provided field wins. |
 | `data/sources/ncbi/` | Cache | Raw NCBI Taxonomy and Datasets responses used for provenance. Safe to delete and refetch. |
 | `data/pathomap-dataset.json` | Generated | The JSON the web app loads. `{ meta, pathogens }`. |

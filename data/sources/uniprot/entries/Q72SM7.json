@@ -1,0 +1,1751 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "Q72SM7",
+  "uniProtkbId": "LPL32_LEPIC",
+  "entryAudit": {
+    "firstPublicDate": "2026-06-10",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2004-07-05",
+    "entryVersion": 92,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 5.0,
+  "organism": {
+    "scientificName": "Leptospira interrogans serogroup Icterohaemorrhagiae serovar copenhageni (strain Fiocruz L1-130)",
+    "taxonId": 267671,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Spirochaetota",
+      "Leptospiria",
+      "Leptospirales",
+      "Leptospiraceae",
+      "Leptospira"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000303",
+            "source": "PubMed",
+            "id": "18391007"
+          }
+        ],
+        "value": "Major outer membrane lipoprotein LipL32"
+      }
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Leptospira lipoprotein 32"
+        }
+      },
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "25356675"
+            }
+          ],
+          "value": "Major leptospiral lipoprotein LipL32"
+        }
+      }
+    ],
+    "flag": "Precursor"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000312",
+            "source": "EMBL",
+            "id": "AAS69953.1"
+          }
+        ],
+        "value": "lipL32"
+      },
+      "orderedLocusNames": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000312",
+              "source": "EMBL",
+              "id": "AAS69953.1"
+            }
+          ],
+          "value": "LIC_11352"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "18391007"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "19477185"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "20582320"
+            }
+          ],
+          "value": "Major outer membrane lipoprotein present exclusively in pathogenic Leptospira species (PubMed:18391007). It displays high immunogenicity (PubMed:18391007). Binds in vitro to extracellular matrix (ECM) proteins such as collagen type IV (PubMed:18391007). It also binds host blood proteins such as plasma fibronectin and plasminogen (PubMed:18391007, PubMed:20582320). It specifically binds calcium ions (PubMed:19477185)"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "18391007"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "19477185"
+            }
+          ],
+          "value": "Binds Ca(2+) ions, which induces conformational changes and increases the thermal stability of the protein (PubMed:19477185). Binding is specific for Ca(2+) as no structural or stability perturbations are observed for Mg(2+), Zn(2+) or Cu(2+) (PubMed:19477185). Heparin and gelatin can inhibit binding to fibronectin in a concentration-dependent manner (PubMed:18391007)"
+        }
+      ],
+      "commentType": "ACTIVITY REGULATION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "19255491"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "19477185"
+            }
+          ],
+          "value": "Homodimer"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "note": {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "23323152"
+              }
+            ],
+            "value": "Was identified as a surface-exposed outer membrane lipoprotein. However, one study shows that the protein is not detected on the surface of intact cells by immunofluorescence assay (IFA), but becomes accessible to antibodies only after permeabilization of the outer membrane, suggesting that LipL32 is not exposed on the surface, but that it may be a sub-surface membrane lipoprotein on the inner leaflet of the outer membrane"
+          }
+        ]
+      },
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "23323152"
+              }
+            ],
+            "value": "Cell outer membrane",
+            "id": "SL-0040"
+          },
+          "topology": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255",
+                "source": "PROSITE-ProRule",
+                "id": "PRU00303"
+              }
+            ],
+            "value": "Lipid-anchor",
+            "id": "SL-9901"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "18391007"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "19477185"
+            }
+          ],
+          "value": "Possesses a jelly-roll fold core from which several peripheral secondary structures protrude (PubMed:19477185). The C-terminus is the primary immunogenic domain, it is recognized early in the course of infection and mediates interaction with collagen IV and plasma fibronectin (PubMed:18391007)"
+        }
+      ],
+      "commentType": "DOMAIN"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "25356675"
+            }
+          ],
+          "value": "Undergoes post-translational modifications, particularly acetylation and tri-methylation of lysine residues, under in vivo growth conditions (PubMed:25356675). In comparison, Leptospira grown in culture does not result in any LipL32 lysine modifications (PubMed:25356675). Modifications may play a role in regulating protein architecture and function, and alter protein recognition by the host immune response (PubMed:25356675)"
+        }
+      ],
+      "commentType": "PTM"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "37426019"
+            }
+          ],
+          "value": "Silencing of the gene results in more virulent Leptospira cells, culminating in early and more severe symptom presentation in hamsters, accompanied by higher liver and kidney loads (PubMed:37426019). The interaction of the mutant with host components is unaffected, except for a slight increase in plasminogen binding (PubMed:37426019)"
+        }
+      ],
+      "commentType": "DISRUPTION PHENOTYPE"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "18391007"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "33137154"
+            }
+          ],
+          "value": "The C-terminal and intermediate domains of LipL32 are recognized by sera of patients with laboratory-confirmed leptospirosis, suggesting that it could be used as a diagnostic antigen for the acute and convalescent phases of patients with leptospirosis (PubMed:18391007). A real-time PCR with high specificity, which has the capability to detect all known Leptospira pathogenic species, was developed based on the lipL32 gene (PubMed:33137154)"
+        }
+      ],
+      "commentType": "BIOTECHNOLOGY"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "23206414"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "31931114"
+            }
+          ],
+          "value": "The sequence conservation and immunogenicity of LipL32 make the protein an attractive target for vaccine design (PubMed:23206414). However, despite the immunogenicity of LipL32, the efficacy of LipL32 vaccines is unconvincing, with either no protection or low levels of protection observed in the majority of studies (PubMed:23206414). Due to these limitations, it is important to develop novel immunization strategies, such as antibody therapy, which can provide immediate and effective protection against bacterial infections (PubMed:31931114). Anti-LipL32 monoclonal antibodies are effective in the early stages of infection and can reduce disease severity in an animal model (PubMed:31931114)"
+        }
+      ],
+      "commentType": "BIOTECHNOLOGY"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "19606093"
+            }
+          ],
+          "value": "Is the most abundant protein in Leptospira with an estimated 38'000 copies per cell"
+        }
+      ],
+      "commentType": "MISCELLANEOUS"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the LipL32 family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 19,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00303"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 20,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 272,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Major outer membrane lipoprotein LipL32",
+      "featureId": "PRO_5004284172"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 154,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 173,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Modified residue",
+      "location": {
+        "start": {
+          "value": 171,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 171,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N6,N6,N6-trimethyllysine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "25356675"
+        }
+      ]
+    },
+    {
+      "type": "Modified residue",
+      "location": {
+        "start": {
+          "value": 265,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 265,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N6,N6,N6-trimethyllysine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "25356675"
+        }
+      ]
+    },
+    {
+      "type": "Lipidation",
+      "location": {
+        "start": {
+          "value": 20,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 20,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-palmitoyl cysteine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00303"
+        }
+      ]
+    },
+    {
+      "type": "Lipidation",
+      "location": {
+        "start": {
+          "value": 20,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 20,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "S-diacylglycerol cysteine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00303"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 26,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 29,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3FRL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 30,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 38,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3FRL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 47,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 52,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3FRL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 54,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 63,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3FRL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 70,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 73,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3FRL"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 74,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 76,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3FRL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 77,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 86,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3FRL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 90,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 98,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3FRL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 111,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 113,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3FRL"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 115,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 119,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3FRL"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 122,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 126,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3FRL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 133,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 141,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3FRL"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 145,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 147,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3FRL"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 148,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 153,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3FRL"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 167,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 169,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3FRL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 170,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 174,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3FRL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 181,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 185,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3FRL"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 193,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 198,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3FRL"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 201,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 203,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3FRL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 208,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 216,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3FRL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 224,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 233,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3FRL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 244,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 248,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3FRL"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 249,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 262,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3FRL"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0002",
+      "category": "Technical term",
+      "name": "3D-structure"
+    },
+    {
+      "id": "KW-0007",
+      "category": "PTM",
+      "name": "Acetylation"
+    },
+    {
+      "id": "KW-0998",
+      "category": "Cellular component",
+      "name": "Cell outer membrane"
+    },
+    {
+      "id": "KW-0449",
+      "category": "PTM",
+      "name": "Lipoprotein"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-0488",
+      "category": "PTM",
+      "name": "Methylation"
+    },
+    {
+      "id": "KW-0564",
+      "category": "PTM",
+      "name": "Palmitate"
+    },
+    {
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "15028702",
+        "citationType": "journal article",
+        "authors": [
+          "Nascimento A.L.T.O.",
+          "Ko A.I.",
+          "Martins E.A.L.",
+          "Monteiro-Vitorello C.B.",
+          "Ho P.L.",
+          "Haake D.A.",
+          "Verjovski-Almeida S.",
+          "Hartskeerl R.A.",
+          "Marques M.V.",
+          "Oliveira M.C.",
+          "Menck C.F.M.",
+          "Leite L.C.C.",
+          "Carrer H.",
+          "Coutinho L.L.",
+          "Degrave W.M.",
+          "Dellagostin O.A.",
+          "El-Dorry H.",
+          "Ferro E.S.",
+          "Ferro M.I.T.",
+          "Furlan L.R.",
+          "Gamberini M.",
+          "Giglioti E.A.",
+          "Goes-Neto A.",
+          "Goldman G.H.",
+          "Goldman M.H.S.",
+          "Harakava R.",
+          "Jeronimo S.M.B.",
+          "Junqueira-de-Azevedo I.L.M.",
+          "Kimura E.T.",
+          "Kuramae E.E.",
+          "Lemos E.G.M.",
+          "Lemos M.V.F.",
+          "Marino C.L.",
+          "Nunes L.R.",
+          "de Oliveira R.C.",
+          "Pereira G.G.",
+          "Reis M.S.",
+          "Schriefer A.",
+          "Siqueira W.J.",
+          "Sommer P.",
+          "Tsai S.M.",
+          "Simpson A.J.G.",
+          "Ferro J.A.",
+          "Camargo L.E.A.",
+          "Kitajima J.P.",
+          "Setubal J.C.",
+          "Van Sluys M.A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15028702"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.186.7.2164-2172.2004"
+          }
+        ],
+        "title": "Comparative genomics of two Leptospira interrogans serovars reveals novel insights into physiology and pathogenesis.",
+        "publicationDate": "2004",
+        "journal": "J. Bacteriol.",
+        "firstPage": "2164",
+        "lastPage": "2172",
+        "volume": "186"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "Fiocruz L1-130",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000312",
+          "source": "EMBL",
+          "id": "AAS69953.1"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "18391007",
+        "citationType": "journal article",
+        "authors": [
+          "Hauk P.",
+          "Macedo F.",
+          "Romero E.C.",
+          "Vasconcellos S.A.",
+          "de Morais Z.M.",
+          "Barbosa A.S.",
+          "Ho P.L."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "18391007"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.01639-07"
+          }
+        ],
+        "title": "In LipL32, the major leptospiral lipoprotein, the C terminus is the primary immunogenic domain and mediates interaction with collagen IV and plasma fibronectin.",
+        "publicationDate": "2008",
+        "journal": "Infect. Immun.",
+        "firstPage": "2642",
+        "lastPage": "2650",
+        "volume": "76"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "ACTIVITY REGULATION",
+        "DOMAIN",
+        "BIOTECHNOLOGY"
+      ],
+      "referenceComments": [
+        {
+          "value": "Fiocruz L1-130",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "19255491",
+        "citationType": "journal article",
+        "authors": [
+          "Hauk P.",
+          "Guzzo C.R.",
+          "Ho P.L.",
+          "Farah C.S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "19255491"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1107/s1744309109005533"
+          }
+        ],
+        "title": "Crystallization and preliminary X-ray analysis of LipL32 from Leptospira interrogans serovar Copenhageni.",
+        "publicationDate": "2009",
+        "journal": "Acta Crystallogr. F",
+        "firstPage": "307",
+        "lastPage": "309",
+        "volume": "65"
+      },
+      "referencePositions": [
+        "SUBUNIT",
+        "CRYSTALLIZATION"
+      ],
+      "referenceComments": [
+        {
+          "value": "Fiocruz L1-130",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "19606093",
+        "citationType": "journal article",
+        "authors": [
+          "Malmstroem J.",
+          "Beck M.",
+          "Schmidt A.",
+          "Lange V.",
+          "Deutsch E.W.",
+          "Aebersold R."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "19606093"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/nature08184"
+          }
+        ],
+        "title": "Proteome-wide cellular protein concentrations of the human pathogen Leptospira interrogans.",
+        "publicationDate": "2009",
+        "journal": "Nature",
+        "firstPage": "762",
+        "lastPage": "765",
+        "volume": "460"
+      },
+      "referencePositions": [
+        "PROTEIN ABUNDANCE"
+      ],
+      "referenceComments": [
+        {
+          "value": "Fiocruz L1-130",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "20582320",
+        "citationType": "journal article",
+        "authors": [
+          "Vieira M.L.",
+          "Atzingen M.V.",
+          "Oliveira T.R.",
+          "Oliveira R.",
+          "Andrade D.M.",
+          "Vasconcellos S.A.",
+          "Nascimento A.L."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "20582320"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1371/journal.pone.0011259"
+          }
+        ],
+        "title": "In vitro identification of novel plasminogen-binding receptors of the pathogen Leptospira interrogans.",
+        "publicationDate": "2010",
+        "journal": "PLoS ONE",
+        "firstPage": "E11259",
+        "lastPage": "E11259",
+        "volume": "5"
+      },
+      "referencePositions": [
+        "FUNCTION"
+      ],
+      "referenceComments": [
+        {
+          "value": "Serovar copenhageni",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "23323152",
+        "citationType": "journal article",
+        "authors": [
+          "Pinne M.",
+          "Haake D.A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "23323152"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1371/journal.pone.0051025"
+          }
+        ],
+        "title": "LipL32 Is a Subsurface Lipoprotein of Leptospira interrogans: presentation of new data and reevaluation of previous studies.",
+        "publicationDate": "2013",
+        "journal": "PLoS ONE",
+        "firstPage": "e51025",
+        "lastPage": "e51025",
+        "volume": "8"
+      },
+      "referencePositions": [
+        "SUBCELLULAR LOCATION"
+      ],
+      "referenceComments": [
+        {
+          "value": "Fiocruz L1-130",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 7,
+      "citation": {
+        "id": "23206414",
+        "citationType": "journal article",
+        "authors": [
+          "Murray G.L."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "23206414"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/j.vetmic.2012.11.005"
+          }
+        ],
+        "title": "The lipoprotein LipL32, an enigma of leptospiral biology.",
+        "publicationDate": "2013",
+        "journal": "Vet. Microbiol.",
+        "firstPage": "305",
+        "lastPage": "314",
+        "volume": "162"
+      },
+      "referencePositions": [
+        "POTENTIAL USE AS A VACCINE",
+        "BIOTECHNOLOGY",
+        "REVIEW"
+      ]
+    },
+    {
+      "referenceNumber": 8,
+      "citation": {
+        "id": "25356675",
+        "citationType": "journal article",
+        "authors": [
+          "Witchell T.D.",
+          "Eshghi A.",
+          "Nally J.E.",
+          "Hof R.",
+          "Boulanger M.J.",
+          "Wunder E.A. Jr.",
+          "Ko A.I.",
+          "Haake D.A.",
+          "Cameron C.E."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "25356675"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1371/journal.pntd.0003280"
+          }
+        ],
+        "title": "Post-translational modification of LipL32 during Leptospira interrogans infection.",
+        "publicationDate": "2014",
+        "journal": "PLoS Negl. Trop. Dis.",
+        "firstPage": "e3280",
+        "lastPage": "e3280",
+        "volume": "8"
+      },
+      "referencePositions": [
+        "ACETYLATION",
+        "METHYLATION AT LYS-171 AND LYS-265"
+      ],
+      "referenceComments": [
+        {
+          "value": "RJ16441 / Serovar copenhageni",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 9,
+      "citation": {
+        "id": "31931114",
+        "citationType": "journal article",
+        "authors": [
+          "Gomes C.K.",
+          "Pacce V.D.",
+          "de Oliveira N.R.",
+          "Jorge S.",
+          "Collares T.F.",
+          "Pinto Seixas Neto A.C.",
+          "Amaral M.G.",
+          "Dellagostin O.A.",
+          "Hartwig D.D."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "31931114"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/j.micpath.2020.103975"
+          }
+        ],
+        "title": "Monoclonal antibodies against LipL32 confer prophylactic protection against lethal leptospirosis challenge in animal model.",
+        "publicationDate": "2020",
+        "journal": "Microb. Pathog.",
+        "firstPage": "103975",
+        "lastPage": "103975",
+        "volume": "141"
+      },
+      "referencePositions": [
+        "BIOTECHNOLOGY"
+      ],
+      "referenceComments": [
+        {
+          "value": "Fiocruz L1-130",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 10,
+      "citation": {
+        "id": "33137154",
+        "citationType": "journal article",
+        "authors": [
+          "Ahmed A.A.",
+          "Goris M.G.A.",
+          "Meijer M.C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "33137154"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1371/journal.pone.0241584"
+          }
+        ],
+        "title": "Development of lipL32 real-time PCR combined with an internal and extraction control for pathogenic Leptospira detection.",
+        "publicationDate": "2020",
+        "journal": "PLoS ONE",
+        "firstPage": "e0241584",
+        "lastPage": "e0241584",
+        "volume": "15"
+      },
+      "referencePositions": [
+        "BIOTECHNOLOGY"
+      ]
+    },
+    {
+      "referenceNumber": 11,
+      "citation": {
+        "id": "37426019",
+        "citationType": "journal article",
+        "authors": [
+          "Fernandes L.G.V.",
+          "Teixeira A.F.",
+          "Nascimento A.L.T.O."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "37426019"
+          },
+          {
+            "database": "DOI",
+            "id": "10.3389/fmicb.2023.1199660"
+          }
+        ],
+        "title": "Evaluation of Leptospira interrogans knockdown mutants for LipL32, LipL41, LipL21, and OmpL1 proteins.",
+        "publicationDate": "2023",
+        "journal": "Front. Microbiol.",
+        "firstPage": "1199660",
+        "lastPage": "1199660",
+        "volume": "14"
+      },
+      "referencePositions": [
+        "DISRUPTION PHENOTYPE"
+      ],
+      "referenceComments": [
+        {
+          "value": "Fiocruz L1-130",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 12,
+      "citation": {
+        "id": "19477185",
+        "citationType": "journal article",
+        "authors": [
+          "Hauk P.",
+          "Guzzo C.R.",
+          "Roman Ramos H.",
+          "Ho P.L.",
+          "Farah C.S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "19477185"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/j.jmb.2009.05.034"
+          }
+        ],
+        "title": "Structure and calcium-binding activity of LipL32, the major surface antigen of pathogenic Leptospira sp.",
+        "publicationDate": "2009",
+        "journal": "J. Mol. Biol.",
+        "firstPage": "722",
+        "lastPage": "736",
+        "volume": "390"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY",
+        "FUNCTION",
+        "CALCIUM BINDING",
+        "ACTIVITY REGULATION",
+        "SUBUNIT",
+        "DOMAIN"
+      ],
+      "referenceComments": [
+        {
+          "value": "Serovar copenhageni",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "3FRL"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AE016823",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAS69953.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_000736494.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_005823.1"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "3FRL",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.25 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B=21-272"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q72SM7",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "Q72SM7",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "34314691",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "61144657",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "lic:LIC_11352",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_1228707_0_0_12",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AEMGVRM",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EvolutionaryTrace",
+      "id": "Q72SM7",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PHI-base",
+      "id": "PHI:12020",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009279",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cell outer membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR021962",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Lipl32"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF038394",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "lipo_LipL32"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF12103",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Lipl32"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51257",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PROKAR_LIPOPROTEIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MKKLSILAISVALFASITACGAFGGLPSLKSSFVLSEDTIPGTNETVKTLLPYGSVINYYGYVKPGQAPDGLVDGNKKAYYLYVWIPAVIAEMGVRMISPTGEIGEPGDGDLVSDAFKAATPEEKSMPHWFDTWIRVERMSAIMPDQIAKAAKAKPVQKLDDDDDGDDTYKEERHNKYNSLTRIKIPNPPKSFDDLKNIDTKKLLVRGLYRISFTTYKPGEVKGSFVASVGLLFPPGIPGVSPLIHSNPEELQKQAIAAEESLKKAASDATK",
+    "length": 272,
+    "molWeight": 29613,
+    "crc64": "168B48E92ED85CDD",
+    "md5": "9DDD72E29232B420195FC7950EF5A59F"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "ACTIVITY REGULATION": 1,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "DOMAIN": 1,
+      "PTM": 1,
+      "DISRUPTION PHENOTYPE": 1,
+      "BIOTECHNOLOGY": 2,
+      "MISCELLANEOUS": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1,
+      "Region": 1,
+      "Modified residue": 2,
+      "Lipidation": 2,
+      "Helix": 7,
+      "Beta strand": 13,
+      "Turn": 3
+    },
+    "uniParcId": "UPI00000DC6E5"
+  }
+}

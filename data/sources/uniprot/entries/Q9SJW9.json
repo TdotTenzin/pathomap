@@ -1,0 +1,1539 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "Q9SJW9",
+  "secondaryAccessions": [
+    "Q710F0",
+    "Q8L7I6"
+  ],
+  "uniProtkbId": "CDT1A_ARATH",
+  "entryAudit": {
+    "firstPublicDate": "2011-04-05",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2000-05-01",
+    "entryVersion": 134,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 5.0,
+  "organism": {
+    "scientificName": "Arabidopsis thaliana",
+    "commonName": "Mouse-ear cress",
+    "taxonId": 3702,
+    "lineage": [
+      "Eukaryota",
+      "Viridiplantae",
+      "Streptophyta",
+      "Embryophyta",
+      "Tracheophyta",
+      "Spermatophyta",
+      "Magnoliopsida",
+      "eudicotyledons",
+      "Gunneridae",
+      "Pentapetalae",
+      "rosids",
+      "malvids",
+      "Brassicales",
+      "Brassicaceae",
+      "Camelineae",
+      "Arabidopsis"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "CDT1-like protein a, chloroplastic"
+      },
+      "shortNames": [
+        {
+          "value": "AtCDT1a"
+        }
+      ]
+    },
+    "flag": "Precursor"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "CDT1A"
+      },
+      "orderedLocusNames": [
+        {
+          "value": "At2g31270"
+        }
+      ],
+      "orfNames": [
+        {
+          "value": "F16D14.11"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "15316110"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "15928083"
+            }
+          ],
+          "value": "Member of the pre-replication complex. Component of the plastid division machinery. Promotes polyloidization and regulates endoreduplication. Involved in the coordination of cell and plastid division"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "value": "Binds to ARC6"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "INTERACTION",
+      "interactions": [
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "Q9SJW9",
+            "intActId": "EBI-8079732"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "B7U179",
+            "geneName": "ABAP1",
+            "intActId": "EBI-541722"
+          },
+          "numberOfExperiments": 3,
+          "organismDiffer": false
+        }
+      ]
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "15928083"
+              }
+            ],
+            "value": "Plastid, chloroplast",
+            "id": "SL-0049"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "15316110"
+            }
+          ],
+          "value": "Expressed in proliferating (e.g. shoot and root apical meristems, organ primordia) and endoreplicating cells (e.g. guard cells and stomatal lineage, developing trichomes)"
+        }
+      ],
+      "commentType": "TISSUE SPECIFICITY"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "15316110"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "18818695"
+            }
+          ],
+          "value": "Repressed by abscisic acid (ABA) and ABAP1. Degraded by the proteasome"
+        }
+      ],
+      "commentType": "INDUCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "15316110"
+            }
+          ],
+          "value": "Phosphorylated by cyclin D- and cyclin A-containing CDKA-1, and thus targeted to proteasome-mediated proteolysis"
+        }
+      ],
+      "commentType": "PTM"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the Cdt1 family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Transit peptide",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 79,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Chloroplast",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 80,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 571,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "CDT1-like protein a, chloroplastic",
+      "featureId": "PRO_0000406938"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 110,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 288,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 315,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 22,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 38,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Polar residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 81,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 96,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Low complexity",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 288,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 302,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Polar residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 303,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 315,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Low complexity",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 114,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 114,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 1; CAD13172",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "K",
+        "alternativeSequences": [
+          "R"
+        ]
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0131",
+      "category": "Biological process",
+      "name": "Cell cycle"
+    },
+    {
+      "id": "KW-0150",
+      "category": "Cellular component",
+      "name": "Chloroplast"
+    },
+    {
+      "id": "KW-0235",
+      "category": "Biological process",
+      "name": "DNA replication"
+    },
+    {
+      "id": "KW-0597",
+      "category": "PTM",
+      "name": "Phosphoprotein"
+    },
+    {
+      "id": "KW-0934",
+      "category": "Cellular component",
+      "name": "Plastid"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0809",
+      "category": "Domain",
+      "name": "Transit peptide"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "15316110",
+        "citationType": "journal article",
+        "authors": [
+          "del Mar Castellano M.",
+          "Boniotti M.B.",
+          "Caro E.",
+          "Schnittger A.",
+          "Gutierrez C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15316110"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1105/tpc.104.022400"
+          }
+        ],
+        "title": "DNA replication licensing affects cell proliferation or endoreplication in a cell type-specific manner.",
+        "publicationDate": "2004",
+        "journal": "Plant Cell",
+        "firstPage": "2380",
+        "lastPage": "2393",
+        "volume": "16"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [MRNA]",
+        "FUNCTION",
+        "INTERACTION WITH CDC6 AND CDKA-1",
+        "TISSUE SPECIFICITY",
+        "INDUCTION BY ABSCISIC ACID",
+        "PHOSPHORYLATION"
+      ],
+      "referenceComments": [
+        {
+          "value": "cv. Columbia",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "10617197",
+        "citationType": "journal article",
+        "authors": [
+          "Lin X.",
+          "Kaul S.",
+          "Rounsley S.D.",
+          "Shea T.P.",
+          "Benito M.-I.",
+          "Town C.D.",
+          "Fujii C.Y.",
+          "Mason T.M.",
+          "Bowman C.L.",
+          "Barnstead M.E.",
+          "Feldblyum T.V.",
+          "Buell C.R.",
+          "Ketchum K.A.",
+          "Lee J.J.",
+          "Ronning C.M.",
+          "Koo H.L.",
+          "Moffat K.S.",
+          "Cronin L.A.",
+          "Shen M.",
+          "Pai G.",
+          "Van Aken S.",
+          "Umayam L.",
+          "Tallon L.J.",
+          "Gill J.E.",
+          "Adams M.D.",
+          "Carrera A.J.",
+          "Creasy T.H.",
+          "Goodman H.M.",
+          "Somerville C.R.",
+          "Copenhaver G.P.",
+          "Preuss D.",
+          "Nierman W.C.",
+          "White O.",
+          "Eisen J.A.",
+          "Salzberg S.L.",
+          "Fraser C.M.",
+          "Venter J.C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "10617197"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/45471"
+          }
+        ],
+        "title": "Sequence and analysis of chromosome 2 of the plant Arabidopsis thaliana.",
+        "publicationDate": "1999",
+        "journal": "Nature",
+        "firstPage": "761",
+        "lastPage": "768",
+        "volume": "402"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "cv. Columbia",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "27862469",
+        "citationType": "journal article",
+        "authors": [
+          "Cheng C.Y.",
+          "Krishnakumar V.",
+          "Chan A.P.",
+          "Thibaud-Nissen F.",
+          "Schobel S.",
+          "Town C.D."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "27862469"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1111/tpj.13415"
+          }
+        ],
+        "title": "Araport11: a complete reannotation of the Arabidopsis thaliana reference genome.",
+        "publicationDate": "2017",
+        "journal": "Plant J.",
+        "firstPage": "789",
+        "lastPage": "804",
+        "volume": "89"
+      },
+      "referencePositions": [
+        "GENOME REANNOTATION"
+      ],
+      "referenceComments": [
+        {
+          "value": "cv. Columbia",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "CI-CI4AM1G71UC0S",
+        "citationType": "submission",
+        "authoringGroup": [
+          "The Arabidopsis Information Resource (TAIR)"
+        ],
+        "title": "Community-consensus reference genome of Arabidopsis thaliana Col-0.",
+        "publicationDate": "FEB-2026",
+        "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+      },
+      "referencePositions": [
+        "GENOME REANNOTATION"
+      ],
+      "referenceComments": [
+        {
+          "value": "cv. Columbia",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "12481096",
+        "citationType": "journal article",
+        "authors": [
+          "Xiao Y.-L.",
+          "Malik M.",
+          "Whitelaw C.A.",
+          "Town C.D."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "12481096"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1104/pp.010207"
+          }
+        ],
+        "title": "Cloning and sequencing of cDNAs for hypothetical genes from chromosome 2 of Arabidopsis.",
+        "publicationDate": "2002",
+        "journal": "Plant Physiol.",
+        "firstPage": "2118",
+        "lastPage": "2128",
+        "volume": "130"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "cv. Columbia",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "15928083",
+        "citationType": "journal article",
+        "authors": [
+          "Raynaud C.",
+          "Perennes C.",
+          "Reuzeau C.",
+          "Catrice O.",
+          "Brown S.",
+          "Bergounioux C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15928083"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1073/pnas.0502564102"
+          }
+        ],
+        "title": "Cell and plastid division are coordinated through the prereplication factor AtCDT1.",
+        "publicationDate": "2005",
+        "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+        "firstPage": "8216",
+        "lastPage": "8221",
+        "volume": "102"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "INTERACTION WITH ARC6",
+        "SUBCELLULAR LOCATION"
+      ],
+      "referenceComments": [
+        {
+          "value": "cv. Wassilewskija",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 7,
+      "citation": {
+        "id": "18818695",
+        "citationType": "journal article",
+        "authors": [
+          "Masuda H.P.",
+          "Cabral L.M.",
+          "De Veylder L.",
+          "Tanurdzic M.",
+          "de Almeida Engler J.",
+          "Geelen D.",
+          "Inze D.",
+          "Martienssen R.A.",
+          "Ferreira P.C.",
+          "Hemerly A.S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "18818695"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/emboj.2008.191"
+          }
+        ],
+        "title": "ABAP1 is a novel plant Armadillo BTB protein involved in DNA replication and transcription.",
+        "publicationDate": "2008",
+        "journal": "EMBO J.",
+        "firstPage": "2746",
+        "lastPage": "2756",
+        "volume": "27"
+      },
+      "referencePositions": [
+        "INDUCTION BY ABAP1"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AJ421408",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAD13172.2"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AC006593",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAD20672.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "CP002685",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AEC08516.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "OZ408684",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAO7037013.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AY131998",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAM96888.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "F84718",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "F84718"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_180685.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NM_128683.4"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q9SJW9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "Q9SJW9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BioGRID",
+      "id": "3032",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "3"
+        }
+      ]
+    },
+    {
+      "database": "FunCoup",
+      "id": "Q9SJW9",
+      "properties": [
+        {
+          "key": "Number of interactors",
+          "value": "391"
+        }
+      ]
+    },
+    {
+      "database": "IntAct",
+      "id": "Q9SJW9",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "3702.Q9SJW9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GlyGen",
+      "id": "Q9SJW9",
+      "properties": [
+        {
+          "key": "glycosylation",
+          "value": "2 sites"
+        }
+      ]
+    },
+    {
+      "database": "iPTMnet",
+      "id": "Q9SJW9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "MetOSite",
+      "id": "Q9SJW9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PaxDb",
+      "id": "3702-Q9SJW9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "ProteomicsDB",
+      "id": "224470",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "817684",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "ath:AT2G31270",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Araport",
+      "id": "AT2G31270",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "TAIR",
+      "id": "AT2G31270",
+      "properties": [
+        {
+          "key": "GeneName",
+          "value": "CDT1A"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "KOG4762",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Eukaryota"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_019037_1_0_1",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "InParanoid",
+      "id": "Q9SJW9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AAKQHMH",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PhylomeDB",
+      "id": "Q9SJW9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PRO",
+      "id": "PR:Q9SJW9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000006548",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome 2"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP001984100",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome 2"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009507",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:chloroplast"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "15928083"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005634",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:nucleus"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:TAIR"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "15928083"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0004693",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:cyclin-dependent protein serine/threonine kinase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISS:TAIR"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "PubMed",
+          "id": "15358564"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0003677",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:DNA binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0070182",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:DNA polymerase binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IPI:TAIR"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000353",
+          "source": "PubMed",
+          "id": "22773747"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0019901",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:protein kinase binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IPI:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000353",
+          "source": "PubMed",
+          "id": "15316110"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009658",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:chloroplast organization"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:TAIR"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "15928083"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0051276",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:chromosome organization"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:TAIR"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "22773747"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0006260",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:DNA replication"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:TAIR"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "15928083"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0000076",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:DNA replication checkpoint signaling"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0071163",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:DNA replication preinitiation complex assembly"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0048229",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:gametophyte development"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:TAIR"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "22773747"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0000278",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:mitotic cell cycle"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0030174",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:regulation of DNA-templated DNA replication initiation"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd08767",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cdt1_c"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd08674",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cdt1_m"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "1.10.10.1420:FF:000003",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CDT1-like protein a chloroplastic"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.10.10.1420",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "DNA replication factor Cdt1, C-terminal WH domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR045173",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cdt1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR032054",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cdt1_C"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR038090",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cdt1_C_WH_dom_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR014939",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CDT1_Gemini-bd-like"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036390",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "WH_DNA-bd_sf"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR28637",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "DNA REPLICATION FACTOR CDT1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR28637:SF1",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "DNA REPLICATION FACTOR CDT1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF08839",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CDT1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF16679",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CDT1_C"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM01075",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CDT1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF46785",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Winged helix' DNA-binding domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MSTPGSSRSIPFKSKKRLVMDSPSSKSQTGNPNPSSVALPTPEKPLENMLSRSRNRSVALSVKEIRQAAGSRRRSEDPVASSAKSRLFFDSSSSSPSKRKSSNKNAEKEKLPEKYENLGKFFEALDNSMLLSKLRGSKPTFSNISKQIEHLTERRFCYSHLAQIKHILPEAIEIKRVLIHDETTCCMKPDLHVTLNADAVEYNDKSKSESKKIALRKVFRARLADFVKAHPQGDEVPEEPLPEPFNRRKPVENSNVEVKRVSSLMEEMASIPASKLFSSPITSTPVKTTSSLAKPTSSQINIAPTPTKPTSTPAKQTLSEINILPTPVKPVSTLAKFPSTPAIIDSTPVITATPPEFASTPARLMSTSLAARPLKRSNGHTNPDDISADPPTKLVRRSLSLNFDSYPEDERTMDFTDDIPIDQVPEEDVSSDDEILSILPDKLRHAIKEQERKAIEDQNPAISLAKRRRKMIACLPKLFNVIHYLIQSIRRWVITKEELVHKIIAGHSDITDRKEVEEQLILLQEIVPEWMSEKKSSSGDVLVCINKLASPLTIRSRLEEENKQEMAPLLS",
+    "length": 571,
+    "molWeight": 63740,
+    "crc64": "33455EBE4874E517",
+    "md5": "6D9AC59189EC81CB04394EBCC4724899"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBUNIT": 1,
+      "INTERACTION": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "TISSUE SPECIFICITY": 1,
+      "INDUCTION": 1,
+      "PTM": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Transit peptide": 1,
+      "Chain": 1,
+      "Region": 2,
+      "Compositional bias": 4,
+      "Sequence conflict": 1
+    },
+    "uniParcId": "UPI00000A995F"
+  }
+}

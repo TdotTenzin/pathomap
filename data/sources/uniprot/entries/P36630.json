@@ -1,0 +1,2118 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "P36630",
+  "uniProtkbId": "CG22_SCHPO",
+  "entryAudit": {
+    "firstPublicDate": "1994-06-01",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "1995-02-01",
+    "entryVersion": 188,
+    "sequenceVersion": 2
+  },
+  "annotationScore": 5.0,
+  "organism": {
+    "scientificName": "Schizosaccharomyces pombe (strain 972 / ATCC 24843)",
+    "commonName": "Fission yeast",
+    "taxonId": 284812,
+    "lineage": [
+      "Eukaryota",
+      "Fungi",
+      "Dikarya",
+      "Ascomycota",
+      "Taphrinomycotina",
+      "Schizosaccharomycetes",
+      "Schizosaccharomycetales",
+      "Schizosaccharomycetaceae",
+      "Schizosaccharomyces"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "G2/mitotic-specific cyclin cig2"
+      }
+    }
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "cig2"
+      },
+      "synonyms": [
+        {
+          "value": "cyc17"
+        }
+      ],
+      "orfNames": [
+        {
+          "value": "SPAPB2B4.03"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11163211"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11781565"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "14970237"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "7909513"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "8264644"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "8455610"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "8657126"
+            }
+          ],
+          "value": "Essential for the control of the cell cycle at the G2/M and G1/S (mitosis) transition. Interacts with the cdc2 protein kinase to form MPF. Interaction with res2 promotes the phosphorylation of res1 and inhibits MBF-dependent gene transcription. Forms an autoregulating feedback-inhibition loop with MBF which is important for normal regulation of the cell cycle. G2/M cyclins accumulate steadily during G2 and are abruptly destroyed at mitosis. Negatively regulates conjugation via interacting with cell cycle 'start' genes. Degraded by skp1, pop1 and pop2 in the G2 and M phases of the cell cycle"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11163211"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11781565"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "14970237"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "8455610"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "9614176"
+            }
+          ],
+          "value": "Associates with cdc2, res2 and rum1. Interacts with pop1 only when phosphorylated"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "INTERACTION",
+      "interactions": [
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "P36630",
+            "intActId": "EBI-1149212"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "P87060",
+            "geneName": "pop1",
+            "intActId": "EBI-1185389"
+          },
+          "numberOfExperiments": 4,
+          "organismDiffer": false
+        },
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "P36630",
+            "intActId": "EBI-1149212"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "P33520",
+            "geneName": "res1",
+            "intActId": "EBI-1149288"
+          },
+          "numberOfExperiments": 3,
+          "organismDiffer": false
+        },
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "P36630",
+            "intActId": "EBI-1149212"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "P41412",
+            "geneName": "res2",
+            "intActId": "EBI-1149177"
+          },
+          "numberOfExperiments": 3,
+          "organismDiffer": false
+        },
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "P36630",
+            "intActId": "EBI-1149212"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "P40380",
+            "geneName": "rum1",
+            "intActId": "EBI-1187892"
+          },
+          "numberOfExperiments": 2,
+          "organismDiffer": false
+        }
+      ]
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "value": "Nucleus",
+            "id": "SL-0191"
+          }
+        },
+        {
+          "location": {
+            "value": "Cytoplasm, cytoskeleton, microtubule organizing center, spindle pole body",
+            "id": "SL-0252"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "7909513"
+            }
+          ],
+          "value": "Highly induced upon nitrogen starvation and during conjugation"
+        }
+      ],
+      "commentType": "INDUCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11163211"
+            }
+          ],
+          "value": "Phosphorylated"
+        }
+      ],
+      "commentType": "PTM"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the cyclin family. Cyclin AB subfamily"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 411,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "G2/mitotic-specific cyclin cig2",
+      "featureId": "PRO_0000080401"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 139,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 265,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Cyclin N-terminal"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 57,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 89,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 181,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 273,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Interaction with pop1"
+    },
+    {
+      "type": "Motif",
+      "location": {
+        "start": {
+          "value": 51,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 60,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Destruction box"
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 64,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 78,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Basic and acidic residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 51,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 51,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Improves protein stability; when associated with A-54.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "11163211"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "R",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 54,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 54,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Improves protein stability; when associated with A-51.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "11163211"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "L",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 169,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 169,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Prevents binding to cdc2 and improves protein stability; when associated with A-170 and A-171.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "11163211"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "R",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 170,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 170,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Prevents binding to cdc2 and improves protein stability; when associated with A-169 and A-171.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "11163211"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "E",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 171,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 171,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Prevents binding to cdc2 and improves protein stability; when associated with A-169 and A-170.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "11163211"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "I",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 268,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 268,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "No effect on protein stability; when associated with A-329.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "11163211"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "S",
+        "alternativeSequences": [
+          "N"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 329,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 329,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "No effect on protein stability; when associated with N-268.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "11163211"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "T",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 49,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 1; CAA49640",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "MALYSISKPVGSKINKHSYQDENTLVGKQALSKGTEKTKLSTNFEINLP",
+        "alternativeSequences": [
+          "MKTHLLANKLYQKGLRRQNYLQICKLICHA"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 119,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 124,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 1; CAA49640",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "VSNVDD",
+        "alternativeSequences": [
+          "ALMLMN"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 315,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 315,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 1; CAA49640",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {}
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 330,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 330,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 1; CAA49640",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "P",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 411,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 411,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 1; CAA49640",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "H",
+        "alternativeSequences": [
+          "QRTLL"
+        ]
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0131",
+      "category": "Biological process",
+      "name": "Cell cycle"
+    },
+    {
+      "id": "KW-0132",
+      "category": "Biological process",
+      "name": "Cell division"
+    },
+    {
+      "id": "KW-0184",
+      "category": "Biological process",
+      "name": "Conjugation"
+    },
+    {
+      "id": "KW-0195",
+      "category": "Molecular function",
+      "name": "Cyclin"
+    },
+    {
+      "id": "KW-0963",
+      "category": "Cellular component",
+      "name": "Cytoplasm"
+    },
+    {
+      "id": "KW-0206",
+      "category": "Cellular component",
+      "name": "Cytoskeleton"
+    },
+    {
+      "id": "KW-0498",
+      "category": "Biological process",
+      "name": "Mitosis"
+    },
+    {
+      "id": "KW-0539",
+      "category": "Cellular component",
+      "name": "Nucleus"
+    },
+    {
+      "id": "KW-0597",
+      "category": "PTM",
+      "name": "Phosphoprotein"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "8455610",
+        "citationType": "journal article",
+        "authors": [
+          "Bueno A.",
+          "Russell P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8455610"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/mcb.13.4.2286-2297.1993"
+          }
+        ],
+        "title": "Two fission yeast B-type cyclins, cig2 and Cdc13, have different functions in mitosis.",
+        "publicationDate": "1993",
+        "journal": "Mol. Cell. Biol.",
+        "firstPage": "2286",
+        "lastPage": "2297",
+        "volume": "13"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [MRNA]",
+        "FUNCTION",
+        "INTERACTION WITH CDC2"
+      ],
+      "referenceComments": [
+        {
+          "value": "972 / ATCC 24843",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "CI-E0CL23GQ2J13R",
+        "citationType": "journal article",
+        "authors": [
+          "Bueno A.",
+          "Russell P."
+        ],
+        "publicationDate": "1994",
+        "journal": "Mol. Cell. Biol.",
+        "firstPage": "869",
+        "lastPage": "869",
+        "volume": "14"
+      },
+      "referencePositions": [
+        "ERRATUM OF PUBMED:8455610"
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "7909513",
+        "citationType": "journal article",
+        "authors": [
+          "Obara-Ishihara T.",
+          "Okayama H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "7909513"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1002/j.1460-2075.1994.tb06455.x"
+          }
+        ],
+        "title": "A B-type cyclin negatively regulates conjugation via interacting with cell cycle 'start' genes in fission yeast.",
+        "publicationDate": "1994",
+        "journal": "EMBO J.",
+        "firstPage": "1863",
+        "lastPage": "1872",
+        "volume": "13"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [MRNA]",
+        "FUNCTION",
+        "INDUCTION"
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "8264644",
+        "citationType": "journal article",
+        "authors": [
+          "Connolly T.",
+          "Beach D."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8264644"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/mcb.14.1.768-776.1994"
+          }
+        ],
+        "title": "Interaction between the Cig1 and Cig2 B-type cyclins in the fission yeast cell cycle.",
+        "publicationDate": "1994",
+        "journal": "Mol. Cell. Biol.",
+        "firstPage": "768",
+        "lastPage": "776",
+        "volume": "14"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [MRNA]",
+        "FUNCTION"
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "11859360",
+        "citationType": "journal article",
+        "authors": [
+          "Wood V.",
+          "Gwilliam R.",
+          "Rajandream M.A.",
+          "Lyne M.H.",
+          "Lyne R.",
+          "Stewart A.",
+          "Sgouros J.G.",
+          "Peat N.",
+          "Hayles J.",
+          "Baker S.G.",
+          "Basham D.",
+          "Bowman S.",
+          "Brooks K.",
+          "Brown D.",
+          "Brown S.",
+          "Chillingworth T.",
+          "Churcher C.M.",
+          "Collins M.",
+          "Connor R.",
+          "Cronin A.",
+          "Davis P.",
+          "Feltwell T.",
+          "Fraser A.",
+          "Gentles S.",
+          "Goble A.",
+          "Hamlin N.",
+          "Harris D.E.",
+          "Hidalgo J.",
+          "Hodgson G.",
+          "Holroyd S.",
+          "Hornsby T.",
+          "Howarth S.",
+          "Huckle E.J.",
+          "Hunt S.",
+          "Jagels K.",
+          "James K.D.",
+          "Jones L.",
+          "Jones M.",
+          "Leather S.",
+          "McDonald S.",
+          "McLean J.",
+          "Mooney P.",
+          "Moule S.",
+          "Mungall K.L.",
+          "Murphy L.D.",
+          "Niblett D.",
+          "Odell C.",
+          "Oliver K.",
+          "O'Neil S.",
+          "Pearson D.",
+          "Quail M.A.",
+          "Rabbinowitsch E.",
+          "Rutherford K.M.",
+          "Rutter S.",
+          "Saunders D.",
+          "Seeger K.",
+          "Sharp S.",
+          "Skelton J.",
+          "Simmonds M.N.",
+          "Squares R.",
+          "Squares S.",
+          "Stevens K.",
+          "Taylor K.",
+          "Taylor R.G.",
+          "Tivey A.",
+          "Walsh S.V.",
+          "Warren T.",
+          "Whitehead S.",
+          "Woodward J.R.",
+          "Volckaert G.",
+          "Aert R.",
+          "Robben J.",
+          "Grymonprez B.",
+          "Weltjens I.",
+          "Vanstreels E.",
+          "Rieger M.",
+          "Schaefer M.",
+          "Mueller-Auer S.",
+          "Gabel C.",
+          "Fuchs M.",
+          "Duesterhoeft A.",
+          "Fritzc C.",
+          "Holzer E.",
+          "Moestl D.",
+          "Hilbert H.",
+          "Borzym K.",
+          "Langer I.",
+          "Beck A.",
+          "Lehrach H.",
+          "Reinhardt R.",
+          "Pohl T.M.",
+          "Eger P.",
+          "Zimmermann W.",
+          "Wedler H.",
+          "Wambutt R.",
+          "Purnelle B.",
+          "Goffeau A.",
+          "Cadieu E.",
+          "Dreano S.",
+          "Gloux S.",
+          "Lelaure V.",
+          "Mottier S.",
+          "Galibert F.",
+          "Aves S.J.",
+          "Xiang Z.",
+          "Hunt C.",
+          "Moore K.",
+          "Hurst S.M.",
+          "Lucas M.",
+          "Rochet M.",
+          "Gaillardin C.",
+          "Tallada V.A.",
+          "Garzon A.",
+          "Thode G.",
+          "Daga R.R.",
+          "Cruzado L.",
+          "Jimenez J.",
+          "Sanchez M.",
+          "del Rey F.",
+          "Benito J.",
+          "Dominguez A.",
+          "Revuelta J.L.",
+          "Moreno S.",
+          "Armstrong J.",
+          "Forsburg S.L.",
+          "Cerutti L.",
+          "Lowe T.",
+          "McCombie W.R.",
+          "Paulsen I.",
+          "Potashkin J.",
+          "Shpakovski G.V.",
+          "Ussery D.",
+          "Barrell B.G.",
+          "Nurse P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11859360"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/nature724"
+          }
+        ],
+        "title": "The genome sequence of Schizosaccharomyces pombe.",
+        "publicationDate": "2002",
+        "journal": "Nature",
+        "firstPage": "871",
+        "lastPage": "880",
+        "volume": "415"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "972 / ATCC 24843",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "8657126",
+        "citationType": "journal article",
+        "authors": [
+          "Mondesert O.",
+          "McGowan C.H.",
+          "Russell P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8657126"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/mcb.16.4.1527"
+          }
+        ],
+        "title": "Cig2, a B-type cyclin, promotes the onset of S in Schizosaccharomyces pombe.",
+        "publicationDate": "1996",
+        "journal": "Mol. Cell. Biol.",
+        "firstPage": "1527",
+        "lastPage": "1533",
+        "volume": "16"
+      },
+      "referencePositions": [
+        "FUNCTION"
+      ]
+    },
+    {
+      "referenceNumber": 7,
+      "citation": {
+        "id": "8855663",
+        "citationType": "journal article",
+        "authors": [
+          "Stern B.",
+          "Nurse P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8855663"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/s0168-9525(96)80016-3"
+          }
+        ],
+        "title": "A quantitative model for the cdc2 control of S phase and mitosis in fission yeast.",
+        "publicationDate": "1996",
+        "journal": "Trends Genet.",
+        "firstPage": "345",
+        "lastPage": "350",
+        "volume": "12"
+      },
+      "referencePositions": [
+        "REVIEW ON ASSOCIATION WITH CDC2"
+      ]
+    },
+    {
+      "referenceNumber": 8,
+      "citation": {
+        "id": "9614176",
+        "citationType": "journal article",
+        "authors": [
+          "Stern B.",
+          "Nurse P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9614176"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1091/mbc.9.6.1309"
+          }
+        ],
+        "title": "Cyclin B proteolysis and the cyclin-dependent kinase inhibitor rum1p are required for pheromone-induced G1 arrest in fission yeast.",
+        "publicationDate": "1998",
+        "journal": "Mol. Biol. Cell",
+        "firstPage": "1309",
+        "lastPage": "1321",
+        "volume": "9"
+      },
+      "referencePositions": [
+        "INTERACTION WITH RUM1"
+      ]
+    },
+    {
+      "referenceNumber": 9,
+      "citation": {
+        "id": "11163211",
+        "citationType": "journal article",
+        "authors": [
+          "Yamano H.",
+          "Kitamura K.",
+          "Kominami K.",
+          "Lehmann A.",
+          "Hunt T.",
+          "Toda T."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11163211"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/s1097-2765(00)00135-0"
+          }
+        ],
+        "title": "The spike of S phase cyclin Cig2 expression at the G1-S border in fission yeast requires both APC and SCF ubiquitin ligases.",
+        "publicationDate": "2000",
+        "journal": "Mol. Cell",
+        "firstPage": "1377",
+        "lastPage": "1387",
+        "volume": "6"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "INTERACTION WITH CDC2",
+        "SUBCELLULAR LOCATION",
+        "PHOSPHORYLATION",
+        "DESTRUCTION BOX MOTIF",
+        "MUTAGENESIS OF ARG-51; LEU-54; ARG-169; GLU-170; ILE-171; SER-268 AND THR-329"
+      ]
+    },
+    {
+      "referenceNumber": 10,
+      "citation": {
+        "id": "11781565",
+        "citationType": "journal article",
+        "authors": [
+          "Ayte J.",
+          "Schweitzer C.",
+          "Zarzov P.",
+          "Nurse P.",
+          "DeCaprio J.A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11781565"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/ncb1201-1043"
+          }
+        ],
+        "title": "Feedback regulation of the MBF transcription factor by cyclin Cig2.",
+        "publicationDate": "2001",
+        "journal": "Nat. Cell Biol.",
+        "firstPage": "1043",
+        "lastPage": "1050",
+        "volume": "3"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "INTERACTION WITH RES2"
+      ]
+    },
+    {
+      "referenceNumber": 11,
+      "citation": {
+        "id": "14970237",
+        "citationType": "journal article",
+        "authors": [
+          "Yamano H.",
+          "Kominami K.",
+          "Harrison C.",
+          "Kitamura K.",
+          "Katayama S.",
+          "Dhut S.",
+          "Hunt T.",
+          "Toda T."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "14970237"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1074/jbc.m311060200"
+          }
+        ],
+        "title": "Requirement of the SCFPop1/Pop2 ubiquitin ligase for degradation of the fission yeast S phase cyclin Cig2.",
+        "publicationDate": "2004",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "18974",
+        "lastPage": "18980",
+        "volume": "279"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "INTERACTION WITH POP1"
+      ]
+    },
+    {
+      "referenceNumber": 12,
+      "citation": {
+        "id": "16823372",
+        "citationType": "journal article",
+        "authors": [
+          "Matsuyama A.",
+          "Arai R.",
+          "Yashiroda Y.",
+          "Shirai A.",
+          "Kamata A.",
+          "Sekido S.",
+          "Kobayashi Y.",
+          "Hashimoto A.",
+          "Hamamoto M.",
+          "Hiraoka Y.",
+          "Horinouchi S.",
+          "Yoshida M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "16823372"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/nbt1222"
+          }
+        ],
+        "title": "ORFeome cloning and global analysis of protein localization in the fission yeast Schizosaccharomyces pombe.",
+        "publicationDate": "2006",
+        "journal": "Nat. Biotechnol.",
+        "firstPage": "841",
+        "lastPage": "847",
+        "volume": "24"
+      },
+      "referencePositions": [
+        "SUBCELLULAR LOCATION [LARGE SCALE ANALYSIS]"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "X70046",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAA49640.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "D28751",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "BAA05943.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "S67490",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAB29297.2"
+        },
+        {
+          "key": "Status",
+          "value": "ALT_SEQ"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "CU329670",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAC21469.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "A48100",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "A48100"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "S44344",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "S44344"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "T52009",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "T52009"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_593889.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NM_001019319.3"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "P36630",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "P36630",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BioGRID",
+      "id": "279901",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "40"
+        }
+      ]
+    },
+    {
+      "database": "FunCoup",
+      "id": "P36630",
+      "properties": [
+        {
+          "key": "Number of interactors",
+          "value": "832"
+        }
+      ]
+    },
+    {
+      "database": "IntAct",
+      "id": "P36630",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "5"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "284812.P36630",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "iPTMnet",
+      "id": "P36630",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PaxDb",
+      "id": "284812-P36630",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "2543481",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "spo:2543481",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PomBase",
+      "id": "SPAPB2B4.03",
+      "properties": [
+        {
+          "key": "GeneName",
+          "value": "cig2"
+        }
+      ]
+    },
+    {
+      "database": "VEuPathDB",
+      "id": "FungiDB:SPAPB2B4.03",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "KOG0653",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Eukaryota"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_020695_2_0_1",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "InParanoid",
+      "id": "P36630",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "ACSLTKF",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PhylomeDB",
+      "id": "P36630",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PRO",
+      "id": "PR:P36630",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000002485",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome I"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0000785",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:chromatin"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:PomBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "12419251"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0000307",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cyclin-dependent protein kinase holoenzyme complex"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:PomBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "9552380"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005737",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cytoplasm"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005815",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:microtubule organizing center"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0044732",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:mitotic spindle pole body"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "HDA:PomBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007005",
+          "source": "PubMed",
+          "id": "16823372"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005634",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:nucleus"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "HDA:PomBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007005",
+          "source": "PubMed",
+          "id": "16823372"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0061575",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:cyclin-dependent protein serine/threonine kinase activator activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:PomBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "8631306"
+        },
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "8657126"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0016538",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:cyclin-dependent protein serine/threonine kinase regulator activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0000082",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:G1/S transition of mitotic cell cycle"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0031568",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:mitotic G1 cell size control checkpoint signaling"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IGI:PomBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000316",
+          "source": "PubMed",
+          "id": "9552380"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0031138",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:negative regulation of conjugation with cellular fusion"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:PomBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "7909513"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:1900087",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:positive regulation of G1/S transition of mitotic cell cycle"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:PomBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "7909513"
+        },
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "8657126"
+        },
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "9034336"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0110044",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:regulation of cell cycle switching, mitotic to meiotic cell cycle"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:PomBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "26804917"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0010520",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:regulation of reciprocal meiotic recombination"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:PomBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "30640914"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0007089",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:traversing start control point of mitotic cell cycle"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IGI:PomBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000316",
+          "source": "PubMed",
+          "id": "9552380"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd20568",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CYCLIN_CLBs_yeast_rpt1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd20512",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CYCLIN_CLBs_yeast_rpt2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "1.10.472.10:FF:000001",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "G2/mitotic-specific cyclin"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.10.472.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cyclin-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR039361",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cyclin"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR013763",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cyclin-like_dom"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036915",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cyclin-like_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR046965",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cyclin_A/B-like"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR004367",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cyclin_C-dom"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR006671",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cyclin_N"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR048258",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cyclins_cyclin-box"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR10177",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CYCLINS"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF02984",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cyclin_C"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00134",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cyclin_N"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PIRSF",
+      "id": "PIRSF001771",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cyclin_A_B_D_E"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00385",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CYCLIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM01332",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cyclin_C"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF47954",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cyclin-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS00292",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CYCLINS"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MALYSISKPVGSKINKHSYQDENTLVGKQALSKGTEKTKLSTNFEINLPRRTVLSDVSNVGKNNADEKDTKKAKRSFDESNLSTNEEADKPVESKFVKKLKVYSKNADPSVETLQKDRVSNVDDHLSSNPLMAEEYAPEIFEYIRKLDLKCLPNPKYMDQQKELTWKMREILNEWLVEIHSNFCLMPETLYLAVNIIDRFLSRRSCSLSKFQLTGITALLIASKYEEVMCPSIQNFVYMTDGAFTVEDVCVAERYMLNVLNFDLSYPSPLNFLRKISQAEGYDAQTRTLGKYLTEIYLFDHDLLRYPMSKIAAAAMYLSRRLLRRGPWTPKLVESSGGYEEHELKEIAYIMLHYHNKPLEHKAFFQKYSSKRFLKASIFVHQLVRQRYSVNRTDDDDLQSEPSSSLTNDGH",
+    "length": 411,
+    "molWeight": 47477,
+    "crc64": "6F255D2E26C6F8B3",
+    "md5": "637998A6CE33AAF3B783FCC795A570F5"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBUNIT": 1,
+      "INTERACTION": 4,
+      "SUBCELLULAR LOCATION": 1,
+      "INDUCTION": 1,
+      "PTM": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Domain": 1,
+      "Region": 2,
+      "Motif": 1,
+      "Compositional bias": 1,
+      "Mutagenesis": 7,
+      "Sequence conflict": 5
+    },
+    "uniParcId": "UPI000012757C"
+  }
+}

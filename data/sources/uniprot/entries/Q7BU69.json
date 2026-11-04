@@ -1,0 +1,2106 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "Q7BU69",
+  "secondaryAccessions": [
+    "Q52295",
+    "Q6XVV7",
+    "Q7BEL1",
+    "Q8VSF1"
+  ],
+  "uniProtkbId": "VIRA_SHIFL",
+  "entryAudit": {
+    "firstPublicDate": "2007-08-21",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2004-07-05",
+    "entryVersion": 124,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 4.0,
+  "organism": {
+    "scientificName": "Shigella flexneri",
+    "taxonId": 623,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Gammaproteobacteria",
+      "Enterobacterales",
+      "Enterobacteriaceae",
+      "Shigella"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Cysteine protease-like VirA"
+      },
+      "ecNumbers": [
+        {
+          "value": "3.4.22.-"
+        }
+      ]
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "Effector protein VirA"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "virA"
+      },
+      "orderedLocusNames": [
+        {
+          "value": "CP0181"
+        }
+      ],
+      "orfNames": [
+        {
+          "value": "pWR501_0191"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "12065406"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "17095701"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "7494473"
+            }
+          ],
+          "value": "Alpha-tubulin-specific protease that is required for entry into epithelial cells and for subsequent intra- and intercellular spreading. Contributes to bacterial entry into epithelial cells by inducing microtubule (MT) destabilization and the formation of membrane ruffles. The membrane ruffling evoked by VirA results from the activation of host rac1, which is associated with the destruction of MT networks. Creates a tunnel inside the host cell cytoplasm by breaking down the microtubule infrastructure. This facilitates the bacterium's movement through the cytoplasm and also helps other bacteria move faster during the invasion of the eukaryotic cell. Is absolutely required for virulence"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "17095701"
+            }
+          ],
+          "value": "Inhibited by the cysteine protease inhibitors leupeptin and cystatin-C"
+        }
+      ],
+      "commentType": "ACTIVITY REGULATION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "12065406"
+            }
+          ],
+          "value": "Monomer. Interacts specifically with alpha tubulin, a major component of microtubule"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "note": {
+        "texts": [
+          {
+            "value": "Translocated into the host cell via the type III secretion system (T3SS). Localizes in the cytoplasm of the infected cell"
+          }
+        ]
+      },
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "11115111"
+              },
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "7494473"
+              }
+            ],
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "12142411"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "15758240"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "9582283"
+            }
+          ],
+          "value": "Transcriptionally activated by VirB and MxiE, in association with IpgC, upon invasion of the eukaryotic cell. Induced at 37 degrees Celsius"
+        }
+      ],
+      "commentType": "INDUCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the protease EspG/VirA family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 400,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Cysteine protease-like VirA",
+      "featureId": "PRO_0000297842"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 224,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 315,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Tubulin-binding domain"
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 34,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 34,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 36,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 36,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in plasmid pINV_F6_M1382",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "I",
+        "alternativeSequences": [
+          "V"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 56,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 56,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in plasmid pINV_F6_M1382",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "H",
+        "alternativeSequences": [
+          "Y"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 173,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 173,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in plasmid pINV_F6_M1382",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "H",
+        "alternativeSequences": [
+          "P"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 239,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 239,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in plasmid pINV_F6_M1382",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "V",
+        "alternativeSequences": [
+          "L"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 34,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 34,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Decreases alpha-tubulin degradation, bacterial motility, and virulence.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "17095701"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "C",
+        "alternativeSequences": [
+          "S"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 8,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 8,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 3; AA sequence",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {}
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 54,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 63,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3EB8"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 65,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 67,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3EE1"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 77,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 83,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3EB8"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 86,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 93,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3EB8"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 96,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 103,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3EB8"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 104,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 106,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3EE1"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 108,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 111,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3EB8"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 114,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 123,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3EB8"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 126,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 129,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "4FMB"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 136,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 141,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3EB8"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 152,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 160,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3EB8"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 163,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 165,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3EB8"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 169,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 171,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3EB8"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 176,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 181,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3EB8"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 182,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 191,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3EB8"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 193,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 195,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3EB8"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 199,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 202,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3EB8"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 205,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 207,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3EE1"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 209,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 218,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3EB8"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 222,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 224,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3EE1"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 231,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 235,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3EB8"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 236,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 246,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3EB8"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 252,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 263,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3EB8"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 268,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 276,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3EB8"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 280,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 283,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3EB8"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 287,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 307,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3EB8"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 315,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 325,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3EB8"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 342,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 354,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3EB8"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 357,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 369,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3EB8"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 377,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 383,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3EB8"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 386,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 388,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3EB8"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 390,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 398,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3EB8"
+        }
+      ]
+    }
+  ],
+  "geneLocations": [
+    {
+      "value": "pWR100",
+      "geneEncodingType": "Plasmid"
+    },
+    {
+      "value": "pWR501",
+      "geneEncodingType": "Plasmid"
+    },
+    {
+      "value": "pCP301",
+      "geneEncodingType": "Plasmid"
+    },
+    {
+      "value": "pMYSH6000",
+      "geneEncodingType": "Plasmid"
+    },
+    {
+      "value": "pINV_F6_M1382",
+      "geneEncodingType": "Plasmid"
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0002",
+      "category": "Technical term",
+      "name": "3D-structure"
+    },
+    {
+      "id": "KW-0903",
+      "category": "Technical term",
+      "name": "Direct protein sequencing"
+    },
+    {
+      "id": "KW-0378",
+      "category": "Molecular function",
+      "name": "Hydrolase"
+    },
+    {
+      "id": "KW-0614",
+      "category": "Technical term",
+      "name": "Plasmid"
+    },
+    {
+      "id": "KW-0645",
+      "category": "Molecular function",
+      "name": "Protease"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0788",
+      "category": "Molecular function",
+      "name": "Thiol protease"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "7494473",
+        "citationType": "journal article",
+        "authors": [
+          "Uchiya K.",
+          "Tobe T.",
+          "Komatsu K.",
+          "Suzuki T.",
+          "Watarai M.",
+          "Fukuda I.",
+          "Yoshikawa M.",
+          "Sasakawa C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "7494473"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1111/j.1365-2958.1995.mmi_17020241.x"
+          }
+        ],
+        "title": "Identification of a novel virulence gene, virA, on the large plasmid of Shigella, involved in invasion and intercellular spreading.",
+        "publicationDate": "1995",
+        "journal": "Mol. Microbiol.",
+        "firstPage": "241",
+        "lastPage": "250",
+        "volume": "17"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]",
+        "FUNCTION",
+        "SUBCELLULAR LOCATION",
+        "REGULATION BY VIRB"
+      ],
+      "referenceComments": [
+        {
+          "value": "YSH6000 / Serotype 2a",
+          "type": "STRAIN"
+        },
+        {
+          "value": "pMYSH6000",
+          "type": "PLASMID"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "9582283",
+        "citationType": "journal article",
+        "authors": [
+          "Demers B.",
+          "Sansonetti P.J.",
+          "Parsot C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9582283"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1093/emboj/17.10.2894"
+          }
+        ],
+        "title": "Induction of type III secretion in Shigella flexneri is associated with differential control of transcription of genes encoding secreted proteins.",
+        "publicationDate": "1998",
+        "journal": "EMBO J.",
+        "firstPage": "2894",
+        "lastPage": "2903",
+        "volume": "17"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]",
+        "PROTEIN SEQUENCE OF 1-10; 40-53 AND 134-144",
+        "TRANSCRIPTIONAL REGULATION"
+      ],
+      "referenceComments": [
+        {
+          "value": "M90T / Serotype 5a",
+          "type": "STRAIN"
+        },
+        {
+          "value": "pWR100",
+          "type": "PLASMID"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "11115111",
+        "citationType": "journal article",
+        "authors": [
+          "Buchrieser C.",
+          "Glaser P.",
+          "Rusniok C.",
+          "Nedjari H.",
+          "d'Hauteville H.",
+          "Kunst F.",
+          "Sansonetti P.J.",
+          "Parsot C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11115111"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1046/j.1365-2958.2000.02179.x"
+          }
+        ],
+        "title": "The virulence plasmid pWR100 and the repertoire of proteins secreted by the type III secretion apparatus of Shigella flexneri.",
+        "publicationDate": "2000",
+        "journal": "Mol. Microbiol.",
+        "firstPage": "760",
+        "lastPage": "771",
+        "volume": "38"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]",
+        "PROTEIN SEQUENCE OF 1-10",
+        "SUBCELLULAR LOCATION"
+      ],
+      "referenceComments": [
+        {
+          "value": "M90T / Serotype 5a",
+          "type": "STRAIN"
+        },
+        {
+          "value": "pWR100",
+          "type": "PLASMID"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "11292750",
+        "citationType": "journal article",
+        "authors": [
+          "Venkatesan M.M.",
+          "Goldberg M.B.",
+          "Rose D.J.",
+          "Grotbeck E.J.",
+          "Burland V.",
+          "Blattner F.R."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11292750"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.69.5.3271-3285.2001"
+          }
+        ],
+        "title": "Complete DNA sequence and analysis of the large virulence plasmid of Shigella flexneri.",
+        "publicationDate": "2001",
+        "journal": "Infect. Immun.",
+        "firstPage": "3271",
+        "lastPage": "3285",
+        "volume": "69"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "M90T / Serotype 5a",
+          "type": "STRAIN"
+        },
+        {
+          "value": "pWR501",
+          "type": "PLASMID"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "14573649",
+        "citationType": "journal article",
+        "authors": [
+          "Lan R.",
+          "Stevenson G.",
+          "Reeves P.R."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "14573649"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.71.11.6298-6306.2003"
+          }
+        ],
+        "title": "Comparison of two major forms of the Shigella virulence plasmid pINV: positive selection is a major force driving the divergence.",
+        "publicationDate": "2003",
+        "journal": "Infect. Immun.",
+        "firstPage": "6298",
+        "lastPage": "6306",
+        "volume": "71"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "M1382 / Serotype 6",
+          "type": "STRAIN"
+        },
+        {
+          "value": "pINV_F6_M1382",
+          "type": "PLASMID"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "12384590",
+        "citationType": "journal article",
+        "authors": [
+          "Jin Q.",
+          "Yuan Z.",
+          "Xu J.",
+          "Wang Y.",
+          "Shen Y.",
+          "Lu W.",
+          "Wang J.",
+          "Liu H.",
+          "Yang J.",
+          "Yang F.",
+          "Zhang X.",
+          "Zhang J.",
+          "Yang G.",
+          "Wu H.",
+          "Qu D.",
+          "Dong J.",
+          "Sun L.",
+          "Xue Y.",
+          "Zhao A.",
+          "Gao Y.",
+          "Zhu J.",
+          "Kan B.",
+          "Ding K.",
+          "Chen S.",
+          "Cheng H.",
+          "Yao Z.",
+          "He B.",
+          "Chen R.",
+          "Ma D.",
+          "Qiang B.",
+          "Wen Y.",
+          "Hou Y.",
+          "Yu J."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "12384590"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1093/nar/gkf566"
+          }
+        ],
+        "title": "Genome sequence of Shigella flexneri 2a: insights into pathogenicity through comparison with genomes of Escherichia coli K12 and O157.",
+        "publicationDate": "2002",
+        "journal": "Nucleic Acids Res.",
+        "firstPage": "4432",
+        "lastPage": "4441",
+        "volume": "30"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "301 / Serotype 2a",
+          "type": "STRAIN"
+        },
+        {
+          "value": "pCP301",
+          "type": "PLASMID"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 7,
+      "citation": {
+        "id": "11971264",
+        "citationType": "journal article",
+        "authors": [
+          "Mavris M.",
+          "Page A.-L.",
+          "Tournebize R.",
+          "Demers B.",
+          "Sansonetti P.J.",
+          "Parsot C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11971264"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1046/j.1365-2958.2002.02836.x"
+          }
+        ],
+        "title": "Regulation of transcription by the activity of the Shigella flexneri type III secretion apparatus.",
+        "publicationDate": "2002",
+        "journal": "Mol. Microbiol.",
+        "firstPage": "1543",
+        "lastPage": "1553",
+        "volume": "43"
+      },
+      "referencePositions": [
+        "TRANSCRIPTIONAL INDUCTION BY MXIE AND IPGC"
+      ],
+      "referenceComments": [
+        {
+          "value": "M90T / Serotype 5a",
+          "type": "STRAIN"
+        },
+        {
+          "value": "pWR100",
+          "type": "PLASMID"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 8,
+      "citation": {
+        "id": "12065406",
+        "citationType": "journal article",
+        "authors": [
+          "Yoshida S.",
+          "Katayama E.",
+          "Kuwae A.",
+          "Mimuro H.",
+          "Suzuki T.",
+          "Sasakawa C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "12065406"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1093/emboj/cdf319"
+          }
+        ],
+        "title": "Shigella deliver an effector protein to trigger host microtubule destabilization, which promotes Rac1 activity and efficient bacterial internalization.",
+        "publicationDate": "2002",
+        "journal": "EMBO J.",
+        "firstPage": "2923",
+        "lastPage": "2935",
+        "volume": "21"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "TUBULIN BINDING",
+        "SUBUNIT"
+      ],
+      "referenceComments": [
+        {
+          "value": "YSH6000 / Serotype 2a",
+          "type": "STRAIN"
+        },
+        {
+          "value": "pMYSH6000",
+          "type": "PLASMID"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 9,
+      "citation": {
+        "id": "12142411",
+        "citationType": "journal article",
+        "authors": [
+          "Kane C.D.",
+          "Schuch R.",
+          "Day W.A. Jr.",
+          "Maurelli A.T."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "12142411"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.184.16.4409-4419.2002"
+          }
+        ],
+        "title": "MxiE regulates intracellular expression of factors secreted by the Shigella flexneri 2a type III secretion system.",
+        "publicationDate": "2002",
+        "journal": "J. Bacteriol.",
+        "firstPage": "4409",
+        "lastPage": "4419",
+        "volume": "184"
+      },
+      "referencePositions": [
+        "REGULATION BY MXIE",
+        "INDUCTION"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 700930 / 2457T / Serotype 2a",
+          "type": "STRAIN"
+        },
+        {
+          "value": "pWR100",
+          "type": "PLASMID"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 10,
+      "citation": {
+        "id": "12446624",
+        "citationType": "journal article",
+        "authors": [
+          "Mavris M.",
+          "Sansonetti P.J.",
+          "Parsot C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "12446624"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.184.24.6751-6759.2002"
+          }
+        ],
+        "title": "Identification of the cis-acting site involved in activation of promoters regulated by activity of the type III secretion apparatus in Shigella flexneri.",
+        "publicationDate": "2002",
+        "journal": "J. Bacteriol.",
+        "firstPage": "6751",
+        "lastPage": "6759",
+        "volume": "184"
+      },
+      "referencePositions": [
+        "REGULATION BY MXIE AND IPGC"
+      ],
+      "referenceComments": [
+        {
+          "value": "M90T / Serotype 5a",
+          "type": "STRAIN"
+        },
+        {
+          "value": "pWR100",
+          "type": "PLASMID"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 11,
+      "citation": {
+        "id": "15758240",
+        "citationType": "journal article",
+        "authors": [
+          "Le Gall T.",
+          "Mavris M.",
+          "Martino M.C.",
+          "Bernardini M.L.",
+          "Denamur E.",
+          "Parsot C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15758240"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1099/mic.0.27639-0"
+          }
+        ],
+        "title": "Analysis of virulence plasmid gene expression defines three classes of effectors in the type III secretion system of Shigella flexneri.",
+        "publicationDate": "2005",
+        "journal": "Microbiology",
+        "firstPage": "951",
+        "lastPage": "962",
+        "volume": "151"
+      },
+      "referencePositions": [
+        "REGULATION BY MXIE AND VIRB",
+        "INDUCTION"
+      ],
+      "referenceComments": [
+        {
+          "value": "M90T / Serotype 5a",
+          "type": "STRAIN"
+        },
+        {
+          "value": "pWR100",
+          "type": "PLASMID"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 12,
+      "citation": {
+        "id": "17095701",
+        "citationType": "journal article",
+        "authors": [
+          "Yoshida S.",
+          "Handa Y.",
+          "Suzuki T.",
+          "Ogawa M.",
+          "Suzuki M.",
+          "Tamai A.",
+          "Abe A.",
+          "Katayama E.",
+          "Sasakawa C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "17095701"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1126/science.1133174"
+          }
+        ],
+        "title": "Microtubule-severing activity of Shigella is pivotal for intercellular spreading.",
+        "publicationDate": "2006",
+        "journal": "Science",
+        "firstPage": "985",
+        "lastPage": "989",
+        "volume": "314"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "CYSTEINE PROTEASE ACTIVITY",
+        "ACTIVITY REGULATION",
+        "MUTAGENESIS OF CYS-34"
+      ],
+      "referenceComments": [
+        {
+          "value": "YSH6000 / Serotype 2a",
+          "type": "STRAIN"
+        },
+        {
+          "value": "pMYSH6000",
+          "type": "PLASMID"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "D26468",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "BAA05480.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF047364",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAC23713.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AL391753",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAC05836.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF348706",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAK18501.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AY206441",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAP79023.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF386526",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAL72296.2"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "S70187",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "S70187"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_858314.2",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_004851.1"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_001195004.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NZ_AP040251.1"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "3EB8",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.40 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B=45-400"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "3EE1",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "3.01 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B=14-400"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "4FMB",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "3.20 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/C/E=45-400"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q7BU69",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "Q7BU69",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "IntAct",
+      "id": "Q7BU69",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "1237992",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "sfl:CP0181",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|198214.7.peg.5432",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_688663_0_0_6",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "ALMLTHT",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EvolutionaryTrace",
+      "id": "Q7BU69",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PHI-base",
+      "id": "PHI:9252",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000001006",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Plasmid pCP301"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0004197",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:cysteine-type endopeptidase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.10.450.460",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "EspG protein, N-terminal domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR009669",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cys_protease_VirA/EspG"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR043098",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cys_protease_VirA/EspG_N"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF06872",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "EspG"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PIRSF",
+      "id": "PIRSF011515",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "EspG"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MQTSNITNHERNDSSWMSTVKSTTEVSWNKLSFCDILLKIITFGIYSPHETLAEKHSEKKLMDSFSPSLSQDKMDGEFAHANIDGISIRLCLNKGICSVFYLDGDKIQSTQLSSKEYNNLLSSLPPKQFNLGKVHTITAPVSGNFKTHKPAPEVIETAINCCTSIIPNDDYFHVKDTDFNSVWHDIYRDIRASDSNSTKIYFNNIEIPLKLIADLINELGINEFIDSKKELQMLSYNQVNKIINSNFPQQDLCFQTEKLLFTSLFQDPAFISALTSAFWQSLHITSSSVEHIYAQIMSENIENRLNFMPEQRVINNCGHIIKINAVVPKNDTAISASGGRAYEVSSSILPSHITCNGVGINKIETSYLVHAGTLPSSEGLRNAIPPESRQVSFAIISPDV",
+    "length": 400,
+    "molWeight": 44735,
+    "crc64": "DDA0422BF215688F",
+    "md5": "2DC3CEE0739526F3A1BF1B7C6FA06F59"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "ACTIVITY REGULATION": 1,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "INDUCTION": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Region": 1,
+      "Active site": 1,
+      "Natural variant": 4,
+      "Mutagenesis": 1,
+      "Sequence conflict": 1,
+      "Helix": 13,
+      "Beta strand": 17,
+      "Turn": 2
+    },
+    "uniParcId": "UPI00000BB710"
+  }
+}

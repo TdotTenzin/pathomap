@@ -1,0 +1,95 @@
+{
+  "count": 2,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "metadata": {
+        "accession": "IPR001809",
+        "name": "Outer surface lipoprotein, Borrelia",
+        "source_database": "interpro",
+        "type": "family",
+        "integrated": null,
+        "member_databases": {
+          "pfam": {
+            "PF00820": "Borrelia lipoprotein"
+          },
+          "prints": {
+            "PR00968": "OUTRSURFACE"
+          }
+        },
+        "go_terms": [
+          {
+            "identifier": "GO:0009279",
+            "name": "cell outer membrane",
+            "category": {
+              "code": "C",
+              "name": "cellular_component"
+            }
+          }
+        ]
+      },
+      "proteins": [
+        {
+          "accession": "p0cl66",
+          "protein_length": 273,
+          "source_database": "reviewed",
+          "organism": "224326",
+          "in_alphafold": true,
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 21,
+                  "end": 273,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": null,
+              "score": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "accession": "IPR023322",
+        "name": "Outer surface lipoprotein domain superfamily",
+        "source_database": "interpro",
+        "type": "homologous_superfamily",
+        "integrated": null,
+        "member_databases": {
+          "ssf": {
+            "SSF51087": "Outer surface protein"
+          }
+        },
+        "go_terms": null
+      },
+      "proteins": [
+        {
+          "accession": "p0cl66",
+          "protein_length": 273,
+          "source_database": "reviewed",
+          "organism": "224326",
+          "in_alphafold": true,
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 23,
+                  "end": 273,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": null,
+              "score": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

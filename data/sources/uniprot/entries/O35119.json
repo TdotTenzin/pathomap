@@ -1,0 +1,2548 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "O35119",
+  "secondaryAccessions": [
+    "Q91ZL9",
+    "Q9EQ74",
+    "Q9EQ75"
+  ],
+  "uniProtkbId": "TRPC4_RAT",
+  "entryAudit": {
+    "firstPublicDate": "2001-06-20",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2001-06-20",
+    "entryVersion": 167,
+    "sequenceVersion": 2
+  },
+  "annotationScore": 5.0,
+  "organism": {
+    "scientificName": "Rattus norvegicus",
+    "commonName": "Rat",
+    "taxonId": 10116,
+    "lineage": [
+      "Eukaryota",
+      "Metazoa",
+      "Chordata",
+      "Craniata",
+      "Vertebrata",
+      "Euteleostomi",
+      "Mammalia",
+      "Eutheria",
+      "Euarchontoglires",
+      "Glires",
+      "Rodentia",
+      "Myomorpha",
+      "Muroidea",
+      "Muridae",
+      "Murinae",
+      "Rattus"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Short transient receptor potential channel 4"
+      },
+      "shortNames": [
+        {
+          "value": "Trp4"
+        },
+        {
+          "value": "TrpC4"
+        }
+      ]
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "Capacitative calcium entry channel 1"
+        },
+        "shortNames": [
+          {
+            "value": "CCE1"
+          }
+        ]
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "Trpc4"
+      }
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "Q9UBN4"
+            }
+          ],
+          "value": "Forms a receptor-activated non-selective calcium permeant cation channel (By similarity). Acts as a cell-cell contact-dependent endothelial calcium entry channel (By similarity). Forms a homomeric ion channel or a heteromeric ion channel with TRPC1; the heteromeric ion channel has reduced calcium permeability compared to the homomeric channel (By similarity). Also permeable to monovalent ions including sodium, lithium and cesium ions (By similarity)"
+        }
+      ],
+      "commentType": "FUNCTION",
+      "molecule": "Isoform Alpha"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11713258"
+            }
+          ],
+          "value": "Forms a non-selective a receptor-activated calcium permeant cation channel. Probably is operated by a phosphatidylinositol second messenger system activated by receptor tyrosine kinases or G protein-coupled receptors"
+        }
+      ],
+      "commentType": "FUNCTION",
+      "molecule": "Isoform Beta"
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "molecule": "Isoform Alpha",
+      "reaction": {
+        "name": "Ca(2+)(in) = Ca(2+)(out)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:29671"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:29108"
+          }
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "11713258"
+          }
+        ]
+      }
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "molecule": "Isoform Beta",
+      "reaction": {
+        "name": "Ca(2+)(in) = Ca(2+)(out)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:29671"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:29108"
+          }
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "11713258"
+          }
+        ]
+      }
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "Na(+)(in) = Na(+)(out)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:34963"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:29101"
+          }
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000250",
+            "source": "UniProtKB",
+            "id": "Q9UBN4"
+          }
+        ]
+      }
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "Li(+)(in) = Li(+)(out)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:78551"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:49713"
+          }
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000250",
+            "source": "UniProtKB",
+            "id": "Q9UBN4"
+          }
+        ]
+      }
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "Cs(+)(in) = Cs(+)(out)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:78555"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:49547"
+          }
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000250",
+            "source": "UniProtKB",
+            "id": "Q9UBN4"
+          }
+        ]
+      }
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "Q9QUQ5"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11713258"
+            }
+          ],
+          "value": "May be operated by a phosphatidylinositol second messenger system activated by receptor tyrosine kinases or G protein coupled receptors (PubMed:11713258). May be activated by intracellular calcium store depletion (By similarity)"
+        }
+      ],
+      "commentType": "ACTIVITY REGULATION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "Q9QUQ5"
+            },
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "Q9UBN4"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "12857742"
+            }
+          ],
+          "value": "Homotetramer (PubMed:12857742). Heterotetramer with TRPC1 and/or TRPC5 (PubMed:12857742). Forms a heteromeric ion channel with TRPC1, with a 1:3 TRPC1:TRPC4 stoichiometry (By similarity). Interacts with TRPC4AP (By similarity). Isoform alpha but not isoform beta interacts with ITPR1, ITPR2 and ITPR3 (By similarity). Interacts with NHERF1 (By similarity). Interacts with MX1 and RNF24 (By similarity). Interacts (via CIRB domain) with SESTD1 (via the spectrin 1 repeat) and SPTBN5 (via C-terminus) (By similarity). Interacts with CDH5 and CTNNB1 (By similarity). Interacts (via protein 4.1-binding domain) with EPB41L2 (By similarity). Interacts with PLSCR1 (By similarity)"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "molecule": "Isoform Alpha",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "11713258"
+              }
+            ],
+            "value": "Cell membrane",
+            "id": "SL-0039"
+          },
+          "topology": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250",
+                "source": "UniProtKB",
+                "id": "Q9UBN4"
+              }
+            ],
+            "value": "Multi-pass membrane protein",
+            "id": "SL-9909"
+          }
+        }
+      ]
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "molecule": "Isoform Beta",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "11713258"
+              }
+            ],
+            "value": "Cell membrane",
+            "id": "SL-0039"
+          },
+          "topology": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250",
+                "source": "UniProtKB",
+                "id": "Q9UBN4"
+              }
+            ],
+            "value": "Multi-pass membrane protein",
+            "id": "SL-9909"
+          }
+        }
+      ]
+    },
+    {
+      "commentType": "ALTERNATIVE PRODUCTS",
+      "events": [
+        "Alternative splicing"
+      ],
+      "isoforms": [
+        {
+          "name": {
+            "value": "Alpha"
+          },
+          "isoformIds": [
+            "O35119-1"
+          ],
+          "isoformSequenceStatus": "Displayed"
+        },
+        {
+          "name": {
+            "value": "Beta"
+          },
+          "isoformIds": [
+            "O35119-2"
+          ],
+          "sequenceIds": [
+            "VSP_006571"
+          ],
+          "isoformSequenceStatus": "Described"
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the transient receptor (TC 1.A.4) family. STrpC subfamily. TRPC4 sub-subfamily"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    },
+    {
+      "commentType": "SEQUENCE CAUTION",
+      "sequenceCautionType": "Frameshift",
+      "sequence": "BAA23599.2",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 977,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Short transient receptor potential channel 4",
+      "featureId": "PRO_0000215316"
+    },
+    {
+      "type": "Topological domain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 324,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Cytoplasmic",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q9UBN4"
+        }
+      ]
+    },
+    {
+      "type": "Intramembrane",
+      "location": {
+        "start": {
+          "value": 325,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 359,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Discontinuously helical; Name=Pre-S1",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q9UBN4"
+        }
+      ]
+    },
+    {
+      "type": "Topological domain",
+      "location": {
+        "start": {
+          "value": 360,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 362,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Cytoplasmic",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q9UBN4"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 363,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 383,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical; Name=S1",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q9UBN4"
+        }
+      ]
+    },
+    {
+      "type": "Topological domain",
+      "location": {
+        "start": {
+          "value": 384,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 403,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Extracellular",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q9UBN4"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 404,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 418,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical; Name=S2",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q9UBN4"
+        }
+      ]
+    },
+    {
+      "type": "Topological domain",
+      "location": {
+        "start": {
+          "value": 419,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 432,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Cytoplasmic",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q9UBN4"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 433,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 453,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical; Name=S3",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q9UBN4"
+        }
+      ]
+    },
+    {
+      "type": "Topological domain",
+      "location": {
+        "start": {
+          "value": 454,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 475,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Extracellular",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q9UBN4"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 476,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 498,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical; Name=S4",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q9UBN4"
+        }
+      ]
+    },
+    {
+      "type": "Topological domain",
+      "location": {
+        "start": {
+          "value": 499,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 511,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Cytoplasmic",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q9UBN4"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 512,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 534,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical; Name=S5",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q9UBN4"
+        }
+      ]
+    },
+    {
+      "type": "Topological domain",
+      "location": {
+        "start": {
+          "value": 535,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 599,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Extracellular",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q9UBN4"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 600,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 620,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical; Name=S6",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q9UBN4"
+        }
+      ]
+    },
+    {
+      "type": "Topological domain",
+      "location": {
+        "start": {
+          "value": 621,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 977,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Cytoplasmic",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q9UBN4"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 29,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 60,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "ANK 1",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q9UBN4"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 71,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 93,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "ANK 2",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q9UBN4"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 96,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 118,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "ANK 3",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q9UBN4"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 141,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 165,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "ANK 4",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q9UBN4"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 615,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 977,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Interaction with ITPR1, ITPR2 and ITPR3",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q9UBN4"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 767,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 790,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 975,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 977,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "PDZ-binding domain",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q9UBN4"
+        }
+      ]
+    },
+    {
+      "type": "Coiled coil",
+      "location": {
+        "start": {
+          "value": 223,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 260,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 776,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 787,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Basic and acidic residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 172,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 172,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29105"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q9UBN4"
+        }
+      ],
+      "ligand": {
+        "name": "Zn(2+)",
+        "id": "ChEBI:CHEBI:29105"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 176,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 176,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29105"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q9UBN4"
+        }
+      ],
+      "ligand": {
+        "name": "Zn(2+)",
+        "id": "ChEBI:CHEBI:29105"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 178,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 178,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29105"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q9UBN4"
+        }
+      ],
+      "ligand": {
+        "name": "Zn(2+)",
+        "id": "ChEBI:CHEBI:29105"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 181,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 181,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29105"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q9UBN4"
+        }
+      ],
+      "ligand": {
+        "name": "Zn(2+)",
+        "id": "ChEBI:CHEBI:29105"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 417,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 417,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29108"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q9UBN4"
+        }
+      ],
+      "ligand": {
+        "name": "Ca(2+)",
+        "id": "ChEBI:CHEBI:29108"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 420,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 420,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29108"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q9UBN4"
+        }
+      ],
+      "ligand": {
+        "name": "Ca(2+)",
+        "id": "ChEBI:CHEBI:29108"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 435,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 435,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29108"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q9UBN4"
+        }
+      ],
+      "ligand": {
+        "name": "Ca(2+)",
+        "id": "ChEBI:CHEBI:29108"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 438,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 438,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29108"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q9UBN4"
+        }
+      ],
+      "ligand": {
+        "name": "Ca(2+)",
+        "id": "ChEBI:CHEBI:29108"
+      }
+    },
+    {
+      "type": "Modified residue",
+      "location": {
+        "start": {
+          "value": 959,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 959,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Phosphotyrosine; by FYN",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q9UBN4"
+        }
+      ]
+    },
+    {
+      "type": "Modified residue",
+      "location": {
+        "start": {
+          "value": 972,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 972,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Phosphotyrosine; by FYN",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q9UBN4"
+        }
+      ]
+    },
+    {
+      "type": "Disulfide bond",
+      "location": {
+        "start": {
+          "value": 549,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 554,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q9UBN4"
+        }
+      ]
+    },
+    {
+      "type": "Alternative sequence",
+      "location": {
+        "start": {
+          "value": 784,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 867,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in isoform Beta",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000303",
+          "source": "PubMed",
+          "id": "10980202"
+        },
+        {
+          "evidenceCode": "ECO:0000303",
+          "source": "PubMed",
+          "id": "11713258"
+        }
+      ],
+      "featureId": "VSP_006571",
+      "alternativeSequence": {}
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 337,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 337,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 1; BAA23599",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {}
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 390,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 411,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 1; BAA23599",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {}
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 594,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 594,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 1; BAA23599 and 4; AAL24556",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "D",
+        "alternativeSequences": [
+          "E"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 888,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 888,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 1; BAA23599 and 4; AAL24556",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "K",
+        "alternativeSequences": [
+          "Q"
+        ]
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0025",
+      "category": "Coding sequence diversity",
+      "name": "Alternative splicing"
+    },
+    {
+      "id": "KW-0040",
+      "category": "Domain",
+      "name": "ANK repeat"
+    },
+    {
+      "id": "KW-0106",
+      "category": "Ligand",
+      "name": "Calcium"
+    },
+    {
+      "id": "KW-0107",
+      "category": "Molecular function",
+      "name": "Calcium channel"
+    },
+    {
+      "id": "KW-0109",
+      "category": "Biological process",
+      "name": "Calcium transport"
+    },
+    {
+      "id": "KW-1003",
+      "category": "Cellular component",
+      "name": "Cell membrane"
+    },
+    {
+      "id": "KW-0175",
+      "category": "Domain",
+      "name": "Coiled coil"
+    },
+    {
+      "id": "KW-1015",
+      "category": "PTM",
+      "name": "Disulfide bond"
+    },
+    {
+      "id": "KW-0407",
+      "category": "Molecular function",
+      "name": "Ion channel"
+    },
+    {
+      "id": "KW-0406",
+      "category": "Biological process",
+      "name": "Ion transport"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-0479",
+      "category": "Ligand",
+      "name": "Metal-binding"
+    },
+    {
+      "id": "KW-0597",
+      "category": "PTM",
+      "name": "Phosphoprotein"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0677",
+      "category": "Domain",
+      "name": "Repeat"
+    },
+    {
+      "id": "KW-0812",
+      "category": "Domain",
+      "name": "Transmembrane"
+    },
+    {
+      "id": "KW-1133",
+      "category": "Domain",
+      "name": "Transmembrane helix"
+    },
+    {
+      "id": "KW-0813",
+      "category": "Biological process",
+      "name": "Transport"
+    },
+    {
+      "id": "KW-0862",
+      "category": "Ligand",
+      "name": "Zinc"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "9037541",
+        "citationType": "journal article",
+        "authors": [
+          "Funayama M.",
+          "Goto K.",
+          "Kondo H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9037541"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/s0169-328x(96)00208-2"
+          }
+        ],
+        "title": "Cloning and expression localization of cDNA for rat homolog of TRP protein, a possible store-operated calcium (Ca2+) channel.",
+        "publicationDate": "1996",
+        "journal": "Brain Res. Mol. Brain Res.",
+        "firstPage": "259",
+        "lastPage": "266",
+        "volume": "43"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM ALPHA)"
+      ],
+      "referenceComments": [
+        {
+          "value": "Wistar Imamichi",
+          "type": "STRAIN"
+        },
+        {
+          "value": "Brain",
+          "type": "TISSUE"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "CI-DP20LB4EPQCA4",
+        "citationType": "submission",
+        "authors": [
+          "Otsuka Y.",
+          "Kondo H."
+        ],
+        "publicationDate": "JUL-2001",
+        "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+      },
+      "referencePositions": [
+        "SEQUENCE REVISION"
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "10980202",
+        "citationType": "journal article",
+        "authors": [
+          "Tang Y.",
+          "Tang J.",
+          "Chen Z.",
+          "Trost C.",
+          "Flockerzi V.",
+          "Li M.",
+          "Ramesh V.",
+          "Zhu M.X."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "10980202"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1074/jbc.m006635200"
+          }
+        ],
+        "title": "Association of mammalian trp4 and phospholipase C isozymes with a PDZ domain-containing protein, NHERF.",
+        "publicationDate": "2000",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "37559",
+        "lastPage": "37564",
+        "volume": "275"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [MRNA] (ISOFORMS ALPHA AND BETA)"
+      ],
+      "referenceComments": [
+        {
+          "value": "Sprague-Dawley",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "11713258",
+        "citationType": "journal article",
+        "authors": [
+          "Schaefer M.",
+          "Plant T.D.",
+          "Stresow N.",
+          "Albrecht N.",
+          "Schultz G."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11713258"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1074/jbc.m109850200"
+          }
+        ],
+        "title": "Functional differences between TRPC4 splice variants.",
+        "publicationDate": "2002",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "3752",
+        "lastPage": "3759",
+        "volume": "277"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM BETA)",
+        "FUNCTION",
+        "TRANSPORTER ACTIVITY"
+      ],
+      "referenceComments": [
+        {
+          "value": "Wistar",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "12857742",
+        "citationType": "journal article",
+        "authors": [
+          "Strubing C.",
+          "Krapivinsky G.",
+          "Krapivinsky L.",
+          "Clapham D.E."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "12857742"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1074/jbc.m306705200"
+          }
+        ],
+        "title": "Formation of novel TRPC channels by complex subunit interactions in embryonic brain.",
+        "publicationDate": "2003",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "39014",
+        "lastPage": "39019",
+        "volume": "278"
+      },
+      "referencePositions": [
+        "SUBUNIT"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AB008889",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "BAA23599.2"
+        },
+        {
+          "key": "Status",
+          "value": "ALT_FRAME"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF288407",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAG21809.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF288408",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAG21810.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF421365",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAL24556.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "O35119",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "O35119",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "FunCoup",
+      "id": "O35119",
+      "properties": [
+        {
+          "key": "Number of interactors",
+          "value": "545"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "10116.ENSRNOP00000042886",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PhosphoSitePlus",
+      "id": "O35119",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PaxDb",
+      "id": "10116-ENSRNOP00000042886",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "UCSC",
+      "id": "RGD:621276",
+      "properties": [
+        {
+          "key": "OrganismName",
+          "value": "rat"
+        }
+      ],
+      "isoformId": "O35119-1"
+    },
+    {
+      "database": "AGR",
+      "id": "RGD:621276",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "RGD",
+      "id": "621276",
+      "properties": [
+        {
+          "key": "GeneName",
+          "value": "Trpc4"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "KOG3609",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Eukaryota"
+        }
+      ]
+    },
+    {
+      "database": "InParanoid",
+      "id": "O35119",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AANQTWK",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PhylomeDB",
+      "id": "O35119",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Reactome",
+      "id": "R-RNO-3295583",
+      "properties": [
+        {
+          "key": "PathwayName",
+          "value": "TRP channels"
+        }
+      ]
+    },
+    {
+      "database": "PRO",
+      "id": "PR:O35119",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000002494",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Unplaced"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0016323",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:basolateral plasma membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISO:RGD"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0034704",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:calcium channel complex"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISO:RGD"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0034703",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cation channel complex"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISO:RGD"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005901",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:caveola"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISO:RGD"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009986",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cell surface"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISO:RGD"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005911",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cell-cell junction"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISO:RGD"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0030863",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cortical cytoskeleton"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISO:RGD"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0045121",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:membrane raft"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISO:RGD"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005886",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:plasma membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:UniProtKB"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0032991",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:protein-containing complex"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISO:RGD"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0008013",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:beta-catenin binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISO:RGD"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0045296",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:cadherin binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISO:RGD"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005262",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:calcium channel activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "11713258"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0070679",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:inositol 1,4,5 trisphosphate binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISO:RGD"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005261",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:monoatomic cation channel activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISO:RGD"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0015279",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:store-operated calcium channel activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISS:UniProtKB"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0070509",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:calcium ion import"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISO:RGD"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0070588",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:calcium ion transmembrane transport"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISO:RGD"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0006816",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:calcium ion transport"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:RGD"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "11713258"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0014051",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:gamma-aminobutyric acid secretion"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISO:RGD"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0048709",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:oligodendrocyte differentiation"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISO:RGD"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0106129",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:positive regulation of store-operated calcium entry"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:RGD"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "24113457"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0099605",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:regulation of action potential firing rate"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:RGD"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "26988269"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0051924",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:regulation of calcium ion transport"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:RGD"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "12381092"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0051480",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:regulation of cytosolic calcium ion concentration"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0003254",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:regulation of membrane depolarization"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISO:RGD"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "1.25.40.20:FF:000023",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "short transient receptor potential channel 4 isoform X1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.25.40.20",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Ankyrin repeat-containing domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR002110",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Ankyrin_rpt"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036770",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Ankyrin_rpt-contain_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR005821",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Ion_trans_dom"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR013555",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TRP_dom"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR005460",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TRPC4_channel"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR002153",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TRPC_channel"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "TIGR00870",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "trp"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR10117:SF25",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SHORT TRANSIENT RECEPTOR POTENTIAL CHANNEL 4"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR10117",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TRANSIENT RECEPTOR POTENTIAL CHANNEL"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00023",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Ank"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF12796",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Ank_2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00520",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Ion_trans"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF08344",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TRP_2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR01097",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TRNSRECEPTRP"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR01645",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TRPCHANNEL4"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00248",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ANK"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM01420",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TRP_2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF48403",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Ankyrin repeat"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS50297",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ANK_REP_REGION"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS50088",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ANK_REPEAT"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MAQFYYKRNVNAPYRDRIPLRIVRAESELSPSEKAYLNAVEKGDYASVKKSLEEAEIYFKININCIDPLGRTALLIAIENENLELIELLLSFNVYVGDALLHAIRKEVVGAVELLLNHKKPSGEKQVPPILLDKQFSEFTPDITPIILAAHTNNYEIIKLLVQKGVSVPRPHEVRCNCVECVSSSDVDSLRHSRSRLNIYKALASPSLIALSSEDPFLTAFQLSWELQELSKVENEFKSEYEELSRQCKQFAKDLLDQTRSSRELEIILNYRDDNSLIEEQSGNDLARLKLAIKYRQKEFVAQPNCQQLLASRWYDEFPGWRRRHWAVKMVTCFIIGLLFPVFSVCYLIAPKSPLGLFIRKPFIKFICHTASYLTFLFLLLLASQHIDRSDLNRQGPPPTIVEWMILPWVLGFIWGEIKQMWDGGLQDYIHDWWNLMDFVMNSLYLATISLKIVAFVKYSALNPRESWDMWHPTLVAEALFAIANIFSSLRLISLFTANSHLGPLQISLGRMLLDILKFLFIYCLVLLAFANGLNQLYFYYEETKGLSCKGIRCEKQNNAFSTLFETLQSLFWSIFGLINLYVTNVKAQHEFTDFVGATMFGTYNVISLVVLLNMLIAMMNNSYQLIADHADIEWKFARTKLWMSYFEEGGTLPTPFNVIPSPKSLWYLVKWIWTHLCKKKMRRKPESFGTIGRRAADNLRRHHQYQEVMRNLVKRYVAAMIREAKTEEGLTEENVKELKQDISSFRFEVLGLLRGSKLSTIQSANAASSASSADSDEKSHSEGNGKDKRKNLSLFDLTTLIHPRSAVIASERHNLSNGSALVVQEPPREKQRKVNFVADIKNFGLFHRRSKQNAAEQNANQIFSVSEEITRQQAAGALERNIQLESKGLASRGDRSIPGLNEQCVLVDHRERNTDTLGLQVGKRVCSSFKSEKVVVEDTVPIIPKEKHAQEEDSSIDYDLSPTDTVAHEDYVTTRL",
+    "length": 977,
+    "molWeight": 111848,
+    "crc64": "6F86DA95261E0ECD",
+    "md5": "41E06C818B1ED21BBDD1C34490604EFF"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 2,
+      "CATALYTIC ACTIVITY": 5,
+      "ACTIVITY REGULATION": 1,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 2,
+      "ALTERNATIVE PRODUCTS": 2,
+      "SIMILARITY": 1,
+      "SEQUENCE CAUTION": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Topological domain": 8,
+      "Intramembrane": 1,
+      "Transmembrane": 6,
+      "Repeat": 4,
+      "Region": 3,
+      "Coiled coil": 1,
+      "Compositional bias": 1,
+      "Binding site": 8,
+      "Modified residue": 2,
+      "Disulfide bond": 1,
+      "Alternative sequence": 1,
+      "Sequence conflict": 4
+    },
+    "uniParcId": "UPI00001374B4"
+  }
+}

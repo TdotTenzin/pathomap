@@ -1,0 +1,1274 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "A0Q7V5",
+  "uniProtkbId": "BFPR_FRATN",
+  "entryAudit": {
+    "firstPublicDate": "2026-01-28",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2007-01-09",
+    "entryVersion": 120,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 4.0,
+  "organism": {
+    "scientificName": "Francisella tularensis subsp. novicida (strain ATCC 15482 / CCUG 33449 / U112)",
+    "taxonId": 401614,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Gammaproteobacteria",
+      "Thiotrichales",
+      "Francisellaceae",
+      "Francisella"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000305"
+          }
+        ],
+        "value": "Transcriptional regulatory protein BfpR"
+      }
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "32232010"
+            }
+          ],
+          "value": "Biofilm-regulating Francisella protein regulator"
+        }
+      },
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "32232010"
+            }
+          ],
+          "value": "Two-component system response regulator BfpR"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000303",
+            "source": "PubMed",
+            "id": "32232010"
+          }
+        ],
+        "value": "bfpR"
+      },
+      "orderedLocusNames": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000312",
+              "source": "EMBL",
+              "id": "ABK90320.1"
+            }
+          ],
+          "value": "FTN_1452"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "32232010"
+            }
+          ],
+          "value": "Member of the two-component regulatory system BfpR/BfpK, which modulates biofilm production and antimicrobial peptide (AMP) resistance (PubMed:32232010). Controls, directly or indirectly, a broad range of genes (PubMed:32232010). Acts as a negative regulator of biofilm production and a positive regulator of antimicrobial peptide resistance (PubMed:32232010). BfpR also indirectly or directly negatively modulates expression of some Francisella Pathogenicity Island (FPI) genes such as iglC, which are necessary for intramacrophage replication and infection (PubMed:32232010). It binds to a specific palindromic DNA sequence (TGT-n8/9-TGT) in the promoter region of target genes, including iglA, glgC and acpA (PubMed:32232010)"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "COFACTOR",
+      "cofactors": [
+        {
+          "name": "Mg(2+)",
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "32232010"
+            }
+          ],
+          "cofactorCrossReference": {
+            "database": "ChEBI",
+            "id": "CHEBI:18420"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "32232010"
+            }
+          ],
+          "value": "Probably forms homodimers"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "32232010"
+            }
+          ],
+          "value": "Probably phosphorylated and activated by BfpR"
+        }
+      ],
+      "commentType": "PTM"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "32232010"
+            }
+          ],
+          "value": "The mutant shows increased biofilm formation, increased polysaccharide levels and intracellular glycogen, and increased susceptibility to antimicrobial peptides such as human cathelicidin peptide LL-37 and sheep antimicrobial peptide SMAP-29 (PubMed:32232010). Mutation does not affect susceptibility to cyclic peptide antibiotics such as polymyxin B, or to antibiotics in general, including streptomycin, ciprofloxacin and gentamicin (PubMed:32232010)"
+        }
+      ],
+      "commentType": "DISRUPTION PHENOTYPE"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "32232010"
+            }
+          ],
+          "value": "Overexpression affects expression of the critical Francisella virulence factor iglC, as well as other proteins, and decreases growth (PubMed:32232010). It inhibits intramacrophage replication and infection in the moth larvae insect model, Galleria mellonella (PubMed:32232010). High Mg(2+) concentrations relieve the growth suppression caused by overexpression of the protein (PubMed:32232010)"
+        }
+      ],
+      "commentType": "MISCELLANEOUS"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 229,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Transcriptional regulatory protein BfpR",
+      "featureId": "PRO_0000462997"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 6,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 120,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Response regulatory",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00169"
+        }
+      ]
+    },
+    {
+      "type": "DNA binding",
+      "location": {
+        "start": {
+          "value": 131,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 229,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "OmpR/PhoB-type",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01091"
+        }
+      ]
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 11,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 11,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:18420"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305",
+          "source": "PubMed",
+          "id": "32232010"
+        },
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "6ONT"
+        }
+      ],
+      "ligand": {
+        "name": "Mg(2+)",
+        "id": "ChEBI:CHEBI:18420"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 12,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 12,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:18420"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305",
+          "source": "PubMed",
+          "id": "32232010"
+        },
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "6ONT"
+        }
+      ],
+      "ligand": {
+        "name": "Mg(2+)",
+        "id": "ChEBI:CHEBI:18420"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 55,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 55,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:18420"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305",
+          "source": "PubMed",
+          "id": "32232010"
+        },
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "6ONT"
+        }
+      ],
+      "ligand": {
+        "name": "Mg(2+)",
+        "id": "ChEBI:CHEBI:18420"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 57,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 57,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:18420"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305",
+          "source": "PubMed",
+          "id": "32232010"
+        },
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "6ONT"
+        }
+      ],
+      "ligand": {
+        "name": "Mg(2+)",
+        "id": "ChEBI:CHEBI:18420"
+      }
+    },
+    {
+      "type": "Modified residue",
+      "location": {
+        "start": {
+          "value": 55,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 55,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "4-aspartylphosphate",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00169"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 6,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 10,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6ONT"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 14,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 26,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6ONT"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 30,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 36,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6ONT"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 37,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 46,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6ONT"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 50,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 56,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6ONT"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 59,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 61,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6ONT"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 63,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 72,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6ONT"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 79,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 84,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6ONT"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 88,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 96,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6ONT"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 100,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 106,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6ONT"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 109,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 122,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6ONT"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0002",
+      "category": "Technical term",
+      "name": "3D-structure"
+    },
+    {
+      "id": "KW-0010",
+      "category": "Molecular function",
+      "name": "Activator"
+    },
+    {
+      "id": "KW-0238",
+      "category": "Molecular function",
+      "name": "DNA-binding"
+    },
+    {
+      "id": "KW-0460",
+      "category": "Ligand",
+      "name": "Magnesium"
+    },
+    {
+      "id": "KW-0479",
+      "category": "Ligand",
+      "name": "Metal-binding"
+    },
+    {
+      "id": "KW-0597",
+      "category": "PTM",
+      "name": "Phosphoprotein"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0678",
+      "category": "Molecular function",
+      "name": "Repressor"
+    },
+    {
+      "id": "KW-0804",
+      "category": "Biological process",
+      "name": "Transcription"
+    },
+    {
+      "id": "KW-0805",
+      "category": "Biological process",
+      "name": "Transcription regulation"
+    },
+    {
+      "id": "KW-0902",
+      "category": "Biological process",
+      "name": "Two-component regulatory system"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "17550600",
+        "citationType": "journal article",
+        "authors": [
+          "Rohmer L.",
+          "Fong C.",
+          "Abmayr S.",
+          "Wasnick M.",
+          "Larson Freeman T.J.",
+          "Radey M.",
+          "Guina T.",
+          "Svensson K.",
+          "Hayden H.S.",
+          "Jacobs M.",
+          "Gallagher L.A.",
+          "Manoil C.",
+          "Ernst R.K.",
+          "Drees B.",
+          "Buckley D.",
+          "Haugen E.",
+          "Bovee D.",
+          "Zhou Y.",
+          "Chang J.",
+          "Levy R.",
+          "Lim R.",
+          "Gillett W.",
+          "Guenthener D.",
+          "Kang A.",
+          "Shaffer S.A.",
+          "Taylor G.",
+          "Chen J.",
+          "Gallis B.",
+          "D'Argenio D.A.",
+          "Forsman M.",
+          "Olson M.V.",
+          "Goodlett D.R.",
+          "Kaul R.",
+          "Miller S.I.",
+          "Brittnacher M.J."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "17550600"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1186/gb-2007-8-6-r102"
+          }
+        ],
+        "title": "Comparison of Francisella tularensis genomes reveals evolutionary events associated with the emergence of human pathogenic strains.",
+        "publicationDate": "2007",
+        "journal": "Genome Biol.",
+        "firstPage": "R102.1",
+        "lastPage": "R102.16",
+        "volume": "8"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 15482 / CCUG 33449 / U112",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000312",
+          "source": "EMBL",
+          "id": "ABK90320.1"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "32232010",
+        "citationType": "journal article",
+        "authors": [
+          "Dean S.N.",
+          "Milton M.E.",
+          "Cavanagh J.",
+          "van Hoek M.L."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "32232010"
+          },
+          {
+            "database": "DOI",
+            "id": "10.3389/fcimb.2020.00082"
+          }
+        ],
+        "title": "Francisella novicida Two-Component System Response Regulator BfpR Modulates iglC Gene Expression, Antimicrobial Peptide Resistance, and Biofilm Production.",
+        "publicationDate": "2020",
+        "journal": "Front. Cell. Infect. Microbiol.",
+        "firstPage": "82",
+        "lastPage": "82",
+        "volume": "10"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY IN COMPLEX WITH CA(2+)",
+        "FUNCTION",
+        "DNA-BINDING",
+        "OVEREXPRESSION",
+        "DISRUPTION PHENOTYPE",
+        "GENE NAME"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 15482 / CCUG 33449 / U112",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "6ONT"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "CP000439",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ABK90320.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_003022431.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_008601.1"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6ONT",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.80 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=1-129"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "A0Q7V5",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "A0Q7V5",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "ftn:FTN_1452",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "ftx:AW25_549",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AAMHNPD",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BioCyc",
+      "id": "FTUL401614:G1G75-1500-MONOMER",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000000762",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005829",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cytosol"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:TreeGrafter"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0032993",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:protein-DNA complex"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:TreeGrafter"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0000156",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:phosphorelay response regulator activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:TreeGrafter"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0000976",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:transcription cis-regulatory region binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0006355",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:regulation of DNA-templated transcription"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd00383",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "trans_reg_C"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "1.10.10.10:FF:000005",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Two-component system response regulator"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.40.50.2300",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.10.10.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Winged helix-like DNA-binding domain superfamily/Winged helix DNA-binding domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR011006",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CheY-like_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR001867",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OmpR/PhoB-type_DNA-bd"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR001789",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Sig_transdc_resp-reg_receiver"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR039420",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "WalR-like"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036388",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "WH-like_DNA-bd_sf"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR48111",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "REGULATOR OF RPOS"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR48111:SF76",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TWO-COMPONENT RESPONSE REGULATOR"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00072",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Response_reg"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00486",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Trans_reg_C"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00448",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "REC"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00862",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Trans_reg_C"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF52172",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CheY-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51755",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OMPR_PHOB"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS50110",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "RESPONSE_REGULATORY"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MSDNPKVLVADDDKKIAQFIKTKFEENGIDTTVAFDGKEALFLINTNNYDVIVIDWMMPYLDGISLLKILRKQNINTPVIILSALDSTENKIEGLKSGSDDYLTKPFSIDELIIRVNILYKRTKQITEAQTHKLSCGDIVLDELAHEVRRNRELILLQQREYKVLHLLLKHKNEVVSKTMILKEVWDYDFDPQTNVVEVHISRLRNKLTEGGLSDPIKTIRGFGYVIQE",
+    "length": 229,
+    "molWeight": 26371,
+    "crc64": "3ED5177F0821C429",
+    "md5": "3750E63308C39F1090F4D8140508C981"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "COFACTOR": 1,
+      "SUBUNIT": 1,
+      "PTM": 1,
+      "DISRUPTION PHENOTYPE": 1,
+      "MISCELLANEOUS": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Domain": 1,
+      "DNA binding": 1,
+      "Binding site": 4,
+      "Modified residue": 1,
+      "Beta strand": 6,
+      "Helix": 5
+    },
+    "uniParcId": "UPI0000450037"
+  }
+}

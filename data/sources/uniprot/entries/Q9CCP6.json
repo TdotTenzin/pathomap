@@ -1,0 +1,815 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "Q9CCP6",
+  "uniProtkbId": "LPRG_MYCLE",
+  "entryAudit": {
+    "firstPublicDate": "2001-08-29",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2001-06-01",
+    "entryVersion": 109,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 4.0,
+  "organism": {
+    "scientificName": "Mycobacterium leprae (strain TN)",
+    "taxonId": 272631,
+    "lineage": [
+      "Bacteria",
+      "Bacillati",
+      "Actinomycetota",
+      "Actinomycetes",
+      "Mycobacteriales",
+      "Mycobacteriaceae",
+      "Mycobacterium"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000250",
+            "source": "UniProtKB",
+            "id": "P9WK45"
+          }
+        ],
+        "value": "Lipoarabinomannan carrier protein LprG"
+      }
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "27 kDa lipoprotein"
+        }
+      },
+      {
+        "fullName": {
+          "value": "Antigen P27"
+        }
+      },
+      {
+        "fullName": {
+          "value": "Lipoprotein LprG"
+        }
+      },
+      {
+        "fullName": {
+          "value": "Triacylglyceride transfer protein LprG"
+        }
+      }
+    ],
+    "flag": "Precursor"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000303",
+            "source": "PubMed",
+            "id": "11234002"
+          }
+        ],
+        "value": "lprG"
+      },
+      "orderedLocusNames": [
+        {
+          "value": "ML0557"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "P9WK45"
+            }
+          ],
+          "value": "Helps membrane protein ML0556 (P55) transport triacylglycerides (TAG) across the inner cell membrane into the periplasm and probably ultimately to the outer membrane (By similarity). Binds TAG in its hydrophobic cavity and transfers it between lipid bilayers (By similarity). TAG probably regulates lipid metabolism and growth regulation and plays a structural role in the outer membrane (By similarity). Binds di- and triacylated phosphatidyl-myo-inositol mannosides (PIMs), and glycolipid lipoglycan modulins lipoarabinomannan (LAM) and lipomannan (LM), facilitating their recognition by TLR2. Required for activity of drug efflux transporter ML0556. Required, probably with ML0556, for normal surface localization of LAM"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "18424702"
+            }
+          ],
+          "value": "Constitutes a host TLR2 agonist (toll-like receptor) able to stimulate proliferation of CD4+ T-cells derived from a human leprosy patient following protein processing/presentation by MHC class II molecules in peripheral blood mononuclear cells"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255",
+                "source": "PROSITE-ProRule",
+                "id": "PRU00303"
+              }
+            ],
+            "value": "Cell inner membrane",
+            "id": "SL-0037"
+          },
+          "topology": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255",
+                "source": "PROSITE-ProRule",
+                "id": "PRU00303"
+              }
+            ],
+            "value": "Lipid-anchor",
+            "id": "SL-9901"
+          },
+          "orientation": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000305"
+              }
+            ],
+            "value": "Periplasmic side",
+            "id": "SL-9916"
+          }
+        },
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250",
+                "source": "UniProtKB",
+                "id": "P9WK45"
+              }
+            ],
+            "value": "Secreted, cell wall",
+            "id": "SL-0041"
+          }
+        },
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250",
+                "source": "UniProtKB",
+                "id": "P9WK45"
+              }
+            ],
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "P9WK45"
+            }
+          ],
+          "value": "Forms a U-shaped beta-half-barrel with a small hydrophobic cavity able to hold a triacylated lipid or triacylglyceride (By similarity). A flexible lid region may move to accommodate different TAG molecules (By similarity)"
+        }
+      ],
+      "commentType": "DOMAIN"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "P9WK47"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "18424702"
+            }
+          ],
+          "value": "Modified by Lgt on Cys-27 with an S-linked diacylglyceral, signal peptide is removed by LspA, Cys-27 is further modified with a fatty acid on its amino group by Lnt yielding a triacylated protein (By similarity). Probably glycosylated, which is required for T-cell activation (PubMed:18424702)"
+        }
+      ],
+      "commentType": "PTM"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Bacterial LAM blocks host cell phagosome-lysosome fusion and is one way in which Mycobacteria evade the host immune system"
+        }
+      ],
+      "commentType": "MISCELLANEOUS"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Triacylglycerides accumulate in lipid droplets in the cytoplasm of M.leprae, and are used as an energy source during starvation"
+        }
+      ],
+      "commentType": "MISCELLANEOUS"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the LppX/LprAFG lipoprotein family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 26,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 27,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 238,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Lipoarabinomannan carrier protein LprG",
+      "featureId": "PRO_0000018145"
+    },
+    {
+      "type": "Lipidation",
+      "location": {
+        "start": {
+          "value": 27,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 27,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-palmitoyl cysteine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00303"
+        }
+      ]
+    },
+    {
+      "type": "Lipidation",
+      "location": {
+        "start": {
+          "value": 27,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 27,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "S-diacylglycerol cysteine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00303"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0997",
+      "category": "Cellular component",
+      "name": "Cell inner membrane"
+    },
+    {
+      "id": "KW-1003",
+      "category": "Cellular component",
+      "name": "Cell membrane"
+    },
+    {
+      "id": "KW-0134",
+      "category": "Cellular component",
+      "name": "Cell wall"
+    },
+    {
+      "id": "KW-0325",
+      "category": "PTM",
+      "name": "Glycoprotein"
+    },
+    {
+      "id": "KW-0445",
+      "category": "Biological process",
+      "name": "Lipid transport"
+    },
+    {
+      "id": "KW-0446",
+      "category": "Ligand",
+      "name": "Lipid-binding"
+    },
+    {
+      "id": "KW-0449",
+      "category": "PTM",
+      "name": "Lipoprotein"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-0564",
+      "category": "PTM",
+      "name": "Palmitate"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    },
+    {
+      "id": "KW-0813",
+      "category": "Biological process",
+      "name": "Transport"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "11234002",
+        "citationType": "journal article",
+        "authors": [
+          "Cole S.T.",
+          "Eiglmeier K.",
+          "Parkhill J.",
+          "James K.D.",
+          "Thomson N.R.",
+          "Wheeler P.R.",
+          "Honore N.",
+          "Garnier T.",
+          "Churcher C.M.",
+          "Harris D.E.",
+          "Mungall K.L.",
+          "Basham D.",
+          "Brown D.",
+          "Chillingworth T.",
+          "Connor R.",
+          "Davies R.M.",
+          "Devlin K.",
+          "Duthoy S.",
+          "Feltwell T.",
+          "Fraser A.",
+          "Hamlin N.",
+          "Holroyd S.",
+          "Hornsby T.",
+          "Jagels K.",
+          "Lacroix C.",
+          "Maclean J.",
+          "Moule S.",
+          "Murphy L.D.",
+          "Oliver K.",
+          "Quail M.A.",
+          "Rajandream M.A.",
+          "Rutherford K.M.",
+          "Rutter S.",
+          "Seeger K.",
+          "Simon S.",
+          "Simmonds M.",
+          "Skelton J.",
+          "Squares R.",
+          "Squares S.",
+          "Stevens K.",
+          "Taylor K.",
+          "Whitehead S.",
+          "Woodward J.R.",
+          "Barrell B.G."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11234002"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/35059006"
+          }
+        ],
+        "title": "Massive gene decay in the leprosy bacillus.",
+        "publicationDate": "2001",
+        "journal": "Nature",
+        "firstPage": "1007",
+        "lastPage": "1011",
+        "volume": "409"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "TN",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "18424702",
+        "citationType": "journal article",
+        "authors": [
+          "Sieling P.A.",
+          "Hill P.J.",
+          "Dobos K.M.",
+          "Brookman K.",
+          "Kuhlman A.M.",
+          "Fabri M.",
+          "Krutzik S.R.",
+          "Rea T.H.",
+          "Heaslip D.G.",
+          "Belisle J.T.",
+          "Modlin R.L."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "18424702"
+          },
+          {
+            "database": "DOI",
+            "id": "10.4049/jimmunol.180.9.5833"
+          }
+        ],
+        "title": "Conserved mycobacterial lipoglycoproteins activate TLR2 but also require glycosylation for MHC class II-restricted T cell activation.",
+        "publicationDate": "2008",
+        "journal": "J. Immunol.",
+        "firstPage": "5833",
+        "lastPage": "5842",
+        "volume": "180"
+      },
+      "referencePositions": [
+        "FUNCTION IN INFECTION",
+        "GLYCOSYLATION"
+      ],
+      "referenceComments": [
+        {
+          "value": "TN",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AL583918",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAC30065.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "E86978",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "E86978"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_010907795.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_002677.1"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q9CCP6",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "Q9CCP6",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "272631.gene:17574378",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "mle:ML0557",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|272631.5.peg.968",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Leproma",
+      "id": "ML0557",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "ENOG50338Y0",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Bacteria"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_074100_1_0_11",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AAFTMET",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OrthoDB",
+      "id": "4763237at2",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000000806",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISS:UniProtKB"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005886",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:plasma membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd16334",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LppX-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.50.20.20",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR029046",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LolA/LolB/LppX"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR009830",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LppX/LprAFG"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF07161",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LppX_LprAFG"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF89392",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Prokaryotic lipoproteins and lipoprotein localization factors"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51257",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PROKAR_LIPOPROTEIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MQAPKHHRRLFAVLATLNTATAVIAGCSSGSNLSSGPLPDATTWVKQATDITKNVTSAHLVLSVNGKITGLPVKTLTGDLTTHPNTVASGNATITLDGADLNANFVVVDGELYATLTPSKWSDFGKASDIYDVASILNPDAGLANVLANFTGAKTEGRDSINGQSAVRISGNVSADAVNKIAPPFNATQPMPATVWIQETGDHQLAQIRIDNKSSGNSVQMTLSNWDEPVQVTKPQVS",
+    "length": 238,
+    "molWeight": 24874,
+    "crc64": "F63E3725DCC7AE84",
+    "md5": "F28CC44E43D1AA4307D97C51AB530F1F"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 2,
+      "SUBCELLULAR LOCATION": 1,
+      "DOMAIN": 1,
+      "PTM": 1,
+      "MISCELLANEOUS": 2,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1,
+      "Lipidation": 2
+    },
+    "uniParcId": "UPI000012E885"
+  }
+}

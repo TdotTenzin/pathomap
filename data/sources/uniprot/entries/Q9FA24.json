@@ -1,0 +1,548 @@
+{
+  "entryType": "UniProtKB unreviewed (TrEMBL)",
+  "primaryAccession": "Q9FA24",
+  "uniProtkbId": "Q9FA24_CLODI",
+  "entryAudit": {
+    "firstPublicDate": "2001-03-01",
+    "lastAnnotationUpdateDate": "2026-01-28",
+    "lastSequenceUpdateDate": "2001-03-01",
+    "entryVersion": 81,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 2.0,
+  "organism": {
+    "scientificName": "Clostridioides difficile",
+    "commonName": "Peptoclostridium difficile",
+    "taxonId": 1496,
+    "evidences": [
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "EMBL",
+        "id": "AAG15515.1"
+      }
+    ],
+    "lineage": [
+      "Bacteria",
+      "Bacillati",
+      "Bacillota",
+      "Clostridia",
+      "Peptostreptococcales",
+      "Peptostreptococcaceae",
+      "Clostridioides"
+    ]
+  },
+  "proteinExistence": "3: Inferred from homology",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "ARBA",
+            "id": "ARBA00020110"
+          },
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "RuleBase",
+            "id": "RU362073"
+          }
+        ],
+        "value": "Flagellin"
+      }
+    }
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "AAG15515.1"
+          }
+        ],
+        "value": "fliC"
+      }
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "RuleBase",
+              "id": "RU362073"
+            }
+          ],
+          "value": "Flagellin is the subunit protein which polymerizes to form the filaments of bacterial flagella"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "RuleBase",
+                "id": "RU362073"
+              }
+            ],
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        },
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "RuleBase",
+                "id": "RU362073"
+              }
+            ],
+            "value": "Bacterial flagellum",
+            "id": "SL-0307"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "ARBA",
+              "id": "ARBA00005709"
+            },
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "RuleBase",
+              "id": "RU362073"
+            }
+          ],
+          "value": "Belongs to the bacterial flagellin family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 3,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 141,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Flagellin N-terminal",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000259",
+          "source": "Pfam",
+          "id": "PF00669"
+        }
+      ]
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 206,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 289,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Flagellin C-terminal",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000259",
+          "source": "Pfam",
+          "id": "PF00700"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00023143"
+        },
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "RuleBase",
+          "id": "RU362073"
+        }
+      ],
+      "id": "KW-0975",
+      "category": "Cellular component",
+      "name": "Bacterial flagellum"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AAG15515.1"
+        }
+      ],
+      "id": "KW-0966",
+      "category": "Cellular component",
+      "name": "Cell projection"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AAG15515.1"
+        }
+      ],
+      "id": "KW-0969",
+      "category": "Cellular component",
+      "name": "Cilium"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AAG15515.1"
+        }
+      ],
+      "id": "KW-0282",
+      "category": "Cellular component",
+      "name": "Flagellum"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "RuleBase",
+          "id": "RU362073"
+        }
+      ],
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "10970353",
+        "citationType": "journal article",
+        "authors": [
+          "Tasteyre A.",
+          "Karjalainen T.",
+          "Avesani V.",
+          "Delmee M.",
+          "Collignon A.",
+          "Bourlioux P.",
+          "Barc M.C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "10970353"
+          }
+        ],
+        "title": "Phenotypic and genotypic diversity of the flagellin gene (fliC) among Clostridium difficile isolates from different serogroups.",
+        "publicationDate": "2000",
+        "journal": "J. Clin. Microbiol.",
+        "firstPage": "3179",
+        "lastPage": "3186",
+        "volume": "38"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAG15515.1"
+            }
+          ],
+          "value": "ATCC43597",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AAG15515.1"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AF095237",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAG15515.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_021366102.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NZ_BBYB01000122.1"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q9FA24",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009288",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:bacterial-type flagellum"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005198",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:structural molecule activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-UniRule"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.20.1330.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "f41 fragment of flagellin, N-terminal domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "6.10.10.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Flagellar export chaperone, C-terminal domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR001492",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Flagellin"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR046358",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Flagellin_C"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR042187",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Flagellin_C_sub2"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR001029",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Flagellin_N"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR42792",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FLAGELLIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR42792:SF2",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FLAGELLIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00700",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Flagellin_C"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00669",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Flagellin_N"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR00207",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FLAGELLIN"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF64518",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Phase 1 flagellin"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MRVNTNVSALVANNQMGRNVNAQSKSMEKLSSGVRIKRAADDAAGLAISEKMRAQIKGLDQAGRNVQDGISVVQTAEGALEETGNILQRMRTLSLQSSNETNTAEERQKVADELLQLKDEVERISSSIEFNGKKLLDGSSTEIRLQVGANFGTNVAGTTNNNNEIKVALVNTSSIMSKAGITSSTIASLNVDGASGTDAAKQMVSSLDMALKELNTSRAKLGAQQNRLESTQNNLNNTIENVTAAESRIRDTDVASEMVNLSKMNILVQASQSMLAQANQQPQGVLQLLG",
+    "length": 290,
+    "molWeight": 30936,
+    "crc64": "BE7DE0C35E7E7D7C",
+    "md5": "994687A1DF67DC31A3BC1393C8AD1F7F"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Domain": 2
+    },
+    "uniParcId": "UPI00000BD143"
+  }
+}

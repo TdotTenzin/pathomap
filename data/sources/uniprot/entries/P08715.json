@@ -1,0 +1,1289 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "P08715",
+  "uniProtkbId": "HLYAP_ECOLX",
+  "entryAudit": {
+    "firstPublicDate": "1988-01-01",
+    "lastAnnotationUpdateDate": "2026-09-02",
+    "lastSequenceUpdateDate": "1988-01-01",
+    "entryVersion": 130,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 4.0,
+  "organism": {
+    "scientificName": "Escherichia coli",
+    "taxonId": 562,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Gammaproteobacteria",
+      "Enterobacterales",
+      "Enterobacteriaceae",
+      "Escherichia"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000305"
+          }
+        ],
+        "value": "Hemolysin, plasmid"
+      }
+    }
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000303",
+            "source": "PubMed",
+            "id": "7801126"
+          }
+        ],
+        "value": "hlyA"
+      }
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "2121650"
+            }
+          ],
+          "value": "Bacterial hemolysins are exotoxins that attack blood cell membranes and cause cell rupture by forming a pore"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250",
+                "source": "UniProtKB",
+                "id": "P09983"
+              }
+            ],
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        },
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000305",
+                "source": "PubMed",
+                "id": "12598051"
+              },
+              {
+                "evidenceCode": "ECO:0000305",
+                "source": "PubMed",
+                "id": "2121650"
+              }
+            ],
+            "value": "Host cell membrane",
+            "id": "SL-0375"
+          },
+          "topology": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000305",
+                "source": "PubMed",
+                "id": "2121650"
+              }
+            ],
+            "value": "Multi-pass membrane protein",
+            "id": "SL-9909"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "value": "The Gly-rich region is probably involved in binding calcium, which is required for target cell-binding or cytolytic activity"
+        }
+      ],
+      "commentType": "DOMAIN"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "2121650"
+            }
+          ],
+          "value": "The three transmembrane domains are involved in pore formation by the cytotoxin"
+        }
+      ],
+      "commentType": "DOMAIN"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "10978310"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "12598051"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "32461253"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "7801126"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "8808931"
+            }
+          ],
+          "value": "Myristoylated by HlyC; the toxin only becomes active when modified (PubMed:10978310, PubMed:32461253, PubMed:7801126, PubMed:8808931). Mainly myristoylated, while a minor fraction is acylated with pentadecanoyl (C15:0; 26%) and heptadecanoyl (C17:0; 6%) fatty acyl groups (PubMed:10978310). Fatty acylation is involved in binding to host membranes and promotes the irreversible insertion of Hemolysin into the host cell membrane (PubMed:12598051). Can be activated by both myristoylation and palmitoylation, but HlyC catalyzes lysine myristoylation (PubMed:32461253)"
+        }
+      ],
+      "commentType": "PTM"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "The hemolysin of E.coli is produced predominantly by strains causing extraintestinal infections, such as those of the urinary tract"
+        }
+      ],
+      "commentType": "MISCELLANEOUS"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the RTX prokaryotic toxin (TC 1.C.11) family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1024,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Hemolysin, plasmid",
+      "featureId": "PRO_0000196214"
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 238,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 260,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 268,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 327,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 365,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 411,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 732,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 749,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Hemolysin-type calcium-binding 1"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 750,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 767,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Hemolysin-type calcium-binding 2"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 768,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 785,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Hemolysin-type calcium-binding 3"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 786,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 803,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Hemolysin-type calcium-binding 4"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 816,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 833,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Hemolysin-type calcium-binding 5"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 834,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 851,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Hemolysin-type calcium-binding 6"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 20,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 39,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 20,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 32,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Polar residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Lipidation",
+      "location": {
+        "start": {
+          "value": 564,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 564,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N6-myristoyl lysine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "10978310"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "32461253"
+        },
+        {
+          "evidenceCode": "ECO:0000305",
+          "source": "PubMed",
+          "id": "15065878"
+        },
+        {
+          "evidenceCode": "ECO:0000305",
+          "source": "PubMed",
+          "id": "7801126"
+        },
+        {
+          "evidenceCode": "ECO:0000305",
+          "source": "PubMed",
+          "id": "8808931"
+        }
+      ]
+    },
+    {
+      "type": "Lipidation",
+      "location": {
+        "start": {
+          "value": 690,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 690,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N6-myristoyl lysine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "10978310"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "32461253"
+        },
+        {
+          "evidenceCode": "ECO:0000305",
+          "source": "PubMed",
+          "id": "15065878"
+        },
+        {
+          "evidenceCode": "ECO:0000305",
+          "source": "PubMed",
+          "id": "7801126"
+        },
+        {
+          "evidenceCode": "ECO:0000305",
+          "source": "PubMed",
+          "id": "8808931"
+        }
+      ]
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 564,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 564,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Abolished acylation by HlyC and subsequent activation; when associated with A-690 or R-690.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "15065878"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "K",
+        "alternativeSequences": [
+          "R",
+          "A",
+          "C"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 690,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 690,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Abolished acylation by HlyC and subsequent activation; when associated with A-564 or R-564.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "15065878"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "K",
+        "alternativeSequences": [
+          "R",
+          "A",
+          "C"
+        ]
+      }
+    }
+  ],
+  "geneLocations": [
+    {
+      "value": "IncI2 pHLY152",
+      "geneEncodingType": "Plasmid"
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0106",
+      "category": "Ligand",
+      "name": "Calcium"
+    },
+    {
+      "id": "KW-0204",
+      "category": "Biological process",
+      "name": "Cytolysis"
+    },
+    {
+      "id": "KW-0354",
+      "category": "Biological process",
+      "name": "Hemolysis"
+    },
+    {
+      "id": "KW-1032",
+      "category": "Cellular component",
+      "name": "Host cell membrane"
+    },
+    {
+      "id": "KW-1043",
+      "category": "Cellular component",
+      "name": "Host membrane"
+    },
+    {
+      "id": "KW-0449",
+      "category": "PTM",
+      "name": "Lipoprotein"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-0519",
+      "category": "PTM",
+      "name": "Myristate"
+    },
+    {
+      "id": "KW-0614",
+      "category": "Technical term",
+      "name": "Plasmid"
+    },
+    {
+      "id": "KW-0677",
+      "category": "Domain",
+      "name": "Repeat"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0800",
+      "category": "Molecular function",
+      "name": "Toxin"
+    },
+    {
+      "id": "KW-0812",
+      "category": "Domain",
+      "name": "Transmembrane"
+    },
+    {
+      "id": "KW-1133",
+      "category": "Domain",
+      "name": "Transmembrane helix"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "CI-710CFCLAHSUNF",
+        "citationType": "journal article",
+        "authors": [
+          "Hess J.",
+          "Wels W.",
+          "Vogel M.",
+          "Goebel W."
+        ],
+        "title": "Nucleotide sequence of a plasmid-encoded hemolysin determinant and its comparison with a corresponding chromosomal hemolysin sequence.",
+        "publicationDate": "1986",
+        "journal": "FEMS Microbiol. Lett.",
+        "firstPage": "1",
+        "lastPage": "11",
+        "volume": "34"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "2121650",
+        "citationType": "journal article",
+        "authors": [
+          "Suttorp N.",
+          "Floeer B.",
+          "Schnittler H.",
+          "Seeger W.",
+          "Bhakdi S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "2121650"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.58.11.3796-3801.1990"
+          }
+        ],
+        "title": "Effects of Escherichia coli hemolysin on endothelial cell function.",
+        "publicationDate": "1990",
+        "journal": "Infect. Immun.",
+        "firstPage": "3796",
+        "lastPage": "3801",
+        "volume": "58"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "SUBCELLULAR LOCATION"
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "7801126",
+        "citationType": "journal article",
+        "authors": [
+          "Stanley P.",
+          "Packman L.C.",
+          "Koronakis V.",
+          "Hughes C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "7801126"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1126/science.7801126"
+          }
+        ],
+        "title": "Fatty acylation of two internal lysine residues required for the toxic activity of Escherichia coli hemolysin.",
+        "publicationDate": "1994",
+        "journal": "Science",
+        "firstPage": "1992",
+        "lastPage": "1996",
+        "volume": "266"
+      },
+      "referencePositions": [
+        "MYRISTOYLATION AT LYS-564 AND LYS-690"
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "8808931",
+        "citationType": "journal article",
+        "authors": [
+          "Ludwig A.",
+          "Garcia F.",
+          "Bauer S.",
+          "Jarchau T.",
+          "Benz R.",
+          "Hoppe J.",
+          "Goebel W."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8808931"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.178.18.5422-5430.1996"
+          }
+        ],
+        "title": "Analysis of the in vivo activation of hemolysin (HlyA) from Escherichia coli.",
+        "publicationDate": "1996",
+        "journal": "J. Bacteriol.",
+        "firstPage": "5422",
+        "lastPage": "5430",
+        "volume": "178"
+      },
+      "referencePositions": [
+        "MYRISTOYLATION AT LYS-564 AND LYS-690"
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "10978310",
+        "citationType": "journal article",
+        "authors": [
+          "Lim K.B.",
+          "Walker C.R.",
+          "Guo L.",
+          "Pellett S.",
+          "Shabanowitz J.",
+          "Hunt D.F.",
+          "Hewlett E.L.",
+          "Ludwig A.",
+          "Goebel W.",
+          "Welch R.A.",
+          "Hackett M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "10978310"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1074/jbc.c000544200"
+          }
+        ],
+        "title": "Escherichia coli alpha-hemolysin (HlyA) is heterogeneously acylated in vivo with 14-, 15-, and 17-carbon fatty acids.",
+        "publicationDate": "2000",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "36698",
+        "lastPage": "36702",
+        "volume": "275"
+      },
+      "referencePositions": [
+        "MYRISTOYLATION AT LYS-564 AND LYS-690"
+      ],
+      "referenceComments": [
+        {
+          "value": "IncI2 pHLY152",
+          "type": "PLASMID"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "12598051",
+        "citationType": "journal article",
+        "authors": [
+          "Herlax V.",
+          "Bakas L."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "12598051"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/s0009-3084(02)00191-3"
+          }
+        ],
+        "title": "Acyl chains are responsible for the irreversibility in the Escherichia coli alpha-hemolysin binding to membranes.",
+        "publicationDate": "2003",
+        "journal": "Chem. Phys. Lipids",
+        "firstPage": "185",
+        "lastPage": "190",
+        "volume": "122"
+      },
+      "referencePositions": [
+        "SUBCELLULAR LOCATION",
+        "MYRISTOYLATION"
+      ]
+    },
+    {
+      "referenceNumber": 7,
+      "citation": {
+        "id": "15065878",
+        "citationType": "journal article",
+        "authors": [
+          "Langston K.G.",
+          "Worsham L.M.",
+          "Earls L.",
+          "Ernst-Fonberg M.L."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15065878"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1021/bi035919k"
+          }
+        ],
+        "title": "Activation of hemolysin toxin: relationship between two internal protein sites of acylation.",
+        "publicationDate": "2004",
+        "journal": "Biochemistry",
+        "firstPage": "4338",
+        "lastPage": "4346",
+        "volume": "43"
+      },
+      "referencePositions": [
+        "MYRISTOYLATION AT LYS-564 AND LYS-690",
+        "MUTAGENESIS OF LYS-564 AND LYS-690"
+      ],
+      "referenceComments": [
+        {
+          "value": "IncI2 pHLY152",
+          "type": "PLASMID"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 8,
+      "citation": {
+        "id": "32461253",
+        "citationType": "journal article",
+        "authors": [
+          "Osickova A.",
+          "Khaliq H.",
+          "Masin J.",
+          "Jurnecka D.",
+          "Sukova A.",
+          "Fiser R.",
+          "Holubova J.",
+          "Stanek O.",
+          "Sebo P.",
+          "Osicka R."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "32461253"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1074/jbc.ra120.014122"
+          }
+        ],
+        "title": "Acyltransferase-mediated selection of the length of the fatty acyl chain and of the acylation site governs activation of bacterial RTX toxins.",
+        "publicationDate": "2020",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "9268",
+        "lastPage": "9280",
+        "volume": "295"
+      },
+      "referencePositions": [
+        "MYRISTOYLATION AT LYS-564 AND LYS-690"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "M14107",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA98233.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "S10056",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "S10056"
+        }
+      ]
+    },
+    {
+      "database": "SASBDB",
+      "id": "P08715",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "iPTMnet",
+      "id": "P08715",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Reactome",
+      "id": "R-HSA-9760173",
+      "properties": [
+        {
+          "key": "PathwayName",
+          "value": "Secretion of toxins"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISS:UniProtKB"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0020002",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:host cell plasma membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005509",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:calcium ion binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0015267",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:channel activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "2121650"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0044179",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:hemolysis in another organism"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "2121650"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.150.10.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Serralysin-like metalloprotease, C-terminal"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "3"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR018511",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Hemolysin-typ_Ca-bd_CS"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR001343",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Hemolysn_Ca-bd"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR013550",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "RTX_C"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR018504",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "RTX_pore_form"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR050557",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "RTX_toxin/Mannuronan_C5-epim"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR003995",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "RTX_toxin_determinant-A"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR011049",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Serralysin-like_metalloprot_C"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF033943",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "RTX_toxin"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR38340",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "S-LAYER PROTEIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR38340:SF1",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "S-LAYER PROTEIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00353",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "HemolysinCabind"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "3"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF02382",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "RTX"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF08339",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "RTX_C"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR00313",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CABNDNGRPT"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR01488",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "RTXTOXINA"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF51120",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "beta-Roll"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS00330",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "HEMOLYSIN_CALCIUM"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "4"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MTTITTAQIKSTLQSAKQSAANKLHSAGQSTKDALKKAAEQTRNAGNRLILLIPKDYKGQGSSLNDLVRTADELGIEVQYDEKNGTAITKQVFGTAEKLIGLTERGVTIFAPQLDKLLQKYQKAGNILGGGAENIGDNLGKAGGILSTFQNFLGTALSSMKIDELIKKQKSGGNVSSSELAKASIELINQLVDTVASLNNNVNSFSQQLNTLGSVLSNTKHLNGVGNKLQNLPNLDNIGAGLDTVSGILSAISASFILSNADADTRTKAAAGVELTTKVLGNVGKGISQYIIAQRAAQGLSTSAAAAGLIASAVTLAISPLSFLSIADKFKRANKIEEYSQRFKKLGYDGDSLLAAFHKETGAIDASLTTISTVLASVSSGISAAATTSLVGAPVSALVGAVTGIISGILEASKQAMFEHVASKMADVIAEWEKKHGKNYFENGYDARHAAFLEDNFKILSQYNKEYSVERSVLITQQHWDTLIGELAGVTRNGDKTLSGKSYIDYYEEGKRLEKKXDEFQKQVFDPLKGNIDLSDSKSSTLLKFVTPLLTPGEEIRERRQSGKYEYITELLVKGVDKWTVKGVQDKGAVYDYSNLIQHASVGNNQYREIRIESHLGDGDDKVFLSAGSANIYAGKGHDVVYYDKTDTGYLTIDGTKATEAGNYTVTRVLGGDVKVLQEVVKEQEVSVGKRTEKTQYRSYEFTHINGKNLTETDNLYSVEELIGTTRADKFFGSKFTDIFHGADGDDLIEGNDGNDRLYGDKGNDTLSGGNGDDQLYGGDGNDKLIGVAGNNYLNGGDGDDEFQVQGNSLAKNVLFGGKGNDKLYGSEGADLLDGGEGDDLLKGGYGNDIYRYLSGYGHHIIDDDGGKEDKLSLADIDFRDVAFKREGNDLIMYKGEGNVLSIGHKNGITFRNWFEKESGDISNHEIEQIFDKSGRIITPDSLKKALEYQQRNNKASYVYGNDALAYGSQGDLNPLINEISKIISAAGSFDVKEERTAASLLQLSGNASDFSYGRNSITLTTSA",
+    "length": 1024,
+    "molWeight": 110203,
+    "crc64": "83944917F76C945B",
+    "md5": "94F767F889D15CDF99FB79F48E04BF6E"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "DOMAIN": 2,
+      "PTM": 1,
+      "MISCELLANEOUS": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Transmembrane": 3,
+      "Repeat": 6,
+      "Region": 1,
+      "Compositional bias": 1,
+      "Lipidation": 2,
+      "Mutagenesis": 2
+    },
+    "uniParcId": "UPI000012C951"
+  }
+}

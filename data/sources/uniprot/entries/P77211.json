@@ -1,0 +1,2629 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "P77211",
+  "secondaryAccessions": [
+    "Q9L5Y3",
+    "Q9X444"
+  ],
+  "uniProtkbId": "CUSC_ECOLI",
+  "entryAudit": {
+    "firstPublicDate": "1997-11-01",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "1997-02-01",
+    "entryVersion": 175,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 5.0,
+  "organism": {
+    "scientificName": "Escherichia coli (strain K12)",
+    "taxonId": 83333,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Gammaproteobacteria",
+      "Enterobacterales",
+      "Enterobacteriaceae",
+      "Escherichia"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Cation efflux system protein CusC"
+      }
+    },
+    "flag": "Precursor"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "cusC"
+      },
+      "synonyms": [
+        {
+          "value": "ibeB"
+        },
+        {
+          "value": "ylcB"
+        }
+      ],
+      "orderedLocusNames": [
+        {
+          "value": "b0572"
+        },
+        {
+          "value": "JW0561"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11399769"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "12813074"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "21249122"
+            }
+          ],
+          "value": "Forms pores that allow passive diffusion of cations across the outer membrane. Part of a cation efflux system that mediates resistance to copper and silver. In pathogenic strains it allows the bacteria to invade brain microvascular endothelial cells (BMEC) thus allowing it to cross the blood-brain barrier and cause neonatal meningitis"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "21249122"
+            }
+          ],
+          "value": "Homotrimer. Component of the cus efflux system composed of CusA, CusB, CusC and CusF"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "21249122"
+              }
+            ],
+            "value": "Cell outer membrane",
+            "id": "SL-0040"
+          },
+          "topology": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "21249122"
+              }
+            ],
+            "value": "Multi-pass membrane protein",
+            "id": "SL-9909"
+          }
+        },
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "21249122"
+              }
+            ],
+            "value": "Cell outer membrane",
+            "id": "SL-0040"
+          },
+          "topology": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255",
+                "source": "PROSITE-ProRule",
+                "id": "PRU00303"
+              },
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "21249122"
+              }
+            ],
+            "value": "Lipid-anchor",
+            "id": "SL-9901"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11283292"
+            }
+          ],
+          "value": "Transcriptionally regulated by CusR in response to copper and silver ions"
+        }
+      ],
+      "commentType": "INDUCTION"
+    },
+    {
+      "texts": [
+        {
+          "value": "The cus system plays an important role in copper tolerance under anaerobic growth and, under extreme copper stress, in aerobic growth"
+        }
+      ],
+      "commentType": "MISCELLANEOUS"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the outer membrane factor (OMF) (TC 1.B.17) family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 17,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00303"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 18,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 457,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Cation efflux system protein CusC",
+      "featureId": "PRO_0000030992"
+    },
+    {
+      "type": "Lipidation",
+      "location": {
+        "start": {
+          "value": 18,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 18,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-palmitoyl cysteine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00303"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "21249122"
+        }
+      ]
+    },
+    {
+      "type": "Lipidation",
+      "location": {
+        "start": {
+          "value": 18,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 18,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "S-diacylglycerol cysteine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00303"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "21249122"
+        }
+      ]
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 6,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 6,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: K1 / RS218",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "L",
+        "alternativeSequences": [
+          "I"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 20,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 20,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: K1 / RS218",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "L",
+        "alternativeSequences": [
+          "M"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 27,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 27,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: K1 / RS218",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "P",
+        "alternativeSequences": [
+          "S"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 33,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 33,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: K1 / RS218",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "Q",
+        "alternativeSequences": [
+          "H"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 50,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 51,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: K1 / RS218",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "QN",
+        "alternativeSequences": [
+          "RS"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 81,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 81,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: K1 / RS218",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "T",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 102,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 102,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: K1 / RS218",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "L",
+        "alternativeSequences": [
+          "F"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 106,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 106,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: K1 / RS218",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "G",
+        "alternativeSequences": [
+          "D"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 117,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 118,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: K1 / RS218",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "NT",
+        "alternativeSequences": [
+          "DS"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 167,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 167,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: K1 / RS218",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "S",
+        "alternativeSequences": [
+          "F"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 191,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 191,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: K1 / RS218",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "R",
+        "alternativeSequences": [
+          "G"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 232,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 232,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: K1 / RS218",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "Q",
+        "alternativeSequences": [
+          "R"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 273,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 273,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: K1 / RS218",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "S",
+        "alternativeSequences": [
+          "P"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 457,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 457,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: K1 / RS218",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "G",
+        "alternativeSequences": [
+          "GWQQ"
+        ]
+      }
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 21,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 24,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "4K7R"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 26,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 29,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "4K7R"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 33,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 35,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "4K7R"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 54,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 57,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "4K7R"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 61,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 73,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "4K7R"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 75,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 96,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "4K7R"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 101,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 111,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "4K7R"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 114,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 117,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "4K7R"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 121,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 133,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "4K7R"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 139,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 204,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "4K7R"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 205,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 207,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "4K7R"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 211,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 246,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "4K7R"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 251,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 255,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3PIK"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 257,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 259,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "4K34"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 260,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 262,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "4K7R"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 265,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 269,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "4K7K"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 274,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 279,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "4K7R"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 281,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 302,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "4K7R"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 307,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 320,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "4K7R"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 321,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 323,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "4K7R"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 327,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 329,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "4K7R"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 330,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 339,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "4K7R"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 347,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 413,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "4K7R"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 419,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 453,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "4K7R"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0002",
+      "category": "Technical term",
+      "name": "3D-structure"
+    },
+    {
+      "id": "KW-0998",
+      "category": "Cellular component",
+      "name": "Cell outer membrane"
+    },
+    {
+      "id": "KW-0406",
+      "category": "Biological process",
+      "name": "Ion transport"
+    },
+    {
+      "id": "KW-0449",
+      "category": "PTM",
+      "name": "Lipoprotein"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-0564",
+      "category": "PTM",
+      "name": "Palmitate"
+    },
+    {
+      "id": "KW-0626",
+      "category": "Molecular function",
+      "name": "Porin"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    },
+    {
+      "id": "KW-0812",
+      "category": "Domain",
+      "name": "Transmembrane"
+    },
+    {
+      "id": "KW-1134",
+      "category": "Domain",
+      "name": "Transmembrane beta strand"
+    },
+    {
+      "id": "KW-0813",
+      "category": "Biological process",
+      "name": "Transport"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "10225861",
+        "citationType": "journal article",
+        "authors": [
+          "Huang S.-H.",
+          "Chen Y.-H.",
+          "Fu Q.",
+          "Stins M.",
+          "Wang Y.",
+          "Wass C.",
+          "Kim K.S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "10225861"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.67.5.2103-2109.1999"
+          }
+        ],
+        "title": "Identification and characterization of an Escherichia coli invasion gene locus, ibeB, required for penetration of brain microvascular endothelial cells.",
+        "publicationDate": "1999",
+        "journal": "Infect. Immun.",
+        "firstPage": "2103",
+        "lastPage": "2109",
+        "volume": "67"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "K1 / RS218 / O18:K1:H7",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "8905232",
+        "citationType": "journal article",
+        "authors": [
+          "Oshima T.",
+          "Aiba H.",
+          "Baba T.",
+          "Fujita K.",
+          "Hayashi K.",
+          "Honjo A.",
+          "Ikemoto K.",
+          "Inada T.",
+          "Itoh T.",
+          "Kajihara M.",
+          "Kanai K.",
+          "Kashimoto K.",
+          "Kimura S.",
+          "Kitagawa M.",
+          "Makino K.",
+          "Masuda S.",
+          "Miki T.",
+          "Mizobuchi K.",
+          "Mori H.",
+          "Motomura K.",
+          "Nakamura Y.",
+          "Nashimoto H.",
+          "Nishio Y.",
+          "Saito N.",
+          "Sampei G.",
+          "Seki Y.",
+          "Tagami H.",
+          "Takemoto K.",
+          "Wada C.",
+          "Yamamoto Y.",
+          "Yano M.",
+          "Horiuchi T."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8905232"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1093/dnares/3.3.137"
+          }
+        ],
+        "title": "A 718-kb DNA sequence of the Escherichia coli K-12 genome corresponding to the 12.7-28.0 min region on the linkage map.",
+        "publicationDate": "1996",
+        "journal": "DNA Res.",
+        "firstPage": "137",
+        "lastPage": "155",
+        "volume": "3"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "K12 / W3110 / ATCC 27325 / DSM 5911",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "CI-B1UJ6TNQ0SAS1",
+        "citationType": "submission",
+        "authors": [
+          "Chung E.",
+          "Allen E.",
+          "Araujo R.",
+          "Aparicio A.M.",
+          "Davis K.",
+          "Duncan M.",
+          "Federspiel N.",
+          "Hyman R.",
+          "Kalman S.",
+          "Komp C.",
+          "Kurdi O.",
+          "Lew H.",
+          "Lin D.",
+          "Namath A.",
+          "Oefner P.",
+          "Roberts D.",
+          "Schramm S.",
+          "Davis R.W."
+        ],
+        "title": "Sequence of minutes 4-25 of Escherichia coli.",
+        "publicationDate": "JAN-1997",
+        "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "K12 / MG1655 / ATCC 47076",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "9278503",
+        "citationType": "journal article",
+        "authors": [
+          "Blattner F.R.",
+          "Plunkett G. III",
+          "Bloch C.A.",
+          "Perna N.T.",
+          "Burland V.",
+          "Riley M.",
+          "Collado-Vides J.",
+          "Glasner J.D.",
+          "Rode C.K.",
+          "Mayhew G.F.",
+          "Gregor J.",
+          "Davis N.W.",
+          "Kirkpatrick H.A.",
+          "Goeden M.A.",
+          "Rose D.J.",
+          "Mau B.",
+          "Shao Y."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9278503"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1126/science.277.5331.1453"
+          }
+        ],
+        "title": "The complete genome sequence of Escherichia coli K-12.",
+        "publicationDate": "1997",
+        "journal": "Science",
+        "firstPage": "1453",
+        "lastPage": "1462",
+        "volume": "277"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "K12 / MG1655 / ATCC 47076",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "16738553",
+        "citationType": "journal article",
+        "authors": [
+          "Hayashi K.",
+          "Morooka N.",
+          "Yamamoto Y.",
+          "Fujita K.",
+          "Isono K.",
+          "Choi S.",
+          "Ohtsubo E.",
+          "Baba T.",
+          "Wanner B.L.",
+          "Mori H.",
+          "Horiuchi T."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "16738553"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/msb4100049"
+          }
+        ],
+        "title": "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655 and W3110.",
+        "publicationDate": "2006",
+        "journal": "Mol. Syst. Biol.",
+        "firstPage": "E1",
+        "lastPage": "E5",
+        "volume": "2"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "K12 / W3110 / ATCC 27325 / DSM 5911",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "11004187",
+        "citationType": "journal article",
+        "authors": [
+          "Munson G.P.",
+          "Lam D.L.",
+          "Outten F.W.",
+          "O'Halloran T.V."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11004187"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.182.20.5864-5871.2000"
+          }
+        ],
+        "title": "Identification of a copper-responsive two-component system on the chromosome of Escherichia coli K-12.",
+        "publicationDate": "2000",
+        "journal": "J. Bacteriol.",
+        "firstPage": "5864",
+        "lastPage": "5871",
+        "volume": "182"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 1-340"
+      ],
+      "referenceComments": [
+        {
+          "value": "K12 / DH5-alpha",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 7,
+      "citation": {
+        "id": "10493123",
+        "citationType": "journal article",
+        "authors": [
+          "Fountoulakis M.",
+          "Takacs M.-F.",
+          "Berndt P.",
+          "Langen H.",
+          "Takacs B."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "10493123"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1002/(sici)1522-2683(19990801)20:11<2181::aid-elps2181>3.0.co;2-q"
+          }
+        ],
+        "title": "Enrichment of low abundance proteins of Escherichia coli by hydroxyapatite chromatography.",
+        "publicationDate": "1999",
+        "journal": "Electrophoresis",
+        "firstPage": "2181",
+        "lastPage": "2195",
+        "volume": "20"
+      },
+      "referencePositions": [
+        "IDENTIFICATION BY MASS SPECTROMETRY"
+      ],
+      "referenceComments": [
+        {
+          "value": "B / BL21",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 8,
+      "citation": {
+        "id": "11399769",
+        "citationType": "journal article",
+        "authors": [
+          "Outten F.W.",
+          "Huffman D.L.",
+          "Hale J.A.",
+          "O'Halloran T.V."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11399769"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1074/jbc.m104122200"
+          }
+        ],
+        "title": "The independent cue and cus systems confer copper tolerance during aerobic and anaerobic growth in Escherichia coli.",
+        "publicationDate": "2001",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "30670",
+        "lastPage": "30677",
+        "volume": "276"
+      },
+      "referencePositions": [
+        "FUNCTION IN COPPER HOMEOSTASIS"
+      ],
+      "referenceComments": [
+        {
+          "value": "K12",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 9,
+      "citation": {
+        "id": "11283292",
+        "citationType": "journal article",
+        "authors": [
+          "Franke S.",
+          "Grass G.",
+          "Nies D.H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11283292"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1099/00221287-147-4-965"
+          }
+        ],
+        "title": "The product of the ybdE gene of the Escherichia coli chromosome is involved in detoxification of silver ions.",
+        "publicationDate": "2001",
+        "journal": "Microbiology",
+        "firstPage": "965",
+        "lastPage": "972",
+        "volume": "147"
+      },
+      "referencePositions": [
+        "INDUCTION"
+      ],
+      "referenceComments": [
+        {
+          "value": "K38",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 10,
+      "citation": {
+        "id": "12813074",
+        "citationType": "journal article",
+        "authors": [
+          "Franke S.",
+          "Grass G.",
+          "Rensing C.",
+          "Nies D.H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "12813074"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.185.13.3804-3812.2003"
+          }
+        ],
+        "title": "Molecular analysis of the copper-transporting efflux system CusCFBA of Escherichia coli.",
+        "publicationDate": "2003",
+        "journal": "J. Bacteriol.",
+        "firstPage": "3804",
+        "lastPage": "3812",
+        "volume": "185"
+      },
+      "referencePositions": [
+        "FUNCTION"
+      ],
+      "referenceComments": [
+        {
+          "value": "K12 / W3110 / ATCC 27325 / DSM 5911",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 11,
+      "citation": {
+        "id": "21249122",
+        "citationType": "journal article",
+        "authors": [
+          "Kulathila R.",
+          "Kulathila R.",
+          "Indic M.",
+          "van den Berg B."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "21249122"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1371/journal.pone.0015610"
+          }
+        ],
+        "title": "Crystal structure of Escherichia coli CusC, the outer membrane component of a heavy metal efflux pump.",
+        "publicationDate": "2011",
+        "journal": "PLoS ONE",
+        "firstPage": "E15610",
+        "lastPage": "E15610",
+        "volume": "6"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY",
+        "FUNCTION",
+        "SUBUNIT",
+        "SUBCELLULAR LOCATION",
+        "PALMITOYLATION AT CYS-18",
+        "DIACYLGLYCEROL AT CYS-18"
+      ],
+      "referenceComments": [
+        {
+          "value": "K12 / DH5-alpha",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AF094824",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAD30205.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "U82598",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAB40770.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "U00096",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAC73673.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AP009048",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "BAA35206.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF245661",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAF70174.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "B64790",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "B64790"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_415104.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_000913.3"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_000074234.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NZ_CP009789.1"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "3PIK",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.30 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=18-457"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "4K34",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.69 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B=18-457"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "4K7K",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.53 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B=18-457"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "4K7R",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.09 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=18-457"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "P77211",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "P77211",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BioGRID",
+      "id": "4262822",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "262"
+        }
+      ]
+    },
+    {
+      "database": "ComplexPortal",
+      "id": "CPX-2254",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cus cation efflux complex"
+        }
+      ]
+    },
+    {
+      "database": "DIP",
+      "id": "DIP-9347N",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "FunCoup",
+      "id": "P77211",
+      "properties": [
+        {
+          "key": "Number of interactors",
+          "value": "371"
+        }
+      ]
+    },
+    {
+      "database": "IntAct",
+      "id": "P77211",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "511145.b0572",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "TCDB",
+      "id": "1.B.17.3.5",
+      "properties": [
+        {
+          "key": "FamilyName",
+          "value": "the outer membrane factor (omf) family"
+        }
+      ]
+    },
+    {
+      "database": "PaxDb",
+      "id": "511145-b0572",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblBacteria",
+      "id": "AAC73673",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAC73673"
+        },
+        {
+          "key": "GeneId",
+          "value": "b0572"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "946288",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "ecj:JW0561",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "eco:b0572",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "ecoc:C3026_02840",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|1411691.4.peg.1702",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EchoBASE",
+      "id": "EB3984",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "COG1538",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Bacteria"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_012817_13_3_6",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "InParanoid",
+      "id": "P77211",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AAFWPKI",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OrthoDB",
+      "id": "9770517at2",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PhylomeDB",
+      "id": "P77211",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BioCyc",
+      "id": "EcoCyc:G6320-MONOMER",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BioCyc",
+      "id": "MetaCyc:G6320-MONOMER",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EvolutionaryTrace",
+      "id": "P77211",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PRO",
+      "id": "PR:P77211",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000000625",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome"
+        }
+      ]
+    },
+    {
+      "database": "AbasyAtlas",
+      "id": "P77211",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009279",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cell outer membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0016020",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005507",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:copper ion binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IGI:EcoCyc"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000316",
+          "source": "PubMed",
+          "id": "12813074"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005375",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:copper ion transmembrane transporter activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IGI:EcoCyc"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000316",
+          "source": "PubMed",
+          "id": "12813074"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0019992",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:diacylglycerol binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "21249122"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0015562",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:efflux transmembrane transporter activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0042802",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:identical protein binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:EcoCyc"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "21249122"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0022857",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:transmembrane transporter activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0060003",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:copper ion export"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IGI:EcoCyc"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000316",
+          "source": "PubMed",
+          "id": "12813074"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0035434",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:copper ion transmembrane transport"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "NAS:ComplexPortal"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000303",
+          "source": "PubMed",
+          "id": "12813074"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0010273",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:detoxification of copper ion"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IGI:EcoCyc"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000316",
+          "source": "PubMed",
+          "id": "12813074"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0006878",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:intracellular copper ion homeostasis"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IGI:EcoCyc"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000316",
+          "source": "PubMed",
+          "id": "12813074"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0070207",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:protein homotrimerization"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "21249122"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0046688",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:response to copper ion"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:EcoliWiki"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "12813074"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0010272",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:response to silver ion"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:EcoCyc"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "18419149"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009636",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:response to toxic substance"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "NAS:ComplexPortal"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000303",
+          "source": "PubMed",
+          "id": "12813074"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:1902601",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:silver ion transmembrane transport"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "NAS:ComplexPortal"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000303",
+          "source": "PubMed",
+          "id": "12813074"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0055085",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:transmembrane transport"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.20.1600.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Outer membrane efflux proteins (OEP)"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.20.200.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Outer membrane efflux proteins (OEP)"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR010131",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "MdtP/NodT-like"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR003423",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OMP_efflux"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "TIGR01845",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "outer_NodT"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF007347",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PRK09837.1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR30203:SF32",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CATION EFFLUX SYSTEM PROTEIN CUSC"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR30203",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OUTER MEMBRANE CATION EFFLUX PROTEIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF02321",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OEP"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF56954",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Outer membrane efflux proteins (OEP)"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51257",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PROKAR_LIPOPROTEIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MSPCKLLPFCVALALTGCSLAPDYQRPAMPVPQQFSLSQNGLVNAADNYQNAGWRTFFVDNQVKTLISEALVNNRDLRMATLKVQEARAQYRLTDADRYPQLNGEGSGSWSGNLKGNTATTREFSTGLNASFDLDFFGRLKNMSEAERQNYLATEEAQRAVHILLVSNVAQSYFNQQLAYAQLQIAEETLRNYQQSYAFVEKQLLTGSSNVLALEQARGVIESTRSDIAKRQGELAQANNALQLLLGSYGKLPQAQTVNSDSLQSVKLPAGLSSQILLQRPDIMEAEHALMAANANIGAARAAFFPSISLTSGISTASSDLSSLFNASSGMWNFIPKIEIPIFNAGRNQANLDIAEIRQQQSVVNYEQKIQNAFKEVADALALRQSLNDQISAQQRYLASLQITLQRARALYQHGAVSYLEVLDAERSLFATRQTLLDLNYARQVNEISLYTALGGG",
+    "length": 457,
+    "molWeight": 50270,
+    "crc64": "B85B2B6B6719F7A1",
+    "md5": "AF77B13732DAFF2B30DC54DA57DC0336"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "INDUCTION": 1,
+      "MISCELLANEOUS": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1,
+      "Lipidation": 2,
+      "Natural variant": 14,
+      "Helix": 17,
+      "Beta strand": 6,
+      "Turn": 1
+    },
+    "uniParcId": "UPI00001286FC"
+  }
+}

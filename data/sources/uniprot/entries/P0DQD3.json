@@ -1,0 +1,2932 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "P0DQD3",
+  "secondaryAccessions": [
+    "P25147",
+    "Q9EXG1"
+  ],
+  "uniProtkbId": "INLB_LISMG",
+  "entryAudit": {
+    "firstPublicDate": "2019-02-13",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2019-02-13",
+    "entryVersion": 36,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 5.0,
+  "organism": {
+    "scientificName": "Listeria monocytogenes serotype 1/2a (strain EGD / Mackaness)",
+    "taxonId": 1334565,
+    "lineage": [
+      "Bacteria",
+      "Bacillati",
+      "Bacillota",
+      "Bacilli",
+      "Caryophanales",
+      "Listeriaceae",
+      "Listeria"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000303",
+            "source": "PubMed",
+            "id": "1905979"
+          }
+        ],
+        "value": "Internalin B"
+      },
+      "shortNames": [
+        {
+          "value": "InlB"
+        }
+      ]
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "Invasion protein InlB"
+        }
+      }
+    ],
+    "flag": "Precursor"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "inlB"
+      }
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "10747014"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11081636"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "12411480"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "15049825"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "9282740"
+            },
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "11081636"
+            },
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "1905979"
+            },
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "8864117"
+            }
+          ],
+          "value": "Mediates the entry of L.monocytogenes into normally non-phagocytic mammalian host cells (Probable) (PubMed:11081636, PubMed:9282740). Its host receptor is hepatocyte growth factor receptor (HGF receptor, a tyrosine kinase, MET) which is tyrosine-phosphorylated in response to InlB in human, green monkey, mouse and dog cell lines (PubMed:11081636, PubMed:15049825). Downstream adapter proteins GAB1 and CBL are phosphorylated in response to InlB, which also causes cell colony scattering (PubMed:11081636). InlB binding to mammalian cells is saturable and inhibited by EDTA; InlB-coated beads can be taken up by host cells (PubMed:10747014). Complement component 1 Q subcomponent-binding protein (gC1q-R, C1QBP) might act as an InlB receptor, leading to activation of PI3-kinase in green monkey cells (PubMed:10747014). Stimulation of Tyr-phosphorylation by InlB is antagonized by C1QBP, showing that potentiation of MET signaling via the GW domains is not mediated by C1QBP; the exact role of C1QBP remains to be determined (PubMed:15049825). Stimulation of Tyr-phosphorylation of MET by InlB is potentiated by the InlB GW domains and glycosaminoglycans such as heparin; exogenously added InlB, or hepatocyte growth factor (HGF) will also substitute for bacterial InlB, suggesting InlB promotes bacterial invasion by mimicking the hormone HGF (PubMed:15049825). May stimulate phosphatidylinositol 4,5-bisphosphate 3-kinase (PI3-kinase) in green monkey cells, has less effect in humans as PI3-kinase is constitutively and highly expressed in Caco cells (Probable). Binds heparin; C1QBP and heparin seem to bind to the GW domains (PubMed:12411480)"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "COFACTOR",
+      "cofactors": [
+        {
+          "name": "Ca(2+)",
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "10635330"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "15020228"
+            }
+          ],
+          "cofactorCrossReference": {
+            "database": "ChEBI",
+            "id": "CHEBI:29108"
+          }
+        }
+      ],
+      "note": {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "10635330"
+              },
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "15020228"
+              }
+            ],
+            "value": "Binds 2 Ca(2+) ions; binding site 1 has a 10-fold higher affinity binding site 2 (PubMed:10635330, PubMed:15020228). Loss of Ca(2+)-binding has no measurable effect on host receptor activation or invasion by Listeria, suggesting ion-binding is fortuitous (PubMed:15020228)."
+          }
+        ]
+      }
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "P0DQD2"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "10747014"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11081636"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "12411480"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "15049825"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "18327567"
+            }
+          ],
+          "value": "Monomer (PubMed:15049825). Interacts via its LRR repeats with the extracellular portion of mammalian host MET; MET can bind HGF, its endogenous ligand, and InlB simultaneously (PubMed:11081636). Probably forms a dimer upon interaction with host MET, which subsequently allows dimerization of the host MET and subsequent host signaling; dimerization probably occurs via the convex surface of InlB (By similarity). Interacts with host complement component 1 Q subcomponent-binding protein (C1QBP) (PubMed:10747014, PubMed:12411480). Interacts in vitro with human intestinal mucin-2 (MUC2) but not with mucin-1 (PubMed:18327567)"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "note": {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "10594817"
+              },
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "15049825"
+              },
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "9282740"
+              }
+            ],
+            "value": "Approximately half the protein is secreted (PubMed:10594817, PubMed:9282740). Cell surface association is mediated by the GW domains and can occur when protein is added externally; externally added protein confers invasion competence (PubMed:10594817, PubMed:15049825, PubMed:9282740). Replacement of the GW region with that of the Ami protein, which has 8 GW domains, localizes all the protein to the cell surface (PubMed:10594817, PubMed:9282740). Replacement of the GW region with GW5 and 6 of the Ami protein restores cell invasion when bacteria plus protein are added externally (PubMed:15049825). Protein is homogeneously distributed but partially buried in the cell membrane; it binds non-covalently to lipoteichoic acid (LTA) on the bacterial membrane, and can be released from the surface by LTA (PubMed:10594817)"
+          }
+        ]
+      },
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "10594817"
+              },
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "9282740"
+              }
+            ],
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        },
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "9282740"
+              }
+            ],
+            "value": "Cell surface",
+            "id": "SL-0310"
+          }
+        },
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "10594817"
+              }
+            ],
+            "value": "Cell membrane",
+            "id": "SL-0039"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "10594817"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "10635330"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11081636"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "12411480"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "15020228"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "15049825"
+            },
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "15049825"
+            },
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "1905979"
+            },
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "9282740"
+            }
+          ],
+          "value": "Has an N-terminal region with 8 leucine-rich repeats (LRR) and has 3 GW repeats in the C-terminus (Probable). Residues 241-319 form an Ig-like region, followed by a 72 residue-long flexible B repeat region (Probable) (PubMed:12411480). The GW repeats mediate non-covalent binding of the protein to lipoteichoic acid (LTA) on the bacterial membrane (PubMed:10594817). The GW domain mediates binding to host complement component 1 Q subcomponent-binding protein (gC1q-R, C1QBP) and to heparin; heparin binding dissociates InlB from the bacterial surface (PubMed:12411480). The LRR domain forms a curved tube, the N-terminus of which has a cap that binds 2 Ca(2+) ions (PubMed:10635330, PubMed:15020228). The LRR domain alone (31-241) binds mammalian MET and stimulates its Tyr-phosphorylation; the LRR plus Ig-like region (31-321) are required for receptor dimerization, and the GW domains, especially GW2 and GW3, potentiate MET activation (PubMed:11081636, PubMed:15049825)"
+        }
+      ],
+      "commentType": "DOMAIN"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11081636"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "15049825"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "1905979"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "8864117"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "9282740"
+            }
+          ],
+          "value": "Deletion of both inlA and inlB prevents uptake of Listeria by human enterocyte-like cell line Caco-2 (PubMed:1905979). Single inlB deletion no longer invades various cell lines (PubMed:15049825, PubMed:8864117, PubMed:9282740). Decreased synthesis of phosphatidylinositol 3,4,5-trisphosphate (PIP3) in green monkey cells, decreased infection of host cells, decreased association of host PI3-kinase catalytic subunit with tyrosine-phosphorylated proteins (PubMed:8864117). Deletion no longer Tyr-phosphorylates mammalian MET (PubMed:11081636, PubMed:15049825)"
+        }
+      ],
+      "commentType": "DISRUPTION PHENOTYPE"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the internalin family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 30,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 31,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 630,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Internalin B",
+      "featureId": "PRO_0000446289"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 31,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 76,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRRNT"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 75,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 97,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 1",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 98,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 121,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 2",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 123,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 141,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 3",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 142,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 163,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 4",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 164,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 187,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 5",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 189,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 207,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 6",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 208,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 231,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 7",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 241,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 330,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRRCT"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 393,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 467,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "GW 1",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01116"
+        }
+      ]
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 472,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 550,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "GW 2",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01116"
+        }
+      ]
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 553,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 630,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "GW 3",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01116"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 241,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 319,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Ig-like region",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305",
+          "source": "PubMed",
+          "id": "12411480"
+        },
+        {
+          "evidenceCode": "ECO:0000305",
+          "source": "PubMed",
+          "id": "15049825"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 320,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 392,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "B repeat region",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305",
+          "source": "PubMed",
+          "id": "12411480"
+        },
+        {
+          "evidenceCode": "ECO:0000305",
+          "source": "PubMed",
+          "id": "15049825"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 399,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 630,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "GW repeat region, necessary and sufficient for cell surface attachment, interacts with host C1QBP and with heparin",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "10594817"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12411480"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "9282740"
+        },
+        {
+          "evidenceCode": "ECO:0000303",
+          "source": "PubMed",
+          "id": "1905979"
+        }
+      ]
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 49,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 49,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29108"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "10635330"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "15020228"
+        },
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "1D0B"
+        },
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "1OTO"
+        }
+      ],
+      "ligand": {
+        "name": "Ca(2+)",
+        "id": "ChEBI:CHEBI:29108",
+        "label": "1"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 51,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 51,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29108"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "10635330"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "15020228"
+        },
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "1D0B"
+        },
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "1OTO"
+        }
+      ],
+      "ligand": {
+        "name": "Ca(2+)",
+        "id": "ChEBI:CHEBI:29108",
+        "label": "1"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 55,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 55,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29108"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "10635330"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "15020228"
+        },
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "1D0B"
+        },
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "1OTN"
+        }
+      ],
+      "ligand": {
+        "name": "Ca(2+)",
+        "id": "ChEBI:CHEBI:29108",
+        "label": "2"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 59,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 59,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29108"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "10635330"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "15020228"
+        },
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "1D0B"
+        },
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "1OTN"
+        }
+      ],
+      "ligand": {
+        "name": "Ca(2+)",
+        "id": "ChEBI:CHEBI:29108",
+        "label": "2"
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 51,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 59,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "No Ca(2+) binding, no change in Tyr-phosphorylation of host MET, wild-type invasion of host Vero cells.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "15020228"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "DAFAETIKD",
+        "alternativeSequences": [
+          "AAFAETIKA"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 51,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 51,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Only binds 1 Ca(2+), no change in Tyr-phosphorylation of host MET, wild-type invasion of host Vero cells.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "15020228"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "D",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 59,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 59,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "No Ca(2+) binding, no change in Tyr-phosphorylation of host MET, wild-type invasion of host Vero cells.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "15020228"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "D",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 41,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 41,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 2; CAC20629",
+      "alternativeSequence": {
+        "originalSequence": "S",
+        "alternativeSequences": [
+          "P"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 49,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 49,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 2; CAC20629",
+      "alternativeSequence": {
+        "originalSequence": "P",
+        "alternativeSequences": [
+          "S"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 117,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 117,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 2; CAC20629",
+      "alternativeSequence": {
+        "originalSequence": "T",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 132,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 132,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 2; CAC20629",
+      "alternativeSequence": {
+        "originalSequence": "I",
+        "alternativeSequences": [
+          "V"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 396,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 396,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 2; CAC20629",
+      "alternativeSequence": {
+        "originalSequence": "T",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 44,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 47,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6U12"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 51,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 60,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6U12"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 68,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 70,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6U12"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 72,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 76,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6U12"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 80,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 82,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6U12"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 94,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 96,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6U12"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 102,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 104,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6U12"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 114,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 116,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6U12"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 124,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 126,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6U12"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 136,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 138,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6U12"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 146,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 148,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6U12"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 158,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 162,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6U12"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 167,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 170,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6U12"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 180,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 184,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6U12"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 189,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 192,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6U12"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 202,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 204,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6U12"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 212,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 214,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6U12"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 224,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 226,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6U12"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 233,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 236,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6U12"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0002",
+      "category": "Technical term",
+      "name": "3D-structure"
+    },
+    {
+      "id": "KW-0106",
+      "category": "Ligand",
+      "name": "Calcium"
+    },
+    {
+      "id": "KW-1003",
+      "category": "Cellular component",
+      "name": "Cell membrane"
+    },
+    {
+      "id": "KW-0358",
+      "category": "Molecular function",
+      "name": "Heparin-binding"
+    },
+    {
+      "id": "KW-0433",
+      "category": "Domain",
+      "name": "Leucine-rich repeat"
+    },
+    {
+      "id": "KW-0446",
+      "category": "Ligand",
+      "name": "Lipid-binding"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-0479",
+      "category": "Ligand",
+      "name": "Metal-binding"
+    },
+    {
+      "id": "KW-0677",
+      "category": "Domain",
+      "name": "Repeat"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "1905979",
+        "citationType": "journal article",
+        "authors": [
+          "Gaillard J.-L.",
+          "Berche P.",
+          "Frehel C.",
+          "Gouin E.",
+          "Cossart P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "1905979"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/0092-8674(91)90009-n"
+          }
+        ],
+        "title": "Entry of L. monocytogenes into cells is mediated by internalin, a repeat protein reminiscent of surface antigens from Gram-positive cocci.",
+        "publicationDate": "1991",
+        "journal": "Cell",
+        "firstPage": "1127",
+        "lastPage": "1141",
+        "volume": "65"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]",
+        "DOMAIN",
+        "DISRUPTION PHENOTYPE"
+      ],
+      "referenceComments": [
+        {
+          "value": "EGD-SmR / Serovar 1/2a",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "CI-AGUDFGQEDHIPV",
+        "citationType": "submission",
+        "authors": [
+          "Hain T.",
+          "Pashalidis P.",
+          "Hudel M.",
+          "Chakraborty T.",
+          "Domann E."
+        ],
+        "title": "Nucleotide sequence of the internalin operon from Listeria monocytogenes EGD.",
+        "publicationDate": "OCT-1998",
+        "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "EGD / Serovar 1/2a",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "8864117",
+        "citationType": "journal article",
+        "authors": [
+          "Ireton K.",
+          "Payrastre B.",
+          "Chap H.",
+          "Ogawa W.",
+          "Sakaue H.",
+          "Kasuga M.",
+          "Cossart P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8864117"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1126/science.274.5288.780"
+          }
+        ],
+        "title": "A role for phosphoinositide 3-kinase in bacterial invasion.",
+        "publicationDate": "1996",
+        "journal": "Science",
+        "firstPage": "780",
+        "lastPage": "782",
+        "volume": "274"
+      },
+      "referencePositions": [
+        "PROBABLE FUNCTION IN STIMULATING HOST PI3-KINASE",
+        "DISRUPTION PHENOTYPE"
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "CI-8U1OQUVB95QQ3",
+        "citationType": "journal article",
+        "authors": [
+          "Ireton K.",
+          "Payrastre B.",
+          "Chap H.",
+          "Ogawa W.",
+          "Sakaue H.",
+          "Kasuga M.",
+          "Cossart P."
+        ],
+        "publicationDate": "1997",
+        "journal": "Science",
+        "firstPage": "464",
+        "lastPage": "464",
+        "volume": "275"
+      },
+      "referencePositions": [
+        "ERRATUM OF PUBMED:8864117",
+        "CORRECTION OF FIGURE 3"
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "9282740",
+        "citationType": "journal article",
+        "authors": [
+          "Braun L.",
+          "Dramsi S.",
+          "Dehoux P.",
+          "Bierne H.",
+          "Lindahl G.",
+          "Cossart P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9282740"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1046/j.1365-2958.1997.4621825.x"
+          }
+        ],
+        "title": "InlB: an invasion protein of Listeria monocytogenes with a novel type of surface association.",
+        "publicationDate": "1997",
+        "journal": "Mol. Microbiol.",
+        "firstPage": "285",
+        "lastPage": "294",
+        "volume": "25"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "SUBCELLULAR LOCATION",
+        "DOMAIN",
+        "DISRUPTION PHENOTYPE"
+      ],
+      "referenceComments": [
+        {
+          "value": "EGD-SmR / Serovar 1/2a",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "10594817",
+        "citationType": "journal article",
+        "authors": [
+          "Jonquieres R.",
+          "Bierne H.",
+          "Fiedler F.",
+          "Gounon P.",
+          "Cossart P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "10594817"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1046/j.1365-2958.1999.01652.x"
+          }
+        ],
+        "title": "Interaction between the protein InlB of Listeria monocytogenes and lipoteichoic acid: a novel mechanism of protein association at the surface of Gram-positive bacteria.",
+        "publicationDate": "1999",
+        "journal": "Mol. Microbiol.",
+        "firstPage": "902",
+        "lastPage": "914",
+        "volume": "34"
+      },
+      "referencePositions": [
+        "SUBCELLULAR LOCATION",
+        "DOMAIN",
+        "BINDS TO LIPOTEICHOIC ACID"
+      ],
+      "referenceComments": [
+        {
+          "value": "EGD / Mackaness",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 7,
+      "citation": {
+        "id": "11081636",
+        "citationType": "journal article",
+        "authors": [
+          "Shen Y.",
+          "Naujokas M.",
+          "Park M.",
+          "Ireton K."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11081636"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/s0092-8674(00)00141-0"
+          }
+        ],
+        "title": "InIB-dependent internalization of Listeria is mediated by the Met receptor tyrosine kinase.",
+        "publicationDate": "2000",
+        "journal": "Cell",
+        "firstPage": "501",
+        "lastPage": "510",
+        "volume": "103"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "INTERACTION WITH MAMMALIAN MET",
+        "PROBABLE RECEPTOR",
+        "DOMAIN",
+        "DISRUPTION PHENOTYPE"
+      ],
+      "referenceComments": [
+        {
+          "value": "EGD / Mackaness",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 8,
+      "citation": {
+        "id": "10747014",
+        "citationType": "journal article",
+        "authors": [
+          "Braun L.",
+          "Ghebrehiwet B.",
+          "Cossart P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "10747014"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1093/emboj/19.7.1458"
+          }
+        ],
+        "title": "gC1q-R/p32, a C1q-binding protein, is a receptor for the InlB invasion protein of Listeria monocytogenes.",
+        "publicationDate": "2000",
+        "journal": "EMBO J.",
+        "firstPage": "1458",
+        "lastPage": "1466",
+        "volume": "19"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "INTERACTION WITH MAMMALIAN C1QBP",
+        "POSSIBLE RECEPTOR"
+      ],
+      "referenceComments": [
+        {
+          "value": "EGD / Mackaness",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 9,
+      "citation": {
+        "id": "15049825",
+        "citationType": "journal article",
+        "authors": [
+          "Banerjee M.",
+          "Copp J.",
+          "Vuga D.",
+          "Marino M.",
+          "Chapman T.",
+          "van der Geer P.",
+          "Ghosh P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15049825"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1111/j.1365-2958.2003.03968.x"
+          }
+        ],
+        "title": "GW domains of the Listeria monocytogenes invasion protein InlB are required for potentiation of Met activation.",
+        "publicationDate": "2004",
+        "journal": "Mol. Microbiol.",
+        "firstPage": "257",
+        "lastPage": "271",
+        "volume": "52"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "SUBUNIT",
+        "DOMAIN",
+        "DISRUPTION PHENOTYPE"
+      ],
+      "referenceComments": [
+        {
+          "value": "EGD / Mackaness",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 10,
+      "citation": {
+        "id": "18327567",
+        "citationType": "journal article",
+        "authors": [
+          "Linden S.K.",
+          "Bierne H.",
+          "Sabet C.",
+          "Png C.W.",
+          "Florin T.H.",
+          "McGuckin M.A.",
+          "Cossart P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "18327567"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1007/s00203-008-0358-6"
+          }
+        ],
+        "title": "Listeria monocytogenes internalins bind to the human intestinal mucin MUC2.",
+        "publicationDate": "2008",
+        "journal": "Arch. Microbiol.",
+        "firstPage": "101",
+        "lastPage": "104",
+        "volume": "190"
+      },
+      "referencePositions": [
+        "INTERACTION WITH HUMAN MUC2"
+      ]
+    },
+    {
+      "referenceNumber": 11,
+      "citation": {
+        "id": "10635330",
+        "citationType": "journal article",
+        "authors": [
+          "Marino M.",
+          "Braun L.",
+          "Cossart P.",
+          "Ghosh P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "10635330"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/s1097-2765(00)80234-8"
+          }
+        ],
+        "title": "Structure of the inlB leucine-rich repeats, a domain that triggers host cell invasion by the bacterial pathogen L. monocytogenes.",
+        "publicationDate": "1999",
+        "journal": "Mol. Cell",
+        "firstPage": "1063",
+        "lastPage": "1072",
+        "volume": "4"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY IN COMPLEX WITH CALCIUM",
+        "COFACTOR",
+        "DOMAIN"
+      ],
+      "referenceComments": [
+        {
+          "value": "EGD-SmR / Serovar 1/2a",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "1D0B"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 12,
+      "citation": {
+        "id": "12411480",
+        "citationType": "journal article",
+        "authors": [
+          "Marino M.",
+          "Banerjee M.",
+          "Jonquieres R.",
+          "Cossart P.",
+          "Ghosh P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "12411480"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1093/emboj/cdf558"
+          }
+        ],
+        "title": "GW domains of the Listeria monocytogenes invasion protein InlB are SH3-like and mediate binding to host ligands.",
+        "publicationDate": "2002",
+        "journal": "EMBO J.",
+        "firstPage": "5623",
+        "lastPage": "5634",
+        "volume": "21"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY",
+        "INTERACTION WITH HUMAN C1QBP",
+        "DOMAIN",
+        "HEPARIN-BINDING"
+      ],
+      "referenceComments": [
+        {
+          "value": "EGD / Mackaness",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "1M9S"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 13,
+      "citation": {
+        "id": "15020228",
+        "citationType": "journal article",
+        "authors": [
+          "Marino M.",
+          "Banerjee M.",
+          "Copp J.",
+          "Dramsi S.",
+          "Chapman T.",
+          "van der Geer P.",
+          "Cossart P.",
+          "Ghosh P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15020228"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/j.bbrc.2004.02.064"
+          }
+        ],
+        "title": "Characterization of the calcium-binding sites of Listeria monocytogenes InlB.",
+        "publicationDate": "2004",
+        "journal": "Biochem. Biophys. Res. Commun.",
+        "firstPage": "379",
+        "lastPage": "386",
+        "volume": "316"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY MUTANTS FOR CALCIUM-BINDING",
+        "COFACTOR",
+        "DOMAIN",
+        "MUTAGENESIS OF 51-ASP--ASP-59; ASP-51 AND ASP-59"
+      ],
+      "referenceComments": [
+        {
+          "value": "EGD / Mackaness",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "1OTM"
+        },
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "1OTN"
+        },
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "1OTO"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "M67471",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA25290.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AJ012346",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAC20629.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "C39930",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "C39930"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_014930830.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_022568.1"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "1D0B",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.86 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=36-248"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "1M9S",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.65 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=36-630"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "1OTM",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.93 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=36-248"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "1OTN",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.97 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=36-248"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "1OTO",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.96 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=36-248"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6GCU",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "6.00 A"
+        },
+        {
+          "key": "Chains",
+          "value": "B/E=36-321"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6U12",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.56 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=36-248"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "P0DQD3",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "MDposit",
+      "id": "P0DQD3",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SASBDB",
+      "id": "P0DQD3",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "P0DQD3",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "ABCD",
+      "id": "P0DQD3",
+      "properties": [
+        {
+          "key": "antibodies",
+          "value": "12 sequenced antibodies"
+        }
+      ]
+    },
+    {
+      "database": "Reactome",
+      "id": "R-HSA-8875360",
+      "properties": [
+        {
+          "key": "PathwayName",
+          "value": "InlB-mediated entry of Listeria monocytogenes into host cell"
+        }
+      ]
+    },
+    {
+      "database": "EvolutionaryTrace",
+      "id": "P0DQD3",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PHI-base",
+      "id": "PHI:11651",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PHI-base",
+      "id": "PHI:124375",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009986",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cell surface"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "9282740"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "10594817"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "9282740"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009274",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:peptidoglycan-based cell wall"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "TAS:Reactome"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005886",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:plasma membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "10594817"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0035635",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:entry of bacterium into host cell"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:GO_Central"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "9282740"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "3.80.10.10:FF:001164",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "GH01279p"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "2.30.30.170:FF:000001",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Internalin B"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.30.30.170",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "3"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.60.40.1220",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.60.40.4270",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Listeria-Bacteroides repeat domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.80.10.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Ribonuclease Inhibitor"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR014755",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cu-Rt/internalin_Ig-like"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR025987",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "GW_dom"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR038200",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "GW_dom_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR014756",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Ig_E-set"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR012569",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Inl_IR"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR013378",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "InlB-like_B-rpt"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR024634",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Internalin_N"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR001611",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Leu-rich_rpt"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR025875",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Leu-rich_rpt_4"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR003591",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Leu-rich_rpt_typical-subtyp"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR042229",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Listeria/Bacterioides_rpt_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR032675",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LRR_dom_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR050836",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SDS22/Internalin_LRR"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF033202",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "GW_glycos_SH3"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "3"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "TIGR02543",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "List_Bact_rpt"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR46652",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LEUCINE-RICH REPEAT AND IQ DOMAIN-CONTAINING PROTEIN 1-RELATED"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR46652:SF3",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LEUCINE-RICH REPEAT-CONTAINING PROTEIN 9"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF09479",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Flg_new"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF13457",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "GW"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "3"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF12354",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Internalin_N"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF12799",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LRR_4"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF08191",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LRR_adjacent"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00365",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LRR_SD22"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "6"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00369",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LRR_TYP"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "5"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF81296",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "E set domains"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF52058",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "L domain-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF82057",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Prokaryotic SH3-related domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "3"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51780",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "GW"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "3"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51450",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LRR"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "6"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MKEKHNPRRKYCLISGLAIIFSLWIIIGNGAKVQAETITVSTPIKQIFPDDAFAETIKDNLKKKSVTDAVTQNELNSIDQIIANNSDIKSVQGIQYLPNVTKLFLNGNKLTDIKPLTNLKNLGWLFLDENKIKDLSSLKDLKKLKSLSLEHNGISDINGLVHLPQLESLYLGNNKITDITVLSRLTKLDTLSLEDNQISDIVPLAGLTKLQNLYLSKNHISDLRALAGLKNLDVLELFSQECLNKPINHQSNLVVPNTVKNTDGSLVTPEIISDDGDYEKPNVKWHLPEFTNEVSFIFYQPVTIGKAKARFHGRVTQPLKEVYTVSYDVDGTVIKTKVEAGTRITAPKPPTKQGYVFKGWYTEKNGGHEWNFNTDYMSGNDFTLYAVFKAETTEKTVNLTRYVKYIRGNAGIYKLPREDNSLKQGTLASHRCKALTVDREARNGGKLWYRLKNIGWTKAENLSLDRYDKMEYDKGVTAYARVRNASGNSVWTKPYNTAGAKHVNKLSVYQGKNMRILREAKTPITTWYQFSIGGKVIGWVDTRALNTFYKQSMEKPTRLTRYVSANKAGESYYKVPVADNPVKRGTLAKYKNQKLIVDCQATIEGQLWYRIRTSSTFIGWTKAANLRAQK",
+    "length": 630,
+    "molWeight": 71221,
+    "crc64": "EFBDCF52DBAF0C45",
+    "md5": "5C43434DF0DD721FE8621338A85BAD4D"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "COFACTOR": 1,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "DOMAIN": 1,
+      "DISRUPTION PHENOTYPE": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1,
+      "Domain": 5,
+      "Repeat": 7,
+      "Region": 3,
+      "Binding site": 4,
+      "Mutagenesis": 3,
+      "Sequence conflict": 5,
+      "Helix": 10,
+      "Beta strand": 9
+    },
+    "uniParcId": "UPI000016F8E0"
+  }
+}

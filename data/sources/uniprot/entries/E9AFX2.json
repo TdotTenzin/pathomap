@@ -1,0 +1,1313 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "E9AFX2",
+  "uniProtkbId": "SLS_LEIMA",
+  "entryAudit": {
+    "firstPublicDate": "2011-11-16",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2011-04-05",
+    "entryVersion": 58,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 4.0,
+  "organism": {
+    "scientificName": "Leishmania major",
+    "taxonId": 5664,
+    "lineage": [
+      "Eukaryota",
+      "Discoba",
+      "Euglenozoa",
+      "Kinetoplastea",
+      "Metakinetoplastina",
+      "Trypanosomatida",
+      "Trypanosomatidae",
+      "Leishmaniinae",
+      "Leishmania"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000303",
+            "source": "PubMed",
+            "id": "20457606"
+          }
+        ],
+        "value": "Phosphatidylinositol:ceramide inositolphosphotransferase"
+      },
+      "shortNames": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "18699867"
+            },
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "20457606"
+            }
+          ],
+          "value": "LmjIPCS"
+        }
+      ],
+      "ecNumbers": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "20457606"
+            }
+          ],
+          "value": "2.7.8.-"
+        }
+      ]
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "20457606"
+            }
+          ],
+          "value": "Inositol-phosphorylceramide synthase"
+        },
+        "shortNames": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "source": "PubMed",
+                "id": "20457606"
+              }
+            ],
+            "value": "IPC synthase"
+          }
+        ]
+      },
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "20457606"
+            }
+          ],
+          "value": "Sphingolipid synthase"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000303",
+            "source": "PubMed",
+            "id": "18699867"
+          },
+          {
+            "evidenceCode": "ECO:0000303",
+            "source": "PubMed",
+            "id": "20457606"
+          }
+        ],
+        "value": "IPCS"
+      },
+      "orfNames": [
+        {
+          "value": "LMJF_35_4990"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "18699867"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "20457606"
+            }
+          ],
+          "value": "Bidirectional lipid inositolphosphotransferase capable of converting phosphatidylinositol (PI) and ceramide to inositol-phosphorylceramide (IPC) and diacylglycerol (DAG) and vice versa. Direction is dependent on the relative concentrations of DAG and ceramide as phosphoinositol acceptors. Essential for viability of the pathogenic bloodstream stage of this human protozoan parasite and, consequently, can be considered as potential drug target"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "an N-acyl-sphingoid base + a 1,2-diacyl-sn-glycero-3-phospho-(1D-myo-inositol) = an inositol-1-phosphoceramide + a 1,2-diacyl-sn-glycerol",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:55588"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:17815"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:57880"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:64916"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:83273"
+          }
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "20457606"
+          }
+        ]
+      }
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255"
+              }
+            ],
+            "value": "Membrane",
+            "id": "SL-0162"
+          },
+          "topology": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255"
+              }
+            ],
+            "value": "Multi-pass membrane protein",
+            "id": "SL-9909"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255"
+            }
+          ],
+          "value": "Belongs to the sphingomyelin synthase family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 338,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Phosphatidylinositol:ceramide inositolphosphotransferase",
+      "featureId": "PRO_0000413860"
+    },
+    {
+      "type": "Topological domain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 36,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Cytoplasmic",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 37,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 57,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Topological domain",
+      "location": {
+        "start": {
+          "value": 58,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 87,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Extracellular",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 88,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 108,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Topological domain",
+      "location": {
+        "start": {
+          "value": 109,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 116,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Cytoplasmic",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 117,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 137,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Topological domain",
+      "location": {
+        "start": {
+          "value": 138,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 152,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Extracellular",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 153,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 173,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Topological domain",
+      "location": {
+        "start": {
+          "value": 174,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 189,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Cytoplasmic",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 190,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 210,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Topological domain",
+      "location": {
+        "start": {
+          "value": 211,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 222,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Extracellular",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 223,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 243,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Topological domain",
+      "location": {
+        "start": {
+          "value": 244,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 338,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Cytoplasmic",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 220,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 220,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250"
+        }
+      ]
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 264,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 264,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250"
+        }
+      ]
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 268,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 268,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250"
+        }
+      ]
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 35,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 35,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 2; no nucleotide entry",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "M",
+        "alternativeSequences": [
+          "T"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 116,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 116,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 2; no nucleotide entry",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "R",
+        "alternativeSequences": [
+          "S"
+        ]
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0418",
+      "category": "Molecular function",
+      "name": "Kinase"
+    },
+    {
+      "id": "KW-0443",
+      "category": "Biological process",
+      "name": "Lipid metabolism"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0746",
+      "category": "Biological process",
+      "name": "Sphingolipid metabolism"
+    },
+    {
+      "id": "KW-0808",
+      "category": "Molecular function",
+      "name": "Transferase"
+    },
+    {
+      "id": "KW-0812",
+      "category": "Domain",
+      "name": "Transmembrane"
+    },
+    {
+      "id": "KW-1133",
+      "category": "Domain",
+      "name": "Transmembrane helix"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "16020728",
+        "citationType": "journal article",
+        "authors": [
+          "Ivens A.C.",
+          "Peacock C.S.",
+          "Worthey E.A.",
+          "Murphy L.",
+          "Aggarwal G.",
+          "Berriman M.",
+          "Sisk E.",
+          "Rajandream M.A.",
+          "Adlem E.",
+          "Aert R.",
+          "Anupama A.",
+          "Apostolou Z.",
+          "Attipoe P.",
+          "Bason N.",
+          "Bauser C.",
+          "Beck A.",
+          "Beverley S.M.",
+          "Bianchettin G.",
+          "Borzym K.",
+          "Bothe G.",
+          "Bruschi C.V.",
+          "Collins M.",
+          "Cadag E.",
+          "Ciarloni L.",
+          "Clayton C.",
+          "Coulson R.M.R.",
+          "Cronin A.",
+          "Cruz A.K.",
+          "Davies R.M.",
+          "De Gaudenzi J.",
+          "Dobson D.E.",
+          "Duesterhoeft A.",
+          "Fazelina G.",
+          "Fosker N.",
+          "Frasch A.C.",
+          "Fraser A.",
+          "Fuchs M.",
+          "Gabel C.",
+          "Goble A.",
+          "Goffeau A.",
+          "Harris D.",
+          "Hertz-Fowler C.",
+          "Hilbert H.",
+          "Horn D.",
+          "Huang Y.",
+          "Klages S.",
+          "Knights A.",
+          "Kube M.",
+          "Larke N.",
+          "Litvin L.",
+          "Lord A.",
+          "Louie T.",
+          "Marra M.",
+          "Masuy D.",
+          "Matthews K.",
+          "Michaeli S.",
+          "Mottram J.C.",
+          "Mueller-Auer S.",
+          "Munden H.",
+          "Nelson S.",
+          "Norbertczak H.",
+          "Oliver K.",
+          "O'neil S.",
+          "Pentony M.",
+          "Pohl T.M.",
+          "Price C.",
+          "Purnelle B.",
+          "Quail M.A.",
+          "Rabbinowitsch E.",
+          "Reinhardt R.",
+          "Rieger M.",
+          "Rinta J.",
+          "Robben J.",
+          "Robertson L.",
+          "Ruiz J.C.",
+          "Rutter S.",
+          "Saunders D.",
+          "Schaefer M.",
+          "Schein J.",
+          "Schwartz D.C.",
+          "Seeger K.",
+          "Seyler A.",
+          "Sharp S.",
+          "Shin H.",
+          "Sivam D.",
+          "Squares R.",
+          "Squares S.",
+          "Tosato V.",
+          "Vogt C.",
+          "Volckaert G.",
+          "Wambutt R.",
+          "Warren T.",
+          "Wedler H.",
+          "Woodward J.",
+          "Zhou S.",
+          "Zimmermann W.",
+          "Smith D.F.",
+          "Blackwell J.M.",
+          "Stuart K.D.",
+          "Barrell B.G.",
+          "Myler P.J."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "16020728"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1126/science.1112680"
+          }
+        ],
+        "title": "The genome of the kinetoplastid parasite, Leishmania major.",
+        "publicationDate": "2005",
+        "journal": "Science",
+        "firstPage": "436",
+        "lastPage": "442",
+        "volume": "309"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "MHOM/IL/81/Friedlin",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000312",
+          "source": "EMBL",
+          "id": "CBZ13127.1"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "20457606",
+        "citationType": "journal article",
+        "authors": [
+          "Sevova E.S.",
+          "Goren M.A.",
+          "Schwartz K.J.",
+          "Hsu F.F.",
+          "Turk J.",
+          "Fox B.G.",
+          "Bangs J.D."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "20457606"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1074/jbc.m110.127662"
+          }
+        ],
+        "title": "Cell-free synthesis and functional characterization of sphingolipid synthases from parasitic trypanosomatid protozoa.",
+        "publicationDate": "2010",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "20580",
+        "lastPage": "20587",
+        "volume": "285"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]",
+        "FUNCTION",
+        "CATALYTIC ACTIVITY"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "20457606"
+            }
+          ],
+          "value": "MRHO/SU/59/P / LV39",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "18699867",
+        "citationType": "journal article",
+        "authors": [
+          "Sutterwala S.S.",
+          "Hsu F.F.",
+          "Sevova E.S.",
+          "Schwartz K.J.",
+          "Zhang K.",
+          "Key P.",
+          "Turk J.",
+          "Beverley S.M.",
+          "Bangs J.D."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "18699867"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1111/j.1365-2958.2008.06393.x"
+          }
+        ],
+        "title": "Developmentally regulated sphingolipid synthesis in African trypanosomes.",
+        "publicationDate": "2008",
+        "journal": "Mol. Microbiol.",
+        "firstPage": "281",
+        "lastPage": "296",
+        "volume": "70"
+      },
+      "referencePositions": [
+        "FUNCTION"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "FR796431",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CBZ13127.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "XP_003722892.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "XM_003722844.1"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "E9AFX2",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "5664.E9AFX2",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblProtists",
+      "id": "CBZ13127",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CBZ13127"
+        },
+        {
+          "key": "GeneId",
+          "value": "LMJF_35_4990"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "12980649",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "lma:LMJF_35_4990",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "VEuPathDB",
+      "id": "TriTrypDB:LmjF.35.4990",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "VEuPathDB",
+      "id": "TriTrypDB:LMJFC_350063500",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "VEuPathDB",
+      "id": "TriTrypDB:LMJLV39_350057900",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "VEuPathDB",
+      "id": "TriTrypDB:LMJSD75_350057200",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "KOG3058",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Eukaryota"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_864647_0_0_1",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "InParanoid",
+      "id": "E9AFX2",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AAYCMIA",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BRENDA",
+      "id": "2.7.1.227",
+      "properties": [
+        {
+          "key": "OrganismId",
+          "value": "2950"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000000542",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome 35"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0020016",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:ciliary pocket"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISO:GeneDB"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005789",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:endoplasmic reticulum membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005768",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:endosome"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISO:GeneDB"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005794",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:Golgi apparatus"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:GeneDB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "16861742"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0000139",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:Golgi membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005886",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:plasma membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0047493",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:ceramide cholinephosphotransferase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0033188",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:sphingomyelin synthase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISO:GeneDB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000266",
+          "source": "PubMed",
+          "id": "20457606"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0046513",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:ceramide biosynthetic process"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0046335",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:ethanolamine biosynthetic process"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISO:GeneDB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000266",
+          "source": "PubMed",
+          "id": "20457606"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR045221",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Sphingomyelin_synth-like"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR025749",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Sphingomyelin_synth-like_dom"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR21290:SF25",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SPHINGOMYELIN SYNTHASE-RELATED PROTEIN 1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR21290",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SPHINGOMYELIN SYNTHETASE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF14360",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PAP2_C"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MTSHVTAHDVGGNEDIGTDHVPWYKQPLPLCTQVMRFILLLLLTVMFLGVAILVANARMPDPEKVRPLPDLLLESIPKVALLENGTNVIIFLLNATTVVVGFKVFLLERHMNGLPRVTFLVGVPKIGSFLNRMAFGVLDSGRRPFPLKNVFPIMAIRFLTSYAVVMVFRAFVIMGTSYPATDNHCQNPQVIEHPVLNVILTLVTLGSGAIHCGDLMFSGHTMILSLAFILAWDYSPFLHPWAVRVWVSVLLPISYYCILASRSHYTDDILVAMYVMIATYKVIDHAETGAPWQMQLLIRWMPWPGANTIEKWTADEVVVVVQTPAEDSTDASAALPEH",
+    "length": 338,
+    "molWeight": 37644,
+    "crc64": "EDE4EBE152ACEAA8",
+    "md5": "D43516D997D9D74E84E43DE1DC260CC9"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "CATALYTIC ACTIVITY": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Topological domain": 7,
+      "Transmembrane": 6,
+      "Active site": 3,
+      "Sequence conflict": 2
+    },
+    "uniParcId": "UPI000056254A"
+  }
+}

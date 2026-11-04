@@ -1,0 +1,1272 @@
+{
+  "entryType": "UniProtKB unreviewed (TrEMBL)",
+  "primaryAccession": "O34208",
+  "uniProtkbId": "O34208_PSEAI",
+  "entryAudit": {
+    "firstPublicDate": "1998-01-01",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "1998-01-01",
+    "entryVersion": 129,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 2.0,
+  "organism": {
+    "scientificName": "Pseudomonas aeruginosa",
+    "taxonId": 287,
+    "evidences": [
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "EMBL",
+        "id": "AAC16023.1"
+      }
+    ],
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Gammaproteobacteria",
+      "Pseudomonadales",
+      "Pseudomonadaceae",
+      "Pseudomonas"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "submissionNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAC16023.1"
+            }
+          ],
+          "value": "ExoU"
+        }
+      },
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAC38269.1"
+            }
+          ],
+          "value": "PepA"
+        }
+      },
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAP82959.1"
+            }
+          ],
+          "value": "Type III effector protein"
+        }
+      },
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "ABD94731.1"
+            }
+          ],
+          "value": "Type three secretion effector protein"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "AAC16023.1"
+          }
+        ],
+        "value": "exoU"
+      },
+      "synonyms": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAC38269.1"
+            }
+          ],
+          "value": "pepA"
+        }
+      ],
+      "orfNames": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "ABD94731.1"
+            }
+          ],
+          "value": "EXC2"
+        },
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAP82959.1"
+            }
+          ],
+          "value": "RS14"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "ARBA",
+                "id": "ARBA00004370"
+              }
+            ],
+            "value": "Membrane",
+            "id": "SL-0162"
+          }
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 107,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 357,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "PNPLA",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000259",
+          "source": "PROSITE",
+          "id": "PS51635"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 83,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Motif",
+      "location": {
+        "start": {
+          "value": 111,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 116,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "GXGXXG",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01161"
+        }
+      ]
+    },
+    {
+      "type": "Motif",
+      "location": {
+        "start": {
+          "value": 140,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 144,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "GXSXG",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01161"
+        }
+      ]
+    },
+    {
+      "type": "Motif",
+      "location": {
+        "start": {
+          "value": 344,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 346,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "DGA/G",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01161"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 36,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Polar residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 63,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 78,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Polar residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 142,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 142,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Nucleophile",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01161"
+        }
+      ]
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 344,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 344,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Proton acceptor",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01161"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3TU3"
+        },
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "4AKX"
+        }
+      ],
+      "id": "KW-0002",
+      "category": "Technical term",
+      "name": "3D-structure"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022801"
+        },
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01161"
+        }
+      ],
+      "id": "KW-0378",
+      "category": "Molecular function",
+      "name": "Hydrolase"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022963"
+        },
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01161"
+        }
+      ],
+      "id": "KW-0442",
+      "category": "Biological process",
+      "name": "Lipid degradation"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00023098"
+        },
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01161"
+        }
+      ],
+      "id": "KW-0443",
+      "category": "Biological process",
+      "name": "Lipid metabolism"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00023136"
+        }
+      ],
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022692"
+        }
+      ],
+      "id": "KW-0812",
+      "category": "Domain",
+      "name": "Transmembrane"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022989"
+        }
+      ],
+      "id": "KW-1133",
+      "category": "Domain",
+      "name": "Transmembrane helix"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "9302017",
+        "citationType": "journal article",
+        "authors": [
+          "Finck-Barbancon V.",
+          "Goranson J.",
+          "Zhu L.",
+          "Sawa T.",
+          "Wiener-Kronish J.P.",
+          "Fleiszig S.M.",
+          "Wu C.",
+          "Mende-Mueller L.",
+          "Frank D.W."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9302017"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1046/j.1365-2958.1997.4891851.x"
+          }
+        ],
+        "title": "ExoU expression by Pseudomonas aeruginosa correlates with acute cytotoxicity and epithelial injury.",
+        "publicationDate": "1997",
+        "journal": "Mol. Microbiol.",
+        "firstPage": "547",
+        "lastPage": "557",
+        "volume": "25"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAC16023.1"
+            }
+          ],
+          "value": "PA103",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AAC16023.1"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "9515706",
+        "citationType": "journal article",
+        "authors": [
+          "Hauser A.R.",
+          "Kang P.J.",
+          "Engel J.N."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9515706"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1046/j.1365-2958.1998.00727.x"
+          }
+        ],
+        "title": "PepA, a secreted protein of Pseudomonas aeruginosa, is necessary for cytotoxicity and virulence.",
+        "publicationDate": "1998",
+        "journal": "Mol. Microbiol.",
+        "firstPage": "807",
+        "lastPage": "818",
+        "volume": "27"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAC38269.1"
+            }
+          ],
+          "value": "PA103",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AAC38269.1"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "CI-A0QK9BV6OPOEA",
+        "citationType": "submission",
+        "authors": [
+          "Finck-Barbancon V.",
+          "Goranson J.",
+          "Zhu L.",
+          "Sawa T.",
+          "Wiener-Kronish J.P.",
+          "Fleiszig S.M.J.",
+          "Wu C.",
+          "Mende-Mueller L.",
+          "Frank D.W."
+        ],
+        "publicationDate": "MAY-1998",
+        "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAC16023.1"
+            }
+          ],
+          "value": "PA103",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AAC16023.1"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "14983043",
+        "citationType": "journal article",
+        "authors": [
+          "He J.",
+          "Baldini R.L.",
+          "Deziel E.",
+          "Saucier M.",
+          "Zhang Q.",
+          "Liberati N.T.",
+          "Lee D.",
+          "Urbach J.",
+          "Goodman H.M.",
+          "Rahme L.G."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "14983043"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1073/pnas.0304622101"
+          }
+        ],
+        "title": "The broad host range pathogen Pseudomonas aeruginosa strain PA14 carries two pathogenicity islands harboring plant and animal virulence genes.",
+        "publicationDate": "2004",
+        "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+        "firstPage": "2530",
+        "lastPage": "2535",
+        "volume": "101"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAP82959.1"
+            }
+          ],
+          "value": "PA14",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AAP82959.1"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "16707695",
+        "citationType": "journal article",
+        "authors": [
+          "Kulasekara B.R.",
+          "Kulasekara H.D.",
+          "Wolfgang M.C.",
+          "Stevens L.",
+          "Frank D.W.",
+          "Lory S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "16707695"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/JB.02000-05"
+          }
+        ],
+        "title": "Acquisition and evolution of the exoU locus in Pseudomonas aeruginosa.",
+        "publicationDate": "2006",
+        "journal": "J. Bacteriol.",
+        "firstPage": "4037",
+        "lastPage": "4050",
+        "volume": "188"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "ABD94731.1"
+            }
+          ],
+          "value": "X13273",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "ABD94731.1"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "23166655",
+        "citationType": "journal article",
+        "authors": [
+          "Halavaty A.S.",
+          "Borek D.",
+          "Tyson G.H.",
+          "Veesenmeyer J.L.",
+          "Shuvalova L.",
+          "Minasov G.",
+          "Otwinowski Z.",
+          "Hauser A.R.",
+          "Anderson W.F."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "23166655"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1371/journal.pone.0049388"
+          }
+        ],
+        "title": "Structure of the type III secretion effector protein ExoU in complex with its chaperone SpcU.",
+        "publicationDate": "2012",
+        "journal": "PLoS ONE",
+        "firstPage": "e49388",
+        "lastPage": "e49388",
+        "volume": "7"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY (1.92 ANGSTROMS)"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3TU3"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 7,
+      "citation": {
+        "id": "22496657",
+        "citationType": "journal article",
+        "authors": [
+          "Gendrin C.",
+          "Contreras-Martel C.",
+          "Bouillot S.",
+          "Elsen S.",
+          "Lemaire D.",
+          "Skoufias D.A.",
+          "Huber P.",
+          "Attree I.",
+          "Dessen A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "22496657"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1371/journal.ppat.1002637"
+          }
+        ],
+        "title": "Structural basis of cytotoxicity mediated by the type III secretion toxin ExoU from Pseudomonas aeruginosa.",
+        "publicationDate": "2012",
+        "journal": "PLoS Pathog.",
+        "firstPage": "e1002637",
+        "lastPage": "e1002637",
+        "volume": "8"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY (2.94 ANGSTROMS) OF 30-687"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "4AKX"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "U97065",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAC16023.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF027291",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAC38269.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AY273870",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAP82959.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "DQ437744",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ABD94731.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "T09051",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "T09051"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_003134060.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NZ_AP017302.1"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "3TU3",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.92 A"
+        },
+        {
+          "key": "Chains",
+          "value": "B=1-687"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "4AKX",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.94 A"
+        },
+        {
+          "key": "Chains",
+          "value": "B=30-687"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "O34208",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "O34208",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|287.1480.peg.3795",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AKAWMIK",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BRENDA",
+      "id": "3.1.1.4",
+      "properties": [
+        {
+          "key": "OrganismId",
+          "value": "5087"
+        }
+      ]
+    },
+    {
+      "database": "PHI-base",
+      "id": "PHI:11505",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PHI-base",
+      "id": "PHI:12239",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PHI-base",
+      "id": "PHI:3026",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PHI-base",
+      "id": "PHI:5278",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PHI-base",
+      "id": "PHI:6993",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0016787",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:hydrolase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-UniRule"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0016042",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:lipid catabolic process"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-UniRule"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd07207",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Pat_ExoU_VipD_like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.20.1050.100",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.40.1090.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cytosolic phospholipase A2 catalytic domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR016035",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Acyl_Trfase/lysoPLipase"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR049154",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ExoU_C"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR049155",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ExoU_mid_dom"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR052580",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Lipid_Hydrolase"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR002641",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PNPLA_dom"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR46394",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ANNEXIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR46394:SF1",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PNPLA DOMAIN-CONTAINING PROTEIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF20983",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ExoU_C"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF20848",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ExoU_mid_dom"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF01734",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Patatin"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF52151",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FabD/lysophospholipase-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51635",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PNPLA"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MHIQSLGATASSLNQEPVETPSQAAHKSASLRQEPSGQGLGVALKSTPGILSGKLPESVSDVRFSSPQGQGESRTLTDSAGPRQITLRQFENGVTELQLSRPPLTSLVLSGGGAKGAAYPGAMLALEEKGMLDGIRSMSGSSAGGITAALLASGMSPAAFKTLSDKMDLISLLDSSNKKLKLFQHISSEIGASLKKGLGNKIGGFSELLLNVLPRIDSRAEPLERLLRDETRKAVLGQIATHPEVARQPTVAAIASRLQSGSGVTFGDLDRLSAYIPQIKTLNITGTAMFEGRPQLVVFNASHTPDLEVAQAAHISGSFPGVFQKVSLSDQPYQAGVEWTEFQDGGVMINVPVPEMIDKNFDSGPLRRNDNLILEFEGEAGEVAPDRGTRGGALKGWVVGVPALQAREMLQLEGLEELREQTVVVPLKSERGDFSGMLGGTLNFTMPDEIKAHLQERLQERVGEHLEKRLQASERHTFASLDEALLALDDSMLTSVAQQNPEITDGAVAFRQKARDAFTELTVAIVSANGLAGRLKLDEAMRSALQRLDALADTPERLAWLAAELNHADNVDHQQLLDAMRGQTVQSPVLAAALAEAQRRKVAVIAENIRKEVIFPSLYRPGQPDSNVALLRRAEEQLRHATSPAEINQALNDIVDNYSARGFLRFGKPLSSTTVEMAKAWRNKEFT",
+    "length": 687,
+    "molWeight": 73936,
+    "crc64": "50755D03B57696C2",
+    "md5": "3DFDE478C577E65EC0F5A4F059C3E107"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "SUBCELLULAR LOCATION": 1
+    },
+    "countByFeatureType": {
+      "Domain": 1,
+      "Region": 1,
+      "Motif": 3,
+      "Compositional bias": 2,
+      "Active site": 2
+    },
+    "uniParcId": "UPI00000BC38D"
+  }
+}

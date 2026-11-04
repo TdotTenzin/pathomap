@@ -1,0 +1,1280 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "P14439",
+  "secondaryAccessions": [
+    "Q31092"
+  ],
+  "uniProtkbId": "HA23_MOUSE",
+  "entryAudit": {
+    "firstPublicDate": "1990-01-01",
+    "lastAnnotationUpdateDate": "2026-09-02",
+    "lastSequenceUpdateDate": "2013-05-01",
+    "entryVersion": 129,
+    "sequenceVersion": 2
+  },
+  "annotationScore": 3.0,
+  "organism": {
+    "scientificName": "Mus musculus",
+    "commonName": "Mouse",
+    "taxonId": 10090,
+    "lineage": [
+      "Eukaryota",
+      "Metazoa",
+      "Chordata",
+      "Craniata",
+      "Vertebrata",
+      "Euteleostomi",
+      "Mammalia",
+      "Eutheria",
+      "Euarchontoglires",
+      "Glires",
+      "Rodentia",
+      "Myomorpha",
+      "Muroidea",
+      "Muridae",
+      "Murinae",
+      "Mus",
+      "Mus"
+    ]
+  },
+  "proteinExistence": "2: Evidence at transcript level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "H-2 class II histocompatibility antigen, E-U alpha chain"
+      }
+    },
+    "flag": "Precursor"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "H2-Ea"
+      },
+      "synonyms": [
+        {
+          "value": "H2-Ea-ps"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000305"
+              }
+            ],
+            "value": "Membrane",
+            "id": "SL-0162"
+          },
+          "topology": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000305"
+              }
+            ],
+            "value": "Single-pass type I membrane protein",
+            "id": "SL-9905"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "value": "In H2b and H2s haplotype strains (e.g. C57BL/6, C57BL/10, C57L/J, LP/J, 129 and SJL/J mice), there is a deletion of 627 bp in the promoter and the first exon, leading to a failure to express the gene. In the haplotype H2q gene, an insertion in the second exon results in a frameshift and a premature stop codon, and in the haplotype H2f gene, a base substitution creates a stop codon in the first exon, leading to defective protein translation in the strains of these haplotypes"
+        }
+      ],
+      "commentType": "POLYMORPHISM"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the MHC class II family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Defined as a polymorphic pseudogene by MGI"
+        }
+      ],
+      "commentType": "CAUTION"
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 25,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 26,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 255,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "H-2 class II histocompatibility antigen, E-U alpha chain",
+      "featureId": "PRO_0000080750"
+    },
+    {
+      "type": "Topological domain",
+      "location": {
+        "start": {
+          "value": 26,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 217,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Extracellular",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 218,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 238,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Topological domain",
+      "location": {
+        "start": {
+          "value": 239,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 255,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Cytoplasmic",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 112,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 204,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Ig-like C1-type"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 26,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 109,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Alpha-1"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 110,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 203,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Alpha-2"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 204,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 216,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Connecting peptide"
+    },
+    {
+      "type": "Glycosylation",
+      "location": {
+        "start": {
+          "value": 143,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 143,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-linked (GlcNAc...) asparagine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ],
+      "featureId": ""
+    },
+    {
+      "type": "Disulfide bond",
+      "location": {
+        "start": {
+          "value": 132,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 188,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00114"
+        }
+      ]
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 47,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 47,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 1; AAC52482",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "Y",
+        "alternativeSequences": [
+          "F"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 100,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 100,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 1; AAC52482",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "K",
+        "alternativeSequences": [
+          "E"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 131,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 131,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 1; AAC52482",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "V",
+        "alternativeSequences": [
+          "I"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 147,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 147,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 1; AAC52482",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "L",
+        "alternativeSequences": [
+          "F"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 151,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 151,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 1; AAC52482",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "Q",
+        "alternativeSequences": [
+          "R"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 215,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 215,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 1; AAC52482",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "K",
+        "alternativeSequences": [
+          "T"
+        ]
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-1064",
+      "category": "Biological process",
+      "name": "Adaptive immunity"
+    },
+    {
+      "id": "KW-1015",
+      "category": "PTM",
+      "name": "Disulfide bond"
+    },
+    {
+      "id": "KW-0325",
+      "category": "PTM",
+      "name": "Glycoprotein"
+    },
+    {
+      "id": "KW-0391",
+      "category": "Biological process",
+      "name": "Immunity"
+    },
+    {
+      "id": "KW-0393",
+      "category": "Domain",
+      "name": "Immunoglobulin domain"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-0491",
+      "category": "Cellular component",
+      "name": "MHC II"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    },
+    {
+      "id": "KW-0812",
+      "category": "Domain",
+      "name": "Transmembrane"
+    },
+    {
+      "id": "KW-1133",
+      "category": "Domain",
+      "name": "Transmembrane helix"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "7495754",
+        "citationType": "journal article",
+        "authors": [
+          "Tacchini-Cottier F.",
+          "Mayer W.E.",
+          "Begovich A.B.",
+          "Jones P.P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "7495754"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1093/intimm/7.9.1459"
+          }
+        ],
+        "title": "Inactivation of E alpha and E beta expression in inbred and wild mice by multiple distinct mutations, some of which predate speciation within Mus species.",
+        "publicationDate": "1995",
+        "journal": "Int. Immunol.",
+        "firstPage": "1459",
+        "lastPage": "1471",
+        "volume": "7"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [MRNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "TW2",
+          "type": "STRAIN"
+        },
+        {
+          "value": "Spleen",
+          "type": "TISSUE"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "3755150",
+        "citationType": "journal article",
+        "authors": [
+          "Ayane M.",
+          "Mengle-Gaw L.",
+          "McDevitt H.O.",
+          "Benoist C.",
+          "Mathis D."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "3755150"
+          },
+          {
+            "database": "DOI",
+            "id": "10.4049/jimmunol.137.3.948"
+          }
+        ],
+        "title": "E alpha u and E beta u chain association: where lies the anomaly?",
+        "publicationDate": "1986",
+        "journal": "J. Immunol.",
+        "firstPage": "948",
+        "lastPage": "951",
+        "volume": "137"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [MRNA] OF 26-255"
+      ],
+      "referenceComments": [
+        {
+          "value": "B10.PL",
+          "type": "STRAIN"
+        },
+        {
+          "value": "Spleen",
+          "type": "TISSUE"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "2769184",
+        "citationType": "journal article",
+        "authors": [
+          "Schiffenbauer J.",
+          "McCarthy D.M.",
+          "Nygard N.R.",
+          "Woulfe S.L.",
+          "Didier D.K.",
+          "Schwartz B.D."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "2769184"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1084/jem.170.3.971"
+          }
+        ],
+        "title": "A unique sequence of the NZW I-E beta chain and its possible contribution to autoimmunity in the (NZB x NZW)F1 mouse.",
+        "publicationDate": "1989",
+        "journal": "J. Exp. Med.",
+        "firstPage": "971",
+        "lastPage": "984",
+        "volume": "170"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 27-109"
+      ],
+      "referenceComments": [
+        {
+          "value": "NZW/LacJ",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "6937437",
+        "citationType": "journal article",
+        "authors": [
+          "Jones P.P.",
+          "Murphy D.B.",
+          "McDevitt H.O."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "6937437"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1007/bf01561674"
+          }
+        ],
+        "title": "Variable synthesis and expression of E alpha and Ae (E beta) Ia polypeptide chains in mice of different H-2 haplotypes.",
+        "publicationDate": "1981",
+        "journal": "Immunogenetics",
+        "firstPage": "321",
+        "lastPage": "337",
+        "volume": "12"
+      },
+      "referencePositions": [
+        "ANALYSIS OF THE HAPLOTYPE-SPECIFIC VARIABLE EXPRESSION"
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "6296871",
+        "citationType": "journal article",
+        "authors": [
+          "Mathis D.J.",
+          "Benoist C.",
+          "Williams V.E. II",
+          "Kanter M.",
+          "McDevitt H.O."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "6296871"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1073/pnas.80.1.273"
+          }
+        ],
+        "title": "Several mechanisms can account for defective E alpha gene expression in different mouse haplotypes.",
+        "publicationDate": "1983",
+        "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+        "firstPage": "273",
+        "lastPage": "277",
+        "volume": "80"
+      },
+      "referencePositions": [
+        "TRANSCRIPT ANALYSIS",
+        "POLYMORPHISM"
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "2701937",
+        "citationType": "journal article",
+        "authors": [
+          "Vu T.H.",
+          "Begovich A.B.",
+          "Tacchini-Cottier F.M.",
+          "Jones P.P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "2701937"
+          },
+          {
+            "database": "DOI",
+            "id": "10.4049/jimmunol.142.8.2936"
+          }
+        ],
+        "title": "Molecular defects in the non-expressed H-2 E alpha genes of the f and q haplotypes.",
+        "publicationDate": "1989",
+        "journal": "J. Immunol.",
+        "firstPage": "2936",
+        "lastPage": "2942",
+        "volume": "142"
+      },
+      "referencePositions": [
+        "POLYMORPHISM"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "U13648",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAC52482.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "M12818",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA39638.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "I55971",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "I55971"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "PL0127",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PL0127"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_034511.3",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NM_010381.3"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "P14439",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "P14439",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GlyCosmos",
+      "id": "P14439",
+      "properties": [
+        {
+          "key": "glycosylation",
+          "value": "1 site, No reported glycans"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "100504404",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "mmu:100504404",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "AGR",
+      "id": "MGI:95900",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "CTD",
+      "id": "100504404",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "MGI",
+      "id": "MGI:95900",
+      "properties": [
+        {
+          "key": "GeneName",
+          "value": "H2-Ea"
+        }
+      ]
+    },
+    {
+      "database": "BioGRID-ORCS",
+      "id": "100504404",
+      "properties": [
+        {
+          "key": "hits",
+          "value": "2 hits in 17 CRISPR screens"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000000589",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Unplaced"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0042613",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:MHC class II protein complex"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0019882",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:antigen processing and presentation"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0006955",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:immune response"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd21005",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "IgC1_MHC_II_alpha_I-EK"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "2.60.40.10:FF:000280",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "HLA class II histocompatibility antigen, DR alpha chain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "3.10.320.10:FF:000002",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "HLA class II histocompatibility antigen, DR alpha chain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.10.320.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Class II Histocompatibility Antigen, M Beta Chain, Chain B, domain 1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.60.40.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Immunoglobulins"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR007110",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Ig-like_dom"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036179",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Ig-like_dom_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR013783",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Ig-like_fold"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR003006",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Ig/MHC_CS"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR003597",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Ig_C1-set"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR050160",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "MHC/Immunoglobulin"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR011162",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "MHC_I/II-like_Ag-recog"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR014745",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "MHC_II_a/b_N"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR001003",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "MHC_II_a_N"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR19944:SF86",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "HLA CLASS II HISTOCOMPATIBILITY ANTIGEN, DR ALPHA CHAIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR19944",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "MHC CLASS II-RELATED"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF07654",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "C1-set"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00993",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "MHC_II_alpha"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00407",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "IGc1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00920",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "MHC_II_alpha"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF48726",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Immunoglobulin"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF54452",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "MHC antigen-recognition domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS50835",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "IG_LIKE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS00290",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "IG_MHC"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MATIGALLLRFFFIAVLMSSQKSWAIKEEHTIIQAEFYLLPDKRGEYMFDFDGDEIFHVDIEKSETIWRLEEFAKFASFEAQGALANIAVDKANLDVMKKRSNNTPDANVAPEVTVLSRSPVNLGEPNILVCFIDKFSPPVVNVTWLRNGQPVTEGVSETVFLPRDDHLFRKFHYLTFLPSTDDFYDCEVDHWGLEEPLRKHWEFEEKTLLPETKENVVCALGLFVGLVGIVVGIILIMKGIKKRNVVERRQGAL",
+    "length": 255,
+    "molWeight": 29108,
+    "crc64": "7CD23D89374D4B37",
+    "md5": "CB0F4E177552A16AD55267CF97770FF9"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "SUBCELLULAR LOCATION": 1,
+      "POLYMORPHISM": 1,
+      "SIMILARITY": 1,
+      "CAUTION": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1,
+      "Topological domain": 2,
+      "Transmembrane": 1,
+      "Domain": 1,
+      "Region": 3,
+      "Glycosylation": 1,
+      "Disulfide bond": 1,
+      "Sequence conflict": 6
+    },
+    "uniParcId": "UPI0002C5E530"
+  }
+}

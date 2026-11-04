@@ -1,0 +1,764 @@
+{
+  "entryType": "UniProtKB unreviewed (TrEMBL)",
+  "primaryAccession": "B4YB55",
+  "uniProtkbId": "B4YB55_BURPE",
+  "entryAudit": {
+    "firstPublicDate": "2008-09-23",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2008-09-23",
+    "entryVersion": 43,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 2.0,
+  "organism": {
+    "scientificName": "Burkholderia pseudomallei",
+    "commonName": "Pseudomonas pseudomallei",
+    "taxonId": 28450,
+    "evidences": [
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "EMBL",
+        "id": "ACC85742.1"
+      }
+    ],
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Betaproteobacteria",
+      "Burkholderiales",
+      "Burkholderiaceae",
+      "Burkholderia",
+      "pseudomallei group"
+    ]
+  },
+  "proteinExistence": "3: Inferred from homology",
+  "proteinDescription": {
+    "submissionNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "ACC85742.1"
+            }
+          ],
+          "value": "BimA"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "ACC85742.1"
+          }
+        ],
+        "value": "bimA"
+      }
+    }
+  ],
+  "comments": [
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "ARBA",
+                "id": "ARBA00004442"
+              }
+            ],
+            "value": "Cell outer membrane",
+            "id": "SL-0040"
+          }
+        },
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "ARBA",
+                "id": "ARBA00004241"
+              }
+            ],
+            "value": "Cell surface",
+            "id": "SL-0310"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "ARBA",
+              "id": "ARBA00005848"
+            }
+          ],
+          "value": "Belongs to the autotransporter-2 (AT-2) (TC 1.B.40) family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 48,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "SignalP"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 49,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 369,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "SignalP"
+        }
+      ],
+      "featureId": "PRO_5055612510"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 195,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 217,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Trimeric autotransporter adhesin YadA-like head",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000259",
+          "source": "Pfam",
+          "id": "PF05658"
+        }
+      ]
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 219,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 242,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Trimeric autotransporter adhesin YadA-like head",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000259",
+          "source": "Pfam",
+          "id": "PF05658"
+        }
+      ]
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 249,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 288,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Trimeric autotransporter adhesin YadA-like stalk",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000259",
+          "source": "Pfam",
+          "id": "PF05662"
+        }
+      ]
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 311,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 369,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Trimeric autotransporter adhesin YadA-like C-terminal membrane anchor",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000259",
+          "source": "Pfam",
+          "id": "PF03895"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 71,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 160,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 82,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 126,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Pro residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 127,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 140,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Low complexity",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 146,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 160,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Polar residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00023237"
+        }
+      ],
+      "id": "KW-0998",
+      "category": "Cellular component",
+      "name": "Cell outer membrane"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00023136"
+        }
+      ],
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022927"
+        }
+      ],
+      "id": "KW-0653",
+      "category": "Biological process",
+      "name": "Protein transport"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022729"
+        },
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "SignalP"
+        }
+      ],
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022692"
+        }
+      ],
+      "id": "KW-0812",
+      "category": "Domain",
+      "name": "Transmembrane"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022452"
+        }
+      ],
+      "id": "KW-1134",
+      "category": "Domain",
+      "name": "Transmembrane beta strand"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022448"
+        }
+      ],
+      "id": "KW-0813",
+      "category": "Biological process",
+      "name": "Transport"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "18495853",
+        "citationType": "journal article",
+        "authors": [
+          "Sitthidet C.",
+          "Stevens J.M.",
+          "Chantratita N.",
+          "Currie B.J.",
+          "Peacock S.J.",
+          "Korbsrisate S.",
+          "Stevens M.P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "18495853"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/JCM.00368-08"
+          }
+        ],
+        "title": "Prevalence and sequence diversity of a factor required for actin-based motility in natural populations of Burkholderia species.",
+        "publicationDate": "2008",
+        "journal": "J. Clin. Microbiol.",
+        "firstPage": "2418",
+        "lastPage": "2422",
+        "volume": "46"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "ACC85742.1"
+            }
+          ],
+          "value": "33",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "ACC85742.1"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "EU437409",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ACC85742.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "B4YB55",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009279",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cell outer membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009986",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cell surface"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.30.1300.30",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "GSPII I/J protein-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.150.10.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Serralysin-like metalloprotease, C-terminal"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR008640",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Adhesin_Head_dom"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR061432",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "BimA"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR008635",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Coiled_stalk_dom"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR045584",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Pilin-like"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR011049",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Serralysin-like_metalloprot_C"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR005594",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "YadA_C"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF040983",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "BimA_second"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR13037",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FORMIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR13037:SF24",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "POLYCOMB PROTEIN PCL-RELATED"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF03895",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "YadA_anchor"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF05658",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "YadA_head"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF05662",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "YadA_stalk"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR01217",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PRICHEXTENSN"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF101967",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Adhesin YadA, collagen-binding domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF54523",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Pili subunits"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MKYHHFPRSHAQQDTGRAASTVPFQRFAHLLCSSIAPLALGFSTDALAIEQAESTAFNAVIDQIKKGDFKLKPVGDRTLPNKVPPPPPPPPSTTTPPPPPPPPPPPPPPPPPPPSTTPSPPPPTTTPPTRTTPSTTTPTPSMHPIQPTQLPSIPNATPTSGSATNVTINFNSTGASAMGTSSIALDFHARAKDSDSLASGRLAHASGPRSTAIGAEANASGQNTVALGAGSIADRNNTVSVGRHGDERQIVHVAAGTQATDAVNVGQLNLAMSNANAYTNQRIGDLQQSITDTARDAYSGVAAATALTMIPDVDRDKRVSIGVGGAVYKGHRAVALGGTARINENLKVRAGVAMSAGGNAVGIGMSWQW",
+    "length": 369,
+    "molWeight": 37908,
+    "crc64": "B29637D0B83C77CA",
+    "md5": "7EB34354B4F4624281E59D5F33962486"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "SUBCELLULAR LOCATION": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1,
+      "Domain": 4,
+      "Region": 1,
+      "Compositional bias": 3
+    },
+    "uniParcId": "UPI0001799084"
+  }
+}

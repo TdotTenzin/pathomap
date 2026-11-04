@@ -1,0 +1,806 @@
+{
+  "entryType": "UniProtKB unreviewed (TrEMBL)",
+  "primaryAccession": "A0A0H3NZT9",
+  "uniProtkbId": "A0A0H3NZT9_YERE1",
+  "entryAudit": {
+    "firstPublicDate": "2015-09-16",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2015-09-16",
+    "entryVersion": 42,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 2.0,
+  "organism": {
+    "scientificName": "Yersinia enterocolitica subsp. palearctica serotype O:3 (strain DSM 13030 / CIP 106945 / Y11)",
+    "taxonId": 930944,
+    "evidences": [
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "EMBL",
+        "id": "CBY78100.1"
+      },
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "Proteomes",
+        "id": "UP000008084"
+      }
+    ],
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Gammaproteobacteria",
+      "Enterobacterales",
+      "Yersiniaceae",
+      "Yersinia"
+    ]
+  },
+  "proteinExistence": "3: Inferred from homology",
+  "proteinDescription": {
+    "submissionNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "CBY78100.1"
+            }
+          ],
+          "value": "Type III secretion injected virulence protein (YopO,YpkA,serine-threonine kinase)"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "orderedLocusNames": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "CBY78100.1"
+            }
+          ],
+          "value": "Y11_p0031"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "L-seryl-[protein] + ATP = O-phospho-L-seryl-[protein] + ADP + H(+)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:17989"
+          },
+          {
+            "database": "Rhea",
+            "id": "RHEA-COMP:9863"
+          },
+          {
+            "database": "Rhea",
+            "id": "RHEA-COMP:11604"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:29999"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:30616"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:83421"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:456216"
+          }
+        ],
+        "ecNumber": "2.7.11.1",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "ARBA",
+            "id": "ARBA00048679"
+          },
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "PROSITE-ProRule",
+            "id": "PRU10027"
+          }
+        ]
+      }
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "L-threonyl-[protein] + ATP = O-phospho-L-threonyl-[protein] + ADP + H(+)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:46608"
+          },
+          {
+            "database": "Rhea",
+            "id": "RHEA-COMP:11060"
+          },
+          {
+            "database": "Rhea",
+            "id": "RHEA-COMP:11605"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:30013"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:30616"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:61977"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:456216"
+          }
+        ],
+        "ecNumber": "2.7.11.1",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "ARBA",
+            "id": "ARBA00047899"
+          },
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "PROSITE-ProRule",
+            "id": "PRU10027"
+          }
+        ]
+      }
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "PROSITE-ProRule",
+              "id": "PRU00159"
+            }
+          ],
+          "value": "Belongs to the protein kinase superfamily. Ser/Thr protein kinase family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 133,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 405,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Protein kinase",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000259",
+          "source": "PROSITE",
+          "id": "PS50011"
+        }
+      ]
+    },
+    {
+      "type": "Coiled coil",
+      "location": {
+        "start": {
+          "value": 591,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 625,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "Coils"
+        }
+      ]
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 267,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 267,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Proton acceptor",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU10027"
+        }
+      ]
+    }
+  ],
+  "geneLocations": [
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "Proteomes",
+          "id": "UP000008084"
+        }
+      ],
+      "value": "pYV03",
+      "geneEncodingType": "Plasmid"
+    }
+  ],
+  "keywords": [
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "Coils"
+        }
+      ],
+      "id": "KW-0175",
+      "category": "Domain",
+      "name": "Coiled coil"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00159"
+        },
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "CBY78100.1"
+        }
+      ],
+      "id": "KW-0418",
+      "category": "Molecular function",
+      "name": "Kinase"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "CBY78100.1"
+        }
+      ],
+      "id": "KW-0614",
+      "category": "Technical term",
+      "name": "Plasmid"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "Proteomes",
+          "id": "UP000008084"
+        }
+      ],
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00159"
+        }
+      ],
+      "id": "KW-0723",
+      "category": "Molecular function",
+      "name": "Serine/threonine-protein kinase"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00159"
+        }
+      ],
+      "id": "KW-0808",
+      "category": "Molecular function",
+      "name": "Transferase"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "21296963",
+        "citationType": "journal article",
+        "authors": [
+          "Batzilla J.",
+          "Hoper D.",
+          "Antonenka U.",
+          "Heesemann J.",
+          "Rakin A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "21296963"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/JB.01484-10"
+          }
+        ],
+        "title": "Complete genome sequence of Yersinia enterocolitica subsp. palearctica serogroup O:3.",
+        "publicationDate": "2011",
+        "journal": "J. Bacteriol.",
+        "firstPage": "2067",
+        "lastPage": "2067",
+        "volume": "193"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "Proteomes",
+              "id": "UP000008084"
+            }
+          ],
+          "value": "DSM 13030 / CIP 106945 / Y11",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "CBY78100.1"
+        },
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "Proteomes",
+          "id": "UP000008084"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "FR745874",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CBY78100.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_014609444.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_017565.1"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "A0A0H3NZT9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "31412245",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "yey:Y11_p0031",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|930944.6.peg.4331",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_402177_0_0_6",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "ADQGQIK",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000008084",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Plasmid pYV03"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005737",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cytoplasm"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:TreeGrafter"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005524",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:ATP binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0004674",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:protein serine/threonine kinase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-UniRule"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.20.58.1230",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Rac1-binding domain, C-terminal subdomain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.20.120.1330",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Rac1-binding domain, N-terminal GTPase binding subdomain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.10.510.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Transferase(Phosphotransferase) domain 1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR011009",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Kinase-like_dom_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR000719",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Prot_kinase_dom"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR043119",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Rac1-bd_C"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR019093",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Rac1-binding_domain"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR043120",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Rac1-db_N"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR008271",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Ser/Thr_kinase_AS"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR003547",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "YpkA"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR44167",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OVARIAN-SPECIFIC SERINE/THREONINE-PROTEIN KINASE LOK-RELATED"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR44167:SF31",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PROTEIN CBG02007"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00069",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Pkinase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF09632",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Rac1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR01373",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "YERSSTKINASE"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00220",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "S_TKc"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF56112",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Protein kinase-like (PK-like)"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS50011",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PROTEIN_KINASE_DOM"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS00108",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PROTEIN_KINASE_ST"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MKIMGTMPPSISLAKAHERISQHWQNPVGELNIGGKRYRIIDNQVLRLNPHSGFSLFREGVGKIFSGKMFNFSIARNLTETLHAAQKTTSQELRSDIPNALSNLFGAKPQTELPLGWKGKPLSGAPDLEGMRVAETDKFAEGESHISIIETKDNQRLVAKIERSIAEGHLFAELEAYKHIYKTAGKHPNLANVHGMAVVPYGNRKEEALLMDEVDGWRCSDTLRSLADSWKQGKINSEAYWGTIKFIAHRLLDVTNHLAKAGIVHNDIKPGNVVFDRASGEPVVIDLGLHSRSGEQPKGFTESFKAPELGVGNLGASEKSDVFLVVSTLLHGIEGFEKDPEIKPNQGLRFITSEPAHVMDENGYPIHRPGIAGVETAYTRFITDILGVSADSRPDSNEARLHEFLSDGTIDEESAKQILKDTLTGEMSPLSTDVRRITPKKLRELSDLLRTHLSSAATKQLDMGVVLSDLDTMLVTLDKAEREGGVDKDQLKSFNSLILKTYSVIEDYVKGREGDTKSSSAEVSPYHRSNFMLSIVEPSLQRIQKHLDQTHSFSDIGSLVRAHKHLETLLEVLVTLSPQGQPVSSETYSFLNRLAEAKVTLSQQLDTLQQQQESAKAQLSILINRSGSWADVARQSLQSFDSTRPVVKFGTEQYTAIHRQMMAAHAAITLQEVSEFTDDMRNFTADSIPLLIRLGRSSLIDEHLVEQREKLRELTTIAERLNRLEREWM",
+    "length": 729,
+    "molWeight": 81215,
+    "crc64": "A225D06F1284DE7F",
+    "md5": "2A46B1FD63E640D05D4CD2830DE4A05A"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "CATALYTIC ACTIVITY": 2,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Domain": 1,
+      "Coiled coil": 1,
+      "Active site": 1
+    },
+    "uniParcId": "UPI0001F47B6A"
+  }
+}

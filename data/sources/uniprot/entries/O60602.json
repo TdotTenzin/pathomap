@@ -1,0 +1,4613 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "O60602",
+  "secondaryAccessions": [
+    "B1AZ05",
+    "B3Y633",
+    "B9VJ63",
+    "D1CS80",
+    "D3DTB8",
+    "O15456",
+    "Q32MI2",
+    "Q32MI3"
+  ],
+  "uniProtkbId": "TLR5_HUMAN",
+  "entryAudit": {
+    "firstPublicDate": "2002-01-31",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2024-01-24",
+    "entryVersion": 211,
+    "sequenceVersion": 5
+  },
+  "annotationScore": 5.0,
+  "organism": {
+    "scientificName": "Homo sapiens",
+    "commonName": "Human",
+    "taxonId": 9606,
+    "lineage": [
+      "Eukaryota",
+      "Metazoa",
+      "Chordata",
+      "Craniata",
+      "Vertebrata",
+      "Euteleostomi",
+      "Mammalia",
+      "Eutheria",
+      "Euarchontoglires",
+      "Primates",
+      "Haplorrhini",
+      "Catarrhini",
+      "Hominidae",
+      "Homo"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Toll-like receptor 5"
+      }
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "Toll/interleukin-1 receptor-like protein 3"
+        }
+      }
+    ],
+    "flag": "Precursor"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "TLR5"
+      },
+      "synonyms": [
+        {
+          "value": "TIL3"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "Q9JLF7"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11323673"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11489966"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "18490781"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "20855887"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "29934223"
+            }
+          ],
+          "value": "Pattern recognition receptor (PRR) located on the cell surface that participates in the activation of innate immunity and inflammatory response (PubMed:11323673, PubMed:18490781). Recognizes small molecular motifs named pathogen-associated molecular pattern (PAMPs) expressed by pathogens and microbe-associated molecular patterns (MAMPs) usually expressed by resident microbiota (PubMed:29934223). Upon ligand binding such as bacterial flagellins, recruits intracellular adapter proteins MYD88 and TRIF leading to NF-kappa-B activation, cytokine secretion and induction of the inflammatory response (PubMed:11489966, PubMed:20855887). Plays thereby an important role in the relationship between the intestinal epithelium and enteric microbes and contributes to the gut microbiota composition throughout life (By similarity)"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "20855887"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "22173220"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "24778236"
+            }
+          ],
+          "value": "Homodimer (PubMed:22173220). Interacts with MYD88 (via TIR domain) (PubMed:20855887). Interacts with TICAM1 (via TIR domain) (PubMed:20855887). Interacts with UNC93B1; this interaction is essential for proper TLR5 localization to the plasma membrane (PubMed:24778236)"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "INTERACTION",
+      "interactions": [
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "O60602",
+            "intActId": "EBI-3505951"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "P05067",
+            "geneName": "APP",
+            "chainId": "PRO_0000000092",
+            "intActId": "EBI-821758"
+          },
+          "numberOfExperiments": 3,
+          "organismDiffer": false
+        },
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "O60602",
+            "intActId": "EBI-3505951"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "P05067",
+            "geneName": "APP",
+            "chainId": "PRO_0000000093",
+            "intActId": "EBI-2431589"
+          },
+          "numberOfExperiments": 3,
+          "organismDiffer": false
+        }
+      ]
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "24778236"
+              }
+            ],
+            "value": "Cell membrane",
+            "id": "SL-0039"
+          },
+          "topology": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255"
+              }
+            ],
+            "value": "Single-pass type I membrane protein",
+            "id": "SL-9905"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11489966"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "18490781"
+            }
+          ],
+          "value": "Highly expressed on the basolateral surface of intestinal epithelia (PubMed:11489966). Expressed also in other cells such as lung epithelial cells (PubMed:11489966, PubMed:18490781)"
+        }
+      ],
+      "commentType": "TISSUE SPECIFICITY"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "17157808"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "17442957"
+            }
+          ],
+          "value": "Phosphorylated at Ser-805 by PKD/PRKD1; phosphorylation induces the production of inflammatory cytokines"
+        }
+      ],
+      "commentType": "PTM"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "17157808"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "17442957"
+            }
+          ],
+          "value": "Phosphorylated at Tyr-798 upon flagellin binding; required for signaling"
+        }
+      ],
+      "commentType": "PTM"
+    },
+    {
+      "texts": [
+        {
+          "value": "Individuals with a common stop codon polymorphism in position 392 are unable to mediate flagellin signaling. This polymorphism acts in a dominant fashion and is associated with susceptibility to pneumonia caused by Legionella pneumophila [MIM:608556]. It also provides protection against systemic lupus erythematosus"
+        }
+      ],
+      "commentType": "POLYMORPHISM"
+    },
+    {
+      "texts": [
+        {
+          "value": "A nonsense TLR5 polymorphism, resulting in p.Arg392Ter, confers resistance to melioidosis [MIM:615557], an infection caused by the Gram-negative, flagellated soil saprophyte Burkholderia pseudomallei. Carriers of this hypofunctional TLR5 variant may generate impaired inflammatory responses during melioidosis infection that result in reduced organ failure and lower mortality"
+        }
+      ],
+      "commentType": "POLYMORPHISM"
+    },
+    {
+      "commentType": "DISEASE",
+      "disease": {
+        "diseaseId": "Systemic lupus erythematosus 1",
+        "diseaseAccession": "DI-02649",
+        "acronym": "SLEB1",
+        "description": "A chronic, relapsing, inflammatory, and often febrile multisystemic disorder of connective tissue, characterized principally by involvement of the skin, joints, kidneys and serosal membranes. It is of unknown etiology, but is thought to represent a failure of the regulatory mechanisms of the autoimmune system. The disease is marked by a wide range of system dysfunctions, an elevated erythrocyte sedimentation rate, and the formation of LE cells in the blood or bone marrow.",
+        "diseaseCrossReference": {
+          "database": "MIM",
+          "id": "601744"
+        }
+      },
+      "note": {
+        "texts": [
+          {
+            "value": "Disease susceptibility is associated with variants affecting the gene represented in this entry"
+          }
+        ]
+      }
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the Toll-like receptor family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 20,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "15340161"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 21,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 858,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Toll-like receptor 5",
+      "featureId": "PRO_0000034729"
+    },
+    {
+      "type": "Topological domain",
+      "location": {
+        "start": {
+          "value": 21,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 639,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Extracellular",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 640,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 660,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Topological domain",
+      "location": {
+        "start": {
+          "value": 661,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 858,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Cytoplasmic",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 45,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 68,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 1",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "22173220"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 71,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 93,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 2",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "22173220"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 95,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 117,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 3",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "22173220"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 120,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 143,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 4",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "22173220"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 146,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 166,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 5",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "22173220"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 171,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 192,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 6",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "22173220"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 197,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 211,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 7",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "22173220"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 214,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 229,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 8",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "22173220"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 234,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 235,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 9",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "22173220"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 260,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 284,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 11",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "22173220"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 289,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 301,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 12",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "22173220"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 313,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 334,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 13",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "22173220"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 337,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 355,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 14",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "22173220"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 385,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 401,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 16",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "22173220"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 412,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 431,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 17",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "22173220"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 449,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 470,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 18",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "22173220"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 474,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 495,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 19",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "22173220"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 503,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 524,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 20",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "22173220"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 527,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 546,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 21",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "22173220"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 549,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 567,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRR 22",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "22173220"
+        }
+      ]
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 579,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 631,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LRRCT"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 691,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 836,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "TIR",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00204"
+        }
+      ]
+    },
+    {
+      "type": "Modified residue",
+      "location": {
+        "start": {
+          "value": 798,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 798,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Phosphotyrosine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "17157808"
+        }
+      ]
+    },
+    {
+      "type": "Modified residue",
+      "location": {
+        "start": {
+          "value": 805,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 805,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Phosphoserine; by PKD/PRKD1",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "17442957"
+        }
+      ]
+    },
+    {
+      "type": "Glycosylation",
+      "location": {
+        "start": {
+          "value": 37,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 37,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-linked (GlcNAc...) asparagine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "22173220"
+        }
+      ],
+      "featureId": ""
+    },
+    {
+      "type": "Glycosylation",
+      "location": {
+        "start": {
+          "value": 46,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 46,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-linked (GlcNAc...) asparagine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "22173220"
+        }
+      ],
+      "featureId": ""
+    },
+    {
+      "type": "Glycosylation",
+      "location": {
+        "start": {
+          "value": 245,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 245,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-linked (GlcNAc...) asparagine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "22173220"
+        }
+      ],
+      "featureId": ""
+    },
+    {
+      "type": "Glycosylation",
+      "location": {
+        "start": {
+          "value": 342,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 342,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-linked (GlcNAc...) asparagine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "22173220"
+        }
+      ],
+      "featureId": ""
+    },
+    {
+      "type": "Glycosylation",
+      "location": {
+        "start": {
+          "value": 422,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 422,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-linked (GlcNAc...) asparagine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "22173220"
+        }
+      ],
+      "featureId": ""
+    },
+    {
+      "type": "Glycosylation",
+      "location": {
+        "start": {
+          "value": 595,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 595,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-linked (GlcNAc...) asparagine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "22173220"
+        }
+      ],
+      "featureId": ""
+    },
+    {
+      "type": "Glycosylation",
+      "location": {
+        "start": {
+          "value": 598,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 598,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-linked (GlcNAc...) asparagine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "22173220"
+        }
+      ],
+      "featureId": ""
+    },
+    {
+      "type": "Disulfide bond",
+      "location": {
+        "start": {
+          "value": 583,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 610,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "22173220"
+        }
+      ]
+    },
+    {
+      "type": "Disulfide bond",
+      "location": {
+        "start": {
+          "value": 585,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 629,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "22173220"
+        }
+      ]
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 82,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 82,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in dbSNP:rs764535",
+      "featureCrossReferences": [
+        {
+          "database": "dbSNP",
+          "id": "rs764535"
+        }
+      ],
+      "featureId": "VAR_032455",
+      "alternativeSequence": {
+        "originalSequence": "T",
+        "alternativeSequences": [
+          "I"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 112,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 112,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in dbSNP:rs5744166",
+      "featureCrossReferences": [
+        {
+          "database": "dbSNP",
+          "id": "rs5744166"
+        }
+      ],
+      "featureId": "VAR_032456",
+      "alternativeSequence": {
+        "originalSequence": "P",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 143,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 143,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in dbSNP:rs5744167",
+      "featureCrossReferences": [
+        {
+          "database": "dbSNP",
+          "id": "rs5744167"
+        }
+      ],
+      "featureId": "VAR_061856",
+      "alternativeSequence": {
+        "originalSequence": "N",
+        "alternativeSequences": [
+          "T"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 181,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 181,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in dbSNP:rs45528236",
+      "featureCrossReferences": [
+        {
+          "database": "dbSNP",
+          "id": "rs45528236"
+        }
+      ],
+      "featureId": "VAR_061857",
+      "alternativeSequence": {
+        "originalSequence": "Q",
+        "alternativeSequences": [
+          "K"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 392,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 858,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in 10% of the population; abolishes flagellin signaling; associated with resistance to SLEB1",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "14623910"
+        }
+      ],
+      "featureId": "VAR_018398",
+      "alternativeSequence": {}
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 592,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 592,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in dbSNP:rs2072493",
+      "featureCrossReferences": [
+        {
+          "database": "dbSNP",
+          "id": "rs2072493"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "14623910"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "16027372"
+        }
+      ],
+      "featureId": "VAR_018399",
+      "alternativeSequence": {
+        "originalSequence": "N",
+        "alternativeSequences": [
+          "S"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 616,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 616,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in dbSNP:rs5744174",
+      "featureCrossReferences": [
+        {
+          "database": "dbSNP",
+          "id": "rs5744174"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "14623910"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "16027372"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "9596645"
+        }
+      ],
+      "featureId": "VAR_018400",
+      "alternativeSequence": {
+        "originalSequence": "F",
+        "alternativeSequences": [
+          "L"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 644,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 644,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in dbSNP:rs5744175",
+      "featureCrossReferences": [
+        {
+          "database": "dbSNP",
+          "id": "rs5744175"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "19924287"
+        }
+      ],
+      "featureId": "VAR_070457",
+      "alternativeSequence": {
+        "originalSequence": "I",
+        "alternativeSequences": [
+          "F"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 769,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 769,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in dbSNP:rs56243703",
+      "featureCrossReferences": [
+        {
+          "database": "dbSNP",
+          "id": "rs56243703"
+        }
+      ],
+      "featureId": "VAR_061858",
+      "alternativeSequence": {
+        "originalSequence": "L",
+        "alternativeSequences": [
+          "F"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 231,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 231,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 1; AAC34376",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "L",
+        "alternativeSequences": [
+          "V"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 352,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 352,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 1; AAC34376",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "Y",
+        "alternativeSequences": [
+          "C"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 387,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 387,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 8; AAI09120",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "Q",
+        "alternativeSequences": [
+          "R"
+        ]
+      }
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 632,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 678,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "8AR2"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0002",
+      "category": "Technical term",
+      "name": "3D-structure"
+    },
+    {
+      "id": "KW-1003",
+      "category": "Cellular component",
+      "name": "Cell membrane"
+    },
+    {
+      "id": "KW-0903",
+      "category": "Technical term",
+      "name": "Direct protein sequencing"
+    },
+    {
+      "id": "KW-1015",
+      "category": "PTM",
+      "name": "Disulfide bond"
+    },
+    {
+      "id": "KW-0325",
+      "category": "PTM",
+      "name": "Glycoprotein"
+    },
+    {
+      "id": "KW-0391",
+      "category": "Biological process",
+      "name": "Immunity"
+    },
+    {
+      "id": "KW-0395",
+      "category": "Biological process",
+      "name": "Inflammatory response"
+    },
+    {
+      "id": "KW-0399",
+      "category": "Biological process",
+      "name": "Innate immunity"
+    },
+    {
+      "id": "KW-0433",
+      "category": "Domain",
+      "name": "Leucine-rich repeat"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-0597",
+      "category": "PTM",
+      "name": "Phosphoprotein"
+    },
+    {
+      "id": "KW-1267",
+      "category": "Technical term",
+      "name": "Proteomics identification"
+    },
+    {
+      "id": "KW-0675",
+      "category": "Molecular function",
+      "name": "Receptor"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0677",
+      "category": "Domain",
+      "name": "Repeat"
+    },
+    {
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    },
+    {
+      "id": "KW-0772",
+      "category": "Disease",
+      "name": "Systemic lupus erythematosus"
+    },
+    {
+      "id": "KW-0812",
+      "category": "Domain",
+      "name": "Transmembrane"
+    },
+    {
+      "id": "KW-1133",
+      "category": "Domain",
+      "name": "Transmembrane helix"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "9596645",
+        "citationType": "journal article",
+        "authors": [
+          "Chaudhary P.M.",
+          "Ferguson C.",
+          "Nguyen V.",
+          "Nguyen O.",
+          "Massa H.F.",
+          "Eby M.",
+          "Jasmin A.",
+          "Trask B.J.",
+          "Hood L.",
+          "Nelson P.S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9596645"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1182/blood.v91.11.4020"
+          }
+        ],
+        "title": "Cloning and characterization of two Toll/Interleukin-1 receptor-like genes TIL3 and TIL4: evidence for a multi-gene receptor family in humans.",
+        "publicationDate": "1998",
+        "journal": "Blood",
+        "firstPage": "4020",
+        "lastPage": "4027",
+        "volume": "91"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [MRNA]",
+        "VARIANT LEU-616"
+      ],
+      "referenceComments": [
+        {
+          "value": "Leukocyte",
+          "type": "TISSUE"
+        },
+        {
+          "value": "Prostate",
+          "type": "TISSUE"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "CI-PGI7EFNPLN4M",
+        "citationType": "submission",
+        "authors": [
+          "Seya T.",
+          "Tsukada H."
+        ],
+        "title": "Homo sapiens TLR5.",
+        "publicationDate": "APR-2001",
+        "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [MRNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "Macrophage",
+          "type": "TISSUE"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "18810425",
+        "citationType": "journal article",
+        "authors": [
+          "Nakajima T.",
+          "Ohtani H.",
+          "Satta Y.",
+          "Uno Y.",
+          "Akari H.",
+          "Ishida T.",
+          "Kimura A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "18810425"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1007/s00251-008-0332-0"
+          }
+        ],
+        "title": "Natural selection in the TLR-related genes in the course of primate evolution.",
+        "publicationDate": "2008",
+        "journal": "Immunogenetics",
+        "firstPage": "727",
+        "lastPage": "735",
+        "volume": "60"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [MRNA]"
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "19179655",
+        "citationType": "journal article",
+        "authors": [
+          "Wlasiuk G.",
+          "Khan S.",
+          "Switzer W.M.",
+          "Nachman M.W."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "19179655"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1093/molbev/msp018"
+          }
+        ],
+        "title": "A history of recurrent positive selection at the toll-like receptor 5 in primates.",
+        "publicationDate": "2009",
+        "journal": "Mol. Biol. Evol.",
+        "firstPage": "937",
+        "lastPage": "949",
+        "volume": "26"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "19924287",
+        "citationType": "journal article",
+        "authors": [
+          "Georgel P.",
+          "Macquin C.",
+          "Bahram S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "19924287"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1371/journal.pone.0007803"
+          }
+        ],
+        "title": "The heterogeneous allelic repertoire of human Toll-Like receptor (TLR) genes.",
+        "publicationDate": "2009",
+        "journal": "PLoS ONE",
+        "firstPage": "E7803",
+        "lastPage": "E7803",
+        "volume": "4"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]",
+        "VARIANT PHE-644"
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "16710414",
+        "citationType": "journal article",
+        "authors": [
+          "Gregory S.G.",
+          "Barlow K.F.",
+          "McLay K.E.",
+          "Kaul R.",
+          "Swarbreck D.",
+          "Dunham A.",
+          "Scott C.E.",
+          "Howe K.L.",
+          "Woodfine K.",
+          "Spencer C.C.A.",
+          "Jones M.C.",
+          "Gillson C.",
+          "Searle S.",
+          "Zhou Y.",
+          "Kokocinski F.",
+          "McDonald L.",
+          "Evans R.",
+          "Phillips K.",
+          "Atkinson A.",
+          "Cooper R.",
+          "Jones C.",
+          "Hall R.E.",
+          "Andrews T.D.",
+          "Lloyd C.",
+          "Ainscough R.",
+          "Almeida J.P.",
+          "Ambrose K.D.",
+          "Anderson F.",
+          "Andrew R.W.",
+          "Ashwell R.I.S.",
+          "Aubin K.",
+          "Babbage A.K.",
+          "Bagguley C.L.",
+          "Bailey J.",
+          "Beasley H.",
+          "Bethel G.",
+          "Bird C.P.",
+          "Bray-Allen S.",
+          "Brown J.Y.",
+          "Brown A.J.",
+          "Buckley D.",
+          "Burton J.",
+          "Bye J.",
+          "Carder C.",
+          "Chapman J.C.",
+          "Clark S.Y.",
+          "Clarke G.",
+          "Clee C.",
+          "Cobley V.",
+          "Collier R.E.",
+          "Corby N.",
+          "Coville G.J.",
+          "Davies J.",
+          "Deadman R.",
+          "Dunn M.",
+          "Earthrowl M.",
+          "Ellington A.G.",
+          "Errington H.",
+          "Frankish A.",
+          "Frankland J.",
+          "French L.",
+          "Garner P.",
+          "Garnett J.",
+          "Gay L.",
+          "Ghori M.R.J.",
+          "Gibson R.",
+          "Gilby L.M.",
+          "Gillett W.",
+          "Glithero R.J.",
+          "Grafham D.V.",
+          "Griffiths C.",
+          "Griffiths-Jones S.",
+          "Grocock R.",
+          "Hammond S.",
+          "Harrison E.S.I.",
+          "Hart E.",
+          "Haugen E.",
+          "Heath P.D.",
+          "Holmes S.",
+          "Holt K.",
+          "Howden P.J.",
+          "Hunt A.R.",
+          "Hunt S.E.",
+          "Hunter G.",
+          "Isherwood J.",
+          "James R.",
+          "Johnson C.",
+          "Johnson D.",
+          "Joy A.",
+          "Kay M.",
+          "Kershaw J.K.",
+          "Kibukawa M.",
+          "Kimberley A.M.",
+          "King A.",
+          "Knights A.J.",
+          "Lad H.",
+          "Laird G.",
+          "Lawlor S.",
+          "Leongamornlert D.A.",
+          "Lloyd D.M.",
+          "Loveland J.",
+          "Lovell J.",
+          "Lush M.J.",
+          "Lyne R.",
+          "Martin S.",
+          "Mashreghi-Mohammadi M.",
+          "Matthews L.",
+          "Matthews N.S.W.",
+          "McLaren S.",
+          "Milne S.",
+          "Mistry S.",
+          "Moore M.J.F.",
+          "Nickerson T.",
+          "O'Dell C.N.",
+          "Oliver K.",
+          "Palmeiri A.",
+          "Palmer S.A.",
+          "Parker A.",
+          "Patel D.",
+          "Pearce A.V.",
+          "Peck A.I.",
+          "Pelan S.",
+          "Phelps K.",
+          "Phillimore B.J.",
+          "Plumb R.",
+          "Rajan J.",
+          "Raymond C.",
+          "Rouse G.",
+          "Saenphimmachak C.",
+          "Sehra H.K.",
+          "Sheridan E.",
+          "Shownkeen R.",
+          "Sims S.",
+          "Skuce C.D.",
+          "Smith M.",
+          "Steward C.",
+          "Subramanian S.",
+          "Sycamore N.",
+          "Tracey A.",
+          "Tromans A.",
+          "Van Helmond Z.",
+          "Wall M.",
+          "Wallis J.M.",
+          "White S.",
+          "Whitehead S.L.",
+          "Wilkinson J.E.",
+          "Willey D.L.",
+          "Williams H.",
+          "Wilming L.",
+          "Wray P.W.",
+          "Wu Z.",
+          "Coulson A.",
+          "Vaudin M.",
+          "Sulston J.E.",
+          "Durbin R.M.",
+          "Hubbard T.",
+          "Wooster R.",
+          "Dunham I.",
+          "Carter N.P.",
+          "McVean G.",
+          "Ross M.T.",
+          "Harrow J.",
+          "Olson M.V.",
+          "Beck S.",
+          "Rogers J.",
+          "Bentley D.R."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "16710414"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/nature04727"
+          }
+        ],
+        "title": "The DNA sequence and biological annotation of human chromosome 1.",
+        "publicationDate": "2006",
+        "journal": "Nature",
+        "firstPage": "315",
+        "lastPage": "321",
+        "volume": "441"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ]
+    },
+    {
+      "referenceNumber": 7,
+      "citation": {
+        "id": "CI-5GBD0VIIJ7C63",
+        "citationType": "submission",
+        "authors": [
+          "Mural R.J.",
+          "Istrail S.",
+          "Sutton G.G.",
+          "Florea L.",
+          "Halpern A.L.",
+          "Mobarry C.M.",
+          "Lippert R.",
+          "Walenz B.",
+          "Shatkay H.",
+          "Dew I.",
+          "Miller J.R.",
+          "Flanigan M.J.",
+          "Edwards N.J.",
+          "Bolanos R.",
+          "Fasulo D.",
+          "Halldorsson B.V.",
+          "Hannenhalli S.",
+          "Turner R.",
+          "Yooseph S.",
+          "Lu F.",
+          "Nusskern D.R.",
+          "Shue B.C.",
+          "Zheng X.H.",
+          "Zhong F.",
+          "Delcher A.L.",
+          "Huson D.H.",
+          "Kravitz S.A.",
+          "Mouchard L.",
+          "Reinert K.",
+          "Remington K.A.",
+          "Clark A.G.",
+          "Waterman M.S.",
+          "Eichler E.E.",
+          "Adams M.D.",
+          "Hunkapiller M.W.",
+          "Myers E.W.",
+          "Venter J.C."
+        ],
+        "publicationDate": "SEP-2005",
+        "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ]
+    },
+    {
+      "referenceNumber": 8,
+      "citation": {
+        "id": "15489334",
+        "citationType": "journal article",
+        "authoringGroup": [
+          "The MGC Project Team"
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15489334"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1101/gr.2596504"
+          }
+        ],
+        "title": "The status, quality, and expansion of the NIH full-length cDNA project: the Mammalian Gene Collection (MGC).",
+        "publicationDate": "2004",
+        "journal": "Genome Res.",
+        "firstPage": "2121",
+        "lastPage": "2127",
+        "volume": "14"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA]"
+      ]
+    },
+    {
+      "referenceNumber": 9,
+      "citation": {
+        "id": "9435236",
+        "citationType": "journal article",
+        "authors": [
+          "Rock F.L.",
+          "Hardiman G.",
+          "Timans J.C.",
+          "Kastelein R.A.",
+          "Bazan J.F."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9435236"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1073/pnas.95.2.588"
+          }
+        ],
+        "title": "A family of human receptors structurally related to Drosophila Toll.",
+        "publicationDate": "1998",
+        "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+        "firstPage": "588",
+        "lastPage": "593",
+        "volume": "95"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [MRNA] OF 494-858"
+      ],
+      "referenceComments": [
+        {
+          "value": "CNS",
+          "type": "TISSUE"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 10,
+      "citation": {
+        "id": "15340161",
+        "citationType": "journal article",
+        "authors": [
+          "Zhang Z.",
+          "Henzel W.J."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15340161"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1110/ps.04682504"
+          }
+        ],
+        "title": "Signal peptide prediction based on analysis of experimentally verified cleavage sites.",
+        "publicationDate": "2004",
+        "journal": "Protein Sci.",
+        "firstPage": "2819",
+        "lastPage": "2824",
+        "volume": "13"
+      },
+      "referencePositions": [
+        "PROTEIN SEQUENCE OF 21-35"
+      ]
+    },
+    {
+      "referenceNumber": 11,
+      "citation": {
+        "id": "11489966",
+        "citationType": "journal article",
+        "authors": [
+          "Gewirtz A.T.",
+          "Navas T.A.",
+          "Lyons S.",
+          "Godowski P.J.",
+          "Madara J.L."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11489966"
+          },
+          {
+            "database": "DOI",
+            "id": "10.4049/jimmunol.167.4.1882"
+          }
+        ],
+        "title": "Cutting edge: bacterial flagellin activates basolaterally expressed TLR5 to induce epithelial proinflammatory gene expression.",
+        "publicationDate": "2001",
+        "journal": "J. Immunol.",
+        "firstPage": "1882",
+        "lastPage": "1885",
+        "volume": "167"
+      },
+      "referencePositions": [
+        "TISSUE SPECIFICITY",
+        "FUNCTION"
+      ]
+    },
+    {
+      "referenceNumber": 12,
+      "citation": {
+        "id": "11323673",
+        "citationType": "journal article",
+        "authors": [
+          "Hayashi F.",
+          "Smith K.D.",
+          "Ozinsky A.",
+          "Hawn T.R.",
+          "Yi E.C.",
+          "Goodlett D.R.",
+          "Eng J.K.",
+          "Akira S.",
+          "Underhill D.M.",
+          "Aderem A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11323673"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/35074106"
+          }
+        ],
+        "title": "The innate immune response to bacterial flagellin is mediated by Toll-like receptor 5.",
+        "publicationDate": "2001",
+        "journal": "Nature",
+        "firstPage": "1099",
+        "lastPage": "1103",
+        "volume": "410"
+      },
+      "referencePositions": [
+        "FUNCTION"
+      ]
+    },
+    {
+      "referenceNumber": 13,
+      "citation": {
+        "id": "16027372",
+        "citationType": "journal article",
+        "authors": [
+          "Hawn T.R.",
+          "Wu H.",
+          "Grossman J.M.",
+          "Hahn B.H.",
+          "Tsao B.P.",
+          "Aderem A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "16027372"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1073/pnas.0501165102"
+          }
+        ],
+        "title": "A stop codon polymorphism of Toll-like receptor 5 is associated with resistance to systemic lupus erythematosus.",
+        "publicationDate": "2005",
+        "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+        "firstPage": "10593",
+        "lastPage": "10597",
+        "volume": "102"
+      },
+      "referencePositions": [
+        "ASSOCIATION WITH RESISTANCE TO SLEB1",
+        "VARIANTS SER-592 AND LEU-616"
+      ]
+    },
+    {
+      "referenceNumber": 14,
+      "citation": {
+        "id": "17157808",
+        "citationType": "journal article",
+        "authors": [
+          "Ivison S.M.",
+          "Khan M.A.",
+          "Graham N.R.",
+          "Bernales C.Q.",
+          "Kaleem A.",
+          "Tirling C.O.",
+          "Cherkasov A.",
+          "Steiner T.S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "17157808"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/j.bbrc.2006.11.132"
+          }
+        ],
+        "title": "A phosphorylation site in the Toll-like receptor 5 TIR domain is required for inflammatory signalling in response to flagellin.",
+        "publicationDate": "2007",
+        "journal": "Biochem. Biophys. Res. Commun.",
+        "firstPage": "936",
+        "lastPage": "941",
+        "volume": "352"
+      },
+      "referencePositions": [
+        "PHOSPHORYLATION AT TYR-798"
+      ]
+    },
+    {
+      "referenceNumber": 15,
+      "citation": {
+        "id": "17442957",
+        "citationType": "journal article",
+        "authors": [
+          "Ivison S.M.",
+          "Graham N.R.",
+          "Bernales C.Q.",
+          "Kifayet A.",
+          "Ng N.",
+          "Shobab L.A.",
+          "Steiner T.S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "17442957"
+          },
+          {
+            "database": "DOI",
+            "id": "10.4049/jimmunol.178.9.5735"
+          }
+        ],
+        "title": "Protein kinase D interaction with TLR5 is required for inflammatory signaling in response to bacterial flagellin.",
+        "publicationDate": "2007",
+        "journal": "J. Immunol.",
+        "firstPage": "5735",
+        "lastPage": "5743",
+        "volume": "178"
+      },
+      "referencePositions": [
+        "PHOSPHORYLATION AT SER-805"
+      ]
+    },
+    {
+      "referenceNumber": 16,
+      "citation": {
+        "id": "18490781",
+        "citationType": "journal article",
+        "authors": [
+          "Blohmke C.J.",
+          "Victor R.E.",
+          "Hirschfeld A.F.",
+          "Elias I.M.",
+          "Hancock D.G.",
+          "Lane C.R.",
+          "Davidson A.G.",
+          "Wilcox P.G.",
+          "Smith K.D.",
+          "Overhage J.",
+          "Hancock R.E.",
+          "Turvey S.E."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "18490781"
+          },
+          {
+            "database": "DOI",
+            "id": "10.4049/jimmunol.180.11.7764"
+          }
+        ],
+        "title": "Innate immunity mediated by TLR5 as a novel antiinflammatory target for cystic fibrosis lung disease.",
+        "publicationDate": "2008",
+        "journal": "J. Immunol.",
+        "firstPage": "7764",
+        "lastPage": "7773",
+        "volume": "180"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "TISSUE SPECIFICITY"
+      ]
+    },
+    {
+      "referenceNumber": 17,
+      "citation": {
+        "id": "20855887",
+        "citationType": "journal article",
+        "authors": [
+          "Choi Y.J.",
+          "Im E.",
+          "Chung H.K.",
+          "Pothoulakis C.",
+          "Rhee S.H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "20855887"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1074/jbc.m110.158394"
+          }
+        ],
+        "title": "TRIF mediates Toll-like receptor 5-induced signaling in intestinal epithelial cells.",
+        "publicationDate": "2010",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "37570",
+        "lastPage": "37578",
+        "volume": "285"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "INTERACTION WITH TICAM1 AND MYD88",
+        "SUBCELLULAR LOCATION"
+      ]
+    },
+    {
+      "referenceNumber": 18,
+      "citation": {
+        "id": "23447684",
+        "citationType": "journal article",
+        "authors": [
+          "West T.E.",
+          "Chantratita N.",
+          "Chierakul W.",
+          "Limmathurotsakul D.",
+          "Wuthiekanun V.",
+          "Myers N.D.",
+          "Emond M.J.",
+          "Wurfel M.M.",
+          "Hawn T.R.",
+          "Peacock S.J.",
+          "Skerrett S.J."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "23447684"
+          },
+          {
+            "database": "DOI",
+            "id": "10.4049/jimmunol.1202974"
+          }
+        ],
+        "title": "Impaired TLR5 functionality is associated with survival in melioidosis.",
+        "publicationDate": "2013",
+        "journal": "J. Immunol.",
+        "firstPage": "3373",
+        "lastPage": "3379",
+        "volume": "190"
+      },
+      "referencePositions": [
+        "POLYMORPHISM",
+        "INVOLVEMENT IN RESISTANCE TO MELIOIDOSIS"
+      ]
+    },
+    {
+      "referenceNumber": 19,
+      "citation": {
+        "id": "24778236",
+        "citationType": "journal article",
+        "authors": [
+          "Huh J.W.",
+          "Shibata T.",
+          "Hwang M.",
+          "Kwon E.H.",
+          "Jang M.S.",
+          "Fukui R.",
+          "Kanno A.",
+          "Jung D.J.",
+          "Jang M.H.",
+          "Miyake K.",
+          "Kim Y.M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "24778236"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1073/pnas.1322838111"
+          }
+        ],
+        "title": "UNC93B1 is essential for the plasma membrane localization and signaling of Toll-like receptor 5.",
+        "publicationDate": "2014",
+        "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+        "firstPage": "7072",
+        "lastPage": "7077",
+        "volume": "111"
+      },
+      "referencePositions": [
+        "INTERACTION WITH UNC93B1",
+        "SUBCELLULAR LOCATION"
+      ]
+    },
+    {
+      "referenceNumber": 20,
+      "citation": {
+        "id": "29934223",
+        "citationType": "journal article",
+        "authors": [
+          "Bielaszewska M.",
+          "Marejkova M.",
+          "Bauwens A.",
+          "Kunsmann-Prokscha L.",
+          "Mellmann A.",
+          "Karch H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "29934223"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/j.ijmm.2018.06.004"
+          }
+        ],
+        "title": "Enterohemorrhagic Escherichia coli O157 outer membrane vesicles induce interleukin 8 production in human intestinal epithelial cells by signaling via Toll-like receptors TLR4 and TLR5 and activation of the nuclear factor NF-kappaB.",
+        "publicationDate": "2018",
+        "journal": "Int. J. Med. Microbiol.",
+        "firstPage": "882",
+        "lastPage": "889",
+        "volume": "308"
+      },
+      "referencePositions": [
+        "FUNCTION"
+      ]
+    },
+    {
+      "referenceNumber": 21,
+      "citation": {
+        "id": "22173220",
+        "citationType": "journal article",
+        "authors": [
+          "Zhou K.",
+          "Kanai R.",
+          "Lee P.",
+          "Wang H.W.",
+          "Modis Y."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "22173220"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/j.jsb.2011.12.002"
+          }
+        ],
+        "title": "Toll-like receptor 5 forms asymmetric dimers in the absence of flagellin.",
+        "publicationDate": "2012",
+        "journal": "J. Struct. Biol.",
+        "firstPage": "402",
+        "lastPage": "409",
+        "volume": "177"
+      },
+      "referencePositions": [
+        "STRUCTURE BY ELECTRON MICROSCOPY",
+        "GLYCOSYLATION AT ASN-37; ASN-46; ASN-245; ASN-342; ASN-422; ASN-595 AND ASN-598",
+        "DISULFIDE BONDS",
+        "LRR REPEATS",
+        "SUBUNIT"
+      ]
+    },
+    {
+      "referenceNumber": 22,
+      "citation": {
+        "id": "14623910",
+        "citationType": "journal article",
+        "authors": [
+          "Hawn T.R.",
+          "Verbon A.",
+          "Lettinga K.D.",
+          "Zhao L.P.",
+          "Li S.S.",
+          "Laws R.J.",
+          "Skerrett S.J.",
+          "Beutler B.",
+          "Schroeder L.",
+          "Nachman A.",
+          "Ozinsky A.",
+          "Smith K.D.",
+          "Aderem A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "14623910"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1084/jem.20031220"
+          }
+        ],
+        "title": "A common dominant TLR5 stop codon polymorphism abolishes flagellin signaling and is associated with susceptibility to legionnaires' disease.",
+        "publicationDate": "2003",
+        "journal": "J. Exp. Med.",
+        "firstPage": "1563",
+        "lastPage": "1572",
+        "volume": "198"
+      },
+      "referencePositions": [
+        "VARIANTS 392-ARG--SER-858 DEL; SER-592 AND LEU-616"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AF051151",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAC34376.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AB060695",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "BAB43955.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AB445645",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "BAG55042.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "FJ556976",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ACM69019.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "FJ556977",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ACM69020.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "FJ556979",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ACM69022.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "FJ556980",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ACM69023.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "FJ556987",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ACM69030.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "FJ556989",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ACM69032.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "DQ026408",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAZ17463.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "DQ026409",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAZ17464.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "DQ026415",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAZ17469.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AL929091",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "-"
+        },
+        {
+          "key": "Status",
+          "value": "NOT_ANNOTATED_CDS"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "CH471100",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "EAW93262.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "CH471100",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "EAW93263.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "BC109118",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAI09119.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "BC109119",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAI09120.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "U88881",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAC34136.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "CCDS",
+      "id": "CCDS31033.1",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_001424468.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NM_001437539.1"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_001424553.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NM_001437624.1"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_001424579.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NM_001437650.1"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_001424580.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NM_001437651.1"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_003259.2",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NM_003268.6"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "XP_005273300.2",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "XM_005273243.5"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "XP_006711567.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "XM_006711504.4"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "XP_006711569.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "XM_006711506.4"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "XP_011508239.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "XM_011509937.3"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "XP_047285317.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "XM_047429361.1"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "XP_047285323.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "XM_047429367.1"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "XP_054194531.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "XM_054338556.1"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "XP_054194533.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "XM_054338558.1"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "XP_054194534.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "XM_054338559.1"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "XP_054194535.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "XM_054338560.1"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "XP_054194536.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "XM_054338561.1"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "XP_054194539.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "XM_054338564.1"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "3J0A",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "EM"
+        },
+        {
+          "key": "Resolution",
+          "value": "26.00 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B=23-858"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "8AR2",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "NMR"
+        },
+        {
+          "key": "Resolution",
+          "value": "-"
+        },
+        {
+          "key": "Chains",
+          "value": "A=632-680"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "O60602",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EMDB",
+      "id": "EMD-5287",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "O60602",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BioGRID",
+      "id": "112955",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "27"
+        }
+      ]
+    },
+    {
+      "database": "CORUM",
+      "id": "O60602",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "FunCoup",
+      "id": "O60602",
+      "properties": [
+        {
+          "key": "Number of interactors",
+          "value": "639"
+        }
+      ]
+    },
+    {
+      "database": "IntAct",
+      "id": "O60602",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "22"
+        }
+      ]
+    },
+    {
+      "database": "NDEx",
+      "id": "IQUERY-CP-TLR5",
+      "properties": [
+        {
+          "key": "Evidences",
+          "value": "12 NDEx IQuery Curated Pathways"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "9606.ENSP00000496355",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BindingDB",
+      "id": "O60602",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "ChEMBL",
+      "id": "CHEMBL2176839",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GlyCosmos",
+      "id": "O60602",
+      "properties": [
+        {
+          "key": "glycosylation",
+          "value": "7 sites, 1 glycan"
+        }
+      ]
+    },
+    {
+      "database": "GlyGen",
+      "id": "O60602",
+      "properties": [
+        {
+          "key": "glycosylation",
+          "value": "7 sites, 1 N-linked glycan (1 site)"
+        }
+      ]
+    },
+    {
+      "database": "iPTMnet",
+      "id": "O60602",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PhosphoSitePlus",
+      "id": "O60602",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BioMuta",
+      "id": "TLR5",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "jPOST",
+      "id": "O60602",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "MassIVE",
+      "id": "O60602",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PaxDb",
+      "id": "9606-ENSP00000496355",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PeptideAtlas",
+      "id": "O60602",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "ProteomicsDB",
+      "id": "49480",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Antibodypedia",
+      "id": "2711",
+      "properties": [
+        {
+          "key": "antibodies",
+          "value": "1022 antibodies from 47 providers"
+        }
+      ]
+    },
+    {
+      "database": "DNASU",
+      "id": "7100",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Ensembl",
+      "id": "ENST00000407096.7",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ENSP00000385458.3"
+        },
+        {
+          "key": "GeneId",
+          "value": "ENSG00000187554.16"
+        }
+      ]
+    },
+    {
+      "database": "Ensembl",
+      "id": "ENST00000484766.2",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ENSP00000519510.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "ENSG00000187554.16"
+        }
+      ]
+    },
+    {
+      "database": "Ensembl",
+      "id": "ENST00000642603.2",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ENSP00000496355.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "ENSG00000187554.16"
+        }
+      ]
+    },
+    {
+      "database": "Ensembl",
+      "id": "ENST00000645434.2",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ENSP00000493892.2"
+        },
+        {
+          "key": "GeneId",
+          "value": "ENSG00000187554.16"
+        }
+      ]
+    },
+    {
+      "database": "Ensembl",
+      "id": "ENST00000714229.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ENSP00000519509.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "ENSG00000187554.16"
+        }
+      ]
+    },
+    {
+      "database": "Ensembl",
+      "id": "ENST00000860817.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ENSP00000530876.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "ENSG00000187554.16"
+        }
+      ]
+    },
+    {
+      "database": "Ensembl",
+      "id": "ENST00000860818.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ENSP00000530877.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "ENSG00000187554.16"
+        }
+      ]
+    },
+    {
+      "database": "Ensembl",
+      "id": "ENST00000860819.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ENSP00000530878.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "ENSG00000187554.16"
+        }
+      ]
+    },
+    {
+      "database": "Ensembl",
+      "id": "ENST00000860820.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ENSP00000530879.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "ENSG00000187554.16"
+        }
+      ]
+    },
+    {
+      "database": "Ensembl",
+      "id": "ENST00000860821.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ENSP00000530880.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "ENSG00000187554.16"
+        }
+      ]
+    },
+    {
+      "database": "Ensembl",
+      "id": "ENST00000860822.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ENSP00000530881.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "ENSG00000187554.16"
+        }
+      ]
+    },
+    {
+      "database": "Ensembl",
+      "id": "ENST00000860823.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ENSP00000530882.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "ENSG00000187554.16"
+        }
+      ]
+    },
+    {
+      "database": "Ensembl",
+      "id": "ENST00000911266.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ENSP00000581325.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "ENSG00000187554.16"
+        }
+      ]
+    },
+    {
+      "database": "Ensembl",
+      "id": "ENST00000964751.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ENSP00000634810.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "ENSG00000187554.16"
+        }
+      ]
+    },
+    {
+      "database": "Ensembl",
+      "id": "ENST00000964752.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ENSP00000634811.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "ENSG00000187554.16"
+        }
+      ]
+    },
+    {
+      "database": "Ensembl",
+      "id": "ENST00000964753.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ENSP00000634812.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "ENSG00000187554.16"
+        }
+      ]
+    },
+    {
+      "database": "Ensembl",
+      "id": "ENST00000964754.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ENSP00000634813.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "ENSG00000187554.16"
+        }
+      ]
+    },
+    {
+      "database": "Ensembl",
+      "id": "ENST00000964755.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ENSP00000634814.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "ENSG00000187554.16"
+        }
+      ]
+    },
+    {
+      "database": "Ensembl",
+      "id": "ENST00000964756.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ENSP00000634815.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "ENSG00000187554.16"
+        }
+      ]
+    },
+    {
+      "database": "Ensembl",
+      "id": "ENST00000964757.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ENSP00000634816.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "ENSG00000187554.16"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "7100",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "hsa:7100",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "MANE-Select",
+      "id": "ENST00000642603.2",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ENSP00000496355.1"
+        },
+        {
+          "key": "RefSeqNucleotideId",
+          "value": "NM_003268.6"
+        },
+        {
+          "key": "RefSeqProteinId",
+          "value": "NP_003259.2"
+        }
+      ]
+    },
+    {
+      "database": "UCSC",
+      "id": "uc001hnw.3",
+      "properties": [
+        {
+          "key": "OrganismName",
+          "value": "human"
+        }
+      ]
+    },
+    {
+      "database": "AGR",
+      "id": "HGNC:11851",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "ClinPGx",
+      "id": "PA36553",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "CTD",
+      "id": "7100",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "DisGeNET",
+      "id": "7100",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GeneCards",
+      "id": "TLR5",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "HGNC",
+      "id": "HGNC:11851",
+      "properties": [
+        {
+          "key": "GeneName",
+          "value": "TLR5"
+        }
+      ]
+    },
+    {
+      "database": "HPA",
+      "id": "ENSG00000187554",
+      "properties": [
+        {
+          "key": "ExpressionPatterns",
+          "value": "Low tissue specificity"
+        }
+      ]
+    },
+    {
+      "database": "MalaCards",
+      "id": "TLR5",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "MIM",
+      "id": "109100",
+      "properties": [
+        {
+          "key": "Type",
+          "value": "phenotype"
+        }
+      ]
+    },
+    {
+      "database": "MIM",
+      "id": "601744",
+      "properties": [
+        {
+          "key": "Type",
+          "value": "phenotype"
+        }
+      ]
+    },
+    {
+      "database": "MIM",
+      "id": "603031",
+      "properties": [
+        {
+          "key": "Type",
+          "value": "gene"
+        }
+      ]
+    },
+    {
+      "database": "MIM",
+      "id": "608556",
+      "properties": [
+        {
+          "key": "Type",
+          "value": "phenotype"
+        }
+      ]
+    },
+    {
+      "database": "MIM",
+      "id": "615557",
+      "properties": [
+        {
+          "key": "Type",
+          "value": "phenotype"
+        }
+      ]
+    },
+    {
+      "database": "OpenTargets",
+      "id": "ENSG00000187554",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "VEuPathDB",
+      "id": "HostDB:ENSG00000187554",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "KOG4641",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Eukaryota"
+        }
+      ]
+    },
+    {
+      "database": "GeneTree",
+      "id": "ENSGT00940000162464",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_006000_4_1_1",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "InParanoid",
+      "id": "O60602",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AADKCEY",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OrthoDB",
+      "id": "6160824at2759",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PAN-GO",
+      "id": "O60602",
+      "properties": [
+        {
+          "key": "Number of GO annotations",
+          "value": "4 GO annotations based on evolutionary models"
+        }
+      ]
+    },
+    {
+      "database": "PhylomeDB",
+      "id": "O60602",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PathwayCommons",
+      "id": "O60602",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Reactome",
+      "id": "R-HSA-168176",
+      "properties": [
+        {
+          "key": "PathwayName",
+          "value": "Toll Like Receptor 5 (TLR5) Cascade"
+        }
+      ]
+    },
+    {
+      "database": "Reactome",
+      "id": "R-HSA-5602680",
+      "properties": [
+        {
+          "key": "PathwayName",
+          "value": "MyD88 deficiency (TLR5)"
+        }
+      ]
+    },
+    {
+      "database": "Reactome",
+      "id": "R-HSA-5603037",
+      "properties": [
+        {
+          "key": "PathwayName",
+          "value": "IRAK4 deficiency (TLR5)"
+        }
+      ]
+    },
+    {
+      "database": "Reactome",
+      "id": "R-HSA-975871",
+      "properties": [
+        {
+          "key": "PathwayName",
+          "value": "MyD88 cascade initiated on plasma membrane"
+        }
+      ]
+    },
+    {
+      "database": "SignaLink",
+      "id": "O60602",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SIGNOR",
+      "id": "O60602",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Agora",
+      "id": "ENSG00000187554",
+      "properties": [
+        {
+          "key": "NominatedTarget",
+          "value": "Agora Nominated Target for Alzheimer's Disease"
+        }
+      ]
+    },
+    {
+      "database": "BioGRID-ORCS",
+      "id": "7100",
+      "properties": [
+        {
+          "key": "hits",
+          "value": "9 hits in 1072 CRISPR screens"
+        }
+      ]
+    },
+    {
+      "database": "EvolutionaryTrace",
+      "id": "O60602",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GeneWiki",
+      "id": "TLR_5",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GenomeRNAi",
+      "id": "7100",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Pharos",
+      "id": "O60602",
+      "properties": [
+        {
+          "key": "DevelopmentLevel",
+          "value": "Tchem"
+        }
+      ]
+    },
+    {
+      "database": "PRO",
+      "id": "PR:O60602",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000005640",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome 1"
+        }
+      ]
+    },
+    {
+      "database": "RNAct",
+      "id": "O60602",
+      "properties": [
+        {
+          "key": "moleculeType",
+          "value": "protein"
+        }
+      ]
+    },
+    {
+      "database": "Bgee",
+      "id": "ENSG00000187554",
+      "properties": [
+        {
+          "key": "ExpressionPatterns",
+          "value": "Expressed in monocyte and 170 other cell types or tissues"
+        }
+      ]
+    },
+    {
+      "database": "ExpressionAtlas",
+      "id": "O60602",
+      "properties": [
+        {
+          "key": "ExpressionPatterns",
+          "value": "baseline and differential"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005886",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:plasma membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:UniProt"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "24778236"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005149",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:interleukin-1 receptor binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IPI:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000353",
+          "source": "PubMed",
+          "id": "12925853"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0038187",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:pattern recognition receptor activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:BHF-UCL"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "17128265"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0038023",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:signaling receptor activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0004888",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:transmembrane signaling receptor activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0071260",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:cellular response to mechanical stimulus"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEP:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000270",
+          "source": "PubMed",
+          "id": "19593445"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0006955",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:immune response"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0032757",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:positive regulation of interleukin-8 production"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:BHF-UCL"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "17128265"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0034146",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:toll-like receptor 5 signaling pathway"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:BHF-UCL"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "17128265"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0002224",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:toll-like receptor signaling pathway"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "3.40.50.10140:FF:000001",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Toll-like receptor 2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "3.80.10.10:FF:000306",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Toll-like receptor 5"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "3.80.10.10:FF:000365",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Toll-like receptor 5"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "3.80.10.10:FF:000841",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Toll-like receptor 5"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.80.10.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Ribonuclease Inhibitor"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "3"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.40.50.10140",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Toll/interleukin-1 receptor homology (TIR) domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR000483",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cys-rich_flank_reg_C"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR001611",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Leu-rich_rpt"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR003591",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Leu-rich_rpt_typical-subtyp"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR032675",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LRR_dom_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR000157",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TIR_dom"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR017241",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Toll-like_receptor"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR035897",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Toll_tir_struct_dom_sf"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR24365",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TOLL-LIKE RECEPTOR"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR24365:SF525",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TOLL-LIKE RECEPTOR 5"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00560",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LRR_1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF13855",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LRR_8"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "5"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF01582",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TIR"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PIRSF",
+      "id": "PIRSF037595",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Toll-like_receptor"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR00019",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LEURICHRPT"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00365",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LRR_SD22"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "5"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00369",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LRR_TYP"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "9"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00082",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LRRCT"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00255",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TIR"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF52058",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "L domain-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF52200",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Toll/Interleukin receptor TIR domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51450",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LRR"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "12"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS50104",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TIR"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MGDHLDLLLGVVLMAGPVFGIPSCSFDGRIAFYRFCNLTQVPQVLNTTERLLLSFNYIRTVTASSFPFLEQLQLLELGSQYTPLTIDKEAFRNLPNLRILDLGSSKIYFLHPDAFQGLFHLFELRLYFCGLSDAVLKDGYFRNLKALTRLDLSKNQIRSLYLHPSFGKLNSLKSIDFSSNQIFLVCEHELEPLQGKTLSFFSLAANSLYSRVSVDWGKCMNPFRNMVLEILDVSGNGWTVDITGNFSNAISKSQAFSLILAHHIMGAGFGFHNIKDPDQNTFAGLARSSVRHLDLSHGFVFSLNSRVFETLKDLKVLNLAYNKINKIADEAFYGLDNLQVLNLSYNLLGELYSSNFYGLPKVAYIDLQKNHIAIIQDQTFKFLEKLQTLDLRDNALTTIHFIPSIPDIFLSGNKLVTLPKINLTANLIHLSENRLENLDILYFLLRVPHLQILILNQNRFSSCSGDQTPSENPSLEQLFLGENMLQLAWETELCWDVFEGLSHLQVLYLNHNYLNSLPPGVFSHLTALRGLSLNSNRLTVLSHNDLPANLEILDISRNQLLAPNPDVFVSLSVLDITHNKFICECELSTFINWLNHTNVTIAGPPADIYCVYPDSFSGVSLFSLSTEGCDEEEVLKSLKFSLFIVCTVTLTLFLMTILTVTKFRGFCFICYKTAQRLVFKDHPQGTEPDMYKYDAYLCFSSKDFTWVQNALLKHLDTQYSDQNRFNLCFEERDFVPGENRIANIQDAIWNSRKIVCLVSRHFLRDGWCLEAFSYAQGRCLSDLNSALIMVVVGSLSQYQLMKHQSIRGFVQKQQYLRWPEDLQDVGWFLHKLSQQILKKEKEKKKDNNIPLQTVATIS",
+    "length": 858,
+    "molWeight": 97800,
+    "crc64": "9EE0AB6EE1E470B1",
+    "md5": "4EA4D610801295531A3324DA22A9A865"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBUNIT": 1,
+      "INTERACTION": 2,
+      "SUBCELLULAR LOCATION": 1,
+      "TISSUE SPECIFICITY": 1,
+      "PTM": 2,
+      "POLYMORPHISM": 2,
+      "DISEASE": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1,
+      "Topological domain": 2,
+      "Transmembrane": 1,
+      "Repeat": 20,
+      "Domain": 2,
+      "Modified residue": 2,
+      "Glycosylation": 7,
+      "Disulfide bond": 2,
+      "Natural variant": 9,
+      "Sequence conflict": 3,
+      "Helix": 1
+    },
+    "uniParcId": "UPI000013E1D3"
+  }
+}

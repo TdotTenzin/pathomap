@@ -1,0 +1,2865 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "P33378",
+  "uniProtkbId": "PHLC_LISMO",
+  "entryAudit": {
+    "firstPublicDate": "1994-02-01",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "1994-02-01",
+    "entryVersion": 145,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 5.0,
+  "organism": {
+    "scientificName": "Listeria monocytogenes serovar 1/2a (strain ATCC BAA-679 / EGD-e)",
+    "taxonId": 169963,
+    "lineage": [
+      "Bacteria",
+      "Bacillati",
+      "Bacillota",
+      "Bacilli",
+      "Caryophanales",
+      "Listeriaceae",
+      "Listeria"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000303",
+            "source": "PubMed",
+            "id": "1904842"
+          },
+          {
+            "evidenceCode": "ECO:0000303",
+            "source": "PubMed",
+            "id": "37838694"
+          }
+        ],
+        "value": "Phospholipase C"
+      },
+      "shortNames": [
+        {
+          "value": "PLC"
+        }
+      ],
+      "ecNumbers": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "1904842"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "37838694"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "8331063"
+            }
+          ],
+          "value": "3.1.4.3"
+        }
+      ]
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "1904842"
+            }
+          ],
+          "value": "29-kDa phospholipase C"
+        },
+        "shortNames": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "source": "PubMed",
+                "id": "1904842"
+              }
+            ],
+            "value": "29-kDa PLC"
+          }
+        ]
+      },
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "37838694"
+            }
+          ],
+          "value": "Broad-range phospholipase C"
+        }
+      },
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "1309513"
+            },
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "1904842"
+            }
+          ],
+          "value": "Lecithinase"
+        }
+      },
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "37838694"
+            }
+          ],
+          "value": "LmPC-PLC"
+        }
+      },
+      {
+        "fullName": {
+          "value": "Phosphatidylcholine cholinephosphohydrolase"
+        }
+      }
+    ],
+    "flag": "Precursor"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000303",
+            "source": "PubMed",
+            "id": "1309513"
+          },
+          {
+            "evidenceCode": "ECO:0000303",
+            "source": "PubMed",
+            "id": "37838694"
+          }
+        ],
+        "value": "plcB"
+      },
+      "synonyms": [
+        {
+          "value": "prtC"
+        }
+      ],
+      "orderedLocusNames": [
+        {
+          "value": "lmo0205"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "1904842"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "37838694"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "8331063"
+            }
+          ],
+          "value": "Major virulence factor whose phospholipase activity facilitates pore formation by the pore-forming toxin listeriolysin O (LLO), leading to vacuolar membrane disruption and vacuolar escape of L.monocytogenes, which enables the bacterium to spread in the host (PubMed:37838694). Acts as a phospholipase C exhibiting broad substrate specificity, with the highest activities towards diacylglycerophospholipids with phosphocholine, phosphoserine, and phosphoethanolamine head groups, but less towards phosphoglycerol or phosphoinositol head groups (PubMed:1904842, PubMed:37838694, PubMed:8331063). Is also able to hydrolyze sphingomyelin and plasmenylethanolamine (PubMed:1904842, PubMed:8331063)"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "a 1,2-diacyl-sn-glycero-3-phosphocholine + H2O = phosphocholine + a 1,2-diacyl-sn-glycerol + H(+)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:10604"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15377"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:17815"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:57643"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:295975"
+          }
+        ],
+        "ecNumber": "3.1.4.3",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "1904842"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "37838694"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "8331063"
+          }
+        ]
+      },
+      "physiologicalReactions": [
+        {
+          "directionType": "left-to-right",
+          "reactionCrossReference": {
+            "database": "Rhea",
+            "id": "RHEA:10605"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "1904842"
+            },
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "37838694"
+            },
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "8331063"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "1,2-dihexadecanoyl-sn-glycero-3-phosphocholine + H2O = 1,2-dihexadecanoyl-sn-glycerol + phosphocholine + H(+)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:45304"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15377"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:72999"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:82929"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:295975"
+          }
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "1904842"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "8331063"
+          }
+        ]
+      },
+      "physiologicalReactions": [
+        {
+          "directionType": "left-to-right",
+          "reactionCrossReference": {
+            "database": "Rhea",
+            "id": "RHEA:45305"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "1904842"
+            },
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "8331063"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "1-hexadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-phosphocholine + H2O = 1-hexadecanoyl-2-(9Z-octadecenoyl)-sn-glycerol + phosphocholine + H(+)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:78939"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15377"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:73001"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:75466"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:295975"
+          }
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "37838694"
+          }
+        ]
+      },
+      "physiologicalReactions": [
+        {
+          "directionType": "left-to-right",
+          "reactionCrossReference": {
+            "database": "Rhea",
+            "id": "RHEA:78940"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "37838694"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "1,2-di-(9Z-octadecenoyl)-sn-glycero-3-phosphocholine + H2O = 1,2-di-(9Z-octadecenoyl)-sn-glycerol + phosphocholine + H(+)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:78947"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15377"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:52333"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:74669"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:295975"
+          }
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "8331063"
+          }
+        ]
+      },
+      "physiologicalReactions": [
+        {
+          "directionType": "left-to-right",
+          "reactionCrossReference": {
+            "database": "Rhea",
+            "id": "RHEA:78948"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "8331063"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "a 1,2-diacyl-sn-glycero-3-phosphoethanolamine + H2O = phosphoethanolamine + a 1,2-diacyl-sn-glycerol + H(+)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:78951"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15377"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:17815"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:58190"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:64612"
+          }
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "1904842"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "8331063"
+          }
+        ]
+      },
+      "physiologicalReactions": [
+        {
+          "directionType": "left-to-right",
+          "reactionCrossReference": {
+            "database": "Rhea",
+            "id": "RHEA:78952"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "1904842"
+            },
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "8331063"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "1,2-di-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine + H2O = phosphoethanolamine + 1,2-di-(9Z-octadecenoyl)-sn-glycerol + H(+)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:78955"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15377"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:52333"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:58190"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:74986"
+          }
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "8331063"
+          }
+        ]
+      },
+      "physiologicalReactions": [
+        {
+          "directionType": "left-to-right",
+          "reactionCrossReference": {
+            "database": "Rhea",
+            "id": "RHEA:78956"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "8331063"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "1,2-dihexadecanoyl-sn-glycero-3-phosphoethanolamine + H2O = 1,2-dihexadecanoyl-sn-glycerol + phosphoethanolamine + H(+)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:78959"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15377"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:58190"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:73005"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:82929"
+          }
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "8331063"
+          }
+        ]
+      },
+      "physiologicalReactions": [
+        {
+          "directionType": "left-to-right",
+          "reactionCrossReference": {
+            "database": "Rhea",
+            "id": "RHEA:78960"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "8331063"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "a 1,2-diacyl-sn-glycero-3-phospho-L-serine + H2O = O-phospho-L-serine + a 1,2-diacyl-sn-glycerol + H(+)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:78963"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15377"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:17815"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:57262"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:57524"
+          }
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "1904842"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "8331063"
+          }
+        ]
+      },
+      "physiologicalReactions": [
+        {
+          "directionType": "left-to-right",
+          "reactionCrossReference": {
+            "database": "Rhea",
+            "id": "RHEA:78964"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "1904842"
+            },
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "8331063"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "a 1,2-diacyl-sn-glycero-3-phosphoglycerol + H2O = glycerol 1-phosphate + a 1,2-diacyl-sn-glycerol + H(+)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:78967"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15377"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:17815"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:145394"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:231935"
+          }
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "8331063"
+          }
+        ]
+      },
+      "physiologicalReactions": [
+        {
+          "directionType": "left-to-right",
+          "reactionCrossReference": {
+            "database": "Rhea",
+            "id": "RHEA:78968"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "8331063"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "a 1,2-diacyl-sn-glycero-3-phospho-(1D-myo-inositol) + H2O = 1D-myo-inositol 1-phosphate + a 1,2-diacyl-sn-glycerol + H(+)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:43484"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15377"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:17815"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:57880"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:58433"
+          }
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "8331063"
+          }
+        ]
+      },
+      "physiologicalReactions": [
+        {
+          "directionType": "left-to-right",
+          "reactionCrossReference": {
+            "database": "Rhea",
+            "id": "RHEA:43485"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "8331063"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "a sphingomyelin + H2O = phosphocholine + an N-acylsphing-4-enine + H(+)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:19253"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15377"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:17636"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:52639"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:295975"
+          }
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "1904842"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "8331063"
+          }
+        ]
+      },
+      "physiologicalReactions": [
+        {
+          "directionType": "left-to-right",
+          "reactionCrossReference": {
+            "database": "Rhea",
+            "id": "RHEA:19254"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "1904842"
+            },
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "8331063"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "a 1-O-(1Z-alkenyl)-2-acyl-sn-glycero-3-phosphoethanolamine + H2O = a 1-O-(1Z-alkenyl)-2-acyl-sn-glycerol + phosphoethanolamine + H(+)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:36223"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15377"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:58190"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:77290"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:77296"
+          }
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "8331063"
+          }
+        ]
+      },
+      "physiologicalReactions": [
+        {
+          "directionType": "left-to-right",
+          "reactionCrossReference": {
+            "database": "Rhea",
+            "id": "RHEA:36224"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "8331063"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commentType": "COFACTOR",
+      "cofactors": [
+        {
+          "name": "Zn(2+)",
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "1904842"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "37838694"
+            }
+          ],
+          "cofactorCrossReference": {
+            "database": "ChEBI",
+            "id": "CHEBI:29105"
+          }
+        }
+      ],
+      "note": {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255",
+                "source": "PROSITE-ProRule",
+                "id": "PRU00678"
+              },
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "37838694"
+              }
+            ],
+            "value": "Enzymatic activity is specifically dependent on the presence of Zn ions, since Cd(2+), Cu(2+), Ni(2+), Co(2+), Fe(2+), Mn(2+), Ca(2+) and Mg(2+) cannot substitute (PubMed:37838694). Binds 3 Zn(2+) ions per subunit (By similarity)."
+          }
+        ]
+      }
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "1904842"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "37838694"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "8331063"
+            }
+          ],
+          "value": "Enzymatic activity of LmPC-PLC can be specifically inhibited by its propeptide added in trans (PubMed:37838694). The tendency of the enzyme to oligomerize, which appears to largely attenuate the enzymatic activity, may be one of the mechanisms regulating phospholipase activity in the host cell during the different steps of the infection cycle of L.monocytogenes (PubMed:37838694). Enzyme activity is inhibited by EDTA and o-phenanthroline in vitro (PubMed:1904842, PubMed:8331063)"
+        }
+      ],
+      "commentType": "ACTIVITY REGULATION"
+    },
+    {
+      "commentType": "BIOPHYSICOCHEMICAL PROPERTIES",
+      "phDependence": {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "1904842"
+              },
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "37838694"
+              }
+            ],
+            "value": "Optimum pH is about 6.5."
+          }
+        ]
+      }
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "37838694"
+            }
+          ],
+          "value": "Forms monomers, dimers and higher order oligomers, but only the monomer is enzymatically active"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "1904842"
+              }
+            ],
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "PROSITE-ProRule",
+              "id": "PRU00678"
+            }
+          ],
+          "value": "Belongs to the bacterial zinc-metallophospholipase C family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 25,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305",
+          "source": "PubMed",
+          "id": "1309513"
+        }
+      ]
+    },
+    {
+      "type": "Propeptide",
+      "location": {
+        "start": {
+          "value": 26,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 51,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305",
+          "source": "PubMed",
+          "id": "1309513"
+        }
+      ],
+      "featureId": "PRO_0000023937"
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 52,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 289,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Phospholipase C",
+      "featureId": "PRO_0000023938"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 52,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 289,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Zn-dependent PLC",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00678"
+        }
+      ]
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 52,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 52,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29105"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00678"
+        }
+      ],
+      "ligand": {
+        "name": "Zn(2+)",
+        "id": "ChEBI:CHEBI:29105",
+        "label": "1"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 65,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 65,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29105"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00678"
+        }
+      ],
+      "ligand": {
+        "name": "Zn(2+)",
+        "id": "ChEBI:CHEBI:29105",
+        "label": "1"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 106,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 106,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29105"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00678"
+        }
+      ],
+      "ligand": {
+        "name": "Zn(2+)",
+        "id": "ChEBI:CHEBI:29105",
+        "label": "3"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 120,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 120,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29105"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00678"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "37838694"
+        },
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "8CQM"
+        }
+      ],
+      "ligand": {
+        "name": "Zn(2+)",
+        "id": "ChEBI:CHEBI:29105",
+        "label": "3"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 169,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 169,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29105"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00678"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "37838694"
+        },
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "8CQM"
+        }
+      ],
+      "ligand": {
+        "name": "Zn(2+)",
+        "id": "ChEBI:CHEBI:29105",
+        "label": "3"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 173,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 173,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29105"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00678"
+        }
+      ],
+      "ligand": {
+        "name": "Zn(2+)",
+        "id": "ChEBI:CHEBI:29105",
+        "label": "1"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 173,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 173,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29105"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00678"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "37838694"
+        },
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "8CQM"
+        }
+      ],
+      "ligand": {
+        "name": "Zn(2+)",
+        "id": "ChEBI:CHEBI:29105",
+        "label": "3"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 179,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 179,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29105"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00678"
+        }
+      ],
+      "ligand": {
+        "name": "Zn(2+)",
+        "id": "ChEBI:CHEBI:29105",
+        "label": "2"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 193,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 193,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29105"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00678"
+        }
+      ],
+      "ligand": {
+        "name": "Zn(2+)",
+        "id": "ChEBI:CHEBI:29105",
+        "label": "2"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 197,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 197,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29105"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00678"
+        }
+      ],
+      "ligand": {
+        "name": "Zn(2+)",
+        "id": "ChEBI:CHEBI:29105",
+        "label": "2"
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 52,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 52,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "High decrease in catalytic activity.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "37838694"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "W",
+        "alternativeSequences": [
+          "A",
+          "E",
+          "K"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 52,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 52,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "No change in catalytic activity.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "37838694"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "W",
+        "alternativeSequences": [
+          "F"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 5,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 5,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 2; CAA42408",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "K",
+        "alternativeSequences": [
+          "N"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 13,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 13,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 2; CAA42408",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "I",
+        "alternativeSequences": [
+          "T"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 222,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 222,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 2; CAA42408",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "D",
+        "alternativeSequences": [
+          "G"
+        ]
+      }
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 64,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 78,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "8CQM"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 82,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 93,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "8CQM"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 95,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 106,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "8CQM"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 109,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 111,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "8CQM"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 114,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 118,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "8CQM"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 137,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 153,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "8CQM"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 157,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 173,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "8CQM"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 177,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 180,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "8CQM"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 187,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 189,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "8CQM"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 192,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 203,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "8CQM"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 204,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 207,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "8CQM"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 223,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 236,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "8CQM"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 238,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 241,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "8CQM"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 244,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 252,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "8CQM"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 256,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 288,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "8CQM"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0002",
+      "category": "Technical term",
+      "name": "3D-structure"
+    },
+    {
+      "id": "KW-0903",
+      "category": "Technical term",
+      "name": "Direct protein sequencing"
+    },
+    {
+      "id": "KW-0378",
+      "category": "Molecular function",
+      "name": "Hydrolase"
+    },
+    {
+      "id": "KW-0479",
+      "category": "Ligand",
+      "name": "Metal-binding"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    },
+    {
+      "id": "KW-0862",
+      "category": "Ligand",
+      "name": "Zinc"
+    },
+    {
+      "id": "KW-0865",
+      "category": "PTM",
+      "name": "Zymogen"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "1309513",
+        "citationType": "journal article",
+        "authors": [
+          "Vazquez-Boland J.-A.",
+          "Kocks C.",
+          "Dramsi S.",
+          "Ohayon H.",
+          "Geoffroy C.",
+          "Mengaud J.",
+          "Cossart P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "1309513"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.60.1.219-230.1992"
+          }
+        ],
+        "title": "Nucleotide sequence of the lecithinase operon of Listeria monocytogenes and possible role of lecithinase in cell-to-cell spread.",
+        "publicationDate": "1992",
+        "journal": "Infect. Immun.",
+        "firstPage": "219",
+        "lastPage": "230",
+        "volume": "60"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "LO28 / Serovar 1/2c",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "1582425",
+        "citationType": "journal article",
+        "authors": [
+          "Domann E.",
+          "Wehland J.",
+          "Rohde M.",
+          "Pistor S.",
+          "Hartl M.",
+          "Goebel W.",
+          "Leimeister-Waechter M.",
+          "Wuensher M.",
+          "Chakraborty T."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "1582425"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1002/j.1460-2075.1992.tb05252.x"
+          }
+        ],
+        "title": "A novel bacterial virulence gene in Listeria monocytogenes required for host cell microfilament interaction with homology to the proline-rich region of vinculin.",
+        "publicationDate": "1992",
+        "journal": "EMBO J.",
+        "firstPage": "1981",
+        "lastPage": "1990",
+        "volume": "11"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "EGD / Serovar 1/2a",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "11679669",
+        "citationType": "journal article",
+        "authors": [
+          "Glaser P.",
+          "Frangeul L.",
+          "Buchrieser C.",
+          "Rusniok C.",
+          "Amend A.",
+          "Baquero F.",
+          "Berche P.",
+          "Bloecker H.",
+          "Brandt P.",
+          "Chakraborty T.",
+          "Charbit A.",
+          "Chetouani F.",
+          "Couve E.",
+          "de Daruvar A.",
+          "Dehoux P.",
+          "Domann E.",
+          "Dominguez-Bernal G.",
+          "Duchaud E.",
+          "Durant L.",
+          "Dussurget O.",
+          "Entian K.-D.",
+          "Fsihi H.",
+          "Garcia-del Portillo F.",
+          "Garrido P.",
+          "Gautier L.",
+          "Goebel W.",
+          "Gomez-Lopez N.",
+          "Hain T.",
+          "Hauf J.",
+          "Jackson D.",
+          "Jones L.-M.",
+          "Kaerst U.",
+          "Kreft J.",
+          "Kuhn M.",
+          "Kunst F.",
+          "Kurapkat G.",
+          "Madueno E.",
+          "Maitournam A.",
+          "Mata Vicente J.",
+          "Ng E.",
+          "Nedjari H.",
+          "Nordsiek G.",
+          "Novella S.",
+          "de Pablos B.",
+          "Perez-Diaz J.-C.",
+          "Purcell R.",
+          "Remmel B.",
+          "Rose M.",
+          "Schlueter T.",
+          "Simoes N.",
+          "Tierrez A.",
+          "Vazquez-Boland J.-A.",
+          "Voss H.",
+          "Wehland J.",
+          "Cossart P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11679669"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1126/science.1063447"
+          }
+        ],
+        "title": "Comparative genomics of Listeria species.",
+        "publicationDate": "2001",
+        "journal": "Science",
+        "firstPage": "849",
+        "lastPage": "852",
+        "volume": "294"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC BAA-679 / EGD-e",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "1904842",
+        "citationType": "journal article",
+        "authors": [
+          "Geoffroy C.",
+          "Raveneau J.",
+          "Beretti J.-L.",
+          "Lecroisey A.",
+          "Vazquez-Boland J.-A.",
+          "Alouf J.E.",
+          "Berche P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "1904842"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.59.7.2382-2388.1991"
+          }
+        ],
+        "title": "Purification and characterization of an extracellular 29-kilodalton phospholipase C from Listeria monocytogenes.",
+        "publicationDate": "1991",
+        "journal": "Infect. Immun.",
+        "firstPage": "2382",
+        "lastPage": "2388",
+        "volume": "59"
+      },
+      "referencePositions": [
+        "PROTEIN SEQUENCE OF 144-152",
+        "FUNCTION",
+        "CATALYTIC ACTIVITY",
+        "SUBSTRATE SPECIFICITY",
+        "COFACTOR",
+        "BIOPHYSICOCHEMICAL PROPERTIES",
+        "SUBCELLULAR LOCATION"
+      ],
+      "referenceComments": [
+        {
+          "value": "EGD / Serovar 1/2a",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "8331063",
+        "citationType": "journal article",
+        "authors": [
+          "Goldfine H.",
+          "Johnston N.C.",
+          "Knob C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8331063"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.175.14.4298-4306.1993"
+          }
+        ],
+        "title": "Nonspecific phospholipase C of Listeria monocytogenes: activity on phospholipids in Triton X-100-mixed micelles and in biological membranes.",
+        "publicationDate": "1993",
+        "journal": "J. Bacteriol.",
+        "firstPage": "4298",
+        "lastPage": "4306",
+        "volume": "175"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "CATALYTIC ACTIVITY",
+        "SUBSTRATE SPECIFICITY",
+        "ACTIVITY REGULATION"
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "37838694",
+        "citationType": "journal article",
+        "authors": [
+          "Petrisic N.",
+          "Adamek M.",
+          "Kezar A.",
+          "Hocevar S.B.",
+          "Zagar E.",
+          "Anderluh G.",
+          "Podobnik M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "37838694"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/s41467-023-42134-4"
+          }
+        ],
+        "title": "Structural basis for the unique molecular properties of broad-range phospholipase C from Listeria monocytogenes.",
+        "publicationDate": "2023",
+        "journal": "Nat. Commun.",
+        "firstPage": "6474",
+        "lastPage": "6474",
+        "volume": "14"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY IN COMPLEX WITH ZN(2+) AND FE(3+)",
+        "FUNCTION",
+        "CATALYTIC ACTIVITY",
+        "COFACTOR",
+        "BIOPHYSICOCHEMICAL PROPERTIES",
+        "SUBUNIT",
+        "ACTIVITY REGULATION",
+        "MUTAGENESIS OF TRP-52"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "8CQM"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "M82881",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA25270.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "X59723",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAA42408.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AL591974",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAD00732.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "AF1100",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "AF1100"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "C43868",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "C43868"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "S20888",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "S20888"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_463736.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_003210.1"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_010989375.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_003210.1"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "8CQM",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.00 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B=52-289"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "P33378",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "P33378",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "169963.gene:17592841",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PaxDb",
+      "id": "169963-gene:17592841",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblBacteria",
+      "id": "CAD00732",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAD00732"
+        },
+        {
+          "key": "GeneId",
+          "value": "CAD00732"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "987036",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "lmo:lmo0205",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|169963.11.peg.210",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "ENOG5030A2K",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Bacteria"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_841040_0_0_9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "ACCDEYL",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OrthoDB",
+      "id": "1937927at2",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BioCyc",
+      "id": "LMON169963:LMO0205-MONOMER",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BRENDA",
+      "id": "3.1.4.3",
+      "properties": [
+        {
+          "key": "OrganismId",
+          "value": "3045"
+        }
+      ]
+    },
+    {
+      "database": "PRO",
+      "id": "PR:P33378",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000000817",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "1904842"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0034480",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:phosphatidylcholine phospholipase C activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "1904842"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "37838694"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "8331063"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0120548",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:phosphatidylinositol phospholipase C activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "8331063"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0004767",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:sphingomyelin phosphodiesterase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "1904842"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "8331063"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0008270",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:zinc ion binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd11009",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Zn_dep_PLPC"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.10.575.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "P1 Nuclease"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR008947",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PLipase_C/P1_nuclease_dom_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR029002",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PLPC/GPLD1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR001531",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Zn_PLipaseC"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00882",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Zn_dep_PLPC"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR00479",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PRPHPHLPASEC"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00770",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Zn_dep_PLPC"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF48537",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Phospholipase C/P1 nuclease"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS00384",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PROKAR_ZN_DEPEND_PLPC_1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51346",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PROKAR_ZN_DEPEND_PLPC_2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MKFKKVVLGMCLIASVLVFPVTIKANACCDEYLQTPAAPHDIDSKLPHKLSWSADNPTNTDVNTHYWLFKQAEKILAKDVNHMRANLMNELKKFDKQIAQGIYDADHKNPYYDTSTFLSHFYNPDRDNTYLPGFANAKITGAKYFNQSVTDYREGKFDTAFYKLGLAIHYYTDISQPMHANNFTAISYPPGYHCAYENYVDTIKHNYQATEDMVAKRFCSDDVKDWLYENAKRAKADYPKIVNAKTKKSYLVGNSEWKKDTVEPTGARLRDSQQTLAGFLEFWSKKTNE",
+    "length": 289,
+    "molWeight": 33278,
+    "crc64": "0F35A2A3EDA6E372",
+    "md5": "B7C71742C7C1CA99C00F8E47DF82E6DC"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "CATALYTIC ACTIVITY": 12,
+      "COFACTOR": 1,
+      "ACTIVITY REGULATION": 1,
+      "BIOPHYSICOCHEMICAL PROPERTIES": 1,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Propeptide": 1,
+      "Chain": 1,
+      "Domain": 1,
+      "Binding site": 10,
+      "Mutagenesis": 2,
+      "Sequence conflict": 3,
+      "Helix": 14,
+      "Beta strand": 1
+    },
+    "uniParcId": "UPI0000054E0D"
+  }
+}

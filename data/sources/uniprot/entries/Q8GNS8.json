@@ -1,0 +1,353 @@
+{
+  "entryType": "UniProtKB unreviewed (TrEMBL)",
+  "primaryAccession": "Q8GNS8",
+  "uniProtkbId": "Q8GNS8_STREE",
+  "entryAudit": {
+    "firstPublicDate": "2003-03-01",
+    "lastAnnotationUpdateDate": "2025-04-02",
+    "lastSequenceUpdateDate": "2003-03-01",
+    "entryVersion": 44,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 1.0,
+  "organism": {
+    "scientificName": "Streptococcus pneumoniae",
+    "taxonId": 1313,
+    "evidences": [
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "EMBL",
+        "id": "AAN37735.1"
+      }
+    ],
+    "lineage": [
+      "Bacteria",
+      "Bacillati",
+      "Bacillota",
+      "Bacilli",
+      "Lactobacillales",
+      "Streptococcaceae",
+      "Streptococcus"
+    ]
+  },
+  "proteinExistence": "4: Predicted",
+  "proteinDescription": {
+    "submissionNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAN37735.1"
+            }
+          ],
+          "value": "PspA"
+        }
+      }
+    ],
+    "flag": "Fragment"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "AAN37735.1"
+          }
+        ],
+        "value": "pspA"
+      }
+    }
+  ],
+  "features": [
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 96,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 224,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 96,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 112,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Basic and acidic residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 116,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 196,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Pro residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 205,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 215,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Low complexity",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Non-terminal residue",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AAN37735.1"
+        }
+      ]
+    },
+    {
+      "type": "Non-terminal residue",
+      "location": {
+        "start": {
+          "value": 224,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 224,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AAN37735.1"
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "12354862",
+        "citationType": "journal article",
+        "authors": [
+          "Dicuonzo G.",
+          "Gherardi G.",
+          "Gertz R.E.",
+          "D'Ambrosio F.",
+          "Goglio A.",
+          "Lorino G.",
+          "Recchia S.",
+          "Pantosti A.",
+          "Beall B."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "12354862"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/JCM.40.10.3660-3665.2002"
+          }
+        ],
+        "title": "Genotypes of invasive pneumococcal isolates recently recovered from Italian patients.",
+        "publicationDate": "2002",
+        "journal": "J. Clin. Microbiol.",
+        "firstPage": "3660",
+        "lastPage": "3665",
+        "volume": "40"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAN37735.1"
+            }
+          ],
+          "value": "PN124",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AAN37735.1"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AF490267",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAN37735.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q8GNS8",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "6.10.140.920",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR48148",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "KERATINOCYTE PROLINE-RICH PROTEIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR48148:SF3",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "KERATINOCYTE PROLINE-RICH PROTEIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF161270",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PspA lactotransferrin-binding region"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "AKIAELENQVHRLEQDLKDINESDSEDYVKEGFRAPLQSELDTKKAKLLKLEELSGKIEELDAEIAELEVQLKDAEGNNNVEAYFKEGLEKTTAEKKAELEKAEADLKKAVDEPETPVPAPAPAPAPAPTPEAPAPAPAPAPALKPAPALKPVPAPKPAPAPAPAPAPKPAPAPAPKPAPAPAPAPKPAPAPAPAPKPEKPAEKPAPALKPETPKTGWKQENGM",
+    "length": 224,
+    "molWeight": 23419,
+    "crc64": "48674E27AFB66A95",
+    "md5": "31C6346BAC8163E31B55E49FAE11E5E8"
+  },
+  "extraAttributes": {
+    "countByFeatureType": {
+      "Region": 1,
+      "Compositional bias": 3,
+      "Non-terminal residue": 2
+    },
+    "uniParcId": "UPI00000BF4EE"
+  }
+}

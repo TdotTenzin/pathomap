@@ -1,0 +1,95 @@
+{
+  "count": 2,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "metadata": {
+        "accession": "IPR009669",
+        "name": "Cysteine protease, VirA/EspG",
+        "source_database": "interpro",
+        "type": "family",
+        "integrated": null,
+        "member_databases": {
+          "pfam": {
+            "PF06872": "EspG protein"
+          },
+          "pirsf": {
+            "PIRSF011515": "Microatubule degradation protein EspG/VirA"
+          }
+        },
+        "go_terms": [
+          {
+            "identifier": "GO:0004197",
+            "name": "cysteine-type endopeptidase activity",
+            "category": {
+              "code": "F",
+              "name": "molecular_function"
+            }
+          }
+        ]
+      },
+      "proteins": [
+        {
+          "accession": "q7bu69",
+          "protein_length": 400,
+          "source_database": "reviewed",
+          "organism": "623",
+          "in_alphafold": true,
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 1,
+                  "end": 399,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": null,
+              "score": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "accession": "IPR043098",
+        "name": "Cysteine protease, VirA/EspG, N-terminal",
+        "source_database": "interpro",
+        "type": "homologous_superfamily",
+        "integrated": null,
+        "member_databases": {
+          "cathgene3d": {
+            "G3DSA:3.10.450.460": "EspG protein, N-terminal domain"
+          }
+        },
+        "go_terms": null
+      },
+      "proteins": [
+        {
+          "accession": "q7bu69",
+          "protein_length": 400,
+          "source_database": "reviewed",
+          "organism": "623",
+          "in_alphafold": true,
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 43,
+                  "end": 112,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": null,
+              "score": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

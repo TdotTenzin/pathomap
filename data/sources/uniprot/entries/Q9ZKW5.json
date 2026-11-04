@@ -1,0 +1,702 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "Q9ZKW5",
+  "uniProtkbId": "VACA_HELPJ",
+  "entryAudit": {
+    "firstPublicDate": "2001-01-11",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "1999-05-01",
+    "entryVersion": 131,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 3.0,
+  "organism": {
+    "scientificName": "Helicobacter pylori (strain J99 / ATCC 700824)",
+    "commonName": "Campylobacter pylori J99",
+    "taxonId": 85963,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Campylobacterota",
+      "Epsilonproteobacteria",
+      "Campylobacterales",
+      "Helicobacteraceae",
+      "Helicobacter"
+    ]
+  },
+  "proteinExistence": "3: Inferred from homology",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Vacuolating cytotoxin autotransporter"
+      }
+    },
+    "contains": [
+      {
+        "recommendedName": {
+          "fullName": {
+            "value": "Vacuolating cytotoxin"
+          }
+        }
+      },
+      {
+        "recommendedName": {
+          "fullName": {
+            "value": "Vacuolating cytotoxin translocator"
+          }
+        }
+      }
+    ],
+    "flag": "Precursor"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "vacA"
+      },
+      "orderedLocusNames": [
+        {
+          "value": "jhp_0819"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "value": "Induces vacuolation of eukaryotic cells. Causes ulceration and gastric lesions"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "molecule": "Vacuolating cytotoxin autotransporter",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250"
+              }
+            ],
+            "value": "Periplasm",
+            "id": "SL-0200"
+          }
+        }
+      ]
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "molecule": "Vacuolating cytotoxin",
+      "subcellularLocations": [
+        {
+          "location": {
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        },
+        {
+          "location": {
+            "value": "Cell surface",
+            "id": "SL-0310"
+          }
+        }
+      ]
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "molecule": "Vacuolating cytotoxin translocator",
+      "note": {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250"
+              }
+            ],
+            "value": "The cleaved C-terminal fragment (autotransporter domain) is localized in the outer membrane"
+          }
+        ]
+      },
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250"
+              }
+            ],
+            "value": "Cell outer membrane",
+            "id": "SL-0040"
+          },
+          "topology": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250"
+              }
+            ],
+            "value": "Multi-pass membrane protein",
+            "id": "SL-9909"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250"
+            }
+          ],
+          "value": "The signal peptide, cleaved at the inner membrane, guides the autotransporter protein to the periplasmic space. Then, insertion of the C-terminal translocator domain in the outer membrane forms a hydrophilic pore for the translocation of the passenger domain to the bacterial cell surface, with subsequent cleavage (By similarity)"
+        }
+      ],
+      "commentType": "DOMAIN"
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 33,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 34,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1288,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Vacuolating cytotoxin autotransporter",
+      "featureId": "PRO_0000387585"
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 34,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": null,
+          "modifier": "UNKNOWN"
+        }
+      },
+      "description": "Vacuolating cytotoxin",
+      "featureId": "PRO_0000022649"
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": null,
+          "modifier": "UNKNOWN"
+        },
+        "end": {
+          "value": 1288,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Vacuolating cytotoxin translocator",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ],
+      "featureId": "PRO_0000022650"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 1015,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1288,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Autotransporter",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00556"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 326,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 377,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 352,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 376,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Polar residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0998",
+      "category": "Cellular component",
+      "name": "Cell outer membrane"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-0574",
+      "category": "Cellular component",
+      "name": "Periplasm"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    },
+    {
+      "id": "KW-0800",
+      "category": "Molecular function",
+      "name": "Toxin"
+    },
+    {
+      "id": "KW-0812",
+      "category": "Domain",
+      "name": "Transmembrane"
+    },
+    {
+      "id": "KW-1134",
+      "category": "Domain",
+      "name": "Transmembrane beta strand"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "9923682",
+        "citationType": "journal article",
+        "authors": [
+          "Alm R.A.",
+          "Ling L.-S.L.",
+          "Moir D.T.",
+          "King B.L.",
+          "Brown E.D.",
+          "Doig P.C.",
+          "Smith D.R.",
+          "Noonan B.",
+          "Guild B.C.",
+          "deJonge B.L.",
+          "Carmel G.",
+          "Tummino P.J.",
+          "Caruso A.",
+          "Uria-Nickelsen M.",
+          "Mills D.M.",
+          "Ives C.",
+          "Gibson R.",
+          "Merberg D.",
+          "Mills S.D.",
+          "Jiang Q.",
+          "Taylor D.E.",
+          "Vovis G.F.",
+          "Trust T.J."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9923682"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/16495"
+          }
+        ],
+        "title": "Genomic sequence comparison of two unrelated isolates of the human gastric pathogen Helicobacter pylori.",
+        "publicationDate": "1999",
+        "journal": "Nature",
+        "firstPage": "176",
+        "lastPage": "180",
+        "volume": "397"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "J99 / ATCC 700824",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AE001439",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAD06400.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "E71884",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "E71884"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_000405515.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_000921.1"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q9ZKW5",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "Q9ZKW5",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "hpj:jhp_0819",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AAMMFNN",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009279",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cell outer membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009986",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cell surface"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0042597",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:periplasmic space"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.40.128.130",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Autotransporter beta-domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR005546",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Autotransporte_beta"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036709",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Autotransporte_beta_dom_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR006315",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OM_autotransptr_brl_dom"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR003842",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "VacA_beta-helix"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR064010",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "VacA_C"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "TIGR01414",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "autotrans_barl"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF02691",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "VacA"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF29188",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "VacA_C"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR01656",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "VACCYTOTOXIN"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00869",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Autotransporter"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF103515",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Autotransporter"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51208",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "AUTOTRANSPORTER"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MEIQQTHRKINRPLVSLVLAGALISAIPQESHAAFFTTVIIPAIVGGIATGTAVGTVSGLLSWGLKQAEEANKTPDKPDKVWRIQAGKGFNEFPNKEYDLYKSLLSSKIDGGWDWGNAARHYWVKGGQWNKLEVDMKDAVGTYKLSGLRNFTGGDLDVNMQKATLRLGQFNGNSFTSYKDSADRTTRVNFNAKNISIDNFVEINNRVGSGAGRKASSTVLTLQASEGITSSKNAEISLYDGATLNLASNSVKLNGNVWMGRLQYVGAYLAPSYSTINTSKVQGEVDFNHLTVGDQNAAQAGIIASNKTHIGTLDLWQSAGLNIIAPPEGGYKDKPNSTTSQSGTKNDKKEISQNNNSNTEVINPPNNTQKTETEPTQVIDGPFAGGKDTVVNIFHLNTKADGTIKVGGFKASLTTNAAHLNIGKGGVNLSNQASGRTLLVENLTGNITVDGPLRVNNQVGGYALAGSSANFEFKAGVDTKNGTATFNNDISLGRFVNLKVDAHTANFKGIDTGNGGFNTLDFSGVTDKVNINKLITASTNVAVKNFNINELIVKTNGISVGEYTHFSEDIGSQSRINTVRLETGTRSIFSGGVKFKSGEKLVINDFYYSPWNYFDARNVKNVEITRKFASSTPENPWGTSKLMFNNLTLGQNAVMDYSQFSNLTIQGDFINNQGTINYLVRGGKVATLNVGNAAAMMFNNDIDSATGFYKPLIKINSAQDLIKNTEHVLLKAKIIGYGNVSTGTNGISNVNLEEQFKERLALYNNNNRMDTCVVRNTDDIKACGMAIGNQSMVNNPDNYKYLIGKAWRNIGISKTANGSKISVYYLGNSTPTENGGNTTNLPTNTTNNAHSANYALVKNAPFAHSATPNLVAINQHDFGTIESVFELANRSKDIDTLYTHSGAQGRDLLQTLLIDSHDAGYARQMIDNTSTGEITKQLNAATDALNNVASLEHKQSGLQTLSLSNAMILNSRLVNLSRKHTNHINSFAQRLQALKGQEFASLESAAEVLYQFAPKYEKPTNVWANAIGGASLNSGSNASLYGTSAGVDAFLNGNVEAIVGGFGSYGYSSFSNQANSLNSGANNANFGVYSRFFANQHEFDFEAQGALGSDQSSLNFKSTLLQDLNQSYNYLAYSATARASYGYDFAFFRNALVLKPSVGVSYNHLGSTNFKSNSQSQVALKNGASSQHLFNANANVEARYYYGDTSYFYLHAGVLQEFAHFGSNDVASLNTFKINAARSPLSTYARAMMGGELQLAKEVFLNLGVVYLHNLISNASHFASNLGMRYSF",
+    "length": 1288,
+    "molWeight": 139132,
+    "crc64": "244B159DFC5F32B9",
+    "md5": "42AB0DF757CF1FF1980A2DA5416EF807"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBCELLULAR LOCATION": 3,
+      "DOMAIN": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 3,
+      "Domain": 1,
+      "Region": 1,
+      "Compositional bias": 1
+    },
+    "uniParcId": "UPI00001380B7"
+  }
+}

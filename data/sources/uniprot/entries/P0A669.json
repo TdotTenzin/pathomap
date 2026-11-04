@@ -1,0 +1,886 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "P0A669",
+  "secondaryAccessions": [
+    "A0A1R3Y2G8",
+    "Q48934",
+    "Q48946",
+    "Q48947",
+    "Q48948",
+    "Q50656",
+    "Q50769",
+    "X2BLT4"
+  ],
+  "uniProtkbId": "MP70_MYCBO",
+  "entryAudit": {
+    "firstPublicDate": "2005-03-15",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2005-03-15",
+    "entryVersion": 94,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 2.0,
+  "organism": {
+    "scientificName": "Mycobacterium bovis (strain ATCC BAA-935 / AF2122/97)",
+    "taxonId": 233413,
+    "lineage": [
+      "Bacteria",
+      "Bacillati",
+      "Actinomycetota",
+      "Actinomycetes",
+      "Mycobacteriales",
+      "Mycobacteriaceae",
+      "Mycobacterium",
+      "Mycobacterium tuberculosis complex"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Immunogenic protein MPB70"
+      }
+    },
+    "flag": "Precursor"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "mpb70"
+      },
+      "orderedLocusNames": [
+        {
+          "value": "BQ2027_MB2900"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "value": "Generally found as a monomer; homodimer in culture fluids"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "value": "Produced in high concentration by BCG Tokyo, Moreau, Russia and Sweden (high-producer substrains), whereas in BCG Pasteur, Copenhagen and Tice (low-producer substrains) it is detected at 1% (w/w) or less of the concentration of BCG Tokyo. The difference in the secretion between BCG Tokyo and Pasteur was attributed to differential transcription efficiencies"
+        }
+      ],
+      "commentType": "MISCELLANEOUS"
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 30,
+          "modifier": "EXACT"
+        }
+      },
+      "description": ""
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 31,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 193,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Immunogenic protein MPB70",
+      "featureId": "PRO_0000008784"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 57,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 189,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "FAS1",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00082"
+        }
+      ]
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 16,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 17,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 3; AAA25366",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "GL",
+        "alternativeSequences": [
+          "AV"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 101,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 101,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 6; AAA25355",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "P",
+        "alternativeSequences": [
+          "R"
+        ]
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0903",
+      "category": "Technical term",
+      "name": "Direct protein sequencing"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "2663636",
+        "citationType": "journal article",
+        "authors": [
+          "Terasaka K.",
+          "Yamaguchi R.",
+          "Matsuo K.",
+          "Yamazaki A.",
+          "Nagai S.",
+          "Yamada T."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "2663636"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/0378-1097(89)90052-9"
+          }
+        ],
+        "title": "Complete nucleotide sequence of immunogenic protein MPB70 from Mycobacterium bovis BCG.",
+        "publicationDate": "1989",
+        "journal": "FEMS Microbiol. Lett.",
+        "firstPage": "273",
+        "lastPage": "276",
+        "volume": "49"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]",
+        "PARTIAL PROTEIN SEQUENCE"
+      ],
+      "referenceComments": [
+        {
+          "value": "BCG / Pasteur",
+          "type": "STRAIN"
+        },
+        {
+          "value": "BCG / Tokyo",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "1691265",
+        "citationType": "journal article",
+        "authors": [
+          "Radford A.",
+          "Wood P.",
+          "Billman-Jacobe H.",
+          "Geysen H.",
+          "Mason T.",
+          "Tribbick G."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "1691265"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1099/00221287-136-2-265"
+          }
+        ],
+        "title": "Epitope mapping of the Mycobacterium bovis secretory protein MPB70 using overlapping peptide analysis.",
+        "publicationDate": "1990",
+        "journal": "J. Gen. Microbiol.",
+        "firstPage": "265",
+        "lastPage": "272",
+        "volume": "136"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "BCG / Pasteur",
+          "type": "STRAIN"
+        },
+        {
+          "value": "BCG / Tokyo",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "7551028",
+        "citationType": "journal article",
+        "authors": [
+          "Takemitsu M.",
+          "Matsumoto S.",
+          "Ohara N.",
+          "Kitaura H.",
+          "Mizuno A.",
+          "Yamada T."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "7551028"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1099/13500872-141-7-1601"
+          }
+        ],
+        "title": "Differential transcription of the MPB70 genes in two major groups of Mycobacterium bovis BCG substrains.",
+        "publicationDate": "1995",
+        "journal": "Microbiology",
+        "firstPage": "1601",
+        "lastPage": "1607",
+        "volume": "141"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "BCG / Pasteur",
+          "type": "STRAIN"
+        },
+        {
+          "value": "BCG / Tokyo",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "12788972",
+        "citationType": "journal article",
+        "authors": [
+          "Garnier T.",
+          "Eiglmeier K.",
+          "Camus J.-C.",
+          "Medina N.",
+          "Mansoor H.",
+          "Pryor M.",
+          "Duthoy S.",
+          "Grondin S.",
+          "Lacroix C.",
+          "Monsempe C.",
+          "Simon S.",
+          "Harris B.",
+          "Atkin R.",
+          "Doggett J.",
+          "Mayes R.",
+          "Keating L.",
+          "Wheeler P.R.",
+          "Parkhill J.",
+          "Barrell B.G.",
+          "Cole S.T.",
+          "Gordon S.V.",
+          "Hewinson R.G."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "12788972"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1073/pnas.1130426100"
+          }
+        ],
+        "title": "The complete genome sequence of Mycobacterium bovis.",
+        "publicationDate": "2003",
+        "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+        "firstPage": "7877",
+        "lastPage": "7882",
+        "volume": "100"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC BAA-935 / AF2122/97",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "28385856",
+        "citationType": "journal article",
+        "authors": [
+          "Malone K.M.",
+          "Farrell D.",
+          "Stuber T.P.",
+          "Schubert O.T.",
+          "Aebersold R.",
+          "Robbe-Austerman S.",
+          "Gordon S.V."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "28385856"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/genomea.00157-17"
+          }
+        ],
+        "title": "Updated reference genome sequence and annotation of Mycobacterium bovis AF2122/97.",
+        "publicationDate": "2017",
+        "journal": "Genome Announc.",
+        "firstPage": "E00157",
+        "lastPage": "E00157",
+        "volume": "5"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]",
+        "GENOME REANNOTATION"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC BAA-935 / AF2122/97",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "3278986",
+        "citationType": "journal article",
+        "authors": [
+          "Radford A.J.",
+          "Duffield B.J.",
+          "Plackett P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "3278986"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.56.4.921-925.1988"
+          }
+        ],
+        "title": "Cloning of a species-specific antigen of Mycobacterium bovis.",
+        "publicationDate": "1988",
+        "journal": "Infect. Immun.",
+        "firstPage": "921",
+        "lastPage": "925",
+        "volume": "56"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 49-193"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "M33916",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA25366.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "D38229",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "BAA07402.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "D38230",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "BAA07403.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "LT708304",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "SIU01521.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "M37840",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA25355.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "A37195",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "A37195"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "A43502",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "A43502"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "A48320",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "A48320"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_003414644.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_002945.4"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "P0A669",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "P0A669",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "45426864",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "mbo:BQ2027_MB2900",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|233413.5.peg.3183",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AAHHEEK",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000001419",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0031012",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular matrix"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:TreeGrafter"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0050839",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:cell adhesion molecule binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:TreeGrafter"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0007155",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:cell adhesion"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:TreeGrafter"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0030198",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:extracellular matrix organization"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:TreeGrafter"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "2.30.180.10:FF:000019",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cell surface lipoprotein"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.30.180.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FAS1 domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036378",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FAS1_dom_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR000782",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FAS1_domain"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR10900:SF77",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FI19380P1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR10900",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PERIOSTIN-RELATED"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF02469",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Fasciclin"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00554",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FAS1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF82153",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FAS1 domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS50213",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FAS1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MKVKNTIAATSFAAAGLAALAVAVSPPAAAGDLVGPGCAEYAAANPTGPASVQGMSQDPVAVAASNNPELTTLTAALSGQLNPQVNLVDTLNSGQYTVFAPTNAAFSKLPASTIDELKTNSSLLTSILTYHVVAGQTSPANVVGTRQTLQGASVTVTGQGNSLKVGNADVVCGGVSTANATVYMIDSVLMPPA",
+    "length": 193,
+    "molWeight": 19073,
+    "crc64": "228695731C3FFB00",
+    "md5": "72ED4EDC2DB9722B30823ECC87F42B52"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "MISCELLANEOUS": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1,
+      "Domain": 1,
+      "Sequence conflict": 2
+    },
+    "uniParcId": "UPI0000031A67"
+  }
+}

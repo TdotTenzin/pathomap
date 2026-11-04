@@ -1,0 +1,1165 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "P45996",
+  "uniProtkbId": "OMP53_HAEIF",
+  "entryAudit": {
+    "firstPublicDate": "1995-11-01",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "1995-11-01",
+    "entryVersion": 107,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 5.0,
+  "organism": {
+    "scientificName": "Haemophilus influenzae",
+    "taxonId": 727,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Gammaproteobacteria",
+      "Pasteurellales",
+      "Pasteurellaceae",
+      "Haemophilus"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000303",
+            "source": "PubMed",
+            "id": "7909539"
+          }
+        ],
+        "value": "Outer membrane protein P5"
+      },
+      "shortNames": [
+        {
+          "value": "OMP P5"
+        }
+      ]
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "7909539"
+            }
+          ],
+          "value": "Fimbrin"
+        }
+      },
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_00842"
+            }
+          ],
+          "value": "Outer membrane porin A"
+        }
+      },
+      {
+        "fullName": {
+          "value": "Outer membrane protein A"
+        }
+      }
+    ],
+    "flag": "Precursor"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000255",
+            "source": "HAMAP-Rule",
+            "id": "MF_00842"
+          }
+        ],
+        "value": "ompA"
+      },
+      "synonyms": [
+        {
+          "value": "ompP5"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "7909539"
+            }
+          ],
+          "value": "Acts as a fimbriae subunit, allowing adhesion to host cells"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_00842"
+            }
+          ],
+          "value": "With TolR probably plays a role in maintaining the position of the peptidoglycan cell wall in the periplasm. Acts as a porin with low permeability that allows slow penetration of small solutes; an internal gate slows down solute passage"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_00842"
+            }
+          ],
+          "value": "Monomer and homodimer"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "note": {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "7909539"
+              }
+            ],
+            "value": "Antisera against this protein label the whole length of fimbriae"
+          }
+        ]
+      },
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255",
+                "source": "HAMAP-Rule",
+                "id": "MF_00842"
+              },
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "7909539"
+              }
+            ],
+            "value": "Cell outer membrane",
+            "id": "SL-0040"
+          },
+          "topology": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255",
+                "source": "HAMAP-Rule",
+                "id": "MF_00842"
+              }
+            ],
+            "value": "Multi-pass membrane protein",
+            "id": "SL-9909"
+          }
+        },
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "7909539"
+              }
+            ],
+            "value": "Fimbrium",
+            "id": "SL-0113"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_00842"
+            }
+          ],
+          "value": "The extracellular loops are most variable in sequence, and in some bacteria confer sensitivity to phage and/or colicins"
+        }
+      ],
+      "commentType": "DOMAIN"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "7909539"
+            }
+          ],
+          "value": "No fimbrae seen on bacteria, the outer membrane blebs significantly, bacterial adhesion to human oropharyngeal cells decreases about 65%, significantly reduced ear infections in chinchilla"
+        }
+      ],
+      "commentType": "DISRUPTION PHENOTYPE"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "7909539"
+            }
+          ],
+          "value": "Immunization of chinchillas with this protein provides partial protection against subsequent infection, suggesting it might be a useful vaccine candidate"
+        }
+      ],
+      "commentType": "BIOTECHNOLOGY"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "7909539"
+            }
+          ],
+          "value": "Non-typeable Haemophilus influenzae (NTHi) is a primary pathogen in otitis media (inflammation of the middle ear)"
+        }
+      ],
+      "commentType": "MISCELLANEOUS"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_00842"
+            }
+          ],
+          "value": "Belongs to the outer membrane OOP (TC 1.B.6) superfamily. OmpA family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 21,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_00842"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "7909539"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 22,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 359,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Outer membrane protein P5",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_00842"
+        }
+      ],
+      "featureId": "PRO_0000020109"
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 27,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 37,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Beta stranded",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_00842"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 64,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 75,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Beta stranded",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_00842"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 83,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 91,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Beta stranded",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_00842"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 110,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 121,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Beta stranded",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_00842"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 126,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 134,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Beta stranded",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_00842"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 164,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 173,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Beta stranded",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_00842"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 178,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 185,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Beta stranded",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_00842"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 211,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 219,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Beta stranded",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_00842"
+        }
+      ]
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 233,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 359,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "OmpA-like",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_00842"
+        }
+      ]
+    },
+    {
+      "type": "Site",
+      "location": {
+        "start": {
+          "value": 86,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 86,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Part of salt bridge gating mechanism",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_00842"
+        }
+      ]
+    },
+    {
+      "type": "Site",
+      "location": {
+        "start": {
+          "value": 181,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 181,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Part of salt bridge gating mechanism",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_00842"
+        }
+      ]
+    },
+    {
+      "type": "Disulfide bond",
+      "location": {
+        "start": {
+          "value": 332,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 344,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_00842"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0130",
+      "category": "Biological process",
+      "name": "Cell adhesion"
+    },
+    {
+      "id": "KW-0998",
+      "category": "Cellular component",
+      "name": "Cell outer membrane"
+    },
+    {
+      "id": "KW-0903",
+      "category": "Technical term",
+      "name": "Direct protein sequencing"
+    },
+    {
+      "id": "KW-1015",
+      "category": "PTM",
+      "name": "Disulfide bond"
+    },
+    {
+      "id": "KW-0281",
+      "category": "Cellular component",
+      "name": "Fimbrium"
+    },
+    {
+      "id": "KW-0406",
+      "category": "Biological process",
+      "name": "Ion transport"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-0626",
+      "category": "Molecular function",
+      "name": "Porin"
+    },
+    {
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    },
+    {
+      "id": "KW-0812",
+      "category": "Domain",
+      "name": "Transmembrane"
+    },
+    {
+      "id": "KW-1134",
+      "category": "Domain",
+      "name": "Transmembrane beta strand"
+    },
+    {
+      "id": "KW-0813",
+      "category": "Biological process",
+      "name": "Transport"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "7909539",
+        "citationType": "journal article",
+        "authors": [
+          "Sirakova T.",
+          "Kolattukudy P.E.",
+          "Murwin D.",
+          "Billy J.",
+          "Leake E.",
+          "Lim D.",
+          "Demaria T.",
+          "Bakaletz L."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "7909539"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.62.5.2002-2020.1994"
+          }
+        ],
+        "title": "Role of fimbriae expressed by nontypeable Haemophilus influenzae in pathogenesis of and protection against otitis media and relatedness of the fimbrin subunit to outer membrane protein A.",
+        "publicationDate": "1994",
+        "journal": "Infect. Immun.",
+        "firstPage": "2002",
+        "lastPage": "2020",
+        "volume": "62"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]",
+        "PROTEIN SEQUENCE OF 22-41 AND 234-248",
+        "SUBCELLULAR LOCATION",
+        "DISRUPTION PHENOTYPE",
+        "BIOTECHNOLOGY"
+      ],
+      "referenceComments": [
+        {
+          "value": "NTHi 1128",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "L08448",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA24959.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "P45996",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "P45996",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AAKHTNH",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PHI-base",
+      "id": "PHI:124143",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009279",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cell outer membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "7909539"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009289",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:pilus"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "7909539"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0015288",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:porin activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-UniRule"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0051701",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:biological process involved in interaction with host"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-ARBA"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0034220",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:monoatomic ion transmembrane transport"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-UniRule"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd07185",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OmpA_C-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "3.30.1330.60:FF:000004",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Outer membrane protein A"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.40.160.20",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.30.1330.60",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OmpA-like domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "HAMAP",
+      "id": "MF_00842",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OmpA"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR050330",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Bact_OuterMem_StrucFunc"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR011250",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OMP/PagP_B-barrel"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR006664",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OMP_bac"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR002368",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OmpA"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR006665",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OmpA-like"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR006690",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OMPA-like_CS"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036737",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OmpA-like_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR000498",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OmpA-like_TM_dom"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF008071",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ompA"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR30329:SF21",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LIPOPROTEIN YIAD-RELATED"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR30329",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "STATOR ELEMENT OF FLAGELLAR MOTOR COMPLEX"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00691",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OmpA"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF01389",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OmpA_membrane"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR01021",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OMPADOMAIN"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR01022",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OUTRMMBRANEA"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF56925",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OMPA-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF103088",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OmpA-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS01068",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OMPA_1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51123",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OMPA_2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MKKTAIALVVAGLAAASVAQAAPQENTFYAGVKAGQGSFHDGINNNGAIKKGLSSSNYGYRRNTFTYGVFGGYQILNQDNFGLAAELGYDDFGRAKLREAGKPKAKHTNHGAYLSLKGSYEVLDGLDVYGKAGVALVRSDYKFYEDANGTRDHKKGRHTARASGLFAVGAEYAVLPELAVRLEYQWLTRVGKYRPQDKPNTAINYNPWIGCINAGISYRFGQGEAPVVAAPEMVSKTFSLNSDVTFAFGKANLKPQAQATLDSVYGEISQVKSRKVAVAGYTNRIGSDAFNVKLSQERADSVANYFVAKGVAADAISATGYGEANPVTGATCDQVKGRKALIACLAPDRRVEIAVNGTK",
+    "length": 359,
+    "molWeight": 38340,
+    "crc64": "576B1C59B4818C37",
+    "md5": "2E2B67B2EEA374B1254517EAA56F167E"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 2,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "DOMAIN": 1,
+      "DISRUPTION PHENOTYPE": 1,
+      "BIOTECHNOLOGY": 1,
+      "MISCELLANEOUS": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1,
+      "Transmembrane": 8,
+      "Domain": 1,
+      "Site": 2,
+      "Disulfide bond": 1
+    },
+    "uniParcId": "UPI0000130CC4"
+  }
+}

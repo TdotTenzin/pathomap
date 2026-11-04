@@ -1,0 +1,1611 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "P34024",
+  "uniProtkbId": "PLC_LISMO",
+  "entryAudit": {
+    "firstPublicDate": "1994-02-01",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "1994-02-01",
+    "entryVersion": 158,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 4.0,
+  "organism": {
+    "scientificName": "Listeria monocytogenes serovar 1/2a (strain ATCC BAA-679 / EGD-e)",
+    "taxonId": 169963,
+    "lineage": [
+      "Bacteria",
+      "Bacillati",
+      "Bacillota",
+      "Bacilli",
+      "Caryophanales",
+      "Listeriaceae",
+      "Listeria"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "1-phosphatidylinositol phosphodiesterase"
+      },
+      "ecNumbers": [
+        {
+          "value": "4.6.1.13"
+        }
+      ]
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "Phosphatidylinositol diacylglycerol-lyase"
+        }
+      },
+      {
+        "fullName": {
+          "value": "Phosphatidylinositol-specific phospholipase C"
+        },
+        "shortNames": [
+          {
+            "value": "PI-PLC"
+          }
+        ]
+      }
+    ],
+    "flag": "Precursor"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "plcA"
+      },
+      "synonyms": [
+        {
+          "value": "pic"
+        }
+      ],
+      "orderedLocusNames": [
+        {
+          "value": "lmo0201"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "value": "Cleaves glycosylphosphatidylinositol (GPI) and phosphatidylinositol (PI) anchors but not PI phosphates. Important factor in pathogenesis, PI-PLC activity is present only in virulent listeria species. It may participate in the lysis of the phagolysosomal membrane"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "a 1,2-diacyl-sn-glycero-3-phospho-(1D-myo-inositol) = 1D-myo-inositol 1,2-cyclic phosphate + a 1,2-diacyl-sn-glycerol",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:17093"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:17815"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:57880"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:58484"
+          }
+        ],
+        "ecNumber": "4.6.1.13"
+      }
+    },
+    {
+      "texts": [
+        {
+          "value": "Monomer"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "note": {
+        "texts": [
+          {
+            "value": "Secreted and, to a lesser extent, cytoplasmic"
+          }
+        ]
+      },
+      "subcellularLocations": [
+        {
+          "location": {
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        },
+        {
+          "location": {
+            "value": "Cytoplasm",
+            "id": "SL-0086"
+          }
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 22,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 23,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 317,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "1-phosphatidylinositol phosphodiesterase",
+      "featureId": "PRO_0000024296"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 58,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 196,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "PI-PLC X-box",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00270"
+        }
+      ]
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 67,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 67,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Proton acceptor"
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 115,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 115,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Proton donor"
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 45,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 47,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2PLC"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 49,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 51,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2PLC"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 58,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 60,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2PLC"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 61,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 66,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2PLC"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 67,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 72,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2PLC"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 76,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 80,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2PLC"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 82,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 85,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2PLC"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 92,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 97,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2PLC"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 102,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 107,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2PLC"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 111,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 115,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2PLC"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 118,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 123,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2PLC"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 124,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 137,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2PLC"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 143,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 149,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2PLC"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 156,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 167,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2PLC"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 169,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 171,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2PLC"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 174,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 178,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2PLC"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 187,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 192,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2PLC"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 194,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 200,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2PLC"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 206,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 208,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2PLC"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 211,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 216,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2PLC"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 222,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 225,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2PLC"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 233,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 249,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2PLC"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 251,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 258,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2PLC"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 264,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 266,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2PLC"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 268,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 288,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2PLC"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 295,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 301,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2PLC"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 304,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 311,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2PLC"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0002",
+      "category": "Technical term",
+      "name": "3D-structure"
+    },
+    {
+      "id": "KW-0963",
+      "category": "Cellular component",
+      "name": "Cytoplasm"
+    },
+    {
+      "id": "KW-0442",
+      "category": "Biological process",
+      "name": "Lipid degradation"
+    },
+    {
+      "id": "KW-0443",
+      "category": "Biological process",
+      "name": "Lipid metabolism"
+    },
+    {
+      "id": "KW-0456",
+      "category": "Molecular function",
+      "name": "Lyase"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "1645839",
+        "citationType": "journal article",
+        "authors": [
+          "Mengaud J.",
+          "Braun-Breton C.",
+          "Cossart P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "1645839"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1111/j.1365-2958.1991.tb02118.x"
+          }
+        ],
+        "title": "Identification of phosphatidylinositol-specific phospholipase C activity in Listeria monocytogenes: a novel type of virulence factor?",
+        "publicationDate": "1991",
+        "journal": "Mol. Microbiol.",
+        "firstPage": "367",
+        "lastPage": "372",
+        "volume": "5"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "LO28 / Serovar 1/2c",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "1645838",
+        "citationType": "journal article",
+        "authors": [
+          "Leimeister-Waechter M.",
+          "Domann E.",
+          "Chakraborty T."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "1645838"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1111/j.1365-2958.1991.tb02117.x"
+          }
+        ],
+        "title": "Detection of a gene encoding a phosphatidylinositol-specific phospholipase C that is co-ordinately expressed with listeriolysin in Listeria monocytogenes.",
+        "publicationDate": "1991",
+        "journal": "Mol. Microbiol.",
+        "firstPage": "361",
+        "lastPage": "366",
+        "volume": "5"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "EGD / Serovar 1/2a",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "11679669",
+        "citationType": "journal article",
+        "authors": [
+          "Glaser P.",
+          "Frangeul L.",
+          "Buchrieser C.",
+          "Rusniok C.",
+          "Amend A.",
+          "Baquero F.",
+          "Berche P.",
+          "Bloecker H.",
+          "Brandt P.",
+          "Chakraborty T.",
+          "Charbit A.",
+          "Chetouani F.",
+          "Couve E.",
+          "de Daruvar A.",
+          "Dehoux P.",
+          "Domann E.",
+          "Dominguez-Bernal G.",
+          "Duchaud E.",
+          "Durant L.",
+          "Dussurget O.",
+          "Entian K.-D.",
+          "Fsihi H.",
+          "Garcia-del Portillo F.",
+          "Garrido P.",
+          "Gautier L.",
+          "Goebel W.",
+          "Gomez-Lopez N.",
+          "Hain T.",
+          "Hauf J.",
+          "Jackson D.",
+          "Jones L.-M.",
+          "Kaerst U.",
+          "Kreft J.",
+          "Kuhn M.",
+          "Kunst F.",
+          "Kurapkat G.",
+          "Madueno E.",
+          "Maitournam A.",
+          "Mata Vicente J.",
+          "Ng E.",
+          "Nedjari H.",
+          "Nordsiek G.",
+          "Novella S.",
+          "de Pablos B.",
+          "Perez-Diaz J.-C.",
+          "Purcell R.",
+          "Remmel B.",
+          "Rose M.",
+          "Schlueter T.",
+          "Simoes N.",
+          "Tierrez A.",
+          "Vazquez-Boland J.-A.",
+          "Voss H.",
+          "Wehland J.",
+          "Cossart P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11679669"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1126/science.1063447"
+          }
+        ],
+        "title": "Comparative genomics of Listeria species.",
+        "publicationDate": "2001",
+        "journal": "Science",
+        "firstPage": "849",
+        "lastPage": "852",
+        "volume": "294"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC BAA-679 / EGD-e",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "2509367",
+        "citationType": "journal article",
+        "authors": [
+          "Mengaud J.",
+          "Vicente M.-F.",
+          "Cossart P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "2509367"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.57.12.3695-3701.1989"
+          }
+        ],
+        "title": "Transcriptional mapping and nucleotide sequence of the Listeria monocytogenes hlyA region reveal structural features that may be involved in regulation.",
+        "publicationDate": "1989",
+        "journal": "Infect. Immun.",
+        "firstPage": "3695",
+        "lastPage": "3701",
+        "volume": "57"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 70-317"
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "9367761",
+        "citationType": "journal article",
+        "authors": [
+          "Moser J.",
+          "Gerstel B.",
+          "Meyer J.E.",
+          "Chakraborty T.",
+          "Wehland J.",
+          "Heinz D.W."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9367761"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1006/jmbi.1997.1290"
+          }
+        ],
+        "title": "Crystal structure of the phosphatidylinositol-specific phospholipase C from the human pathogen Listeria monocytogenes.",
+        "publicationDate": "1997",
+        "journal": "J. Mol. Biol.",
+        "firstPage": "269",
+        "lastPage": "282",
+        "volume": "273"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY"
+      ],
+      "referenceComments": [
+        {
+          "value": "EGD / Serovar 1/2a",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "X54618",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAA38438.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AL591974",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAD00728.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "AB1100",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "AB1100"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "S15336",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "A37204"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_463732.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_003210.1"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_003733144.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_003210.1"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "1AOD",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.60 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=29-317"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2PLC",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.00 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=43-316"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "P34024",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "MDposit",
+      "id": "P34024",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "P34024",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "169963.gene:17592837",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "DrugBank",
+      "id": "DB03106",
+      "properties": [
+        {
+          "key": "GenericName",
+          "value": "scyllo-inositol"
+        }
+      ]
+    },
+    {
+      "database": "PaxDb",
+      "id": "169963-gene:17592837",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblBacteria",
+      "id": "CAD00728",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAD00728"
+        },
+        {
+          "key": "GeneId",
+          "value": "CAD00728"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "987032",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "lmo:lmo0201",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|169963.11.peg.206",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "COG0823",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Bacteria"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_024117_3_0_9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AAECQVW",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OrthoDB",
+      "id": "7191982at2",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BioCyc",
+      "id": "LMON169963:LMO0201-MONOMER",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EvolutionaryTrace",
+      "id": "P34024",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PRO",
+      "id": "PR:P34024",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000000817",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005737",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cytoplasm"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0004436",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:phosphatidylinositol diacylglycerol-lyase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-EC"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0008081",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:phosphoric diester hydrolase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0006629",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:lipid metabolic process"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd00137",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PI-PLCc"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.20.20.190",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Phosphatidylinositol (PI) phosphodiesterase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR051057",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PI-PLC_domain"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR017946",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PLC-like_Pdiesterase_TIM-brl"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR000909",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PLipase_C_PInositol-sp_X_dom"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR13593",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR13593:SF113",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SI:DKEY-266F7.9"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00388",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PI-PLC-X"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00148",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PLCXc"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF51695",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PLC-like phosphodiesterases"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS50007",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PIPLC_X_DOMAIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MYKNYLQRTLVLLLCFILYFFTFPLGGKAYSLNNWNKPIKNSVTTKQWMSALPDTTNLAALSIPGTHDTMSYNGDITWTLTKPLAQTQTMSLYQQLEAGIRYIDIRAKDNLNIYHGPIFLNASLSGVLETITQFLKKNPKETIIMRLKDEQNSNDSFDYRIQPLINIYKDYFYTTPRTDTSNKIPTLKDVRGKILLLSENHTKKPLVINSRKFGMQFGAPNQVIQDDYNGPSVKTKFKEIVQTAYQASKADNKLFLNHISATSLTFTPRQYAAALNNKVEQFVLNLTSEKVRGLGILIMDFPEKQTIKNIIKNNKFN",
+    "length": 317,
+    "molWeight": 36318,
+    "crc64": "5D0E33649A983DA2",
+    "md5": "3A9071ECE992CA4DEB93B74E7D8AB183"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "CATALYTIC ACTIVITY": 1,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1,
+      "Domain": 1,
+      "Active site": 2,
+      "Helix": 12,
+      "Beta strand": 13,
+      "Turn": 2
+    },
+    "uniParcId": "UPI0000048191"
+  }
+}

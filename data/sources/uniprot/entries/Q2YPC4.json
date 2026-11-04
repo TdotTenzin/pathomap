@@ -1,0 +1,945 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "Q2YPC4",
+  "uniProtkbId": "TCPB_BRUA2",
+  "entryAudit": {
+    "firstPublicDate": "2023-05-03",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2006-02-07",
+    "entryVersion": 89,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 4.0,
+  "organism": {
+    "scientificName": "Brucella abortus (strain 2308)",
+    "taxonId": 359391,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Alphaproteobacteria",
+      "Hyphomicrobiales",
+      "Brucellaceae",
+      "Brucella/Ochrobactrum group",
+      "Brucella",
+      "Brucella melitensis group"
+    ]
+  },
+  "proteinExistence": "3: Inferred from homology",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000305"
+          }
+        ],
+        "value": "Probable 2' cyclic ADP-D-ribose synthase TcpB"
+      },
+      "shortNames": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "2'cADPR synthase TcpB"
+        }
+      ],
+      "ecNumbers": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "A0A009IHW8"
+            }
+          ],
+          "value": "3.2.2.-"
+        }
+      ]
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "18266466"
+            }
+          ],
+          "value": "Brucella TIR-containing protein 1"
+        },
+        "shortNames": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "source": "PubMed",
+                "id": "18266466"
+              }
+            ],
+            "value": "Btp1"
+          }
+        ]
+      },
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "Q8YF53"
+            }
+          ],
+          "value": "NAD(+) hydrolase TcpB"
+        },
+        "ecNumbers": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250",
+                "source": "UniProtKB",
+                "id": "Q8YF53"
+              }
+            ],
+            "value": "3.2.2.6"
+          }
+        ]
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000303",
+            "source": "PubMed",
+            "id": "18266466"
+          }
+        ],
+        "value": "btp1"
+      },
+      "synonyms": [
+        {
+          "value": "btpA"
+        },
+        {
+          "value": "tcpB"
+        }
+      ],
+      "orderedLocusNames": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000312",
+              "source": "EMBL",
+              "id": "CAJ10235.1"
+            }
+          ],
+          "value": "BAB1_0279"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "Q8YF53"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "18266466"
+            }
+          ],
+          "value": "Virulence factor that interferes with host Toll-like receptor 2 (TLR2) signaling, resulting in the reduction of dendritic cell maturation, inhibition of pro-inflammatory cytokine secretion and impaired NF-kappa-B activation in macrophages (PubMed:18266466). Also acts on host TLR4. Binds host lipids. Has NAD(+) hydrolase (NADase) activity, catalyzes cleavage of NAD(+) into ADP-D-ribose (ADPR) and nicotinamide, also generates a cyclization variant of cyclic ADPR (cADPR), termed v-cADPR (probably 2'cADPR) (By similarity)"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "NAD(+) + H2O = ADP-D-ribose + nicotinamide + H(+)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:16301"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15377"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:17154"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:57540"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:57967"
+          }
+        ],
+        "ecNumber": "3.2.2.6",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000250",
+            "source": "UniProtKB",
+            "id": "Q8YF53"
+          }
+        ]
+      },
+      "physiologicalReactions": [
+        {
+          "directionType": "left-to-right",
+          "reactionCrossReference": {
+            "database": "Rhea",
+            "id": "RHEA:16302"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "Q8YF53"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "NAD(+) = 2'cADPR + nicotinamide + H(+)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:75299"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:17154"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:57540"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:194248"
+          }
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000250",
+            "source": "UniProtKB",
+            "id": "A0A009IHW8"
+          },
+          {
+            "evidenceCode": "ECO:0000250",
+            "source": "UniProtKB",
+            "id": "Q8YF53"
+          }
+        ]
+      }
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "Q8YF53"
+            }
+          ],
+          "value": "Homodimer. Interacts with host TIRAP. Interacts with host TLR4, abolishes the interaction of host TIRAP with TLR4"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "note": {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000305"
+              }
+            ],
+            "value": "Translocated into the host cell via the type IV secretion system (T4SS)"
+          }
+        ]
+      },
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250",
+                "source": "UniProtKB",
+                "id": "Q8YF53"
+              }
+            ],
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        },
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250",
+                "source": "UniProtKB",
+                "id": "Q8YF53"
+              }
+            ],
+            "value": "Host cell membrane",
+            "id": "SL-0375"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "Q8YF53"
+            }
+          ],
+          "value": "The TIR domain mediates NAD(+) hydrolase (NADase) activity. The N-terminal region is required for localization to the host cell membrane"
+        }
+      ],
+      "commentType": "DOMAIN"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "18266466"
+            }
+          ],
+          "value": "Grows as well as wild-type in mouse C57BL/6 dendritic cells, decreased activation of mouse dendritic cells compared to wild-type bacteria. Increased host expression and secretion of TNF and to a lesser extent IL-12 compared to wild-type bacteria"
+        }
+      ],
+      "commentType": "DISRUPTION PHENOTYPE"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 250,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Probable 2' cyclic ADP-D-ribose synthase TcpB",
+      "featureId": "PRO_0000458019"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 117,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 250,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "TIR",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00204"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 46,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 14,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 23,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Low complexity",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 30,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 39,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Basic and acidic residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 192,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 192,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00204"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-1032",
+      "category": "Cellular component",
+      "name": "Host cell membrane"
+    },
+    {
+      "id": "KW-1043",
+      "category": "Cellular component",
+      "name": "Host membrane"
+    },
+    {
+      "id": "KW-0378",
+      "category": "Molecular function",
+      "name": "Hydrolase"
+    },
+    {
+      "id": "KW-0446",
+      "category": "Ligand",
+      "name": "Lipid-binding"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-0520",
+      "category": "Ligand",
+      "name": "NAD"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "16299333",
+        "citationType": "journal article",
+        "authors": [
+          "Chain P.S.",
+          "Comerci D.J.",
+          "Tolmasky M.E.",
+          "Larimer F.W.",
+          "Malfatti S.A.",
+          "Vergez L.M.",
+          "Aguero F.",
+          "Land M.L.",
+          "Ugalde R.A.",
+          "Garcia E."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "16299333"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.73.12.8353-8361.2005"
+          }
+        ],
+        "title": "Whole-genome analyses of speciation events in pathogenic Brucellae.",
+        "publicationDate": "2005",
+        "journal": "Infect. Immun.",
+        "firstPage": "8353",
+        "lastPage": "8361",
+        "volume": "73"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "2308",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000312",
+          "source": "EMBL",
+          "id": "CAJ10235.1"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "18266466",
+        "citationType": "journal article",
+        "authors": [
+          "Salcedo S.P.",
+          "Marchesini M.I.",
+          "Lelouard H.",
+          "Fugier E.",
+          "Jolly G.",
+          "Balor S.",
+          "Muller A.",
+          "Lapaque N.",
+          "Demaria O.",
+          "Alexopoulou L.",
+          "Comerci D.J.",
+          "Ugalde R.A.",
+          "Pierre P.",
+          "Gorvel J.P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "18266466"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1371/journal.ppat.0040021"
+          }
+        ],
+        "title": "Brucella control of dendritic cell maturation is dependent on the TIR-containing protein Btp1.",
+        "publicationDate": "2008",
+        "journal": "PLoS Pathog.",
+        "firstPage": "E21",
+        "lastPage": "E21",
+        "volume": "4"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "DISRUPTION PHENOTYPE"
+      ],
+      "referenceComments": [
+        {
+          "value": "2308",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AM040264",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAJ10235.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q2YPC4",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "Q2YPC4",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "bmf:BAB1_0279",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_086674_0_0_5",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AFFKKEW",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000002719",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome I"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISS:UniProtKB"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0020002",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:host cell plasma membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISS:UniProtKB"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0061809",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:NAD+ nucleosidase activity, cyclic ADP-ribose generating"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-EC"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0007165",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:signal transduction"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0052025",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:symbiont-mediated perturbation of host cell endomembrane system"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:SigSci"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "24339776"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0039722",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:symbiont-mediated suppression of host toll-like receptor signaling pathway"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:SigSci"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "19196716"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.40.50.10140",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Toll/interleukin-1 receptor homology (TIR) domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR000157",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TIR_dom"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR035897",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Toll_tir_struct_dom_sf"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR32009:SF39",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TIR DOMAIN-CONTAINING PROTEIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR32009",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TMV RESISTANCE PROTEIN N-LIKE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF13676",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TIR_2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00255",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TIR"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF52200",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Toll/Interleukin receptor TIR domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS50104",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TIR"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MSKEKQAQSKAHKAQQAISSAKSLSTQKSKMSELERATRDGAAIGKKRADIAKKIADKAKQLSSYQAKQFKADEQAVKKVAQEQKRLSDERTKHEAFIKQSLSSMRTTASATMEAEEEYDFFISHASEDKEAFVQDLAAALRDLGAKIFYDAYTLKVGDSLRRKIDQGLANSKFGIVVLSEHFFSKQWPARELDGLTAMEIGGQTRILPIWHKVSYDEVRRFSPSLADKVALNTSLKSVEEIAKELHSLI",
+    "length": 250,
+    "molWeight": 27971,
+    "crc64": "E4188CE50BFD0C9D",
+    "md5": "8249B2C9A0E2E44EC5D3E298370CD3A4"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "CATALYTIC ACTIVITY": 2,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "DOMAIN": 1,
+      "DISRUPTION PHENOTYPE": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Domain": 1,
+      "Region": 1,
+      "Compositional bias": 2,
+      "Active site": 1
+    },
+    "uniParcId": "UPI00004F8EBF"
+  }
+}

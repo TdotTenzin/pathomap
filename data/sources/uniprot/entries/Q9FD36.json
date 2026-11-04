@@ -1,0 +1,624 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "Q9FD36",
+  "uniProtkbId": "PNBA_PSEPU",
+  "entryAudit": {
+    "firstPublicDate": "2025-02-05",
+    "lastAnnotationUpdateDate": "2026-09-02",
+    "lastSequenceUpdateDate": "2001-03-01",
+    "entryVersion": 60,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 2.0,
+  "organism": {
+    "scientificName": "Pseudomonas putida",
+    "commonName": "Arthrobacter siderocapsulatus",
+    "taxonId": 303,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Gammaproteobacteria",
+      "Pseudomonadales",
+      "Pseudomonadaceae",
+      "Pseudomonas"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000303",
+            "source": "PubMed",
+            "id": "11157934"
+          }
+        ],
+        "value": "4-nitrobenzoate reductase"
+      },
+      "shortNames": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "11157934"
+            }
+          ],
+          "value": "4NBen reductase"
+        }
+      ],
+      "ecNumbers": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11157934"
+            }
+          ],
+          "value": "1.7.1.-"
+        }
+      ]
+    }
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000303",
+            "source": "PubMed",
+            "id": "11157934"
+          }
+        ],
+        "value": "pnbA"
+      }
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11157934"
+            }
+          ],
+          "value": "Nitroreductase involved in the degradation of nitroaromatic compounds (PubMed:11157934). Catalyzes the conversion of 4-nitrobenzoate to 4-hydroxylaminobenzoate (PubMed:11157934). Required for the catabolism of 4-nitrotoluene (PubMed:11157934)"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "4-nitrobenzoate + 2 NADH + 2 H(+) = 4-hydroxylaminobenzoate + 2 NAD(+) + H2O",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:80199"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15377"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:57540"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:57945"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:142863"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:231457"
+          }
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "11157934"
+          }
+        ]
+      },
+      "physiologicalReactions": [
+        {
+          "directionType": "left-to-right",
+          "reactionCrossReference": {
+            "database": "Rhea",
+            "id": "RHEA:80200"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11157934"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commentType": "COFACTOR",
+      "cofactors": [
+        {
+          "name": "FMN",
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "A0R6D0"
+            }
+          ],
+          "cofactorCrossReference": {
+            "database": "ChEBI",
+            "id": "CHEBI:58210"
+          }
+        }
+      ],
+      "note": {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250",
+                "source": "UniProtKB",
+                "id": "A0R6D0"
+              }
+            ],
+            "value": "Binds 1 FMN per subunit."
+          }
+        ]
+      }
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the nitroreductase family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 227,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "4-nitrobenzoate reductase",
+      "featureId": "PRO_0000461679"
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 15,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 19,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:58210"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "A0R6D0"
+        }
+      ],
+      "ligand": {
+        "name": "FMN",
+        "id": "ChEBI:CHEBI:58210"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 45,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 45,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:57540"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "A0R6D0"
+        }
+      ],
+      "ligand": {
+        "name": "NAD(+)",
+        "id": "ChEBI:CHEBI:57540"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 102,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 102,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:57540"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "A0R6D0"
+        }
+      ],
+      "ligand": {
+        "name": "NAD(+)",
+        "id": "ChEBI:CHEBI:57540"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 107,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 107,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:57540"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "A0R6D0"
+        }
+      ],
+      "ligand": {
+        "name": "NAD(+)",
+        "id": "ChEBI:CHEBI:57540"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 213,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 213,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:58210"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "A0R6D0"
+        }
+      ],
+      "ligand": {
+        "name": "FMN",
+        "id": "ChEBI:CHEBI:58210"
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0285",
+      "category": "Ligand",
+      "name": "Flavoprotein"
+    },
+    {
+      "id": "KW-0288",
+      "category": "Ligand",
+      "name": "FMN"
+    },
+    {
+      "id": "KW-0520",
+      "category": "Ligand",
+      "name": "NAD"
+    },
+    {
+      "id": "KW-0560",
+      "category": "Molecular function",
+      "name": "Oxidoreductase"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "11157934",
+        "citationType": "journal article",
+        "authors": [
+          "Hughes M.A.",
+          "Williams P.A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11157934"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.183.4.1225-1232.2001"
+          }
+        ],
+        "title": "Cloning and characterisation of the pnb genes, encoding enzymes for 4-nitrobenzoate catabolism in Pseudomonas putida TW3.",
+        "publicationDate": "2001",
+        "journal": "J. Bacteriol.",
+        "firstPage": "1225",
+        "lastPage": "1232",
+        "volume": "183"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]",
+        "FUNCTION",
+        "CATALYTIC ACTIVITY"
+      ],
+      "referenceComments": [
+        {
+          "value": "TW3",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AF292094",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAG01540.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q9FD36",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "Q9FD36",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BioCyc",
+      "id": "MetaCyc:MONOMER-2123",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0016491",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:oxidoreductase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd02136",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PnbA_NfnB-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.40.109.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "NADH Oxidase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR029479",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Nitroreductase"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR000415",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Nitroreductase-like"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR43673",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "NAD(P)H NITROREDUCTASE YDGI-RELATED"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR43673:SF2",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "NITROREDUCTASE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00881",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Nitroreductase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF55469",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FMN-dependent nitroreductase-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MALLTDDFDAVVASRRAVRAFLPTPISRKLISEIIDIARLAPSNSNTQPWSIHVLTGEPKQALSALLGIAHNDPSADPLAHLPDDLARKYRERQEKWGELFYGLHQIDKCDDAGRARVSGLNFDFFGAPVGLIFTIDSNLKKYSWLDYGLFLQTLMLTARSRGLSTCPQVSFARFQSLIKDFLHLDDSQEIVCGMSLGYADENATVNSLRMPREMAQGFTHFMGFDR",
+    "length": 227,
+    "molWeight": 25425,
+    "crc64": "D810E86525508F66",
+    "md5": "534E39301774995431E51AE7B8E09A07"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "CATALYTIC ACTIVITY": 1,
+      "COFACTOR": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Binding site": 5
+    },
+    "uniParcId": "UPI00000BCAFC"
+  }
+}

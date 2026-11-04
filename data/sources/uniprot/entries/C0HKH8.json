@@ -1,0 +1,511 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "C0HKH8",
+  "uniProtkbId": "CIRA_CHACT",
+  "entryAudit": {
+    "firstPublicDate": "2017-06-07",
+    "lastAnnotationUpdateDate": "2026-09-02",
+    "lastSequenceUpdateDate": "2017-06-07",
+    "entryVersion": 11,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 3.0,
+  "organism": {
+    "scientificName": "Chassalia chartacea",
+    "commonName": "Chassalia curviflora",
+    "taxonId": 510798,
+    "evidences": [
+      {
+        "evidenceCode": "ECO:0000303",
+        "source": "PubMed",
+        "id": "22467870"
+      }
+    ],
+    "lineage": [
+      "Eukaryota",
+      "Viridiplantae",
+      "Streptophyta",
+      "Embryophyta",
+      "Tracheophyta",
+      "Spermatophyta",
+      "Magnoliopsida",
+      "eudicotyledons",
+      "Gunneridae",
+      "Pentapetalae",
+      "asterids",
+      "lamiids",
+      "Gentianales",
+      "Rubiaceae",
+      "Rubioideae",
+      "Palicoureeae",
+      "Chassalia"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000303",
+            "source": "PubMed",
+            "id": "22467870"
+          }
+        ],
+        "value": "Circulin A"
+      }
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "22467870"
+            }
+          ],
+          "value": "Cyclotide cir A"
+        }
+      }
+    ]
+  },
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "PROSITE-ProRule",
+              "id": "PRU00395"
+            }
+          ],
+          "value": "Probably participates in a plant defense mechanism"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "22467870"
+            }
+          ],
+          "value": "Expressed in fruit, pedicel, root and stem but not in leaf (at protein level)"
+        }
+      ],
+      "commentType": "TISSUE SPECIFICITY"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "The presence of a 'disulfide through disulfide knot' structurally defines this protein as a knottin"
+        }
+      ],
+      "commentType": "DOMAIN"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "PROSITE-ProRule",
+              "id": "PRU00395"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "22467870"
+            }
+          ],
+          "value": "This is a cyclic peptide"
+        }
+      ],
+      "commentType": "PTM"
+    },
+    {
+      "commentType": "MASS SPECTROMETRY",
+      "method": "MALDI",
+      "molWeight": 3149.0,
+      "molWeightError": 0.0,
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "22467870"
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "PROSITE-ProRule",
+              "id": "PRU00395"
+            }
+          ],
+          "value": "Belongs to the cyclotide family. Bracelet subfamily"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "This peptide is cyclic. The start position was chosen by similarity to chassatide C8 for which the DNA sequence is known"
+        }
+      ],
+      "commentType": "CAUTION"
+    }
+  ],
+  "features": [
+    {
+      "type": "Peptide",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 30,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Circulin A",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "22467870"
+        }
+      ],
+      "featureId": "PRO_0000440218"
+    },
+    {
+      "type": "Disulfide bond",
+      "location": {
+        "start": {
+          "value": 4,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 20,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00395"
+        }
+      ]
+    },
+    {
+      "type": "Disulfide bond",
+      "location": {
+        "start": {
+          "value": 8,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 22,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00395"
+        }
+      ]
+    },
+    {
+      "type": "Disulfide bond",
+      "location": {
+        "start": {
+          "value": 13,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 27,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00395"
+        }
+      ]
+    },
+    {
+      "type": "Cross-link",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 30,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Cyclopeptide (Gly-Asn)",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "22467870"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0903",
+      "category": "Technical term",
+      "name": "Direct protein sequencing"
+    },
+    {
+      "id": "KW-1015",
+      "category": "PTM",
+      "name": "Disulfide bond"
+    },
+    {
+      "id": "KW-0960",
+      "category": "Domain",
+      "name": "Knottin"
+    },
+    {
+      "id": "KW-0611",
+      "category": "Biological process",
+      "name": "Plant defense"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "22467870",
+        "citationType": "journal article",
+        "authors": [
+          "Nguyen G.K.",
+          "Lim W.H.",
+          "Nguyen P.Q.",
+          "Tam J.P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "22467870"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1074/jbc.m111.338970"
+          }
+        ],
+        "title": "Novel Cyclotides and Uncyclotides with Highly Shortened Precursors from Chassalia chartacea and Effects of Methionine Oxidation on Bioactivities.",
+        "publicationDate": "2012",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "17598",
+        "lastPage": "17607",
+        "volume": "287"
+      },
+      "referencePositions": [
+        "PROTEIN SEQUENCE",
+        "TISSUE SPECIFICITY",
+        "MASS SPECTROMETRY",
+        "IDENTIFICATION BY MASS SPECTROMETRY"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "AlphaFoldDB",
+      "id": "C0HKH8",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "C0HKH8",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0006952",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:defense response"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR005535",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cyclotide"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR012323",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cyclotide_bracelet_CS"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036146",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cyclotide_sf"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF03784",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cyclotide"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PIRSF",
+      "id": "PIRSF037891",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cycloviolacin"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF57038",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cyclotides"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51052",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CYCLOTIDE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS60008",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CYCLOTIDE_BRACELET"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "GIPCGESCVWIPCISAALGCSCKNKVCYRN",
+    "length": 30,
+    "molWeight": 3176,
+    "crc64": "19D19A52EE9C58CF",
+    "md5": "ACDF1B13125242B43A6942296C09D692"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "TISSUE SPECIFICITY": 1,
+      "DOMAIN": 1,
+      "PTM": 1,
+      "MASS SPECTROMETRY": 1,
+      "SIMILARITY": 1,
+      "CAUTION": 1
+    },
+    "countByFeatureType": {
+      "Peptide": 1,
+      "Disulfide bond": 3,
+      "Cross-link": 1
+    },
+    "uniParcId": "UPI00001279F5"
+  }
+}

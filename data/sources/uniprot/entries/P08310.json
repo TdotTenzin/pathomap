@@ -1,0 +1,1876 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "P08310",
+  "uniProtkbId": "CATB_PSEPU",
+  "entryAudit": {
+    "firstPublicDate": "1988-08-01",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2007-01-23",
+    "entryVersion": 148,
+    "sequenceVersion": 4
+  },
+  "annotationScore": 5.0,
+  "organism": {
+    "scientificName": "Pseudomonas putida",
+    "commonName": "Arthrobacter siderocapsulatus",
+    "taxonId": 303,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Gammaproteobacteria",
+      "Pseudomonadales",
+      "Pseudomonadaceae",
+      "Pseudomonas"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Muconate cycloisomerase 1"
+      },
+      "ecNumbers": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "5330966"
+            }
+          ],
+          "value": "5.5.1.1"
+        }
+      ]
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "Cis,cis-muconate lactonizing enzyme I"
+        },
+        "shortNames": [
+          {
+            "value": "MLE"
+          }
+        ]
+      },
+      {
+        "fullName": {
+          "value": "Muconate cycloisomerase I"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "catB"
+      }
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "value": "Catalyzes a syn cycloisomerization"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "(S)-muconolactone = cis,cis-muconate + H(+)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:30031"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:32379"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:58736"
+          }
+        ],
+        "ecNumber": "5.5.1.1",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "5330966"
+          }
+        ]
+      }
+    },
+    {
+      "commentType": "COFACTOR",
+      "cofactors": [
+        {
+          "name": "Mn(2+)",
+          "cofactorCrossReference": {
+            "database": "ChEBI",
+            "id": "CHEBI:29035"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "value": "Aromatic compound metabolism; beta-ketoadipate pathway; 5-oxo-4,5-dihydro-2-furylacetate from catechol: step 2/3"
+        }
+      ],
+      "commentType": "PATHWAY"
+    },
+    {
+      "texts": [
+        {
+          "value": "Homooctamer"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the mandelate racemase/muconate lactonizing enzyme family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Initiator methionine",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Removed"
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 2,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 375,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Muconate cycloisomerase 1",
+      "featureId": "PRO_0000171251"
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 171,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 171,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Proton acceptor"
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 329,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 329,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Proton donor"
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 200,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 200,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29035"
+        }
+      ],
+      "ligand": {
+        "name": "Mn(2+)",
+        "id": "ChEBI:CHEBI:29035"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 226,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 226,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29035"
+        }
+      ],
+      "ligand": {
+        "name": "Mn(2+)",
+        "id": "ChEBI:CHEBI:29035"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 251,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 251,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29035"
+        }
+      ],
+      "ligand": {
+        "name": "Mn(2+)",
+        "id": "ChEBI:CHEBI:29035"
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 33,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 33,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 2; AAA25766",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "T",
+        "alternativeSequences": [
+          "S"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 65,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 65,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 2; AAA25766",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "S",
+        "alternativeSequences": [
+          "T"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 244,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 244,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 1; AAA25765",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {}
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 5,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 14,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MUC"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 16,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 19,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MUC"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 33,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 43,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MUC"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 48,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 54,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MUC"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 57,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 61,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MUC"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 66,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 72,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MUC"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 73,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 77,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MUC"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 78,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 81,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MUC"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 89,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 99,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MUC"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 104,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 122,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MUC"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 126,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 129,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MUC"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 136,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 140,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MUC"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 142,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 144,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MUC"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 149,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 161,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MUC"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 166,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 171,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MUC"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 173,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 175,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MUC"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 177,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 191,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MUC"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 192,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 194,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MUC"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 195,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 200,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MUC"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 207,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 219,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MUC"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 234,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 243,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MUC"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 248,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 251,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MUC"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 257,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 266,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MUC"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 270,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 274,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MUC"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 276,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 279,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MUC"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 282,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 295,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MUC"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 298,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 301,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MUC"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 308,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 318,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MUC"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 332,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 335,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MUC"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 336,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 338,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MUC"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 340,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 343,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MUC"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 346,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 348,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MUC"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 351,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 353,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MUC"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 366,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 372,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MUC"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0002",
+      "category": "Technical term",
+      "name": "3D-structure"
+    },
+    {
+      "id": "KW-0058",
+      "category": "Biological process",
+      "name": "Aromatic hydrocarbons catabolism"
+    },
+    {
+      "id": "KW-0413",
+      "category": "Molecular function",
+      "name": "Isomerase"
+    },
+    {
+      "id": "KW-0464",
+      "category": "Ligand",
+      "name": "Manganese"
+    },
+    {
+      "id": "KW-0479",
+      "category": "Ligand",
+      "name": "Metal-binding"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "3609743",
+        "citationType": "journal article",
+        "authors": [
+          "Aldrich T.L.",
+          "Frantz B.",
+          "Gill J.F.",
+          "Kilbane J.J.",
+          "Chakrabarty A.M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "3609743"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/0378-1119(87)90045-x"
+          }
+        ],
+        "title": "Cloning and complete nucleotide sequence determination of the catB gene encoding cis,cis-muconate lactonizing enzyme.",
+        "publicationDate": "1987",
+        "journal": "Gene",
+        "firstPage": "185",
+        "lastPage": "195",
+        "volume": "52"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "PRS2015",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "2449420",
+        "citationType": "journal article",
+        "authors": [
+          "Aldrich T.L.",
+          "Chakrabarty A.M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "2449420"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.170.3.1297-1304.1988"
+          }
+        ],
+        "title": "Transcriptional regulation, nucleotide sequence, and localization of the promoter of the catBC operon in Pseudomonas putida.",
+        "publicationDate": "1988",
+        "journal": "J. Bacteriol.",
+        "firstPage": "1297",
+        "lastPage": "1304",
+        "volume": "170"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "5330966",
+        "citationType": "journal article",
+        "authors": [
+          "Ornston L.N."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "5330966"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/s0021-9258(18)99841-8"
+          }
+        ],
+        "title": "The conversion of catechol and protocatechuate to beta-ketoadipate by Pseudomonas putida. 3. Enzymes of the catechol pathway.",
+        "publicationDate": "1966",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "3795",
+        "lastPage": "3799",
+        "volume": "241"
+      },
+      "referencePositions": [
+        "CATALYTIC ACTIVITY"
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "2215699",
+        "citationType": "journal article",
+        "authors": [
+          "Neidhart D.J.",
+          "Kenyon G.L.",
+          "Gerlt J.A.",
+          "Petsko G.A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "2215699"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/347692a0"
+          }
+        ],
+        "title": "Mandelate racemase and muconate lactonizing enzyme are mechanistically distinct and structurally homologous.",
+        "publicationDate": "1990",
+        "journal": "Nature",
+        "firstPage": "692",
+        "lastPage": "694",
+        "volume": "347"
+      },
+      "referencePositions": [
+        "SIMILARITY TO MR"
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "3612800",
+        "citationType": "journal article",
+        "authors": [
+          "Goldman A.",
+          "Ollis D.L.",
+          "Steitz T.A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "3612800"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/0022-2836(87)90723-6"
+          }
+        ],
+        "title": "Crystal structure of muconate lactonizing enzyme at 3-A resolution.",
+        "publicationDate": "1987",
+        "journal": "J. Mol. Biol.",
+        "firstPage": "143",
+        "lastPage": "153",
+        "volume": "194"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY"
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "7500361",
+        "citationType": "journal article",
+        "authors": [
+          "Helin S.",
+          "Kahn P.C.",
+          "Guha B.L.",
+          "Mallows D.J.",
+          "Goldman A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "7500361"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1006/jmbi.1995.0666"
+          }
+        ],
+        "title": "The refined X-ray structure of muconate lactonizing enzyme from Pseudomonas putida PRS2000 at 1.85-A resolution.",
+        "publicationDate": "1995",
+        "journal": "J. Mol. Biol.",
+        "firstPage": "918",
+        "lastPage": "941",
+        "volume": "254"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY"
+      ],
+      "referenceComments": [
+        {
+          "value": "PRS2000",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "M19460",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA25766.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "M16236",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA25765.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "A28630",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "A28630"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "1MUC",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.85 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B=1-375"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2MUC",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.30 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B=1-375"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "3MUC",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.30 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B=4-374"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "P08310",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "P08310",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "COG4948",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Bacteria"
+        }
+      ]
+    },
+    {
+      "database": "BioCyc",
+      "id": "MetaCyc:MONOMER-3423",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BRENDA",
+      "id": "5.5.1.1",
+      "properties": [
+        {
+          "key": "OrganismId",
+          "value": "5092"
+        }
+      ]
+    },
+    {
+      "database": "SABIO-RK",
+      "id": "P08310",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "UniPathway",
+      "id": "UPA00157",
+      "properties": [
+        {
+          "key": "RectionId",
+          "value": "UER00259"
+        }
+      ]
+    },
+    {
+      "database": "EvolutionaryTrace",
+      "id": "P08310",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0018850",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:chloromuconate cycloisomerase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0030145",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:manganese ion binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0018849",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:muconate cycloisomerase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-EC"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009063",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:amino acid catabolic process"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0042952",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:beta-ketoadipate pathway"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-UniPathway"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0006518",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:peptide metabolic process"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-ARBA"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd03318",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "MLE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.20.20.120",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Enolase-like C-terminal domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.30.390.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Enolase-like, N-terminal domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR013370",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Chloromuconate_cycloisomerase"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036849",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Enolase-like_C_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR029017",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Enolase-like_N"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR018110",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Mandel_Rmase/mucon_lact_enz_CS"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR013342",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Mandelate_racemase_C"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR013341",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Mandelate_racemase_N"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "TIGR02534",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "mucon_cyclo"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR48073:SF2",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "O-SUCCINYLBENZOATE SYNTHASE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR48073",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "O-SUCCINYLBENZOATE SYNTHASE-RELATED"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF13378",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "MR_MLE_C"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF02746",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "MR_MLE_N"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SFLD",
+      "id": "SFLDG01258",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "(chloro)muconate_cycloisomeras"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SFLD",
+      "id": "SFLDS00001",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Enolase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SFLD",
+      "id": "SFLDG00180",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "muconate_cycloisomerase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00922",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "MR_MLE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF51604",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Enolase C-terminal domain-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF54826",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Enolase N-terminal domain-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS00908",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "MR_MLE_1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS00909",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "MR_MLE_2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MTSVLIERIEAIIVHDLPTIRPPHKLAMHTMQTQTLVLIRVRCSDGVEGIGEATTIGGLAYGYESPEGIKANIDAHLAPALVGLPADNINAAMLKLDKLAKGNTFAKSGIESALLDAQGKRLGLPVSELLGGRVRDSLEVAWTLASGDTARDIAEAQHMLEIRRHRVFKLKIGANPLAQDLKHVVAIKRELGDSASVRVDVNQYWDESQAIRACQVLGDNGIDLIEQPISRINRSGQVRLNQRSPAPIMADESIESVEDAFSLAADGAASIFALKIAKNGGPRAVLRTAQIAEAAGIALYGGTMLEGSIGTLASAHAFLTLRQLTWGTELFGPLLLTEEIVNEPPQYRDFQLHIPRTPGLGLTLDEQRLARFARR",
+    "length": 375,
+    "molWeight": 40510,
+    "crc64": "4C8668BF6765D061",
+    "md5": "2AB146265BA64A0C6DE46821A1816567"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "CATALYTIC ACTIVITY": 1,
+      "COFACTOR": 1,
+      "PATHWAY": 1,
+      "SUBUNIT": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Initiator methionine": 1,
+      "Chain": 1,
+      "Active site": 2,
+      "Binding site": 3,
+      "Sequence conflict": 3,
+      "Beta strand": 16,
+      "Turn": 1,
+      "Helix": 17
+    },
+    "uniParcId": "UPI00001730AA"
+  }
+}

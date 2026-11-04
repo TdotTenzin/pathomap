@@ -1,0 +1,1293 @@
+{
+  "entryType": "UniProtKB unreviewed (TrEMBL)",
+  "primaryAccession": "B5I0G6",
+  "uniProtkbId": "B5I0G6_STRX2",
+  "entryAudit": {
+    "firstPublicDate": "2008-10-14",
+    "lastAnnotationUpdateDate": "2026-09-02",
+    "lastSequenceUpdateDate": "2008-10-14",
+    "entryVersion": 84,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 3.0,
+  "organism": {
+    "scientificName": "Streptomyces sviceus (strain ATCC 29083 / DSM 924 / JCM 4929 / NBRC 13980 / NCIMB 11184 / NRRL 5439 / UC 5370)",
+    "taxonId": 463191,
+    "evidences": [
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "EMBL",
+        "id": "EDY58571.1"
+      },
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "Proteomes",
+        "id": "UP000002785"
+      }
+    ],
+    "lineage": [
+      "Bacteria",
+      "Bacillati",
+      "Actinomycetota",
+      "Actinomycetes",
+      "Kitasatosporales",
+      "Streptomycetaceae",
+      "Streptomyces"
+    ]
+  },
+  "proteinExistence": "3: Inferred from homology",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "ARBA",
+            "id": "ARBA00012314"
+          },
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "PIRNR",
+            "id": "PIRNR038927"
+          }
+        ],
+        "value": "Catalase"
+      },
+      "ecNumbers": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "ARBA",
+              "id": "ARBA00012314"
+            },
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "PIRNR",
+              "id": "PIRNR038927"
+            }
+          ],
+          "value": "1.11.1.6"
+        }
+      ]
+    }
+  },
+  "genes": [
+    {
+      "orfNames": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "EDY58571.1"
+            }
+          ],
+          "value": "SSEG_09696"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "PIRNR",
+              "id": "PIRNR038927"
+            }
+          ],
+          "value": "Decomposes hydrogen peroxide into water and oxygen; serves to protect cells from the toxic effects of hydrogen peroxide"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "2 H2O2 = O2 + 2 H2O",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:20309"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15377"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15379"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:16240"
+          }
+        ],
+        "ecNumber": "1.11.1.6",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "PIRNR",
+            "id": "PIRNR038927"
+          },
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "PROSITE-ProRule",
+            "id": "PRU10013"
+          },
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "RuleBase",
+            "id": "RU000498"
+          }
+        ]
+      }
+    },
+    {
+      "commentType": "COFACTOR",
+      "cofactors": [
+        {
+          "name": "heme",
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "ARBA",
+              "id": "ARBA00001971"
+            },
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "PIRNR",
+              "id": "PIRNR038927"
+            },
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "PIRSR",
+              "id": "PIRSR038927-2"
+            }
+          ],
+          "cofactorCrossReference": {
+            "database": "ChEBI",
+            "id": "CHEBI:30413"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "ARBA",
+              "id": "ARBA00010660"
+            }
+          ],
+          "value": "Belongs to the catalase family. HPII subfamily"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 39,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 426,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Catalase core",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000259",
+          "source": "SMART",
+          "id": "SM01060"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 45,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 517,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 542,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 16,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 32,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Basic and acidic residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 529,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 540,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Polar residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 86,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 86,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PIRSR",
+          "id": "PIRSR038927-1"
+        },
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU10013"
+        }
+      ]
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 159,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 159,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PIRSR",
+          "id": "PIRSR038927-1"
+        }
+      ]
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 83,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 83,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:30413"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PIRSR",
+          "id": "PIRSR038927-3"
+        }
+      ],
+      "ligand": {
+        "name": "heme",
+        "id": "ChEBI:CHEBI:30413"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 123,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 123,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:30413"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PIRSR",
+          "id": "PIRSR038927-3"
+        }
+      ],
+      "ligand": {
+        "name": "heme",
+        "id": "ChEBI:CHEBI:30413"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 172,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 172,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:30413"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PIRSR",
+          "id": "PIRSR038927-3"
+        }
+      ],
+      "ligand": {
+        "name": "heme",
+        "id": "ChEBI:CHEBI:30413"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 369,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 369,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:30413"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PIRSR",
+          "id": "PIRSR038927-3"
+        }
+      ],
+      "ligand": {
+        "name": "heme",
+        "id": "ChEBI:CHEBI:30413"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 373,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 373,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "axial binding residue",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:30413"
+        },
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:18248"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PIRSR",
+          "id": "PIRSR038927-2"
+        }
+      ],
+      "ligand": {
+        "name": "heme",
+        "id": "ChEBI:CHEBI:30413"
+      },
+      "ligandPart": {
+        "name": "Fe",
+        "id": "ChEBI:CHEBI:18248"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 380,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 380,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:30413"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PIRSR",
+          "id": "PIRSR038927-3"
+        }
+      ],
+      "ligand": {
+        "name": "heme",
+        "id": "ChEBI:CHEBI:30413"
+      }
+    },
+    {
+      "type": "Cross-link",
+      "location": {
+        "start": {
+          "value": 350,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 373,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "3'-histidyl-3-tyrosine (His-Tyr)",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PIRSR",
+          "id": "PIRSR038927-4"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022617"
+        },
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PIRNR",
+          "id": "PIRNR038927"
+        }
+      ],
+      "id": "KW-0349",
+      "category": "Ligand",
+      "name": "Heme"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00023324"
+        },
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PIRNR",
+          "id": "PIRNR038927"
+        }
+      ],
+      "id": "KW-0376",
+      "category": "Biological process",
+      "name": "Hydrogen peroxide"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00023004"
+        },
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PIRNR",
+          "id": "PIRNR038927"
+        }
+      ],
+      "id": "KW-0408",
+      "category": "Ligand",
+      "name": "Iron"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022723"
+        },
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PIRNR",
+          "id": "PIRNR038927"
+        }
+      ],
+      "id": "KW-0479",
+      "category": "Ligand",
+      "name": "Metal-binding"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00023002"
+        },
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PIRNR",
+          "id": "PIRNR038927"
+        }
+      ],
+      "id": "KW-0560",
+      "category": "Molecular function",
+      "name": "Oxidoreductase"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022559"
+        },
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PIRNR",
+          "id": "PIRNR038927"
+        }
+      ],
+      "id": "KW-0575",
+      "category": "Molecular function",
+      "name": "Peroxidase"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "Proteomes",
+          "id": "UP000002785"
+        }
+      ],
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "CI-DD74OF48QTJ4F",
+        "citationType": "submission",
+        "authoringGroup": [
+          "The Broad Institute Genome Sequencing Platform",
+          "Broad Institute Microbial Sequencing Center"
+        ],
+        "authors": [
+          "Fischbach M.",
+          "Godfrey P.",
+          "Ward D.",
+          "Young S.",
+          "Zeng Q.",
+          "Koehrsen M.",
+          "Alvarado L.",
+          "Berlin A.M.",
+          "Bochicchio J.",
+          "Borenstein D.",
+          "Chapman S.B.",
+          "Chen Z.",
+          "Engels R.",
+          "Freedman E.",
+          "Gellesch M.",
+          "Goldberg J.",
+          "Griggs A.",
+          "Gujja S.",
+          "Heilman E.R.",
+          "Heiman D.I.",
+          "Hepburn T.A.",
+          "Howarth C.",
+          "Jen D.",
+          "Larson L.",
+          "Lewis B.",
+          "Mehta T.",
+          "Park D.",
+          "Pearson M.",
+          "Richards J.",
+          "Roberts A.",
+          "Saif S.",
+          "Shea T.D.",
+          "Shenoy N.",
+          "Sisk P.",
+          "Stolte C.",
+          "Sykes S.N.",
+          "Thomson T.",
+          "Walk T.",
+          "White J.",
+          "Yandava C.",
+          "Straight P.",
+          "Clardy J.",
+          "Hung D.",
+          "Kolter R.",
+          "Mekalanos J.",
+          "Walker S.",
+          "Walsh C.T.",
+          "Wieland-Brown L.C.",
+          "Haas B.",
+          "Nusbaum C.",
+          "Birren B."
+        ],
+        "title": "The genome sequence of Streptomyces sviceus strain ATCC 29083.",
+        "publicationDate": "OCT-2009",
+        "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "EDY58571.1"
+            }
+          ],
+          "value": "ATCC 29083",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "EDY58571.1"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "CM000951",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "EDY58571.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "B5I0G6",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PeroxiBase",
+      "id": "7273",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SsvKat01"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "COG0693",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Bacteria"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "COG0753",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Bacteria"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_010645_3_0_11",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000002785",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005829",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cytosol"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:TreeGrafter"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0004096",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:catalase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-UniRule"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0020037",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:heme binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-UniRule"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0042744",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:hydrogen peroxide catabolic process"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-UniRule"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0006979",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:response to oxidative stress"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd03132",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "GATase1_catalase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "2.40.180.10:FF:000003",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.20.1370.20",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.40.50.880",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.40.180.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase core domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR018028",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR024708",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase_AS"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR024712",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase_clade2"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR043156",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase_clade2_helical"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR011614",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase_core"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR002226",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase_haem_BS"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR010582",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase_immune_responsive"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR041399",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase_large_C"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR020835",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR029062",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Class_I_gatase-like"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR42821",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CATALASE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR42821:SF1",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CATALASE-B"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00199",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF06628",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase-rel"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF18011",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase_C"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PIRSF",
+      "id": "PIRSF038927",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase_clade2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR00067",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CATALASE"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM01060",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF52317",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Class I glutamine amidotransferase-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF56634",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Heme-dependent catalase-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS00437",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CATALASE_1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS00438",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CATALASE_2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51402",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CATALASE_3"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MRDVPRRVLPGGRLMESADRKQRQRESFHADDPSAGPLTTDQGVEVDHTDDSLAAGERGPTLMEDFHFREKLTRFDHERIPERVVHARGAGAYGFFEPYESCAEFTRAAFLQDPAVRTPVFVRFSTVQGPKGSADTVRDVRGFATKFYTSEGNYDLVGNNFPVFFIQDGIKFPDFVHAVKPEPHNDMPTGASAHDSLWDFVSLQPETLHAIMWLMSDRAIPRSYRMMQGFGVHTFRFVNADGKGTFVKFHWTPKPGSHSLVWDEAQECQGRNPDFNRGDLWDAIEAGEYPEWELGVQLVPEEDEFAFDFDLLDATKLIPEEQVPVRPIGRMVLDRNPENFFAETEQVAFHTANVVPGIDFTNDPLLQARNFSYLDTQLIRLGGPNFSQLPVNRPVAPVRNNQRDGYHQSAIHRGTNYFPNSLGGGCPAHAGVDGNAFTHYTERVDGHKIRRRSPSFQDHYSQPALFWNSMADWEKQHIVEAFRFELGKVDARAVRARTVEQLAKVDGALAAQVARGVGVPEPSGGETASKLSSPALSLESQRGDGSIRTRKIAVLVTDGIDAEQVTSVRERLAAEGAIVEALAPVDGEVRGADGELYTVDRALPTVASVLYDAVLLPGGPAGTPPAAADQDAMRFVRDAYRHGKPIGALGSGVGILSSLEPEGLRLSTEFHRVEADHGVVTETSPGPAGEEFLDAFVAAIAAHRHWDRPPTRH",
+    "length": 713,
+    "molWeight": 78760,
+    "crc64": "623C71D4E56274DF",
+    "md5": "7E82853C36405CF2C7946332906AE9BA"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "CATALYTIC ACTIVITY": 1,
+      "COFACTOR": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Domain": 1,
+      "Region": 2,
+      "Compositional bias": 2,
+      "Active site": 2,
+      "Binding site": 6,
+      "Cross-link": 1
+    },
+    "uniParcId": "UPI0001802946"
+  }
+}

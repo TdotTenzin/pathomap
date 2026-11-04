@@ -1,0 +1,764 @@
+{
+  "entryType": "UniProtKB unreviewed (TrEMBL)",
+  "primaryAccession": "A0A8J0QF41",
+  "uniProtkbId": "A0A8J0QF41_XENLA",
+  "entryAudit": {
+    "firstPublicDate": "2026-06-10",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2026-06-10",
+    "entryVersion": 3,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 3.0,
+  "organism": {
+    "scientificName": "Xenopus laevis",
+    "commonName": "African clawed frog",
+    "taxonId": 8355,
+    "evidences": [
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "Proteomes",
+        "id": "UP000186698"
+      },
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "RefSeq",
+        "id": "NP_001154869.1"
+      }
+    ],
+    "lineage": [
+      "Eukaryota",
+      "Metazoa",
+      "Chordata",
+      "Craniata",
+      "Vertebrata",
+      "Euteleostomi",
+      "Amphibia",
+      "Batrachia",
+      "Anura",
+      "Pipoidea",
+      "Pipidae",
+      "Xenopodinae",
+      "Xenopus",
+      "Xenopus"
+    ]
+  },
+  "proteinExistence": "4: Predicted",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "ARBA",
+            "id": "ARBA00071274"
+          }
+        ],
+        "value": "Norrin"
+      }
+    },
+    "flag": "Precursor"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "RefSeq",
+            "id": "NP_001154869.1"
+          }
+        ],
+        "value": "ndp.S"
+      },
+      "synonyms": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "RefSeq",
+              "id": "NP_001154869.1"
+            }
+          ],
+          "value": "evr2"
+        },
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "RefSeq",
+              "id": "NP_001154869.1"
+            }
+          ],
+          "value": "fevr"
+        },
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "RefSeq",
+              "id": "NP_001154869.1"
+            }
+          ],
+          "value": "ndp"
+        },
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "RefSeq",
+              "id": "NP_001154869.1"
+            }
+          ],
+          "value": "xnorrin"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "ARBA",
+              "id": "ARBA00059204"
+            }
+          ],
+          "value": "Activates the canonical Wnt signaling pathway through FZD4 and LRP5 coreceptor. Plays a central role in retinal vascularization by acting as a ligand for FZD4 that signals via stabilizing beta-catenin (CTNNB1) and activating LEF/TCF-mediated transcriptional programs. Acts in concert with TSPAN12 to activate FZD4 independently of the Wnt-dependent activation of FZD4, suggesting the existence of a Wnt-independent signaling that also promote accumulation the beta-catenin (CTNNB1). May be involved in a pathway that regulates neural cell differentiation and proliferation. Possible role in neuroectodermal cell-cell interaction"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "ARBA",
+              "id": "ARBA00065934"
+            }
+          ],
+          "value": "Homodimer; disulfide-linked. Component of a complex, at least composed of TSPAN12, FZD4, LRP5/6 and norrin (NDP). Binds FZD4 with high affinity. Interacts with LRP6 (via Beta-propellers 1 and 2)"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "ARBA",
+                "id": "ARBA00004613"
+              }
+            ],
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "PROSITE-ProRule",
+              "id": "PRU00039"
+            }
+          ],
+          "value": "Lacks conserved residue(s) required for the propagation of feature annotation"
+        }
+      ],
+      "commentType": "CAUTION"
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 22,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "SignalP"
+        },
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "RefSeq",
+          "id": "NP_001154869.1"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 23,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 132,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Norrin",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "SignalP"
+        },
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "RefSeq",
+          "id": "NP_001154869.1"
+        }
+      ],
+      "featureId": "PRO_5033207648"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 38,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 131,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "CTCK",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000259",
+          "source": "PROSITE",
+          "id": "PS01225"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00023157"
+        }
+      ],
+      "id": "KW-1015",
+      "category": "PTM",
+      "name": "Disulfide bond"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "Proteomes",
+          "id": "UP000186698"
+        }
+      ],
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022525"
+        }
+      ],
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022729"
+        },
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "SignalP"
+        }
+      ],
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022687"
+        }
+      ],
+      "id": "KW-0879",
+      "category": "Biological process",
+      "name": "Wnt signaling pathway"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "22448144",
+        "citationType": "journal article",
+        "authors": [
+          "Xu S.",
+          "Cheng F.",
+          "Liang J.",
+          "Wu W.",
+          "Zhang J."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "22448144"
+          }
+        ],
+        "title": "Maternal xNorrin, a canonical Wnt signaling agonist and TGF-beta antagonist, controls early neuroectoderm specification in Xenopus.",
+        "publicationDate": "2012",
+        "journal": "PLoS Biol.",
+        "firstPage": "e1001286",
+        "lastPage": "e1001286",
+        "volume": "10"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "RefSeq",
+          "id": "NP_001154869.1"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "CI-FT6AS8PK7JRTI",
+        "citationType": "submission",
+        "authoringGroup": [
+          "RefSeq"
+        ],
+        "publicationDate": "JUN-2024",
+        "submissionDatabase": "UniProtKB"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "Proteomes",
+              "id": "UP000186698"
+            }
+          ],
+          "value": "J_2021",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "Proteomes",
+          "id": "UP000186698"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "CI-FT6AV21EHNJSG",
+        "citationType": "submission",
+        "authoringGroup": [
+          "RefSeq"
+        ],
+        "publicationDate": "JUL-2026",
+        "submissionDatabase": "UniProtKB"
+      },
+      "referencePositions": [
+        "IDENTIFICATION"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "RefSeq",
+          "id": "NP_001154869.1"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "RefSeq",
+      "id": "NP_001154869.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NM_001161397.1"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "100301975",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "CTD",
+      "id": "100301975",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OrthoDB",
+      "id": "6059567at2759",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000186698",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome 2S"
+        }
+      ]
+    },
+    {
+      "database": "Bgee",
+      "id": "100301975",
+      "properties": [
+        {
+          "key": "ExpressionPatterns",
+          "value": "Expressed in internal ear and 9 other cell types or tissues"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005125",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:cytokine activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-ARBA"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005109",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:frizzled binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:TreeGrafter"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0007399",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:nervous system development"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-ARBA"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0110135",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:Norrin signaling pathway"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-ARBA"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0045944",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:positive regulation of transcription by RNA polymerase II"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-ARBA"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0016055",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:Wnt signaling pathway"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "2.10.90.10:FF:000022",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Norrin"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.10.90.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cystine-knot cytokines"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR006207",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cys_knot_C"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR029034",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cystine-knot_cytokine"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR004133",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "DAN_dom"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR003064",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Norrie_dis"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR28611",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "NORRIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR28611:SF1",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "NORRIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF03045",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "DAN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR01304",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "NORRIEDSEASE"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00041",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CT"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS01185",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CTCK_1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS01225",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CTCK_2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MGNHVLLAWISALSLVVILVNADKKGKAFLAESDPDRCMRHHYVDSINHPQHKCTAKMVLLARCEGRCSQTSRSDPLVSFSTVLKQPFRSTCHCCRPQTSKLKAIRLRCSGGRRMTATYRYILSCHCEECNS",
+    "length": 132,
+    "molWeight": 14882,
+    "crc64": "3F691AD4CA4298BA",
+    "md5": "7E781728A4F649D4542D816C86104902"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "CAUTION": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1,
+      "Domain": 1
+    },
+    "uniParcId": "UPI000195E8F4"
+  }
+}

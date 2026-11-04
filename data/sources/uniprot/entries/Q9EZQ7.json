@@ -1,0 +1,833 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "Q9EZQ7",
+  "uniProtkbId": "BLAC_NOCAS",
+  "entryAudit": {
+    "firstPublicDate": "2008-01-15",
+    "lastAnnotationUpdateDate": "2026-09-02",
+    "lastSequenceUpdateDate": "2001-03-01",
+    "entryVersion": 79,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 4.0,
+  "organism": {
+    "scientificName": "Nocardia asteroides",
+    "taxonId": 1824,
+    "lineage": [
+      "Bacteria",
+      "Bacillati",
+      "Actinomycetota",
+      "Actinomycetes",
+      "Mycobacteriales",
+      "Nocardiaceae",
+      "Nocardia"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Beta-lactamase AST-1"
+      },
+      "ecNumbers": [
+        {
+          "value": "3.5.2.6"
+        }
+      ]
+    },
+    "flag": "Precursor"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "bla"
+      },
+      "synonyms": [
+        {
+          "value": "ast1"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "value": "Confers high levels of resistance to amoxicillin, benzylpenicillin, piperacillin, ticarcillin and cephalothin. Not active against ceftazidime, cefotaxime and aztreonam"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "a beta-lactam + H2O = a substituted beta-amino acid",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:20401"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15377"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:35627"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:140347"
+          }
+        ],
+        "ecNumber": "3.5.2.6",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000255",
+            "source": "PROSITE-ProRule",
+            "id": "PRU10101"
+          }
+        ]
+      }
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11181374"
+            }
+          ],
+          "value": "Inhibited by clavulanic acid"
+        }
+      ],
+      "commentType": "ACTIVITY REGULATION"
+    },
+    {
+      "commentType": "BIOPHYSICOCHEMICAL PROPERTIES",
+      "kineticParameters": {
+        "michaelisConstants": [
+          {
+            "constant": 30.0,
+            "unit": "uM",
+            "substrate": "benzylpenicillin",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "11181374"
+              }
+            ]
+          },
+          {
+            "constant": 50.0,
+            "unit": "uM",
+            "substrate": "amoxicillin",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "11181374"
+              }
+            ]
+          },
+          {
+            "constant": 7.0,
+            "unit": "uM",
+            "substrate": "ticarcillin",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "11181374"
+              }
+            ]
+          },
+          {
+            "constant": 330.0,
+            "unit": "uM",
+            "substrate": "piperacillin",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "11181374"
+              }
+            ]
+          },
+          {
+            "constant": 20.0,
+            "unit": "uM",
+            "substrate": "cephalothin",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "11181374"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250"
+              }
+            ],
+            "value": "Cell membrane",
+            "id": "SL-0039"
+          },
+          "topology": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250"
+              }
+            ],
+            "value": "Lipid-anchor",
+            "id": "SL-9901"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "2039479"
+            }
+          ],
+          "value": "The class A beta-lactamase family has a specific amino-acid numbering system, sometimes called Ambler or ABL numbering and often misspelt as Amber. A multiple sequence alignment was used to derive a consensus sequence and then the consensus was numbered taking into account insertions and deletions. This allows use of identical numbers, e.g. for active site residues, despite differences in protein length. UniProt always uses natural numbering of residues, hence there appear to be differences in numbering between this entry and some papers"
+        }
+      ],
+      "commentType": "MISCELLANEOUS"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the class-A beta-lactamase family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 31,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 32,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 310,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Beta-lactamase AST-1",
+      "featureId": "PRO_0000313797"
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 91,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 91,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Acyl-ester intermediate",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P9WKD3"
+        }
+      ]
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 187,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 187,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Proton acceptor",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P9WKD3"
+        }
+      ]
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 151,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 151,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P9WKD3"
+        }
+      ],
+      "ligand": {
+        "name": "substrate"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 255,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 257,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250"
+        }
+      ],
+      "ligand": {
+        "name": "substrate"
+      }
+    },
+    {
+      "type": "Site",
+      "location": {
+        "start": {
+          "value": 94,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 94,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Increases nucleophilicity of active site Ser",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P9WKD3"
+        }
+      ]
+    },
+    {
+      "type": "Lipidation",
+      "location": {
+        "start": {
+          "value": 32,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 32,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-palmitoyl cysteine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Lipidation",
+      "location": {
+        "start": {
+          "value": 32,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 32,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "S-diacylglycerol cysteine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0046",
+      "category": "Biological process",
+      "name": "Antibiotic resistance"
+    },
+    {
+      "id": "KW-1003",
+      "category": "Cellular component",
+      "name": "Cell membrane"
+    },
+    {
+      "id": "KW-0378",
+      "category": "Molecular function",
+      "name": "Hydrolase"
+    },
+    {
+      "id": "KW-0449",
+      "category": "PTM",
+      "name": "Lipoprotein"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-0564",
+      "category": "PTM",
+      "name": "Palmitate"
+    },
+    {
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "11181374",
+        "citationType": "journal article",
+        "authors": [
+          "Poirel L.",
+          "Laurent F.",
+          "Naas T.",
+          "Labia R.",
+          "Boiron P.",
+          "Nordmann P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11181374"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/aac.45.3.878-882.2001"
+          }
+        ],
+        "title": "Molecular and biochemical analysis of AST-1, a class A beta-lactamase from Nocardia asteroides sensu stricto.",
+        "publicationDate": "2001",
+        "journal": "Antimicrob. Agents Chemother.",
+        "firstPage": "878",
+        "lastPage": "882",
+        "volume": "45"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]",
+        "ACTIVITY REGULATION",
+        "BIOPHYSICOCHEMICAL PROPERTIES"
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "2039479",
+        "citationType": "journal article",
+        "authors": [
+          "Ambler R.P.",
+          "Coulson A.F.",
+          "Frere J.M.",
+          "Ghuysen J.M.",
+          "Joris B.",
+          "Forsman M.",
+          "Levesque R.C.",
+          "Tiraby G.",
+          "Waley S.G."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "2039479"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1042/bj2760269"
+          }
+        ],
+        "title": "A standard numbering scheme for the class A beta-lactamases.",
+        "publicationDate": "1991",
+        "journal": "Biochem. J.",
+        "firstPage": "269",
+        "lastPage": "270",
+        "volume": "276"
+      },
+      "referencePositions": [
+        "AMINO ACID NUMBERING SCHEME"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AF279904",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAG44836.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_063857821.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NG_048690.1"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q9EZQ7",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "Q9EZQ7",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "CARD",
+      "id": "ARO:3004740",
+      "properties": [
+        {
+          "key": "CARD short name",
+          "value": "AST-1"
+        },
+        {
+          "key": "Resistance mechanism identifier",
+          "value": "ARO:0001004"
+        },
+        {
+          "key": "Resistance mechanism name",
+          "value": "antibiotic inactivation"
+        }
+      ]
+    },
+    {
+      "database": "SABIO-RK",
+      "id": "Q9EZQ7",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005886",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:plasma membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0008800",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:beta-lactamase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-EC"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0030655",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:beta-lactam antibiotic catabolic process"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0046677",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:response to antibiotic"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.40.710.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "DD-peptidase/beta-lactamase superfamily"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR012338",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Beta-lactam/transpept-like"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR045155",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Beta-lactam_cat"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR000871",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Beta-lactam_class-A"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR023650",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Beta-lactam_class-A_AS"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF033103",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "bla_class_A"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR35333",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "BETA-LACTAMASE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR35333:SF3",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "BETA-LACTAMASE-TYPE TRANSPEPTIDASE FOLD CONTAINING PROTEIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF13354",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Beta-lactamase2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR00118",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "BLACTAMASEA"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF56601",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "beta-lactamase/transpeptidase-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS00146",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "BETA_LACTAMASE_A"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MTFSALPFRRADRRRLLAAALAACALTLTAACDSGTVTVPVTDSVTTSAVADPRFAELETTSGARLGVFAVDTGSGRTVAHRADERFPMASTFKGLACGALLREHPLSTGYFDQVIHYSAAELVEYSPVTETRVETGMTVRELCDAAITVSDNTAGNQLLKLLGGPEGFTASLRSLGDATSRLDRWETDLNTAIPGDERDTTTPAALAADYRALVVGDVLGAPERDQLKAWLVANTTGATRIRAGLPADWTVGDKTGSPAYGSALDVAVAWPPGRAPIVIAVLSTKSEQDAEPDNALLAEATRVVVDALG",
+    "length": 310,
+    "molWeight": 32476,
+    "crc64": "53668F7DBFF1A6B3",
+    "md5": "9C612B294750A835D4AB3B5CDE413876"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "CATALYTIC ACTIVITY": 1,
+      "ACTIVITY REGULATION": 1,
+      "BIOPHYSICOCHEMICAL PROPERTIES": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "MISCELLANEOUS": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1,
+      "Active site": 2,
+      "Binding site": 2,
+      "Site": 1,
+      "Lipidation": 2
+    },
+    "uniParcId": "UPI00000B9DEE"
+  }
+}

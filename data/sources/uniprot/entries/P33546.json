@@ -1,0 +1,1692 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "P33546",
+  "secondaryAccessions": [
+    "Q6XVY5",
+    "Q8VSH5",
+    "Q9AFS3"
+  ],
+  "uniProtkbId": "ICSB_SHIFL",
+  "entryAudit": {
+    "firstPublicDate": "1994-02-01",
+    "lastAnnotationUpdateDate": "2026-09-02",
+    "lastSequenceUpdateDate": "2003-01-10",
+    "entryVersion": 119,
+    "sequenceVersion": 2
+  },
+  "annotationScore": 5.0,
+  "organism": {
+    "scientificName": "Shigella flexneri",
+    "taxonId": 623,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Gammaproteobacteria",
+      "Enterobacterales",
+      "Enterobacteriaceae",
+      "Shigella"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000305"
+          }
+        ],
+        "value": "N-epsilon-fatty acyltransferase IcsB"
+      },
+      "ecNumbers": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "30061757"
+            }
+          ],
+          "value": "2.3.1.-"
+        }
+      ]
+    }
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000303",
+            "source": "PubMed",
+            "id": "1495389"
+          }
+        ],
+        "value": "icsB"
+      },
+      "orderedLocusNames": [
+        {
+          "value": "CP0132"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "12753186"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "15576571"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "30061757"
+            }
+          ],
+          "value": "Virulence-associated N-epsilon-fatty acyltransferase that mediates lysine-stearoylation of host Rho GTPase proteins, thereby disrupting the host actin cytoskeleton (PubMed:30061757). Required at the post-invasion stage of Shigella pathogenicity (PubMed:12753186). Contributes to bacterial escape from autophagy (PubMed:15576571)"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "L-lysyl-/S-(2E,6E,10E)-geranylgeranyl-L-cysteinyl-[protein] + octadecanoyl-CoA = N(6)-octadecanoyl-L-lysyl-/S-(2E,6E,10E)-geranylgeranyl-L-cysteinyl-[protein] + CoA + H(+)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:59764"
+          },
+          {
+            "database": "Rhea",
+            "id": "RHEA-COMP:17935"
+          },
+          {
+            "database": "Rhea",
+            "id": "RHEA-COMP:17936"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:29969"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:57287"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:57394"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:86021"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:143206"
+          }
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "30061757"
+          }
+        ]
+      },
+      "physiologicalReactions": [
+        {
+          "directionType": "left-to-right",
+          "reactionCrossReference": {
+            "database": "Rhea",
+            "id": "RHEA:59765"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "30061757"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "12753186"
+            }
+          ],
+          "value": "Interacts with its chaperone IpgA"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "note": {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "12753186"
+              },
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "30061757"
+              }
+            ],
+            "value": "Secreted via type III secretion system (PubMed:12753186). Requires IpgA as a chaperone for its stability and secretion (PubMed:12753186). Localizes on Shigella-containing host vacuoles and modifies its substrates there (PubMed:30061757)"
+          }
+        ]
+      },
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "12753186"
+              }
+            ],
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        },
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "30061757"
+              }
+            ],
+            "value": "Host vacuole",
+            "id": "SL-0506"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "12753186"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "15576571"
+            }
+          ],
+          "value": "Decreased virulence in vitro, able to escape the vacuole, required at an early post-invasion stage (PubMed:12753186). Bacteria no longer escape autophagy (PubMed:15576571)"
+        }
+      ],
+      "commentType": "DISRUPTION PHENOTYPE"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "12753186"
+            }
+          ],
+          "value": "The icsB gene can be read-through into the ipgA gene to create a translational fusion protein. The biological significance of this process is unclear"
+        }
+      ],
+      "commentType": "MISCELLANEOUS"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the BopA/IcsB family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 494,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-epsilon-fatty acyltransferase IcsB",
+      "featureId": "PRO_0000084149"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 171,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 247,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Involved in binding IpgA",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12753186"
+        }
+      ]
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 145,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 145,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305",
+          "source": "PubMed",
+          "id": "30061757"
+        }
+      ]
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 195,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 195,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305",
+          "source": "PubMed",
+          "id": "30061757"
+        }
+      ]
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 306,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 306,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305",
+          "source": "PubMed",
+          "id": "30061757"
+        }
+      ]
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 2,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 2,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in plasmid pCP301 and plasmid pINV_F6_M1382",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "S",
+        "alternativeSequences": [
+          "I"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 30,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 30,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in plasmid pINV_F6_M1382",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "I",
+        "alternativeSequences": [
+          "V"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 66,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 66,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in plasmid pINV_F6_M1382",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "E",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 76,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 76,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in plasmid pINV_F6_M1382",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "N",
+        "alternativeSequences": [
+          "K"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 94,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 94,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in plasmid pINV_F6_M1382",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "A",
+        "alternativeSequences": [
+          "V"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 105,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 105,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in plasmid pINV_F6_M1382",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "R",
+        "alternativeSequences": [
+          "K"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 116,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 116,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in plasmid pWR100",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "R",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 116,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 116,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in plasmid pINV_F6_M1382",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "R",
+        "alternativeSequences": [
+          "S"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 202,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 202,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in plasmid pCP301 and plasmid pINV_F6_M1382",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "E",
+        "alternativeSequences": [
+          "D"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 269,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 269,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in plasmid pINV_F6_M1382",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "H",
+        "alternativeSequences": [
+          "Y"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 285,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 285,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in plasmid pINV_F6_M1382",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "K",
+        "alternativeSequences": [
+          "Q"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 336,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 336,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in plasmid pINV_F6_M1382",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "D",
+        "alternativeSequences": [
+          "N"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 434,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 434,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in plasmid pINV_F6_M1382",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "T",
+        "alternativeSequences": [
+          "S"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 443,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 443,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in plasmid pINV_F6_M1382",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "E",
+        "alternativeSequences": [
+          "G"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 450,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 450,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in plasmid pINV_F6_M1382",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "E",
+        "alternativeSequences": [
+          "V"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 458,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 458,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in plasmid pINV_F6_M1382",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "I",
+        "alternativeSequences": [
+          "T"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 482,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 482,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in plasmid pINV_F6_M1382",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "I",
+        "alternativeSequences": [
+          "V"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 2,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 14,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Not secreted from bacteria.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12753186"
+        }
+      ],
+      "alternativeSequence": {}
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 145,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 145,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Reduced cytotoxicity.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "30061757"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "H",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 183,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 183,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Does not affect cytotoxicity.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "30061757"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "K",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 195,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 195,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Reduced cytotoxicity.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "30061757"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "D",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 297,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 297,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Does not affect cytotoxicity.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "30061757"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "Y",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 306,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 306,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Abolished N-epsilon-fatty acyltransferase activity.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "30061757"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "C",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    }
+  ],
+  "geneLocations": [
+    {
+      "value": "pWR100",
+      "geneEncodingType": "Plasmid"
+    },
+    {
+      "value": "pWR501",
+      "geneEncodingType": "Plasmid"
+    },
+    {
+      "value": "pCP301",
+      "geneEncodingType": "Plasmid"
+    },
+    {
+      "value": "pINV_F6_M1382",
+      "geneEncodingType": "Plasmid"
+    },
+    {
+      "value": "pMYSH6000",
+      "geneEncodingType": "Plasmid"
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0012",
+      "category": "Molecular function",
+      "name": "Acyltransferase"
+    },
+    {
+      "id": "KW-0614",
+      "category": "Technical term",
+      "name": "Plasmid"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0808",
+      "category": "Molecular function",
+      "name": "Transferase"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "1495389",
+        "citationType": "journal article",
+        "authors": [
+          "Allaoui A.",
+          "Mounier J.",
+          "Prevost M.-C.",
+          "Sansonetti P.J.",
+          "Parsot C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "1495389"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1111/j.1365-2958.1992.tb00885.x"
+          }
+        ],
+        "title": "icsB: a Shigella flexneri virulence gene necessary for the lysis of protrusions during intercellular spread.",
+        "publicationDate": "1992",
+        "journal": "Mol. Microbiol.",
+        "firstPage": "1605",
+        "lastPage": "1616",
+        "volume": "6"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "M90T / Serotype 5a",
+          "type": "STRAIN"
+        },
+        {
+          "value": "pWR100",
+          "type": "PLASMID"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "11115111",
+        "citationType": "journal article",
+        "authors": [
+          "Buchrieser C.",
+          "Glaser P.",
+          "Rusniok C.",
+          "Nedjari H.",
+          "d'Hauteville H.",
+          "Kunst F.",
+          "Sansonetti P.J.",
+          "Parsot C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11115111"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1046/j.1365-2958.2000.02179.x"
+          }
+        ],
+        "title": "The virulence plasmid pWR100 and the repertoire of proteins secreted by the type III secretion apparatus of Shigella flexneri.",
+        "publicationDate": "2000",
+        "journal": "Mol. Microbiol.",
+        "firstPage": "760",
+        "lastPage": "771",
+        "volume": "38"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "M90T / Serotype 5a",
+          "type": "STRAIN"
+        },
+        {
+          "value": "pWR100",
+          "type": "PLASMID"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "11292750",
+        "citationType": "journal article",
+        "authors": [
+          "Venkatesan M.M.",
+          "Goldberg M.B.",
+          "Rose D.J.",
+          "Grotbeck E.J.",
+          "Burland V.",
+          "Blattner F.R."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11292750"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.69.5.3271-3285.2001"
+          }
+        ],
+        "title": "Complete DNA sequence and analysis of the large virulence plasmid of Shigella flexneri.",
+        "publicationDate": "2001",
+        "journal": "Infect. Immun.",
+        "firstPage": "3271",
+        "lastPage": "3285",
+        "volume": "69"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "M90T / Serotype 5a",
+          "type": "STRAIN"
+        },
+        {
+          "value": "pWR501",
+          "type": "PLASMID"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "12384590",
+        "citationType": "journal article",
+        "authors": [
+          "Jin Q.",
+          "Yuan Z.",
+          "Xu J.",
+          "Wang Y.",
+          "Shen Y.",
+          "Lu W.",
+          "Wang J.",
+          "Liu H.",
+          "Yang J.",
+          "Yang F.",
+          "Zhang X.",
+          "Zhang J.",
+          "Yang G.",
+          "Wu H.",
+          "Qu D.",
+          "Dong J.",
+          "Sun L.",
+          "Xue Y.",
+          "Zhao A.",
+          "Gao Y.",
+          "Zhu J.",
+          "Kan B.",
+          "Ding K.",
+          "Chen S.",
+          "Cheng H.",
+          "Yao Z.",
+          "He B.",
+          "Chen R.",
+          "Ma D.",
+          "Qiang B.",
+          "Wen Y.",
+          "Hou Y.",
+          "Yu J."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "12384590"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1093/nar/gkf566"
+          }
+        ],
+        "title": "Genome sequence of Shigella flexneri 2a: insights into pathogenicity through comparison with genomes of Escherichia coli K12 and O157.",
+        "publicationDate": "2002",
+        "journal": "Nucleic Acids Res.",
+        "firstPage": "4432",
+        "lastPage": "4441",
+        "volume": "30"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "301 / Serotype 2a",
+          "type": "STRAIN"
+        },
+        {
+          "value": "pCP301",
+          "type": "PLASMID"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "14573649",
+        "citationType": "journal article",
+        "authors": [
+          "Lan R.",
+          "Stevenson G.",
+          "Reeves P.R."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "14573649"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.71.11.6298-6306.2003"
+          }
+        ],
+        "title": "Comparison of two major forms of the Shigella virulence plasmid pINV: positive selection is a major force driving the divergence.",
+        "publicationDate": "2003",
+        "journal": "Infect. Immun.",
+        "firstPage": "6298",
+        "lastPage": "6306",
+        "volume": "71"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "M1382 / Serotype 6",
+          "type": "STRAIN"
+        },
+        {
+          "value": "pINV_F6_M1382",
+          "type": "PLASMID"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "8478058",
+        "citationType": "journal article",
+        "authors": [
+          "Allaoui A.",
+          "Menard R.",
+          "Sansonetti P.J.",
+          "Parsot C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8478058"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.61.5.1707-1714.1993"
+          }
+        ],
+        "title": "Characterization of the Shigella flexneri ipgD and ipgF genes, which are located in the proximal part of the mxi locus.",
+        "publicationDate": "1993",
+        "journal": "Infect. Immun.",
+        "firstPage": "1707",
+        "lastPage": "1714",
+        "volume": "61"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 1-19"
+      ],
+      "referenceComments": [
+        {
+          "value": "M90T / Serotype 5a",
+          "type": "STRAIN"
+        },
+        {
+          "value": "pWR100",
+          "type": "PLASMID"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 7,
+      "citation": {
+        "id": "12753186",
+        "citationType": "journal article",
+        "authors": [
+          "Ogawa M.",
+          "Suzuki T.",
+          "Tatsuno I.",
+          "Abe H.",
+          "Sasakawa C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "12753186"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1046/j.1365-2958.2003.03489.x"
+          }
+        ],
+        "title": "IcsB, secreted via the type III secretion system, is chaperoned by IpgA and required at the post-invasion stage of Shigella pathogenicity.",
+        "publicationDate": "2003",
+        "journal": "Mol. Microbiol.",
+        "firstPage": "913",
+        "lastPage": "931",
+        "volume": "48"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "INTERACTION WITH IPGA",
+        "SUBCELLULAR LOCATION",
+        "DISRUPTION PHENOTYPE",
+        "MUTAGENESIS OF 2-SER--THR-14"
+      ],
+      "referenceComments": [
+        {
+          "value": "YSH6000 / Serotype 2a",
+          "type": "STRAIN"
+        },
+        {
+          "value": "pMYSH6000",
+          "type": "PLASMID"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 8,
+      "citation": {
+        "id": "15576571",
+        "citationType": "journal article",
+        "authors": [
+          "Ogawa M.",
+          "Yoshimori T.",
+          "Suzuki T.",
+          "Sagara H.",
+          "Mizushima N.",
+          "Sasakawa C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15576571"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1126/science.1106036"
+          }
+        ],
+        "title": "Escape of intracellular Shigella from autophagy.",
+        "publicationDate": "2005",
+        "journal": "Science",
+        "firstPage": "727",
+        "lastPage": "731",
+        "volume": "307"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "DISRUPTION PHENOTYPE"
+      ],
+      "referenceComments": [
+        {
+          "value": "YSH6000 / Serotype 2a",
+          "type": "STRAIN"
+        },
+        {
+          "value": "pMYSH6000",
+          "type": "PLASMID"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 9,
+      "citation": {
+        "id": "30061757",
+        "citationType": "journal article",
+        "authors": [
+          "Liu W.",
+          "Zhou Y.",
+          "Peng T.",
+          "Zhou P.",
+          "Ding X.",
+          "Li Z.",
+          "Zhong H.",
+          "Xu Y.",
+          "Chen S.",
+          "Hang H.C.",
+          "Shao F."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "30061757"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/s41564-018-0215-6"
+          }
+        ],
+        "title": "Nepsilon-fatty acylation of multiple membrane-associated proteins by Shigella IcsB effector to modulate host function.",
+        "publicationDate": "2018",
+        "journal": "Nat. Microbiol.",
+        "firstPage": "996",
+        "lastPage": "1009",
+        "volume": "3"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "CATALYTIC ACTIVITY",
+        "SUBCELLULAR LOCATION",
+        "ACTIVE SITES",
+        "MUTAGENESIS OF HIS-145; LYS-183; ASP-195; TYR-297 AND CYS-306"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "M86530",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAD15221.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AL391753",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAC05807.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF348706",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAK18450.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AY206439",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAP78995.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF386526",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAL72354.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "S22687",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "S22687"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_858265.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_004851.1"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_010921665.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NZ_QWSL01000040.1"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "P33546",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "P33546",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "IntAct",
+      "id": "P33546",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SwissLipids",
+      "id": "SLP:000001952",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "1238057",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "sfl:CP0132",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|198214.7.peg.5386",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_613784_0_0_6",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PHI-base",
+      "id": "PHI:11423",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000001006",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Plasmid pCP301"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12753186"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR011070",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Globular_prot_asu/bsu"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR059883",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "IcsB/BopA_M"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF27349",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "IcsB_M"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF56568",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Non-globular alpha+beta subunits of globular proteins"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MSLKISNFIDASNTKGPIRVEDTEHGPILIAQKFNLKDLFFRTLSTINAKINSQILNEQLKNYRLENQKSLLLFLNTLASEKSAESAFAAYEAAKNSIQHSFTGRDIKLMLNTAERFHGIGTAKNLERHLVFRCWGNRGITHLGHTSISIKNNLLQEPTHTYLSWYPGGNVTKDTEINYLFEKRSGYSVDTYKQDKLNMISEQTAERLDAGQEVRNLLNSKQDQNNNKKIFFPRANQKKDPYGYWGVSADKVYIPLSGDNKTKDGKISHNLFGLDETNMSKFICKKKADAFRQLANYKLISKSENCAGMALNVLKAGNSEIYFPLPDVKLVATPNDVYAYANKVRQRIESLNQSYNEIMKYIESDFDLSRLTQLRRSYLKSFNKINLIHTPKTFKPLSISLYKHPTENVSSEDFDAVINACHSYLVKSAPSNMTRVLNELKTEATDKKEEIIEKSIKIIDYYNSLKSPDLGTKLYIHDLLQINKLLLNNSHSNI",
+    "length": 494,
+    "molWeight": 56408,
+    "crc64": "D4D2CC5EEC2B5324",
+    "md5": "A6170CA0271DBC735C2604160BD5AC0B"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "CATALYTIC ACTIVITY": 1,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "DISRUPTION PHENOTYPE": 1,
+      "MISCELLANEOUS": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Region": 1,
+      "Active site": 3,
+      "Natural variant": 17,
+      "Mutagenesis": 6
+    },
+    "uniParcId": "UPI000012D189"
+  }
+}

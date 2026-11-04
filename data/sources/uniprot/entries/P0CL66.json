@@ -1,0 +1,3235 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "P0CL66",
+  "secondaryAccessions": [
+    "P0C926",
+    "P14013",
+    "Q44882",
+    "Q44964",
+    "Q44967",
+    "Q44969",
+    "Q44971",
+    "Q57123",
+    "Q57272"
+  ],
+  "uniProtkbId": "OSPA_BORBU",
+  "entryAudit": {
+    "firstPublicDate": "2011-04-05",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2011-04-05",
+    "entryVersion": 75,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 4.0,
+  "organism": {
+    "scientificName": "Borreliella burgdorferi (strain ATCC 35210 / DSM 4680 / CIP 102532 / B31)",
+    "commonName": "Borrelia burgdorferi",
+    "taxonId": 224326,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Spirochaetota",
+      "Spirochaetia",
+      "Spirochaetales",
+      "Borreliaceae",
+      "Borreliella"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000303",
+            "source": "PubMed",
+            "id": "2761388"
+          }
+        ],
+        "value": "Outer surface protein A"
+      }
+    },
+    "flag": "Precursor"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000303",
+            "source": "PubMed",
+            "id": "2761388"
+          }
+        ],
+        "value": "ospA"
+      },
+      "orderedLocusNames": [
+        {
+          "value": "BB_A15"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "10426995"
+            }
+          ],
+          "value": "Induces host (human and mouse) cytokine release by monocyte cell lines via TLR2 and CD14; nonlipidated protein does not stimulate host cells (PubMed:10426995)"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000305",
+                "source": "PubMed",
+                "id": "2761388"
+              }
+            ],
+            "value": "Cell outer membrane",
+            "id": "SL-0040"
+          },
+          "topology": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255",
+                "source": "PROSITE-ProRule",
+                "id": "PRU00303"
+              },
+              {
+                "evidenceCode": "ECO:0000305",
+                "source": "PubMed",
+                "id": "10426995"
+              }
+            ],
+            "value": "Lipid-anchor",
+            "id": "SL-9901"
+          }
+        },
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000305",
+                "source": "PubMed",
+                "id": "2761388"
+              }
+            ],
+            "value": "Cell surface",
+            "id": "SL-0310"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the OspA lipoprotein family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 16,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00303"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 17,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 273,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Outer surface protein A",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00303"
+        }
+      ],
+      "featureId": "PRO_0000018074"
+    },
+    {
+      "type": "Lipidation",
+      "location": {
+        "start": {
+          "value": 17,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 17,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-palmitoyl cysteine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00303"
+        },
+        {
+          "evidenceCode": "ECO:0000305",
+          "source": "PubMed",
+          "id": "10426995"
+        }
+      ]
+    },
+    {
+      "type": "Lipidation",
+      "location": {
+        "start": {
+          "value": 17,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 17,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "S-diacylglycerol cysteine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00303"
+        },
+        {
+          "evidenceCode": "ECO:0000305",
+          "source": "PubMed",
+          "id": "10426995"
+        }
+      ]
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 35,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 35,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: CA7",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "P",
+        "alternativeSequences": [
+          "S"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 39,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 39,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: PBre and 21343WI",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "K",
+        "alternativeSequences": [
+          "N"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 59,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 59,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: 42373NY3",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "D",
+        "alternativeSequences": [
+          "H"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 90,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 90,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: CA8",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "I",
+        "alternativeSequences": [
+          "V"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 114,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 114,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: PBre",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "V",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 127,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 127,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: CA8",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "N",
+        "alternativeSequences": [
+          "S"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 132,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 133,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: CA8",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "VS",
+        "alternativeSequences": [
+          "LP"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 144,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 144,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: 21343WI",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "R",
+        "alternativeSequences": [
+          "K"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 149,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 149,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: PBre and 42373NY3",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "G",
+        "alternativeSequences": [
+          "E"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 164,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 164,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: PBre",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "G",
+        "alternativeSequences": [
+          "S"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 196,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 196,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: CA8 and 21343WI",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "E",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 26,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 28,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1OSP"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 30,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 34,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2I5V"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 35,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 37,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2I5V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 38,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 42,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2I5V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 48,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 50,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2OY7"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 52,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 58,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2I5V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 61,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 72,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2I5V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 74,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 79,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2I5V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 85,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 90,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2I5V"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 92,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 95,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6J5R"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 97,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 102,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2I5V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 108,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 115,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2I5V"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 117,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 119,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3AUM"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 121,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 126,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2I5V"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 128,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 130,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "9CDS"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 132,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 138,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2I5V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 140,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 142,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "8TUZ"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 144,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 149,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2I5V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 152,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 154,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7T25"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 156,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 162,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2I5V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 165,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 171,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2I5V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 173,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 182,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2I5V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 185,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 192,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2I5V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 197,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 203,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2I5V"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 208,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 210,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2I5V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 212,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 217,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2I5V"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 218,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 221,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2I5V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 222,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 227,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2I5V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 230,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 237,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2I5V"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 239,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 241,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "9BYF"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 243,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 248,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2I5V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 252,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 255,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2I5V"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 260,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 262,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2I5Z"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 265,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 271,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2I5V"
+        }
+      ]
+    }
+  ],
+  "geneLocations": [
+    {
+      "value": "lp54",
+      "geneEncodingType": "Plasmid"
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0002",
+      "category": "Technical term",
+      "name": "3D-structure"
+    },
+    {
+      "id": "KW-0998",
+      "category": "Cellular component",
+      "name": "Cell outer membrane"
+    },
+    {
+      "id": "KW-0449",
+      "category": "PTM",
+      "name": "Lipoprotein"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-0564",
+      "category": "PTM",
+      "name": "Palmitate"
+    },
+    {
+      "id": "KW-0614",
+      "category": "Technical term",
+      "name": "Plasmid"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "2761388",
+        "citationType": "journal article",
+        "authors": [
+          "Bergstroem S.",
+          "Bundoc V.",
+          "Barbour A.G."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "2761388"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1111/j.1365-2958.1989.tb00194.x"
+          }
+        ],
+        "title": "Molecular analysis of linear plasmid-encoded major surface proteins, OspA and OspB, of the Lyme disease spirochaete Borrelia burgdorferi.",
+        "publicationDate": "1989",
+        "journal": "Mol. Microbiol.",
+        "firstPage": "479",
+        "lastPage": "486",
+        "volume": "3"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 35210 / DSM 4680 / CIP 102532 / B31",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "7500914",
+        "citationType": "journal article",
+        "authors": [
+          "Will G.",
+          "Jauris-Heipke S.",
+          "Schwab E.",
+          "Busch U.",
+          "Roessler D.",
+          "Soutschek E.",
+          "Wilske B.",
+          "Preac-Mursic V."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "7500914"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1007/bf00221390"
+          }
+        ],
+        "title": "Sequence analysis of ospA genes shows homogeneity within Borrelia burgdorferi sensu stricto and Borrelia afzelii strains but reveals major subgroups within the Borrelia garinii species.",
+        "publicationDate": "1995",
+        "journal": "Med. Microbiol. Immunol.",
+        "firstPage": "73",
+        "lastPage": "80",
+        "volume": "184"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "KA",
+          "type": "STRAIN"
+        },
+        {
+          "value": "PBre",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "8234271",
+        "citationType": "journal article",
+        "authors": [
+          "Dykhuizen D.E.",
+          "Polin D.S.",
+          "Dunn J.J.",
+          "Wilske B.",
+          "Preac-Mursic V.",
+          "Dattwyler R.J.",
+          "Luft B.J."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8234271"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1073/pnas.90.21.10163"
+          }
+        ],
+        "title": "Borrelia burgdorferi is clonal: implications for taxonomy and vaccine development.",
+        "publicationDate": "1993",
+        "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+        "firstPage": "10163",
+        "lastPage": "10167",
+        "volume": "90"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "KA",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "9403685",
+        "citationType": "journal article",
+        "authors": [
+          "Fraser C.M.",
+          "Casjens S.",
+          "Huang W.M.",
+          "Sutton G.G.",
+          "Clayton R.A.",
+          "Lathigra R.",
+          "White O.",
+          "Ketchum K.A.",
+          "Dodson R.J.",
+          "Hickey E.K.",
+          "Gwinn M.L.",
+          "Dougherty B.A.",
+          "Tomb J.-F.",
+          "Fleischmann R.D.",
+          "Richardson D.L.",
+          "Peterson J.D.",
+          "Kerlavage A.R.",
+          "Quackenbush J.",
+          "Salzberg S.L.",
+          "Hanson M.",
+          "van Vugt R.",
+          "Palmer N.",
+          "Adams M.D.",
+          "Gocayne J.D.",
+          "Weidman J.F.",
+          "Utterback T.R.",
+          "Watthey L.",
+          "McDonald L.A.",
+          "Artiach P.",
+          "Bowman C.",
+          "Garland S.A.",
+          "Fujii C.",
+          "Cotton M.D.",
+          "Horst K.",
+          "Roberts K.M.",
+          "Hatch B.",
+          "Smith H.O.",
+          "Venter J.C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9403685"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/37551"
+          }
+        ],
+        "title": "Genomic sequence of a Lyme disease spirochaete, Borrelia burgdorferi.",
+        "publicationDate": "1997",
+        "journal": "Nature",
+        "firstPage": "580",
+        "lastPage": "586",
+        "volume": "390"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 35210 / DSM 4680 / CIP 102532 / B31",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "8121286",
+        "citationType": "journal article",
+        "authors": [
+          "Caporale D.A.",
+          "Kocher T.D."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8121286"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1093/oxfordjournals.molbev.a040092"
+          }
+        ],
+        "title": "Sequence variation in the outer-surface-protein genes of Borrelia burgdorferi.",
+        "publicationDate": "1994",
+        "journal": "Mol. Biol. Evol.",
+        "firstPage": "51",
+        "lastPage": "64",
+        "volume": "11"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 24-273"
+      ],
+      "referenceComments": [
+        {
+          "value": "19535NY2",
+          "type": "STRAIN"
+        },
+        {
+          "value": "21343WI",
+          "type": "STRAIN"
+        },
+        {
+          "value": "27985CT2",
+          "type": "STRAIN"
+        },
+        {
+          "value": "41552MA",
+          "type": "STRAIN"
+        },
+        {
+          "value": "42373NY3",
+          "type": "STRAIN"
+        },
+        {
+          "value": "CA3",
+          "type": "STRAIN"
+        },
+        {
+          "value": "CA7",
+          "type": "STRAIN"
+        },
+        {
+          "value": "CA8",
+          "type": "STRAIN"
+        },
+        {
+          "value": "HB19CT1",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "10426995",
+        "citationType": "journal article",
+        "authors": [
+          "Brightbill H.D.",
+          "Libraty D.H.",
+          "Krutzik S.R.",
+          "Yang R.B.",
+          "Belisle J.T.",
+          "Bleharski J.R.",
+          "Maitland M.",
+          "Norgard M.V.",
+          "Plevy S.E.",
+          "Smale S.T.",
+          "Brennan P.J.",
+          "Bloom B.R.",
+          "Godowski P.J.",
+          "Modlin R.L."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "10426995"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1126/science.285.5428.732"
+          }
+        ],
+        "title": "Host defense mechanisms triggered by microbial lipoproteins through Toll-like receptors.",
+        "publicationDate": "1999",
+        "journal": "Science",
+        "firstPage": "732",
+        "lastPage": "736",
+        "volume": "285"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "SUBCELLULAR LOCATION",
+        "DIACYLGLYCEROL AT CYS-17",
+        "PALMITOYLATION AT CYS-17"
+      ],
+      "referenceComments": [
+        {
+          "value": "TI1-EV",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 7,
+      "citation": {
+        "id": "9108020",
+        "citationType": "journal article",
+        "authors": [
+          "Li H.",
+          "Dunn J.J.",
+          "Luft B.J.",
+          "Lawson C.L."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9108020"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1073/pnas.94.8.3584"
+          }
+        ],
+        "title": "Crystal structure of Lyme disease antigen outer surface protein A complexed with an Fab.",
+        "publicationDate": "1997",
+        "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+        "firstPage": "3584",
+        "lastPage": "3589",
+        "volume": "94"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY"
+      ]
+    },
+    {
+      "referenceNumber": 8,
+      "citation": {
+        "id": "11183781",
+        "citationType": "journal article",
+        "authors": [
+          "Ding W.",
+          "Huang X.",
+          "Yang X.",
+          "Dunn J.J.",
+          "Luft B.J.",
+          "Koide S.",
+          "Lawson C.L."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11183781"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1006/jmbi.2000.4119"
+          }
+        ],
+        "title": "Structural identification of a key protective B-cell epitope in Lyme disease antigen OspA.",
+        "publicationDate": "2000",
+        "journal": "J. Mol. Biol.",
+        "firstPage": "1153",
+        "lastPage": "1164",
+        "volume": "302"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 35210 / DSM 4680 / CIP 102532 / B31",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "X14407",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAA32579.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "X85739",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAA59742.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "X80182",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAA56467.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "X69606",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAA49314.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AE000790",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAC66260.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "L23136",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA22951.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "L23137",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA22953.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "L23138",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA20947.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "L23139",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA20949.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "L23140",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA20951.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "L23141",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA20953.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "L23142",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA20955.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "L23143",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA20957.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "L23144",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA20959.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "F49209",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "F49209"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "G70208",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "G70208"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "I40265",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "I40265"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "S71529",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "S71529"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_010890378.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_001857.2"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "1FJ1",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.68 A"
+        },
+        {
+          "key": "Chains",
+          "value": "E/F=18-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "1OSP",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.95 A"
+        },
+        {
+          "key": "Chains",
+          "value": "O=17-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2AF5",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.50 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2FKG",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.40 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2FKJ",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "3.10 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B/C=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2G8C",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.15 A"
+        },
+        {
+          "key": "Chains",
+          "value": "O=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2HKD",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.60 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2I5V",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.10 A"
+        },
+        {
+          "key": "Chains",
+          "value": "O=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2I5Z",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.20 A"
+        },
+        {
+          "key": "Chains",
+          "value": "O=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2OL6",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.60 A"
+        },
+        {
+          "key": "Chains",
+          "value": "O=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2OL7",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.35 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2OL8",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.90 A"
+        },
+        {
+          "key": "Chains",
+          "value": "O=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2OY1",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.86 A"
+        },
+        {
+          "key": "Chains",
+          "value": "O=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2OY5",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.80 A"
+        },
+        {
+          "key": "Chains",
+          "value": "O=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2OY7",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.55 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2OY8",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.00 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2OYB",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.30 A"
+        },
+        {
+          "key": "Chains",
+          "value": "O=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2PI3",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.40 A"
+        },
+        {
+          "key": "Chains",
+          "value": "O=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "3AUM",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.60 A"
+        },
+        {
+          "key": "Chains",
+          "value": "O=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "5B2A",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.60 A"
+        },
+        {
+          "key": "Chains",
+          "value": "O=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6ICS",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.40 A"
+        },
+        {
+          "key": "Chains",
+          "value": "O=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6IDC",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.01 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6IEI",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.40 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6IYS",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "3.00 A"
+        },
+        {
+          "key": "Chains",
+          "value": "O=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6J47",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.90 A"
+        },
+        {
+          "key": "Chains",
+          "value": "O=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6J48",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.20 A"
+        },
+        {
+          "key": "Chains",
+          "value": "O=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6J49",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.60 A"
+        },
+        {
+          "key": "Chains",
+          "value": "O=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6J5M",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.85 A"
+        },
+        {
+          "key": "Chains",
+          "value": "O=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6J5N",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.73 A"
+        },
+        {
+          "key": "Chains",
+          "value": "O=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6J5O",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.90 A"
+        },
+        {
+          "key": "Chains",
+          "value": "O=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6J5P",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.80 A"
+        },
+        {
+          "key": "Chains",
+          "value": "O=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6J5Q",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.80 A"
+        },
+        {
+          "key": "Chains",
+          "value": "O=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6J5R",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.85 A"
+        },
+        {
+          "key": "Chains",
+          "value": "O=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6J6B",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.90 A"
+        },
+        {
+          "key": "Chains",
+          "value": "O=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6J6C",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.60 A"
+        },
+        {
+          "key": "Chains",
+          "value": "O=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6J6D",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.90 A"
+        },
+        {
+          "key": "Chains",
+          "value": "O=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6J6E",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.50 A"
+        },
+        {
+          "key": "Chains",
+          "value": "O=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6KT1",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.43 A"
+        },
+        {
+          "key": "Chains",
+          "value": "O=28-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6KWJ",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.94 A"
+        },
+        {
+          "key": "Chains",
+          "value": "B=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6KWU",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.43 A"
+        },
+        {
+          "key": "Chains",
+          "value": "O=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6KWV",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.37 A"
+        },
+        {
+          "key": "Chains",
+          "value": "O=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6LJY",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.50 A"
+        },
+        {
+          "key": "Chains",
+          "value": "O=27-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "7FDD",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.90 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B=27-116, A/B=120-125, A/B=134-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "7FJR",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.60 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=27-116, A=120-125, A=134-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "7JWG",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "3.05 A"
+        },
+        {
+          "key": "Chains",
+          "value": "C/E=23-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "7T25",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.25 A"
+        },
+        {
+          "key": "Chains",
+          "value": "C/E=18-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "8TUZ",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.19 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=23-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "8TV3",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.31 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=18-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "8TVD",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "3.08 A"
+        },
+        {
+          "key": "Chains",
+          "value": "C/E=24-272"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "8TVJ",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "3.17 A"
+        },
+        {
+          "key": "Chains",
+          "value": "E=26-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "9BYF",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.85 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=18-273"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "9CDS",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.85 A"
+        },
+        {
+          "key": "Chains",
+          "value": "C/F=26-273"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "P0CL66",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BMRB",
+      "id": "P0CL66",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "MDposit",
+      "id": "P0CL66",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "MDRepo",
+      "id": "P0CL66",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "P0CL66",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "ABCD",
+      "id": "P0CL66",
+      "properties": [
+        {
+          "key": "antibodies",
+          "value": "8 sequenced antibodies"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblBacteria",
+      "id": "AAC66260",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAC66260"
+        },
+        {
+          "key": "GeneId",
+          "value": "BB_A15"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "46847130",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "bbu:BB_A15",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|224326.49.peg.1532",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_1014382_0_0_12",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AKTMTRE",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OrthoDB",
+      "id": "351940at2",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EvolutionaryTrace",
+      "id": "P0CL66",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PRO",
+      "id": "PR:P0CL66",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000001807",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Plasmid lp54"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009279",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cell outer membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009986",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cell surface"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0016020",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:CAFA"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "22025510"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "2.40.128.160:FF:000001",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Outer surface protein A"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "3.90.930.1:FF:000001",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Outer surface protein A"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.90.930.1",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.40.128.160",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "C1 set domains (antibody constant domain-like)"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR001809",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OM_lipoprot_Borrelia"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR023322",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OM_lipoprot_dom_sf"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00820",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Lipoprotein_1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR00968",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OUTRSURFACE"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF51087",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Outer surface protein"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51257",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PROKAR_LIPOPROTEIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MKKYLLGIGLILALIACKQNVSSLDEKNSVSVDLPGEMKVLVSKEKNKDGKYDLIATVDKLELKGTSDKNNGSGVLEGVKADKSKVKLTISDDLGQTTLEVFKEDGKTLVSKKVTSKDKSSTEEKFNEKGEVSEKIITRADGTRLEYTGIKSDGSGKAKEVLKGYVLEGTLTAEKTTLVVKEGTVTLSKNISKSGEVSVELNDTDSSAATKKTAAWNSGTSTLTITVNSKKTKDLVFTKENTITVQQYDSNGTKLEGSAVEITKLDEIKNALK",
+    "length": 273,
+    "molWeight": 29367,
+    "crc64": "B53FC01D92F6D431",
+    "md5": "EC3B7390E4CF297688379C1083203B3E"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1,
+      "Lipidation": 2,
+      "Natural variant": 11,
+      "Helix": 3,
+      "Beta strand": 25,
+      "Turn": 6
+    },
+    "uniParcId": "UPI000002BDAE"
+  }
+}

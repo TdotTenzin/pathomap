@@ -1,0 +1,2124 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "E1JIB2",
+  "uniProtkbId": "IYD_DROME",
+  "entryAudit": {
+    "firstPublicDate": "2022-05-25",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2010-11-30",
+    "entryVersion": 98,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 5.0,
+  "organism": {
+    "scientificName": "Drosophila melanogaster",
+    "commonName": "Fruit fly",
+    "taxonId": 7227,
+    "evidences": [
+      {
+        "evidenceCode": "ECO:0000312",
+        "source": "Proteomes",
+        "id": "UP000000803"
+      }
+    ],
+    "lineage": [
+      "Eukaryota",
+      "Metazoa",
+      "Ecdysozoa",
+      "Arthropoda",
+      "Altocrustacea",
+      "Allotriocarida",
+      "Hexapoda",
+      "Insecta",
+      "Pterygota",
+      "Neoptera",
+      "Eumetabola",
+      "Endopterygota",
+      "Aparaglossata",
+      "Panorpida",
+      "Diptera",
+      "Brachycera",
+      "Muscomorpha",
+      "Ephydroidea",
+      "Drosophilidae",
+      "Drosophila",
+      "Sophophora"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000312",
+            "source": "FlyBase",
+            "id": "FBgn0286980"
+          }
+        ],
+        "value": "Iodotyrosine deiodinase"
+      },
+      "ecNumbers": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "27643701"
+            }
+          ],
+          "value": "1.21.1.1"
+        }
+      ]
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "27643701"
+            }
+          ],
+          "value": "Halotyrosine dehalogenase"
+        }
+      },
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "27643701"
+            }
+          ],
+          "value": "Protein condet"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000312",
+            "source": "FlyBase",
+            "id": "FBgn0286980"
+          }
+        ],
+        "value": "Iyd"
+      },
+      "synonyms": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "27643701"
+            }
+          ],
+          "value": "cdt"
+        }
+      ],
+      "orfNames": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000312",
+              "source": "FlyBase",
+              "id": "FBgn0286980"
+            }
+          ],
+          "value": "CG46438"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "27643701"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "29764939"
+            }
+          ],
+          "value": "Catalyzes the dehalogenation of halotyrosines such as 3-bromo-L-tyrosine, 3-chloro-L-tyrosine, 3-iodo-L-tyrosine and 3,5-diiodo-L-tyrosine (PubMed:27643701). Activity towards 3-fluoro-L-tyrosine is weak (PubMed:27643701). Important for male and female fertility (PubMed:29764939). May be involved in maintaining the viability of sperm, both during development in the testes and storage in the female spermatheca (PubMed:29764939)"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "2 iodide + L-tyrosine + 2 NADP(+) = 3,5-diiodo-L-tyrosine + 2 NADPH + H(+)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:32479"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:16382"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:57506"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:57783"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:58315"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:58349"
+          }
+        ],
+        "ecNumber": "1.21.1.1",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "27643701"
+          }
+        ]
+      },
+      "physiologicalReactions": [
+        {
+          "directionType": "right-to-left",
+          "reactionCrossReference": {
+            "database": "Rhea",
+            "id": "RHEA:32481"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "27643701"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "iodide + L-tyrosine + NADP(+) = 3-iodo-L-tyrosine + NADPH",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:27453"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:16382"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:57783"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:58315"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:58349"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:59898"
+          }
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "27643701"
+          }
+        ]
+      },
+      "physiologicalReactions": [
+        {
+          "directionType": "right-to-left",
+          "reactionCrossReference": {
+            "database": "Rhea",
+            "id": "RHEA:27455"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "27643701"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "3-iodo-L-tyrosine + iodide + NADP(+) = 3,5-diiodo-L-tyrosine + NADPH + H(+)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:27457"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:16382"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:57506"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:57783"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:58349"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:59898"
+          }
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "27643701"
+          }
+        ]
+      },
+      "physiologicalReactions": [
+        {
+          "directionType": "right-to-left",
+          "reactionCrossReference": {
+            "database": "Rhea",
+            "id": "RHEA:27459"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "27643701"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "L-tyrosine + chloride + NADP(+) = 3-chloro-L-tyrosine + NADPH",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:70343"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:17996"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:57783"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:58315"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:58349"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:189422"
+          }
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "27643701"
+          }
+        ]
+      },
+      "physiologicalReactions": [
+        {
+          "directionType": "right-to-left",
+          "reactionCrossReference": {
+            "database": "Rhea",
+            "id": "RHEA:70345"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "27643701"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "bromide + L-tyrosine + NADP(+) = 3-bromo-L-tyrosine + NADPH",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:70347"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15858"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:57783"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:58315"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:58349"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:189423"
+          }
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "27643701"
+          }
+        ]
+      },
+      "physiologicalReactions": [
+        {
+          "directionType": "right-to-left",
+          "reactionCrossReference": {
+            "database": "Rhea",
+            "id": "RHEA:70349"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "27643701"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commentType": "COFACTOR",
+      "cofactors": [
+        {
+          "name": "FMN",
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "27643701"
+            }
+          ],
+          "cofactorCrossReference": {
+            "database": "ChEBI",
+            "id": "CHEBI:58210"
+          }
+        }
+      ]
+    },
+    {
+      "commentType": "BIOPHYSICOCHEMICAL PROPERTIES",
+      "kineticParameters": {
+        "michaelisConstants": [
+          {
+            "constant": 14.0,
+            "unit": "uM",
+            "substrate": "3-iodo-L-tyrosine (at pH 7.4 and 25 degrees Celsius)",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "27643701"
+              }
+            ]
+          },
+          {
+            "constant": 8.0,
+            "unit": "uM",
+            "substrate": "3-bromo-L-tyrosine (at pH 7.4 and 25 degrees Celsius)",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "27643701"
+              }
+            ]
+          },
+          {
+            "constant": 21.0,
+            "unit": "uM",
+            "substrate": "3-chloro-L-tyrosine (at pH 7.4 and 25 degrees Celsius)",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "27643701"
+              }
+            ]
+          },
+          {
+            "constant": 11.0,
+            "unit": "uM",
+            "substrate": "3,5-diiodo-L-tyrosine (at pH 7.4 and 25 degrees Celsius)",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "27643701"
+              }
+            ]
+          }
+        ],
+        "note": {
+          "texts": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "27643701"
+                }
+              ],
+              "value": "kcat is 12 sec(-1) for the dehalogenation of 3-iodo-L-tyrosine (at pH 7.4 and 25 degrees Celsius) (PubMed:27643701). kcat is 6.9 sec(-1) for the dehalogenation of 3-bromo-L-tyrosine (at pH 7.4 and 25 degrees Celsius) (PubMed:27643701). kcat is 5.0 sec(-1) for the dehalogenation of 3-chloro-L-tyrosine (at pH 7.4 and 25 degrees Celsius) (PubMed:27643701). kcat is 10.8 sec(-1) for the dehalogenation of 3,5-diiodo-L-tyrosine (at pH 7.4 and 25 degrees Celsius) (PubMed:27643701)."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "Q6PHW0"
+            }
+          ],
+          "value": "Homodimer"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255"
+              }
+            ],
+            "value": "Cell membrane",
+            "id": "SL-0039"
+          },
+          "topology": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255"
+              }
+            ],
+            "value": "Single-pass membrane protein",
+            "id": "SL-9904"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "29764939"
+            }
+          ],
+          "value": "Expressed in spermatocytes"
+        }
+      ],
+      "commentType": "TISSUE SPECIFICITY"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "29764939"
+            }
+          ],
+          "value": "Adults produce fewer progeny (PubMed:29764939). Larvae display an increase in survival when fed a diet enriched with 3-chloro-L-tyrosine (Cl-Tyr), whereas survival is unaffected when fed a diet containing 3-iodo-L-tyrosine (I-Tyr) or 3-bromo-L-tyrosine (Br-Tyr) (PubMed:29764939). Adult survival is unaffected when fed a diet supplemented with halotyrosines (PubMed:29764939)"
+        }
+      ],
+      "commentType": "DISRUPTION PHENOTYPE"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "27643701"
+            }
+          ],
+          "value": "Named condet in honor of Dr. Jean Francois Condet who discovered that ingestion of iodide could reduce goiter"
+        }
+      ],
+      "commentType": "MISCELLANEOUS"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the nitroreductase family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 287,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Iodotyrosine deiodinase",
+      "featureId": "PRO_0000455636"
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 15,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 34,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 96,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 100,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:58210"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q6PHW0"
+        }
+      ],
+      "ligand": {
+        "name": "FMN",
+        "id": "ChEBI:CHEBI:58210"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 125,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 126,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:58210"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q9DCX8"
+        }
+      ],
+      "ligand": {
+        "name": "FMN",
+        "id": "ChEBI:CHEBI:58210"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 125,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 125,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:58210"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q6PHW0"
+        }
+      ],
+      "ligand": {
+        "name": "FMN",
+        "id": "ChEBI:CHEBI:58210"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 127,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 127,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:57506"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q9DCX8"
+        }
+      ],
+      "ligand": {
+        "name": "3,5-diiodo-L-tyrosine",
+        "id": "ChEBI:CHEBI:57506"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 127,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 127,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:59898"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q9DCX8"
+        }
+      ],
+      "ligand": {
+        "name": "3-iodo-L-tyrosine",
+        "id": "ChEBI:CHEBI:59898"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 154,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 154,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:57506"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "27643701"
+        }
+      ],
+      "ligand": {
+        "name": "3,5-diiodo-L-tyrosine",
+        "id": "ChEBI:CHEBI:57506"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 154,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 154,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:59898"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "27643701"
+        }
+      ],
+      "ligand": {
+        "name": "3-iodo-L-tyrosine",
+        "id": "ChEBI:CHEBI:59898"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 158,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 158,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:57506"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "27643701"
+        }
+      ],
+      "ligand": {
+        "name": "3,5-diiodo-L-tyrosine",
+        "id": "ChEBI:CHEBI:57506"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 158,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 158,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:59898"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "27643701"
+        }
+      ],
+      "ligand": {
+        "name": "3-iodo-L-tyrosine",
+        "id": "ChEBI:CHEBI:59898"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 179,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 179,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:57506"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "27643701"
+        }
+      ],
+      "ligand": {
+        "name": "3,5-diiodo-L-tyrosine",
+        "id": "ChEBI:CHEBI:57506"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 179,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 179,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:59898"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "27643701"
+        }
+      ],
+      "ligand": {
+        "name": "3-iodo-L-tyrosine",
+        "id": "ChEBI:CHEBI:59898"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 235,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 237,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:58210"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q6PHW0"
+        }
+      ],
+      "ligand": {
+        "name": "FMN",
+        "id": "ChEBI:CHEBI:58210"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 277,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 277,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:58210"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q6PHW0"
+        }
+      ],
+      "ligand": {
+        "name": "FMN",
+        "id": "ChEBI:CHEBI:58210"
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 154,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 154,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Significant decrease in catalytic efficiency and reduced affinity for substrates 3-iodo-L-tyrosine (I-Tyr) and 3,5-diiodo-L-tyrosine (I2-Tyr). Larvae survival is decreased when fed a diet supplemented with 100 or 200um of I-Tyr but is increased when fed a diet enriched with 3-chloro-L-tyrosine (Cl-Tyr). However, adult survival is unaffected when fed a diet supplemented with halotyrosines.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "27643701"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "29764939"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "E",
+        "alternativeSequences": [
+          "Q"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 158,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 158,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Moderate decrease in catalytic efficiency and reduced affinity for substrates I-Tyr and I2-Tyr.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "27643701"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "Y",
+        "alternativeSequences": [
+          "F"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 179,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 179,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Moderate decrease in catalytic activity but strongly reduces affinity for substrates I-Tyr and I2-Tyr.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "27643701"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "K",
+        "alternativeSequences": [
+          "Q"
+        ]
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-1003",
+      "category": "Cellular component",
+      "name": "Cell membrane"
+    },
+    {
+      "id": "KW-0285",
+      "category": "Ligand",
+      "name": "Flavoprotein"
+    },
+    {
+      "id": "KW-0288",
+      "category": "Ligand",
+      "name": "FMN"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-0521",
+      "category": "Ligand",
+      "name": "NADP"
+    },
+    {
+      "id": "KW-0560",
+      "category": "Molecular function",
+      "name": "Oxidoreductase"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0812",
+      "category": "Domain",
+      "name": "Transmembrane"
+    },
+    {
+      "id": "KW-1133",
+      "category": "Domain",
+      "name": "Transmembrane helix"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "10731132",
+        "citationType": "journal article",
+        "authors": [
+          "Adams M.D.",
+          "Celniker S.E.",
+          "Holt R.A.",
+          "Evans C.A.",
+          "Gocayne J.D.",
+          "Amanatides P.G.",
+          "Scherer S.E.",
+          "Li P.W.",
+          "Hoskins R.A.",
+          "Galle R.F.",
+          "George R.A.",
+          "Lewis S.E.",
+          "Richards S.",
+          "Ashburner M.",
+          "Henderson S.N.",
+          "Sutton G.G.",
+          "Wortman J.R.",
+          "Yandell M.D.",
+          "Zhang Q.",
+          "Chen L.X.",
+          "Brandon R.C.",
+          "Rogers Y.-H.C.",
+          "Blazej R.G.",
+          "Champe M.",
+          "Pfeiffer B.D.",
+          "Wan K.H.",
+          "Doyle C.",
+          "Baxter E.G.",
+          "Helt G.",
+          "Nelson C.R.",
+          "Miklos G.L.G.",
+          "Abril J.F.",
+          "Agbayani A.",
+          "An H.-J.",
+          "Andrews-Pfannkoch C.",
+          "Baldwin D.",
+          "Ballew R.M.",
+          "Basu A.",
+          "Baxendale J.",
+          "Bayraktaroglu L.",
+          "Beasley E.M.",
+          "Beeson K.Y.",
+          "Benos P.V.",
+          "Berman B.P.",
+          "Bhandari D.",
+          "Bolshakov S.",
+          "Borkova D.",
+          "Botchan M.R.",
+          "Bouck J.",
+          "Brokstein P.",
+          "Brottier P.",
+          "Burtis K.C.",
+          "Busam D.A.",
+          "Butler H.",
+          "Cadieu E.",
+          "Center A.",
+          "Chandra I.",
+          "Cherry J.M.",
+          "Cawley S.",
+          "Dahlke C.",
+          "Davenport L.B.",
+          "Davies P.",
+          "de Pablos B.",
+          "Delcher A.",
+          "Deng Z.",
+          "Mays A.D.",
+          "Dew I.",
+          "Dietz S.M.",
+          "Dodson K.",
+          "Doup L.E.",
+          "Downes M.",
+          "Dugan-Rocha S.",
+          "Dunkov B.C.",
+          "Dunn P.",
+          "Durbin K.J.",
+          "Evangelista C.C.",
+          "Ferraz C.",
+          "Ferriera S.",
+          "Fleischmann W.",
+          "Fosler C.",
+          "Gabrielian A.E.",
+          "Garg N.S.",
+          "Gelbart W.M.",
+          "Glasser K.",
+          "Glodek A.",
+          "Gong F.",
+          "Gorrell J.H.",
+          "Gu Z.",
+          "Guan P.",
+          "Harris M.",
+          "Harris N.L.",
+          "Harvey D.A.",
+          "Heiman T.J.",
+          "Hernandez J.R.",
+          "Houck J.",
+          "Hostin D.",
+          "Houston K.A.",
+          "Howland T.J.",
+          "Wei M.-H.",
+          "Ibegwam C.",
+          "Jalali M.",
+          "Kalush F.",
+          "Karpen G.H.",
+          "Ke Z.",
+          "Kennison J.A.",
+          "Ketchum K.A.",
+          "Kimmel B.E.",
+          "Kodira C.D.",
+          "Kraft C.L.",
+          "Kravitz S.",
+          "Kulp D.",
+          "Lai Z.",
+          "Lasko P.",
+          "Lei Y.",
+          "Levitsky A.A.",
+          "Li J.H.",
+          "Li Z.",
+          "Liang Y.",
+          "Lin X.",
+          "Liu X.",
+          "Mattei B.",
+          "McIntosh T.C.",
+          "McLeod M.P.",
+          "McPherson D.",
+          "Merkulov G.",
+          "Milshina N.V.",
+          "Mobarry C.",
+          "Morris J.",
+          "Moshrefi A.",
+          "Mount S.M.",
+          "Moy M.",
+          "Murphy B.",
+          "Murphy L.",
+          "Muzny D.M.",
+          "Nelson D.L.",
+          "Nelson D.R.",
+          "Nelson K.A.",
+          "Nixon K.",
+          "Nusskern D.R.",
+          "Pacleb J.M.",
+          "Palazzolo M.",
+          "Pittman G.S.",
+          "Pan S.",
+          "Pollard J.",
+          "Puri V.",
+          "Reese M.G.",
+          "Reinert K.",
+          "Remington K.",
+          "Saunders R.D.C.",
+          "Scheeler F.",
+          "Shen H.",
+          "Shue B.C.",
+          "Siden-Kiamos I.",
+          "Simpson M.",
+          "Skupski M.P.",
+          "Smith T.J.",
+          "Spier E.",
+          "Spradling A.C.",
+          "Stapleton M.",
+          "Strong R.",
+          "Sun E.",
+          "Svirskas R.",
+          "Tector C.",
+          "Turner R.",
+          "Venter E.",
+          "Wang A.H.",
+          "Wang X.",
+          "Wang Z.-Y.",
+          "Wassarman D.A.",
+          "Weinstock G.M.",
+          "Weissenbach J.",
+          "Williams S.M.",
+          "Woodage T.",
+          "Worley K.C.",
+          "Wu D.",
+          "Yang S.",
+          "Yao Q.A.",
+          "Ye J.",
+          "Yeh R.-F.",
+          "Zaveri J.S.",
+          "Zhan M.",
+          "Zhang G.",
+          "Zhao Q.",
+          "Zheng L.",
+          "Zheng X.H.",
+          "Zhong F.N.",
+          "Zhong W.",
+          "Zhou X.",
+          "Zhu S.C.",
+          "Zhu X.",
+          "Smith H.O.",
+          "Gibbs R.A.",
+          "Myers E.W.",
+          "Rubin G.M.",
+          "Venter J.C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "10731132"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1126/science.287.5461.2185"
+          }
+        ],
+        "title": "The genome sequence of Drosophila melanogaster.",
+        "publicationDate": "2000",
+        "journal": "Science",
+        "firstPage": "2185",
+        "lastPage": "2195",
+        "volume": "287"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000312",
+              "source": "Proteomes",
+              "id": "UP000000803"
+            }
+          ],
+          "value": "Berkeley",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000312",
+          "source": "Proteomes",
+          "id": "UP000000803"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "12537572",
+        "citationType": "journal article",
+        "authors": [
+          "Misra S.",
+          "Crosby M.A.",
+          "Mungall C.J.",
+          "Matthews B.B.",
+          "Campbell K.S.",
+          "Hradecky P.",
+          "Huang Y.",
+          "Kaminker J.S.",
+          "Millburn G.H.",
+          "Prochnik S.E.",
+          "Smith C.D.",
+          "Tupy J.L.",
+          "Whitfield E.J.",
+          "Bayraktaroglu L.",
+          "Berman B.P.",
+          "Bettencourt B.R.",
+          "Celniker S.E.",
+          "de Grey A.D.N.J.",
+          "Drysdale R.A.",
+          "Harris N.L.",
+          "Richter J.",
+          "Russo S.",
+          "Schroeder A.J.",
+          "Shu S.Q.",
+          "Stapleton M.",
+          "Yamada C.",
+          "Ashburner M.",
+          "Gelbart W.M.",
+          "Rubin G.M.",
+          "Lewis S.E."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "12537572"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1186/gb-2002-3-12-research0083"
+          }
+        ],
+        "title": "Annotation of the Drosophila melanogaster euchromatic genome: a systematic review.",
+        "publicationDate": "2002",
+        "journal": "Genome Biol.",
+        "firstPage": "RESEARCH0083.1",
+        "lastPage": "RESEARCH0083.22",
+        "volume": "3"
+      },
+      "referencePositions": [
+        "GENOME REANNOTATION"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000312",
+              "source": "Proteomes",
+              "id": "UP000000803"
+            }
+          ],
+          "value": "Berkeley",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000312",
+          "source": "Proteomes",
+          "id": "UP000000803"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "27643701",
+        "citationType": "journal article",
+        "authors": [
+          "Phatarphekar A.",
+          "Rokita S.E."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "27643701"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1002/pro.3044"
+          }
+        ],
+        "title": "Functional analysis of iodotyrosine deiodinase from drosophila melanogaster.",
+        "publicationDate": "2016",
+        "journal": "Protein Sci.",
+        "firstPage": "2187",
+        "lastPage": "2195",
+        "volume": "25"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "CATALYTIC ACTIVITY",
+        "BIOPHYSICOCHEMICAL PROPERTIES",
+        "COFACTOR",
+        "MUTAGENESIS OF GLU-154; TYR-158 AND LYS-179"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "29764939",
+        "citationType": "journal article",
+        "authors": [
+          "Phatarphekar A.",
+          "Su Q.",
+          "Eun S.H.",
+          "Chen X.",
+          "Rokita S.E."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "29764939"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1074/jbc.ra118.003364"
+          }
+        ],
+        "title": "The importance of a halotyrosine dehalogenase for Drosophila fertility.",
+        "publicationDate": "2018",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "10314",
+        "lastPage": "10321",
+        "volume": "293"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "TISSUE SPECIFICITY",
+        "DISRUPTION PHENOTYPE",
+        "MUTAGENESIS OF GLU-154"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AE014296",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ACZ94685.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AE014296",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "QJC18614.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_001163414.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NM_001169943.1"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_001369045.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NM_001382155.1"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "E1JIB2",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "E1JIB2",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PeptideAtlas",
+      "id": "E1JIB2",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblMetazoa",
+      "id": "FBtr0475275",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "FBpp0423399"
+        },
+        {
+          "key": "GeneId",
+          "value": "FBgn0286980"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblMetazoa",
+      "id": "FBtr0475279",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "FBpp0423404"
+        },
+        {
+          "key": "GeneId",
+          "value": "FBgn0286980"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "39242",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "dme:Dmel_CG46438",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "AGR",
+      "id": "FB:FBgn0286980",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "CTD",
+      "id": "389434",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "FlyBase",
+      "id": "FBgn0286980",
+      "properties": [
+        {
+          "key": "GeneName",
+          "value": "Iyd"
+        }
+      ]
+    },
+    {
+      "database": "VEuPathDB",
+      "id": "VectorBase:FBgn0286980",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_403487_0_0_1",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AANWLYI",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OrthoDB",
+      "id": "41362at2759",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BRENDA",
+      "id": "1.21.1.1",
+      "properties": [
+        {
+          "key": "OrganismId",
+          "value": "1994"
+        }
+      ]
+    },
+    {
+      "database": "Reactome",
+      "id": "R-DME-209968",
+      "properties": [
+        {
+          "key": "PathwayName",
+          "value": "Thyroxine biosynthesis"
+        }
+      ]
+    },
+    {
+      "database": "BioGRID-ORCS",
+      "id": "39242",
+      "properties": [
+        {
+          "key": "hits",
+          "value": "0 hits in 1 CRISPR screen"
+        }
+      ]
+    },
+    {
+      "database": "GenomeRNAi",
+      "id": "39242",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PRO",
+      "id": "PR:E1JIB2",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000000803",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome 3L"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005886",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:plasma membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0010181",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:FMN binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "27643701"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0140616",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:iodotyrosine deiodinase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:FlyBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "27643701"
+        },
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "38748578"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0016491",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:oxidoreductase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:1905516",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:positive regulation of fertilization"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "29764939"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd02144",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "iodotyrosine_dehalogenase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "3.40.109.10:FF:000004",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Iodotyrosine deiodinase 1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.40.109.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "NADH Oxidase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR029479",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Nitroreductase"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR000415",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Nitroreductase-like"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR050627",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Nitroreductase/BluB"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR23026:SF90",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "IODOTYROSINE DEIODINASE 1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR23026",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "NADPH NITROREDUCTASE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00881",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Nitroreductase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF55469",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FMN-dependent nitroreductase-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MDVDELISSSKLLKHWPSLFITLALIWIVKRLFFKGNRVLKTYNLDEQVEEEVEHFADLGDELQPALEDKPHVPFVPGQNLNPNGAKRLYELMRGRRSIRSFNSHPKPDLSVIEDCIRAAGTAPSGAHTEPWTYCVVQEPELKRSIREIVEQEELVNYSQRMHPQWVTDLRPLQTNHVKEYLTEAPYLILIFKQTYGLSENGKRMRRHYYNEISTSIAAGILLCALQAAGLASLVTTPLNCGPALRNLLGRPVNEKLLILLPVGYPKDGCTVPDLARKNLSNIMVTF",
+    "length": 287,
+    "molWeight": 32597,
+    "crc64": "D7128DE1D178EC7C",
+    "md5": "E5B73042FD3DBA01DA56D01E8FED6909"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "CATALYTIC ACTIVITY": 5,
+      "COFACTOR": 1,
+      "BIOPHYSICOCHEMICAL PROPERTIES": 1,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "TISSUE SPECIFICITY": 1,
+      "DISRUPTION PHENOTYPE": 1,
+      "MISCELLANEOUS": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Transmembrane": 1,
+      "Binding site": 13,
+      "Mutagenesis": 3
+    },
+    "uniParcId": "UPI00004836BD"
+  }
+}

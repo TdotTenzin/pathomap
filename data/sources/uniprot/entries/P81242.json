@@ -1,0 +1,263 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "P81242",
+  "uniProtkbId": "NHE1_BACCE",
+  "entryAudit": {
+    "firstPublicDate": "2002-05-10",
+    "lastAnnotationUpdateDate": "2026-09-02",
+    "lastSequenceUpdateDate": "2000-06-01",
+    "entryVersion": 54,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 2.0,
+  "organism": {
+    "scientificName": "Bacillus cereus",
+    "taxonId": 1396,
+    "lineage": [
+      "Bacteria",
+      "Bacillati",
+      "Bacillota",
+      "Bacilli",
+      "Caryophanales",
+      "Bacillaceae",
+      "Bacillus",
+      "Bacillus cereus group"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Non-hemolytic enterotoxin 105 kDa component"
+      },
+      "shortNames": [
+        {
+          "value": "Nhe"
+        }
+      ],
+      "ecNumbers": [
+        {
+          "value": "3.4.24.-"
+        }
+      ]
+    },
+    "flag": "Fragment"
+  },
+  "comments": [
+    {
+      "texts": [
+        {
+          "value": "This protein is a metalloprotease with gelatinolytic and collagenolytic activity and is a component of the non-hemolytic enterotoxin complex (NHE)"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "COFACTOR",
+      "cofactors": [
+        {
+          "name": "Zn(2+)",
+          "cofactorCrossReference": {
+            "database": "ChEBI",
+            "id": "CHEBI:29105"
+          }
+        }
+      ],
+      "note": {
+        "texts": [
+          {
+            "value": "Binds 1 zinc ion."
+          }
+        ]
+      }
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 91,
+          "modifier": "OUTSIDE"
+        }
+      },
+      "description": "Non-hemolytic enterotoxin 105 kDa component",
+      "featureId": "PRO_0000078244"
+    },
+    {
+      "type": "Non-terminal residue",
+      "location": {
+        "start": {
+          "value": 91,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 91,
+          "modifier": "EXACT"
+        }
+      },
+      "description": ""
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0903",
+      "category": "Technical term",
+      "name": "Direct protein sequencing"
+    },
+    {
+      "id": "KW-0260",
+      "category": "Molecular function",
+      "name": "Enterotoxin"
+    },
+    {
+      "id": "KW-0378",
+      "category": "Molecular function",
+      "name": "Hydrolase"
+    },
+    {
+      "id": "KW-0479",
+      "category": "Ligand",
+      "name": "Metal-binding"
+    },
+    {
+      "id": "KW-0482",
+      "category": "Molecular function",
+      "name": "Metalloprotease"
+    },
+    {
+      "id": "KW-0645",
+      "category": "Molecular function",
+      "name": "Protease"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0800",
+      "category": "Molecular function",
+      "name": "Toxin"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    },
+    {
+      "id": "KW-0862",
+      "category": "Ligand",
+      "name": "Zinc"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "10499286",
+        "citationType": "journal article",
+        "authors": [
+          "Lund T.",
+          "Granum P.E."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "10499286"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1111/j.1574-6968.1999.tb08699.x"
+          }
+        ],
+        "title": "The 105-kDa protein component of Bacillus cereus non-haemolytic enterotoxin (Nhe) is a metalloprotease with gelatinolytic and collagenolytic activity.",
+        "publicationDate": "1999",
+        "journal": "FEMS Microbiol. Lett.",
+        "firstPage": "355",
+        "lastPage": "361",
+        "volume": "178"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 41-49",
+        "PROTEIN SEQUENCE OF 1-40 AND 50-91"
+      ],
+      "referenceComments": [
+        {
+          "value": "1230-88",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "AlphaFoldDB",
+      "id": "P81242",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "P81242",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "EEKVPYNVLKTKPVGIEKSVDEVGHISKVDETLSFQERLKGDFSQRPASITKKTAVKQVKESYSMADLNKMNDRELVETLGSIKWHQYTDL",
+    "length": 91,
+    "molWeight": 10412,
+    "crc64": "F71A76E615253C6C",
+    "md5": "022C9821E56DA42652A2122899511898"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "COFACTOR": 1,
+      "SUBCELLULAR LOCATION": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Non-terminal residue": 1
+    },
+    "uniParcId": "UPI0000130031"
+  }
+}

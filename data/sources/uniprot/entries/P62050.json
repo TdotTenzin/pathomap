@@ -1,0 +1,1299 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "P62050",
+  "uniProtkbId": "LDH_CORDI",
+  "entryAudit": {
+    "firstPublicDate": "2004-06-21",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2004-06-21",
+    "entryVersion": 131,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 3.0,
+  "organism": {
+    "scientificName": "Corynebacterium diphtheriae (strain ATCC 700971 / NCTC 13129 / Biotype gravis)",
+    "taxonId": 257309,
+    "lineage": [
+      "Bacteria",
+      "Bacillati",
+      "Actinomycetota",
+      "Actinomycetes",
+      "Mycobacteriales",
+      "Corynebacteriaceae",
+      "Corynebacterium"
+    ]
+  },
+  "proteinExistence": "3: Inferred from homology",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000255",
+            "source": "HAMAP-Rule",
+            "id": "MF_00488"
+          }
+        ],
+        "value": "L-lactate dehydrogenase"
+      },
+      "shortNames": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_00488"
+            }
+          ],
+          "value": "L-LDH"
+        }
+      ],
+      "ecNumbers": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_00488"
+            }
+          ],
+          "value": "1.1.1.27"
+        }
+      ]
+    }
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000255",
+            "source": "HAMAP-Rule",
+            "id": "MF_00488"
+          }
+        ],
+        "value": "ldh"
+      },
+      "orderedLocusNames": [
+        {
+          "value": "DIP2255"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_00488"
+            }
+          ],
+          "value": "Catalyzes the conversion of lactate to pyruvate"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "(S)-lactate + NAD(+) = pyruvate + NADH + H(+)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:23444"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15361"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:16651"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:57540"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:57945"
+          }
+        ],
+        "ecNumber": "1.1.1.27",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000255",
+            "source": "HAMAP-Rule",
+            "id": "MF_00488"
+          }
+        ]
+      }
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_00488"
+            }
+          ],
+          "value": "Allosterically activated by fructose 1,6-bisphosphate (FBP)"
+        }
+      ],
+      "commentType": "ACTIVITY REGULATION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_00488"
+            }
+          ],
+          "value": "Fermentation; pyruvate fermentation to lactate; (S)-lactate from pyruvate: step 1/1"
+        }
+      ],
+      "commentType": "PATHWAY"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_00488"
+            }
+          ],
+          "value": "Homotetramer"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255",
+                "source": "HAMAP-Rule",
+                "id": "MF_00488"
+              }
+            ],
+            "value": "Cytoplasm",
+            "id": "SL-0086"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_00488"
+            }
+          ],
+          "value": "Belongs to the LDH/MDH superfamily. LDH family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 318,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "L-lactate dehydrogenase",
+      "featureId": "PRO_0000168338"
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 179,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 179,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Proton acceptor",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_00488"
+        }
+      ]
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 17,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 17,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:57540"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_00488"
+        }
+      ],
+      "ligand": {
+        "name": "NAD(+)",
+        "id": "ChEBI:CHEBI:57540"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 38,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 38,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:57540"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_00488"
+        }
+      ],
+      "ligand": {
+        "name": "NAD(+)",
+        "id": "ChEBI:CHEBI:57540"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 43,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 43,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:57540"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_00488"
+        }
+      ],
+      "ligand": {
+        "name": "NAD(+)",
+        "id": "ChEBI:CHEBI:57540"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 69,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 69,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:57540"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_00488"
+        }
+      ],
+      "ligand": {
+        "name": "NAD(+)",
+        "id": "ChEBI:CHEBI:57540"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 83,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 84,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:57540"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_00488"
+        }
+      ],
+      "ligand": {
+        "name": "NAD(+)",
+        "id": "ChEBI:CHEBI:57540"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 86,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 86,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_00488"
+        }
+      ],
+      "ligand": {
+        "name": "substrate"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 92,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 92,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_00488"
+        }
+      ],
+      "ligand": {
+        "name": "substrate"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 105,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 105,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:57540"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_00488"
+        }
+      ],
+      "ligand": {
+        "name": "NAD(+)",
+        "id": "ChEBI:CHEBI:57540"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 122,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 124,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:57540"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_00488"
+        }
+      ],
+      "ligand": {
+        "name": "NAD(+)",
+        "id": "ChEBI:CHEBI:57540"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 124,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 127,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_00488"
+        }
+      ],
+      "ligand": {
+        "name": "substrate"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 147,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 147,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:57540"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_00488"
+        }
+      ],
+      "ligand": {
+        "name": "NAD(+)",
+        "id": "ChEBI:CHEBI:57540"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 152,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 155,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_00488"
+        }
+      ],
+      "ligand": {
+        "name": "substrate"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 157,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 157,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:32966"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_00488"
+        }
+      ],
+      "ligand": {
+        "name": "beta-D-fructose 1,6-bisphosphate",
+        "id": "ChEBI:CHEBI:32966",
+        "note": "allosteric activator"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 172,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 172,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:32966"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_00488"
+        }
+      ],
+      "ligand": {
+        "name": "beta-D-fructose 1,6-bisphosphate",
+        "id": "ChEBI:CHEBI:32966",
+        "note": "allosteric activator"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 232,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 232,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_00488"
+        }
+      ],
+      "ligand": {
+        "name": "substrate"
+      }
+    },
+    {
+      "type": "Modified residue",
+      "location": {
+        "start": {
+          "value": 223,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 223,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Phosphotyrosine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_00488"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0021",
+      "category": "Molecular function",
+      "name": "Allosteric enzyme"
+    },
+    {
+      "id": "KW-0963",
+      "category": "Cellular component",
+      "name": "Cytoplasm"
+    },
+    {
+      "id": "KW-0520",
+      "category": "Ligand",
+      "name": "NAD"
+    },
+    {
+      "id": "KW-0560",
+      "category": "Molecular function",
+      "name": "Oxidoreductase"
+    },
+    {
+      "id": "KW-0597",
+      "category": "PTM",
+      "name": "Phosphoprotein"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "14602910",
+        "citationType": "journal article",
+        "authors": [
+          "Cerdeno-Tarraga A.-M.",
+          "Efstratiou A.",
+          "Dover L.G.",
+          "Holden M.T.G.",
+          "Pallen M.J.",
+          "Bentley S.D.",
+          "Besra G.S.",
+          "Churcher C.M.",
+          "James K.D.",
+          "De Zoysa A.",
+          "Chillingworth T.",
+          "Cronin A.",
+          "Dowd L.",
+          "Feltwell T.",
+          "Hamlin N.",
+          "Holroyd S.",
+          "Jagels K.",
+          "Moule S.",
+          "Quail M.A.",
+          "Rabbinowitsch E.",
+          "Rutherford K.M.",
+          "Thomson N.R.",
+          "Unwin L.",
+          "Whitehead S.",
+          "Barrell B.G.",
+          "Parkhill J."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "14602910"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1093/nar/gkg874"
+          }
+        ],
+        "title": "The complete genome sequence and analysis of Corynebacterium diphtheriae NCTC13129.",
+        "publicationDate": "2003",
+        "journal": "Nucleic Acids Res.",
+        "firstPage": "6516",
+        "lastPage": "6523",
+        "volume": "31"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 700971 / NCTC 13129 / Biotype gravis",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "BX248360",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAE50779.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_010935705.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_002935.2"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "P62050",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "P62050",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "257309.DIP2255",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "cdi:DIP2255",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_045401_1_1_11",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AADYYCD",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "UniPathway",
+      "id": "UPA00554",
+      "properties": [
+        {
+          "key": "RectionId",
+          "value": "UER00611"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000002198",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005737",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cytoplasm"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0004459",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:L-lactate dehydrogenase (NAD+) activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-UniRule"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0006096",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:glycolytic process"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-UniRule"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0006089",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:lactate metabolic process"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:TreeGrafter"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd05291",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "HicDH_like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "3.40.50.720:FF:000018",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Malate dehydrogenase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.90.110.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Lactate dehydrogenase/glycoside hydrolase, family 4, C-terminal"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.40.50.720",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "NAD(P)-binding Rossmann-like Domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "HAMAP",
+      "id": "MF_00488",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Lactate_dehydrog"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR001557",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "L-lactate/malate_DH"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR011304",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "L-lactate_DH"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR018177",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "L-lactate_DH_AS"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR022383",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Lactate/malate_DH_C"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR001236",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Lactate/malate_DH_N"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR015955",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Lactate_DH/Glyco_Ohase_4_C"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036291",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "NAD(P)-bd_dom_sf"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "TIGR01771",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "L-LDH-NAD"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF000824",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PRK00066.1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF004863",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PRK06223.1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR43128",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "L-2-HYDROXYCARBOXYLATE DEHYDROGENASE (NAD(P)(+))"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR43128:SF16",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "L-LACTATE DEHYDROGENASE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF02866",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Ldh_1_C"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00056",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Ldh_1_N"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PIRSF",
+      "id": "PIRSF000102",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Lac_mal_DH"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR00086",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LLDHDRGNASE"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF56327",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LDH C-terminal domain-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF51735",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "NAD(P)-binding Rossmann-fold domains"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS00064",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "L_LDH"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MKNIVGNKVVLIGAGDVGVAYAYALVNQGTVDHLAIIDIDEKKLEGNVMDLNHGVVWASSRTKVSKGTYADCEDAAVVVICAGAAQKPGETRLQLVDKNMKIMKSIVDNVMANNFDGIFLVASNPVDILTYAVWKYSGFDHHRVIGSGTVLDSARFRYMLGERYDVAPSSIHAYIIGEHGDTELPVLSSATVAGVSMRRQLQKNPGLEEELEKIFEETRDAAYTIIDAKGSTSYGIGMGLARITRAIIHNQEVALPVSAYLEGQYGQEDIYIGTPAVINRAGINRVVELELTAHEMERFIHSANTLREVQEKFFPPAN",
+    "length": 318,
+    "molWeight": 34757,
+    "crc64": "28CD385DFBE65A77",
+    "md5": "246ADB0E5663B1BD4978CE10C5C156B7"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "CATALYTIC ACTIVITY": 1,
+      "ACTIVITY REGULATION": 1,
+      "PATHWAY": 1,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Active site": 1,
+      "Binding site": 15,
+      "Modified residue": 1
+    },
+    "uniParcId": "UPI0000213CD1"
+  }
+}

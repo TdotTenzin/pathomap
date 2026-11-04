@@ -1,0 +1,574 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "Q5PEX4",
+  "uniProtkbId": "PIPB2_SALPA",
+  "entryAudit": {
+    "firstPublicDate": "2007-02-20",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2005-01-04",
+    "entryVersion": 84,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 2.0,
+  "organism": {
+    "scientificName": "Salmonella paratyphi A (strain ATCC 9150 / SARB42)",
+    "taxonId": 295319,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Gammaproteobacteria",
+      "Enterobacterales",
+      "Enterobacteriaceae",
+      "Salmonella"
+    ]
+  },
+  "proteinExistence": "3: Inferred from homology",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Secreted effector protein PipB2"
+      }
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "Type III effector PipB2"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "pipB2"
+      },
+      "orderedLocusNames": [
+        {
+          "value": "SPA2636"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250"
+            }
+          ],
+          "value": "Effector proteins function to alter host cell physiology and promote bacterial survival in host tissues. Involved in the reorganization of late endosome/lysosome (LE/Lys) compartments in mammalian cells. Necessary and sufficient to link kinesin-1 onto the Salmonella-containing vacuole (SCV) membrane. Required for centrifugal extension of lysosomal glycoprotein-rich membrane tubules, known as Salmonella-induced filaments (Sifs), away from the SCV and toward the cell periphery. Required for virulence, but not for intracellular survival and replication in phagocytic cells (By similarity)"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250"
+            }
+          ],
+          "value": "Interacts with the host kinesin light chain (KLC), a subunit of the kinesin-1 motor complex"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "note": {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250"
+              }
+            ],
+            "value": "Secreted via the type III secretion system 2 (SPI-2 T3SS), and delivered into the host cell"
+          }
+        ]
+      },
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250"
+              }
+            ],
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        },
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250"
+              }
+            ],
+            "value": "Host membrane",
+            "id": "SL-0380"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250"
+            }
+          ],
+          "value": "Contains various tandem pentapeptide repeats in the C-terminal region. The pentapeptide motif is required to efficiently recruit kinesin-1. No position is completely conserved in these repeats, whose consensus sequence is A-[DN]-[FLM]-X-X. The C-terminal 38 amino acid residues, specifically, the C-terminal motif LFNEF, are required for peripheral localization of PipB2 and redistribution of lysosomal-associated membrane protein (LAMP). The N-terminal 225 amino acid residues are sufficient for type III translocation and association with Sifs and SCVs, but not accumulation in peripheral vesicles (By similarity)"
+        }
+      ],
+      "commentType": "DOMAIN"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 350,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Secreted effector protein PipB2",
+      "featureId": "PRO_0000278297"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 162,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 201,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Pentapeptide repeat 1"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 202,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 241,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Pentapeptide repeat 2"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 247,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 286,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Pentapeptide repeat 3"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 287,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 326,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Pentapeptide repeat 4"
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-1043",
+      "category": "Cellular component",
+      "name": "Host membrane"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-0677",
+      "category": "Domain",
+      "name": "Repeat"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "15531882",
+        "citationType": "journal article",
+        "authors": [
+          "McClelland M.",
+          "Sanderson K.E.",
+          "Clifton S.W.",
+          "Latreille P.",
+          "Porwollik S.",
+          "Sabo A.",
+          "Meyer R.",
+          "Bieri T.",
+          "Ozersky P.",
+          "McLellan M.",
+          "Harkins C.R.",
+          "Wang C.",
+          "Nguyen C.",
+          "Berghoff A.",
+          "Elliott G.",
+          "Kohlberg S.",
+          "Strong C.",
+          "Du F.",
+          "Carter J.",
+          "Kremizki C.",
+          "Layman D.",
+          "Leonard S.",
+          "Sun H.",
+          "Fulton L.",
+          "Nash W.",
+          "Miner T.",
+          "Minx P.",
+          "Delehaunty K.",
+          "Fronick C.",
+          "Magrini V.",
+          "Nhan M.",
+          "Warren W.",
+          "Florea L.",
+          "Spieth J.",
+          "Wilson R.K."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15531882"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/ng1470"
+          }
+        ],
+        "title": "Comparison of genome degradation in Paratyphi A and Typhi, human-restricted serovars of Salmonella enterica that cause typhoid.",
+        "publicationDate": "2004",
+        "journal": "Nat. Genet.",
+        "firstPage": "1268",
+        "lastPage": "1274",
+        "volume": "36"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 9150 / SARB42",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "CP000026",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAV78500.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_011233153.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_006511.1"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q5PEX4",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BMRB",
+      "id": "Q5PEX4",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "Q5PEX4",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "spt:SPA2636",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_067808_0_0_6",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "ADCDGAN",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0033644",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:host cell membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.160.20.80",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "E3 ubiquitin-protein ligase SopA"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.30.2450.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Secreted effector protein pipB2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR001646",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "5peptide_repeat"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR048984",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PipB2_N"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF011743",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "pipB2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR47485",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "THYLAKOID LUMENAL 17.4 KDA PROTEIN, CHLOROPLASTIC"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR47485:SF1",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "THYLAKOID LUMENAL 17.4 KDA PROTEIN, CHLOROPLASTIC"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00805",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Pentapeptide"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "3"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF21684",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PipB2_N"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF141571",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Pentapeptide repeat-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MQRSLDSLAGMATSAFGAGTSAAMRQATSPKTILEYIINFFTCGGIRRRNETQYQELIETMAETLKSTMPDRGAPLPENIILDDMDGCRVEFNLPGENNEAGQVIVRVSKGDHSETREIPLVSFEKICRALLFRCEFSLPQDSVILTAQGGMNLKGAVLTGANLTAENLCDADLSGANLEGAVLFMADCEGANFKGANLSGTSLGDSNFKNACLEDGIMCGATLDHANLTGANLQHASLLGCSMIECNCSGANMDHTNLSGATLIRADMSGATLQGATIMAAIMEDAVLTRANLRKASFISTNLDGADLAEANLNNTCFKDCTLTHLRTEDATMSTSTQTLFNEFYSENI",
+    "length": 350,
+    "molWeight": 37308,
+    "crc64": "9C9E6CE13007CC79",
+    "md5": "D082F9E352F747284FAB8394D0A04666"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "DOMAIN": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Domain": 4
+    },
+    "uniParcId": "UPI000048EFA9"
+  }
+}

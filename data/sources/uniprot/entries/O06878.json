@@ -1,0 +1,587 @@
+{
+  "entryType": "UniProtKB unreviewed (TrEMBL)",
+  "primaryAccession": "O06878",
+  "uniProtkbId": "O06878_BORBG",
+  "entryAudit": {
+    "firstPublicDate": "1997-07-01",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "1998-01-01",
+    "entryVersion": 72,
+    "sequenceVersion": 2
+  },
+  "annotationScore": 2.0,
+  "organism": {
+    "scientificName": "Borreliella burgdorferi",
+    "commonName": "Lyme disease spirochete",
+    "synonyms": [
+      "Borrelia burgdorferi"
+    ],
+    "taxonId": 139,
+    "evidences": [
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "EMBL",
+        "id": "AAC45733.1"
+      }
+    ],
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Spirochaetota",
+      "Spirochaetia",
+      "Spirochaetales",
+      "Borreliaceae",
+      "Borreliella"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "RuleBase",
+            "id": "RU363105"
+          }
+        ],
+        "value": "Variable large protein"
+      }
+    }
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "AAC45733.1"
+          }
+        ],
+        "value": "vlsE"
+      }
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "ARBA",
+              "id": "ARBA00003932"
+            },
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "RuleBase",
+              "id": "RU363105"
+            }
+          ],
+          "value": "The Vlp and Vsp proteins are antigenically distinct proteins, only one vlp or vsp gene is transcriptionally active at any one time. Switching between these genes is a mechanism of host immune response evasion"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "ARBA",
+                "id": "ARBA00004459"
+              },
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "RuleBase",
+                "id": "RU363105"
+              }
+            ],
+            "value": "Cell outer membrane",
+            "id": "SL-0040"
+          },
+          "topology": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "ARBA",
+                "id": "ARBA00004459"
+              },
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "RuleBase",
+                "id": "RU363105"
+              }
+            ],
+            "value": "Lipid-anchor",
+            "id": "SL-9901"
+          }
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 18,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "RuleBase",
+          "id": "RU363105"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 19,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 356,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Variable large protein",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "RuleBase",
+          "id": "RU363105"
+        }
+      ],
+      "featureId": "PRO_5051648267"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 91,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 111,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 98,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 111,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Polar residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1L8W"
+        }
+      ],
+      "id": "KW-0002",
+      "category": "Technical term",
+      "name": "3D-structure"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00023237"
+        },
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "RuleBase",
+          "id": "RU363105"
+        }
+      ],
+      "id": "KW-0998",
+      "category": "Cellular component",
+      "name": "Cell outer membrane"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00023288"
+        },
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "RuleBase",
+          "id": "RU363105"
+        }
+      ],
+      "id": "KW-0449",
+      "category": "PTM",
+      "name": "Lipoprotein"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00023136"
+        },
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "RuleBase",
+          "id": "RU363105"
+        }
+      ],
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00023139"
+        },
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "RuleBase",
+          "id": "RU363105"
+        }
+      ],
+      "id": "KW-0564",
+      "category": "PTM",
+      "name": "Palmitate"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022729"
+        },
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "RuleBase",
+          "id": "RU363105"
+        }
+      ],
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "CI-DT2IHHEJDJ9ON",
+        "citationType": "submission",
+        "authors": [
+          "Zhang J.-R.",
+          "Hardham J.M.",
+          "Barbour A.G.",
+          "Norris S.J."
+        ],
+        "publicationDate": "OCT-1996",
+        "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAC45733.1"
+            }
+          ],
+          "value": "B31",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AAC45733.1"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "9108482",
+        "citationType": "journal article",
+        "authors": [
+          "Zhang J.R.",
+          "Hardham J.M.",
+          "Barbour A.G.",
+          "Norris S.J."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9108482"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/S0092-8674(00)80206-8"
+          }
+        ],
+        "title": "Antigenic variation in Lyme disease borreliae by promiscuous recombination of VMP-like sequence cassettes.",
+        "publicationDate": "1997",
+        "journal": "Cell",
+        "firstPage": "275",
+        "lastPage": "285",
+        "volume": "89"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAC45733.1"
+            }
+          ],
+          "value": "B31",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AAC45733.1"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "11923306",
+        "citationType": "journal article",
+        "authors": [
+          "Eicken C.",
+          "Sharma V.",
+          "Klabunde T.",
+          "Lawrenz M.B.",
+          "Hardham J.M.",
+          "Norris S.J.",
+          "Sacchettini J.C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11923306"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1074/jbc.m201547200"
+          }
+        ],
+        "title": "Crystal structure of Lyme disease variable surface antigen VlsE of Borrelia burgdorferi.",
+        "publicationDate": "2002",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "21691",
+        "lastPage": "21696",
+        "volume": "277"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY (2.30 ANGSTROMS) OF 21-356"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1L8W"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "U76405",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAC45733.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "1L8W",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.30 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B/C/D=21-356"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "O06878",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "O06878",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EvolutionaryTrace",
+      "id": "O06878",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009279",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cell outer membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR000680",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Borrelia_lipo"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00921",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Lipoprotein_2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF74748",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Variable surface antigen VlsE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MKKISSAILLTTFFVFINCKSQVADKDDPTNKFYQSVIQLGNGFLDVFTSFGGLVAEAFGFKSDPKKSDVKTYFTTVAAKLEKTKTDLNSLPKEKSDISSTTGKPDSTGSVGTAVEGAIKEVSELLDKLVKAVKTAEGASSGTAAIGEVVADADAAKVADKASVKGIAKGIKEIVEAAGGSEKLKAVAAAKGENNKGAGKLFGKAGAAAHGDSEAASKAAGAVSAVSGEQILSAIVTAADAAEQDGKKPEEAKNPIAAAIGDKDGGAEFGQDEMKKDDQIAAAIALRGMAKDGKFAVKDGEKEKAEGAIKGAAESAVRKVLGAITGLIGDAVSSGLRKVGDSVKAASKETPPALNK",
+    "length": 356,
+    "molWeight": 36013,
+    "crc64": "304035731B2AA2BE",
+    "md5": "CC52C7C2D8635EB253AC235AD8B57192"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBCELLULAR LOCATION": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1,
+      "Region": 1,
+      "Compositional bias": 1
+    },
+    "uniParcId": "UPI00000B4444"
+  }
+}

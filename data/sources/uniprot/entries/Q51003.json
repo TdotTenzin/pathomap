@@ -1,0 +1,345 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "Q51003",
+  "uniProtkbId": "VAPD_NEIGO",
+  "entryAudit": {
+    "firstPublicDate": "1999-07-15",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "1996-11-01",
+    "entryVersion": 70,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 2.0,
+  "organism": {
+    "scientificName": "Neisseria gonorrhoeae",
+    "taxonId": 485,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Betaproteobacteria",
+      "Neisseriales",
+      "Neisseriaceae",
+      "Neisseria"
+    ]
+  },
+  "proteinExistence": "3: Inferred from homology",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Endoribonuclease VapD homolog"
+      },
+      "ecNumbers": [
+        {
+          "value": "3.1.-.-"
+        }
+      ]
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "Virulence-associated protein D homolog"
+        }
+      }
+    ]
+  },
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250"
+            }
+          ],
+          "value": "Cleaves ssRNA, mostly between U:A"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250"
+            }
+          ],
+          "value": "Homodimer"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the VapD ribonuclease family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 92,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Endoribonuclease VapD homolog",
+      "featureId": "PRO_0000217274"
+    }
+  ],
+  "geneLocations": [
+    {
+      "value": "pJD1",
+      "geneEncodingType": "Plasmid"
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0378",
+      "category": "Molecular function",
+      "name": "Hydrolase"
+    },
+    {
+      "id": "KW-0540",
+      "category": "Molecular function",
+      "name": "Nuclease"
+    },
+    {
+      "id": "KW-0614",
+      "category": "Technical term",
+      "name": "Plasmid"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "2991186",
+        "citationType": "journal article",
+        "authors": [
+          "Korch C.",
+          "Hagblom P.",
+          "Oehman H.",
+          "Goeransson M.",
+          "Normark S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "2991186"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.163.2.430-438.1985"
+          }
+        ],
+        "title": "Cryptic plasmid of Neisseria gonorrhoeae: complete nucleotide sequence and genetic organization.",
+        "publicationDate": "1985",
+        "journal": "J. Bacteriol.",
+        "firstPage": "430",
+        "lastPage": "438",
+        "volume": "163"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "M10316",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA88204.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_003690225.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_001377.1"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q51003",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "Q51003",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "66754515",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AFKVEDW",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0004518",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:nuclease activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0003723",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:RNA binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.30.70.240",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR016368",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "VapD"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR019199",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Virulence_VapD/CRISPR_Cas2"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF09827",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CRISPR_Cas2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PIRSF",
+      "id": "PIRSF002882",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "VapD"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MYAISFDLVVADTAQNHPKGISQAYADIGYTLRKFGFTRIQGSLYTCQNEDMANLFSAINELKALPWFPSSVRDIRAFRIEQWSDFTSLVKS",
+    "length": 92,
+    "molWeight": 10474,
+    "crc64": "CD695FE70D418492",
+    "md5": "4919E78CA3AEDB782D3CF53C7561BE0E"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBUNIT": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1
+    },
+    "uniParcId": "UPI0000138113"
+  }
+}

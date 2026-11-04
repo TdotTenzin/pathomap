@@ -1,0 +1,1539 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "O14170",
+  "uniProtkbId": "POP2_SCHPO",
+  "entryAudit": {
+    "firstPublicDate": "1998-07-15",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "1998-01-01",
+    "entryVersion": 185,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 5.0,
+  "organism": {
+    "scientificName": "Schizosaccharomyces pombe (strain 972 / ATCC 24843)",
+    "commonName": "Fission yeast",
+    "taxonId": 284812,
+    "lineage": [
+      "Eukaryota",
+      "Fungi",
+      "Dikarya",
+      "Ascomycota",
+      "Taphrinomycotina",
+      "Schizosaccharomycetes",
+      "Schizosaccharomycetales",
+      "Schizosaccharomycetaceae",
+      "Schizosaccharomyces"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "WD repeat-containing protein pop2"
+      }
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "Proteolysis factor sud1"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "pop2"
+      },
+      "synonyms": [
+        {
+          "value": "sud1"
+        }
+      ],
+      "orfNames": [
+        {
+          "value": "SPAC4D7.03"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "12167173"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "14970237"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "9653157"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "9990507"
+            }
+          ],
+          "value": "Involved in maintenance of ploidy through proteasome dependent degradation of CDK inhibitor rum1 and S-phase initiator cdc18. Functions as a recognition factor for rum1 and cdc18, which are subsequently ubiquitinated and targeted to the 26S proteasome for degradation. Together with pop1, required for cig2 instability during G2 and M phase and cig2 degradation in exponentially growing cells"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "12167173"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "9990507"
+            }
+          ],
+          "value": "Homodimer and heterodimer with pop1. Binds to cul1, pip1 and phosphorylated cdc18"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "INTERACTION",
+      "interactions": [
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "O14170",
+            "intActId": "EBI-1185414"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "P41411",
+            "geneName": "cdc18",
+            "intActId": "EBI-1207853"
+          },
+          "numberOfExperiments": 3,
+          "organismDiffer": false
+        },
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "O14170",
+            "intActId": "EBI-1185414"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "O13790",
+            "geneName": "cul1",
+            "intActId": "EBI-1154807"
+          },
+          "numberOfExperiments": 3,
+          "organismDiffer": false
+        },
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "O14170",
+            "intActId": "EBI-1185414"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "P87060",
+            "geneName": "pop1",
+            "intActId": "EBI-1185389"
+          },
+          "numberOfExperiments": 12,
+          "organismDiffer": false
+        },
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "O14170",
+            "intActId": "EBI-1185414"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "Q9Y709",
+            "geneName": "skp1",
+            "intActId": "EBI-1172248"
+          },
+          "numberOfExperiments": 3,
+          "organismDiffer": false
+        }
+      ]
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "12167173"
+              }
+            ],
+            "value": "Cytoplasm",
+            "id": "SL-0086"
+          }
+        },
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "12167173"
+              }
+            ],
+            "value": "Nucleus",
+            "id": "SL-0191"
+          }
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 703,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "WD repeat-containing protein pop2",
+      "featureId": "PRO_0000051140"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 236,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 283,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "F-box",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00080"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 389,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 417,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "WD 1"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 429,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 473,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "WD 2"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 505,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 533,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "WD 3"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 545,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 575,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "WD 4"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 587,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 615,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "WD 5"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 625,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 654,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "WD 6"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 170,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Interaction with pop1"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 73,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 156,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 180,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 27,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Polar residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 63,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 73,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Polar residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 156,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 178,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Polar residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0963",
+      "category": "Cellular component",
+      "name": "Cytoplasm"
+    },
+    {
+      "id": "KW-0539",
+      "category": "Cellular component",
+      "name": "Nucleus"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0677",
+      "category": "Domain",
+      "name": "Repeat"
+    },
+    {
+      "id": "KW-0833",
+      "category": "Biological process",
+      "name": "Ubl conjugation pathway"
+    },
+    {
+      "id": "KW-0853",
+      "category": "Domain",
+      "name": "WD repeat"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "10209119",
+        "citationType": "journal article",
+        "authors": [
+          "Wolf D.A.",
+          "McKeon F.",
+          "Jackson P.K."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "10209119"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/s0960-9822(99)80165-1"
+          }
+        ],
+        "title": "F-box/WD-repeat proteins pop1p and Sud1p/Pop2p form complexes that bind and direct the proteolysis of cdc18p.",
+        "publicationDate": "1999",
+        "journal": "Curr. Biol.",
+        "firstPage": "373",
+        "lastPage": "376",
+        "volume": "9"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [MRNA]",
+        "INTERACTION WITH POP1 AND CDC18"
+      ],
+      "referenceComments": [
+        {
+          "value": "972 / ATCC 24843",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "9653157",
+        "citationType": "journal article",
+        "authors": [
+          "Jallepalli P.V.",
+          "Tien D.",
+          "Kelly T.J."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9653157"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1073/pnas.95.14.8159"
+          }
+        ],
+        "title": "sud1+ targets cyclin-dependent kinase-phosphorylated Cdc18 and Rum1 proteins for degradation and stops unwanted diploidization in fission yeast.",
+        "publicationDate": "1998",
+        "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+        "firstPage": "8159",
+        "lastPage": "8164",
+        "volume": "95"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]",
+        "FUNCTION",
+        "INTERACTION WITH CDC18"
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "11859360",
+        "citationType": "journal article",
+        "authors": [
+          "Wood V.",
+          "Gwilliam R.",
+          "Rajandream M.A.",
+          "Lyne M.H.",
+          "Lyne R.",
+          "Stewart A.",
+          "Sgouros J.G.",
+          "Peat N.",
+          "Hayles J.",
+          "Baker S.G.",
+          "Basham D.",
+          "Bowman S.",
+          "Brooks K.",
+          "Brown D.",
+          "Brown S.",
+          "Chillingworth T.",
+          "Churcher C.M.",
+          "Collins M.",
+          "Connor R.",
+          "Cronin A.",
+          "Davis P.",
+          "Feltwell T.",
+          "Fraser A.",
+          "Gentles S.",
+          "Goble A.",
+          "Hamlin N.",
+          "Harris D.E.",
+          "Hidalgo J.",
+          "Hodgson G.",
+          "Holroyd S.",
+          "Hornsby T.",
+          "Howarth S.",
+          "Huckle E.J.",
+          "Hunt S.",
+          "Jagels K.",
+          "James K.D.",
+          "Jones L.",
+          "Jones M.",
+          "Leather S.",
+          "McDonald S.",
+          "McLean J.",
+          "Mooney P.",
+          "Moule S.",
+          "Mungall K.L.",
+          "Murphy L.D.",
+          "Niblett D.",
+          "Odell C.",
+          "Oliver K.",
+          "O'Neil S.",
+          "Pearson D.",
+          "Quail M.A.",
+          "Rabbinowitsch E.",
+          "Rutherford K.M.",
+          "Rutter S.",
+          "Saunders D.",
+          "Seeger K.",
+          "Sharp S.",
+          "Skelton J.",
+          "Simmonds M.N.",
+          "Squares R.",
+          "Squares S.",
+          "Stevens K.",
+          "Taylor K.",
+          "Taylor R.G.",
+          "Tivey A.",
+          "Walsh S.V.",
+          "Warren T.",
+          "Whitehead S.",
+          "Woodward J.R.",
+          "Volckaert G.",
+          "Aert R.",
+          "Robben J.",
+          "Grymonprez B.",
+          "Weltjens I.",
+          "Vanstreels E.",
+          "Rieger M.",
+          "Schaefer M.",
+          "Mueller-Auer S.",
+          "Gabel C.",
+          "Fuchs M.",
+          "Duesterhoeft A.",
+          "Fritzc C.",
+          "Holzer E.",
+          "Moestl D.",
+          "Hilbert H.",
+          "Borzym K.",
+          "Langer I.",
+          "Beck A.",
+          "Lehrach H.",
+          "Reinhardt R.",
+          "Pohl T.M.",
+          "Eger P.",
+          "Zimmermann W.",
+          "Wedler H.",
+          "Wambutt R.",
+          "Purnelle B.",
+          "Goffeau A.",
+          "Cadieu E.",
+          "Dreano S.",
+          "Gloux S.",
+          "Lelaure V.",
+          "Mottier S.",
+          "Galibert F.",
+          "Aves S.J.",
+          "Xiang Z.",
+          "Hunt C.",
+          "Moore K.",
+          "Hurst S.M.",
+          "Lucas M.",
+          "Rochet M.",
+          "Gaillardin C.",
+          "Tallada V.A.",
+          "Garzon A.",
+          "Thode G.",
+          "Daga R.R.",
+          "Cruzado L.",
+          "Jimenez J.",
+          "Sanchez M.",
+          "del Rey F.",
+          "Benito J.",
+          "Dominguez A.",
+          "Revuelta J.L.",
+          "Moreno S.",
+          "Armstrong J.",
+          "Forsburg S.L.",
+          "Cerutti L.",
+          "Lowe T.",
+          "McCombie W.R.",
+          "Paulsen I.",
+          "Potashkin J.",
+          "Shpakovski G.V.",
+          "Ussery D.",
+          "Barrell B.G.",
+          "Nurse P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11859360"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/nature724"
+          }
+        ],
+        "title": "The genome sequence of Schizosaccharomyces pombe.",
+        "publicationDate": "2002",
+        "journal": "Nature",
+        "firstPage": "871",
+        "lastPage": "880",
+        "volume": "415"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "972 / ATCC 24843",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "9990507",
+        "citationType": "journal article",
+        "authors": [
+          "Kominami K.",
+          "Ochotorena I.",
+          "Toda T."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9990507"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1046/j.1365-2443.1998.00225.x"
+          }
+        ],
+        "title": "Two F-box/WD-repeat proteins Pop1 and Pop2 form hetero- and homo-complexes together with cullin-1 in fission yeast SCF (Skip-cullin-1-F-box) ubiquitin ligase.",
+        "publicationDate": "1998",
+        "journal": "Genes Cells",
+        "firstPage": "721",
+        "lastPage": "735",
+        "volume": "3"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "SUBUNIT"
+      ],
+      "referenceComments": [
+        {
+          "value": "972 / ATCC 24843",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "12167173",
+        "citationType": "journal article",
+        "authors": [
+          "Seibert V.",
+          "Prohl C.",
+          "Schoultz I.",
+          "Rhee E.",
+          "Lopez R.",
+          "Abderazzaq K.",
+          "Zhou C.",
+          "Wolf D.A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "12167173"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1186/1471-2091-3-22"
+          }
+        ],
+        "title": "Combinatorial diversity of fission yeast SCF ubiquitin ligases by homo- and heterooligomeric assemblies of the F-box proteins Pop1p and Pop2p.",
+        "publicationDate": "2002",
+        "journal": "BMC Biochem.",
+        "firstPage": "22",
+        "lastPage": "22",
+        "volume": "3"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "SUBUNIT",
+        "SUBCELLULAR LOCATION"
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "14970237",
+        "citationType": "journal article",
+        "authors": [
+          "Yamano H.",
+          "Kominami K.",
+          "Harrison C.",
+          "Kitamura K.",
+          "Katayama S.",
+          "Dhut S.",
+          "Hunt T.",
+          "Toda T."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "14970237"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1074/jbc.m311060200"
+          }
+        ],
+        "title": "Requirement of the SCFPop1/Pop2 ubiquitin ligase for degradation of the fission yeast S phase cyclin Cig2.",
+        "publicationDate": "2004",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "18974",
+        "lastPage": "18980",
+        "volume": "279"
+      },
+      "referencePositions": [
+        "FUNCTION"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AF038867",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAB95480.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF064515",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAC39496.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "CU329670",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAB11275.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "T43557",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "T43557"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_594956.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NM_001020387.3"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "O14170",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "O14170",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BioGRID",
+      "id": "279932",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "73"
+        }
+      ]
+    },
+    {
+      "database": "FunCoup",
+      "id": "O14170",
+      "properties": [
+        {
+          "key": "Number of interactors",
+          "value": "142"
+        }
+      ]
+    },
+    {
+      "database": "IntAct",
+      "id": "O14170",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "6"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "284812.O14170",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "iPTMnet",
+      "id": "O14170",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PaxDb",
+      "id": "284812-O14170",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "2543514",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "spo:2543514",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PomBase",
+      "id": "SPAC4D7.03",
+      "properties": [
+        {
+          "key": "GeneName",
+          "value": "pop2"
+        }
+      ]
+    },
+    {
+      "database": "VEuPathDB",
+      "id": "FungiDB:SPAC4D7.03",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "KOG0274",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Eukaryota"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_000288_103_3_1",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "InParanoid",
+      "id": "O14170",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "ACEVFST",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PhylomeDB",
+      "id": "O14170",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PRO",
+      "id": "PR:O14170",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000002485",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome I"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005737",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cytoplasm"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0043224",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:nuclear SCF ubiquitin ligase complex"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISO:PomBase"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0019005",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:SCF ubiquitin ligase complex"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IPI:PomBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000353",
+          "source": "PubMed",
+          "id": "9990507"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:1990756",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:ubiquitin-like ligase-substrate adaptor activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:PomBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "10209119"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:1903467",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:negative regulation of mitotic DNA replication initiation"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:PomBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "9653157"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0031146",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:SCF-dependent proteasomal ubiquitin-dependent protein catabolic process"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISO:PomBase"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd00200",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "WD40"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "2.130.10.10:FF:001079",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cell division control protein 4"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "1.20.1280.50:FF:000116",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SCF ubiquitin ligase complex subunit"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.20.1280.50",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.130.10.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "YVTN repeat-like/Quinoprotein amine dehydrogenase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036047",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "F-box-like_dom_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR001810",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "F-box_dom"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR015943",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "WD40/YVTN_repeat-like_dom_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR020472",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "WD40_PAC1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR019775",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "WD40_repeat_CS"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036322",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "WD40_repeat_dom_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR001680",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "WD40_rpt"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR22847:SF637",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "WD REPEAT DOMAIN 5B"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR22847",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "WD40 REPEAT PROTEIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00646",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "F-box"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00400",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "WD40"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "6"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR00320",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "GPROTEINBRPT"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00256",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FBOX"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00320",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "WD40"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "7"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF81383",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "F-box domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF50978",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "WD40 repeat-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS50181",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FBOX"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS00678",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "WD_REPEATS_1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "3"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS50082",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "WD_REPEATS_2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "6"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS50294",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "WD_REPEATS_REGION"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MSLSRCPTDNSSSRINSSVPLINSSSPATPPESFDPQVFPSSLIHGDNLLPQDDQIASDPRSESNSCNGNTSSSLPCTDSYQYPLKHSCTPSFLRKFNESIENVSYKCLDHSPPDSVPGDFSISLVPQRNFLYSHSSLPPKIISIDRNNRIKLDNSISSNSDNFPPSPKVDTSNTVSPGSKPISEDLEDLNLQSIVQTFEDLPEGIQSYAFFQLLRSCNRQSMRLLLNECEPLLKKDILSNLPFSIVQSILLNLDIHSFLSCRLVSPTWNRILDVHTSYWKHMFSLFGFQINENDWKYANPNLNRPPFLHNDQISDDYFPEIFKRHFLNRKRWLFPSIPPSHLSFPIHVPNFMITSLLLHKDRIITTSGSGTIQIHNAITGVLEARLEGHKEGVWAVKIHENTLVSGSIDKTVRVWNIEKAKCTHIFRGHISIIRCLEILVPSRLIRHGVEIVEPDQPYIVSGSRDHTLRVWKLPKNTDPPYLPDNTNSIDRWEKNPYFVHTLIGHTDSVRTISGYGDILVSGSYDSSIRIWRVSTGECLYHLRGHSLRIYSVLYEPERNICISGSMDKSIRVWDLSTGTCKYVLEGHDAFVTLLNVFQNRLISGSADSTIRIWDLNTGKPLMVLPSNSGYISSFVSDEHKIISGNDGSVKLWDVRTGKLLRFLLTDLTKIWHVDFDAMRCVAAVQRDDQAYLEVINFSGSRP",
+    "length": 703,
+    "molWeight": 79605,
+    "crc64": "0336A0568C152396",
+    "md5": "F309D9A1B7149274387315616241443B"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBUNIT": 1,
+      "INTERACTION": 4,
+      "SUBCELLULAR LOCATION": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Domain": 1,
+      "Repeat": 6,
+      "Region": 3,
+      "Compositional bias": 3
+    },
+    "uniParcId": "UPI0000131F36"
+  }
+}

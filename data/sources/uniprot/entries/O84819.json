@@ -1,0 +1,492 @@
+{
+  "entryType": "UniProtKB unreviewed (TrEMBL)",
+  "primaryAccession": "O84819",
+  "uniProtkbId": "O84819_CHLTR",
+  "entryAudit": {
+    "firstPublicDate": "1998-11-01",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "1998-11-01",
+    "entryVersion": 93,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 1.0,
+  "organism": {
+    "scientificName": "Chlamydia trachomatis serovar D (strain ATCC VR-885 / DSM 19411 / UW-3/Cx)",
+    "taxonId": 272561,
+    "evidences": [
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "EMBL",
+        "id": "AAC68409.1"
+      },
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "Proteomes",
+        "id": "UP000000431"
+      }
+    ],
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Chlamydiota",
+      "Chlamydiia",
+      "Chlamydiales",
+      "Chlamydiaceae",
+      "Chlamydia/Chlamydophila group",
+      "Chlamydia"
+    ]
+  },
+  "proteinExistence": "4: Predicted",
+  "proteinDescription": {
+    "submissionNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAC68409.1"
+            }
+          ],
+          "value": "Uncharacterized protein"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "orderedLocusNames": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAC68409.1"
+            }
+          ],
+          "value": "CT_813"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 41,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 62,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "Phobius"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 68,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 94,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "Phobius"
+        }
+      ]
+    },
+    {
+      "type": "Coiled coil",
+      "location": {
+        "start": {
+          "value": 152,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 252,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "Coils"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "Coils"
+        }
+      ],
+      "id": "KW-0175",
+      "category": "Domain",
+      "name": "Coiled coil"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "Phobius"
+        }
+      ],
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "Proteomes",
+          "id": "UP000000431"
+        }
+      ],
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "Phobius"
+        }
+      ],
+      "id": "KW-0812",
+      "category": "Domain",
+      "name": "Transmembrane"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "Phobius"
+        }
+      ],
+      "id": "KW-1133",
+      "category": "Domain",
+      "name": "Transmembrane helix"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "9784136",
+        "citationType": "journal article",
+        "authors": [
+          "Stephens R.S.",
+          "Kalman S.",
+          "Lammel C.J.",
+          "Fan J.",
+          "Marathe R.",
+          "Aravind L.",
+          "Mitchell W.P.",
+          "Olinger L.",
+          "Tatusov R.L.",
+          "Zhao Q.",
+          "Koonin E.V.",
+          "Davis R.W."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9784136"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1126/science.282.5389.754"
+          }
+        ],
+        "title": "Genome sequence of an obligate intracellular pathogen of humans: Chlamydia trachomatis.",
+        "publicationDate": "1998",
+        "journal": "Science",
+        "firstPage": "754",
+        "lastPage": "759",
+        "volume": "282"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "Proteomes",
+              "id": "UP000000431"
+            }
+          ],
+          "value": "D/UW-3/Cx",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AAC68409.1"
+        },
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "Proteomes",
+          "id": "UP000000431"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AE001273",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAC68409.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "F71466",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "F71466"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_220333.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_000117.1"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_010725353.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_000117.1"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "O84819",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "O84819",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "IntAct",
+      "id": "O84819",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "10"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "272561.CT_813",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblBacteria",
+      "id": "AAC68409",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAC68409"
+        },
+        {
+          "key": "GeneId",
+          "value": "CT_813"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "884614",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "ctr:CT_813",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|272561.5.peg.897",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_1052512_0_0_0",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "InParanoid",
+      "id": "O84819",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "EHQLWME",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000000431",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR061095",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "InaC_CT813"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF049857",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "InaC_CT813"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR18937",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "STRUCTURAL MAINTENANCE OF CHROMOSOMES SMC FAMILY MEMBER"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MTTLPNNCTSNSNSINTFTKDIEMAKQIQGSRKDPLAKTSWIAGLICVVAGVLGLLAIGIGGCSMASGLGLIGAIVAAVIVAVGLCCLVSALCLQVEKSQWWQKEFESWIEQKSQFRIVMADMLKANRKLQSEVEFLSKGWSDDTAVHKEDVTKYEQVVEEYAEKIMELYEETGVLTIEKINLQKEKKAWLEEKAEMEQKLTTVTDLEAAKQQLEEKVTDLESEKQELREELDKAIENLDEMAYEAMEFEKEKHGIKPGRRGSI",
+    "length": 264,
+    "molWeight": 29584,
+    "crc64": "3EA9FFF5BD281C94",
+    "md5": "2DAD97AAA7C2F153E54EE3A1DDF3F0A7"
+  },
+  "extraAttributes": {
+    "countByFeatureType": {
+      "Transmembrane": 2,
+      "Coiled coil": 1
+    },
+    "uniParcId": "UPI00000C0BA6"
+  }
+}

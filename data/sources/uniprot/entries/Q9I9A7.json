@@ -1,0 +1,1156 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "Q9I9A7",
+  "secondaryAccessions": [
+    "Q6GQH3"
+  ],
+  "uniProtkbId": "CDT1_XENLA",
+  "entryAudit": {
+    "firstPublicDate": "2010-08-10",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2010-08-10",
+    "entryVersion": 82,
+    "sequenceVersion": 2
+  },
+  "annotationScore": 5.0,
+  "organism": {
+    "scientificName": "Xenopus laevis",
+    "commonName": "African clawed frog",
+    "taxonId": 8355,
+    "lineage": [
+      "Eukaryota",
+      "Metazoa",
+      "Chordata",
+      "Craniata",
+      "Vertebrata",
+      "Euteleostomi",
+      "Amphibia",
+      "Batrachia",
+      "Anura",
+      "Pipoidea",
+      "Pipidae",
+      "Xenopodinae",
+      "Xenopus",
+      "Xenopus"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "DNA replication factor Cdt1"
+      },
+      "shortNames": [
+        {
+          "value": "XCDT1"
+        }
+      ]
+    }
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "cdt1"
+      }
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "10766247"
+            }
+          ],
+          "value": "DNA replication licensing factor, required for pre-replication complex assembly. Cooperates with cdc6 to promote the loading of the mini-chromosome maintenance complex onto chromatin to form the pre-replication complex necessary to initiate DNA replication"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "19595719"
+            }
+          ],
+          "value": "Interacts with pcna"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "INTERACTION",
+      "interactions": [
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "Q9I9A7",
+            "intActId": "EBI-3511006"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "O93352",
+            "geneName": "gmnn.S",
+            "intActId": "EBI-7120476"
+          },
+          "numberOfExperiments": 4,
+          "organismDiffer": false
+        }
+      ]
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "10766247"
+              }
+            ],
+            "value": "Nucleus",
+            "id": "SL-0191"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "19595719"
+            }
+          ],
+          "value": "The PIP-box K+4 motif mediates both the interaction with pcna and the recruitment of the DCX(DTL) complex: while the PIP-box interacts with pcna, the presence of the K+4 submotif, recruits the DCX(DTL) complex, leading to its ubiquitination (PubMed:19595719)"
+        }
+      ],
+      "commentType": "DOMAIN"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "19595719"
+            }
+          ],
+          "value": "Ubiquitinated by the DCX(DTL) complex, also named CRL4(CDT2) complex, in response to DNA damage, leading to its degradation. Ubiquitination by the DCX(DTL) complex is necessary to ensure proper cell cycle regulation and is pcna-dependent: interacts with pcna via its PIP-box, while the presence of the containing the 'K+4' motif in the PIP box, recruit the DCX(DTL) complex, leading to its degradation. The interaction with GMNN protects it against ubiquitination"
+        }
+      ],
+      "commentType": "PTM"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the Cdt1 family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    },
+    {
+      "commentType": "SEQUENCE CAUTION",
+      "sequenceCautionType": "Erroneous initiation",
+      "sequence": "CAB87836.1",
+      "note": "Extended N-terminus.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 617,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "DNA replication factor Cdt1",
+      "featureId": "PRO_0000396627"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 27,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 51,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 111,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 462,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 483,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Motif",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 25,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "PIP-box K+4 motif"
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 22,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Polar residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 7,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 7,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Abolishes degradation by the proteasome due to the disrupted interaction with pcna.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "19595719"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "T",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 8,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 8,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Abolishes degradation by the proteasome due to the disrupted interaction with pcna.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "19595719"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "D",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 14,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 14,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Abolishes degradation by the proteasome without affecting the interaction with pcna.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "19595719"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "K",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 11,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 11,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 2; AAH72771",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "S",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 206,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 206,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 2; AAH72771",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "R",
+        "alternativeSequences": [
+          "H"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 471,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 471,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 2; AAH72771",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "T",
+        "alternativeSequences": [
+          "N"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 585,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 585,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 2; AAH72771",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "P",
+        "alternativeSequences": [
+          "L"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 596,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 596,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 2; AAH72771",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "Q",
+        "alternativeSequences": [
+          "K"
+        ]
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0131",
+      "category": "Biological process",
+      "name": "Cell cycle"
+    },
+    {
+      "id": "KW-0235",
+      "category": "Biological process",
+      "name": "DNA replication"
+    },
+    {
+      "id": "KW-0539",
+      "category": "Cellular component",
+      "name": "Nucleus"
+    },
+    {
+      "id": "KW-0656",
+      "category": "Disease",
+      "name": "Proto-oncogene"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0832",
+      "category": "PTM",
+      "name": "Ubl conjugation"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "10766247",
+        "citationType": "journal article",
+        "authors": [
+          "Maiorano D.",
+          "Moreau J.",
+          "Mechali M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "10766247"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/35007104"
+          }
+        ],
+        "title": "XCDT1 is required for the assembly of pre-replicative complexes in Xenopus laevis.",
+        "publicationDate": "2000",
+        "journal": "Nature",
+        "firstPage": "622",
+        "lastPage": "625",
+        "volume": "404"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [MRNA]",
+        "FUNCTION",
+        "SUBCELLULAR LOCATION"
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "CI-76MP3SA0G7SSL",
+        "citationType": "submission",
+        "authoringGroup": [
+          "NIH - Xenopus Gene Collection (XGC) project"
+        ],
+        "publicationDate": "JUN-2004",
+        "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "Ovary",
+          "type": "TISSUE"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "19595719",
+        "citationType": "journal article",
+        "authors": [
+          "Havens C.G.",
+          "Walter J.C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "19595719"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/j.molcel.2009.05.012"
+          }
+        ],
+        "title": "Docking of a specialized PIP Box onto chromatin-bound PCNA creates a degron for the ubiquitin ligase CRL4Cdt2.",
+        "publicationDate": "2009",
+        "journal": "Mol. Cell",
+        "firstPage": "93",
+        "lastPage": "104",
+        "volume": "35"
+      },
+      "referencePositions": [
+        "UBIQUITINATION",
+        "DOMAIN PIP-BOX K+4 MOTIF",
+        "MUTAGENESIS OF THR-7; ASP-8 AND LYS-14",
+        "INTERACTION WITH PCNA"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AJ250122",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAB87836.1"
+        },
+        {
+          "key": "Status",
+          "value": "ALT_INIT"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "BC072771",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAH72771.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_001081738.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NM_001088269.1"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q9I9A7",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "Q9I9A7",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BioGRID",
+      "id": "99359",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "6"
+        }
+      ]
+    },
+    {
+      "database": "DIP",
+      "id": "DIP-43926N",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "IntAct",
+      "id": "Q9I9A7",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "3"
+        }
+      ]
+    },
+    {
+      "database": "DNASU",
+      "id": "398024",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "398024",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "xla:398024",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "AGR",
+      "id": "Xenbase:XB-GENE-1014892",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "CTD",
+      "id": "398024",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Xenbase",
+      "id": "XB-GENE-1014892",
+      "properties": [
+        {
+          "key": "GeneName",
+          "value": "cdt1.L"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AADWLSI",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OrthoDB",
+      "id": "341730at2759",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000186698",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome 4L"
+        }
+      ]
+    },
+    {
+      "database": "Bgee",
+      "id": "398024",
+      "properties": [
+        {
+          "key": "ExpressionPatterns",
+          "value": "Expressed in blastula and 19 other cell types or tissues"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005634",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:nucleus"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0031490",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:chromatin DNA binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "16949367"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0003677",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:DNA binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0070182",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:DNA polymerase binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0000076",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:DNA replication checkpoint signaling"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0071163",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:DNA replication preinitiation complex assembly"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0000278",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:mitotic cell cycle"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0030174",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:regulation of DNA-templated DNA replication initiation"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd08767",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cdt1_c"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd08674",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cdt1_m"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "1.10.10.1420:FF:000001",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Chromatin licensing and DNA replication factor 1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.10.10.1420",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "DNA replication factor Cdt1, C-terminal WH domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR045173",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cdt1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR032054",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cdt1_C"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR038090",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cdt1_C_WH_dom_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR014939",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CDT1_Gemini-bd-like"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036390",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "WH_DNA-bd_sf"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR28637",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "DNA REPLICATION FACTOR CDT1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR28637:SF1",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "DNA REPLICATION FACTOR CDT1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF08839",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CDT1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF16679",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CDT1_C"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM01075",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CDT1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF46785",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Winged helix' DNA-binding domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MSQMRVTDFFSQSKRGTAAQNSKGRKVEAVLETRRAVTRSRAASVKAEEFLKAPCTPERASPTVSQCIGPSSKKRTRQDSDSEPLRTQQRQGKSARKKLKLPEGEHGGSVQQQLFSPCNKVALEHVTPSSLGKKIKDMVNVSLSPKFNELARNPTTPETKSPAKENLLELKSRLQRIQELAQKVNLPAASSEGKVTITDLKARLKRAQELDTKIRAKAEKTETQAIDLTEQPAQESEKAPAYQRFHNLAQDAAPGLTLPYKYKVLAEMFRSMDTIVGMLFNRSETITFSKVKQGVQDMMRKQFEQRNVGQIKTVYPNAYKYRQEKNIPTFKDGVKKTDYQLTIEPLVAEGDMLSGRPHLSASRLLERKQLFHRSLTSIVKQHHRVFLTSLNPPMLVPDDKLTRWHPRFNVDEVLDVTPAELPLPPQVERLTTAQEVLSKARGLITPKMEKALANLALKTAENAGETKNVSTEETKSTATTSTSTALKGVSQSLLERIRAKEAQKLQAIMTRRPQQEERLLMMSRLPELARILRNVFVAEKKPALTLEVTCSRVIASCRSSMSPGEMEKHLALLSEILPDWLSIHPVRKDTYYKLNQSMDLNLILERLAKKTKEEESL",
+    "length": 617,
+    "molWeight": 69536,
+    "crc64": "F42840DDDFE30E5E",
+    "md5": "D823FBDC9E24E92753BB81872B6C1B77"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBUNIT": 1,
+      "INTERACTION": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "DOMAIN": 1,
+      "PTM": 1,
+      "SIMILARITY": 1,
+      "SEQUENCE CAUTION": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Region": 3,
+      "Motif": 1,
+      "Compositional bias": 1,
+      "Mutagenesis": 3,
+      "Sequence conflict": 5
+    },
+    "uniParcId": "UPI0001DCF5D3"
+  }
+}

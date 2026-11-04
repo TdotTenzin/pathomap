@@ -1,0 +1,2079 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "Q29ST3",
+  "uniProtkbId": "DRRA_LEGPN",
+  "entryAudit": {
+    "firstPublicDate": "2012-05-16",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2006-04-04",
+    "entryVersion": 77,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 5.0,
+  "organism": {
+    "scientificName": "Legionella pneumophila",
+    "taxonId": 446,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Gammaproteobacteria",
+      "Legionellales",
+      "Legionellaceae",
+      "Legionella"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Multifunctional virulence effector protein DrrA"
+      }
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "Defects in Rab1 recruitment protein A"
+        }
+      }
+    ],
+    "includes": [
+      {
+        "recommendedName": {
+          "fullName": {
+            "value": "Protein adenylyltransferase"
+          },
+          "shortNames": [
+            {
+              "value": "AMPylator"
+            }
+          ],
+          "ecNumbers": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "20651120"
+                }
+              ],
+              "value": "2.7.7.108"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "value": "Protein guanylyltransferase"
+            },
+            "shortNames": [
+              {
+                "value": "GMPylator"
+              }
+            ],
+            "ecNumbers": [
+              {
+                "evidences": [
+                  {
+                    "evidenceCode": "ECO:0000269",
+                    "source": "PubMed",
+                    "id": "20651120"
+                  }
+                ],
+                "value": "2.7.7.n6"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "recommendedName": {
+          "fullName": {
+            "value": "Rab1 guanine nucleotide exchange factor"
+          }
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "drrA"
+      },
+      "synonyms": [
+        {
+          "value": "sidM"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "16906144"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "17952054"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "20651120"
+            }
+          ],
+          "value": "Virulence effector that plays a key role in hijacking the host vesicular trafficking by recruiting the small guanosine triphosphatase (GTPase) Rab1 to the cytosolic face of the Legionella-containing vacuole (LCVs). Acts as a GDP-GTP exchange factor (GEF) for the small GTPase Rab1 (RAB1A, RAB1B or RAB1C), thereby converting Rab1 to an active GTP-bound state, leading to the incorporation of Rab1 into LCVs. Also shows RabGDI displacement factor (GDF) activity; however, this probably represents a passive activity following the GEF activity. Also acts as an adenylyltransferase by mediating the addition of adenosine 5'-monophosphate (AMP) to 'Tyr-77' of host RAB1B, thereby rendering RAB1B constitutively active. Also has adenylyltransferase activity towards Rab6 and Rab35. Also displays guanylyltransferase activity by mediating the addition of guanosine 5'-monophosphate (GMP) to host RAB1B in vitro; however such activity remains uncertain in vivo. Specifically binds phosphatidylinositol 4-phosphate (PtdIns(4)P) lipids on the cytosolic surface of the phagosomal membrane shortly after infection"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "L-tyrosyl-[protein] + ATP = O-(5'-adenylyl)-L-tyrosyl-[protein] + diphosphate",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:54288"
+          },
+          {
+            "database": "Rhea",
+            "id": "RHEA-COMP:10136"
+          },
+          {
+            "database": "Rhea",
+            "id": "RHEA-COMP:13846"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:30616"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:33019"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:46858"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:83624"
+          }
+        ],
+        "ecNumber": "2.7.7.108",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "20651120"
+          }
+        ]
+      }
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "L-threonyl-[protein] + ATP = 3-O-(5'-adenylyl)-L-threonyl-[protein] + diphosphate",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:54292"
+          },
+          {
+            "database": "Rhea",
+            "id": "RHEA-COMP:11060"
+          },
+          {
+            "database": "Rhea",
+            "id": "RHEA-COMP:13847"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:30013"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:30616"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:33019"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:138113"
+          }
+        ],
+        "ecNumber": "2.7.7.108",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "20651120"
+          }
+        ]
+      }
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "L-tyrosyl-[protein] + GTP = O-(5'-guanylyl)-L-tyrosyl-[protein] + diphosphate",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:54296"
+          },
+          {
+            "database": "Rhea",
+            "id": "RHEA-COMP:10136"
+          },
+          {
+            "database": "Rhea",
+            "id": "RHEA-COMP:13848"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:33019"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:37565"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:46858"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:138114"
+          }
+        ],
+        "ecNumber": "2.7.7.n6",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "20651120"
+          }
+        ]
+      }
+    },
+    {
+      "commentType": "INTERACTION",
+      "interactions": [
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "Q29ST3",
+            "intActId": "EBI-15838677"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "P62820",
+            "geneName": "RAB1A",
+            "intActId": "EBI-716845"
+          },
+          "numberOfExperiments": 2,
+          "organismDiffer": true
+        },
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "Q29ST3",
+            "intActId": "EBI-15838677"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "P62820-1",
+            "geneName": "RAB1A",
+            "intActId": "EBI-15666813"
+          },
+          "numberOfExperiments": 3,
+          "organismDiffer": true
+        }
+      ]
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "note": {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "19095644"
+              }
+            ],
+            "value": "Translocated into the host cell via the type IV secretion system (T4SS). Membrane association is mediated by PtdIns(4)P-binding"
+          }
+        ]
+      },
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "19095644"
+              }
+            ],
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        },
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "16906144"
+              }
+            ],
+            "value": "Host cytoplasmic vesicle membrane",
+            "id": "SL-0387"
+          },
+          "topology": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000305",
+                "source": "PubMed",
+                "id": "16906144"
+              }
+            ],
+            "value": "Peripheral membrane protein",
+            "id": "SL-9903"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "19095644"
+            }
+          ],
+          "value": "The P4M (PtdIns(4)P-binding) region mediates binding to PtdIns(4)P and membrane attachment"
+        }
+      ],
+      "commentType": "DOMAIN"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the DrrA family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 647,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Multifunctional virulence effector protein DrrA",
+      "featureId": "PRO_0000417544"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 339,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Protein adenylyltransferase/guanylyltransferase"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 340,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 520,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Rab1 guanine nucleotide exchange factor"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 544,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 647,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "P4M region"
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 110,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 112,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Abolishes protein adenylyltransferase activity.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "20651120"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "DLD",
+        "alternativeSequences": [
+          "ALA"
+        ]
+      }
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 23,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 25,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3NKU"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 27,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 29,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6YX5"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 31,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 53,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3NKU"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 55,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 57,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3NKU"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 61,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 84,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3NKU"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 93,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 97,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3NKU"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 100,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 102,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3NKU"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 104,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 106,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3NKU"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 112,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 116,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3NKU"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 121,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 143,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3NKU"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 157,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 161,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3NKU"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 163,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 171,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3NKU"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 175,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 177,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3NKU"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 178,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 186,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3NKU"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 189,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 193,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3NKU"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 196,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 207,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3NKU"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 211,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 214,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3NKU"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 217,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 222,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6YX5"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 223,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 227,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6YX5"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 229,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 232,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6YX5"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 236,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 239,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6YX5"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 241,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 245,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6YX5"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 246,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 258,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6YX5"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 267,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 269,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6YX5"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 271,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 280,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6YX5"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 286,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 310,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6YX5"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 316,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 318,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6YX5"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 319,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 348,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6YX5"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 365,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 382,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5O74"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 386,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 389,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5O74"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 390,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 393,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5O74"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 400,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 419,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5O74"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 428,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 447,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5O74"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 458,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 460,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5O74"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 464,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 478,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5O74"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 490,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 506,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5O74"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 512,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 520,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5O74"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 526,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 528,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5O74"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0002",
+      "category": "Technical term",
+      "name": "3D-structure"
+    },
+    {
+      "id": "KW-0067",
+      "category": "Ligand",
+      "name": "ATP-binding"
+    },
+    {
+      "id": "KW-0344",
+      "category": "Molecular function",
+      "name": "Guanine-nucleotide releasing factor"
+    },
+    {
+      "id": "KW-1036",
+      "category": "Cellular component",
+      "name": "Host cytoplasmic vesicle"
+    },
+    {
+      "id": "KW-1043",
+      "category": "Cellular component",
+      "name": "Host membrane"
+    },
+    {
+      "id": "KW-0446",
+      "category": "Ligand",
+      "name": "Lipid-binding"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-0511",
+      "category": "Molecular function",
+      "name": "Multifunctional enzyme"
+    },
+    {
+      "id": "KW-0547",
+      "category": "Ligand",
+      "name": "Nucleotide-binding"
+    },
+    {
+      "id": "KW-0548",
+      "category": "Molecular function",
+      "name": "Nucleotidyltransferase"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0808",
+      "category": "Molecular function",
+      "name": "Transferase"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "16906144",
+        "citationType": "journal article",
+        "authors": [
+          "Murata T.",
+          "Delprato A.",
+          "Ingmundson A.",
+          "Toomre D.K.",
+          "Lambright D.G.",
+          "Roy C.R."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "16906144"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/ncb1463"
+          }
+        ],
+        "title": "The Legionella pneumophila effector protein DrrA is a Rab1 guanine nucleotide-exchange factor.",
+        "publicationDate": "2006",
+        "journal": "Nat. Cell Biol.",
+        "firstPage": "971",
+        "lastPage": "977",
+        "volume": "8"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]",
+        "FUNCTION AS A GUANINE NUCLEOTIDE EXCHANGE FACTOR",
+        "SUBCELLULAR LOCATION"
+      ],
+      "referenceComments": [
+        {
+          "value": "130b / Wadsworth / Serogroup 1",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "17952054",
+        "citationType": "journal article",
+        "authors": [
+          "Ingmundson A.",
+          "Delprato A.",
+          "Lambright D.G.",
+          "Roy C.R."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "17952054"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/nature06336"
+          }
+        ],
+        "title": "Legionella pneumophila proteins that regulate Rab1 membrane cycling.",
+        "publicationDate": "2007",
+        "journal": "Nature",
+        "firstPage": "365",
+        "lastPage": "369",
+        "volume": "450"
+      },
+      "referencePositions": [
+        "FUNCTION"
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "19095644",
+        "citationType": "journal article",
+        "authors": [
+          "Brombacher E.",
+          "Urwyler S.",
+          "Ragaz C.",
+          "Weber S.S.",
+          "Kami K.",
+          "Overduin M.",
+          "Hilbi H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "19095644"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1074/jbc.m807505200"
+          }
+        ],
+        "title": "Rab1 guanine nucleotide exchange factor SidM is a major phosphatidylinositol 4-phosphate-binding effector protein of Legionella pneumophila.",
+        "publicationDate": "2009",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "4846",
+        "lastPage": "4856",
+        "volume": "284"
+      },
+      "referencePositions": [
+        "PTDINS(4)P-BINDING",
+        "DOMAIN P4M",
+        "SUBCELLULAR LOCATION"
+      ],
+      "referenceComments": [
+        {
+          "value": "JR32",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "20651120",
+        "citationType": "journal article",
+        "authors": [
+          "Muller M.P.",
+          "Peters H.",
+          "Blumer J.",
+          "Blankenfeldt W.",
+          "Goody R.S.",
+          "Itzen A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "20651120"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1126/science.1192276"
+          }
+        ],
+        "title": "The Legionella effector protein DrrA AMPylates the membrane traffic regulator Rab1b.",
+        "publicationDate": "2010",
+        "journal": "Science",
+        "firstPage": "946",
+        "lastPage": "949",
+        "volume": "329"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY IN COMPLEX WITH HOST RAB1B",
+        "FUNCTION AS A PROTEIN ADENYLYLTRANSFERASE/GUANYLYLTRANSFERASE",
+        "CATALYTIC ACTIVITY",
+        "MUTAGENESIS OF 110-ASP--ASP-112"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AY945933",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAY23285.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_010948166.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NZ_CCZO01000021.1"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "3NKU",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.10 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B=9-218"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "5O74",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.50 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/C/E/G/I/K=340-533"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6YX5",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.14 A"
+        },
+        {
+          "key": "Chains",
+          "value": "B=16-352"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q29ST3",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "Q29ST3",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "DIP",
+      "id": "DIP-58604N",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "IntAct",
+      "id": "Q29ST3",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "57036458",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AEHKKEH",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BRENDA",
+      "id": "2.7.7.108",
+      "properties": [
+        {
+          "key": "OrganismId",
+          "value": "2943"
+        }
+      ]
+    },
+    {
+      "database": "EvolutionaryTrace",
+      "id": "Q29ST3",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "19095644"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0044161",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:host cell cytoplasmic vesicle"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "16906144"
+        },
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "19095644"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0044162",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:host cell cytoplasmic vesicle membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "16906144"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0070733",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:AMPylase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "20651120"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005085",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:guanyl-nucleotide exchange factor activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "16906144"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0070273",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:phosphatidylinositol-4-phosphate binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "19095644"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0044600",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:protein guanylyltransferase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "20651120"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0031267",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:small GTPase binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "20651120"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0018117",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:protein adenylylation"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "20651120"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0018260",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:protein guanylylation"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "20651120"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0043087",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:regulation of GTPase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "20651120"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd11689",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SidM_DrrA_GEF"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.10.357.170",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.20.120.1520",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.20.1280.280",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.20.1440.370",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR033784",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "DrrA_GEF_Leg_pneum"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR028057",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "DrrA_P4M"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR038346",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "DrrA_PI4P-bd_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR048717",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SidM_N"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR048718",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SidM_Rab1_act"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF14860",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "DrrA_P4M"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF20879",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SidM_N"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF20851",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SidM_Rab1-act"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MSIMGRIKMSVNEEQFGSLYSDERDKPLLSPTAQKKFEEYQNKLANLSKIIRENEGNEVSPWQEWENGLRQIYKEMIYDAFDALGVEMPKDMEVHFAGSLAKAQATEYSDLDAFVIVKNDEDIKKVKPVFDALNNLCQRIFTASNQIYPDPIGINPSRLIGTPDDLFGMLKDGMVADVEATAMSILTSKPVLPRYELGEELRDKIKQEPSFSNMVSAKKFYNKAIKDFTAPKEGAEVVSVKTHIMRPIDFMLMGLREEFNLYSEDGAHLSAPGTIRLLREKNLLPEEQIARIESVYNQAMSKRFELHAEHKKEHDEMPYSDAKAMLDEVAKIRELGVQRVTRIENLENAKKLWDNANSMLEKGNISGYLKAANELHKFMKEKNLKEDDLRPELSDKTISPKGYAILQSLWGAASDYSRAAATLTESTVEPGLVSAVNKMSAFFMDCKLSPNERATPDPDFKVGKSKILVGIMQFIKDVADPTSKIWMHNTKALMNHKIAAIQKLERSNNVNDETLESVLSSKGENLSEYLSYKYATKDEGREHRYTASTENFKNVKEKYQQMRGDALKTEILADFKDKLAEATDEQSLKQIVAELKSKDEYRILAKGQGLTTQLLGLKTSSVSSFEKMVEETRESIKSQERQTIKIK",
+    "length": 647,
+    "molWeight": 73422,
+    "crc64": "DCE6EC98BCC3CDCA",
+    "md5": "5675A171A9C24B00EF613FE1D4F0C868"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "CATALYTIC ACTIVITY": 3,
+      "INTERACTION": 2,
+      "SUBCELLULAR LOCATION": 1,
+      "DOMAIN": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Region": 3,
+      "Mutagenesis": 1,
+      "Turn": 1,
+      "Beta strand": 9,
+      "Helix": 28
+    },
+    "uniParcId": "UPI000044296D"
+  }
+}

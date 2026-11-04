@@ -1,0 +1,1266 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "Q877A8",
+  "secondaryAccessions": [
+    "Q2U6W5"
+  ],
+  "uniProtkbId": "CATB_ASPOR",
+  "entryAudit": {
+    "firstPublicDate": "2005-12-06",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2003-06-01",
+    "entryVersion": 126,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 4.0,
+  "organism": {
+    "scientificName": "Aspergillus oryzae (strain ATCC 42149 / RIB 40)",
+    "commonName": "Yellow koji mold",
+    "taxonId": 510516,
+    "lineage": [
+      "Eukaryota",
+      "Fungi",
+      "Dikarya",
+      "Ascomycota",
+      "Pezizomycotina",
+      "Eurotiomycetes",
+      "Eurotiomycetidae",
+      "Eurotiales",
+      "Aspergillaceae",
+      "Aspergillus",
+      "Aspergillus subgen. Circumdati"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Catalase B"
+      },
+      "ecNumbers": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "16233832"
+            }
+          ],
+          "value": "1.11.1.6"
+        }
+      ]
+    },
+    "flag": "Precursor"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "catB"
+      },
+      "orfNames": [
+        {
+          "value": "AO090120000068"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "16233832"
+            }
+          ],
+          "value": "Occurs in almost all aerobically respiring organisms and serves to protect cells from the toxic effects of hydrogen peroxide through its degradation into water and oxygen"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "2 H2O2 = O2 + 2 H2O",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:20309"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15377"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15379"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:16240"
+          }
+        ],
+        "ecNumber": "1.11.1.6",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "16233832"
+          }
+        ]
+      },
+      "physiologicalReactions": [
+        {
+          "directionType": "left-to-right",
+          "reactionCrossReference": {
+            "database": "Rhea",
+            "id": "RHEA:20310"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "16233832"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commentType": "COFACTOR",
+      "cofactors": [
+        {
+          "name": "heme",
+          "cofactorCrossReference": {
+            "database": "ChEBI",
+            "id": "CHEBI:30413"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250"
+            }
+          ],
+          "value": "Homotetramer"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250"
+              }
+            ],
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "16233832"
+            }
+          ],
+          "value": "By hydrogen peroxide"
+        }
+      ],
+      "commentType": "INDUCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the catalase family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 15,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Propeptide",
+      "location": {
+        "start": {
+          "value": 16,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 27,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250"
+        }
+      ],
+      "featureId": "PRO_0000043339"
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 28,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 725,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Catalase B",
+      "featureId": "PRO_0000043340"
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 101,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 101,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250"
+        }
+      ]
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 174,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 174,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250"
+        }
+      ]
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 388,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 388,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "axial binding residue",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:30413"
+        },
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:18248"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250"
+        }
+      ],
+      "ligand": {
+        "name": "heme",
+        "id": "ChEBI:CHEBI:30413"
+      },
+      "ligandPart": {
+        "name": "Fe",
+        "id": "ChEBI:CHEBI:18248"
+      }
+    },
+    {
+      "type": "Glycosylation",
+      "location": {
+        "start": {
+          "value": 50,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 50,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-linked (GlcNAc...) asparagine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ],
+      "featureId": ""
+    },
+    {
+      "type": "Glycosylation",
+      "location": {
+        "start": {
+          "value": 119,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 119,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-linked (GlcNAc...) asparagine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ],
+      "featureId": ""
+    },
+    {
+      "type": "Glycosylation",
+      "location": {
+        "start": {
+          "value": 447,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 447,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-linked (GlcNAc...) asparagine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ],
+      "featureId": ""
+    },
+    {
+      "type": "Glycosylation",
+      "location": {
+        "start": {
+          "value": 550,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 550,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-linked (GlcNAc...) asparagine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ],
+      "featureId": ""
+    },
+    {
+      "type": "Glycosylation",
+      "location": {
+        "start": {
+          "value": 645,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 645,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-linked (GlcNAc...) asparagine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ],
+      "featureId": ""
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0165",
+      "category": "PTM",
+      "name": "Cleavage on pair of basic residues"
+    },
+    {
+      "id": "KW-0325",
+      "category": "PTM",
+      "name": "Glycoprotein"
+    },
+    {
+      "id": "KW-0349",
+      "category": "Ligand",
+      "name": "Heme"
+    },
+    {
+      "id": "KW-0376",
+      "category": "Biological process",
+      "name": "Hydrogen peroxide"
+    },
+    {
+      "id": "KW-0408",
+      "category": "Ligand",
+      "name": "Iron"
+    },
+    {
+      "id": "KW-0479",
+      "category": "Ligand",
+      "name": "Metal-binding"
+    },
+    {
+      "id": "KW-0560",
+      "category": "Molecular function",
+      "name": "Oxidoreductase"
+    },
+    {
+      "id": "KW-0575",
+      "category": "Molecular function",
+      "name": "Peroxidase"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    },
+    {
+      "id": "KW-0865",
+      "category": "PTM",
+      "name": "Zymogen"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "16233832",
+        "citationType": "journal article",
+        "authors": [
+          "Hisada H.",
+          "Hata Y.",
+          "Kawato A.",
+          "Abe Y.",
+          "Akita O."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "16233832"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1263/jbb.99.562"
+          }
+        ],
+        "title": "Cloning and expression analysis of two catalase genes from Aspergillus oryzae.",
+        "publicationDate": "2005",
+        "journal": "J. Biosci. Bioeng.",
+        "firstPage": "562",
+        "lastPage": "568",
+        "volume": "99"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]",
+        "FUNCTION",
+        "CATALYTIC ACTIVITY",
+        "INDUCTION"
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "16372010",
+        "citationType": "journal article",
+        "authors": [
+          "Machida M.",
+          "Asai K.",
+          "Sano M.",
+          "Tanaka T.",
+          "Kumagai T.",
+          "Terai G.",
+          "Kusumoto K.",
+          "Arima T.",
+          "Akita O.",
+          "Kashiwagi Y.",
+          "Abe K.",
+          "Gomi K.",
+          "Horiuchi H.",
+          "Kitamoto K.",
+          "Kobayashi T.",
+          "Takeuchi M.",
+          "Denning D.W.",
+          "Galagan J.E.",
+          "Nierman W.C.",
+          "Yu J.",
+          "Archer D.B.",
+          "Bennett J.W.",
+          "Bhatnagar D.",
+          "Cleveland T.E.",
+          "Fedorova N.D.",
+          "Gotoh O.",
+          "Horikawa H.",
+          "Hosoyama A.",
+          "Ichinomiya M.",
+          "Igarashi R.",
+          "Iwashita K.",
+          "Juvvadi P.R.",
+          "Kato M.",
+          "Kato Y.",
+          "Kin T.",
+          "Kokubun A.",
+          "Maeda H.",
+          "Maeyama N.",
+          "Maruyama J.",
+          "Nagasaki H.",
+          "Nakajima T.",
+          "Oda K.",
+          "Okada K.",
+          "Paulsen I.",
+          "Sakamoto K.",
+          "Sawano T.",
+          "Takahashi M.",
+          "Takase K.",
+          "Terabayashi Y.",
+          "Wortman J.R.",
+          "Yamada O.",
+          "Yamagata Y.",
+          "Anazawa H.",
+          "Hata Y.",
+          "Koide Y.",
+          "Komori T.",
+          "Koyama Y.",
+          "Minetoki T.",
+          "Suharnan S.",
+          "Tanaka A.",
+          "Isono K.",
+          "Kuhara S.",
+          "Ogasawara N.",
+          "Kikuchi H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "16372010"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/nature04300"
+          }
+        ],
+        "title": "Genome sequencing and analysis of Aspergillus oryzae.",
+        "publicationDate": "2005",
+        "journal": "Nature",
+        "firstPage": "1157",
+        "lastPage": "1161",
+        "volume": "438"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 42149 / RIB 40",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AB078864",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "BAC55897.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "BA000053",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "BAE62700.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q877A8",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "Q877A8",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "510516.Q877A8",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GlyCosmos",
+      "id": "Q877A8",
+      "properties": [
+        {
+          "key": "glycosylation",
+          "value": "5 sites, No reported glycans"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblFungi",
+      "id": "BAE62700",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "BAE62700"
+        },
+        {
+          "key": "GeneId",
+          "value": "AO090120000068"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "aor:AO090120000068",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "VEuPathDB",
+      "id": "FungiDB:AO090120000068",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_010645_3_0_1",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AACPMMT",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OrthoDB",
+      "id": "38853at5052",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000006564",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome 5"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005829",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cytosol"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:TreeGrafter"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:AspGD"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "22341915"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0004096",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:catalase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:AspGD"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "16233832"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0020037",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:heme binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0070301",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:cellular response to hydrogen peroxide"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:AspGD"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "16233832"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0042744",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:hydrogen peroxide catabolic process"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:TreeGrafter"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd03132",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "GATase1_catalase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "2.40.180.10:FF:000003",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "3.40.50.880:FF:000043",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "1.20.1370.20:FF:000001",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase HPII"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.20.1370.20",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.40.50.880",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.40.180.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase core domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR018028",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR024712",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase_clade2"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR043156",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase_clade2_helical"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR011614",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase_core"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR002226",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase_haem_BS"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR010582",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase_immune_responsive"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR041399",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase_large_C"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR020835",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR029062",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Class_I_gatase-like"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR42821",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CATALASE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR42821:SF3",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CATALASE B"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00199",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF06628",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase-rel"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF18011",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase_C"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PIRSF",
+      "id": "PIRSF038927",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase_clade2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR00067",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CATALASE"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM01060",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Catalase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF52317",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Class I glutamine amidotransferase-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF56634",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Heme-dependent catalase-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS00437",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CATALASE_1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51402",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CATALASE_3"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MRALSLASLIGIASAACPYMTGELERRDTGTDDATAATEEFLSQYYMADNDTFLTSDVGGPIEDQNSLQVGDRGPTLLEDFIFRQKIQRFDHERVPERAVHARGVGAHGVFTSYGDYSNITAASFLGAEGKETPVFVRFSTVAGSRGSSDLARDVHGFATRFYTDEGNFDIVGNNIPVFFIQDAILFPDLIHAVKPRGDNEIPQAATAHDSAWDFFSQQPSSLHTLLWAMSGHGIPRSLRHVDGFGIHTFRFVTDNGDSKLVKFHWKSLQGKASMVWEEAQQVSGKNPDFMRQDLFEAIEAGRYPEWELGVQIMDEEDQLKFGFDLFDPTKIVPEEYVPITKLGKMTLNRNPRNYFAETEQVMFQPGHIVRGVDFTEDPLLQGRLFSYLDTQLNRHGGPNFEQLPINQPRVPVHNNNRDGAGQMFIPLNPNAYSPNTLNKGSPKQANQTVGKGFFTAPGRESTGRFTRAVSPSFEDVWSQPRLFYNSLTPAEQQFVVDAIRFENSNVKSSVVRNNVIIQLNRVSNDLARRVARAIGVEEPEADPTYYHNNKTTDVGTFGQKLKKLDGLKVGFLASVETPASIEAASELSKQLSEDGVDVVVVAERLSDGVDQTYSGSDAIQFDAVIVAPGAEGLFSTFSFTAPSNATSSSTLFPAGRPLQIVIDGFRFGKPVGAVGSAATALKNAGIQTSRDGVYVDKSVTSGFVDGIKDGLRTFKFLDRFKLDH",
+    "length": 725,
+    "molWeight": 79868,
+    "crc64": "9A6A3761AAF1C29C",
+    "md5": "D2529AC40688632CA8A5BD17845C5B07"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "CATALYTIC ACTIVITY": 1,
+      "COFACTOR": 1,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "INDUCTION": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Propeptide": 1,
+      "Chain": 1,
+      "Active site": 2,
+      "Binding site": 1,
+      "Glycosylation": 5
+    },
+    "uniParcId": "UPI0000001EE9"
+  }
+}

@@ -1,0 +1,1276 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "A9MY09",
+  "uniProtkbId": "XGPT_SALPB",
+  "entryAudit": {
+    "firstPublicDate": "2008-05-20",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2008-02-05",
+    "entryVersion": 87,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 4.0,
+  "organism": {
+    "scientificName": "Salmonella paratyphi B (strain ATCC BAA-1250 / SPB7)",
+    "taxonId": 1016998,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Gammaproteobacteria",
+      "Enterobacterales",
+      "Enterobacteriaceae",
+      "Salmonella"
+    ]
+  },
+  "proteinExistence": "3: Inferred from homology",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000255",
+            "source": "HAMAP-Rule",
+            "id": "MF_01903"
+          }
+        ],
+        "value": "Xanthine-guanine phosphoribosyltransferase"
+      },
+      "shortNames": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_01903"
+            }
+          ],
+          "value": "XGPRT"
+        }
+      ],
+      "ecNumbers": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_01903"
+            }
+          ],
+          "value": "2.4.2.-"
+        },
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_01903"
+            }
+          ],
+          "value": "2.4.2.22"
+        }
+      ]
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_01903"
+            }
+          ],
+          "value": "Xanthine phosphoribosyltransferase"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000255",
+            "source": "HAMAP-Rule",
+            "id": "MF_01903"
+          }
+        ],
+        "value": "gpt"
+      },
+      "orderedLocusNames": [
+        {
+          "value": "SPAB_03285"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_01903"
+            }
+          ],
+          "value": "Purine salvage pathway enzyme that catalyzes the transfer of the ribosyl-5-phosphate group from 5-phospho-alpha-D-ribose 1-diphosphate (PRPP) to the N9 position of the 6-oxopurines guanine and xanthine to form the corresponding ribonucleotides GMP (guanosine 5'-monophosphate) and XMP (xanthosine 5'-monophosphate), with the release of PPi. To a lesser extent, also acts on hypoxanthine"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "GMP + diphosphate = guanine + 5-phospho-alpha-D-ribose 1-diphosphate",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:25424"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:16235"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:33019"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:58017"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:58115"
+          }
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000255",
+            "source": "HAMAP-Rule",
+            "id": "MF_01903"
+          }
+        ]
+      },
+      "physiologicalReactions": [
+        {
+          "directionType": "right-to-left",
+          "reactionCrossReference": {
+            "database": "Rhea",
+            "id": "RHEA:25426"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_01903"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "XMP + diphosphate = xanthine + 5-phospho-alpha-D-ribose 1-diphosphate",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:10800"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:17712"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:33019"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:57464"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:58017"
+          }
+        ],
+        "ecNumber": "2.4.2.22",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000255",
+            "source": "HAMAP-Rule",
+            "id": "MF_01903"
+          }
+        ]
+      },
+      "physiologicalReactions": [
+        {
+          "directionType": "right-to-left",
+          "reactionCrossReference": {
+            "database": "Rhea",
+            "id": "RHEA:10802"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_01903"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "IMP + diphosphate = hypoxanthine + 5-phospho-alpha-D-ribose 1-diphosphate",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:17973"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:17368"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:33019"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:58017"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:58053"
+          }
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000255",
+            "source": "HAMAP-Rule",
+            "id": "MF_01903"
+          }
+        ]
+      },
+      "physiologicalReactions": [
+        {
+          "directionType": "right-to-left",
+          "reactionCrossReference": {
+            "database": "Rhea",
+            "id": "RHEA:17975"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_01903"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commentType": "COFACTOR",
+      "cofactors": [
+        {
+          "name": "Mg(2+)",
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_01903"
+            }
+          ],
+          "cofactorCrossReference": {
+            "database": "ChEBI",
+            "id": "CHEBI:18420"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_01903"
+            }
+          ],
+          "value": "Purine metabolism; GMP biosynthesis via salvage pathway; GMP from guanine: step 1/1"
+        }
+      ],
+      "commentType": "PATHWAY"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_01903"
+            }
+          ],
+          "value": "Purine metabolism; XMP biosynthesis via salvage pathway; XMP from xanthine: step 1/1"
+        }
+      ],
+      "commentType": "PATHWAY"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_01903"
+            }
+          ],
+          "value": "Homotetramer"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255",
+                "source": "HAMAP-Rule",
+                "id": "MF_01903"
+              }
+            ],
+            "value": "Cell inner membrane",
+            "id": "SL-0037"
+          },
+          "topology": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255",
+                "source": "HAMAP-Rule",
+                "id": "MF_01903"
+              }
+            ],
+            "value": "Peripheral membrane protein",
+            "id": "SL-9903"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_01903"
+            }
+          ],
+          "value": "Belongs to the purine/pyrimidine phosphoribosyltransferase family. XGPT subfamily"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 152,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Xanthine-guanine phosphoribosyltransferase",
+      "featureId": "PRO_1000088476"
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 37,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 38,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:58017"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01903"
+        }
+      ],
+      "ligand": {
+        "name": "5-phospho-alpha-D-ribose 1-diphosphate",
+        "id": "ChEBI:CHEBI:58017"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 69,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 69,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:58017"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01903"
+        }
+      ],
+      "ligand": {
+        "name": "5-phospho-alpha-D-ribose 1-diphosphate",
+        "id": "ChEBI:CHEBI:58017"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 69,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 69,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:58115"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01903"
+        }
+      ],
+      "ligand": {
+        "name": "GMP",
+        "id": "ChEBI:CHEBI:58115"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 88,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 96,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:58017"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01903"
+        }
+      ],
+      "ligand": {
+        "name": "5-phospho-alpha-D-ribose 1-diphosphate",
+        "id": "ChEBI:CHEBI:58017"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 89,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 89,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:18420"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01903"
+        }
+      ],
+      "ligand": {
+        "name": "Mg(2+)",
+        "id": "ChEBI:CHEBI:18420"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 92,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 96,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:58115"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01903"
+        }
+      ],
+      "ligand": {
+        "name": "GMP",
+        "id": "ChEBI:CHEBI:58115"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 92,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 92,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:16235"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01903"
+        }
+      ],
+      "ligand": {
+        "name": "guanine",
+        "id": "ChEBI:CHEBI:16235"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 92,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 92,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:17712"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01903"
+        }
+      ],
+      "ligand": {
+        "name": "xanthine",
+        "id": "ChEBI:CHEBI:17712"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 134,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 135,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:58115"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01903"
+        }
+      ],
+      "ligand": {
+        "name": "GMP",
+        "id": "ChEBI:CHEBI:58115"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 135,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 135,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:16235"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01903"
+        }
+      ],
+      "ligand": {
+        "name": "guanine",
+        "id": "ChEBI:CHEBI:16235"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 135,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 135,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:17712"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01903"
+        }
+      ],
+      "ligand": {
+        "name": "xanthine",
+        "id": "ChEBI:CHEBI:17712"
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0997",
+      "category": "Cellular component",
+      "name": "Cell inner membrane"
+    },
+    {
+      "id": "KW-1003",
+      "category": "Cellular component",
+      "name": "Cell membrane"
+    },
+    {
+      "id": "KW-0328",
+      "category": "Molecular function",
+      "name": "Glycosyltransferase"
+    },
+    {
+      "id": "KW-0460",
+      "category": "Ligand",
+      "name": "Magnesium"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-0479",
+      "category": "Ligand",
+      "name": "Metal-binding"
+    },
+    {
+      "id": "KW-0660",
+      "category": "Biological process",
+      "name": "Purine salvage"
+    },
+    {
+      "id": "KW-0808",
+      "category": "Molecular function",
+      "name": "Transferase"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "CI-77U3EV9AK3RQA",
+        "citationType": "submission",
+        "authoringGroup": [
+          "The Salmonella enterica serovar Paratyphi B Genome Sequencing Project"
+        ],
+        "authors": [
+          "McClelland M.",
+          "Sanderson E.K.",
+          "Porwollik S.",
+          "Spieth J.",
+          "Clifton W.S.",
+          "Fulton R.",
+          "Cordes M.",
+          "Wollam A.",
+          "Shah N.",
+          "Pepin K.",
+          "Bhonagiri V.",
+          "Nash W.",
+          "Johnson M.",
+          "Thiruvilangam P.",
+          "Wilson R."
+        ],
+        "publicationDate": "NOV-2007",
+        "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC BAA-1250 / SPB7",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "CP000886",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ABX68645.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_001292018.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_010102.1"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "A9MY09",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "A9MY09",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "44979290",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "spq:SPAB_03285",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|1016998.12.peg.3103",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_080904_3_0_6",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "ACLYAKP",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BioCyc",
+      "id": "SENT1016998:SPAB_RS13435-MONOMER",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "UniPathway",
+      "id": "UPA00602",
+      "properties": [
+        {
+          "key": "RectionId",
+          "value": "UER00658"
+        }
+      ]
+    },
+    {
+      "database": "UniPathway",
+      "id": "UPA00909",
+      "properties": [
+        {
+          "key": "RectionId",
+          "value": "UER00887"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005829",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cytosol"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:TreeGrafter"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005886",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:plasma membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0052657",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:guanine phosphoribosyltransferase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:RHEA"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0004422",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:hypoxanthine phosphoribosyltransferase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:TreeGrafter"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0000287",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:magnesium ion binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-UniRule"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0000310",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:xanthine phosphoribosyltransferase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-UniRule"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0032263",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:GMP salvage"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-UniRule"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0032264",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:IMP salvage"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:TreeGrafter"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0032265",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:XMP salvage"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-UniRule"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd06223",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PRTases_typeI"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "3.40.50.2020:FF:000009",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Xanthine phosphoribosyltransferase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.40.50.2020",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "HAMAP",
+      "id": "MF_01903",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "XGPRT"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR029057",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PRTase-like"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR000836",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PRTase_dom"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR023747",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Xanthine_Guanine_PRibTrfase"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF006613",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "gpt"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR39563",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "XANTHINE PHOSPHORIBOSYLTRANSFERASE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR39563:SF1",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "XANTHINE-GUANINE PHOSPHORIBOSYLTRANSFERASE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00156",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Pribosyltran"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF53271",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PRTase-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS00103",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PUR_PYR_PR_TRANSFER"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MSEKYVVTWDMLQIHARKLASRLMPSEQWKGIIAVSRGGLVPGALLARELGIRHVDTVCISSYDHDNQRELKVLKRAEGDGEGFIVIDDLVDTGGTAVAIREMYPKAHFVTIFAKPAGRPLVDDYVIDIPQNTWIEQPWDMGVVFVPPISGR",
+    "length": 152,
+    "molWeight": 16970,
+    "crc64": "EE42974303E6900D",
+    "md5": "D3B63843FA8AFD2C83091CDD3CE14D41"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "CATALYTIC ACTIVITY": 3,
+      "COFACTOR": 1,
+      "PATHWAY": 2,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Binding site": 11
+    },
+    "uniParcId": "UPI000005A288"
+  }
+}

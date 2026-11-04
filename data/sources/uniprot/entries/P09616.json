@@ -1,0 +1,2411 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "P09616",
+  "uniProtkbId": "HLA_STAAU",
+  "entryAudit": {
+    "firstPublicDate": "1989-07-01",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "1992-12-01",
+    "entryVersion": 158,
+    "sequenceVersion": 2
+  },
+  "annotationScore": 5.0,
+  "organism": {
+    "scientificName": "Staphylococcus aureus",
+    "taxonId": 1280,
+    "lineage": [
+      "Bacteria",
+      "Bacillati",
+      "Bacillota",
+      "Bacilli",
+      "Caryophanales",
+      "Staphylococcaceae",
+      "Staphylococcus"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Alpha-hemolysin"
+      },
+      "shortNames": [
+        {
+          "value": "Alpha-HL"
+        }
+      ]
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "Alpha-toxin"
+        }
+      }
+    ],
+    "flag": "Precursor"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "hly"
+      },
+      "synonyms": [
+        {
+          "value": "hla"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "1587866"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "20624979"
+            }
+          ],
+          "value": "Alpha-toxin binds to the membrane of eukaryotic cells (particularly red blood cells, RBC) forming pores, resulting in hemolysis, with the release of low-molecular weight molecules leading to eventual osmotic RBC lysis (PubMed:1587866, PubMed:20624979). Human RBCs bind much less alpha-toxin than do rabbit RBCs (PubMed:1587866, PubMed:20624979). Heptamer oligomerization and pore formation is required for lytic activity (PubMed:1587866, PubMed:20624979)"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "20624979"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "8943190"
+            },
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "1400487"
+            },
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "1587866"
+            }
+          ],
+          "value": "Self-assembles to first form a non-lytic oligomeric intermediate, and then, a mushroom-shaped homoheptamer structure of 100 Angstroms in length and up to 100 Angstroms in diameter (Probable) (PubMed:8943190). Interacts with human ADAM10; this interaction is required for toxin pore formation, disruption of focal adhesions, and hly-mediated cytotoxicity (PubMed:20624979)"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "INTERACTION",
+      "interactions": [
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "P09616",
+            "intActId": "EBI-15848589"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "P09616",
+            "geneName": "hly",
+            "intActId": "EBI-15848589"
+          },
+          "numberOfExperiments": 6,
+          "organismDiffer": false
+        }
+      ]
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "note": {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "8943190"
+              }
+            ],
+            "value": "Secreted as a monomer (PubMed:8943190). After oligomerization and pore formation, the complex is translocated across the bilayer, probably via the Gly-rich domain of each strand"
+          }
+        ]
+      },
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "8943190"
+              }
+            ],
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "8943190"
+            }
+          ],
+          "value": "The mushroom-shaped heptamer is composed of a cap domain (comprising 7 beta sandwiches and the amino latches of each protomer), 7 rim regions whose protruding strands may interact with the membrane bilayer, and the stem domain (52 Angstroms in length, 26 Angstroms in diameter) which forms the transmembrane pore"
+        }
+      ],
+      "commentType": "DOMAIN"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the aerolysin family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 26,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "6500704"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 27,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 319,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Alpha-hemolysin",
+      "featureId": "PRO_0000035636"
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 28,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 65,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Binds host red blood cells, complete loss of hemolytic activity, no longer oligomerizes.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "1400487"
+        }
+      ],
+      "alternativeSequence": {}
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 28,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 49,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Binds host red blood cells, complete loss of hemolytic activity, forms hexamers.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "1400487"
+        }
+      ],
+      "alternativeSequence": {}
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 28,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 39,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Binds host red blood cells, complete loss of hemolytic activity, mainly forms pentamers.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "1400487"
+        }
+      ],
+      "alternativeSequence": {}
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 28,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 29,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Binds host red blood cells, complete loss of hemolytic activity, mainly forms pentamers.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "1400487"
+        }
+      ],
+      "alternativeSequence": {}
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 61,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 61,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "No oligomerization nor hemolytic activity, wild-type target cell-binding.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "8188346"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "H",
+        "alternativeSequences": [
+          "I",
+          "L",
+          "P",
+          "R",
+          "S",
+          "T"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 61,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 61,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "No hemolytic activity, reduced oligomerization, not toxic in mice, no effect on ADAM10 binding.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "20624979"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "8168947"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "H",
+        "alternativeSequences": [
+          "L"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 74,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 74,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "No oligomerization, altered hemolysis, near wild-type target cell binding.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "8188346"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "H",
+        "alternativeSequences": [
+          "I",
+          "R",
+          "T"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 74,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 74,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "7% of normal hemolytic activity, reduced toxicity in mice.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "8168947"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "H",
+        "alternativeSequences": [
+          "L"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 170,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 170,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Decreased hemolysis, wild-type oligomerization and target cell binding.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "8188346"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "H",
+        "alternativeSequences": [
+          "L",
+          "P",
+          "R"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 170,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 170,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "16% of normal hemolytic activity.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "8168947"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "H",
+        "alternativeSequences": [
+          "L"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 285,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 285,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Nearly wild-type oligomerization, hemolysis and target cell binding.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "8188346"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "H",
+        "alternativeSequences": [
+          "I",
+          "P",
+          "R",
+          "S"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 285,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 285,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "46% of normal hemolytic activity, slowly toxic in mice.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "8168947"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "H",
+        "alternativeSequences": [
+          "L"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 312,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 319,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Binds host red blood cells, complete loss of hemolytic activity, no longer oligomerizes.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "1400487"
+        }
+      ],
+      "alternativeSequence": {}
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 315,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 319,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Binds host red blood cells, almost complete loss of hemolytic activity, greatly reduced oligomerization.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "1400487"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "1587866"
+        }
+      ],
+      "alternativeSequence": {}
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 317,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 319,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Binds host red blood cells, almost complete loss of hemolytic activity, greatly reduced oligomerization.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "1400487"
+        }
+      ],
+      "alternativeSequence": {}
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 28,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 31,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7AHL"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 35,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 38,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7AHL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 40,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 43,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "4IDJ"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 47,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 55,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7AHL"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 56,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 59,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7AHL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 60,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 69,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7AHL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 74,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 87,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7AHL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 92,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 95,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3M4D"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 98,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 100,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "8JX2"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 101,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 115,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7AHL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 123,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 129,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7AHL"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 131,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 134,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3M4D"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 135,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 153,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7AHL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 158,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 184,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7AHL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 188,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 197,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7AHL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 200,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 202,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7AHL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 205,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 208,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7AHL"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 215,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 217,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7AHL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 221,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 224,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "8JX2"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 232,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 234,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7AHL"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 239,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 241,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7AHL"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 244,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 247,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7AHL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 254,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 260,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7AHL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 268,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 286,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7AHL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 288,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 311,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7AHL"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 312,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 315,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7AHL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 316,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 318,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7AHL"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0002",
+      "category": "Technical term",
+      "name": "3D-structure"
+    },
+    {
+      "id": "KW-0204",
+      "category": "Biological process",
+      "name": "Cytolysis"
+    },
+    {
+      "id": "KW-0903",
+      "category": "Technical term",
+      "name": "Direct protein sequencing"
+    },
+    {
+      "id": "KW-0354",
+      "category": "Biological process",
+      "name": "Hemolysis"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    },
+    {
+      "id": "KW-0800",
+      "category": "Molecular function",
+      "name": "Toxin"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "6500704",
+        "citationType": "journal article",
+        "authors": [
+          "Gray G.S.",
+          "Kehoe M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "6500704"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.46.2.615-618.1984"
+          }
+        ],
+        "title": "Primary sequence of the alpha-toxin gene from Staphylococcus aureus wood 46.",
+        "publicationDate": "1984",
+        "journal": "Infect. Immun.",
+        "firstPage": "615",
+        "lastPage": "618",
+        "volume": "46"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]",
+        "PROTEIN SEQUENCE OF 27-44"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 10832 / Wood 46",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "CI-EJKI2BSHQQ75S",
+        "citationType": "submission",
+        "authors": [
+          "Hedengrahn G."
+        ],
+        "publicationDate": "OCT-1992",
+        "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]",
+        "SEQUENCE REVISION"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 10832 / Wood 46",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "1587866",
+        "citationType": "journal article",
+        "authors": [
+          "Walker B.",
+          "Krishnasastry M.",
+          "Zorn L.",
+          "Kasianowicz J.",
+          "Bayley H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "1587866"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/s0021-9258(19)50103-x"
+          }
+        ],
+        "title": "Functional expression of the alpha-hemolysin of Staphylococcus aureus in intact Escherichia coli and in cell lysates. Deletion of five C-terminal amino acids selectively impairs hemolytic activity.",
+        "publicationDate": "1992",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "10902",
+        "lastPage": "10909",
+        "volume": "267"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 27-319",
+        "FUNCTION",
+        "SUBUNIT",
+        "MUTAGENESIS OF 315-GLU--ASN-319"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 10832 / Wood 46",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "8943190",
+        "citationType": "journal article",
+        "authors": [
+          "Song L.",
+          "Hobaugh M.R.",
+          "Shustak C.",
+          "Cheley S.",
+          "Bayley H.",
+          "Gouaux J.E."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8943190"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1126/science.274.5294.1859"
+          }
+        ],
+        "title": "Structure of staphylococcal alpha-hemolysin, a heptameric transmembrane pore.",
+        "publicationDate": "1996",
+        "journal": "Science",
+        "firstPage": "1859",
+        "lastPage": "1866",
+        "volume": "274"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY",
+        "SUBUNIT",
+        "SUBCELLULAR LOCATION",
+        "DOMAIN"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 10832 / Wood 46",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "7AHL"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "1400487",
+        "citationType": "journal article",
+        "authors": [
+          "Walker B.",
+          "Krishnasastry M.",
+          "Zorn L.",
+          "Bayley H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "1400487"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/s0021-9258(19)36680-3"
+          }
+        ],
+        "title": "Assembly of the oligomeric membrane pore formed by Staphylococcal alpha-hemolysin examined by truncation mutagenesis.",
+        "publicationDate": "1992",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "21782",
+        "lastPage": "21786",
+        "volume": "267"
+      },
+      "referencePositions": [
+        "SUBUNIT",
+        "MUTAGENESIS OF 28-ASP-SER-29; 28-ASP--ASP-39; 28-ASP--GLY-49; 28-ASP--PHE-65; 312-TRP--ASN-319; 315-GLU--ASN-319 AND 317-MET--ASN-319"
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "8168947",
+        "citationType": "journal article",
+        "authors": [
+          "Menzies B.E.",
+          "Kernodle D.S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8168947"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.62.5.1843-1847.1994"
+          }
+        ],
+        "title": "Site-directed mutagenesis of the alpha-toxin gene of Staphylococcus aureus: role of histidines in toxin activity in vitro and in a murine model.",
+        "publicationDate": "1994",
+        "journal": "Infect. Immun.",
+        "firstPage": "1843",
+        "lastPage": "1847",
+        "volume": "62"
+      },
+      "referencePositions": [
+        "MUTAGENESIS OF HIS-61; HIS-74; HIS-170 AND HIS-285"
+      ],
+      "referenceComments": [
+        {
+          "value": "8325-4",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 7,
+      "citation": {
+        "id": "8188346",
+        "citationType": "journal article",
+        "authors": [
+          "Jursch R.",
+          "Hildebrand A.",
+          "Hobom G.",
+          "Tranum-Jensen J.",
+          "Ward R.",
+          "Kehoe M.",
+          "Bhakdi S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8188346"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.62.6.2249-2256.1994"
+          }
+        ],
+        "title": "Histidine residues near the N-terminus of staphylococcal alpha-toxin as reporters of regions that are critical for oligomerization and pore formation.",
+        "publicationDate": "1994",
+        "journal": "Infect. Immun.",
+        "firstPage": "2249",
+        "lastPage": "2256",
+        "volume": "62"
+      },
+      "referencePositions": [
+        "MUTAGENESIS OF HIS-61; HIS-74; HIS-170 AND HIS-285"
+      ]
+    },
+    {
+      "referenceNumber": 8,
+      "citation": {
+        "id": "7559447",
+        "citationType": "journal article",
+        "authors": [
+          "Walker B.",
+          "Bayley H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "7559447"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1074/jbc.270.39.23065"
+          }
+        ],
+        "title": "Key residues for membrane binding, oligomerization, and pore forming activity of staphylococcal alpha-hemolysin identified by cysteine scanning mutagenesis and targeted chemical modification.",
+        "publicationDate": "1995",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "23065",
+        "lastPage": "23071",
+        "volume": "270"
+      },
+      "referencePositions": [
+        "MUTAGENESIS"
+      ]
+    },
+    {
+      "referenceNumber": 9,
+      "citation": {
+        "id": "20624979",
+        "citationType": "journal article",
+        "authors": [
+          "Wilke G.A.",
+          "Bubeck Wardenburg J."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "20624979"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1073/pnas.1001815107"
+          }
+        ],
+        "title": "Role of a disintegrin and metalloprotease 10 in Staphylococcus aureus alpha-hemolysin-mediated cellular injury.",
+        "publicationDate": "2010",
+        "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+        "firstPage": "13473",
+        "lastPage": "13478",
+        "volume": "107"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "INTERACTION WITH HUMAN ADAM10",
+        "MUTAGENESIS OF HIS-61"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "X01645",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAA25801.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "M90536",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA26598.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "S69209",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "S69209"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "3M2L",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.10 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B/C/D/E/F/G=27-319"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "3M3R",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.20 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B/C/D/E/F/G=27-319"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "3M4D",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.90 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B/C/D/E/F/G=27-319"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "3M4E",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.30 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B/C/D/E/F/G=27-319"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "4IDJ",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "3.36 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=27-319"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "4YHD",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.80 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B/C/D/E/G=27-319"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6U3T",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.79 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B=27-319"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6U49",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.35 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B/C/D/E/F/G=27-319"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6U4P",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.49 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B/C/D/E/F/G=27-319"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "7AHL",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.89 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B/C/D/E/F/G=27-319"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "7O1Q",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "EM"
+        },
+        {
+          "key": "Resolution",
+          "value": "3.40 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B/C/D/E/F/G=27-131, A/B/C/D/E/F/G=174-319"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "8JX2",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "EM"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.20 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B/C/D/E/F/G/H/I/J/K/L/M/N=27-319"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "8JX3",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "EM"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.20 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B/C/D/E/F/G/H/I/J/K/L/M/N=27-319"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "9M4A",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "EM"
+        },
+        {
+          "key": "Resolution",
+          "value": "3.46 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B/C/D/E/F/G=27-319"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "9M4P",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "EM"
+        },
+        {
+          "key": "Resolution",
+          "value": "3.10 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B/C/D/E/F/G=27-319"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "9MBX",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "EM"
+        },
+        {
+          "key": "Resolution",
+          "value": "3.80 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B/C/D/E/F/G=27-319"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "9UFA",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "EM"
+        },
+        {
+          "key": "Resolution",
+          "value": "3.10 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B/C/D/E/F/G=27-319"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "9VFW",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "EM"
+        },
+        {
+          "key": "Resolution",
+          "value": "3.80 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B/C/D/E/F/G=27-319"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "P09616",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EMDB",
+      "id": "EMD-12696",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EMDB",
+      "id": "EMD-36688",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EMDB",
+      "id": "EMD-36689",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EMDB",
+      "id": "EMD-62304",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EMDB",
+      "id": "EMD-62305",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EMDB",
+      "id": "EMD-62307",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EMDB",
+      "id": "EMD-62310",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EMDB",
+      "id": "EMD-63620",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EMDB",
+      "id": "EMD-63626",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EMDB",
+      "id": "EMD-63781",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EMDB",
+      "id": "EMD-65040",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "MDRepo",
+      "id": "P09616",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "P09616",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "DIP",
+      "id": "DIP-59322N",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "IntAct",
+      "id": "P09616",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "ChEMBL",
+      "id": "CHEMBL1075259",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "TCDB",
+      "id": "1.C.3.1.1",
+      "properties": [
+        {
+          "key": "FamilyName",
+          "value": "the Alpha-hemolysin channel-forming toxin (Alphahl) family"
+        }
+      ]
+    },
+    {
+      "database": "ABCD",
+      "id": "P09616",
+      "properties": [
+        {
+          "key": "antibodies",
+          "value": "22 sequenced antibodies"
+        }
+      ]
+    },
+    {
+      "database": "Reactome",
+      "id": "R-HSA-844456",
+      "properties": [
+        {
+          "key": "PathwayName",
+          "value": "The NLRP3 inflammasome"
+        }
+      ]
+    },
+    {
+      "database": "Reactome",
+      "id": "R-HSA-9660826",
+      "properties": [
+        {
+          "key": "PathwayName",
+          "value": "Purinergic signaling in leishmaniasis infection"
+        }
+      ]
+    },
+    {
+      "database": "EvolutionaryTrace",
+      "id": "P09616",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PHI-base",
+      "id": "PHI:10241",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PHI-base",
+      "id": "PHI:11285",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PRO",
+      "id": "PR:P09616",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "8943190"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0042802",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:identical protein binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IPI:IntAct"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000353",
+          "source": "PubMed",
+          "id": "20400691"
+        },
+        {
+          "evidenceCode": "ECO:0000353",
+          "source": "PubMed",
+          "id": "8943190"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0090729",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:toxin activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "20624979"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0051715",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:cytolysis in another organism"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "2.70.240.10:FF:000001",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Alpha-hemolysin"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.70.240.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Leukocidin/porin MspA"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR005831",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Aerolysin/haemolysin_CS"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR003963",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Bi-component_toxin_staph"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR016183",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Leukocidin/Hemolysin_toxin"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036435",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Leukocidin/porin_MspA_sf"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "TIGR01002",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "hlyII"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF07968",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Leukocidin"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR01468",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "BICOMPNTOXIN"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF56959",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Leukocidin-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS00274",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "AEROLYSIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MKTRIVSSVTTTLLLGSILMNPVAGAADSDINIKTGTTDIGSNTTVKTGDLVTYDKENGMHKKVFYSFIDDKNHNKKLLVIRTKGTIAGQYRVYSEEGANKSGLAWPSAFKVQLQLPDNEVAQISDYYPRNSIDTKEYMSTLTYGFNGNVTGDDTGKIGGLIGANVSIGHTLKYVQPDFKTILESPTDKKVGWKVIFNNMVNQNWGPYDRDSWNPVYGNQLFMKTRNGSMKAADNFLDPNKASSLLSSGFSPDFATVITMDRKASKQQTNIDVIYERVRDDYQLHWTSTNWKGTNTKDKWTDRSSERYKIDWEKEEMTN",
+    "length": 319,
+    "molWeight": 35904,
+    "crc64": "6711C415DF7EBF30",
+    "md5": "84FBC9BF9EE6A9F852691557AE454FEA"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBUNIT": 1,
+      "INTERACTION": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "DOMAIN": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1,
+      "Mutagenesis": 15,
+      "Helix": 5,
+      "Turn": 5,
+      "Beta strand": 17
+    },
+    "uniParcId": "UPI000012C938"
+  }
+}

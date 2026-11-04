@@ -1,0 +1,559 @@
+{
+  "entryType": "UniProtKB unreviewed (TrEMBL)",
+  "primaryAccession": "A0ABQ6PA22",
+  "uniProtkbId": "A0ABQ6PA22_9SPHN",
+  "entryAudit": {
+    "firstPublicDate": "2025-10-08",
+    "lastAnnotationUpdateDate": "2026-09-02",
+    "lastSequenceUpdateDate": "2025-10-08",
+    "entryVersion": 4,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 1.0,
+  "organism": {
+    "scientificName": "Novosphingobium pituita",
+    "taxonId": 3056842,
+    "evidences": [
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "EMBL",
+        "id": "GMM61762.1"
+      },
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "Proteomes",
+        "id": "UP001187221"
+      }
+    ],
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Alphaproteobacteria",
+      "Sphingomonadales",
+      "Sphingomonadaceae",
+      "Novosphingobium"
+    ]
+  },
+  "proteinExistence": "3: Inferred from homology",
+  "proteinDescription": {
+    "submissionNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "GMM61762.1"
+            }
+          ],
+          "value": "Multidrug efflux MFS transporter outer membrane subunit VceC"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "GMM61762.1"
+          }
+        ],
+        "value": "vceC"
+      },
+      "orfNames": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "GMM61762.1"
+            }
+          ],
+          "value": "NUTIK01_25390"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "RuleBase",
+                "id": "RU362097"
+              }
+            ],
+            "value": "Cell membrane",
+            "id": "SL-0039"
+          },
+          "topology": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "RuleBase",
+                "id": "RU362097"
+              }
+            ],
+            "value": "Lipid-anchor",
+            "id": "SL-9901"
+          }
+        },
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "ARBA",
+                "id": "ARBA00004635"
+              }
+            ],
+            "value": "Membrane",
+            "id": "SL-0162"
+          },
+          "topology": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "ARBA",
+                "id": "ARBA00004635"
+              }
+            ],
+            "value": "Lipid-anchor",
+            "id": "SL-9901"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "ARBA",
+              "id": "ARBA00007613"
+            },
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "RuleBase",
+              "id": "RU362097"
+            }
+          ],
+          "value": "Belongs to the outer membrane factor (OMF) (TC 1.B.17) family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "GMM61762.1"
+            }
+          ],
+          "value": "The sequence shown here is derived from an EMBL/GenBank/DDBJ whole genome shotgun (WGS) entry which is preliminary data"
+        }
+      ],
+      "commentType": "CAUTION"
+    }
+  ],
+  "features": [
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 33,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 61,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00023288"
+        },
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "RuleBase",
+          "id": "RU362097"
+        }
+      ],
+      "id": "KW-0449",
+      "category": "PTM",
+      "name": "Lipoprotein"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00023136"
+        },
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "RuleBase",
+          "id": "RU362097"
+        }
+      ],
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00023139"
+        },
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "RuleBase",
+          "id": "RU362097"
+        }
+      ],
+      "id": "KW-0564",
+      "category": "PTM",
+      "name": "Palmitate"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "Proteomes",
+          "id": "UP001187221"
+        }
+      ],
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022729"
+        }
+      ],
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022692"
+        },
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "RuleBase",
+          "id": "RU362097"
+        }
+      ],
+      "id": "KW-0812",
+      "category": "Domain",
+      "name": "Transmembrane"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00022452"
+        },
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "RuleBase",
+          "id": "RU362097"
+        }
+      ],
+      "id": "KW-1134",
+      "category": "Domain",
+      "name": "Transmembrane beta strand"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "CI-5703EQEKN3QID",
+        "citationType": "submission",
+        "authors": [
+          "Hatamoto M.",
+          "Ikarashi T.",
+          "Yamaguchi T."
+        ],
+        "title": "Draft genome sequence of Novosphingobium sp. strain IK01.",
+        "publicationDate": "JUN-2023",
+        "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "GMM61762.1"
+            },
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "Proteomes",
+              "id": "UP001187221"
+            }
+          ],
+          "value": "IK01",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "GMM61762.1"
+        },
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "Proteomes",
+          "id": "UP001187221"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "BTFW01000001",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "GMM61762.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_317975413.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NZ_BTFW01000001.1"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP001187221",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Unassembled WGS sequence"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005886",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:plasma membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0015562",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:efflux transmembrane transporter activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.20.1600.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Outer membrane efflux proteins (OEP)"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.20.200.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Outer membrane efflux proteins (OEP)"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR010131",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "MdtP/NodT-like"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR003423",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OMP_efflux"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "TIGR01845",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "outer_NodT"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR30203:SF20",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "MULTIDRUG RESISTANCE OUTER MEMBRANE PROTEIN MDTP-RELATED"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR30203",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OUTER MEMBRANE CATION EFFLUX PROTEIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF02321",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OEP"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF56954",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Outer membrane efflux proteins (OEP)"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MLAVVAGLGLLGGCVSTPPMGPRQTLRDVAASDLPASMESSATDRAGNADRRPADWPSDTWWQGLGDPQLSALIEEGLKDSPSLVAAQARLHAAQGYAQASGAALLPSLSGDVNIGGAKQTYNYLFPHEFAPKGWRDTGVVSLSANYELDFFGKNRAALRAATSEREAARIEADAARLAIATGVAEAYATLARAAAARAVRAEALRVREDTARLVQGRVRNGLDTRAEQRQAEAAIPVARADLIAADESIALARHALAAAIGAPPARGEAITLPRLDSLAPEGLPANLALDLVGRRADIAAARARAEAAAAQISVAHAQFYPNVNLVAMIGMQSLGLSNLFTSGSDLGSAGPAIGIPLFSGGRLKGQYRQARAGYDEAVATYNQTLLQALRDVADAAATQRSVDGQLRAAREAVTASDDAYRIARRRYEAGLSTYLSVLSSEDALIANRRLLADLEARTLSAHVALVRALGGGFKAT",
+    "length": 477,
+    "molWeight": 49801,
+    "crc64": "6420E9511339DAFA",
+    "md5": "179C35856FC1F032340981F5DB1703C3"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "SUBCELLULAR LOCATION": 1,
+      "SIMILARITY": 1,
+      "CAUTION": 1
+    },
+    "countByFeatureType": {
+      "Region": 1
+    },
+    "uniParcId": "UPI0025C9BC34"
+  }
+}

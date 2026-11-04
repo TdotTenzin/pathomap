@@ -1,0 +1,930 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "Q2YIT8",
+  "secondaryAccessions": [
+    "Q57A17",
+    "Q9KIS9"
+  ],
+  "uniProtkbId": "VIRB4_BRUA2",
+  "entryAudit": {
+    "firstPublicDate": "2007-06-12",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2006-02-07",
+    "entryVersion": 85,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 4.0,
+  "organism": {
+    "scientificName": "Brucella abortus (strain 2308)",
+    "taxonId": 359391,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Alphaproteobacteria",
+      "Hyphomicrobiales",
+      "Brucellaceae",
+      "Brucella/Ochrobactrum group",
+      "Brucella",
+      "Brucella melitensis group"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000305"
+          }
+        ],
+        "value": "Type IV secretion system ATPase VirB4"
+      },
+      "ecNumbers": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "O50330"
+            }
+          ],
+          "value": "3.6.4.6"
+        }
+      ]
+    }
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000303",
+            "source": "PubMed",
+            "id": "10940027"
+          }
+        ],
+        "value": "virB4"
+      },
+      "orderedLocusNames": [
+        {
+          "value": "BAB2_0065"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "P17794"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "10940027"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11988518"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "18469100"
+            }
+          ],
+          "value": "Component of the VirB/VirD4 type IV secretion system (T4SS), which is essential for intracellular survival in host cells but is not involved in the invasion process (PubMed:10940027). This T4SS plays a critical role in virulence in mice and in intracellular multiplication within non-professional phagocytes (PubMed:10940027). The VirB4 subunit is essential for intracellular replication and virulence in mice (PubMed:11988518, PubMed:18469100). The VirB4 subunit probably provides energy for T4SS assembly and/or function (By similarity)"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "ATP + H2O = ADP + phosphate + H(+)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:13065"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15377"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:30616"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:43474"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:456216"
+          }
+        ],
+        "ecNumber": "3.6.4.6",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000250",
+            "source": "UniProtKB",
+            "id": "O50330"
+          }
+        ]
+      },
+      "physiologicalReactions": [
+        {
+          "directionType": "left-to-right",
+          "reactionCrossReference": {
+            "database": "Rhea",
+            "id": "RHEA:13066"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "O50330"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "O50330"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11988518"
+            }
+          ],
+          "value": "The core secretion machinery of the VirB/VirD4 T4SS is composed of cytoplasmic ATPases that form the energy center, an inner membrane complex (IMC), an outer membrane core complex (OMCC) and a stalk (or cylinder) that connects the IMC and the OMCC (By similarity). This subunit either functions as a multimer or interacts with some other component(s) necessary for intracellular replication (PubMed:11988518)"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250",
+                "source": "UniProtKB",
+                "id": "P0A3W0"
+              }
+            ],
+            "value": "Cell inner membrane",
+            "id": "SL-0037"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "10940027"
+            }
+          ],
+          "value": "Transcription is turned on at the beginning of the stationary phase of vegetative growth"
+        }
+      ],
+      "commentType": "DEVELOPMENTAL STAGE"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11988518"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "18469100"
+            }
+          ],
+          "value": "Deletion of the gene significantly decreases the ability of B.abortus to survive inside mouse macrophage-like cells (PubMed:11988518, PubMed:18469100). The mutant shows decreased levels of VirB5, while VirB8, VirB9, VirB10, VirB11 and VirB12 are detected at wild-type levels (PubMed:18469100)"
+        }
+      ],
+      "commentType": "DISRUPTION PHENOTYPE"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the TrbE/VirB4 family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 831,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Type IV secretion system ATPase VirB4",
+      "featureId": "PRO_0000290168"
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 457,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 464,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:30616"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305",
+          "source": "PubMed",
+          "id": "11988518"
+        }
+      ],
+      "ligand": {
+        "name": "ATP",
+        "id": "ChEBI:CHEBI:30616"
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 463,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 463,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Cannot restore intracellular replication to wild-type levels in a deletion mutant.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "11988518"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "K",
+        "alternativeSequences": [
+          "R"
+        ]
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0067",
+      "category": "Ligand",
+      "name": "ATP-binding"
+    },
+    {
+      "id": "KW-0997",
+      "category": "Cellular component",
+      "name": "Cell inner membrane"
+    },
+    {
+      "id": "KW-1003",
+      "category": "Cellular component",
+      "name": "Cell membrane"
+    },
+    {
+      "id": "KW-0378",
+      "category": "Molecular function",
+      "name": "Hydrolase"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-0547",
+      "category": "Ligand",
+      "name": "Nucleotide-binding"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0813",
+      "category": "Biological process",
+      "name": "Transport"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "10940027",
+        "citationType": "journal article",
+        "authors": [
+          "Sieira R.",
+          "Comerci D.J.",
+          "Sanchez D.O.",
+          "Ugalde R.A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "10940027"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.182.17.4849-4855.2000"
+          }
+        ],
+        "title": "A homologue of an operon required for DNA transfer in Agrobacterium is required in Brucella abortus for virulence and intracellular multiplication.",
+        "publicationDate": "2000",
+        "journal": "J. Bacteriol.",
+        "firstPage": "4849",
+        "lastPage": "4855",
+        "volume": "182"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]",
+        "FUNCTION",
+        "DEVELOPMENTAL STAGE"
+      ],
+      "referenceComments": [
+        {
+          "value": "2308",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000312",
+          "source": "EMBL",
+          "id": "AAF73897.1"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "16299333",
+        "citationType": "journal article",
+        "authors": [
+          "Chain P.S.",
+          "Comerci D.J.",
+          "Tolmasky M.E.",
+          "Larimer F.W.",
+          "Malfatti S.A.",
+          "Vergez L.M.",
+          "Aguero F.",
+          "Land M.L.",
+          "Ugalde R.A.",
+          "Garcia E."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "16299333"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.73.12.8353-8361.2005"
+          }
+        ],
+        "title": "Whole-genome analyses of speciation events in pathogenic Brucellae.",
+        "publicationDate": "2005",
+        "journal": "Infect. Immun.",
+        "firstPage": "8353",
+        "lastPage": "8361",
+        "volume": "73"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "2308",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "11988518",
+        "citationType": "journal article",
+        "authors": [
+          "Watarai M.",
+          "Makino S.I.",
+          "Shirahata T."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11988518"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1099/00221287-148-5-1439"
+          }
+        ],
+        "title": "An essential virulence protein of Brucella abortus, VirB4, requires an intact nucleoside-triphosphate-binding domain.",
+        "publicationDate": "2002",
+        "journal": "Microbiology",
+        "firstPage": "1439",
+        "lastPage": "1446",
+        "volume": "148"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "SUBUNIT",
+        "DISRUPTION PHENOTYPE",
+        "MUTAGENESIS OF LYS-463"
+      ],
+      "referenceComments": [
+        {
+          "value": "544 / Biovar 1",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "18469100",
+        "citationType": "journal article",
+        "authors": [
+          "den Hartigh A.B.",
+          "Rolan H.G.",
+          "de Jong M.F.",
+          "Tsolis R.M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "18469100"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.00406-08"
+          }
+        ],
+        "title": "VirB3 to VirB6 and VirB8 to VirB11, but not VirB7, are essential for mediating persistence of Brucella in the reticuloendothelial system.",
+        "publicationDate": "2008",
+        "journal": "J. Bacteriol.",
+        "firstPage": "4427",
+        "lastPage": "4436",
+        "volume": "190"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "DISRUPTION PHENOTYPE"
+      ],
+      "referenceComments": [
+        {
+          "value": "2308",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AF226278",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAF73897.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AM040265",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAJ12231.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_002966513.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_007624.1"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q2YIT8",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "Q2YIT8",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "359391.BAB2_0065",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "93015957",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "bmf:BAB2_0065",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|359391.11.peg.2012",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_008341_3_0_5",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AAYWSQF",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PhylomeDB",
+      "id": "Q2YIT8",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BioCyc",
+      "id": "MetaCyc:BAB_RS26670-MONOMER",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000002719",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome II"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005886",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:plasma membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISS:UniProtKB"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005524",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:ATP binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0016887",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:ATP hydrolysis activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISS:UniProtKB"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.40.50.300",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "P-loop containing nucleotide triphosphate hydrolases"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR027417",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "P-loop_NTPase"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR043964",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "P-loop_TraG"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR004346",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "VirB4_CagE"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR018145",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "VirB4_CagE_M"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR060387",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "VirB4_TrbE_N"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "TIGR00929",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "VirB4_CagE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR30121:SF12",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TYPE IV SECRETION SYSTEM PROTEIN CAGE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR30121",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "UNCHARACTERIZED PROTEIN YJGR-RELATED"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF03135",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CagE_TrbE_VirB"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF19044",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "P-loop_TraG"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF27097",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "VirB4_TrbE_N"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF52540",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "P-loop containing nucleoside triphosphate hydrolases"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MGAQSKYAQQLNNERSLAPFIPFRSQVGPTTVITRDGDFVRTWRIAGLAFETQDKEKLLIRKDQLNTLFRAIASNNVALWSHNVRRRTWDHLKSFFSNPFCDALDKKYYGSFSGYRMMSNELYLTVIYRPVPAKISRLFNVAVHRSHAEILQEQQLAIRKLDEIGNQIETSLRRYGGDDGRGIEVLSTYEDKHGALCSQQLEFYNFLLSGEWQKVRVPSCPLDEYLGTGWVYAGTETIEIRTANATRYARGIDFKDYANHTEPGILNGLMYSDYEYVITQSFSFMTKRDGKEFLTRQKQRLQNTEDGSASQIMEMDIAIDQLGRGDFVMGEYHYSLLVFAEDMETVRHNTSHAMNILQDNGFLATVIATATDAAFYAQLPCNWRYRPRVAGLTSLNFAGLSCFHNFRAGKRDGNPWGQALTLLKTPSGQPAYLNFHYSKGDEDNFDKKLLGNTRIIGQSGAGKTVLMNFCLAQAQKYLHNAPMGMCNVFFDKDQGAKGTILAIGGKYLAIRNGEPTGFNPFQMEPTAGNILFLEKLVQVLVSRDGQHVTTTDESRISHAIRTVMRMRPELRRLSTVLQNVTEGSDRQDRENSVAKRLAKWCFDDGTGKRGTFWWVLDCPQDQIDFNTHSNYGFDGTDFLDNADVRTPISMYLLHRMELAIDGRRFIYWMDEAWKWVDDEAFSEFANNKQLTIRKQNGLGVFATQMPSSLLNSKVASALVQQVATEIYLPNPKADYHEYTDGFKVTNEEFDIIRSMSEESRMFLVKQGHHSMICRLELNGFDDELAILSGSSDNNELLDQVIAEVGDDPSVWLPVFQERRKARIASSKSTGR",
+    "length": 831,
+    "molWeight": 94572,
+    "crc64": "657AAA319B4CC8E5",
+    "md5": "65E1A7F04BDCFF216058F8C01C531669"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "CATALYTIC ACTIVITY": 1,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "DEVELOPMENTAL STAGE": 1,
+      "DISRUPTION PHENOTYPE": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Binding site": 1,
+      "Mutagenesis": 1
+    },
+    "uniParcId": "UPI00000BA013"
+  }
+}

@@ -1,0 +1,1284 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "Q20500",
+  "uniProtkbId": "PLA2_CAEEL",
+  "entryAudit": {
+    "firstPublicDate": "2021-06-02",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "1996-11-01",
+    "entryVersion": 178,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 4.0,
+  "organism": {
+    "scientificName": "Caenorhabditis elegans",
+    "taxonId": 6239,
+    "lineage": [
+      "Eukaryota",
+      "Metazoa",
+      "Ecdysozoa",
+      "Nematoda",
+      "Chromadorea",
+      "Rhabditida",
+      "Rhabditina",
+      "Rhabditomorpha",
+      "Rhabditoidea",
+      "Rhabditidae",
+      "Peloderinae",
+      "Caenorhabditis"
+    ]
+  },
+  "proteinExistence": "3: Inferred from homology",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Intracellular phospholipase A2"
+      },
+      "shortNames": [
+        {
+          "value": "IPLA-2"
+        },
+        {
+          "value": "PLA(2)"
+        }
+      ],
+      "ecNumbers": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "P97570"
+            }
+          ],
+          "value": "3.1.1.4"
+        }
+      ]
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "23007400"
+            }
+          ],
+          "value": "Calcium-independent phospholipase A2"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000312",
+            "source": "EMBL",
+            "id": "CAA90061.1"
+          },
+          {
+            "evidenceCode": "ECO:0000312",
+            "source": "WormBase",
+            "id": "F47A4.5"
+          }
+        ],
+        "value": "ipla-2"
+      },
+      "orfNames": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000312",
+              "source": "WormBase",
+              "id": "F47A4.5"
+            }
+          ],
+          "value": "F47A4.5"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "23007400"
+            }
+          ],
+          "value": "Phospholipase that plays a critical role during oogenesis, ovulation, and/or embryogenesis"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "a 1,2-diacyl-sn-glycero-3-phosphocholine + H2O = a 1-acyl-sn-glycero-3-phosphocholine + a fatty acid + H(+)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:15801"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15377"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:28868"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:57643"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:58168"
+          }
+        ],
+        "ecNumber": "3.1.1.4",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000250",
+            "source": "UniProtKB",
+            "id": "P97570"
+          }
+        ]
+      },
+      "physiologicalReactions": [
+        {
+          "directionType": "left-to-right",
+          "reactionCrossReference": {
+            "database": "Rhea",
+            "id": "RHEA:15802"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "P97570"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "23007400"
+            }
+          ],
+          "value": "Mutant animals generate fewer progeny and slower larval development"
+        }
+      ],
+      "commentType": "DISRUPTION PHENOTYPE"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the patatin family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1071,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Intracellular phospholipase A2",
+      "featureId": "PRO_0000452652"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 411,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 440,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "ANK 2",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 479,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 508,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "ANK 3",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 510,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 539,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "ANK 4",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 544,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 570,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "ANK 5",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 578,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 610,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "ANK 6",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 614,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 651,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "ANK 1",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00023"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 652,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 681,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "ANK 7",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 748,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 921,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "PNPLA",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01161"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 22,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Motif",
+      "location": {
+        "start": {
+          "value": 752,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 757,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "GXGXXG",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01161"
+        }
+      ]
+    },
+    {
+      "type": "Motif",
+      "location": {
+        "start": {
+          "value": 784,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 788,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "GXSXG",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01161"
+        }
+      ]
+    },
+    {
+      "type": "Motif",
+      "location": {
+        "start": {
+          "value": 908,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 910,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "DGA/G",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01161"
+        }
+      ]
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 786,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 786,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Nucleophile",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01161"
+        }
+      ]
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 908,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 908,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Proton acceptor",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01161"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0040",
+      "category": "Domain",
+      "name": "ANK repeat"
+    },
+    {
+      "id": "KW-0378",
+      "category": "Molecular function",
+      "name": "Hydrolase"
+    },
+    {
+      "id": "KW-0442",
+      "category": "Biological process",
+      "name": "Lipid degradation"
+    },
+    {
+      "id": "KW-0443",
+      "category": "Biological process",
+      "name": "Lipid metabolism"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0677",
+      "category": "Domain",
+      "name": "Repeat"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "9851916",
+        "citationType": "journal article",
+        "authoringGroup": [
+          "The C. elegans sequencing consortium"
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9851916"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1126/science.282.5396.2012"
+          }
+        ],
+        "title": "Genome sequence of the nematode C. elegans: a platform for investigating biology.",
+        "publicationDate": "1998",
+        "journal": "Science",
+        "firstPage": "2012",
+        "lastPage": "2018",
+        "volume": "282"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000312",
+              "source": "EMBL",
+              "id": "CAA90061.1"
+            },
+            {
+              "evidenceCode": "ECO:0000312",
+              "source": "Proteomes",
+              "id": "UP000001940"
+            }
+          ],
+          "value": "Bristol N2",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "23007400",
+        "citationType": "journal article",
+        "authors": [
+          "Morrison K.",
+          "Witte K.",
+          "Mayers J.R.",
+          "Schuh A.L.",
+          "Audhya A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "23007400"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1074/jbc.m112.391508"
+          }
+        ],
+        "title": "Roles of acidic phospholipids and nucleotides in regulating membrane binding and activity of a calcium-independent phospholipase A2 isoform.",
+        "publicationDate": "2012",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "38824",
+        "lastPage": "38834",
+        "volume": "287"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "DISRUPTION PHENOTYPE"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "BX284606",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAA90061.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "T22327",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "T22327"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_509647.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NM_077246.7"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q20500",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "Q20500",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "FunCoup",
+      "id": "Q20500",
+      "properties": [
+        {
+          "key": "Number of interactors",
+          "value": "1394"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "6239.F47A4.5.1",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PaxDb",
+      "id": "6239-F47A4.5.1",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PeptideAtlas",
+      "id": "Q20500",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblMetazoa",
+      "id": "F47A4.5.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "F47A4.5.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "WBGene00009801"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "181196",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "cel:CELE_F47A4.5",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "UCSC",
+      "id": "F47A4.5",
+      "properties": [
+        {
+          "key": "OrganismName",
+          "value": "c. elegans"
+        }
+      ]
+    },
+    {
+      "database": "AGR",
+      "id": "WB:WBGene00009801",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "CTD",
+      "id": "181196",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "WormBase",
+      "id": "F47A4.5",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CE02248"
+        },
+        {
+          "key": "GeneId",
+          "value": "WBGene00009801"
+        },
+        {
+          "key": "GeneName",
+          "value": "ipla-2"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "KOG0513",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Eukaryota"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_287465_0_0_1",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "InParanoid",
+      "id": "Q20500",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OrthoDB",
+      "id": "10021675at2759",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PhylomeDB",
+      "id": "Q20500",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PRO",
+      "id": "PR:Q20500",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000001940",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome X"
+        }
+      ]
+    },
+    {
+      "database": "Bgee",
+      "id": "WBGene00009801",
+      "properties": [
+        {
+          "key": "ExpressionPatterns",
+          "value": "Expressed in pharyngeal muscle cell (C elegans) and 4 other cell types or tissues"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0015629",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:actin cytoskeleton"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005737",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cytoplasm"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:WormBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "24854345"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0004623",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:A2-type glycerophospholipase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-EC"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0051015",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:actin filament binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0051017",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:actin filament bundle assembly"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0044258",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:intestinal lipid catabolic process"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:WormBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "24854345"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0042594",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:response to starvation"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEP:WormBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000270",
+          "source": "PubMed",
+          "id": "24854345"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd07212",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Pat_PNPLA9"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "1.25.40.20:FF:000708",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Intracelllar PhosphoLipase A family"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "3.40.1090.10:FF:000059",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Intracelllar PhosphoLipase A family"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.25.40.20",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Ankyrin repeat-containing domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.40.1090.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cytosolic phospholipase A2 catalytic domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR016035",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Acyl_Trfase/lysoPLipase"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR002110",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Ankyrin_rpt"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036770",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Ankyrin_rpt-contain_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR047148",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PLPL9"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR002641",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PNPLA_dom"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR24139:SF34",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "85_88 KDA CALCIUM-INDEPENDENT PHOSPHOLIPASE A2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR24139",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CALCIUM-INDEPENDENT PHOSPHOLIPASE A2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00023",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Ank"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF01734",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Patatin"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00248",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ANK"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "6"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF48403",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Ankyrin repeat"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF52151",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FabD/lysophospholipase-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS50297",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ANK_REP_REGION"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS50088",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ANK_REPEAT"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "3"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51635",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PNPLA"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MTTTNKDGPFRQQYLPGVHKEPNLAISESTHSSDWYSATSSEDCFQAASQSFSSQKSNGNVITQQPGKLHCEISDPKSCSFVPAISTDNAQMGTSGIIKYRSYSNPDLLVAMSPLAYRDEAPQSQKSVANSRQDLTQTSCEVVTVSETVVNADSITTTTVTSSTTTTATASQEDFIMVEAEQDETAGLCDATMPLVDKKNITTSSTTSSPSRQITPRIENGLSFENVVSLVKIFPAFVNKLLKKPWYASRCDEVCQFPKAELAYYDIVSTDVDDEHFVIVAGKVTTDEHLMDNQFHLVFAPVGFSEDVSLDERPFSLFRATDKKDLMDLLHLCDEKSFLFTSLDMSTMRADILRSKIEELVIQIRLKPHYHMIHVAIATDRLDFFSDGMIKTMNETLEPFESQLRCLCHTENCYPVHLALTMDRQKIVERLLELDPTLFCETDKAGNNVWHHVNSSFCAQIIWDRCPASQHFIDERNMDGQSPLNEAVSTAKPLVATFLIGKGAKFTRGDRNELFVAMTSKNAQSVVEVVLTDKPEIANERDALGNSAIHVALYKESLNALLNRKVELGLDIDVKNNAGETALLLFITTRKPDLLPLLVTLYAHGANMNATDPHGNTALHKSAALVDAKKISLECVKFLISAGSNPNKINLRGESPRHLAASLQNQEMLAILKAAGATRCPKGYKGCRSNCRHDCSSAEDEYEETLQKIRIGNESDYEKTEFTASEKLNIQDTLDGSRRGKKAKVNLISMDGGGIRGLVIIQTLIAIEERLGDDIFKYFDWSAGTSTGSLIMAGLATGKSLREMQQTYLLLKDRVFDGIMPPYDTVQLEKFIQDQFGTGTVWEIPYPRLMISAVNSEKLPVRLEMARNYKPAKDVAPETPKEMPLWMALRRSTAAPVLFKPSEDRYIDGGIISNNPALDLMSEVHAYNRELQLSGRKSDAVQMNVLVSFGTGQIPSTVIETLSIDSNSPLQSIKTIKNLAAMFIDQATASEGAPVARSRQWADSLEIPFFRFSAPLSKNIFLSSTSDLDVCTMMWDSFIYCRKHRDYIDELVKVLKHDTDHPHVKTPFTDL",
+    "length": 1071,
+    "molWeight": 119090,
+    "crc64": "138067CA3E31C1D5",
+    "md5": "2D13F0D4C99AE63850E8CE70342B02B5"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "CATALYTIC ACTIVITY": 1,
+      "DISRUPTION PHENOTYPE": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Repeat": 7,
+      "Domain": 1,
+      "Region": 1,
+      "Motif": 3,
+      "Active site": 2
+    },
+    "uniParcId": "UPI000007C4DD"
+  }
+}

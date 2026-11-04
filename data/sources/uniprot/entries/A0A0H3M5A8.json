@@ -1,0 +1,1265 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "A0A0H3M5A8",
+  "uniProtkbId": "PPMNT_MYCBP",
+  "entryAudit": {
+    "firstPublicDate": "2015-11-11",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2015-09-16",
+    "entryVersion": 42,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 5.0,
+  "organism": {
+    "scientificName": "Mycobacterium bovis (strain BCG / Pasteur 1173P2)",
+    "taxonId": 410289,
+    "lineage": [
+      "Bacteria",
+      "Bacillati",
+      "Actinomycetota",
+      "Actinomycetes",
+      "Mycobacteriales",
+      "Mycobacteriaceae",
+      "Mycobacterium",
+      "Mycobacterium tuberculosis complex"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Bifunctional apolipoprotein N-acyltransferase/polyprenol monophosphomannose synthase"
+      }
+    },
+    "includes": [
+      {
+        "recommendedName": {
+          "fullName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "source": "PubMed",
+                "id": "24093492"
+              }
+            ],
+            "value": "Apolipoprotein N-acyltransferase"
+          },
+          "shortNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000250",
+                  "source": "UniProtKB",
+                  "id": "P23930"
+                }
+              ],
+              "value": "ALP N-acyltransferase"
+            }
+          ],
+          "ecNumbers": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "24093492"
+                }
+              ],
+              "value": "2.3.1.269"
+            }
+          ]
+        }
+      },
+      {
+        "recommendedName": {
+          "fullName": {
+            "value": "Polyprenol monophosphomannose synthase"
+          },
+          "shortNames": [
+            {
+              "value": "PPM synthase"
+            },
+            {
+              "value": "Polyprenol-P-Man synthase"
+            },
+            {
+              "value": "Ppm1"
+            }
+          ],
+          "ecNumbers": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000250",
+                  "source": "UniProtKB",
+                  "id": "O53493"
+                }
+              ],
+              "value": "2.4.1.-"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "value": "Dolichol-phosphate mannose synthase"
+            },
+            "ecNumbers": [
+              {
+                "evidences": [
+                  {
+                    "evidenceCode": "ECO:0000250",
+                    "source": "UniProtKB",
+                    "id": "O53493"
+                  }
+                ],
+                "value": "2.4.1.83"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000303",
+            "source": "PubMed",
+            "id": "24093492"
+          }
+        ],
+        "value": "lnt"
+      },
+      "synonyms": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "ppm1"
+        }
+      ],
+      "orderedLocusNames": [
+        {
+          "value": "BCG_2070c"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "24093492"
+            }
+          ],
+          "value": "Catalyzes the phospholipid dependent N-acylation of the N-terminal cysteine of apolipoprotein, the last step in lipoprotein maturation"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "O53493"
+            }
+          ],
+          "value": "Transfers mannose from GDP-mannose to lipid acceptors to form polyprenol monophosphomannose (PPM). PMM is an alkai-stable sugar donor which adds mannose-phosphate residues to triacylated-phosphatidyl-myo-inositol mannosides (PIM2), eventually leading to generation of the cell wall glycolipid lipoglycan modulins lipoarabinomannan (LAM) and lipomannan (LM)"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "N-terminal S-1,2-diacyl-sn-glyceryl-L-cysteinyl-[lipoprotein] + a glycerophospholipid = N-acyl-S-1,2-diacyl-sn-glyceryl-L-cysteinyl-[lipoprotein] + a 2-acyl-sn-glycero-3-phospholipid + H(+)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:48228"
+          },
+          {
+            "database": "Rhea",
+            "id": "RHEA-COMP:14681"
+          },
+          {
+            "database": "Rhea",
+            "id": "RHEA-COMP:14684"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:136912"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:140656"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:140657"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:140660"
+          }
+        ],
+        "ecNumber": "2.3.1.269",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "24093492"
+          }
+        ]
+      }
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "a di-trans,poly-cis-dolichyl phosphate + GDP-alpha-D-mannose = a di-trans,poly-cis-dolichyl beta-D-mannosyl phosphate + GDP",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:21184"
+          },
+          {
+            "database": "Rhea",
+            "id": "RHEA-COMP:19498"
+          },
+          {
+            "database": "Rhea",
+            "id": "RHEA-COMP:19501"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:57527"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:57683"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:58189"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:58211"
+          }
+        ],
+        "ecNumber": "2.4.1.83",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000250",
+            "source": "UniProtKB",
+            "id": "O53493"
+          }
+        ]
+      }
+    },
+    {
+      "texts": [
+        {
+          "value": "Protein modification; lipoprotein biosynthesis (N-acyl transfer)"
+        }
+      ],
+      "commentType": "PATHWAY"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255"
+              }
+            ],
+            "value": "Cell membrane",
+            "id": "SL-0039"
+          },
+          "topology": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255"
+              }
+            ],
+            "value": "Multi-pass membrane protein",
+            "id": "SL-9909"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "O53493"
+            }
+          ],
+          "value": "Consists of 2 domains; the N-terminus (residues 1-593) has the N-acyltransferase activity while the C-terminus (residues 594-874) has polyprenol monophosphomannose (PPM) synthase activity"
+        }
+      ],
+      "commentType": "DOMAIN"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "24093492"
+            }
+          ],
+          "value": "Loss of N-acylation of apolipoproteins"
+        }
+      ],
+      "commentType": "DISRUPTION PHENOTYPE"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "In a number of other Mycobacteria, including M.avis, M.leprae and M.smegmatis, these domains are encoded by 2 separate adjacent genes"
+        }
+      ],
+      "commentType": "MISCELLANEOUS"
+    },
+    {
+      "texts": [
+        {
+          "value": "In the N-terminal section; belongs to the CN hydrolase family. Apolipoprotein N-acyltransferase subfamily"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "In the C-terminal section; belongs to the glycosyltransferase 2 family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 874,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Bifunctional apolipoprotein N-acyltransferase/polyprenol monophosphomannose synthase",
+      "featureId": "PRO_0000434583"
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 23,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 42,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "A0QZ13"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 72,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 89,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "A0QZ13"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 94,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 115,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "A0QZ13"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 177,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 194,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "A0QZ13"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 206,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 223,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "A0QZ13"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 509,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 526,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "A0QZ13"
+        }
+      ]
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 241,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 497,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "CN hydrolase",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00054"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 593,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Apolipoprotein N-acyltransferase"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 533,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 609,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 594,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 874,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Polyprenol monophosphomannose synthase"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 852,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 874,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 294,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 294,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Proton acceptor",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00054"
+        }
+      ]
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 359,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 359,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00054"
+        }
+      ]
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 409,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 409,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Nucleophile",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00054"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0012",
+      "category": "Molecular function",
+      "name": "Acyltransferase"
+    },
+    {
+      "id": "KW-1003",
+      "category": "Cellular component",
+      "name": "Cell membrane"
+    },
+    {
+      "id": "KW-0378",
+      "category": "Molecular function",
+      "name": "Hydrolase"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-0808",
+      "category": "Molecular function",
+      "name": "Transferase"
+    },
+    {
+      "id": "KW-0812",
+      "category": "Domain",
+      "name": "Transmembrane"
+    },
+    {
+      "id": "KW-1133",
+      "category": "Domain",
+      "name": "Transmembrane helix"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "17372194",
+        "citationType": "journal article",
+        "authors": [
+          "Brosch R.",
+          "Gordon S.V.",
+          "Garnier T.",
+          "Eiglmeier K.",
+          "Frigui W.",
+          "Valenti P.",
+          "Dos Santos S.",
+          "Duthoy S.",
+          "Lacroix C.",
+          "Garcia-Pelayo C.",
+          "Inwald J.K.",
+          "Golby P.",
+          "Garcia J.N.",
+          "Hewinson R.G.",
+          "Behr M.A.",
+          "Quail M.A.",
+          "Churcher C.",
+          "Barrell B.G.",
+          "Parkhill J.",
+          "Cole S.T."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "17372194"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1073/pnas.0700869104"
+          }
+        ],
+        "title": "Genome plasticity of BCG and impact on vaccine efficacy.",
+        "publicationDate": "2007",
+        "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+        "firstPage": "5596",
+        "lastPage": "5601",
+        "volume": "104"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "BCG / Pasteur 1173P2",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "24093492",
+        "citationType": "journal article",
+        "authors": [
+          "Bruelle J.K.",
+          "Tschumi A.",
+          "Sander P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "24093492"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1186/1471-2180-13-223"
+          }
+        ],
+        "title": "Lipoproteins of slow-growing Mycobacteria carry three fatty acids and are N-acylated by apolipoprotein N-acyltransferase BCG_2070c.",
+        "publicationDate": "2013",
+        "journal": "BMC Microbiol.",
+        "firstPage": "223",
+        "lastPage": "223",
+        "volume": "13"
+      },
+      "referencePositions": [
+        "FUNCTION AS AN N-ACYLTRANSFERASE",
+        "DISRUPTION PHENOTYPE"
+      ],
+      "referenceComments": [
+        {
+          "value": "BCG / Pasteur 1173P2",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AM408590",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAL72058.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_003902238.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_008769.1"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "A0A0H3M5A8",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "A0A0H3M5A8",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "mbb:BCG_2070c",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_014143_0_0_11",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "ACEWFRG",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BRENDA",
+      "id": "2.3.1.269",
+      "properties": [
+        {
+          "key": "OrganismId",
+          "value": "3494"
+        }
+      ]
+    },
+    {
+      "database": "UniPathway",
+      "id": "UPA00666",
+      "properties": [
+        {
+          "key": "RectionId",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005886",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:plasma membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0016747",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:acyltransferase activity, transferring groups other than amino-acyl groups"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0004582",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:dolichyl-phosphate beta-D-mannosyltransferase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISS:UniProtKB"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0042158",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:lipoprotein biosynthetic process"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-UniRule"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd07571",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ALP_N-acyl_transferase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd06442",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "DPM1_like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "3.90.550.10:FF:000122",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Dolichol-phosphate mannosyltransferase subunit 1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.60.110.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Carbon-nitrogen hydrolase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.90.550.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Spore Coat Polysaccharide Biosynthesis Protein SpsA, Chain A"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "HAMAP",
+      "id": "MF_01148",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Lnt"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR004563",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Apolipo_AcylTrfase"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR003010",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "C-N_Hydrolase"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036526",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "C-N_Hydrolase_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR039528",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "DPM1-like"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR001173",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Glyco_trans_2-like"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR045378",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LNT_N"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR029044",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Nucleotide-diphossugar_trans"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "TIGR00546",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "lnt"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR38686",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "APOLIPOPROTEIN N-ACYLTRANSFERASE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR38686:SF1",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "APOLIPOPROTEIN N-ACYLTRANSFERASE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00795",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CN_hydrolase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00535",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Glycos_transf_2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF20154",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LNT_N"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF56317",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Carbon-nitrogen hydrolase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF53448",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Nucleotide-diphospho-sugar transferases"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS50263",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CN_HYDROLASE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MKLGAWVAAQLPTTRTAVRTRLTRLVVSIVAGLLLYASFPPRNCWWAAVVALALLAWVLTHRATTPVGGLGYGLLFGLVFYVSLLPWIGELVGPGPWLALATTCALFPGIFGLFAVVVRLLPGWPIWFAVGWAAQEWLKSILPFGGFPWGSVAFGQAEGPLLPLVQLGGVALLSTGVALVGCGLTAIALEIEKWWRTGGQGDAPPAVVLPAACICLVLFAAIVVWPQVRHAGSGSGGEPTVTVAVVQGNVPRLGLDFNAQRRAVLDNHVEETLRLAADVHAGLAQQPQFVIWPENSSDIDPFVNPDAGQRISAAAEAIGAPILIGTLMDVPGRPRENPEWTNTAIVWNPGTGPADRHDKAIVQPFGEYLPMPWLFRHLSGYADRAGHFVPGNGTGVVRIAGVPVGVATCWEVIFDRAPRKSILGGAQLLTVPSNNATFNKTMSEQQLAFAKVRAVEHDRYVVVAGTTGISAVIAPDGGELIRTDFFQPAYLDSQVRLKTRLTPATRWGPILQWILVGAAAAVVLVAMRQNGWFPRPRRSEPKGENDDSDAPPGRSEASGPPALSESDDELIQPEQGGRHSSGFGRHRATSRSYMTTGQPAPPAPGNRPSQRVLVIIPTFNERENLPVIHRRLTQACPAVHVLVVDDSSPDGTGQLADELAQADPGRTHVMHRTAKNGLGAAYLAGFAWGLSREYSVLVEMDADGSHAPEQLQRLLDAVDAGADLAIGSRYVAGGTVRNWPWRRLVLSKTANTYSRLALGIGIHDITAGYRAYRREALEAIDLDGVDSKGYCFQIDLTWRTVSNGFVVTEVPITFTERELGVSKMSGSNIREALVKVARWGIEGRLSRSDHARARPDIARPGAGGSRVSRADVTE",
+    "length": 874,
+    "molWeight": 93824,
+    "crc64": "E00EADD2EC3238B4",
+    "md5": "8A2CFB0E10F675A02881618445B45C5B"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 2,
+      "CATALYTIC ACTIVITY": 2,
+      "PATHWAY": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "DOMAIN": 1,
+      "DISRUPTION PHENOTYPE": 1,
+      "MISCELLANEOUS": 1,
+      "SIMILARITY": 2
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Transmembrane": 6,
+      "Domain": 1,
+      "Region": 4,
+      "Active site": 3
+    },
+    "uniParcId": "UPI00000D4FA0"
+  }
+}

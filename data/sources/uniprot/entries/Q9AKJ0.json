@@ -1,0 +1,434 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "Q9AKJ0",
+  "uniProtkbId": "RICKA_RICRI",
+  "entryAudit": {
+    "firstPublicDate": "2006-10-31",
+    "lastAnnotationUpdateDate": "2026-09-02",
+    "lastSequenceUpdateDate": "2001-06-01",
+    "entryVersion": 56,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 2.0,
+  "organism": {
+    "scientificName": "Rickettsia rickettsii",
+    "taxonId": 783,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Alphaproteobacteria",
+      "Rickettsiales",
+      "Rickettsiaceae",
+      "Rickettsieae",
+      "Rickettsia",
+      "spotted fever group"
+    ]
+  },
+  "proteinExistence": "3: Inferred from homology",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Arp2/3 complex-activating protein rickA"
+      }
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "Actin polymerization protein rickA"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "rickA"
+      },
+      "orfNames": [
+        {
+          "value": "ORFB4"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "15236643"
+            }
+          ],
+          "value": "Recruits and activates the Arp2/3 complex, which in turn leads to actin polymerization, promoting Rickettsia motility during infection"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250"
+              }
+            ],
+            "value": "Cell surface",
+            "id": "SL-0310"
+          }
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 494,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Arp2/3 complex-activating protein rickA",
+      "featureId": "PRO_0000259653"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 383,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 400,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "WH2"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 312,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 494,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 421,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 454,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Central and acidic domains"
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 317,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 357,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Pro residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 440,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 456,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Low complexity",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 477,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 494,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Polar residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0009",
+      "category": "Molecular function",
+      "name": "Actin-binding"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "11319266",
+        "citationType": "journal article",
+        "authors": [
+          "Andersson J.O.",
+          "Andersson S.G.E."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11319266"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1093/oxfordjournals.molbev.a003864"
+          }
+        ],
+        "title": "Pseudogenes, junk DNA, and the dynamics of Rickettsia genomes.",
+        "publicationDate": "2001",
+        "journal": "Mol. Biol. Evol.",
+        "firstPage": "829",
+        "lastPage": "839",
+        "volume": "18"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "84-21C",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "15236643",
+        "citationType": "journal article",
+        "authors": [
+          "Jeng R.L.",
+          "Goley E.D.",
+          "D'Alessio J.A.",
+          "Chaga O.Y.",
+          "Svitkina T.M.",
+          "Borisy G.G.",
+          "Heinzen R.A.",
+          "Welch M.D."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15236643"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1111/j.1462-5822.2004.00402.x"
+          }
+        ],
+        "title": "A Rickettsia WASP-like protein activates the Arp2/3 complex and mediates actin-based motility.",
+        "publicationDate": "2004",
+        "journal": "Cell. Microbiol.",
+        "firstPage": "761",
+        "lastPage": "769",
+        "volume": "6"
+      },
+      "referencePositions": [
+        "FUNCTION"
+      ],
+      "referenceComments": [
+        {
+          "value": "HLP",
+          "type": "STRAIN"
+        },
+        {
+          "value": "Norgaard",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AJ293314",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAC33668.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q9AKJ0",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "Q9AKJ0",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009986",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cell surface"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "6.10.280.150",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR051661",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Actin_filament_regulator"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR47102",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PROTEIN BNI1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR47102:SF2",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PROTEIN BNI1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MVKEIDINKLLAQENNALNAILSHVNELCKQNKQLQGLIEIQNETKELEKEHNRSLPWFKRFVKTVSNVKYILIKSEEQLTNEAIKYNNKILKDIDNKIYNIAEKSAPLKQALQEEIEKSFKDLTKKDLSKDQRARLSEVFFSYKSKPERFSALHMTNPLQFINAEALEKQFNSLNATKQNIQNLISENSNIKELKEIQKQVAEIRAEVPHTFFEKLNNIWQNVKNVFVNNSEQVLAKNKESNTRTIRKIDEQLYKTQHKFEELIENKERNIKDIIAKLPDNEELQKIVSNLTNHMASKKEPILANVSLAKPLENNIPPPPPPPPPLPDNNIPPPPPPPPPLPDNNIPPPPPPPPMAPVKTLSKAVEATTVKKLENQPRPSIDTSDLMREIAGPKKLKKVEFDPNTGKPVAHSHSKPAQNVNKPSGLESIFARRVAIEMSDSSSSESDSGNWSDVSVNRNKSKMLKTKGERDAKMTTHAQKINNRNSQKPSFVR",
+    "length": 494,
+    "molWeight": 56190,
+    "crc64": "4334E4E8307A063D",
+    "md5": "0B3F507E645B1D25978B871113B2D5A7"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBCELLULAR LOCATION": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Domain": 1,
+      "Region": 2,
+      "Compositional bias": 3
+    },
+    "uniParcId": "UPI00000B9337"
+  }
+}

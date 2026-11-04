@@ -1,0 +1,499 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "P71351",
+  "uniProtkbId": "VAPD_HAEIN",
+  "entryAudit": {
+    "firstPublicDate": "1999-07-15",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "1997-02-01",
+    "entryVersion": 110,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 2.0,
+  "organism": {
+    "scientificName": "Haemophilus influenzae (strain ATCC 51907 / DSM 11121 / KW20 / Rd)",
+    "taxonId": 71421,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Gammaproteobacteria",
+      "Pasteurellales",
+      "Pasteurellaceae",
+      "Haemophilus"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Endoribonuclease VapD"
+      },
+      "ecNumbers": [
+        {
+          "value": "3.1.-.-"
+        }
+      ]
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "Virulence-associated protein D"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "vapD"
+      },
+      "orderedLocusNames": [
+        {
+          "value": "HI_0450"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250"
+            }
+          ],
+          "value": "Cleaves ssRNA, mostly between U:A"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250"
+            }
+          ],
+          "value": "Homodimer"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the VapD ribonuclease family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 91,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Endoribonuclease VapD",
+      "featureId": "PRO_0000217271"
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0903",
+      "category": "Technical term",
+      "name": "Direct protein sequencing"
+    },
+    {
+      "id": "KW-0378",
+      "category": "Molecular function",
+      "name": "Hydrolase"
+    },
+    {
+      "id": "KW-0540",
+      "category": "Molecular function",
+      "name": "Nuclease"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "7542800",
+        "citationType": "journal article",
+        "authors": [
+          "Fleischmann R.D.",
+          "Adams M.D.",
+          "White O.",
+          "Clayton R.A.",
+          "Kirkness E.F.",
+          "Kerlavage A.R.",
+          "Bult C.J.",
+          "Tomb J.-F.",
+          "Dougherty B.A.",
+          "Merrick J.M.",
+          "McKenney K.",
+          "Sutton G.G.",
+          "FitzHugh W.",
+          "Fields C.A.",
+          "Gocayne J.D.",
+          "Scott J.D.",
+          "Shirley R.",
+          "Liu L.-I.",
+          "Glodek A.",
+          "Kelley J.M.",
+          "Weidman J.F.",
+          "Phillips C.A.",
+          "Spriggs T.",
+          "Hedblom E.",
+          "Cotton M.D.",
+          "Utterback T.R.",
+          "Hanna M.C.",
+          "Nguyen D.T.",
+          "Saudek D.M.",
+          "Brandon R.C.",
+          "Fine L.D.",
+          "Fritchman J.L.",
+          "Fuhrmann J.L.",
+          "Geoghagen N.S.M.",
+          "Gnehm C.L.",
+          "McDonald L.A.",
+          "Small K.V.",
+          "Fraser C.M.",
+          "Smith H.O.",
+          "Venter J.C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "7542800"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1126/science.7542800"
+          }
+        ],
+        "title": "Whole-genome random sequencing and assembly of Haemophilus influenzae Rd.",
+        "publicationDate": "1995",
+        "journal": "Science",
+        "firstPage": "496",
+        "lastPage": "512",
+        "volume": "269"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 51907 / DSM 11121 / KW20 / Rd",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "10675023",
+        "citationType": "journal article",
+        "authors": [
+          "Langen H.",
+          "Takacs B.",
+          "Evers S.",
+          "Berndt P.",
+          "Lahm H.W.",
+          "Wipf B.",
+          "Gray C.",
+          "Fountoulakis M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "10675023"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1002/(sici)1522-2683(20000101)21:2<411::aid-elps411>3.0.co;2-4"
+          }
+        ],
+        "title": "Two-dimensional map of the proteome of Haemophilus influenzae.",
+        "publicationDate": "2000",
+        "journal": "Electrophoresis",
+        "firstPage": "411",
+        "lastPage": "429",
+        "volume": "21"
+      },
+      "referencePositions": [
+        "PROTEIN SEQUENCE OF 76-80"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 51907 / DSM 11121 / KW20 / Rd",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "L42023",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAC22108.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "C64069",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "C64069"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "P71351",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "P71351",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "71421.HI_0450",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblBacteria",
+      "id": "AAC22108",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAC22108"
+        },
+        {
+          "key": "GeneId",
+          "value": "HI_0450"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "hin:HI_0450",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|71421.8.peg.470",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "COG3309",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Bacteria"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_145265_4_0_6",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AFKVEDW",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OrthoDB",
+      "id": "8611858at2",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BioCyc",
+      "id": "HINF71421:G1GJ1-466-MONOMER",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000000579",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0004518",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:nuclease activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0003723",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:RNA binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.30.70.240",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR016368",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "VapD"
+        }
+      ]
+    },
+    {
+      "database": "PIRSF",
+      "id": "PIRSF002882",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "VapD"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MYAIAFLVVKDTQDYHPKGVQQAYTDIGAVLAKFGFVRTQGSLYINMNEDMANLFQAMNALKQLAWISQSVRDIRAFRIEQWSDFTDFIRN",
+    "length": 91,
+    "molWeight": 10543,
+    "crc64": "70B23CDE28E083E7",
+    "md5": "AE5D9B0C4006D45884958D467CBED73E"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBUNIT": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1
+    },
+    "uniParcId": "UPI0000138111"
+  }
+}

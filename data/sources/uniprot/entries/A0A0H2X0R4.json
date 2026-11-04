@@ -1,0 +1,352 @@
+{
+  "entryType": "UniProtKB unreviewed (TrEMBL)",
+  "primaryAccession": "A0A0H2X0R4",
+  "uniProtkbId": "A0A0H2X0R4_CHLTA",
+  "entryAudit": {
+    "firstPublicDate": "2015-09-16",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2015-09-16",
+    "entryVersion": 23,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 1.0,
+  "organism": {
+    "scientificName": "Chlamydia trachomatis serovar A (strain ATCC VR-571B / DSM 19440 / HAR-13)",
+    "taxonId": 315277,
+    "evidences": [
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "EMBL",
+        "id": "AAX50492.1"
+      },
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "Proteomes",
+        "id": "UP000002532"
+      }
+    ],
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Chlamydiota",
+      "Chlamydiia",
+      "Chlamydiales",
+      "Chlamydiaceae",
+      "Chlamydia/Chlamydophila group",
+      "Chlamydia"
+    ]
+  },
+  "proteinExistence": "4: Predicted",
+  "proteinDescription": {
+    "submissionNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAX50492.1"
+            }
+          ],
+          "value": "Inclusion membrane protein B"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "AAX50492.1"
+          }
+        ],
+        "value": "incB"
+      },
+      "orderedLocusNames": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AAX50492.1"
+            }
+          ],
+          "value": "CTA_0254"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 30,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 61,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "Phobius"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 67,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 90,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "Phobius"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "Phobius"
+        }
+      ],
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "Proteomes",
+          "id": "UP000002532"
+        }
+      ],
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "Phobius"
+        }
+      ],
+      "id": "KW-0812",
+      "category": "Domain",
+      "name": "Transmembrane"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "Phobius"
+        }
+      ],
+      "id": "KW-1133",
+      "category": "Domain",
+      "name": "Transmembrane helix"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "16177312",
+        "citationType": "journal article",
+        "authors": [
+          "Carlson J.H.",
+          "Porcella S.F.",
+          "McClarty G.",
+          "Caldwell H.D."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "16177312"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/IAI.73.10.6407-6418.2005"
+          }
+        ],
+        "title": "Comparative genomic analysis of Chlamydia trachomatis oculotropic and genitotropic strains.",
+        "publicationDate": "2005",
+        "journal": "Infect. Immun.",
+        "firstPage": "6407",
+        "lastPage": "6418",
+        "volume": "73"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "Proteomes",
+              "id": "UP000002532"
+            }
+          ],
+          "value": "ATCC VR-571B / DSM 19440 / HAR-13",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AAX50492.1"
+        },
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "Proteomes",
+          "id": "UP000002532"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "CP000051",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAX50492.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_011324655.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_007429.1"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "A0A0H2X0R4",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "cta:CTA_0254",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_2104631_0_0_0",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "EGNMVHS",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000002532",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR061026",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "IncB_C"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF033935",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "inclusion_IncB"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MVHSVYNSLAPEGFSQVSIQPSQIPTSKKVMIAIMTLFALTAIAAIVLSIVTVCGGFPFLLAALNTVTIGASVSLPVFTCIATTLLLLCLRNIELLARPQVFTLSTQFSPTKPQE",
+    "length": 115,
+    "molWeight": 12238,
+    "crc64": "2E4A6880C1225D83",
+    "md5": "E3912E785B474D730F5444FEE2CAE6AE"
+  },
+  "extraAttributes": {
+    "countByFeatureType": {
+      "Transmembrane": 2
+    },
+    "uniParcId": "UPI00005B877B"
+  }
+}

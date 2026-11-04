@@ -71,7 +71,7 @@ To clean up the cache:
 
 ## Adding New Pathogens
 
-When adding a new pathogen to `curated_data.json`:
+When adding a new pathogen to `pathogens_seed.json`:
 
 1. Run `python scripts/build_pathogens.py --refresh` to fetch fresh NCBI data
 2. The script will automatically create new cache files for the new pathogen

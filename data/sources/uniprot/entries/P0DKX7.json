@@ -1,0 +1,5761 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "P0DKX7",
+  "secondaryAccessions": [
+    "P15318"
+  ],
+  "uniProtkbId": "CYAA_BORPE",
+  "entryAudit": {
+    "firstPublicDate": "2013-03-06",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2013-03-06",
+    "entryVersion": 77,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 5.0,
+  "organism": {
+    "scientificName": "Bordetella pertussis (strain Tohama I / ATCC BAA-589 / NCTC 13251)",
+    "taxonId": 257313,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Betaproteobacteria",
+      "Burkholderiales",
+      "Alcaligenaceae",
+      "Bordetella"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Bifunctional hemolysin/adenylate cyclase"
+      }
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "AC-HLY"
+        }
+      },
+      {
+        "fullName": {
+          "value": "ACT"
+        }
+      },
+      {
+        "fullName": {
+          "value": "Cyclolysin"
+        }
+      }
+    ],
+    "contains": [
+      {
+        "recommendedName": {
+          "fullName": {
+            "value": "Calmodulin-sensitive adenylate cyclase"
+          },
+          "ecNumbers": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "2050107"
+                },
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "2542030"
+                }
+              ],
+              "value": "4.6.1.1"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "value": "ATP pyrophosphate-lyase"
+            }
+          },
+          {
+            "fullName": {
+              "value": "Adenylyl cyclase"
+            }
+          }
+        ]
+      },
+      {
+        "recommendedName": {
+          "fullName": {
+            "value": "Hemolysin"
+          }
+        }
+      }
+    ],
+    "flag": "Precursor"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "cya"
+      },
+      "synonyms": [
+        {
+          "value": "cyaA"
+        }
+      ],
+      "orderedLocusNames": [
+        {
+          "value": "BP0760"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "2050107"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "2542030"
+            }
+          ],
+          "value": "Bifunctional adenylate cyclase toxin-hemolysin that plays a crucial role in host colonization (PubMed:2050107, PubMed:2542030). It causes whooping cough by acting on mammalian cells by elevating cAMP-concentration and thus disrupts normal cell function (PubMed:2050107, PubMed:2542030)"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "2050107"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "2542030"
+            }
+          ],
+          "value": "Adenylate cyclase that is activated by host intracellular calmodulin and catalyzes un-regulated conversion of ATP to cAMP, thereby impairing microbicidal functions of immune effector cells and inducing apoptosis of lung macrophages"
+        }
+      ],
+      "commentType": "FUNCTION",
+      "molecule": "Calmodulin-sensitive adenylate cyclase"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "J7QLC0"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "8077197"
+            }
+          ],
+          "value": "Hemolysin that forms small cation-selective membrane channels, leading to hemolytic activity (PubMed:8077197). The hemolytic activity of CyaA is weak compared with that of the HlyA of E.coli (By similarity)"
+        }
+      ],
+      "commentType": "FUNCTION",
+      "molecule": "Hemolysin"
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "molecule": "Calmodulin-sensitive adenylate cyclase",
+      "reaction": {
+        "name": "ATP = 3',5'-cyclic AMP + diphosphate",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:15389"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:30616"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:33019"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:58165"
+          }
+        ],
+        "ecNumber": "4.6.1.1",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "2050107"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "2542030"
+          }
+        ]
+      }
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "2542030"
+            }
+          ],
+          "value": "Activated by host calmodulin"
+        }
+      ],
+      "commentType": "ACTIVITY REGULATION",
+      "molecule": "Calmodulin-sensitive adenylate cyclase"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "2542030"
+              }
+            ],
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        }
+      ]
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "molecule": "Hemolysin",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000305",
+                "source": "PubMed",
+                "id": "8077197"
+              }
+            ],
+            "value": "Host cell membrane",
+            "id": "SL-0375"
+          },
+          "topology": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000305"
+              }
+            ],
+            "value": "Multi-pass membrane protein",
+            "id": "SL-9909"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "value": "The Gly-rich region is probably involved in binding calcium, which is required for target cell-binding or cytolytic activity"
+        }
+      ],
+      "commentType": "DOMAIN"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "2542030"
+            }
+          ],
+          "value": "Released in a processed form"
+        }
+      ],
+      "commentType": "PTM"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "10196151"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11031260"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "27993565"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "29625104"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "32461253"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "33011179"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "7939682"
+            }
+          ],
+          "value": "Palmitoylated at Lys-860 and Lys-983 by CyaC (PubMed:10196151, PubMed:11031260, PubMed:29625104, PubMed:32461253, PubMed:33011179, PubMed:7939682). The toxin only becomes active when modified in position Lys-983: palmitoylation is required for efficient membrane insertion and pore formation of the acylated Hemolysin chain (PubMed:11031260, PubMed:27993565, PubMed:32461253, PubMed:7939682)"
+        }
+      ],
+      "commentType": "PTM",
+      "molecule": "Hemolysin"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "In the N-terminal section; belongs to the adenylyl cyclase class-2 family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "In the C-terminal section; belongs to the RTX prokaryotic toxin family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 312,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Calmodulin-sensitive adenylate cyclase",
+      "featureId": "PRO_0000001320"
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 313,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1706,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Hemolysin",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ],
+      "featureId": "PRO_0000001321"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 1014,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1031,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Hemolysin-type calcium-binding 1"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 1032,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1049,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Hemolysin-type calcium-binding 2"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 1050,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1067,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Hemolysin-type calcium-binding 3"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 1155,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1172,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Hemolysin-type calcium-binding 4"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 1173,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1190,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Hemolysin-type calcium-binding 5"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 1279,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1296,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Hemolysin-type calcium-binding 6"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 1297,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1314,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Hemolysin-type calcium-binding 7"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 1315,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1332,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Hemolysin-type calcium-binding 8"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 1335,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1352,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Hemolysin-type calcium-binding 9"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 1411,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1428,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Hemolysin-type calcium-binding 10"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 1429,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1446,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Hemolysin-type calcium-binding 11"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 1447,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1464,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Hemolysin-type calcium-binding 12"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 1468,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1484,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Hemolysin-type calcium-binding 13"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 1537,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1554,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Hemolysin-type calcium-binding 14"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 1555,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1572,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Hemolysin-type calcium-binding 15"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 1573,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1590,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Hemolysin-type calcium-binding 16"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 1603,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1620,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Hemolysin-type calcium-binding 17"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 399,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "A, catalytic",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305",
+          "source": "PubMed",
+          "id": "2007407"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 383,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 405,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 400,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 912,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "B, Ala/Gly-rich",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305",
+          "source": "PubMed",
+          "id": "2007407"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 500,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 698,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Required for interaction with CyaC",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "29625104"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 913,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1656,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "C",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305",
+          "source": "PubMed",
+          "id": "2007407"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 1657,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1706,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "D, Asp/Gly-rich",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305",
+          "source": "PubMed",
+          "id": "2007407"
+        }
+      ]
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 349,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 356,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:30616"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ],
+      "ligand": {
+        "name": "ATP",
+        "id": "ChEBI:CHEBI:30616"
+      }
+    },
+    {
+      "type": "Lipidation",
+      "location": {
+        "start": {
+          "value": 860,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 860,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N6-palmitoyl lysine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "10196151"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "11031260"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "32461253"
+        }
+      ]
+    },
+    {
+      "type": "Lipidation",
+      "location": {
+        "start": {
+          "value": 983,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 983,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N6-palmitoyl lysine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "11031260"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "27993565"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "29625104"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "32461253"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "33011179"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "7939682"
+        }
+      ]
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 58,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 58,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Abolished adenylate cyclase activity.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "2542030"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "K",
+        "alternativeSequences": [
+          "Q"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 65,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 65,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Abolished adenylate cyclase activity.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "2542030"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "K",
+        "alternativeSequences": [
+          "Q"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 188,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 188,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Loss of adenylate cyclase activity.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "2050107"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "D",
+        "alternativeSequences": [
+          "E",
+          "N",
+          "Y",
+          "H"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 190,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 190,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Loss of adenylate cyclase activity.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "2050107"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "D",
+        "alternativeSequences": [
+          "N",
+          "Y",
+          "H"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 242,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 242,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Reduced affinity for altered affinity for calmodulin without affecting the adenylate cyclase activity.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "2542030"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "W",
+        "alternativeSequences": [
+          "D",
+          "G",
+          "R",
+          "V"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 298,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 298,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Loss of adenylate cyclase activity.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "2050107"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "H",
+        "alternativeSequences": [
+          "R",
+          "P",
+          "L"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 301,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 301,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Loss of adenylate cyclase activity.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "2050107"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "E",
+        "alternativeSequences": [
+          "Q",
+          "K"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 860,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 860,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Does not affect ability of Hemolysin chain to be activated by CyaC.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "32461253"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "K",
+        "alternativeSequences": [
+          "R"
+        ]
+      }
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 12,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 16,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1YRT"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 21,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 33,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1YRT"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 36,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 41,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1YRT"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 45,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 52,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1YRT"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 70,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 72,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1YRT"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 77,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 79,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1YRT"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 80,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 82,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1YRT"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 84,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 87,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1YRT"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 90,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 105,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1YRT"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 109,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 112,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1YRT"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 117,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 125,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1YRT"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 131,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 138,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1YRT"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 142,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 145,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1YRT"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 147,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 153,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1YRT"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 159,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 165,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1YRT"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 168,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 173,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1ZOT"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 175,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 178,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1YRT"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 184,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 186,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1YRT"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 191,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 197,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1YRT"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 198,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 201,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1YRT"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 202,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 209,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1YRT"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 210,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 212,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1YRT"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 215,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 222,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1YRT"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 235,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 252,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1YRT"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 253,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 256,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1YRT"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 257,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 259,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1YRT"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 262,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 264,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1YRT"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 267,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 271,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1YRT"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 274,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 289,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1YRT"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 301,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 303,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1YRT"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 313,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 316,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1YRT"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 322,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 325,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1YRT"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 327,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 339,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1YRT"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 348,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 354,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1YRT"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 460,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 480,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6YNU"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 756,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 766,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 775,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 779,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 782,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 791,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 799,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 803,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 819,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 821,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 822,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 825,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 826,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 828,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 841,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 843,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 851,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 853,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 861,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 863,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 867,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 869,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 875,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 879,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 886,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 888,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 895,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 897,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 903,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 905,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 908,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 912,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 919,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 921,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 927,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 930,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 937,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 939,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 948,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 966,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 968,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 975,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 982,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 984,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 990,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 997,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1001,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1009,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1012,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1014,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1021,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1023,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1030,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1032,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1035,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1037,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1039,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1041,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1044,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1046,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1048,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1050,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1053,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1055,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1057,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1059,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1066,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1068,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1076,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1079,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1086,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1092,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 1096,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1102,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1105,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1110,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 1111,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1114,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1115,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1119,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 1120,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1122,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1127,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1132,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1135,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1137,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1140,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1146,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1153,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1155,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1162,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1164,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1171,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1173,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1176,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1178,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1180,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1182,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1189,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1191,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1200,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1202,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1209,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1211,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 1213,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1215,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1228,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1234,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 1235,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1238,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1239,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1245,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1248,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1256,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1259,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1261,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1264,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1270,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1277,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1279,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1282,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1284,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1286,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1288,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1295,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1297,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1300,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1302,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1304,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1306,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1309,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1311,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1313,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1315,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1322,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1324,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1331,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1333,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1342,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1344,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7RAH"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1351,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1353,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1373,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1375,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 1376,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1379,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1380,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1382,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1390,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1397,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1400,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1402,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1409,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1411,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1418,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1420,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6SUS"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1427,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1429,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6SUS"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1432,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1434,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1436,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1438,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6SUS"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1445,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1447,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6SUS"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1450,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1452,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7USL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1454,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1456,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6SUS"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1463,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1465,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6SUS"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1474,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1476,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6SUS"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1483,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1485,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6SUS"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1500,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1503,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6SUS"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 1504,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1507,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6SUS"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1508,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1511,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6SUS"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1514,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1523,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6SUS"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1526,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1528,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6SUS"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1535,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1537,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5CXL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1544,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1546,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5CXL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1553,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1555,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5CXL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1562,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1564,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5CXL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1571,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1573,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5CXL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1580,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1586,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5CXL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1589,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1593,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5CXL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1598,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1603,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5CXL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1610,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1615,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5CXL"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 1617,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1619,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5CXL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1620,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1625,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5CXL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1628,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1633,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5CXL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1639,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1642,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5CXL"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 1643,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1647,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5CXL"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 1649,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1651,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5CXL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1654,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1658,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5CXL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 1661,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1664,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5CXL"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 1665,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1675,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5CXL"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0002",
+      "category": "Technical term",
+      "name": "3D-structure"
+    },
+    {
+      "id": "KW-0067",
+      "category": "Ligand",
+      "name": "ATP-binding"
+    },
+    {
+      "id": "KW-0106",
+      "category": "Ligand",
+      "name": "Calcium"
+    },
+    {
+      "id": "KW-0112",
+      "category": "Molecular function",
+      "name": "Calmodulin-binding"
+    },
+    {
+      "id": "KW-0115",
+      "category": "Biological process",
+      "name": "cAMP biosynthesis"
+    },
+    {
+      "id": "KW-0204",
+      "category": "Biological process",
+      "name": "Cytolysis"
+    },
+    {
+      "id": "KW-0354",
+      "category": "Biological process",
+      "name": "Hemolysis"
+    },
+    {
+      "id": "KW-1032",
+      "category": "Cellular component",
+      "name": "Host cell membrane"
+    },
+    {
+      "id": "KW-1043",
+      "category": "Cellular component",
+      "name": "Host membrane"
+    },
+    {
+      "id": "KW-0449",
+      "category": "PTM",
+      "name": "Lipoprotein"
+    },
+    {
+      "id": "KW-0456",
+      "category": "Molecular function",
+      "name": "Lyase"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-0519",
+      "category": "PTM",
+      "name": "Myristate"
+    },
+    {
+      "id": "KW-0547",
+      "category": "Ligand",
+      "name": "Nucleotide-binding"
+    },
+    {
+      "id": "KW-0564",
+      "category": "PTM",
+      "name": "Palmitate"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0677",
+      "category": "Domain",
+      "name": "Repeat"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0800",
+      "category": "Molecular function",
+      "name": "Toxin"
+    },
+    {
+      "id": "KW-0812",
+      "category": "Domain",
+      "name": "Transmembrane"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    },
+    {
+      "id": "KW-0855",
+      "category": "Disease",
+      "name": "Whooping cough"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "12910271",
+        "citationType": "journal article",
+        "authors": [
+          "Parkhill J.",
+          "Sebaihia M.",
+          "Preston A.",
+          "Murphy L.D.",
+          "Thomson N.R.",
+          "Harris D.E.",
+          "Holden M.T.G.",
+          "Churcher C.M.",
+          "Bentley S.D.",
+          "Mungall K.L.",
+          "Cerdeno-Tarraga A.-M.",
+          "Temple L.",
+          "James K.D.",
+          "Harris B.",
+          "Quail M.A.",
+          "Achtman M.",
+          "Atkin R.",
+          "Baker S.",
+          "Basham D.",
+          "Bason N.",
+          "Cherevach I.",
+          "Chillingworth T.",
+          "Collins M.",
+          "Cronin A.",
+          "Davis P.",
+          "Doggett J.",
+          "Feltwell T.",
+          "Goble A.",
+          "Hamlin N.",
+          "Hauser H.",
+          "Holroyd S.",
+          "Jagels K.",
+          "Leather S.",
+          "Moule S.",
+          "Norberczak H.",
+          "O'Neil S.",
+          "Ormond D.",
+          "Price C.",
+          "Rabbinowitsch E.",
+          "Rutter S.",
+          "Sanders M.",
+          "Saunders D.",
+          "Seeger K.",
+          "Sharp S.",
+          "Simmonds M.",
+          "Skelton J.",
+          "Squares R.",
+          "Squares S.",
+          "Stevens K.",
+          "Unwin L.",
+          "Whitehead S.",
+          "Barrell B.G.",
+          "Maskell D.J."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "12910271"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/ng1227"
+          }
+        ],
+        "title": "Comparative analysis of the genome sequences of Bordetella pertussis, Bordetella parapertussis and Bordetella bronchiseptica.",
+        "publicationDate": "2003",
+        "journal": "Nat. Genet.",
+        "firstPage": "32",
+        "lastPage": "40",
+        "volume": "35"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "Tohama I / ATCC BAA-589 / NCTC 13251",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "2542030",
+        "citationType": "journal article",
+        "authors": [
+          "Glaser P.",
+          "Elmaoglou-Lazaridou A.",
+          "Krin E.",
+          "Ladant D.",
+          "Barzu O.",
+          "Danchin A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "2542030"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1002/j.1460-2075.1989.tb03459.x"
+          }
+        ],
+        "title": "Identification of residues essential for catalysis and binding of calmodulin in Bordetella pertussis adenylate cyclase by site-directed mutagenesis.",
+        "publicationDate": "1989",
+        "journal": "EMBO J.",
+        "firstPage": "967",
+        "lastPage": "972",
+        "volume": "8"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "CATALYTIC ACTIVITY",
+        "SUBCELLULAR LOCATION",
+        "MUTAGENESIS OF LYS-58; LYS-65 AND TRP-242"
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "2050107",
+        "citationType": "journal article",
+        "authors": [
+          "Glaser P.",
+          "Munier H.",
+          "Gilles A.-M.",
+          "Krin E.",
+          "Porumb T.",
+          "Barzu O.",
+          "Sarfati R.",
+          "Pellecuer C.",
+          "Danchin A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "2050107"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1002/j.1460-2075.1991.tb07692.x"
+          }
+        ],
+        "title": "Functional consequences of single amino acid substitutions in calmodulin-activated adenylate cyclase of Bordetella pertussis.",
+        "publicationDate": "1991",
+        "journal": "EMBO J.",
+        "firstPage": "1683",
+        "lastPage": "1688",
+        "volume": "10"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "CATALYTIC ACTIVITY",
+        "MUTAGENESIS OF ASP-188; ASP-190; HIS-298 AND GLU-301"
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "2007407",
+        "citationType": "journal article",
+        "authors": [
+          "Munier H.",
+          "Gilles A.-M.",
+          "Glaser P.",
+          "Danchin A.",
+          "Sarfati R.",
+          "Barzu O."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "2007407"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1111/j.1432-1033.1991.tb15838.x"
+          }
+        ],
+        "title": "Isolation and characterization of catalytic and calmodulin-binding domains of Bordetella pertussis adenylate cyclase.",
+        "publicationDate": "1991",
+        "journal": "Eur. J. Biochem.",
+        "firstPage": "469",
+        "lastPage": "474",
+        "volume": "196"
+      },
+      "referencePositions": [
+        "DOMAINS"
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "8418825",
+        "citationType": "journal article",
+        "authors": [
+          "Danchin A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8418825"
+          }
+        ],
+        "title": "Phylogeny of adenylyl cyclases.",
+        "publicationDate": "1993",
+        "journal": "Adv. Second Messenger Phosphoprotein Res.",
+        "firstPage": "109",
+        "lastPage": "162",
+        "volume": "27"
+      },
+      "referencePositions": [
+        "REVIEW"
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "8077197",
+        "citationType": "journal article",
+        "authors": [
+          "Szabo G.",
+          "Gray M.C.",
+          "Hewlett E.L."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8077197"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/s0021-9258(17)31674-5"
+          }
+        ],
+        "title": "Adenylate cyclase toxin from Bordetella pertussis produces ion conductance across artificial lipid bilayers in a calcium- and polarity-dependent manner.",
+        "publicationDate": "1994",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "22496",
+        "lastPage": "22499",
+        "volume": "269"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "SUBCELLULAR LOCATION"
+      ]
+    },
+    {
+      "referenceNumber": 7,
+      "citation": {
+        "id": "7939682",
+        "citationType": "journal article",
+        "authors": [
+          "Hackett M.",
+          "Guo L.",
+          "Shabanowitz J.",
+          "Hunt D.F.",
+          "Hewlett E.L."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "7939682"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1126/science.7939682"
+          }
+        ],
+        "title": "Internal lysine palmitoylation in adenylate cyclase toxin from Bordetella pertussis.",
+        "publicationDate": "1994",
+        "journal": "Science",
+        "firstPage": "433",
+        "lastPage": "435",
+        "volume": "266"
+      },
+      "referencePositions": [
+        "PALMITOYLATION AT LYS-983"
+      ]
+    },
+    {
+      "referenceNumber": 8,
+      "citation": {
+        "id": "10196151",
+        "citationType": "journal article",
+        "authors": [
+          "Basar T.",
+          "Havlicek V.",
+          "Bezouskova S.",
+          "Halada P.",
+          "Hackett M.",
+          "Sebo P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "10196151"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1074/jbc.274.16.10777"
+          }
+        ],
+        "title": "The conserved lysine 860 in the additional fatty-acylation site of Bordetella pertussis adenylate cyclase is crucial for toxin function independently of its acylation status.",
+        "publicationDate": "1999",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "10777",
+        "lastPage": "10783",
+        "volume": "274"
+      },
+      "referencePositions": [
+        "PALMITOYLATION AT LYS-860"
+      ]
+    },
+    {
+      "referenceNumber": 9,
+      "citation": {
+        "id": "11031260",
+        "citationType": "journal article",
+        "authors": [
+          "Basar T.",
+          "Havlicek V.",
+          "Bezouskova S.",
+          "Hackett M.",
+          "Sebo P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11031260"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1074/jbc.m006463200"
+          }
+        ],
+        "title": "Acylation of lysine 983 is sufficient for toxin activity of Bordetella pertussis adenylate cyclase. Substitutions of alanine 140 modulate acylation site selectivity of the toxin acyltransferase CyaC.",
+        "publicationDate": "2001",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "348",
+        "lastPage": "354",
+        "volume": "276"
+      },
+      "referencePositions": [
+        "PALMITOYLATION AT LYS-860 AND LYS-983"
+      ]
+    },
+    {
+      "referenceNumber": 10,
+      "citation": {
+        "id": "27993565",
+        "citationType": "journal article",
+        "authors": [
+          "Meetum K.",
+          "Imtong C.",
+          "Katzenmeier G.",
+          "Angsuthanasombat C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "27993565"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/j.bbamem.2016.12.011"
+          }
+        ],
+        "title": "Acylation of the Bordetella pertussis CyaA-hemolysin: Functional implications for efficient membrane insertion and pore formation.",
+        "publicationDate": "2017",
+        "journal": "Biochim. Biophys. Acta",
+        "firstPage": "312",
+        "lastPage": "318",
+        "volume": "1859"
+      },
+      "referencePositions": [
+        "PALMITOYLATION AT LYS-983"
+      ]
+    },
+    {
+      "referenceNumber": 11,
+      "citation": {
+        "id": "29625104",
+        "citationType": "journal article",
+        "authors": [
+          "Raksanoh V.",
+          "Prangkio P.",
+          "Imtong C.",
+          "Thamwiriyasati N.",
+          "Suvarnapunya K.",
+          "Shank L.",
+          "Angsuthanasombat C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "29625104"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/j.bbrc.2018.04.007"
+          }
+        ],
+        "title": "Structural requirement of the hydrophobic region of the Bordetella pertussis CyaA-hemolysin for functional association with CyaC-acyltransferase in toxin acylation.",
+        "publicationDate": "2018",
+        "journal": "Biochem. Biophys. Res. Commun.",
+        "firstPage": "862",
+        "lastPage": "867",
+        "volume": "499"
+      },
+      "referencePositions": [
+        "PALMITOYLATION AT LYS-983"
+      ]
+    },
+    {
+      "referenceNumber": 12,
+      "citation": {
+        "id": "33011179",
+        "citationType": "journal article",
+        "authors": [
+          "Yentongchai M.",
+          "Thamwiriyasati N.",
+          "Imtong C.",
+          "Li H.C.",
+          "Angsuthanasombat C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "33011179"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/j.abb.2020.108615"
+          }
+        ],
+        "title": "Preferential modification of CyaA-hemolysin by CyaC-acyltransferase through the catalytic Ser30-His33 dyad in esterolysis of palmitoyl-donor substrate devoid of acyl carrier proteins.",
+        "publicationDate": "2020",
+        "journal": "Arch. Biochem. Biophys.",
+        "firstPage": "108615",
+        "lastPage": "108615",
+        "volume": "694"
+      },
+      "referencePositions": [
+        "PALMITOYLATION AT LYS-983"
+      ]
+    },
+    {
+      "referenceNumber": 13,
+      "citation": {
+        "id": "32461253",
+        "citationType": "journal article",
+        "authors": [
+          "Osickova A.",
+          "Khaliq H.",
+          "Masin J.",
+          "Jurnecka D.",
+          "Sukova A.",
+          "Fiser R.",
+          "Holubova J.",
+          "Stanek O.",
+          "Sebo P.",
+          "Osicka R."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "32461253"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1074/jbc.ra120.014122"
+          }
+        ],
+        "title": "Acyltransferase-mediated selection of the length of the fatty acyl chain and of the acylation site governs activation of bacterial RTX toxins.",
+        "publicationDate": "2020",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "9268",
+        "lastPage": "9280",
+        "volume": "295"
+      },
+      "referencePositions": [
+        "PALMITOYLATION AT LYS-860 AND LYS-983",
+        "MUTAGENESIS OF LYS-860"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "BX640413",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAE41066.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "S00893",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OYBRC"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_010929995.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_002929.2"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "1YRT",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.10 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=1-364"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "1YRU",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.50 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=1-364"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "1ZOT",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.20 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=7-364"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2COL",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.20 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=7-362"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "5CXL",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.45 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B=1529-1681"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6SUS",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.76 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=1371-1690"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6YNS",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "3.94 A"
+        },
+        {
+          "key": "Chains",
+          "value": "N/O/Q/R/S/T/U/V/W/X/Y/Z/a/b/c/d/e/f/g/h/i/j/k/l=458-481"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6YNU",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "3.12 A"
+        },
+        {
+          "key": "Chains",
+          "value": "B/D=458-481"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "7RAH",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.60 A"
+        },
+        {
+          "key": "Chains",
+          "value": "E=1015-1706"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "7USL",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "EM"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.70 A"
+        },
+        {
+          "key": "Chains",
+          "value": "C=751-1706"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "9P0C",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.70 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B=1529-1680"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "9P0D",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.50 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=1529-1680"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "9P6C",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.99 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B=1529-1680"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "P0DKX7",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BMRB",
+      "id": "P0DKX7",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "MDposit",
+      "id": "P0DKX7",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SASBDB",
+      "id": "P0DKX7",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "P0DKX7",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "IntAct",
+      "id": "P0DKX7",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "257313.BP0760",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PaxDb",
+      "id": "257313-BP0760",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "ABCD",
+      "id": "P0DKX7",
+      "properties": [
+        {
+          "key": "antibodies",
+          "value": "6 sequenced antibodies"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "69600712",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "bpe:BP0760",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|257313.5.peg.813",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "COG2931",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Bacteria"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_239696_0_0_4",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AAELPNH",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BRENDA",
+      "id": "4.6.1.1",
+      "properties": [
+        {
+          "key": "OrganismId",
+          "value": "899"
+        }
+      ]
+    },
+    {
+      "database": "EvolutionaryTrace",
+      "id": "P0DKX7",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PHI-base",
+      "id": "PHI:11897",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000002676",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "2542030"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0020002",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:host cell plasma membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0004016",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:adenylate cyclase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "2542030"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005509",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:calcium ion binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0008294",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:calcium- and calmodulin-responsive adenylate cyclase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0015267",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:channel activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "8077197"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0006171",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:cAMP biosynthetic process"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "2542030"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0044179",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:hemolysis in another organism"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "8077197"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0007204",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:positive regulation of cytosolic calcium ion concentration"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:CACAO"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "17148436"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0141042",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:symbiont-mediated cAMP intoxication of host cell"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:SigSci"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "18426886"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "2.150.10.10:FF:000003",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Bifunctional hemolysin/adenylate cyclase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "3"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.10.150.920",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.30.70.1720",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.90.1760.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Anthrax toxin, edema factor, central domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.150.10.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Serralysin-like metalloprotease, C-terminal"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "5"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR035099",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Anthrax_toxin_C-terminal"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR005165",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Anthrax_toxin_edema_cen"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR037017",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Anthrax_toxin_edema_cen_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR010566",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Haemolys_ca-bd"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR018511",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Hemolysin-typ_Ca-bd_CS"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR001343",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Hemolysn_Ca-bd"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR018504",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "RTX_pore_form"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR050557",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "RTX_toxin/Mannuronan_C5-epim"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR003995",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "RTX_toxin_determinant-A"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR011049",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Serralysin-like_metalloprot_C"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR38340",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "S-LAYER PROTEIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR38340:SF1",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "S-LAYER PROTEIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF03497",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Anthrax_toxA"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF06594",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "HCBP_related"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00353",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "HemolysinCabind"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "7"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF02382",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "RTX"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR00313",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CABNDNGRPT"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR01488",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "RTXTOXINA"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF81298",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Adenylylcyclase toxin (the edema factor)"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF51120",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "beta-Roll"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "5"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS00330",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "HEMOLYSIN_CALCIUM"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "5"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MQQSHQAGYANAADRESGIPAAVLDGIKAVAKEKNATLMFRLVNPHSTSLIAEGVATKGLGVHAKSSDWGLQAGYIPVNPNLSKLFGRAPEVIARADNDVNSSLAHGHTAVDLTLSKERLDYLRQAGLVTGMADGVVASNHAGYEQFEFRVKETSDGRYAVQYRRKGGDDFEAVKVIGNAAGIPLTADIDMFAIMPHLSNFRDSARSSVTSGDSVTDYLARTRRAASEATGGLDRERIDLLWKIARAGARSAVGTEARRQFRYDGDMNIGVITDFELEVRNALNRRAHAVGAQDVVQHGTEQNNPFPEADEKIFVVSATGESQMLTRGQLKEYIGQQRGEGYVFYENRAYGVAGKSLFDDGLGAAPGVPSGRSKFSPDVLETVPASPGLRRPSLGAVERQDSGYDSLDGVGSRSFSLGEVSDMAAVEAAELEMTRQVLHAGARQDDAEPGVSGASAHWGQRALQGAQAVAAAQRLVHAIALMTQFGRAGSTNTPQEAASLSAAVFGLGEASSAVAETVSGFFRGSSRWAGGFGVAGGAMALGGGIAAAVGAGMSLTDDAPAGQKAAAGAEIALQLTGGTVELASSIALALAAARGVTSGLQVAGASAGAAAGALAAALSPMEIYGLVQQSHYADQLDKLAQESSAYGYEGDALLAQLYRDKTAAEGAVAGVSAVLSTVGAAVSIAAAASVVGAPVAVVTSLLTGALNGILRGVQQPIIEKLANDYARKIDELGGPQAYFEKNLQARHEQLANSDGLRKMLADLQAGWNASSVIGVQTTEISKSALELAAITGNADNLKSVDVFVDRFVQGERVAGQPVVLDVAAGGIDIASRKGERPALTFITPLAAPGEEQRRRTKTGKSEFTTFVEIVGKQDRWRIRDGAADTTIDLAKVVSQLVDANGVLKHSIKLDVIGGDGDDVVLANASRIHYDGGAGTNTVSYAALGRQDSITVSADGERFNVRKQLNNANVYREGVATQTTAYGKRTENVQYRHVELARVGQLVEVDTLEHVQHIIGGAGNDSITGNAHDNFLAGGSGDDRLDGGAGNDTLVGGEGQNTVIGGAGDDVFLQDLGVWSNQLDGGAGVDTVKYNVHQPSEERLERMGDTGIHADLQKGTVEKWPALNLFSVDHVKNIENLHGSRLNDRIAGDDQDNELWGHDGNDTIRGRGGDDILRGGLGLDTLYGEDGNDIFLQDDETVSDDIDGGAGLDTVDYSAMIHPGRIVAPHEYGFGIEADLSREWVRKASALGVDYYDNVRNVENVIGTSMKDVLIGDAQANTLMGQGGDDTVRGGDGDDLLFGGDGNDMLYGDAGNDTLYGGLGDDTLEGGAGNDWFGQTQAREHDVLRGGDGVDTVDYSQTGAHAGIAAGRIGLGILADLGAGRVDKLGEAGSSAYDTVSGIENVVGTELADRITGDAQANVLRGAGGADVLAGGEGDDVLLGGDGDDQLSGDAGRDRLYGEAGDDWFFQDAANAGNLLDGGDGRDTVDFSGPGRGLDAGAKGVFLSLGKGFASLMDEPETSNVLRNIENAVGSARDDVLIGDAGANVLNGLAGNDVLSGGAGDDVLLGDEGSDLLSGDAGNDDLFGGQGDDTYLFGVGYGHDTIYESGGGHDTIRINAGADQLWFARQGNDLEIRILGTDDALTVHDWYRDADHRVEIIHAANQAVDQAGIEKLVEAMAQYPDPGAAAAAPPAARVPDTLMQSLAVNWR",
+    "length": 1706,
+    "molWeight": 177521,
+    "crc64": "C1FD3D46CABCEF39",
+    "md5": "50C7A756CECE4CD16968F93F71575474"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 3,
+      "CATALYTIC ACTIVITY": 1,
+      "ACTIVITY REGULATION": 1,
+      "SUBCELLULAR LOCATION": 2,
+      "DOMAIN": 1,
+      "PTM": 2,
+      "SIMILARITY": 2
+    },
+    "countByFeatureType": {
+      "Chain": 2,
+      "Repeat": 17,
+      "Region": 6,
+      "Binding site": 1,
+      "Lipidation": 2,
+      "Mutagenesis": 8,
+      "Helix": 24,
+      "Beta strand": 111,
+      "Turn": 10
+    },
+    "uniParcId": "UPI00001B6E1B"
+  }
+}

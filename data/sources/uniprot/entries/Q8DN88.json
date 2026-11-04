@@ -1,0 +1,1686 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "Q8DN88",
+  "uniProtkbId": "COMGC_STRR6",
+  "entryAudit": {
+    "firstPublicDate": "2024-01-24",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2003-03-01",
+    "entryVersion": 104,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 5.0,
+  "organism": {
+    "scientificName": "Streptococcus pneumoniae (strain ATCC BAA-255 / R6)",
+    "taxonId": 171101,
+    "evidences": [
+      {
+        "evidenceCode": "ECO:0000312",
+        "source": "EMBL",
+        "id": "AAL00664.1"
+      },
+      {
+        "evidenceCode": "ECO:0000312",
+        "source": "Proteomes",
+        "id": "UP000000586"
+      }
+    ],
+    "lineage": [
+      "Bacteria",
+      "Bacillati",
+      "Bacillota",
+      "Bacilli",
+      "Lactobacillales",
+      "Streptococcaceae",
+      "Streptococcus"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000303",
+            "source": "PubMed",
+            "id": "23825953"
+          }
+        ],
+        "value": "Competence protein ComGC"
+      }
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "35004361"
+            }
+          ],
+          "value": "Major pilin ComGC"
+        }
+      }
+    ],
+    "flag": "Precursor"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000303",
+            "source": "PubMed",
+            "id": "32273343"
+          }
+        ],
+        "value": "comGC"
+      },
+      "synonyms": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000312",
+              "source": "EMBL",
+              "id": "AAL00664.1"
+            }
+          ],
+          "value": "cglC"
+        }
+      ],
+      "orderedLocusNames": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000312",
+              "source": "EMBL",
+              "id": "AAL00664.1"
+            }
+          ],
+          "value": "spr1862"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "P25955"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "23825953"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "28659339"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "33754381"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "35004361"
+            }
+          ],
+          "value": "Major component of the type IV-like pilus (T4P) that plays a role in transformation (PubMed:23825953, PubMed:28659339, PubMed:35004361). Transformation pili are dynamically extended and retracted, perhaps thereby promoting DNA uptake and transformation (PubMed:23825953, PubMed:33754381). Required for transformation (PubMed:23825953, PubMed:28659339, PubMed:33754381, PubMed:35004361). Required for DNA binding (By similarity)"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "23825953"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "28659339"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "35004361"
+            }
+          ],
+          "value": "The transformation pili are flexible filaments, consisting mainly of the major pilin ComGC and smaller amounts of the minor pilins, including at least ComGD, ComGF and ComGG, and perhaps ComGE (PubMed:23825953, PubMed:28659339). Homodimer (PubMed:28659339). Forms higher-order multimers (PubMed:28659339). Interacts with ComGG; the interaction is probably direct (PubMed:35004361)"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "note": {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250",
+                "source": "UniProtKB",
+                "id": "A0A0H2URU9"
+              },
+              {
+                "evidenceCode": "ECO:0000250",
+                "source": "UniProtKB",
+                "id": "P25955"
+              }
+            ],
+            "value": "The unprocessed form is an integral membrane protein with its C-terminus outside the membrane. Upon cleavage, it is translocated to the outer face of the membrane (By similarity). ComGC release into culture supernatant is probably physiological because it is still observed in an autolysis-deficient lytA mutant background (By similarity)"
+          }
+        ]
+      },
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250",
+                "source": "UniProtKB",
+                "id": "P25955"
+              }
+            ],
+            "value": "Cell membrane",
+            "id": "SL-0039"
+          },
+          "topology": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250",
+                "source": "UniProtKB",
+                "id": "P25955"
+              }
+            ],
+            "value": "Single-pass membrane protein",
+            "id": "SL-9904"
+          }
+        },
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250",
+                "source": "UniProtKB",
+                "id": "P25955"
+              }
+            ],
+            "value": "Cell surface",
+            "id": "SL-0310"
+          }
+        },
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "23825953"
+              },
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "28659339"
+              },
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "35004361"
+              }
+            ],
+            "value": "Fimbrium",
+            "id": "SL-0113"
+          }
+        },
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250",
+                "source": "UniProtKB",
+                "id": "A0A0H2URU9"
+              }
+            ],
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "23825953"
+            }
+          ],
+          "value": "Up-regulated by competence-stimulating peptide (CSP) (PubMed:23825953). Part of the putative comGA-comGB-comGC-comGD-comGE-comGF-comGG operon (PubMed:23825953)"
+        }
+      ],
+      "commentType": "INDUCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "28659339"
+            }
+          ],
+          "value": "Undergoes proteolytic cleavage"
+        }
+      ],
+      "commentType": "PTM"
+    },
+    {
+      "commentType": "MASS SPECTROMETRY",
+      "method": "Electrospray",
+      "molWeight": 10442.0,
+      "molWeightError": 0.0,
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "23825953"
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "35004361"
+            }
+          ],
+          "value": "ComGD, ComGF and ComGG are undetectable"
+        }
+      ],
+      "commentType": "DISRUPTION PHENOTYPE"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the ComGC family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 13,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 14,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 108,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Competence protein ComGC",
+      "featureId": "PRO_0000459377"
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 16,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 36,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 14,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 39,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "May be involved in polymerization of ComGC",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "A0A0H2URU9"
+        }
+      ]
+    },
+    {
+      "type": "Modified residue",
+      "location": {
+        "start": {
+          "value": 16,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 16,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-methylphenylalanine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "23825953"
+        }
+      ]
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 20,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 20,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Despite normal expression level in cells, abolishes detection of ComGC in the mechanically-sheared fraction, probably corresponding to the pilus. Abolishes transformation.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "23825953"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "35004361"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "E",
+        "alternativeSequences": [
+          "A",
+          "V"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 29,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 29,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Detectable but reduced rate of transformation.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "33754381"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "S",
+        "alternativeSequences": [
+          "C"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 40,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 40,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Detectable but reduced rate of transformation.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "33754381"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "T",
+        "alternativeSequences": [
+          "C"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 60,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 60,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Normal rate of transformation.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "33754381"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "S",
+        "alternativeSequences": [
+          "C"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 66,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 66,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Normal rate of transformation.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "33754381"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "S",
+        "alternativeSequences": [
+          "C"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 74,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 74,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Normal rate of transformation.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "33754381"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "S",
+        "alternativeSequences": [
+          "C"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 80,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 80,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Detectable but reduced rate of transformation.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "33754381"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "A",
+        "alternativeSequences": [
+          "C"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 85,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 85,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Detectable but reduced rate of transformation.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "33754381"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "T",
+        "alternativeSequences": [
+          "C"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 107,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 107,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Detectable but reduced rate of transformation.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "33754381"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "N",
+        "alternativeSequences": [
+          "C"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 108,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 108,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Detectable but reduced rate of transformation.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "33754381"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "D",
+        "alternativeSequences": [
+          "C"
+        ]
+      }
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 51,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 67,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6Y1H"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 70,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 72,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6Y1H"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 75,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 81,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6Y1H"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 86,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 96,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6Y1H"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0002",
+      "category": "Technical term",
+      "name": "3D-structure"
+    },
+    {
+      "id": "KW-1003",
+      "category": "Cellular component",
+      "name": "Cell membrane"
+    },
+    {
+      "id": "KW-0178",
+      "category": "Biological process",
+      "name": "Competence"
+    },
+    {
+      "id": "KW-0281",
+      "category": "Cellular component",
+      "name": "Fimbrium"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-0488",
+      "category": "PTM",
+      "name": "Methylation"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    },
+    {
+      "id": "KW-0812",
+      "category": "Domain",
+      "name": "Transmembrane"
+    },
+    {
+      "id": "KW-1133",
+      "category": "Domain",
+      "name": "Transmembrane helix"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "11544234",
+        "citationType": "journal article",
+        "authors": [
+          "Hoskins J.",
+          "Alborn W.E. Jr.",
+          "Arnold J.",
+          "Blaszczak L.C.",
+          "Burgett S.",
+          "DeHoff B.S.",
+          "Estrem S.T.",
+          "Fritz L.",
+          "Fu D.-J.",
+          "Fuller W.",
+          "Geringer C.",
+          "Gilmour R.",
+          "Glass J.S.",
+          "Khoja H.",
+          "Kraft A.R.",
+          "Lagace R.E.",
+          "LeBlanc D.J.",
+          "Lee L.N.",
+          "Lefkowitz E.J.",
+          "Lu J.",
+          "Matsushima P.",
+          "McAhren S.M.",
+          "McHenney M.",
+          "McLeaster K.",
+          "Mundy C.W.",
+          "Nicas T.I.",
+          "Norris F.H.",
+          "O'Gara M.",
+          "Peery R.B.",
+          "Robertson G.T.",
+          "Rockey P.",
+          "Sun P.-M.",
+          "Winkler M.E.",
+          "Yang Y.",
+          "Young-Bellido M.",
+          "Zhao G.",
+          "Zook C.A.",
+          "Baltz R.H.",
+          "Jaskunas S.R.",
+          "Rosteck P.R. Jr.",
+          "Skatrud P.L.",
+          "Glass J.I."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11544234"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.183.19.5709-5717.2001"
+          }
+        ],
+        "title": "Genome of the bacterium Streptococcus pneumoniae strain R6.",
+        "publicationDate": "2001",
+        "journal": "J. Bacteriol.",
+        "firstPage": "5709",
+        "lastPage": "5717",
+        "volume": "183"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000312",
+              "source": "Proteomes",
+              "id": "UP000000586"
+            }
+          ],
+          "value": "ATCC BAA-255 / R6",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000312",
+          "source": "EMBL",
+          "id": "AAL00664.1"
+        },
+        {
+          "evidenceCode": "ECO:0000312",
+          "source": "Proteomes",
+          "id": "UP000000586"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "23825953",
+        "citationType": "journal article",
+        "authors": [
+          "Laurenceau R.",
+          "Pehau-Arnaudet G.",
+          "Baconnais S.",
+          "Gault J.",
+          "Malosse C.",
+          "Dujeancourt A.",
+          "Campo N.",
+          "Chamot-Rooke J.",
+          "Le Cam E.",
+          "Claverys J.P.",
+          "Fronzes R."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "23825953"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1371/journal.ppat.1003473"
+          }
+        ],
+        "title": "A type IV pilus mediates DNA binding during natural transformation in Streptococcus pneumoniae.",
+        "publicationDate": "2013",
+        "journal": "PLoS Pathog.",
+        "firstPage": "e1003473",
+        "lastPage": "e1003473",
+        "volume": "9"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "SUBUNIT",
+        "SUBCELLULAR LOCATION",
+        "INDUCTION",
+        "MASS SPECTROMETRY",
+        "METHYLATION AT PHE-16",
+        "MUTAGENESIS OF GLU-20"
+      ],
+      "referenceComments": [
+        {
+          "value": "G54",
+          "type": "STRAIN"
+        },
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "TCP1251",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "28659339",
+        "citationType": "journal article",
+        "authors": [
+          "Muschiol S.",
+          "Erlendsson S.",
+          "Aschtgen M.S.",
+          "Oliveira V.",
+          "Schmieder P.",
+          "de Lichtenberg C.",
+          "Teilum K.",
+          "Boesen T.",
+          "Akbey U.",
+          "Henriques-Normark B."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "28659339"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1074/jbc.m117.787671"
+          }
+        ],
+        "title": "Structure of the competence pilus major pilin ComGC in Streptococcus pneumoniae.",
+        "publicationDate": "2017",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "14134",
+        "lastPage": "14146",
+        "volume": "292"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "SUBUNIT",
+        "SUBCELLULAR LOCATION",
+        "PROTEOLYTIC CLEAVAGE"
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "35004361",
+        "citationType": "journal article",
+        "authors": [
+          "Oliveira V.",
+          "Aschtgen M.S.",
+          "van Erp A.",
+          "Henriques-Normark B.",
+          "Muschiol S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "35004361"
+          },
+          {
+            "database": "DOI",
+            "id": "10.3389/fcimb.2021.808601"
+          }
+        ],
+        "title": "The Role of Minor Pilins in Assembly and Function of the Competence Pilus of Streptococcus pneumoniae.",
+        "publicationDate": "2021",
+        "journal": "Front. Cell. Infect. Microbiol.",
+        "firstPage": "808601",
+        "lastPage": "808601",
+        "volume": "11"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "INTERACTION WITH COMGG",
+        "SUBCELLULAR LOCATION",
+        "DISRUPTION PHENOTYPE",
+        "MUTAGENESIS OF GLU-20"
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "33754381",
+        "citationType": "journal article",
+        "authors": [
+          "Lam T.",
+          "Ellison C.K.",
+          "Eddington D.T.",
+          "Brun Y.V.",
+          "Dalia A.B.",
+          "Morrison D.A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "33754381"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1111/mmi.14718"
+          }
+        ],
+        "title": "Competence pili in Streptococcus pneumoniae are highly dynamic structures that retract to promote DNA uptake.",
+        "publicationDate": "2021",
+        "journal": "Mol. Microbiol.",
+        "firstPage": "381",
+        "lastPage": "396",
+        "volume": "116"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "MUTAGENESIS OF SER-29; THR-40; SER-60; SER-66; SER-74; ALA-80; THR-85; ASN-107 AND ASP-108"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "CP2137",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "32273343",
+        "citationType": "journal article",
+        "authors": [
+          "Sheppard D.",
+          "Berry J.L.",
+          "Denise R.",
+          "Rocha E.P.C.",
+          "Matthews S.",
+          "Pelicic V."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "32273343"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1074/jbc.ra120.013316"
+          }
+        ],
+        "title": "The major subunit of widespread competence pili exhibits a novel and conserved type IV pilin fold.",
+        "publicationDate": "2020",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "6594",
+        "lastPage": "6604",
+        "volume": "295"
+      },
+      "referencePositions": [
+        "STRUCTURE BY NMR OF 38-108"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "6Y1H"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AE007317",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAL00664.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "C98104",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "C98104"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_000738626.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_003098.1"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6Y1H",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "NMR"
+        },
+        {
+          "key": "Resolution",
+          "value": "-"
+        },
+        {
+          "key": "Chains",
+          "value": "A=38-108"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q8DN88",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BMRB",
+      "id": "Q8DN88",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "Q8DN88",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "171101.spr1862",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "iPTMnet",
+      "id": "Q8DN88",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PaxDb",
+      "id": "171101-spr1862",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "spr:spr1862",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|171101.6.peg.2009",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "COG4537",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Bacteria"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_091705_9_1_9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "ADKCPNG",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000000586",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009986",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cell surface"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISS:UniProtKB"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISS:UniProtKB"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009289",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:pilus"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "23825953"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "28659339"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "35004361"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005886",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:plasma membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISS:UniProtKB"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0015627",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:type II protein secretion system complex"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0030420",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:establishment of competence for transformation"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0015628",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:protein secretion by the type II secretion system"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.30.700.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Glycoprotein, Type 4 Pilin"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR016940",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ComGC"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR060070",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ComGC_C"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR000983",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "GSPG_pilin"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR012902",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "N_methyl_site"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR045584",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Pilin-like"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "TIGR02532",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "IV_pilin_GFxxxE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF040999",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "pilin_ComGC"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR30093",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "GENERAL SECRETION PATHWAY PROTEIN G"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR30093:SF2",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TYPE II SECRETION SYSTEM PROTEIN H"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF26697",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ComGC_C"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF07963",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "N_methyl"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PIRSF",
+      "id": "PIRSF029928",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Late_competence_ComGC"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR00813",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "BCTERIALGSPG"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF54523",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Pili subunits"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MKKMMTFLKKAKVKAFTLVEMLVVLLIISVLFLLFVPNLTKQKEAVNDKGKAAVVKVVESQAELYSLEKNEDASLRKLQADGRITEEQAKAYKEYHDKNGGANRKVND",
+    "length": 108,
+    "molWeight": 12200,
+    "crc64": "6CF1B89128C435E8",
+    "md5": "4ABDF3F14A7463E72C16DDC3BCB8D8D2"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "INDUCTION": 1,
+      "PTM": 1,
+      "MASS SPECTROMETRY": 1,
+      "DISRUPTION PHENOTYPE": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1,
+      "Transmembrane": 1,
+      "Region": 1,
+      "Modified residue": 1,
+      "Mutagenesis": 10,
+      "Helix": 3,
+      "Beta strand": 1
+    },
+    "uniParcId": "UPI00000AEEDA"
+  }
+}

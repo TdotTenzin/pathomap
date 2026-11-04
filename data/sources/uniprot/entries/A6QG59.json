@@ -1,0 +1,953 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "A6QG59",
+  "secondaryAccessions": [
+    "P68798",
+    "Q08691"
+  ],
+  "uniProtkbId": "FIB_STAAE",
+  "entryAudit": {
+    "firstPublicDate": "2008-03-18",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2007-08-21",
+    "entryVersion": 89,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 3.0,
+  "organism": {
+    "scientificName": "Staphylococcus aureus (strain Newman)",
+    "taxonId": 426430,
+    "lineage": [
+      "Bacteria",
+      "Bacillati",
+      "Bacillota",
+      "Bacilli",
+      "Caryophanales",
+      "Staphylococcaceae",
+      "Staphylococcus"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Fibrinogen-binding protein"
+      }
+    },
+    "flag": "Precursor"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "fib"
+      },
+      "synonyms": [
+        {
+          "value": "efb"
+        }
+      ],
+      "orderedLocusNames": [
+        {
+          "value": "NWMN_1069"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11418620"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "24348255"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "27112346"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "7934883"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "8945578"
+            }
+          ],
+          "value": "Extracellular fibrinogen-binding protein that plays an important role in virulence (PubMed:7934883, PubMed:8945578). By interacting with the alpha chain of fibrinogen and its derivative fibrin, enhances a non-functional interaction between fibrinogen and platelets and is responsible for repression of fibrinogen-dependent platelet aggregation (PubMed:11418620). In addition, assembles a fibrinogen protective shield around the bacteria which results in impaired phagocytic clearance by the host. Mechanistically, interacts with host complement C3b deposited on the surface of the bacterium via its C-terminal and then recruits fibrinogen via its N-terminal (PubMed:24348255, PubMed:27112346)"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11418620"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "18687868"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "24348255"
+            }
+          ],
+          "value": "Interacts with host fibrinogen alpha chain/FGA (PubMed:11418620). Interacts with host complement protein C3 (PubMed:11418620, PubMed:18687868, PubMed:24348255)"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 29,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 30,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 165,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Fibrinogen-binding protein",
+      "featureId": "PRO_0000324754"
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 131,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 131,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Loss of host C3d binding stability.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "18687868"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "R",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 138,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 138,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Loss of host C3d binding stability.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "18687868"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "N",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 4,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 4,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 1; CAA50893",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "K",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 102,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 124,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3D5R"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 127,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 138,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3D5R"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 142,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 144,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3D5R"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 145,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 161,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "3D5R"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0002",
+      "category": "Technical term",
+      "name": "3D-structure"
+    },
+    {
+      "id": "KW-0903",
+      "category": "Technical term",
+      "name": "Direct protein sequencing"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "7934883",
+        "citationType": "journal article",
+        "authors": [
+          "Boden M.K.",
+          "Flock J.-I."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "7934883"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1111/j.1365-2958.1994.tb01046.x"
+          }
+        ],
+        "title": "Cloning and characterization of a gene for a 19 kDa fibrinogen-binding protein from Staphylococcus aureus.",
+        "publicationDate": "1994",
+        "journal": "Mol. Microbiol.",
+        "firstPage": "599",
+        "lastPage": "606",
+        "volume": "12"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]",
+        "FUNCTION IN FIBRINOGEN BINDING",
+        "SUBCELLULAR LOCATION"
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "17951380",
+        "citationType": "journal article",
+        "authors": [
+          "Baba T.",
+          "Bae T.",
+          "Schneewind O.",
+          "Takeuchi F.",
+          "Hiramatsu K."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "17951380"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.01000-07"
+          }
+        ],
+        "title": "Genome sequence of Staphylococcus aureus strain Newman and comparative analysis of staphylococcal genomes: polymorphism and evolution of two major pathogenicity islands.",
+        "publicationDate": "2008",
+        "journal": "J. Bacteriol.",
+        "firstPage": "300",
+        "lastPage": "310",
+        "volume": "190"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "Newman",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "1630299",
+        "citationType": "journal article",
+        "authors": [
+          "Boden M.K.",
+          "Flock J.-I."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "1630299"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/0882-4010(92)90047-r"
+          }
+        ],
+        "title": "Evidence for three different fibrinogen-binding proteins with unique properties from Staphylococcus aureus strain Newman.",
+        "publicationDate": "1992",
+        "journal": "Microb. Pathog.",
+        "firstPage": "289",
+        "lastPage": "298",
+        "volume": "12"
+      },
+      "referencePositions": [
+        "PROTEIN SEQUENCE OF THE N-TERMINUS",
+        "BINDING TO FIBRINOGEN"
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "8945578",
+        "citationType": "journal article",
+        "authors": [
+          "Palma M.",
+          "Nozohoor S.",
+          "Schennings T.",
+          "Heimdahl A.",
+          "Flock J.I."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8945578"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.64.12.5284-5289.1996"
+          }
+        ],
+        "title": "Lack of the extracellular 19-kilodalton fibrinogen-binding protein from Staphylococcus aureus decreases virulence in experimental wound infection.",
+        "publicationDate": "1996",
+        "journal": "Infect. Immun.",
+        "firstPage": "5284",
+        "lastPage": "5289",
+        "volume": "64"
+      },
+      "referencePositions": [
+        "FUNCTION"
+      ],
+      "referenceComments": [
+        {
+          "value": "FDA486",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "11418620",
+        "citationType": "journal article",
+        "authors": [
+          "Palma M.",
+          "Shannon O.",
+          "Quezada H.C.",
+          "Berg A.",
+          "Flock J.I."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11418620"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1074/jbc.m104554200"
+          }
+        ],
+        "title": "Extracellular fibrinogen-binding protein, Efb, from Staphylococcus aureus blocks platelet aggregation due to its binding to the alpha-chain.",
+        "publicationDate": "2001",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "31691",
+        "lastPage": "31697",
+        "volume": "276"
+      },
+      "referencePositions": [
+        "INTERACTION WITH HOST FGA",
+        "FUNCTION"
+      ],
+      "referenceComments": [
+        {
+          "value": "Newman",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "24348255",
+        "citationType": "journal article",
+        "authors": [
+          "Ko Y.P.",
+          "Kuipers A.",
+          "Freitag C.M.",
+          "Jongerius I.",
+          "Medina E.",
+          "van Rooijen W.J.",
+          "Spaan A.N.",
+          "van Kessel K.P.",
+          "Hoeoek M.",
+          "Rooijakkers S.H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "24348255"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1371/journal.ppat.1003816"
+          }
+        ],
+        "title": "Phagocytosis escape by a Staphylococcus aureus protein that connects complement and coagulation proteins at the bacterial surface.",
+        "publicationDate": "2013",
+        "journal": "PLoS Pathog.",
+        "firstPage": "E1003816",
+        "lastPage": "E1003816",
+        "volume": "9"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "INTERACTION WITH HOST C3 AND FGA"
+      ]
+    },
+    {
+      "referenceNumber": 7,
+      "citation": {
+        "id": "27112346",
+        "citationType": "journal article",
+        "authors": [
+          "Kuipers A.",
+          "Stapels D.A.",
+          "Weerwind L.T.",
+          "Ko Y.P.",
+          "Ruyken M.",
+          "Lee J.C.",
+          "van Kessel K.P.",
+          "Rooijakkers S.H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "27112346"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1099/mic.0.000293"
+          }
+        ],
+        "title": "The Staphylococcus aureus polysaccharide capsule and Efb-dependent fibrinogen shield act in concert to protect against phagocytosis.",
+        "publicationDate": "2016",
+        "journal": "Microbiology",
+        "firstPage": "1185",
+        "lastPage": "1194",
+        "volume": "162"
+      },
+      "referencePositions": [
+        "FUNCTION"
+      ]
+    },
+    {
+      "referenceNumber": 8,
+      "citation": {
+        "id": "18687868",
+        "citationType": "journal article",
+        "authors": [
+          "Haspel N.",
+          "Ricklin D.",
+          "Geisbrecht B.V.",
+          "Kavraki L.E.",
+          "Lambris J.D."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "18687868"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1110/ps.036624.108"
+          }
+        ],
+        "title": "Electrostatic contributions drive the interaction between Staphylococcus aureus protein Efb-C and its complement target C3d.",
+        "publicationDate": "2008",
+        "journal": "Protein Sci.",
+        "firstPage": "1894",
+        "lastPage": "1906",
+        "volume": "17"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY IN COMPLEX WITH HOST C3",
+        "MUTAGENESIS OF ARG-131 AND ASN-138"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "X72014",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAA50893.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AP009351",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "BAF67341.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "S49411",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "S34269"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "S49413",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "S34270"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_000791587.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_009641.1"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "3D5R",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.10 A"
+        },
+        {
+          "key": "Chains",
+          "value": "C/D=101-165"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "3D5S",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.30 A"
+        },
+        {
+          "key": "Chains",
+          "value": "C/D=101-165"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "A6QG59",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "A6QG59",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "sae:NWMN_1069",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_136810_0_0_9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "FEKTHTV",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EvolutionaryTrace",
+      "id": "A6QG59",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PRO",
+      "id": "PR:A6QG59",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "AbasyAtlas",
+      "id": "A6QG59",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0001848",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:complement binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.10.10.1270",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Sbi, C3 binding domain IV"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036233",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Efb_C_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR021033",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Extracellular_fibrinogen-bd_C"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR041909",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Sbi_C3_db_domIV"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF12199",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "efb-c"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF158366",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Efb C-domain-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MKNKLIAKSLLTLAAIGITTTTIASTADASEGYGPREKKPVSINHNIVEYNDGTFKYQSRPKFNSTPKYIKFKHDYNILEFNDGTFEYGARPQFNKPAAKTDATIKKEQKLIQAQNLVREFEKTHTVSAHRKAQKAVNLVSFEYKVKKMVLQERIDNVLKQGLVK",
+    "length": 165,
+    "molWeight": 18765,
+    "crc64": "BD929F216D415820",
+    "md5": "F72E01B81A6E36707EF173988F990B2B"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1,
+      "Mutagenesis": 2,
+      "Sequence conflict": 1,
+      "Helix": 4
+    },
+    "uniParcId": "UPI00000543E9"
+  }
+}

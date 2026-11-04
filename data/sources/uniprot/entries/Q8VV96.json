@@ -1,0 +1,295 @@
+{
+  "entryType": "UniProtKB unreviewed (TrEMBL)",
+  "primaryAccession": "Q8VV96",
+  "uniProtkbId": "Q8VV96_BORPT",
+  "entryAudit": {
+    "firstPublicDate": "2002-03-01",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2002-03-01",
+    "entryVersion": 28,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 1.0,
+  "organism": {
+    "scientificName": "Bordetella pertussis",
+    "taxonId": 520,
+    "evidences": [
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "EMBL",
+        "id": "CAD12827.1"
+      }
+    ],
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Betaproteobacteria",
+      "Burkholderiales",
+      "Alcaligenaceae",
+      "Bordetella"
+    ]
+  },
+  "proteinExistence": "4: Predicted",
+  "proteinDescription": {
+    "submissionNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "CAD12827.1"
+            }
+          ],
+          "value": "Tcf protein"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "CAD12827.1"
+          }
+        ],
+        "value": "tcfA5"
+      }
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 39,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "SignalP"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 40,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 134,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "SignalP"
+        }
+      ],
+      "featureId": "PRO_5053559070"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 66,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 134,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 71,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 80,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Low complexity",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 125,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 134,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Gly residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "SignalP"
+        }
+      ],
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "CI-DEBU883MMMHDE",
+        "citationType": "submission",
+        "authors": [
+          "van Loo I.H."
+        ],
+        "publicationDate": "NOV-2001",
+        "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "CAD12827.1"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "12037054",
+        "citationType": "journal article",
+        "authors": [
+          "van Loo I.H.",
+          "Heuvelman K.J.",
+          "King A.J.",
+          "Mooi F.R."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "12037054"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/JCM.40.6.1994-2001.2002"
+          }
+        ],
+        "title": "Multilocus sequence typing of Bordetella pertussis based on surface protein genes.",
+        "publicationDate": "2002",
+        "journal": "J. Clin. Microbiol.",
+        "firstPage": "1994",
+        "lastPage": "2001",
+        "volume": "40"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "CAD12827.1"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AJ420992",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAD12827.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q8VV96",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MHIYGNMNRATPCRGAVRALALALLGAGMWTLSPPSAWALKLPSLLTDDELKLVLPTGMSLEDFKRSLQESAPSALATPPSSSPPVAKPGPGSVAEAPSGSGHKDNPSPPVVGVGPGMAESSGGHNPGVGGGHA",
+    "length": 134,
+    "molWeight": 13379,
+    "crc64": "AE3E510DDB2CE28D",
+    "md5": "F1BEC49321BDBAB5D98DB0F563B6F343"
+  },
+  "extraAttributes": {
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1,
+      "Region": 1,
+      "Compositional bias": 2
+    },
+    "uniParcId": "UPI00000BE52E"
+  }
+}

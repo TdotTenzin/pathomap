@@ -1,0 +1,1301 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "Q9LDL7",
+  "secondaryAccessions": [
+    "Q8GYN7"
+  ],
+  "uniProtkbId": "PAT1_ARATH",
+  "entryAudit": {
+    "firstPublicDate": "2008-09-23",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2000-10-01",
+    "entryVersion": 127,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 5.0,
+  "organism": {
+    "scientificName": "Arabidopsis thaliana",
+    "commonName": "Mouse-ear cress",
+    "taxonId": 3702,
+    "lineage": [
+      "Eukaryota",
+      "Viridiplantae",
+      "Streptophyta",
+      "Embryophyta",
+      "Tracheophyta",
+      "Spermatophyta",
+      "Magnoliopsida",
+      "eudicotyledons",
+      "Gunneridae",
+      "Pentapetalae",
+      "rosids",
+      "malvids",
+      "Brassicales",
+      "Brassicaceae",
+      "Camelineae",
+      "Arabidopsis"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Scarecrow-like transcription factor PAT1"
+      }
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "GRAS family protein 29"
+        },
+        "shortNames": [
+          {
+            "value": "AtGRAS-29"
+          }
+        ]
+      },
+      {
+        "fullName": {
+          "value": "Protein PHYTOCHROME A SIGNAL TRANSDUCTION 1"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "PAT1"
+      },
+      "orderedLocusNames": [
+        {
+          "value": "At5g48150"
+        }
+      ],
+      "orfNames": [
+        {
+          "value": "MIF21.4"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "10817761"
+            }
+          ],
+          "value": "Probable transcription factor involved in phytochrome A (phyA) signal transduction"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "INTERACTION",
+      "interactions": [
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "Q9LDL7",
+            "intActId": "EBI-25514815"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "Q9LY29",
+            "geneName": "ERF115",
+            "intActId": "EBI-2130977"
+          },
+          "numberOfExperiments": 3,
+          "organismDiffer": false
+        }
+      ]
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "10817761"
+              }
+            ],
+            "value": "Cytoplasm",
+            "id": "SL-0086"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "10817761"
+            }
+          ],
+          "value": "Plants display reduced response to far-red (FR) light. Seedlings develop long hypocotyls, unfolded cotyledons, no significant anthocyanin accumulation, and greening after FR light"
+        }
+      ],
+      "commentType": "DISRUPTION PHENOTYPE"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the GRAS family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    },
+    {
+      "commentType": "SEQUENCE CAUTION",
+      "sequenceCautionType": "Erroneous initiation",
+      "sequence": "BAC42147.1",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 490,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Scarecrow-like transcription factor PAT1",
+      "featureId": "PRO_0000350845"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 110,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 490,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "GRAS",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01191"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 117,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 178,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Leucine repeat I (LRI)",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01191"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 197,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 262,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "VHIID",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01191"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 278,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 310,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Leucine repeat II (LRII)",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01191"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 319,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 413,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "PFYRE",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01191"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 416,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 490,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "SAW",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01191"
+        }
+      ]
+    },
+    {
+      "type": "Motif",
+      "location": {
+        "start": {
+          "value": 228,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 232,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "VHIID",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01191"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0963",
+      "category": "Cellular component",
+      "name": "Cytoplasm"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0804",
+      "category": "Biological process",
+      "name": "Transcription"
+    },
+    {
+      "id": "KW-0805",
+      "category": "Biological process",
+      "name": "Transcription regulation"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "10817761",
+        "citationType": "journal article",
+        "authors": [
+          "Bolle C.",
+          "Koncz C.",
+          "Chua N.-H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "10817761"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1101/gad.14.10.1269"
+          }
+        ],
+        "title": "PAT1, a new member of the GRAS family, is involved in phytochrome A signal transduction.",
+        "publicationDate": "2000",
+        "journal": "Genes Dev.",
+        "firstPage": "1269",
+        "lastPage": "1278",
+        "volume": "14"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [MRNA]",
+        "FUNCTION",
+        "SUBCELLULAR LOCATION",
+        "DISRUPTION PHENOTYPE"
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "10718197",
+        "citationType": "journal article",
+        "authors": [
+          "Sato S.",
+          "Nakamura Y.",
+          "Kaneko T.",
+          "Katoh T.",
+          "Asamizu E.",
+          "Kotani H.",
+          "Tabata S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "10718197"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1093/dnares/7.1.31"
+          }
+        ],
+        "title": "Structural analysis of Arabidopsis thaliana chromosome 5. X. Sequence features of the regions of 3,076,755 bp covered by sixty P1 and TAC clones.",
+        "publicationDate": "2000",
+        "journal": "DNA Res.",
+        "firstPage": "31",
+        "lastPage": "63",
+        "volume": "7"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "cv. Columbia",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "27862469",
+        "citationType": "journal article",
+        "authors": [
+          "Cheng C.Y.",
+          "Krishnakumar V.",
+          "Chan A.P.",
+          "Thibaud-Nissen F.",
+          "Schobel S.",
+          "Town C.D."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "27862469"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1111/tpj.13415"
+          }
+        ],
+        "title": "Araport11: a complete reannotation of the Arabidopsis thaliana reference genome.",
+        "publicationDate": "2017",
+        "journal": "Plant J.",
+        "firstPage": "789",
+        "lastPage": "804",
+        "volume": "89"
+      },
+      "referencePositions": [
+        "GENOME REANNOTATION"
+      ],
+      "referenceComments": [
+        {
+          "value": "cv. Columbia",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "CI-CI4AM1G71UC0S",
+        "citationType": "submission",
+        "authoringGroup": [
+          "The Arabidopsis Information Resource (TAIR)"
+        ],
+        "title": "Community-consensus reference genome of Arabidopsis thaliana Col-0.",
+        "publicationDate": "FEB-2026",
+        "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+      },
+      "referencePositions": [
+        "GENOME REANNOTATION"
+      ],
+      "referenceComments": [
+        {
+          "value": "cv. Columbia",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "CI-3FCPDF6IRS211",
+        "citationType": "submission",
+        "authors": [
+          "Shinn P.",
+          "Chen H.",
+          "Kim C.J.",
+          "Quinitio C.",
+          "Ecker J.R."
+        ],
+        "title": "Arabidopsis ORF clones.",
+        "publicationDate": "MAY-2006",
+        "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "cv. Columbia",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "11910074",
+        "citationType": "journal article",
+        "authors": [
+          "Seki M.",
+          "Narusaka M.",
+          "Kamiya A.",
+          "Ishida J.",
+          "Satou M.",
+          "Sakurai T.",
+          "Nakajima M.",
+          "Enju A.",
+          "Akiyama K.",
+          "Oono Y.",
+          "Muramatsu M.",
+          "Hayashizaki Y.",
+          "Kawai J.",
+          "Carninci P.",
+          "Itoh M.",
+          "Ishii Y.",
+          "Arakawa T.",
+          "Shibata K.",
+          "Shinagawa A.",
+          "Shinozaki K."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11910074"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1126/science.1071006"
+          }
+        ],
+        "title": "Functional annotation of a full-length Arabidopsis cDNA collection.",
+        "publicationDate": "2002",
+        "journal": "Science",
+        "firstPage": "141",
+        "lastPage": "145",
+        "volume": "296"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] OF 55-490"
+      ],
+      "referenceComments": [
+        {
+          "value": "cv. Columbia",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 7,
+      "citation": {
+        "id": "15316287",
+        "citationType": "journal article",
+        "authors": [
+          "Tian C.",
+          "Wan P.",
+          "Sun S.",
+          "Li J.",
+          "Chen M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15316287"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1023/b:plan.0000038256.89809.57"
+          }
+        ],
+        "title": "Genome-wide analysis of the GRAS gene family in rice and Arabidopsis.",
+        "publicationDate": "2004",
+        "journal": "Plant Mol. Biol.",
+        "firstPage": "519",
+        "lastPage": "532",
+        "volume": "54"
+      },
+      "referencePositions": [
+        "GENE FAMILY"
+      ]
+    },
+    {
+      "referenceNumber": 8,
+      "citation": {
+        "id": "18500650",
+        "citationType": "journal article",
+        "authors": [
+          "Lee M.-H.",
+          "Kim B.",
+          "Song S.-K.",
+          "Heo J.-O.",
+          "Yu N.-I.",
+          "Lee S.A.",
+          "Kim M.",
+          "Kim D.G.",
+          "Sohn S.O.",
+          "Lim C.E.",
+          "Chang K.S.",
+          "Lee M.M.",
+          "Lim J."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "18500650"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1007/s11103-008-9345-1"
+          }
+        ],
+        "title": "Large-scale analysis of the GRAS gene family in Arabidopsis thaliana.",
+        "publicationDate": "2008",
+        "journal": "Plant Mol. Biol.",
+        "firstPage": "659",
+        "lastPage": "670",
+        "volume": "67"
+      },
+      "referencePositions": [
+        "GENE FAMILY",
+        "TISSUE SPECIFICITY"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AF153443",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAF73237.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AB023039",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "BAA96995.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "CP002688",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AED95624.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "CP002688",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AED95625.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "CP002688",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ANM70908.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "CP002688",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ANM70909.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "OZ408687",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAO7055651.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "BT025326",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ABF57282.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AK117483",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "BAC42147.1"
+        },
+        {
+          "key": "Status",
+          "value": "ALT_INIT"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_001332482.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NM_001344761.1"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_001332483.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NM_001344762.1"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_199626.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NM_124189.6"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_974903.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NM_203174.3"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q9LDL7",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "Q9LDL7",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BioGRID",
+      "id": "20114",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "3"
+        }
+      ]
+    },
+    {
+      "database": "FunCoup",
+      "id": "Q9LDL7",
+      "properties": [
+        {
+          "key": "Number of interactors",
+          "value": "712"
+        }
+      ]
+    },
+    {
+      "database": "IntAct",
+      "id": "Q9LDL7",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "3"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "3702.Q9LDL7",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PaxDb",
+      "id": "3702-Q9LDL7",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "ProteomicsDB",
+      "id": "236326",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "834867",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "ath:AT5G48150",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Araport",
+      "id": "AT5G48150",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "TAIR",
+      "id": "AT5G48150",
+      "properties": [
+        {
+          "key": "GeneName",
+          "value": "PAT1"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "ENOG502QRZD",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Eukaryota"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_011924_6_0_1",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "InParanoid",
+      "id": "Q9LDL7",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "ADMSGCE",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PhylomeDB",
+      "id": "Q9LDL7",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PRO",
+      "id": "PR:Q9LDL7",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000006548",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome 5"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP001984100",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome 5"
+        }
+      ]
+    },
+    {
+      "database": "ExpressionAtlas",
+      "id": "Q9LDL7",
+      "properties": [
+        {
+          "key": "ExpressionPatterns",
+          "value": "baseline and differential"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005737",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cytoplasm"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:TAIR"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "10817761"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005634",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:nucleus"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISM:TAIR"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0003700",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:DNA-binding transcription factor activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISS:TAIR"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "PubMed",
+          "id": "11118137"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0000976",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:transcription cis-regulatory region binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IPI:TAIR"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000353",
+          "source": "PubMed",
+          "id": "25533953"
+        },
+        {
+          "evidenceCode": "ECO:0000353",
+          "source": "PubMed",
+          "id": "31806676"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:1990110",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:callus formation"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IGI:TAIR"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000316",
+          "source": "PubMed",
+          "id": "28904073"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009640",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:photomorphogenesis"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:TAIR"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "10817761"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009585",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:red, far-red light phototransduction"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:TAIR"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "10817761"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0006355",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:regulation of DNA-templated transcription"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR005202",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TF_GRAS"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR31636",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OSJNBA0084A10.13 PROTEIN-RELATED"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF03514",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "GRAS"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS50985",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "GRAS"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MYKQPRQELEAYYFEPNSVEKLRYLPVNNSRKRFCTLEPFPDSPPYNALSTATYDDTCGSCVTDELNDFKHKIREIETVMMGPDSLDLLVDCTDSFDSTASQEINGWRSTLEAISRRDLRADLVSCAKAMSENDLMMAHSMMEKLRQMVSVSGEPIQRLGAYLLEGLVAQLASSGSSIYKALNRCPEPASTELLSYMHILYEVCPYFKFGYMSANGAIAEAMKEENRVHIIDFQIGQGSQWVTLIQAFAARPGGPPRIRITGIDDMTSAYARGGGLSIVGNRLAKLAKQFNVPFEFNSVSVSVSEVKPKNLGVRPGEALAVNFAFVLHHMPDESVSTENHRDRLLRMVKSLSPKVVTLVEQESNTNTAAFFPRFMETMNYYAAMFESIDVTLPRDHKQRINVEQHCLARDVVNIIACEGADRVERHELLGKWRSRFGMAGFTPYPLSPLVNSTIKSLLRNYSDKYRLEERDGALYLGWMHRDLVASCAWK",
+    "length": 490,
+    "molWeight": 55290,
+    "crc64": "843A48A2F12C84A5",
+    "md5": "1B5282061115D35DB262DC4987B1893E"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "INTERACTION": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "DISRUPTION PHENOTYPE": 1,
+      "SIMILARITY": 1,
+      "SEQUENCE CAUTION": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Domain": 1,
+      "Region": 5,
+      "Motif": 1
+    },
+    "uniParcId": "UPI00000AAAF2"
+  }
+}

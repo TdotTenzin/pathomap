@@ -1,0 +1,1679 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "A0A0H3K686",
+  "uniProtkbId": "SPA_STAAE",
+  "entryAudit": {
+    "firstPublicDate": "2018-10-10",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2018-10-10",
+    "entryVersion": 46,
+    "sequenceVersion": 2
+  },
+  "annotationScore": 5.0,
+  "organism": {
+    "scientificName": "Staphylococcus aureus (strain Newman)",
+    "taxonId": 426430,
+    "lineage": [
+      "Bacteria",
+      "Bacillati",
+      "Bacillota",
+      "Bacilli",
+      "Caryophanales",
+      "Staphylococcaceae",
+      "Staphylococcus"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Immunoglobulin G-binding protein A"
+      },
+      "shortNames": [
+        {
+          "value": "IgG-binding protein A"
+        }
+      ]
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "Staphylococcal protein A"
+        },
+        "shortNames": [
+          {
+            "value": "SpA"
+          }
+        ]
+      }
+    ],
+    "flag": "Precursor"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "spa"
+      },
+      "orderedLocusNames": [
+        {
+          "value": "NWMN_0055"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "P02976"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "15247912"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "16709567"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "22792377"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "28031339"
+            }
+          ],
+          "value": "Plays a role in the inhibition of the host innate and adaptive immune responses. Possesses five immunoglobulin-binding domains that capture both the fragment crystallizable region (Fc region) and the Fab region (part of Ig that identifies antigen) of immunoglobulins (By similarity). In turn, Staphylococcus aureus is protected from phagocytic killing via inhibition of Ig Fc region. In addition, the host elicited B-cell response is prevented due to a decrease of antibody-secreting cell proliferation that enter the bone marrow, thereby decreasing long-term antibody production (PubMed:28031339). Inhibits osteogenesis by preventing osteoblast proliferation and expression of alkaline phosphatase, type I collagen, osteopontin and osteocalcin (PubMed:22792377). Acts directly as a pro-inflammatory factor in the lung through its ability to bind and activate tumor necrosis factor alpha receptor 1/TNFRSF1A (PubMed:15247912, PubMed:16709567)"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "P38507"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "15247912"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "16709567"
+            }
+          ],
+          "value": "Interacts with host TNFRSF1A; this interaction leads to the stimulation of both surface expression and shedding of TNFRSF1A. Interacts (via B domain) with IgG1, IgG2 and IgG4; spa interferes with IgG oligomerization and IgG:C1 complement complex formation, preventing complement activation and ultimately protecting bacteria from phagocytic killing"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "note": {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250",
+                "source": "UniProtKB",
+                "id": "P02976"
+              },
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "24434550"
+              }
+            ],
+            "value": "Released from the cell wall in a glycan-free form by LytM; released early in log growth, almost no release occurs after 3 hours growth (PubMed:24434550). Anchored to the cell wall by sortase A (By similarity)"
+          }
+        ]
+      },
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255",
+                "source": "PROSITE-ProRule",
+                "id": "PRU00477"
+              },
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "17416657"
+              },
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "24434550"
+              }
+            ],
+            "value": "Secreted, cell wall",
+            "id": "SL-0041"
+          },
+          "topology": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255",
+                "source": "PROSITE-ProRule",
+                "id": "PRU00477"
+              },
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "17416657"
+              },
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "24434550"
+              }
+            ],
+            "value": "Peptidoglycan-anchor",
+            "id": "SL-9900"
+          }
+        },
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "24434550"
+              }
+            ],
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "P02976"
+            }
+          ],
+          "value": "Each of the immunoglobulin-binding region repeats can bind the Fc region of an immunoglobulin"
+        }
+      ],
+      "commentType": "DOMAIN"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "22792377"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "28031339"
+            }
+          ],
+          "value": "Host antibody-secreting cells proliferate in the bone marrow survival niches and sustain long-term antibody titers (PubMed:28031339). In addition, osteogenesis is not inhibited and normal expression of alkaline phosphatase, type I collagen, osteopontin and osteocalcin is observed (PubMed:22792377)"
+        }
+      ],
+      "commentType": "DISRUPTION PHENOTYPE"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Important immunodiagnostic reagent because of its ability to bind the Fab and Fc fragments of a wide range of mammalian immunoglobulins"
+        }
+      ],
+      "commentType": "BIOTECHNOLOGY"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the immunoglobulin-binding protein SpA family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    },
+    {
+      "commentType": "SEQUENCE CAUTION",
+      "sequenceCautionType": "Erroneous initiation",
+      "sequence": "BAF66327.1",
+      "note": "Extended N-terminus.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 36,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "24434550"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 37,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 508,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Immunoglobulin G-binding protein A",
+      "featureId": "PRO_5002613455"
+    },
+    {
+      "type": "Propeptide",
+      "location": {
+        "start": {
+          "value": 478,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 508,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Removed by sortase",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P02976"
+        },
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00477"
+        }
+      ],
+      "featureId": "PRO_0000445582"
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 37,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 92,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Immunoglobulin-binding region E",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P02976"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 93,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 153,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Immunoglobulin-binding region D",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P02976"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 154,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 211,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Immunoglobulin-binding region A",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P02976"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 212,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 269,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Immunoglobulin-binding region B",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P02976"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 270,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 327,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Immunoglobulin-binding region C",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P02976"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 333,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 340,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "2-1",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P02976"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 341,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 348,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "2-2",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P02976"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 349,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 356,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "2-3",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P02976"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 357,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 364,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "2-4",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P02976"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 365,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 372,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "2-5",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P02976"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 373,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 380,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "2-6",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P02976"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 381,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 388,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "2-7",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P02976"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 389,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 396,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "2-8",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P02976"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 397,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 404,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "2-9",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P02976"
+        }
+      ]
+    },
+    {
+      "type": "Repeat",
+      "location": {
+        "start": {
+          "value": 405,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 412,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "2-10",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P02976"
+        }
+      ]
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 413,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 457,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LysM",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU01118"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 318,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 421,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 333,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 412,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "10 X 8 AA approximate tandem repeats",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P02976"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 459,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 479,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Motif",
+      "location": {
+        "start": {
+          "value": 7,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 18,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "YSIRK-G/S signaling motif",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "P02976"
+        }
+      ]
+    },
+    {
+      "type": "Motif",
+      "location": {
+        "start": {
+          "value": 474,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 478,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "LPXTG sorting signal",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00477"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 318,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 412,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Basic and acidic residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Modified residue",
+      "location": {
+        "start": {
+          "value": 477,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 477,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Pentaglycyl murein peptidoglycan amidated threonine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00477"
+        }
+      ]
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 47,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 47,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Complete loss of binding toepithelial cells.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "16709567"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "F",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 48,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 48,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Complete loss of binding toepithelial cells.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "16709567"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "Y",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0134",
+      "category": "Cellular component",
+      "name": "Cell wall"
+    },
+    {
+      "id": "KW-0903",
+      "category": "Technical term",
+      "name": "Direct protein sequencing"
+    },
+    {
+      "id": "KW-0572",
+      "category": "PTM",
+      "name": "Peptidoglycan-anchor"
+    },
+    {
+      "id": "KW-0677",
+      "category": "Domain",
+      "name": "Repeat"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "17951380",
+        "citationType": "journal article",
+        "authors": [
+          "Baba T.",
+          "Bae T.",
+          "Schneewind O.",
+          "Takeuchi F.",
+          "Hiramatsu K."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "17951380"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.01000-07"
+          }
+        ],
+        "title": "Genome sequence of Staphylococcus aureus strain Newman and comparative analysis of staphylococcal genomes: polymorphism and evolution of two major pathogenicity islands.",
+        "publicationDate": "2008",
+        "journal": "J. Bacteriol.",
+        "firstPage": "300",
+        "lastPage": "310",
+        "volume": "190"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "Newman",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "15247912",
+        "citationType": "journal article",
+        "authors": [
+          "Gomez M.I.",
+          "Lee A.",
+          "Reddy B.",
+          "Muir A.",
+          "Soong G.",
+          "Pitt A.",
+          "Cheung A.",
+          "Prince A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15247912"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/nm1079"
+          }
+        ],
+        "title": "Staphylococcus aureus protein A induces airway epithelial inflammatory responses by activating TNFR1.",
+        "publicationDate": "2004",
+        "journal": "Nat. Med.",
+        "firstPage": "842",
+        "lastPage": "848",
+        "volume": "10"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "INTERACTION WITH HOST TNFRSF1A"
+      ],
+      "referenceComments": [
+        {
+          "value": "RN6390",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "16709567",
+        "citationType": "journal article",
+        "authors": [
+          "Gomez M.I.",
+          "O'Seaghdha M.",
+          "Magargee M.",
+          "Foster T.J.",
+          "Prince A.S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "16709567"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1074/jbc.m601956200"
+          }
+        ],
+        "title": "Staphylococcus aureus protein A activates TNFR1 signaling through conserved IgG binding domains.",
+        "publicationDate": "2006",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "20190",
+        "lastPage": "20196",
+        "volume": "281"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "MUTAGENESIS OF PHE-47 AND TYR-48",
+        "INTERACTION WITH HOST TNFRSF1A"
+      ],
+      "referenceComments": [
+        {
+          "value": "Newman",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "22792377",
+        "citationType": "journal article",
+        "authors": [
+          "Widaa A.",
+          "Claro T.",
+          "Foster T.J.",
+          "O'Brien F.J.",
+          "Kerrigan S.W."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "22792377"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1371/journal.pone.0040586"
+          }
+        ],
+        "title": "Staphylococcus aureus protein A plays a critical role in mediating bone destruction and bone loss in osteomyelitis.",
+        "publicationDate": "2012",
+        "journal": "PLoS ONE",
+        "firstPage": "E40586",
+        "lastPage": "E40586",
+        "volume": "7"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "DISRUPTION PHENOTYPE"
+      ],
+      "referenceComments": [
+        {
+          "value": "Newman",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "24434550",
+        "citationType": "journal article",
+        "authors": [
+          "Becker S.",
+          "Frankel M.B.",
+          "Schneewind O.",
+          "Missiakas D."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "24434550"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1073/pnas.1317181111"
+          }
+        ],
+        "title": "Release of protein A from the cell wall of Staphylococcus aureus.",
+        "publicationDate": "2014",
+        "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+        "firstPage": "1574",
+        "lastPage": "1579",
+        "volume": "111"
+      },
+      "referencePositions": [
+        "PROTEIN SEQUENCE OF 37-38 AND 449-453",
+        "SUBCELLULAR LOCATION"
+      ],
+      "referenceComments": [
+        {
+          "value": "Newman",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "17416657",
+        "citationType": "journal article",
+        "authors": [
+          "DeDent A.C.",
+          "McAdow M.",
+          "Schneewind O."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "17416657"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.00227-07"
+          }
+        ],
+        "title": "Distribution of protein A on the surface of Staphylococcus aureus.",
+        "publicationDate": "2007",
+        "journal": "J. Bacteriol.",
+        "firstPage": "4473",
+        "lastPage": "4484",
+        "volume": "189"
+      },
+      "referencePositions": [
+        "SUBCELLULAR LOCATION"
+      ],
+      "referenceComments": [
+        {
+          "value": "Newman",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 7,
+      "citation": {
+        "id": "28031339",
+        "citationType": "journal article",
+        "authors": [
+          "Keener A.B.",
+          "Thurlow L.T.",
+          "Kang S.",
+          "Spidale N.A.",
+          "Clarke S.H.",
+          "Cunnion K.M.",
+          "Tisch R.",
+          "Richardson A.R.",
+          "Vilen B.J."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "28031339"
+          },
+          {
+            "database": "DOI",
+            "id": "10.4049/jimmunol.1600093"
+          }
+        ],
+        "title": "Staphylococcus aureus Protein A Disrupts Immunity Mediated by Long-Lived Plasma Cells.",
+        "publicationDate": "2017",
+        "journal": "J. Immunol.",
+        "firstPage": "1263",
+        "lastPage": "1273",
+        "volume": "198"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "DISRUPTION PHENOTYPE"
+      ],
+      "referenceComments": [
+        {
+          "value": "Newman",
+          "type": "STRAIN"
+        },
+        {
+          "value": "RN4220",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AP009351",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "BAF66327.1"
+        },
+        {
+          "key": "Status",
+          "value": "ALT_INIT"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_000728763.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_009641.1"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "A0A0H3K686",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "A0A0H3K686",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "sae:NWMN_0055",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_024983_0_0_9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "ADQRNGF",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "24434550"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0019865",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:immunoglobulin binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd00118",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LysM"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "1.20.5.420:FF:000003",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Immunoglobulin G-binding protein A"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "3"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.20.5.420",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Immunoglobulin FC, subunit C"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "5"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.10.350.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LysM domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR009063",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Ig/albumin-bd_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR019931",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LPXTG_anchor"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR018392",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LysM"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036779",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LysM_dom_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR005038",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Octapeptide"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR003132",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Protein_A_Ig-bd"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR005877",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "YSIRK_signal_dom"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "TIGR01167",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LPXTG_anchor"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "TIGR01168",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "YSIRK_signal"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR33734",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LYSM DOMAIN-CONTAINING GPI-ANCHORED PROTEIN 2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR33734:SF22",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "MEMBRANE-BOUND LYTIC MUREIN TRANSGLYCOSYLASE D"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF02216",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "B"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "5"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00746",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Gram_pos_anchor"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF01476",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LysM"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF03373",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Octapeptide"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "11"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF04650",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "YSIRK_signal"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00257",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LysM"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF46997",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Bacterial immunoglobulin/albumin-binding domains"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "5"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF54106",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LysM domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS50847",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "GRAM_POS_ANCHORING"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51782",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LYSM"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MKKKNIYSIRKLGVGIASVTLGTLLISGGVTPAANAAQHDEAQQNAFYQVLNMPNLNADQRNGFIQSLKDDPSQSANVLGEAQKLNDSQAPKADAQQNNFNKDQQSAFYEILNMPNLNEAQRNGFIQSLKDDPSQSTNVLGEAKKLNESQAPKADNNFNKEQQNAFYEILNMPNLNEEQRNGFIQSLKDDPSQSANLLSEAKKLNESQAPKADNKFNKEQQNAFYEILHLPNLNEEQRNGFIQSLKDDPSQSANLLAEAKKLNDAQAPKADNKFNKEQQNAFYEILHLPNLTEEQRNGFIQSLKDDPSVSKEILAEAKKLNDAQAPKEEDNNKPGKEDNNKPGKEDNNKPGKEDNNKPGKEDGNKPGKEDNKKPGKEDGNKPGKEDNKKPGKEDGNKPGKEDGNKPGKEDGNGVHVVKPGDTVNDIAKANGTTADKIAADNKLADKNMIKPGQELVVDKKQPANHADANKAQALPETGEENPFIGTTVFGGLSLALGAALLAGRRREL",
+    "length": 508,
+    "molWeight": 55554,
+    "crc64": "DD6702A13C0C4E18",
+    "md5": "5A8A41A5E895C93CB5CC133FBE5EABAD"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "DOMAIN": 1,
+      "DISRUPTION PHENOTYPE": 1,
+      "BIOTECHNOLOGY": 1,
+      "SIMILARITY": 1,
+      "SEQUENCE CAUTION": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1,
+      "Propeptide": 1,
+      "Repeat": 15,
+      "Domain": 1,
+      "Region": 3,
+      "Motif": 2,
+      "Compositional bias": 1,
+      "Modified residue": 1,
+      "Mutagenesis": 2
+    },
+    "uniParcId": "UPI00004B5A90"
+  }
+}

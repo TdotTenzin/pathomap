@@ -1,0 +1,633 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "P0A567",
+  "secondaryAccessions": [
+    "A0A1R3Y5R0",
+    "O69739",
+    "X2BQ42"
+  ],
+  "uniProtkbId": "ESXB_MYCBO",
+  "entryAudit": {
+    "firstPublicDate": "2005-03-15",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2007-01-23",
+    "entryVersion": 103,
+    "sequenceVersion": 2
+  },
+  "annotationScore": 3.0,
+  "organism": {
+    "scientificName": "Mycobacterium bovis (strain ATCC BAA-935 / AF2122/97)",
+    "taxonId": 233413,
+    "lineage": [
+      "Bacteria",
+      "Bacillati",
+      "Actinomycetota",
+      "Actinomycetes",
+      "Mycobacteriales",
+      "Mycobacteriaceae",
+      "Mycobacterium",
+      "Mycobacterium tuberculosis complex"
+    ]
+  },
+  "proteinExistence": "3: Inferred from homology",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "ESAT-6-like protein EsxB"
+      }
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "10 kDa culture filtrate antigen CFP-10"
+        }
+      },
+      {
+        "fullName": {
+          "value": "Secreted antigenic protein MTSA-10"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "esxB"
+      },
+      "synonyms": [
+        {
+          "value": "cfp10"
+        },
+        {
+          "value": "lhp"
+        },
+        {
+          "value": "mtsA10"
+        }
+      ],
+      "orderedLocusNames": [
+        {
+          "value": "BQ2027_MB3904"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "P9WNK5"
+            }
+          ],
+          "value": "A secreted protein. Acts as a strong host T-cell antigen. Involved in translocation of bacteria from the host (human) phagolysosome to the host cytoplasm. Might serve as a chaperone to prevent uncontrolled membrane lysis by its partner EsxA"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "P9WNK5"
+            }
+          ],
+          "value": "Forms a tight 1:1 complex with EsxA (ESAT-6)"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "note": {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250",
+                "source": "UniProtKB",
+                "id": "P9WNK5"
+              }
+            ],
+            "value": "Probably secreted via the ESX-1 / type VII secretion system (T7SS)"
+          }
+        ]
+      },
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250",
+                "source": "UniProtKB",
+                "id": "P9WNK5"
+              }
+            ],
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the WXG100 family. CFP-10 subfamily"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Initiator methionine",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Removed",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 2,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 100,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "ESAT-6-like protein EsxB",
+      "featureId": "PRO_0000167794"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 81,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 100,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Coiled coil",
+      "location": {
+        "start": {
+          "value": 49,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 86,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 91,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 100,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Polar residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0143",
+      "category": "Molecular function",
+      "name": "Chaperone"
+    },
+    {
+      "id": "KW-0175",
+      "category": "Domain",
+      "name": "Coiled coil"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "12788972",
+        "citationType": "journal article",
+        "authors": [
+          "Garnier T.",
+          "Eiglmeier K.",
+          "Camus J.-C.",
+          "Medina N.",
+          "Mansoor H.",
+          "Pryor M.",
+          "Duthoy S.",
+          "Grondin S.",
+          "Lacroix C.",
+          "Monsempe C.",
+          "Simon S.",
+          "Harris B.",
+          "Atkin R.",
+          "Doggett J.",
+          "Mayes R.",
+          "Keating L.",
+          "Wheeler P.R.",
+          "Parkhill J.",
+          "Barrell B.G.",
+          "Cole S.T.",
+          "Gordon S.V.",
+          "Hewinson R.G."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "12788972"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1073/pnas.1130426100"
+          }
+        ],
+        "title": "The complete genome sequence of Mycobacterium bovis.",
+        "publicationDate": "2003",
+        "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+        "firstPage": "7877",
+        "lastPage": "7882",
+        "volume": "100"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC BAA-935 / AF2122/97",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "28385856",
+        "citationType": "journal article",
+        "authors": [
+          "Malone K.M.",
+          "Farrell D.",
+          "Stuber T.P.",
+          "Schubert O.T.",
+          "Aebersold R.",
+          "Robbe-Austerman S.",
+          "Gordon S.V."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "28385856"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/genomea.00157-17"
+          }
+        ],
+        "title": "Updated reference genome sequence and annotation of Mycobacterium bovis AF2122/97.",
+        "publicationDate": "2017",
+        "journal": "Genome Announc.",
+        "firstPage": "E00157",
+        "lastPage": "E00157",
+        "volume": "5"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]",
+        "GENOME REANNOTATION"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC BAA-935 / AF2122/97",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "LT708304",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "SIU02536.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_003399940.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_002945.4"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "P0A567",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BMRB",
+      "id": "P0A567",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "P0A567",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "45427878",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "mbo:BQ2027_MB3904",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|233413.5.peg.4277",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AHYTSTD",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EvolutionaryTrace",
+      "id": "P0A567",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000001419",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISS:UniProtKB"
+        }
+      ]
+    },
+    {
+      "database": "DisProt",
+      "id": "DP04202",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "1.10.287.1060:FF:000008",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ESAT-6-like protein"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.10.287.1060",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ESAT-6-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036689",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ESAT-6-like_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR010310",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "T7SS_ESAT-6-like"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "TIGR03930",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "WXG100_ESAT6"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF06013",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "WXG100"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF140453",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "EsxAB dimer-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MAEMKTDAATLAQEAGNFERISGDLKTQIDQVESTAGSLQGQWRGAAGTAAQAAVVRFQEAANKQKQELDEISTNIRQAGVQYSRADEEQQQALSSQMGF",
+    "length": 100,
+    "molWeight": 10794,
+    "crc64": "285F4FC96F55D194",
+    "md5": "CC07CCD8B8E5B75855E6A2E9BEAE47B1"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Initiator methionine": 1,
+      "Chain": 1,
+      "Region": 1,
+      "Coiled coil": 1,
+      "Compositional bias": 1
+    },
+    "uniParcId": "UPI0000036DD2"
+  }
+}

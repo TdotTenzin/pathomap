@@ -1,0 +1,587 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "A1VXG4",
+  "secondaryAccessions": [
+    "Q46100"
+  ],
+  "uniProtkbId": "CDTA_CAMJJ",
+  "entryAudit": {
+    "firstPublicDate": "2007-04-03",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2007-02-06",
+    "entryVersion": 81,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 3.0,
+  "organism": {
+    "scientificName": "Campylobacter jejuni subsp. jejuni serotype O:23/36 (strain 81-176)",
+    "taxonId": 354242,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Campylobacterota",
+      "Epsilonproteobacteria",
+      "Campylobacterales",
+      "Campylobacteraceae",
+      "Campylobacter"
+    ]
+  },
+  "proteinExistence": "3: Inferred from homology",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Cytolethal distending toxin subunit A"
+      },
+      "shortNames": [
+        {
+          "value": "CDT A"
+        }
+      ]
+    },
+    "flag": "Precursor"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "cdtA"
+      },
+      "orderedLocusNames": [
+        {
+          "value": "CJJ81176_0116"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "value": "CDTs are cytotoxins which induce cell distension, growth arrest in G2/M phase, nucleus swelling, and chromatin fragmentation in HeLa cells"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "value": "Heterotrimer of 3 subunits, CdtA, CdtB and CdtC"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000305"
+              }
+            ],
+            "value": "Cell outer membrane",
+            "id": "SL-0040"
+          },
+          "topology": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000305"
+              }
+            ],
+            "value": "Lipid-anchor",
+            "id": "SL-9901"
+          }
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 19,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00303"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 20,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 268,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Cytolethal distending toxin subunit A",
+      "featureId": "PRO_0000281897"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 112,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 252,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Ricin B-type lectin",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00174"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 129,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 140,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Mediates binding to target cells",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250"
+        }
+      ]
+    },
+    {
+      "type": "Lipidation",
+      "location": {
+        "start": {
+          "value": 20,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 20,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-palmitoyl cysteine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ]
+    },
+    {
+      "type": "Lipidation",
+      "location": {
+        "start": {
+          "value": 20,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 20,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "S-diacylglycerol cysteine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0998",
+      "category": "Cellular component",
+      "name": "Cell outer membrane"
+    },
+    {
+      "id": "KW-0430",
+      "category": "Ligand",
+      "name": "Lectin"
+    },
+    {
+      "id": "KW-0449",
+      "category": "PTM",
+      "name": "Lipoprotein"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-0564",
+      "category": "PTM",
+      "name": "Palmitate"
+    },
+    {
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    },
+    {
+      "id": "KW-0800",
+      "category": "Molecular function",
+      "name": "Toxin"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "8675309",
+        "citationType": "journal article",
+        "authors": [
+          "Pickett C.L.",
+          "Pesci E.C.",
+          "Cottle D.L.",
+          "Russell G.",
+          "Erdem A.N.",
+          "Zeytin H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8675309"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.64.6.2070-2078.1996"
+          }
+        ],
+        "title": "Prevalence of cytolethal distending toxin production in Campylobacter jejuni and relatedness of Campylobacter sp. cdtB gene.",
+        "publicationDate": "1996",
+        "journal": "Infect. Immun.",
+        "firstPage": "2070",
+        "lastPage": "2078",
+        "volume": "64"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "CI-CS4HK96MK4PMI",
+        "citationType": "submission",
+        "authors": [
+          "Fouts D.E.",
+          "Nelson K.E.",
+          "Sebastian Y."
+        ],
+        "publicationDate": "DEC-2006",
+        "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "81-176",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "U51121",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAB06707.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "CP000538",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "EAQ71960.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_002852021.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_008787.1"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "A1VXG4",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "A1VXG4",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "cjj:CJJ81176_0116",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "ENOG50347HZ",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Bacteria"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_090932_0_0_7",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AKFWRII",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009279",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cell outer membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd23414",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "beta-trefoil_Ricin_CdtA"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.80.10.50",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR015957",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CDtoxinA"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR003558",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CDtoxinA/C"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR035992",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Ricin_B-like_lectins"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF03498",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CDtoxinA"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PIRSF",
+      "id": "PIRSF036516",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CDT_A"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF50370",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Ricin B-like lectins"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51257",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PROKAR_LIPOPROTEIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS50231",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "RICIN_B_LECTIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MQKIIVFILCCFMTFFLYACSSKFENVNPLGRSFGEFEDTDPLKLGLEPTFPTNQEIPSLISGADLVPITPITPPLTRTSNSANNNAANGINPRFKDEAFNDVLIFENRPAVSDFLTILGPSGAALTVWALAQGNWIWGYTLIDSKGFGDARVWQLLLYPNDFAMIKNAKTNTCLNAYGNGIVHYPCDASNHAQMWKLIPMSNTAVQIKNLGNGKCIQAPITNLYGDFHKVFKIFTVECAKKDNFDQQWFLTTPPFTAKPLYRQGEVR",
+    "length": 268,
+    "molWeight": 29919,
+    "crc64": "8E130277E8499A74",
+    "md5": "726E4468B3E469A16C76501DF594A7A2"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1,
+      "Domain": 1,
+      "Region": 1,
+      "Lipidation": 2
+    },
+    "uniParcId": "UPI000012746B"
+  }
+}

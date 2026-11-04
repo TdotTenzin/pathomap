@@ -1,0 +1,736 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "P18193",
+  "uniProtkbId": "FLAA_TREPA",
+  "entryAudit": {
+    "firstPublicDate": "1990-11-01",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "1996-10-01",
+    "entryVersion": 121,
+    "sequenceVersion": 2
+  },
+  "annotationScore": 3.0,
+  "organism": {
+    "scientificName": "Treponema pallidum (strain DSM 117211 / Nichols)",
+    "taxonId": 243276,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Spirochaetota",
+      "Spirochaetia",
+      "Treponematales",
+      "Treponemataceae",
+      "Treponema"
+    ]
+  },
+  "proteinExistence": "3: Inferred from homology",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Flagellar filament outer layer protein"
+      }
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "Sheath protein"
+        }
+      }
+    ],
+    "flag": "Precursor"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "flaA"
+      },
+      "orderedLocusNames": [
+        {
+          "value": "TP_0249"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "value": "Component of the outer layer of the flagella"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "value": "The flagellum consists of an outer layer composed of repeating units of FlaA around a core that contains several antigenically related polypeptides"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "note": {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "25825429"
+              }
+            ],
+            "value": "Antibody labeling only occurs after mild detergent solubilization (PubMed:25825429)"
+          }
+        ]
+      },
+      "subcellularLocations": [
+        {
+          "location": {
+            "value": "Periplasmic flagellum",
+            "id": "SL-0201"
+          }
+        },
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "25825429"
+              },
+              {
+                "evidenceCode": "ECO:0000305",
+                "source": "PubMed",
+                "id": "16159783"
+              }
+            ],
+            "value": "Periplasm",
+            "id": "SL-0200"
+          }
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 20,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 21,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 350,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Flagellar filament outer layer protein",
+      "featureId": "PRO_0000009354"
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0975",
+      "category": "Cellular component",
+      "name": "Bacterial flagellum"
+    },
+    {
+      "id": "KW-0574",
+      "category": "Cellular component",
+      "name": "Periplasm"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "2194955",
+        "citationType": "journal article",
+        "authors": [
+          "Isaacs R.D.",
+          "Radolf J.D."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "2194955"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.58.7.2025-2034.1990"
+          }
+        ],
+        "title": "Expression in Escherichia coli of the 37-kilodalton endoflagellar sheath protein of Treponema pallidum by use of the polymerase chain reaction and a T7 expression system.",
+        "publicationDate": "1990",
+        "journal": "Infect. Immun.",
+        "firstPage": "2025",
+        "lastPage": "2034",
+        "volume": "58"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "9665876",
+        "citationType": "journal article",
+        "authors": [
+          "Fraser C.M.",
+          "Norris S.J.",
+          "Weinstock G.M.",
+          "White O.",
+          "Sutton G.G.",
+          "Dodson R.J.",
+          "Gwinn M.L.",
+          "Hickey E.K.",
+          "Clayton R.A.",
+          "Ketchum K.A.",
+          "Sodergren E.",
+          "Hardham J.M.",
+          "McLeod M.P.",
+          "Salzberg S.L.",
+          "Peterson J.D.",
+          "Khalak H.G.",
+          "Richardson D.L.",
+          "Howell J.K.",
+          "Chidambaram M.",
+          "Utterback T.R.",
+          "McDonald L.A.",
+          "Artiach P.",
+          "Bowman C.",
+          "Cotton M.D.",
+          "Fujii C.",
+          "Garland S.A.",
+          "Hatch B.",
+          "Horst K.",
+          "Roberts K.M.",
+          "Sandusky M.",
+          "Weidman J.F.",
+          "Smith H.O.",
+          "Venter J.C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9665876"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1126/science.281.5375.375"
+          }
+        ],
+        "title": "Complete genome sequence of Treponema pallidum, the syphilis spirochete.",
+        "publicationDate": "1998",
+        "journal": "Science",
+        "firstPage": "375",
+        "lastPage": "388",
+        "volume": "281"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "DSM 117211 / Nichols",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "2680972",
+        "citationType": "journal article",
+        "authors": [
+          "Isaacs R.D.",
+          "Hanke J.H.",
+          "Guzman-Verduzco L.-M.",
+          "Newport G.",
+          "Agabian N.",
+          "Norgard M.V.",
+          "Lukehart S.A.",
+          "Radolf J.D."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "2680972"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.57.11.3403-3411.1989"
+          }
+        ],
+        "title": "Molecular cloning and DNA sequence analysis of the 37-kilodalton endoflagellar sheath protein gene of Treponema pallidum.",
+        "publicationDate": "1989",
+        "journal": "Infect. Immun.",
+        "firstPage": "3403",
+        "lastPage": "3411",
+        "volume": "57"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 30-350"
+      ],
+      "referenceComments": [
+        {
+          "value": "DSM 117211 / Nichols",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "16159783",
+        "citationType": "journal article",
+        "authors": [
+          "Hazlett K.R.",
+          "Cox D.L.",
+          "Decaffmeyer M.",
+          "Bennett M.P.",
+          "Desrosiers D.C.",
+          "La Vake C.J.",
+          "La Vake M.E.",
+          "Bourell K.W.",
+          "Robinson E.J.",
+          "Brasseur R.",
+          "Radolf J.D."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "16159783"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.187.18.6499-6508.2005"
+          }
+        ],
+        "title": "TP0453, a concealed outer membrane protein of Treponema pallidum, enhances membrane permeability.",
+        "publicationDate": "2005",
+        "journal": "J. Bacteriol.",
+        "firstPage": "6499",
+        "lastPage": "6508",
+        "volume": "187"
+      },
+      "referencePositions": [
+        "SUBCELLULAR LOCATION"
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "25825429",
+        "citationType": "journal article",
+        "authors": [
+          "Luthra A.",
+          "Anand A.",
+          "Hawley K.L.",
+          "LeDoyt M.",
+          "La Vake C.J.",
+          "Caimano M.J.",
+          "Cruz A.R.",
+          "Salazar J.C.",
+          "Radolf J.D."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "25825429"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.00086-15"
+          }
+        ],
+        "title": "A homology model reveals novel structural features and an immunodominant surface loop/opsonic target in the Treponema pallidum BamA ortholog TP_0326.",
+        "publicationDate": "2015",
+        "journal": "J. Bacteriol.",
+        "firstPage": "1906",
+        "lastPage": "1920",
+        "volume": "197"
+      },
+      "referencePositions": [
+        "SUBCELLULAR LOCATION"
+      ],
+      "referenceComments": [
+        {
+          "value": "Nichols-Farmington",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "M63142",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA27477.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AE000520",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAC65235.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "M26525",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA27476.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "D71348",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "D71348"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_010881697.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_000919.1"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "P18193",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "P18193",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "IntAct",
+      "id": "P18193",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "243276.TP_0249",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblBacteria",
+      "id": "AAC65235",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAC65235"
+        },
+        {
+          "key": "GeneId",
+          "value": "TP_0249"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "93876041",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "tpa:TP_0249",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "tpw:TPANIC_0249",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "ENOG50329D7",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Bacteria"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_821088_0_0_12",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AFEAMTK",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OrthoDB",
+      "id": "350240at2",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000000811",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0030288",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:outer membrane-bounded periplasmic space"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0055040",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:periplasmic flagellum"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0042597",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:periplasmic space"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "25825429"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0071973",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:bacterial-type flagellum-dependent cell motility"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR006714",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FlaA"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR016369",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FlaA_Spirochaetes"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF04620",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FlaA"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PIRSF",
+      "id": "PIRSF002892",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Flagellin_A"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MKKAVVLSAVALLSGVCAVADESVLIDFAKLNADIMADKSGGMTHNRRTVLDYASLADTSYTDEQKALMRSSLAVAQWEVVLNSSARNPVAHAASRVIEAPVSEGAKSFAGERVLGVRVLFPTWDSNANAMIKPAFVIPAYEVMAQVDDQGNVQAPTEEEKASGKGRFEDGYGVVKNVGVLKSIAVNTYGMNYPHGLYVMMRDQDGEVHRYFMGYLLFDSWKELVWNNPSYISDVRSREVRLYPVYPASTPHVVFEGFMVTRDAAHAGGDYVGYFKDVKIIYDKAVLSTVRDFADEDLWGIQARREAERKRVEVARFGQQQVLRYIEQEKLATEVGFTPSGGAQRQEEQQ",
+    "length": 350,
+    "molWeight": 38857,
+    "crc64": "2BC7C7EFA0CDB4C7",
+    "md5": "F4F47C860E8421C16D090AD0A2FDB9B8"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1
+    },
+    "uniParcId": "UPI000012A883"
+  }
+}

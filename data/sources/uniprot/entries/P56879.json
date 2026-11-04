@@ -1,0 +1,692 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "P56879",
+  "secondaryAccessions": [
+    "P82255"
+  ],
+  "uniProtkbId": "CIRB_CHAPA",
+  "entryAudit": {
+    "firstPublicDate": "2000-05-30",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2001-12-05",
+    "entryVersion": 76,
+    "sequenceVersion": 2
+  },
+  "annotationScore": 3.0,
+  "organism": {
+    "scientificName": "Chassalia parviflora",
+    "taxonId": 58431,
+    "lineage": [
+      "Eukaryota",
+      "Viridiplantae",
+      "Streptophyta",
+      "Embryophyta",
+      "Tracheophyta",
+      "Spermatophyta",
+      "Magnoliopsida",
+      "eudicotyledons",
+      "Gunneridae",
+      "Pentapetalae",
+      "asterids",
+      "lamiids",
+      "Gentianales",
+      "Rubiaceae",
+      "Rubioideae",
+      "Palicoureeae",
+      "Chassalia"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Circulin-B"
+      },
+      "shortNames": [
+        {
+          "value": "CIRB"
+        }
+      ]
+    }
+  },
+  "comments": [
+    {
+      "texts": [
+        {
+          "value": "Probably participates in a plant defense mechanism. Has antibiotic activity. Inhibits the cytopathic effects and replication of the human immunodeficiency virus. Active against both Gram-positive and Gram-negative bacteria"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "value": "The presence of a 'disulfide through disulfide knot' structurally defines this protein as a knottin"
+        }
+      ],
+      "commentType": "DOMAIN"
+    },
+    {
+      "texts": [
+        {
+          "value": "This is a cyclic peptide"
+        }
+      ],
+      "commentType": "PTM"
+    },
+    {
+      "commentType": "MASS SPECTROMETRY",
+      "method": "FAB",
+      "molWeight": 3284.7,
+      "molWeightError": 0.0,
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "Reference",
+          "id": "Ref.2"
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "PROSITE-ProRule",
+              "id": "PRU00395"
+            }
+          ],
+          "value": "Belongs to the cyclotide family. Bracelet subfamily"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "This peptide is cyclic. The start position was chosen by similarity to OAK1 (kalata-B1) for which the DNA sequence is known"
+        }
+      ],
+      "commentType": "CAUTION"
+    }
+  ],
+  "features": [
+    {
+      "type": "Peptide",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 31,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Circulin-B",
+      "featureId": "PRO_0000044696"
+    },
+    {
+      "type": "Disulfide bond",
+      "location": {
+        "start": {
+          "value": 5,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 21,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00395"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "8920961"
+        }
+      ]
+    },
+    {
+      "type": "Disulfide bond",
+      "location": {
+        "start": {
+          "value": 9,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 23,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00395"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "8920961"
+        }
+      ]
+    },
+    {
+      "type": "Disulfide bond",
+      "location": {
+        "start": {
+          "value": 14,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 28,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00395"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "8920961"
+        }
+      ]
+    },
+    {
+      "type": "Cross-link",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 31,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Cyclopeptide (Gly-Asn)"
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 10,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 12,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2ERI"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 16,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 20,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2ERI"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 22,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 24,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2ERI"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 27,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 30,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2ERI"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0002",
+      "category": "Technical term",
+      "name": "3D-structure"
+    },
+    {
+      "id": "KW-0044",
+      "category": "Molecular function",
+      "name": "Antibiotic"
+    },
+    {
+      "id": "KW-0929",
+      "category": "Molecular function",
+      "name": "Antimicrobial"
+    },
+    {
+      "id": "KW-0903",
+      "category": "Technical term",
+      "name": "Direct protein sequencing"
+    },
+    {
+      "id": "KW-1015",
+      "category": "PTM",
+      "name": "Disulfide bond"
+    },
+    {
+      "id": "KW-0960",
+      "category": "Domain",
+      "name": "Knottin"
+    },
+    {
+      "id": "KW-0611",
+      "category": "Biological process",
+      "name": "Plant defense"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "4303114",
+        "citationType": "journal article",
+        "authors": [
+          "Hayashi K.",
+          "Suketa Y.",
+          "Suzuki T."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "4303114"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1007/bf02138292"
+          }
+        ],
+        "title": "Chemical structure of circulin B.",
+        "publicationDate": "1968",
+        "journal": "Experientia",
+        "firstPage": "656",
+        "lastPage": "657",
+        "volume": "24"
+      },
+      "referencePositions": [
+        "PROTEIN SEQUENCE"
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "CI-D8M077U7PKMV0",
+        "citationType": "journal article",
+        "authors": [
+          "Gustafson K.R.",
+          "Sowder R.C. II",
+          "Henderson L.E.",
+          "Parson I.C.",
+          "Kashman Y.",
+          "Cardellina J.H. Jr.",
+          "McMahon J.B.",
+          "Buckheit R.W. Jr.",
+          "Pannell L.K.",
+          "Boyd M.R."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "DOI",
+            "id": "10.1021/ja00099a064"
+          }
+        ],
+        "title": "Circulins A and B: novel HIV-inhibitor macrocyclic peptide from tropical tree Chassalia parvifolia.",
+        "publicationDate": "1994",
+        "journal": "J. Am. Chem. Soc.",
+        "firstPage": "9337",
+        "lastPage": "9338",
+        "volume": "116"
+      },
+      "referencePositions": [
+        "PROTEIN SEQUENCE",
+        "MASS SPECTROMETRY"
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "8920961",
+        "citationType": "journal article",
+        "authors": [
+          "Derua R.",
+          "Gustafson K.R.",
+          "Pannell L.K."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8920961"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1006/bbrc.1996.1708"
+          }
+        ],
+        "title": "Analysis of the disulfide linkage pattern in circulin A and B, HIV-inhibitory macrocyclic peptides.",
+        "publicationDate": "1996",
+        "journal": "Biochem. Biophys. Res. Commun.",
+        "firstPage": "632",
+        "lastPage": "638",
+        "volume": "228"
+      },
+      "referencePositions": [
+        "DISULFIDE BONDS"
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "10430870",
+        "citationType": "journal article",
+        "authors": [
+          "Tam J.P.",
+          "Lu Y.-A.",
+          "Yang J.-L.",
+          "Chiu K.-W."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "10430870"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1073/pnas.96.16.8913"
+          }
+        ],
+        "title": "An unusual structural motif of antimicrobial peptides containing end-to-end macrocycle and cystine-knot disulfides.",
+        "publicationDate": "1999",
+        "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+        "firstPage": "8913",
+        "lastPage": "8918",
+        "volume": "96"
+      },
+      "referencePositions": [
+        "SYNTHESIS",
+        "ANTIBACTERIAL ACTIVITY"
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "CI-9EDR7NQGU77MN",
+        "citationType": "journal article",
+        "authors": [
+          "Koltay A.",
+          "Daly N.L.",
+          "Gustafson K.R.",
+          "Craik D.J."
+        ],
+        "title": "Structure of circulin B and implications for antimicrobial activity of the cyclotides.",
+        "publicationDate": "2005",
+        "journal": "Int. J. Pept. Protein Res.",
+        "firstPage": "99",
+        "lastPage": "106",
+        "volume": "11"
+      },
+      "referencePositions": [
+        "STRUCTURE BY NMR"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "PDB",
+      "id": "2ERI",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "NMR"
+        },
+        {
+          "key": "Resolution",
+          "value": "-"
+        },
+        {
+          "key": "Chains",
+          "value": "A=5-31"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "P56879",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "P56879",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EvolutionaryTrace",
+      "id": "P56879",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0006952",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:defense response"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR005535",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cyclotide"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR012323",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cyclotide_bracelet_CS"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036146",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cyclotide_sf"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF03784",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cyclotide"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PIRSF",
+      "id": "PIRSF037891",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cycloviolacin"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF57038",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cyclotides"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51052",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CYCLOTIDE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS60008",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CYCLOTIDE_BRACELET"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "GVIPCGESCVFIPCISTLLGCSCKNKVCYRN",
+    "length": 31,
+    "molWeight": 3308,
+    "crc64": "30C19A52F2EE13BB",
+    "md5": "367446403A3E254FA6605825A9D32633"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "DOMAIN": 1,
+      "PTM": 1,
+      "MASS SPECTROMETRY": 1,
+      "SIMILARITY": 1,
+      "CAUTION": 1
+    },
+    "countByFeatureType": {
+      "Peptide": 1,
+      "Disulfide bond": 3,
+      "Cross-link": 1,
+      "Beta strand": 3,
+      "Turn": 1
+    },
+    "uniParcId": "UPI00001279F7"
+  }
+}

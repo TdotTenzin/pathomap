@@ -9,7 +9,7 @@ PathoMap is a web-based database browser for studying host–pathogen interactio
 **Current dataset:**
 - **pathogens**: 53 organisms with NCBI taxonomy, genome assembly metadata, Gram reaction, acid-fast status, intracellular survival strategy, and curated descriptions
 - **effectors**: 246 effector proteins linked to pathogens
-- **host_proteins**: 5 host proteins targeted by effectors
+- **host_proteins**: 20 host proteins targeted by effectors
 
 The application is a vanilla JavaScript single-page application with no build step or external dependencies.
 
@@ -52,22 +52,30 @@ host-pathogen-tracker/
 │   ├── schema/                    # JSON Schema definitions
 │   │   └── pathogens.schema.json  # Schema validation for pathogens dataset
 │   └── sources/                  # Source data for build pipeline
-│       ├── curated_data.json    # Curated pathogen data (manually maintained)
+│       ├── README.md             # Source file docs (incl. effector UniProt mapping)
+│       ├── pathogens_seed.json   # Curated pathogen data (manually maintained)
 │       ├── effectors_seed.json    # Effector data
 │       ├── host_proteins_seed.json # Host protein reference data
 │       ├── pathogen_overrides.json # Manual overrides for NCBI lookups
-│       └── ncbi/                  # NCBI API cache
-│           ├── README.md          # Cache documentation
-│           ├── genomes/           # Genome assembly data from NCBI Datasets
-│           ├── taxonomy/          # Taxonomy lineage data
-│           └── taxonomy_search/   # Search results for name-to-tax_id resolution
+│       ├── effector_uniprot_mapping.json # Effector name -> UniProt accession
+│       ├── ncbi/                  # NCBI API cache
+│       │   ├── README.md          # Cache documentation
+│       │   ├── genomes/           # Genome assembly data from NCBI Datasets
+│       │   ├── taxonomy/          # Taxonomy lineage data
+│       │   └── taxonomy_search/   # Search results for name-to-tax_id resolution
+│       ├── uniprot/               # UniProt API cache (entries/sequences/search)
+│       ├── interpro/matches/      # InterPro domain annotation cache
+│       ├── pfam/matches/          # Pfam domain annotation cache
+│       └── string/                # STRING interaction cache
 │
 ├── scripts/                       # Build scripts (Python)
 │   ├── build_pathogens.py         # Build pathogens table with NCBI enrichment
-│   └── build_effectors_host_proteins.py # Build effectors and host_proteins tables
+│   ├── build_effectors_host_proteins.py # Build effectors and host_proteins tables
+│   └── api_clients.py             # UniProt/InterPro/Pfam/STRING API clients
 │
 └── docs/                          # Documentation
     ├── DATASET.md                 # Dataset schema, enrichment rules, validation
+    ├── API_ENRICHMENT.md          # Protein API enrichment pipeline
     ├── ROADMAP.md                 # Project roadmap and future plans
     ├── STRUCTURE.md               # Technical architecture details
     └── IA.md                      # Information architecture notes
@@ -131,8 +139,9 @@ data/pathomap-dataset.json (final)
 
 | Script | Input | Output | Purpose |
 |--------|-------|--------|---------|
-| `build_pathogens.py` | `curated_data.json`, NCBI APIs | `pathomap-dataset.json`, `pathomap.db`, `schema.sql` | Enrich curated data with NCBI taxonomy and genome metadata |
-| `build_effectors_host_proteins.py` | `effectors_seed.json`, `host_proteins_seed.json`, existing dataset | Updated `pathomap-dataset.json` | Add effectors and host proteins tables to dataset |
+| `build_pathogens.py` | `pathogens_seed.json`, NCBI APIs | `pathomap-dataset.json`, `pathomap.db`, `schema.sql` | Enrich curated data with NCBI taxonomy and genome metadata |
+| `build_effectors_host_proteins.py` | `effectors_seed.json`, `host_proteins_seed.json`, UniProt/InterPro/Pfam/STRING APIs | Updated `pathomap-dataset.json`, `pathomap.db`, `schema.sql` | Add effectors and host proteins, enriched with protein sequence/annotation data |
+| `api_clients.py` | — | API cache under `data/sources/` | Reusable, cached API clients shared by the enrichment build |
 
 **NCBI Integration:**
 
@@ -140,6 +149,17 @@ The build script automatically fetches data from NCBI APIs:
 - **NCBI Taxonomy**: Fetches lineage (phylum, class, order, family) for each pathogen
 - **NCBI Datasets**: Fetches genome assembly metadata (accession, size, GC content, assembly level)
 - **Caching**: Responses are cached in `data/sources/ncbi/` to avoid repeated API calls
+
+**Protein API Enrichment:**
+
+`build_effectors_host_proteins.py` enriches curated protein records:
+- **UniProt**: Sequences, GO terms, pathways, domain features
+- **Calculated**: Molecular weight, isoelectric point (pI), GRAVY, sequence length
+- **InterPro/Pfam**: Domain annotations with coordinates (when UniProt lacks them)
+- **STRING**: Protein-protein interaction partners (host proteins)
+- **Caching**: Responses are cached in `data/sources/uniprot/`, `interpro/`, `pfam/`, `string/`
+
+See [docs/API_ENRICHMENT.md](docs/API_ENRICHMENT.md) for details.
 
 ---
 
@@ -171,17 +191,18 @@ The build script automatically fetches data from NCBI APIs:
 
 | File | Purpose | Maintenance |
 |------|---------|-------------|
-| `data/sources/curated_data.json` | Curated pathogen data | Manually edited (primary source of truth) |
+| `data/sources/pathogens_seed.json` | Curated pathogen data | Manually edited (primary source of truth) |
 | `data/sources/effectors_seed.json` | Effector data | Manually edited |
 | `data/sources/host_proteins_seed.json` | Host protein data | Manually edited |
 | `data/sources/pathogen_overrides.json` | Manual NCBI overrides | Manually edited (for problematic lookups) |
+| `data/sources/effector_uniprot_mapping.json` | Effector → UniProt accession mapping | Manually curated (see data/sources/README.md) |
 
 ### Build Scripts
 
 | Script | Purpose | Dependencies |
 |--------|---------|--------------|
 | `scripts/build_pathogens.py` | Build pathogens table with NCBI data | Python 3, internet connection (for NCBI APIs) |
-| `scripts/build_effectors_host_proteins.py` | Add effectors and host proteins | Python 3, existing pathogens dataset |
+| `scripts/build_effectors_host_proteins.py` | Add effectors and host proteins with protein enrichment | Python 3, existing pathogens dataset, internet (UniProt/InterPro/STRING, optional) |
 
 ---
 
@@ -205,7 +226,13 @@ Open <http://localhost:8000> in your browser.
 # Build pathogens table with NCBI enrichment
 python scripts/build_pathogens.py
 
-# Add effectors and host proteins
+# Add effectors and host proteins with API enrichment
+python scripts/build_effectors_host_proteins.py --enrich-effectors
+```
+
+**Build without API enrichment (manual only):**
+
+```powershell
 python scripts/build_effectors_host_proteins.py
 ```
 
@@ -216,16 +243,18 @@ python scripts/build_pathogens.py --check
 python scripts/build_effectors_host_proteins.py --check
 ```
 
-**Refresh NCBI cache (force API calls):**
+**Refresh API cache (force fresh API calls):**
 
 ```powershell
 python scripts/build_pathogens.py --refresh
+python scripts/build_effectors_host_proteins.py --enrich-effectors --refresh
 ```
 
 **Use only cached data (no network):**
 
 ```powershell
 python scripts/build_pathogens.py --no-network
+python scripts/build_effectors_host_proteins.py --enrich-effectors --no-network
 ```
 
 ---
@@ -233,9 +262,11 @@ python scripts/build_pathogens.py --no-network
 ## Documentation
 
 - **[docs/DATASET.md](docs/DATASET.md)** - Detailed schema documentation, enrichment rules, and validation details
+- **[docs/API_ENRICHMENT.md](docs/API_ENRICHMENT.md)** - Protein API enrichment pipeline (UniProt, InterPro, Pfam, STRING)
 - **[docs/STRUCTURE.md](docs/STRUCTURE.md)** - Technical architecture and data flow
 - **[docs/ROADMAP.md](docs/ROADMAP.md)** - Project roadmap and future plans
 - **[data/README.md](data/README.md)** - Data directory structure and file purposes
+- **[data/sources/README.md](data/sources/README.md)** - Source files, effector UniProt mapping, and API caches
 - **[data/sources/ncbi/README.md](data/sources/ncbi/README.md)** - NCBI cache documentation
 
 ---
@@ -246,7 +277,7 @@ python scripts/build_pathogens.py --no-network
 - **Backend**: None (static files served by HTTP server)
 - **Data**: JSON (primary), SQLite (generated)
 - **Build**: Python 3 scripts
-- **External APIs**: NCBI Taxonomy, NCBI Datasets (for enrichment)
+- **External APIs**: NCBI Taxonomy, NCBI Datasets, UniProt, InterPro/Pfam, STRING (for enrichment)
 
 ---
 
@@ -254,10 +285,11 @@ python scripts/build_pathogens.py --no-network
 
 When adding new pathogens:
 
-1. Edit `data/sources/curated_data.json` to add the new pathogen
+1. Edit `data/sources/pathogens_seed.json` to add the new pathogen
 2. Run `python scripts/build_pathogens.py --refresh` to fetch fresh NCBI data
 3. If the pathogen name doesn't match NCBI's database, add an override in `data/sources/pathogen_overrides.json`
 4. Add corresponding effectors to `data/sources/effectors_seed.json`
-5. Run `python scripts/build_effectors_host_proteins.py` to update the dataset
+5. If the effector has a known UniProt entry, add it to `data/sources/effector_uniprot_mapping.json`
+6. Run `python scripts/build_effectors_host_proteins.py --enrich-effectors` to update the dataset
 
 See [data/README.md](data/README.md) and [data/sources/ncbi/README.md](data/sources/ncbi/README.md) for more details.

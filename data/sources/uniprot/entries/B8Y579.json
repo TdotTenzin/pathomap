@@ -1,0 +1,741 @@
+{
+  "entryType": "UniProtKB unreviewed (TrEMBL)",
+  "primaryAccession": "B8Y579",
+  "uniProtkbId": "B8Y579_KLEPN",
+  "entryAudit": {
+    "firstPublicDate": "2009-03-03",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2009-03-03",
+    "entryVersion": 66,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 2.0,
+  "organism": {
+    "scientificName": "Klebsiella pneumoniae",
+    "taxonId": 573,
+    "evidences": [
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "EMBL",
+        "id": "ACL13777.1"
+      }
+    ],
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Gammaproteobacteria",
+      "Enterobacterales",
+      "Enterobacteriaceae",
+      "Klebsiella",
+      "Klebsiella pneumoniae complex"
+    ]
+  },
+  "proteinExistence": "3: Inferred from homology",
+  "proteinDescription": {
+    "submissionNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "ACL13777.1"
+            },
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "SWT10976.1"
+            }
+          ],
+          "value": "FimH"
+        }
+      },
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "VCV76701.1"
+            }
+          ],
+          "value": "S-fimbrial protein subunit SfaH"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "ACL13777.1"
+          }
+        ],
+        "value": "fimH"
+      },
+      "synonyms": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "VCV76701.1"
+            }
+          ],
+          "value": "sfaH"
+        }
+      ],
+      "orfNames": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "VCV76701.1"
+            }
+          ],
+          "value": "BANRA_02634"
+        },
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "SWT10976.1"
+            }
+          ],
+          "value": "SAMEA3729652_01732"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "ARBA",
+              "id": "ARBA00006671"
+            }
+          ],
+          "value": "Belongs to the fimbrial protein family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 23,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "SignalP"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 24,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 302,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "SignalP"
+        }
+      ],
+      "featureId": "PRO_5048113224"
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 26,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 302,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00303"
+        }
+      ],
+      "featureId": "PRO_5048535370"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 26,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 170,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "FimH mannose-binding",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000259",
+          "source": "Pfam",
+          "id": "PF09160"
+        }
+      ]
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 184,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 302,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Fimbrial-type adhesion",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000259",
+          "source": "Pfam",
+          "id": "PF00419"
+        }
+      ]
+    },
+    {
+      "type": "Lipidation",
+      "location": {
+        "start": {
+          "value": 26,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 26,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-palmitoyl cysteine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00303"
+        }
+      ]
+    },
+    {
+      "type": "Lipidation",
+      "location": {
+        "start": {
+          "value": 26,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 26,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "S-diacylglycerol cysteine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00303"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00303"
+        }
+      ],
+      "id": "KW-0449",
+      "category": "PTM",
+      "name": "Lipoprotein"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00303"
+        }
+      ],
+      "id": "KW-0564",
+      "category": "PTM",
+      "name": "Palmitate"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00303"
+        },
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "SignalP"
+        }
+      ],
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "19151141",
+        "citationType": "journal article",
+        "authors": [
+          "Stahlhut S.G.",
+          "Chattopadhyay S.",
+          "Struve C.",
+          "Weissman S.J.",
+          "Aprikian P.",
+          "Libby S.J.",
+          "Fang F.C.",
+          "Krogfelt K.A.",
+          "Sokurenko E.V."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "19151141"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/JB.00601-08"
+          }
+        ],
+        "title": "Population variability of the FimH type 1 fimbrial adhesin in Klebsiella pneumoniae.",
+        "publicationDate": "2009",
+        "journal": "J. Bacteriol.",
+        "firstPage": "1941",
+        "lastPage": "1950",
+        "volume": "191"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "ACL13777.1"
+            }
+          ],
+          "value": "Cas127",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "ACL13777.1"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "CI-2128ITDVCUJGS",
+        "citationType": "submission",
+        "authoringGroup": [
+          "Pathogen Informatics"
+        ],
+        "publicationDate": "AUG-2018",
+        "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "SWT10976.1"
+            }
+          ],
+          "value": "EuSCAPE_TR125",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "SWT10976.1"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "CI-FET6JCSN64AAS",
+        "citationType": "submission",
+        "authors": [
+          "Noll B N."
+        ],
+        "publicationDate": "OCT-2018",
+        "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "VCV76701.1"
+            }
+          ],
+          "value": "Kpneu006",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "VCV76701.1"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "FJ483556",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ACL13777.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "UJRG01000003",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "SWT10976.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "UWVH01000001",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "VCV76701.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "B8Y579",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|573.1649.peg.3482",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009289",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:pilus"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0043709",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:cell adhesion involved in single-species biofilm formation"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:TreeGrafter"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd10466",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FimH_man-bind"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.60.40.1090",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Fimbrial-type adhesion domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR000259",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Adhesion_dom_fimbrial"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036937",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Adhesion_dom_fimbrial_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR008966",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Adhesion_dom_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR050263",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Bact_Fimbrial_Adh_Pro"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR015243",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FimH_man-bd"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR33420",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FIMBRIAL SUBUNIT ELFA-RELATED"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR33420:SF14",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TYPE 1 FIMBRIN D-MANNOSE SPECIFIC ADHESIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00419",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Fimbrial"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF09160",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "FimH_man-bind"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF49401",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Bacterial adhesins"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51257",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PROKAR_LIPOPROTEIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MMKKIIPLFTTLLLLGWSMNAWSFACKTATGATIPIGGGSANVYVNLTPAVNVGQNLVVDLSTQIFCHNDYPETITDYVTLQRGSAYGGVLSSFSGTVKYNGTSYPFPTTTETARVIYDSRTDKPWPAVLYLTPVSTAGGVAITAGSLIAVLILHQTNNYNSDSFQFIWNIYANNDVVVPTGGCDVSARDVTVTLPDYPGSMAVPLTVHCAQSQQLGYYLSGTTADSANAIFTNTASASPAQGIGVQLTRNGSAVQANSTVSLGTVGTSPVNLGLTATYARTTGQVTAGNVQSIIGITFVYQ",
+    "length": 302,
+    "molWeight": 31700,
+    "crc64": "480CA871B09FA1F5",
+    "md5": "A0C7C8876EB570D09E4355C585F0CF6E"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 2,
+      "Domain": 2,
+      "Lipidation": 2
+    },
+    "uniParcId": "UPI000189C246"
+  }
+}

@@ -1,0 +1,1673 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "O52623",
+  "uniProtkbId": "SOPE_SALTM",
+  "entryAudit": {
+    "firstPublicDate": "2005-03-01",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2007-01-23",
+    "entryVersion": 112,
+    "sequenceVersion": 3
+  },
+  "annotationScore": 5.0,
+  "organism": {
+    "scientificName": "Salmonella typhimurium",
+    "taxonId": 90371,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Gammaproteobacteria",
+      "Enterobacterales",
+      "Enterobacteriaceae",
+      "Salmonella"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Guanine nucleotide exchange factor SopE"
+      }
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "Effector protein SopE"
+        }
+      },
+      {
+        "fullName": {
+          "value": "Toxin SopE"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "sopE"
+      }
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11440999"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "31285585"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "9630225"
+            }
+          ],
+          "value": "Activator for both CDC42 and RAC1 by directly engaging these Rho GTPases and acting as potent guanine nucleotide exchange factor (GEF). This activation results in actin cytoskeleton rearrangements and stimulates membrane ruffling, promoting bacterial entry into non-phagocytic cells. Also activates MAPK8, indicating that it is capable of stimulating signaling pathways that can lead to nuclear responses. Chaperone InvB is required for secretion and translocation of SopE"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "INTERACTION",
+      "interactions": [
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "O52623",
+            "intActId": "EBI-602254"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "P60953",
+            "geneName": "CDC42",
+            "intActId": "EBI-81752"
+          },
+          "numberOfExperiments": 2,
+          "organismDiffer": true
+        }
+      ]
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "note": {
+        "texts": [
+          {
+            "value": "Secreted via the type III secretion system 1 (SPI-1 T3SS)"
+          }
+        ]
+      },
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "9482928"
+              }
+            ],
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11296219"
+            }
+          ],
+          "value": "Transcriptionally activated by InvF in association with SicA"
+        }
+      ],
+      "commentType": "INDUCTION"
+    },
+    {
+      "texts": [
+        {
+          "value": "Encoded within a prophage region, which is only present in very few Salmonella isolates. SopE-expressing S.typhimurium strains are associated with severe epidemics"
+        }
+      ],
+      "commentType": "MISCELLANEOUS"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the GEF (guanine exchange factor) SopE family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "SopE is not present in the complete genome strain LT2"
+        }
+      ],
+      "commentType": "CAUTION"
+    }
+  ],
+  "features": [
+    {
+      "type": "Initiator methionine",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Removed",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "9482928"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 2,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 240,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Guanine nucleotide exchange factor SopE",
+      "featureId": "PRO_0000220740"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 15,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 78,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Interaction with InvB"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 78,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 240,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "GEF catalytic domain"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 165,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 172,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Catalytic loop involved in contact with CDC42"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 166,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 169,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Core-loop involved in conformational changes in complex with CDC42"
+    },
+    {
+      "type": "Site",
+      "location": {
+        "start": {
+          "value": 103,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 103,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helps stabilization of SopE-CDC42"
+    },
+    {
+      "type": "Site",
+      "location": {
+        "start": {
+          "value": 109,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 109,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helps stabilization of SopE-CDC42"
+    },
+    {
+      "type": "Site",
+      "location": {
+        "start": {
+          "value": 124,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 124,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helps stabilization of SopE-CDC42"
+    },
+    {
+      "type": "Site",
+      "location": {
+        "start": {
+          "value": 131,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 131,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helps stabilization of SopE-CDC42"
+    },
+    {
+      "type": "Site",
+      "location": {
+        "start": {
+          "value": 174,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 174,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helps stabilization of SopE-CDC42"
+    },
+    {
+      "type": "Site",
+      "location": {
+        "start": {
+          "value": 194,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 194,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helps stabilization of SopE-CDC42"
+    },
+    {
+      "type": "Site",
+      "location": {
+        "start": {
+          "value": 198,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 198,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helps stabilization of SopE-CDC42"
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 103,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 103,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "4-fold reduction in GEF activity.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12719429"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "D",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 103,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 103,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "2-fold reduction in GEF activity.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12719429"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "D",
+        "alternativeSequences": [
+          "E"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 109,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 109,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "700-fold reduction in GEF activity.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12719429"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "Q",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 109,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 109,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "160-fold reduction in GEF activity.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12719429"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "Q",
+        "alternativeSequences": [
+          "N"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 124,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 124,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "160-800-fold reduction in GEF activity.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12719429"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "D",
+        "alternativeSequences": [
+          "A",
+          "E"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 168,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 168,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "5000-fold reduction in GEF activity. Fails to reduce CYRIB protein levels.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12719429"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "31285585"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "G",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 168,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 168,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "20000-fold reduction in GEF activity. Fails to reduce CYRIB protein levels.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12719429"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "31285585"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "G",
+        "alternativeSequences": [
+          "V"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 168,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 168,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "800-fold reduction in GEF activity.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12719429"
+        }
+      ],
+      "alternativeSequence": {}
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 198,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 198,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "No effect.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12719429"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "K",
+        "alternativeSequences": [
+          "A",
+          "R"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 198,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 198,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "More than 20-fold reduction in GEF activity.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "12719429"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "K",
+        "alternativeSequences": [
+          "E"
+        ]
+      }
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 80,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 94,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1GZS"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 96,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 102,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1GZS"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 104,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 132,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1GZS"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 138,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 150,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1GZS"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 155,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 158,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1GZS"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 161,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 164,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1GZS"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 173,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 183,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1GZS"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 185,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 188,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1GZS"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 191,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 209,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1GZS"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 210,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 213,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1GZS"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 221,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 236,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1GZS"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0002",
+      "category": "Technical term",
+      "name": "3D-structure"
+    },
+    {
+      "id": "KW-0903",
+      "category": "Technical term",
+      "name": "Direct protein sequencing"
+    },
+    {
+      "id": "KW-0343",
+      "category": "Molecular function",
+      "name": "GTPase activation"
+    },
+    {
+      "id": "KW-0344",
+      "category": "Molecular function",
+      "name": "Guanine-nucleotide releasing factor"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "9482928",
+        "citationType": "journal article",
+        "authors": [
+          "Hardt W.-D.",
+          "Urlaub H.",
+          "Galan J.E."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9482928"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1073/pnas.95.5.2574"
+          }
+        ],
+        "title": "A substrate of the centisome 63 type III protein secretion system of Salmonella typhimurium is encoded by a cryptic bacteriophage.",
+        "publicationDate": "1998",
+        "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+        "firstPage": "2574",
+        "lastPage": "2579",
+        "volume": "95"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]",
+        "PROTEIN SEQUENCE OF 2-24; 58-68; 112-121 AND 159-173",
+        "SUBCELLULAR LOCATION"
+      ],
+      "referenceComments": [
+        {
+          "value": "SL1344",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "9630225",
+        "citationType": "journal article",
+        "authors": [
+          "Hardt W.-D.",
+          "Chen L.-M.",
+          "Schuebel K.E.",
+          "Bustelo X.R.",
+          "Galan J.E."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9630225"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/s0092-8674(00)81442-7"
+          }
+        ],
+        "title": "S. typhimurium encodes an activator of Rho GTPases that induces membrane ruffling and nuclear responses in host cells.",
+        "publicationDate": "1998",
+        "journal": "Cell",
+        "firstPage": "815",
+        "lastPage": "826",
+        "volume": "93"
+      },
+      "referencePositions": [
+        "FUNCTION"
+      ],
+      "referenceComments": [
+        {
+          "value": "SL1344",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "10449782",
+        "citationType": "journal article",
+        "authors": [
+          "Mirold S.",
+          "Rabsch W.",
+          "Rohde M.",
+          "Stender S.",
+          "Tschaepe H.",
+          "Ruessmann H.",
+          "Igwe E.",
+          "Hardt W.-D."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "10449782"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1073/pnas.96.17.9845"
+          }
+        ],
+        "title": "Isolation of a temperate bacteriophage encoding the type III effector protein SopE from an epidemic Salmonella typhimurium strain.",
+        "publicationDate": "1999",
+        "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+        "firstPage": "9845",
+        "lastPage": "9850",
+        "volume": "96"
+      },
+      "referencePositions": [
+        "PROPHAGE-RELATED REGION"
+      ],
+      "referenceComments": [
+        {
+          "value": "SL1344",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "11296219",
+        "citationType": "journal article",
+        "authors": [
+          "Darwin K.H.",
+          "Miller V.L."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11296219"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1093/emboj/20.8.1850"
+          }
+        ],
+        "title": "Type III secretion chaperone-dependent regulation: activation of virulence genes by SicA and InvF in Salmonella typhimurium.",
+        "publicationDate": "2001",
+        "journal": "EMBO J.",
+        "firstPage": "1850",
+        "lastPage": "1862",
+        "volume": "20"
+      },
+      "referencePositions": [
+        "INDUCTION"
+      ],
+      "referenceComments": [
+        {
+          "value": "SL1344",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "11440999",
+        "citationType": "journal article",
+        "authors": [
+          "Friebel A.",
+          "Ilchmann H.",
+          "Aepfelbacher M.",
+          "Ehrbar K.",
+          "Machleidt W.",
+          "Hardt W.-D."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11440999"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1074/jbc.m100609200"
+          }
+        ],
+        "title": "SopE and SopE2 from Salmonella typhimurium activate different sets of RhoGTPases of the host cell.",
+        "publicationDate": "2001",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "34035",
+        "lastPage": "34040",
+        "volume": "276"
+      },
+      "referencePositions": [
+        "FUNCTION"
+      ],
+      "referenceComments": [
+        {
+          "value": "SL1344",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "14617659",
+        "citationType": "journal article",
+        "authors": [
+          "Ehrbar K.",
+          "Friebel A.",
+          "Miller S.I.",
+          "Hardt W.-D."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "14617659"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.185.23.6950-6967.2003"
+          }
+        ],
+        "title": "Role of the Salmonella pathogenicity island 1 (SPI-1) protein InvB in type III secretion of SopE and SopE2, two Salmonella effector proteins encoded outside of SPI-1.",
+        "publicationDate": "2003",
+        "journal": "J. Bacteriol.",
+        "firstPage": "6950",
+        "lastPage": "6967",
+        "volume": "185"
+      },
+      "referencePositions": [
+        "INTERACTION WITH CHAPERONE INVB"
+      ],
+      "referenceComments": [
+        {
+          "value": "SL1344",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 7,
+      "citation": {
+        "id": "14645290",
+        "citationType": "journal article",
+        "authors": [
+          "Lee S.H.",
+          "Galan J.E."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "14645290"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.185.24.7279-7284.2003"
+          }
+        ],
+        "title": "InvB is a type III secretion-associated chaperone for the Salmonella enterica effector protein SopE.",
+        "publicationDate": "2003",
+        "journal": "J. Bacteriol.",
+        "firstPage": "7279",
+        "lastPage": "7284",
+        "volume": "185"
+      },
+      "referencePositions": [
+        "INTERACTION WITH CHAPERONE INVB"
+      ],
+      "referenceComments": [
+        {
+          "value": "SL1344",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 8,
+      "citation": {
+        "id": "12719429",
+        "citationType": "journal article",
+        "authors": [
+          "Schlumberger M.C.",
+          "Friebel A.",
+          "Buchwald G.",
+          "Scheffzek K.",
+          "Wittinghofer A.",
+          "Hardt W.-D."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "12719429"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1074/jbc.m302475200"
+          }
+        ],
+        "title": "Amino acids of the bacterial toxin SopE involved in G nucleotide exchange on Cdc42.",
+        "publicationDate": "2003",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "27149",
+        "lastPage": "27159",
+        "volume": "278"
+      },
+      "referencePositions": [
+        "MUTAGENESIS OF ASP-103; GLN-109; ASP-124; GLY-168 AND LYS-198"
+      ],
+      "referenceComments": [
+        {
+          "value": "SL1344",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 9,
+      "citation": {
+        "id": "15150335",
+        "citationType": "journal article",
+        "authors": [
+          "Hopkins K.L.",
+          "Threlfall E.J."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15150335"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1099/jmm.0.05510-0"
+          }
+        ],
+        "title": "Frequency and polymorphism of sopE in isolates of Salmonella enterica belonging to the ten most prevalent serotypes in England and Wales.",
+        "publicationDate": "2004",
+        "journal": "J. Med. Microbiol.",
+        "firstPage": "539",
+        "lastPage": "543",
+        "volume": "53"
+      },
+      "referencePositions": [
+        "EPIDEMICS"
+      ]
+    },
+    {
+      "referenceNumber": 10,
+      "citation": {
+        "id": "31285585",
+        "citationType": "journal article",
+        "authors": [
+          "Yuki K.E.",
+          "Marei H.",
+          "Fiskin E.",
+          "Eva M.M.",
+          "Gopal A.A.",
+          "Schwartzentruber J.A.",
+          "Majewski J.",
+          "Cellier M.",
+          "Mandl J.N.",
+          "Vidal S.M.",
+          "Malo D.",
+          "Dikic I."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "31285585"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/s41564-019-0484-8"
+          }
+        ],
+        "title": "CYRI/FAM49B negatively regulates RAC1-driven cytoskeletal remodelling and protects against bacterial infection.",
+        "publicationDate": "2019",
+        "journal": "Nat. Microbiol.",
+        "firstPage": "1516",
+        "lastPage": "1531",
+        "volume": "4"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "MUTAGENESIS OF GLY-168"
+      ]
+    },
+    {
+      "referenceNumber": 11,
+      "citation": {
+        "id": "12093730",
+        "citationType": "journal article",
+        "authors": [
+          "Buchwald G.",
+          "Friebel A.",
+          "Galan J.E.",
+          "Hardt W.-D.",
+          "Wittinghofer A.",
+          "Scheffzek K."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "12093730"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1093/emboj/cdf329"
+          }
+        ],
+        "title": "Structural basis for the reversible activation of a Rho protein by the bacterial toxin SopE.",
+        "publicationDate": "2002",
+        "journal": "EMBO J.",
+        "firstPage": "3286",
+        "lastPage": "3295",
+        "volume": "21"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY IN COMPLEX WITH CDC42"
+      ],
+      "referenceComments": [
+        {
+          "value": "SL1344",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AF043239",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAC02071.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_000161707.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NZ_CDJF01000140.1"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "1GZS",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.30 A"
+        },
+        {
+          "key": "Chains",
+          "value": "B/D=78-240"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "O52623",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "O52623",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "IntAct",
+      "id": "O52623",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|90371.1188.peg.2871",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "CAMPTPQ",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EvolutionaryTrace",
+      "id": "O52623",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PHI-base",
+      "id": "PHI:6799",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PHI-base",
+      "id": "PHI:7923",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005085",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:guanyl-nucleotide exchange factor activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0030036",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:actin cytoskeleton organization"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.10.4120.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SopE-like, GEF domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR005414",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SopE"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR035949",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SopE-like_GEF_dom_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR016019",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SopE_GEF_dom"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR016018",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SopE_N_dom"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF011809",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "sopE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF011810",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "sopE2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF05364",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SecIII_SopE_N"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF07487",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SopE_GEF"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PIRSF",
+      "id": "PIRSF034781",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SecIII_sopE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR01593",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SOPEPROTEIN"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF81832",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SopE-like GEF domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MTKITLSPQNFRIQKQETTLLKEKSTEKNSLAKSILAVKNHFIELRSKLSERFISHKNTESSATHFHRGSASEGRAVLTNKVVKDFMLQTLNDIDIRGSASKDPAYASQTREAILSAVYSKNKDQCCNLLISKGINIAPFLQEIGEAAKNAGLPGTTKNDVFTPSGAGANPFITPLISSANSKYPRMFINQHQQASFKIYAEKIIMTEVAPLFNECAMPTPQQFQLILENIANKYIQNTP",
+    "length": 240,
+    "molWeight": 26636,
+    "crc64": "F636F6C437018D03",
+    "md5": "D0B725DF4D212C6691EF0DE1C13EA1AD"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "INTERACTION": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "INDUCTION": 1,
+      "MISCELLANEOUS": 1,
+      "SIMILARITY": 1,
+      "CAUTION": 1
+    },
+    "countByFeatureType": {
+      "Initiator methionine": 1,
+      "Chain": 1,
+      "Region": 4,
+      "Site": 7,
+      "Mutagenesis": 10,
+      "Helix": 9,
+      "Beta strand": 2
+    },
+    "uniParcId": "UPI00000B2D42"
+  }
+}

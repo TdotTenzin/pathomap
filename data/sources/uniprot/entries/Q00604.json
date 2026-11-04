@@ -1,0 +1,6286 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "Q00604",
+  "secondaryAccessions": [
+    "B2R8K6",
+    "Q5JYH5"
+  ],
+  "uniProtkbId": "NDP_HUMAN",
+  "entryAudit": {
+    "firstPublicDate": "1994-06-01",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "1994-06-01",
+    "entryVersion": 207,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 5.0,
+  "organism": {
+    "scientificName": "Homo sapiens",
+    "commonName": "Human",
+    "taxonId": 9606,
+    "lineage": [
+      "Eukaryota",
+      "Metazoa",
+      "Chordata",
+      "Craniata",
+      "Vertebrata",
+      "Euteleostomi",
+      "Mammalia",
+      "Eutheria",
+      "Euarchontoglires",
+      "Primates",
+      "Haplorrhini",
+      "Catarrhini",
+      "Hominidae",
+      "Homo"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Norrin"
+      }
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "Norrie disease protein"
+        }
+      },
+      {
+        "fullName": {
+          "value": "X-linked exudative vitreoretinopathy 2 protein"
+        }
+      }
+    ],
+    "flag": "Precursor"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "NDP"
+      },
+      "synonyms": [
+        {
+          "value": "EVR2"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "value": "Activates the canonical Wnt signaling pathway through FZD4 and LRP5 coreceptor. Plays a central role in retinal vascularization by acting as a ligand for FZD4 that signals via stabilizing beta-catenin (CTNNB1) and activating LEF/TCF-mediated transcriptional programs. Acts in concert with TSPAN12 to activate FZD4 independently of the Wnt-dependent activation of FZD4, suggesting the existence of a Wnt-independent signaling that also promote accumulation the beta-catenin (CTNNB1). May be involved in a pathway that regulates neural cell differentiation and proliferation. Possible role in neuroectodermal cell-cell interaction"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "24186977"
+            }
+          ],
+          "value": "Homodimer; disulfide-linked. Component of a complex, at least composed of TSPAN12, FZD4, LRP5/6 and norrin (NDP). Binds FZD4 with high affinity. Interacts with LRP6 (via Beta-propellers 1 and 2)"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "INTERACTION",
+      "interactions": [
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "Q00604",
+            "intActId": "EBI-2466352"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "Q9ULV1",
+            "geneName": "FZD4",
+            "intActId": "EBI-2466380"
+          },
+          "numberOfExperiments": 4,
+          "organismDiffer": false
+        }
+      ]
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "9407136"
+              }
+            ],
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "10452356"
+            }
+          ],
+          "value": "Expressed in the outer nuclear, inner nuclear and ganglion cell layers of the retina, and in fetal and adult brain"
+        }
+      ],
+      "commentType": "TISSUE SPECIFICITY"
+    },
+    {
+      "commentType": "DISEASE",
+      "disease": {
+        "diseaseId": "Norrie disease",
+        "diseaseAccession": "DI-02079",
+        "acronym": "ND",
+        "description": "Recessive disorder characterized by very early childhood blindness due to degenerative and proliferative changes of the neuroretina. Approximately 50% of patients show some form of progressive mental disorder, often with psychotic features, and about one-third of patients develop sensorineural deafness in the second decade. In addition, some patients have more complex phenotypes, including growth failure and seizure.",
+        "diseaseCrossReference": {
+          "database": "MIM",
+          "id": "310600"
+        },
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "10484772"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "10544980"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "11337749"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "1303264"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "1307245"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "14635119"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "15609522"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "15776010"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "16970763"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "17128466"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "17296899"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "17325173"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "17334993"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "20340138"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "28192794"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "7627181"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "7662640"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "7795608"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "7993212"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "8069314"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "8268931"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "8281159"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "8589700"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "8741107"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "8807344"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "8990009"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "9143918"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "9382152"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "9407136"
+          }
+        ]
+      },
+      "note": {
+        "texts": [
+          {
+            "value": "The disease is caused by variants affecting the gene represented in this entry"
+          }
+        ]
+      }
+    },
+    {
+      "commentType": "DISEASE",
+      "disease": {
+        "diseaseId": "Vitreoretinopathy, exudative 2",
+        "diseaseAccession": "DI-01127",
+        "acronym": "EVR2",
+        "description": "An X-linked form of exudative vitreoretinopathy, a disorder of the retinal vasculature characterized by an abrupt cessation of growth of peripheral capillaries, leading to an avascular peripheral retina. This may lead to compensatory retinal neovascularization, which is thought to be induced by hypoxia from the initial avascular insult. New vessels are prone to leakage and rupture causing exudates and bleeding, followed by scarring, retinal detachment and blindness. Clinical features can be highly variable, even within the same family. Patients with mild forms of the disease are asymptomatic, and their only disease related abnormality is an arc of avascular retina in the extreme temporal periphery.",
+        "diseaseCrossReference": {
+          "database": "MIM",
+          "id": "305390"
+        },
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "16163268"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "16970763"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "17296899"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "17325173"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "8252044"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "8946107"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "9143917"
+          }
+        ]
+      },
+      "note": {
+        "texts": [
+          {
+            "value": "The disease is caused by variants affecting the gene represented in this entry"
+          }
+        ]
+      }
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 24,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 25,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 133,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Norrin",
+      "featureId": "PRO_0000021794"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 39,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 132,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "CTCK",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00039"
+        }
+      ]
+    },
+    {
+      "type": "Disulfide bond",
+      "location": {
+        "start": {
+          "value": 39,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 96,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "24186977"
+        }
+      ]
+    },
+    {
+      "type": "Disulfide bond",
+      "location": {
+        "start": {
+          "value": 55,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 110,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "24186977"
+        }
+      ]
+    },
+    {
+      "type": "Disulfide bond",
+      "location": {
+        "start": {
+          "value": 65,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 126,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "24186977"
+        }
+      ]
+    },
+    {
+      "type": "Disulfide bond",
+      "location": {
+        "start": {
+          "value": 69,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 128,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "24186977"
+        }
+      ]
+    },
+    {
+      "type": "Disulfide bond",
+      "location": {
+        "start": {
+          "value": 93,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 93,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Interchain (with C-95)",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "24186977"
+        }
+      ]
+    },
+    {
+      "type": "Disulfide bond",
+      "location": {
+        "start": {
+          "value": 95,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 95,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Interchain (with C-93)",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "24186977"
+        }
+      ]
+    },
+    {
+      "type": "Disulfide bond",
+      "location": {
+        "start": {
+          "value": 131,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 131,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Interchain",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "24186977"
+        }
+      ]
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 13,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 13,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND; dbSNP:rs104894879",
+      "featureCrossReferences": [
+        {
+          "database": "dbSNP",
+          "id": "rs104894879"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "8069314"
+        }
+      ],
+      "featureId": "VAR_005478",
+      "alternativeSequence": {
+        "originalSequence": "L",
+        "alternativeSequences": [
+          "R"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 16,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 16,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "11337749"
+        }
+      ],
+      "featureId": "VAR_016048",
+      "alternativeSequence": {
+        "originalSequence": "L",
+        "alternativeSequences": [
+          "P"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 18,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 18,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in EVR2; the patient presented significant phenotypic heterogeneity between the two eyes",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "17325173"
+        }
+      ],
+      "featureId": "VAR_063998",
+      "alternativeSequence": {
+        "originalSequence": "I",
+        "alternativeSequences": [
+          "K"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 23,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 23,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in dbSNP:rs5952410",
+      "featureCrossReferences": [
+        {
+          "database": "dbSNP",
+          "id": "rs5952410"
+        }
+      ],
+      "featureId": "VAR_034137",
+      "alternativeSequence": {
+        "originalSequence": "D",
+        "alternativeSequences": [
+          "E"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 38,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 38,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND and EVR2; dbSNP:rs758550101",
+      "featureCrossReferences": [
+        {
+          "database": "dbSNP",
+          "id": "rs758550101"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "14635119"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "16163268"
+        }
+      ],
+      "featureId": "VAR_063999",
+      "alternativeSequence": {
+        "originalSequence": "R",
+        "alternativeSequences": [
+          "C"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 39,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 39,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "17296899"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "7993212"
+        }
+      ],
+      "featureId": "VAR_005479",
+      "alternativeSequence": {
+        "originalSequence": "C",
+        "alternativeSequences": [
+          "R"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 41,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 41,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in EVR2",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "9143917"
+        }
+      ],
+      "featureId": "VAR_005480",
+      "alternativeSequence": {
+        "originalSequence": "R",
+        "alternativeSequences": [
+          "K"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 41,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 41,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in persistent fetal vasculature syndrome",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "17296899"
+        }
+      ],
+      "featureId": "VAR_064000",
+      "alternativeSequence": {
+        "originalSequence": "R",
+        "alternativeSequences": [
+          "S"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 42,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 42,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in EVR2; dbSNP:rs104894874",
+      "featureCrossReferences": [
+        {
+          "database": "dbSNP",
+          "id": "rs104894874"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "17296899"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "9143917"
+        }
+      ],
+      "featureId": "VAR_005481",
+      "alternativeSequence": {
+        "originalSequence": "H",
+        "alternativeSequences": [
+          "R"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 43,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 43,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "14635119"
+        }
+      ],
+      "featureId": "VAR_064001",
+      "alternativeSequence": {
+        "originalSequence": "H",
+        "alternativeSequences": [
+          "Q"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 43,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 43,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "16970763"
+        }
+      ],
+      "featureId": "VAR_064002",
+      "alternativeSequence": {
+        "originalSequence": "H",
+        "alternativeSequences": [
+          "R"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 44,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 44,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND; dbSNP:rs104894870",
+      "featureCrossReferences": [
+        {
+          "database": "dbSNP",
+          "id": "rs104894870"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "1303264"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "14635119"
+        }
+      ],
+      "featureId": "VAR_005482",
+      "alternativeSequence": {
+        "originalSequence": "Y",
+        "alternativeSequences": [
+          "C"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 45,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 45,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND; dbSNP:rs137852221",
+      "featureCrossReferences": [
+        {
+          "database": "dbSNP",
+          "id": "rs137852221"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "17334993"
+        }
+      ],
+      "featureId": "VAR_064003",
+      "alternativeSequence": {
+        "originalSequence": "V",
+        "alternativeSequences": [
+          "E"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 45,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 45,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "14635119"
+        }
+      ],
+      "featureId": "VAR_064004",
+      "alternativeSequence": {
+        "originalSequence": "V",
+        "alternativeSequences": [
+          "M"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 54,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 54,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in EVR2",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "17325173"
+        }
+      ],
+      "featureId": "VAR_064005",
+      "alternativeSequence": {
+        "originalSequence": "K",
+        "alternativeSequences": [
+          "N"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 55,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 55,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "20340138"
+        }
+      ],
+      "featureId": "VAR_064006",
+      "alternativeSequence": {
+        "originalSequence": "C",
+        "alternativeSequences": [
+          "R"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 58,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 58,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND and EVR2",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "8281159"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "9143917"
+        }
+      ],
+      "featureId": "VAR_005483",
+      "alternativeSequence": {
+        "originalSequence": "K",
+        "alternativeSequences": [
+          "N"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 60,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 60,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND; reduction of protein amount in the extracellular matrix; dbSNP:rs104894869",
+      "featureCrossReferences": [
+        {
+          "database": "dbSNP",
+          "id": "rs104894869"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "1303264"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "9407136"
+        }
+      ],
+      "featureId": "VAR_005484",
+      "alternativeSequence": {
+        "originalSequence": "V",
+        "alternativeSequences": [
+          "E"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 61,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 61,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND; dbSNP:rs104894880",
+      "featureCrossReferences": [
+        {
+          "database": "dbSNP",
+          "id": "rs104894880"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "1307245"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "9143918"
+        }
+      ],
+      "featureId": "VAR_005485",
+      "alternativeSequence": {
+        "originalSequence": "L",
+        "alternativeSequences": [
+          "F"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 61,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 61,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in EVR2",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "17296899"
+        }
+      ],
+      "featureId": "VAR_064007",
+      "alternativeSequence": {
+        "originalSequence": "L",
+        "alternativeSequences": [
+          "I"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 61,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 61,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "7627181"
+        }
+      ],
+      "featureId": "VAR_005486",
+      "alternativeSequence": {
+        "originalSequence": "L",
+        "alternativeSequences": [
+          "P"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 63,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 63,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "7627181"
+        }
+      ],
+      "featureId": "VAR_005487",
+      "alternativeSequence": {
+        "originalSequence": "A",
+        "alternativeSequences": [
+          "D"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 65,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 65,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "7627181"
+        }
+      ],
+      "featureId": "VAR_005490",
+      "alternativeSequence": {
+        "originalSequence": "C",
+        "alternativeSequences": [
+          "W"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 65,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 65,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND; dbSNP:rs1369490553",
+      "featureCrossReferences": [
+        {
+          "database": "dbSNP",
+          "id": "rs1369490553"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "17296899"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "8589700"
+        }
+      ],
+      "featureId": "VAR_005488",
+      "alternativeSequence": {
+        "originalSequence": "C",
+        "alternativeSequences": [
+          "Y"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 67,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 67,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND; dbSNP:rs1460859456",
+      "featureCrossReferences": [
+        {
+          "database": "dbSNP",
+          "id": "rs1460859456"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "20340138"
+        }
+      ],
+      "featureId": "VAR_064008",
+      "alternativeSequence": {
+        "originalSequence": "G",
+        "alternativeSequences": [
+          "E"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 67,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 67,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "20340138"
+        }
+      ],
+      "featureId": "VAR_064009",
+      "alternativeSequence": {
+        "originalSequence": "G",
+        "alternativeSequences": [
+          "R"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 69,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 69,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND; uncertain significance",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "28192794"
+        }
+      ],
+      "featureId": "VAR_085735",
+      "alternativeSequence": {
+        "originalSequence": "C",
+        "alternativeSequences": [
+          "G"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 69,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 69,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND; uncertain significance; dbSNP:rs104894872",
+      "featureCrossReferences": [
+        {
+          "database": "dbSNP",
+          "id": "rs104894872"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "8268931"
+        }
+      ],
+      "featureId": "VAR_005489",
+      "alternativeSequence": {
+        "originalSequence": "C",
+        "alternativeSequences": [
+          "S"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 74,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 74,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND; dbSNP:rs727504031",
+      "featureCrossReferences": [
+        {
+          "database": "dbSNP",
+          "id": "rs727504031"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "1307245"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "15776010"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "8807344"
+        }
+      ],
+      "featureId": "VAR_005491",
+      "alternativeSequence": {
+        "originalSequence": "R",
+        "alternativeSequences": [
+          "C"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 75,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 75,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND; dbSNP:rs104894868",
+      "featureCrossReferences": [
+        {
+          "database": "dbSNP",
+          "id": "rs104894868"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "1307245"
+        }
+      ],
+      "featureId": "VAR_005492",
+      "alternativeSequence": {
+        "originalSequence": "S",
+        "alternativeSequences": [
+          "C"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 75,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 75,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "11337749"
+        }
+      ],
+      "featureId": "VAR_016049",
+      "alternativeSequence": {
+        "originalSequence": "S",
+        "alternativeSequences": [
+          "P"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 89,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 89,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND; dbSNP:rs1057520333",
+      "featureCrossReferences": [
+        {
+          "database": "dbSNP",
+          "id": "rs1057520333"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "20340138"
+        }
+      ],
+      "featureId": "VAR_064010",
+      "alternativeSequence": {
+        "originalSequence": "F",
+        "alternativeSequences": [
+          "L"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 90,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 90,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND; dbSNP:rs1057518793",
+      "featureCrossReferences": [
+        {
+          "database": "dbSNP",
+          "id": "rs1057518793"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "14635119"
+        }
+      ],
+      "featureId": "VAR_064011",
+      "alternativeSequence": {
+        "originalSequence": "R",
+        "alternativeSequences": [
+          "C"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 90,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 90,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND; dbSNP:rs104894867",
+      "featureCrossReferences": [
+        {
+          "database": "dbSNP",
+          "id": "rs104894867"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "1307245"
+        }
+      ],
+      "featureId": "VAR_005494",
+      "alternativeSequence": {
+        "originalSequence": "R",
+        "alternativeSequences": [
+          "P"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 92,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 92,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "20340138"
+        }
+      ],
+      "featureId": "VAR_064012",
+      "alternativeSequence": {
+        "originalSequence": "S",
+        "alternativeSequences": [
+          "P"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 94,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 96,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "7627181"
+        }
+      ],
+      "featureId": "VAR_005495",
+      "alternativeSequence": {
+        "originalSequence": "HCC",
+        "alternativeSequences": [
+          "QCGL"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 95,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 95,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "15609522"
+        }
+      ],
+      "featureId": "VAR_064013",
+      "alternativeSequence": {
+        "originalSequence": "C",
+        "alternativeSequences": [
+          "F"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 95,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 95,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "7662640"
+        }
+      ],
+      "featureId": "VAR_064014",
+      "alternativeSequence": {
+        "originalSequence": "C",
+        "alternativeSequences": [
+          "R"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 96,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 96,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND; dbSNP:rs104894877",
+      "featureCrossReferences": [
+        {
+          "database": "dbSNP",
+          "id": "rs104894877"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "10484772"
+        }
+      ],
+      "featureId": "VAR_009275",
+      "alternativeSequence": {
+        "originalSequence": "C",
+        "alternativeSequences": [
+          "W"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 96,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 96,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND; dbSNP:rs104894871",
+      "featureCrossReferences": [
+        {
+          "database": "dbSNP",
+          "id": "rs104894871"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "10544980"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "1303264"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "1307245"
+        }
+      ],
+      "featureId": "VAR_005496",
+      "alternativeSequence": {
+        "originalSequence": "C",
+        "alternativeSequences": [
+          "Y"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 97,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 97,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "17325173"
+        }
+      ],
+      "featureId": "VAR_064015",
+      "alternativeSequence": {
+        "originalSequence": "R",
+        "alternativeSequences": [
+          "P"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 98,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 98,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "20340138"
+        }
+      ],
+      "featureId": "VAR_064016",
+      "alternativeSequence": {
+        "originalSequence": "P",
+        "alternativeSequences": [
+          "L"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 101,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 101,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND; dbSNP:rs104894883",
+      "featureCrossReferences": [
+        {
+          "database": "dbSNP",
+          "id": "rs104894883"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "8990009"
+        }
+      ],
+      "featureId": "VAR_005497",
+      "alternativeSequence": {
+        "originalSequence": "S",
+        "alternativeSequences": [
+          "F"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 103,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 103,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in EVR2",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "16970763"
+        }
+      ],
+      "featureId": "VAR_064017",
+      "alternativeSequence": {
+        "originalSequence": "L",
+        "alternativeSequences": [
+          "V"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 104,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 104,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "17128466"
+        }
+      ],
+      "featureId": "VAR_064018",
+      "alternativeSequence": {
+        "originalSequence": "K",
+        "alternativeSequences": [
+          "N"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 104,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 104,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "7795608"
+        }
+      ],
+      "featureId": "VAR_005498",
+      "alternativeSequence": {
+        "originalSequence": "K",
+        "alternativeSequences": [
+          "Q"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 105,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 105,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND; dbSNP:rs104894875",
+      "featureCrossReferences": [
+        {
+          "database": "dbSNP",
+          "id": "rs104894875"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "9382152"
+        }
+      ],
+      "featureId": "VAR_016050",
+      "alternativeSequence": {
+        "originalSequence": "A",
+        "alternativeSequences": [
+          "T"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 108,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 108,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in retinopathy of prematurity",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "9143917"
+        }
+      ],
+      "featureId": "VAR_064019",
+      "alternativeSequence": {
+        "originalSequence": "L",
+        "alternativeSequences": [
+          "P"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 110,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 110,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND; dbSNP:rs104894876",
+      "featureCrossReferences": [
+        {
+          "database": "dbSNP",
+          "id": "rs104894876"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "9382152"
+        }
+      ],
+      "featureId": "VAR_016051",
+      "alternativeSequence": {
+        "originalSequence": "C",
+        "alternativeSequences": [
+          "G"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 110,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 110,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "8807344"
+        }
+      ],
+      "featureId": "VAR_064020",
+      "alternativeSequence": {
+        "originalSequence": "C",
+        "alternativeSequences": [
+          "R"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 112,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 112,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "15776010"
+        }
+      ],
+      "featureId": "VAR_064021",
+      "alternativeSequence": {
+        "originalSequence": "G",
+        "alternativeSequences": [
+          "E"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 115,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 115,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in EVR2",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "17325173"
+        }
+      ],
+      "featureId": "VAR_064022",
+      "alternativeSequence": {
+        "originalSequence": "R",
+        "alternativeSequences": [
+          "L"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 118,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 118,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "10544980"
+        }
+      ],
+      "featureId": "VAR_064023",
+      "alternativeSequence": {
+        "originalSequence": "A",
+        "alternativeSequences": [
+          "D"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 120,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 120,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in EVR2",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "9143917"
+        }
+      ],
+      "featureId": "VAR_005499",
+      "alternativeSequence": {
+        "originalSequence": "Y",
+        "alternativeSequences": [
+          "C"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 121,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 123,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "7627181"
+        }
+      ],
+      "featureId": "VAR_005503",
+      "alternativeSequence": {}
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 121,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 121,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in EVR2",
+      "featureId": "VAR_005500",
+      "alternativeSequence": {
+        "originalSequence": "R",
+        "alternativeSequences": [
+          "G"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 121,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 121,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in EVR2; dbSNP:rs137852220",
+      "featureCrossReferences": [
+        {
+          "database": "dbSNP",
+          "id": "rs137852220"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "8946107"
+        }
+      ],
+      "featureId": "VAR_064024",
+      "alternativeSequence": {
+        "originalSequence": "R",
+        "alternativeSequences": [
+          "L"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 121,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 121,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in EVR2 and ND; reduced amount of protein in the extracellular matrix",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "16163268"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "7795608"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "8281159"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "9407136"
+        }
+      ],
+      "featureId": "VAR_005501",
+      "alternativeSequence": {
+        "originalSequence": "R",
+        "alternativeSequences": [
+          "Q"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 121,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 121,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND and EVR2; dbSNP:rs104894878",
+      "featureCrossReferences": [
+        {
+          "database": "dbSNP",
+          "id": "rs104894878"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "17296899"
+        },
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "7795608"
+        }
+      ],
+      "featureId": "VAR_005502",
+      "alternativeSequence": {
+        "originalSequence": "R",
+        "alternativeSequences": [
+          "W"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 123,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 123,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "7627181"
+        }
+      ],
+      "featureId": "VAR_005504",
+      "alternativeSequence": {
+        "originalSequence": "I",
+        "alternativeSequences": [
+          "N"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 124,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 124,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in EVR2; dbSNP:rs28933684",
+      "featureCrossReferences": [
+        {
+          "database": "dbSNP",
+          "id": "rs28933684"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "8252044"
+        }
+      ],
+      "featureId": "VAR_005505",
+      "alternativeSequence": {
+        "originalSequence": "L",
+        "alternativeSequences": [
+          "F"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 126,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 126,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "8741107"
+        }
+      ],
+      "featureId": "VAR_064025",
+      "alternativeSequence": {
+        "originalSequence": "C",
+        "alternativeSequences": [
+          "S"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 128,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 128,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in ND",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "14635119"
+        }
+      ],
+      "featureId": "VAR_064026",
+      "alternativeSequence": {
+        "originalSequence": "C",
+        "alternativeSequences": [
+          "R"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 95,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 95,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Impairs oligomerization.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "9407136"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "C",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 37,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 48,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5BQ8"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 51,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 53,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5BQ8"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 58,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 67,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5BQ8"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 73,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 77,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5BQ8"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 80,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 83,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5BQB"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 88,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 92,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5BQ8"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 94,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 110,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5BQ8"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 111,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 113,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5BQ8"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 115,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 133,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5BQ8"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0002",
+      "category": "Technical term",
+      "name": "3D-structure"
+    },
+    {
+      "id": "KW-0209",
+      "category": "Disease",
+      "name": "Deafness"
+    },
+    {
+      "id": "KW-0225",
+      "category": "Disease",
+      "name": "Disease variant"
+    },
+    {
+      "id": "KW-1015",
+      "category": "PTM",
+      "name": "Disulfide bond"
+    },
+    {
+      "id": "KW-1267",
+      "category": "Technical term",
+      "name": "Proteomics identification"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0716",
+      "category": "Biological process",
+      "name": "Sensory transduction"
+    },
+    {
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    },
+    {
+      "id": "KW-0844",
+      "category": "Biological process",
+      "name": "Vision"
+    },
+    {
+      "id": "KW-0879",
+      "category": "Biological process",
+      "name": "Wnt signaling pathway"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "1303235",
+        "citationType": "journal article",
+        "authors": [
+          "Berger W.",
+          "Meindl A.",
+          "van de Pol T.J.R.",
+          "Cremers F.P.M.",
+          "Ropers H.-H.",
+          "Doerner C.",
+          "Monaco A.",
+          "Bergen A.A.B.",
+          "Lebo R.",
+          "Warburg M.",
+          "Zergollern L.",
+          "Lorenz B.",
+          "Gal A.",
+          "Bleeker-Wagemakers E.M.",
+          "Meitinger T."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "1303235"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/ng0692-199"
+          }
+        ],
+        "title": "Isolation of a candidate gene for Norrie disease by positional cloning.",
+        "publicationDate": "1992",
+        "journal": "Nat. Genet.",
+        "firstPage": "199",
+        "lastPage": "203",
+        "volume": "1"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [MRNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "Retina",
+          "type": "TISSUE"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "1303256",
+        "citationType": "journal article",
+        "authors": [
+          "Berger W.",
+          "Meindl A.",
+          "van de Pol T.J.R.",
+          "Cremers F.P.M.",
+          "Ropers H.-H.",
+          "Doerner C.",
+          "Monaco A.",
+          "Bergen A.A.B.",
+          "Lebo R.",
+          "Warburg M.",
+          "Zergollern L.",
+          "Lorenz B.",
+          "Gal A.",
+          "Bleeker-Wagemakers E.M.",
+          "Meitinger T."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "1303256"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/ng0992-84a"
+          }
+        ],
+        "publicationDate": "1992",
+        "journal": "Nat. Genet.",
+        "firstPage": "84",
+        "lastPage": "84",
+        "volume": "2"
+      },
+      "referencePositions": [
+        "ERRATUM OF PUBMED:1303235"
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "1303236",
+        "citationType": "journal article",
+        "authors": [
+          "Chen Z.-Y.",
+          "Hendriks R.W.",
+          "Jobling M.A.",
+          "Powell J.F.",
+          "Breakfield X.O.",
+          "Sims K.B.",
+          "Craig I.W."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "1303236"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/ng0692-204"
+          }
+        ],
+        "title": "Isolation and characterization of a candidate gene for Norrie disease.",
+        "publicationDate": "1992",
+        "journal": "Nat. Genet.",
+        "firstPage": "204",
+        "lastPage": "208",
+        "volume": "1"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [MRNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "Fetal retina",
+          "type": "TISSUE"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "14702039",
+        "citationType": "journal article",
+        "authors": [
+          "Ota T.",
+          "Suzuki Y.",
+          "Nishikawa T.",
+          "Otsuki T.",
+          "Sugiyama T.",
+          "Irie R.",
+          "Wakamatsu A.",
+          "Hayashi K.",
+          "Sato H.",
+          "Nagai K.",
+          "Kimura K.",
+          "Makita H.",
+          "Sekine M.",
+          "Obayashi M.",
+          "Nishi T.",
+          "Shibahara T.",
+          "Tanaka T.",
+          "Ishii S.",
+          "Yamamoto J.",
+          "Saito K.",
+          "Kawai Y.",
+          "Isono Y.",
+          "Nakamura Y.",
+          "Nagahari K.",
+          "Murakami K.",
+          "Yasuda T.",
+          "Iwayanagi T.",
+          "Wagatsuma M.",
+          "Shiratori A.",
+          "Sudo H.",
+          "Hosoiri T.",
+          "Kaku Y.",
+          "Kodaira H.",
+          "Kondo H.",
+          "Sugawara M.",
+          "Takahashi M.",
+          "Kanda K.",
+          "Yokoi T.",
+          "Furuya T.",
+          "Kikkawa E.",
+          "Omura Y.",
+          "Abe K.",
+          "Kamihara K.",
+          "Katsuta N.",
+          "Sato K.",
+          "Tanikawa M.",
+          "Yamazaki M.",
+          "Ninomiya K.",
+          "Ishibashi T.",
+          "Yamashita H.",
+          "Murakawa K.",
+          "Fujimori K.",
+          "Tanai H.",
+          "Kimata M.",
+          "Watanabe M.",
+          "Hiraoka S.",
+          "Chiba Y.",
+          "Ishida S.",
+          "Ono Y.",
+          "Takiguchi S.",
+          "Watanabe S.",
+          "Yosida M.",
+          "Hotuta T.",
+          "Kusano J.",
+          "Kanehori K.",
+          "Takahashi-Fujii A.",
+          "Hara H.",
+          "Tanase T.-O.",
+          "Nomura Y.",
+          "Togiya S.",
+          "Komai F.",
+          "Hara R.",
+          "Takeuchi K.",
+          "Arita M.",
+          "Imose N.",
+          "Musashino K.",
+          "Yuuki H.",
+          "Oshima A.",
+          "Sasaki N.",
+          "Aotsuka S.",
+          "Yoshikawa Y.",
+          "Matsunawa H.",
+          "Ichihara T.",
+          "Shiohata N.",
+          "Sano S.",
+          "Moriya S.",
+          "Momiyama H.",
+          "Satoh N.",
+          "Takami S.",
+          "Terashima Y.",
+          "Suzuki O.",
+          "Nakagawa S.",
+          "Senoh A.",
+          "Mizoguchi H.",
+          "Goto Y.",
+          "Shimizu F.",
+          "Wakebe H.",
+          "Hishigaki H.",
+          "Watanabe T.",
+          "Sugiyama A.",
+          "Takemoto M.",
+          "Kawakami B.",
+          "Yamazaki M.",
+          "Watanabe K.",
+          "Kumagai A.",
+          "Itakura S.",
+          "Fukuzumi Y.",
+          "Fujimori Y.",
+          "Komiyama M.",
+          "Tashiro H.",
+          "Tanigami A.",
+          "Fujiwara T.",
+          "Ono T.",
+          "Yamada K.",
+          "Fujii Y.",
+          "Ozaki K.",
+          "Hirao M.",
+          "Ohmori Y.",
+          "Kawabata A.",
+          "Hikiji T.",
+          "Kobatake N.",
+          "Inagaki H.",
+          "Ikema Y.",
+          "Okamoto S.",
+          "Okitani R.",
+          "Kawakami T.",
+          "Noguchi S.",
+          "Itoh T.",
+          "Shigeta K.",
+          "Senba T.",
+          "Matsumura K.",
+          "Nakajima Y.",
+          "Mizuno T.",
+          "Morinaga M.",
+          "Sasaki M.",
+          "Togashi T.",
+          "Oyama M.",
+          "Hata H.",
+          "Watanabe M.",
+          "Komatsu T.",
+          "Mizushima-Sugano J.",
+          "Satoh T.",
+          "Shirai Y.",
+          "Takahashi Y.",
+          "Nakagawa K.",
+          "Okumura K.",
+          "Nagase T.",
+          "Nomura N.",
+          "Kikuchi H.",
+          "Masuho Y.",
+          "Yamashita R.",
+          "Nakai K.",
+          "Yada T.",
+          "Nakamura Y.",
+          "Ohara O.",
+          "Isogai T.",
+          "Sugano S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "14702039"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/ng1285"
+          }
+        ],
+        "title": "Complete sequencing and characterization of 21,243 full-length human cDNAs.",
+        "publicationDate": "2004",
+        "journal": "Nat. Genet.",
+        "firstPage": "40",
+        "lastPage": "45",
+        "volume": "36"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "Uterus",
+          "type": "TISSUE"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "15772651",
+        "citationType": "journal article",
+        "authors": [
+          "Ross M.T.",
+          "Grafham D.V.",
+          "Coffey A.J.",
+          "Scherer S.",
+          "McLay K.",
+          "Muzny D.",
+          "Platzer M.",
+          "Howell G.R.",
+          "Burrows C.",
+          "Bird C.P.",
+          "Frankish A.",
+          "Lovell F.L.",
+          "Howe K.L.",
+          "Ashurst J.L.",
+          "Fulton R.S.",
+          "Sudbrak R.",
+          "Wen G.",
+          "Jones M.C.",
+          "Hurles M.E.",
+          "Andrews T.D.",
+          "Scott C.E.",
+          "Searle S.",
+          "Ramser J.",
+          "Whittaker A.",
+          "Deadman R.",
+          "Carter N.P.",
+          "Hunt S.E.",
+          "Chen R.",
+          "Cree A.",
+          "Gunaratne P.",
+          "Havlak P.",
+          "Hodgson A.",
+          "Metzker M.L.",
+          "Richards S.",
+          "Scott G.",
+          "Steffen D.",
+          "Sodergren E.",
+          "Wheeler D.A.",
+          "Worley K.C.",
+          "Ainscough R.",
+          "Ambrose K.D.",
+          "Ansari-Lari M.A.",
+          "Aradhya S.",
+          "Ashwell R.I.",
+          "Babbage A.K.",
+          "Bagguley C.L.",
+          "Ballabio A.",
+          "Banerjee R.",
+          "Barker G.E.",
+          "Barlow K.F.",
+          "Barrett I.P.",
+          "Bates K.N.",
+          "Beare D.M.",
+          "Beasley H.",
+          "Beasley O.",
+          "Beck A.",
+          "Bethel G.",
+          "Blechschmidt K.",
+          "Brady N.",
+          "Bray-Allen S.",
+          "Bridgeman A.M.",
+          "Brown A.J.",
+          "Brown M.J.",
+          "Bonnin D.",
+          "Bruford E.A.",
+          "Buhay C.",
+          "Burch P.",
+          "Burford D.",
+          "Burgess J.",
+          "Burrill W.",
+          "Burton J.",
+          "Bye J.M.",
+          "Carder C.",
+          "Carrel L.",
+          "Chako J.",
+          "Chapman J.C.",
+          "Chavez D.",
+          "Chen E.",
+          "Chen G.",
+          "Chen Y.",
+          "Chen Z.",
+          "Chinault C.",
+          "Ciccodicola A.",
+          "Clark S.Y.",
+          "Clarke G.",
+          "Clee C.M.",
+          "Clegg S.",
+          "Clerc-Blankenburg K.",
+          "Clifford K.",
+          "Cobley V.",
+          "Cole C.G.",
+          "Conquer J.S.",
+          "Corby N.",
+          "Connor R.E.",
+          "David R.",
+          "Davies J.",
+          "Davis C.",
+          "Davis J.",
+          "Delgado O.",
+          "Deshazo D.",
+          "Dhami P.",
+          "Ding Y.",
+          "Dinh H.",
+          "Dodsworth S.",
+          "Draper H.",
+          "Dugan-Rocha S.",
+          "Dunham A.",
+          "Dunn M.",
+          "Durbin K.J.",
+          "Dutta I.",
+          "Eades T.",
+          "Ellwood M.",
+          "Emery-Cohen A.",
+          "Errington H.",
+          "Evans K.L.",
+          "Faulkner L.",
+          "Francis F.",
+          "Frankland J.",
+          "Fraser A.E.",
+          "Galgoczy P.",
+          "Gilbert J.",
+          "Gill R.",
+          "Gloeckner G.",
+          "Gregory S.G.",
+          "Gribble S.",
+          "Griffiths C.",
+          "Grocock R.",
+          "Gu Y.",
+          "Gwilliam R.",
+          "Hamilton C.",
+          "Hart E.A.",
+          "Hawes A.",
+          "Heath P.D.",
+          "Heitmann K.",
+          "Hennig S.",
+          "Hernandez J.",
+          "Hinzmann B.",
+          "Ho S.",
+          "Hoffs M.",
+          "Howden P.J.",
+          "Huckle E.J.",
+          "Hume J.",
+          "Hunt P.J.",
+          "Hunt A.R.",
+          "Isherwood J.",
+          "Jacob L.",
+          "Johnson D.",
+          "Jones S.",
+          "de Jong P.J.",
+          "Joseph S.S.",
+          "Keenan S.",
+          "Kelly S.",
+          "Kershaw J.K.",
+          "Khan Z.",
+          "Kioschis P.",
+          "Klages S.",
+          "Knights A.J.",
+          "Kosiura A.",
+          "Kovar-Smith C.",
+          "Laird G.K.",
+          "Langford C.",
+          "Lawlor S.",
+          "Leversha M.",
+          "Lewis L.",
+          "Liu W.",
+          "Lloyd C.",
+          "Lloyd D.M.",
+          "Loulseged H.",
+          "Loveland J.E.",
+          "Lovell J.D.",
+          "Lozado R.",
+          "Lu J.",
+          "Lyne R.",
+          "Ma J.",
+          "Maheshwari M.",
+          "Matthews L.H.",
+          "McDowall J.",
+          "McLaren S.",
+          "McMurray A.",
+          "Meidl P.",
+          "Meitinger T.",
+          "Milne S.",
+          "Miner G.",
+          "Mistry S.L.",
+          "Morgan M.",
+          "Morris S.",
+          "Mueller I.",
+          "Mullikin J.C.",
+          "Nguyen N.",
+          "Nordsiek G.",
+          "Nyakatura G.",
+          "O'dell C.N.",
+          "Okwuonu G.",
+          "Palmer S.",
+          "Pandian R.",
+          "Parker D.",
+          "Parrish J.",
+          "Pasternak S.",
+          "Patel D.",
+          "Pearce A.V.",
+          "Pearson D.M.",
+          "Pelan S.E.",
+          "Perez L.",
+          "Porter K.M.",
+          "Ramsey Y.",
+          "Reichwald K.",
+          "Rhodes S.",
+          "Ridler K.A.",
+          "Schlessinger D.",
+          "Schueler M.G.",
+          "Sehra H.K.",
+          "Shaw-Smith C.",
+          "Shen H.",
+          "Sheridan E.M.",
+          "Shownkeen R.",
+          "Skuce C.D.",
+          "Smith M.L.",
+          "Sotheran E.C.",
+          "Steingruber H.E.",
+          "Steward C.A.",
+          "Storey R.",
+          "Swann R.M.",
+          "Swarbreck D.",
+          "Tabor P.E.",
+          "Taudien S.",
+          "Taylor T.",
+          "Teague B.",
+          "Thomas K.",
+          "Thorpe A.",
+          "Timms K.",
+          "Tracey A.",
+          "Trevanion S.",
+          "Tromans A.C.",
+          "d'Urso M.",
+          "Verduzco D.",
+          "Villasana D.",
+          "Waldron L.",
+          "Wall M.",
+          "Wang Q.",
+          "Warren J.",
+          "Warry G.L.",
+          "Wei X.",
+          "West A.",
+          "Whitehead S.L.",
+          "Whiteley M.N.",
+          "Wilkinson J.E.",
+          "Willey D.L.",
+          "Williams G.",
+          "Williams L.",
+          "Williamson A.",
+          "Williamson H.",
+          "Wilming L.",
+          "Woodmansey R.L.",
+          "Wray P.W.",
+          "Yen J.",
+          "Zhang J.",
+          "Zhou J.",
+          "Zoghbi H.",
+          "Zorilla S.",
+          "Buck D.",
+          "Reinhardt R.",
+          "Poustka A.",
+          "Rosenthal A.",
+          "Lehrach H.",
+          "Meindl A.",
+          "Minx P.J.",
+          "Hillier L.W.",
+          "Willard H.F.",
+          "Wilson R.K.",
+          "Waterston R.H.",
+          "Rice C.M.",
+          "Vaudin M.",
+          "Coulson A.",
+          "Nelson D.L.",
+          "Weinstock G.",
+          "Sulston J.E.",
+          "Durbin R.M.",
+          "Hubbard T.",
+          "Gibbs R.A.",
+          "Beck S.",
+          "Rogers J.",
+          "Bentley D.R."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15772651"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/nature03440"
+          }
+        ],
+        "title": "The DNA sequence of the human X chromosome.",
+        "publicationDate": "2005",
+        "journal": "Nature",
+        "firstPage": "325",
+        "lastPage": "337",
+        "volume": "434"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "15489334",
+        "citationType": "journal article",
+        "authoringGroup": [
+          "The MGC Project Team"
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15489334"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1101/gr.2596504"
+          }
+        ],
+        "title": "The status, quality, and expansion of the NIH full-length cDNA project: the Mammalian Gene Collection (MGC).",
+        "publicationDate": "2004",
+        "journal": "Genome Res.",
+        "firstPage": "2121",
+        "lastPage": "2127",
+        "volume": "14"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "Brain",
+          "type": "TISSUE"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 7,
+      "citation": {
+        "id": "9407136",
+        "citationType": "journal article",
+        "authors": [
+          "Perez-Vilar J.",
+          "Hill R.L."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9407136"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1074/jbc.272.52.33410"
+          }
+        ],
+        "title": "Norrie disease protein (norrin) forms disulfide-linked oligomers associated with the extracellular matrix.",
+        "publicationDate": "1997",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "33410",
+        "lastPage": "33415",
+        "volume": "272"
+      },
+      "referencePositions": [
+        "SUBCELLULAR LOCATION",
+        "OLIGOMERIZATION",
+        "MUTAGENESIS OF CYS-95",
+        "CHARACTERIZATION OF VARIANTS ND GLU-60 AND GLN-121"
+      ]
+    },
+    {
+      "referenceNumber": 8,
+      "citation": {
+        "id": "10452356",
+        "citationType": "journal article",
+        "authors": [
+          "Hartzer M.K.",
+          "Cheng M.",
+          "Liu X.",
+          "Shastry B.S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "10452356"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/s0361-9230(99)00071-4"
+          }
+        ],
+        "title": "Localization of the Norrie disease gene mRNA by in situ hybridization.",
+        "publicationDate": "1999",
+        "journal": "Brain Res. Bull.",
+        "firstPage": "355",
+        "lastPage": "358",
+        "volume": "49"
+      },
+      "referencePositions": [
+        "TISSUE SPECIFICITY"
+      ]
+    },
+    {
+      "referenceNumber": 9,
+      "citation": {
+        "id": "8298646",
+        "citationType": "journal article",
+        "authors": [
+          "Meitinger T.",
+          "Meindl A.",
+          "Bork P.",
+          "Rost B.",
+          "Sander C.",
+          "Haasemann M.",
+          "Murken J."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8298646"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/ng1293-376"
+          }
+        ],
+        "title": "Molecular modelling of the Norrie disease protein predicts a cystine knot growth factor tertiary structure.",
+        "publicationDate": "1993",
+        "journal": "Nat. Genet.",
+        "firstPage": "376",
+        "lastPage": "380",
+        "volume": "5"
+      },
+      "referencePositions": [
+        "3D-STRUCTURE MODELING"
+      ]
+    },
+    {
+      "referenceNumber": 10,
+      "citation": {
+        "id": "24186977",
+        "citationType": "journal article",
+        "authors": [
+          "Ke J.",
+          "Harikumar K.G.",
+          "Erice C.",
+          "Chen C.",
+          "Gu X.",
+          "Wang L.",
+          "Parker N.",
+          "Cheng Z.",
+          "Xu W.",
+          "Williams B.O.",
+          "Melcher K.",
+          "Miller L.J.",
+          "Xu H.E."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "24186977"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1101/gad.228544.113"
+          }
+        ],
+        "title": "Structure and function of Norrin in assembly and activation of a Frizzled 4-Lrp5/6 complex.",
+        "publicationDate": "2013",
+        "journal": "Genes Dev.",
+        "firstPage": "2305",
+        "lastPage": "2319",
+        "volume": "27"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY",
+        "DISULFIDE BONDS",
+        "INTERACTION WITH FZD4 AND LRP6"
+      ]
+    },
+    {
+      "referenceNumber": 11,
+      "citation": {
+        "id": "8281159",
+        "citationType": "journal article",
+        "authors": [
+          "Fuentes J.J.",
+          "Volpini V.",
+          "Fernandez-Toral F.",
+          "Coto E.",
+          "Estivill X."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8281159"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1093/hmg/2.11.1953"
+          }
+        ],
+        "title": "Identification of two new missense mutations (K58N and R121Q) in the Norrie disease (ND) gene in two Spanish families.",
+        "publicationDate": "1993",
+        "journal": "Hum. Mol. Genet.",
+        "firstPage": "1953",
+        "lastPage": "1955",
+        "volume": "2"
+      },
+      "referencePositions": [
+        "VARIANTS ND ASN-58 AND GLN-121"
+      ]
+    },
+    {
+      "referenceNumber": 12,
+      "citation": {
+        "id": "8069314",
+        "citationType": "journal article",
+        "authors": [
+          "Fuchs S.",
+          "Xu S.Y.",
+          "Caballero M.",
+          "Salcedo M.",
+          "Lo A.L.",
+          "Wedemann H.",
+          "Gal A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8069314"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1093/hmg/3.4.655"
+          }
+        ],
+        "title": "A missense point mutation (Leu13Arg) of the Norrie disease gene in a large Cuban kindred with Norrie disease.",
+        "publicationDate": "1994",
+        "journal": "Hum. Mol. Genet.",
+        "firstPage": "655",
+        "lastPage": "656",
+        "volume": "3"
+      },
+      "referencePositions": [
+        "VARIANT ND ARG-13"
+      ]
+    },
+    {
+      "referenceNumber": 13,
+      "citation": {
+        "id": "7993212",
+        "citationType": "journal article",
+        "authors": [
+          "Joos K.M.",
+          "Kimura A.E.",
+          "Vandenburgh K.",
+          "Bartley J.A.",
+          "Stone E.M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "7993212"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1001/archopht.1994.01090240080029"
+          }
+        ],
+        "title": "Ocular findings associated with a Cys39Arg mutation in the Norrie disease gene.",
+        "publicationDate": "1994",
+        "journal": "Arch. Ophthalmol.",
+        "firstPage": "1574",
+        "lastPage": "1579",
+        "volume": "112"
+      },
+      "referencePositions": [
+        "VARIANT ND ARG-39"
+      ]
+    },
+    {
+      "referenceNumber": 14,
+      "citation": {
+        "id": "1303264",
+        "citationType": "journal article",
+        "authors": [
+          "Meindl A.",
+          "Berger W.",
+          "Meitinger T.",
+          "van de Pol D.",
+          "Achatz H.",
+          "Dorner C.",
+          "Haasemann M.",
+          "Hellebrand H.",
+          "Gal A.",
+          "Cremers F.P.M.",
+          "Ropers H.-H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "1303264"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/ng1092-139"
+          }
+        ],
+        "title": "Norrie disease is caused by mutations in an extracellular protein resembling C-terminal globular domain of mucins.",
+        "publicationDate": "1992",
+        "journal": "Nat. Genet.",
+        "firstPage": "139",
+        "lastPage": "143",
+        "volume": "2"
+      },
+      "referencePositions": [
+        "VARIANTS ND CYS-44; GLU-60 AND TYR-96"
+      ]
+    },
+    {
+      "referenceNumber": 15,
+      "citation": {
+        "id": "1307245",
+        "citationType": "journal article",
+        "authors": [
+          "Berger W.",
+          "van de Pol D.",
+          "Warburg M.",
+          "Gal A.",
+          "Bleeker-Wagemakers L.",
+          "de Silva H.",
+          "Meindl A.",
+          "Meitinger T.",
+          "Cremers F.P.M.",
+          "Ropers H.-H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "1307245"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1093/hmg/1.7.461"
+          }
+        ],
+        "title": "Mutations in the candidate gene for Norrie disease.",
+        "publicationDate": "1992",
+        "journal": "Hum. Mol. Genet.",
+        "firstPage": "461",
+        "lastPage": "465",
+        "volume": "1"
+      },
+      "referencePositions": [
+        "VARIANTS ND PHE-61; CYS-74; CYS-75; PRO-90 AND TYR-96"
+      ]
+    },
+    {
+      "referenceNumber": 16,
+      "citation": {
+        "id": "8268931",
+        "citationType": "journal article",
+        "authors": [
+          "Chen Z.-Y.",
+          "Battinelli E.M.",
+          "Woodruff G.",
+          "Young I.",
+          "Breakefield X.O.",
+          "Craig I.W."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8268931"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1093/hmg/2.10.1727"
+          }
+        ],
+        "title": "Characterization of a mutation within the NDP gene in a family with a manifesting female carrier.",
+        "publicationDate": "1993",
+        "journal": "Hum. Mol. Genet.",
+        "firstPage": "1727",
+        "lastPage": "1729",
+        "volume": "2"
+      },
+      "referencePositions": [
+        "VARIANT ND SER-69"
+      ]
+    },
+    {
+      "referenceNumber": 17,
+      "citation": {
+        "id": "8252044",
+        "citationType": "journal article",
+        "authors": [
+          "Chen Z.-Y.",
+          "Battinelli E.M.",
+          "Fielder A.",
+          "Bundey S.",
+          "Sims K.",
+          "Breakefield X.O.",
+          "Craig I.W."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8252044"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/ng1093-180"
+          }
+        ],
+        "title": "A mutation in the Norrie disease gene (NDP) associated with X-linked familial exudative vitreoretinopathy.",
+        "publicationDate": "1993",
+        "journal": "Nat. Genet.",
+        "firstPage": "180",
+        "lastPage": "183",
+        "volume": "5"
+      },
+      "referencePositions": [
+        "VARIANT EVR2 PHE-124"
+      ]
+    },
+    {
+      "referenceNumber": 18,
+      "citation": {
+        "id": "7662640",
+        "citationType": "journal article",
+        "authors": [
+          "Isashiki Y.",
+          "Ohba N.",
+          "Yanagita T.",
+          "Hokita N.",
+          "Hotta Y.",
+          "Hayakawa M.",
+          "Fujiki K.",
+          "Tanabe U."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "7662640"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1136/bjo.79.7.703"
+          }
+        ],
+        "title": "Mutations in the Norrie disease gene: a new mutation in a Japanese family.",
+        "publicationDate": "1995",
+        "journal": "Br. J. Ophthalmol.",
+        "firstPage": "703",
+        "lastPage": "704",
+        "volume": "79"
+      },
+      "referencePositions": [
+        "VARIANT ND ARG-95"
+      ]
+    },
+    {
+      "referenceNumber": 19,
+      "citation": {
+        "id": "7627181",
+        "citationType": "journal article",
+        "authors": [
+          "Schuback D.E.",
+          "Chen Z.Y.",
+          "Craig I.W.",
+          "Breakefield X.O.",
+          "Sims K.B."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "7627181"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1002/humu.1380050403"
+          }
+        ],
+        "title": "Mutations in the Norrie disease gene.",
+        "publicationDate": "1995",
+        "journal": "Hum. Mutat.",
+        "firstPage": "285",
+        "lastPage": "292",
+        "volume": "5"
+      },
+      "referencePositions": [
+        "VARIANTS ND PRO-61; ASP-63; TRP-65; ASN-123; 94-HIS--CYS-96 DELINS GLN-CYS-GLY-LEU AND 121-ARG--ILE-123 DEL"
+      ]
+    },
+    {
+      "referenceNumber": 20,
+      "citation": {
+        "id": "7795608",
+        "citationType": "journal article",
+        "authors": [
+          "Meindl A.",
+          "Lorenz B.",
+          "Achatz H.",
+          "Hellebrand H.",
+          "Schmitz-Valckenberg P.",
+          "Meitinger T."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "7795608"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1093/hmg/4.3.489"
+          }
+        ],
+        "title": "Missense mutations in the NDP gene in patients with a less severe course of Norrie disease.",
+        "publicationDate": "1995",
+        "journal": "Hum. Mol. Genet.",
+        "firstPage": "489",
+        "lastPage": "490",
+        "volume": "4"
+      },
+      "referencePositions": [
+        "VARIANTS ND GLN-104; TRP-121 AND GLN-121"
+      ]
+    },
+    {
+      "referenceNumber": 21,
+      "citation": {
+        "id": "8589700",
+        "citationType": "journal article",
+        "authors": [
+          "Strasberg P.",
+          "Liede H.A.",
+          "Stein T.",
+          "Warren I.",
+          "Sutherland J.",
+          "Ray P.N."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8589700"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1093/hmg/4.11.2179"
+          }
+        ],
+        "title": "A novel mutation in the Norrie disease gene predicted to disrupt the cystine knot growth factor motif.",
+        "publicationDate": "1995",
+        "journal": "Hum. Mol. Genet.",
+        "firstPage": "2179",
+        "lastPage": "2180",
+        "volume": "4"
+      },
+      "referencePositions": [
+        "VARIANT ND TYR-65"
+      ]
+    },
+    {
+      "referenceNumber": 22,
+      "citation": {
+        "id": "8741107",
+        "citationType": "journal article",
+        "authors": [
+          "Gal A.",
+          "Veske A.",
+          "Jojart G.",
+          "Grammatico B.",
+          "Huber B.",
+          "Gu S.",
+          "del Porto G.",
+          "Senyi K."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8741107"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1111/j.1600-0420.1996.tb00374.x"
+          }
+        ],
+        "title": "Norrie-Warburg syndrome: two novel mutations in patients with classical clinical phenotype.",
+        "publicationDate": "1996",
+        "journal": "Acta Ophthalmol. Scand. Suppl.",
+        "firstPage": "13",
+        "lastPage": "16",
+        "volume": "219"
+      },
+      "referencePositions": [
+        "VARIANT ND SER-126"
+      ]
+    },
+    {
+      "referenceNumber": 23,
+      "citation": {
+        "id": "8946107",
+        "citationType": "journal article",
+        "authors": [
+          "Johnson K.",
+          "Mintz-Hittner H.A.",
+          "Conley Y.P.",
+          "Ferrell R.E."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8946107"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1111/j.1399-0004.1996.tb02363.x"
+          }
+        ],
+        "title": "X-linked exudative vitreoretinopathy caused by an arginine to leucine substitution (R121L) in the Norrie disease protein.",
+        "publicationDate": "1996",
+        "journal": "Clin. Genet.",
+        "firstPage": "113",
+        "lastPage": "115",
+        "volume": "50"
+      },
+      "referencePositions": [
+        "VARIANT EVR2 LEU-121"
+      ]
+    },
+    {
+      "referenceNumber": 24,
+      "citation": {
+        "id": "8807344",
+        "citationType": "journal article",
+        "authors": [
+          "Fuchs S.",
+          "van de Pol D.",
+          "Beudt U.",
+          "Kellner U.",
+          "Meire F.",
+          "Berger W.",
+          "Gal A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8807344"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1002/(sici)1098-1004(1996)8:1<85::aid-humu15>3.0.co;2-n"
+          }
+        ],
+        "title": "Three novel and two recurrent mutations of the Norrie disease gene in patients with Norrie syndrome.",
+        "publicationDate": "1996",
+        "journal": "Hum. Mutat.",
+        "firstPage": "85",
+        "lastPage": "88",
+        "volume": "8"
+      },
+      "referencePositions": [
+        "VARIANTS ND CYS-74 AND ARG-110"
+      ]
+    },
+    {
+      "referenceNumber": 25,
+      "citation": {
+        "id": "9382152",
+        "citationType": "journal article",
+        "authors": [
+          "Torrente I.",
+          "Mangino M.",
+          "Gennarelli M.",
+          "Novelli G.",
+          "Giannotti A.",
+          "Vadala P.",
+          "Dallapiccola B."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9382152"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1002/(sici)1096-8628(19971017)72:2<242::aid-ajmg23>3.0.co;2-m"
+          }
+        ],
+        "title": "Two new missense mutations (A105T and C110G) in the norrin gene in two Italian families with Norrie disease and familial exudative vitreoretinopathy.",
+        "publicationDate": "1997",
+        "journal": "Am. J. Med. Genet.",
+        "firstPage": "242",
+        "lastPage": "244",
+        "volume": "72"
+      },
+      "referencePositions": [
+        "VARIANTS ND THR-105 AND GLY-110"
+      ]
+    },
+    {
+      "referenceNumber": 26,
+      "citation": {
+        "id": "8990009",
+        "citationType": "journal article",
+        "authors": [
+          "Walker J.L.",
+          "Dixon J.",
+          "Fenton C.R.",
+          "Hungerford J.",
+          "Lynch S.A.",
+          "Stenhouses S.A.R.",
+          "Christian A.",
+          "Craig I.W."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8990009"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1002/(sici)1098-1004(1997)9:1<53::aid-humu9>3.0.co;2-q"
+          }
+        ],
+        "title": "Two new mutations in exon 3 of the NDP gene: S73X and S101F associated with severe and less severe ocular phenotype, respectively.",
+        "publicationDate": "1997",
+        "journal": "Hum. Mutat.",
+        "firstPage": "53",
+        "lastPage": "56",
+        "volume": "9"
+      },
+      "referencePositions": [
+        "VARIANT ND PHE-101"
+      ]
+    },
+    {
+      "referenceNumber": 27,
+      "citation": {
+        "id": "9143917",
+        "citationType": "journal article",
+        "authors": [
+          "Shastry B.S.",
+          "Hejtmancik J.F.",
+          "Trese M.T."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9143917"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1002/(sici)1098-1004(1997)9:5<396::aid-humu3>3.0.co;2-2"
+          }
+        ],
+        "title": "Identification of novel missense mutations in the Norrie disease gene associated with one X-linked and four sporadic cases of familial exudative vitreoretinopathy.",
+        "publicationDate": "1997",
+        "journal": "Hum. Mutat.",
+        "firstPage": "396",
+        "lastPage": "401",
+        "volume": "9"
+      },
+      "referencePositions": [
+        "VARIANTS EVR2 LYS-41; ARG-42; ASN-58 AND CYS-120",
+        "VARIANT RETINOPATHY OF PREMATURITY PRO-108"
+      ]
+    },
+    {
+      "referenceNumber": 28,
+      "citation": {
+        "id": "9143918",
+        "citationType": "journal article",
+        "authors": [
+          "Rehm H.L.",
+          "Gutierrez-Espeleta G.A.",
+          "Garcia R.",
+          "Jimenez G.",
+          "Khetarpal U.",
+          "Priest J.M.",
+          "Sims K.B.",
+          "Keats B.J.B.",
+          "Morton C.C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9143918"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1002/(sici)1098-1004(1997)9:5<402::aid-humu4>3.0.co;2-5"
+          }
+        ],
+        "title": "Norrie disease gene mutation in a large Costa Rican kindred with a novel phenotype including venous insufficiency.",
+        "publicationDate": "1997",
+        "journal": "Hum. Mutat.",
+        "firstPage": "402",
+        "lastPage": "408",
+        "volume": "9"
+      },
+      "referencePositions": [
+        "VARIANT ND PHE-61"
+      ]
+    },
+    {
+      "referenceNumber": 29,
+      "citation": {
+        "id": "10544980",
+        "citationType": "journal article",
+        "authors": [
+          "Shastry B.S.",
+          "Hiraoka M.",
+          "Trese D.C.",
+          "Trese M.T."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "10544980"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1177/112067219900900312"
+          }
+        ],
+        "title": "Norrie disease and exudative vitreoretinopathy in families with affected female carriers.",
+        "publicationDate": "1999",
+        "journal": "Eur. J. Ophthalmol.",
+        "firstPage": "238",
+        "lastPage": "242",
+        "volume": "9"
+      },
+      "referencePositions": [
+        "VARIANTS ND TYR-96 AND ASP-118"
+      ]
+    },
+    {
+      "referenceNumber": 30,
+      "citation": {
+        "id": "10484772",
+        "citationType": "journal article",
+        "authors": [
+          "Black G.C.M.",
+          "Perveen R.",
+          "Bonshek R.",
+          "Cahill M.",
+          "Clayton-Smith J.",
+          "Lloyd I.C.",
+          "McLeod D."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "10484772"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1093/hmg/8.11.2031"
+          }
+        ],
+        "title": "Coats' disease of the retina (unilateral retinal telangiectasis) caused by somatic mutation in the NDP gene: a role for norrin in retinal angiogenesis.",
+        "publicationDate": "1999",
+        "journal": "Hum. Mol. Genet.",
+        "firstPage": "2031",
+        "lastPage": "2035",
+        "volume": "8"
+      },
+      "referencePositions": [
+        "VARIANT ND TRP-96"
+      ]
+    },
+    {
+      "referenceNumber": 31,
+      "citation": {
+        "id": "11337749",
+        "citationType": "journal article",
+        "authors": [
+          "Yamada K.",
+          "Limprasert P.",
+          "Ratanasukon M.",
+          "Tengtrisorn S.",
+          "Yingchareonpukdee J.",
+          "Vasiknanonte P.",
+          "Kitaoka T.",
+          "Ghadami M.",
+          "Niikawa N.",
+          "Kishino T."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11337749"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1002/1096-8628(20010415)100:1<52::aid-ajmg1214>3.0.co;2-b"
+          }
+        ],
+        "title": "Two Thai families with Norrie disease (ND): association of two novel missense mutations with severe ND phenotype, seizures, and a manifesting carrier.",
+        "publicationDate": "2001",
+        "journal": "Am. J. Med. Genet.",
+        "firstPage": "52",
+        "lastPage": "55",
+        "volume": "100"
+      },
+      "referencePositions": [
+        "VARIANTS ND PRO-16 AND PRO-75"
+      ]
+    },
+    {
+      "referenceNumber": 32,
+      "citation": {
+        "id": "14635119",
+        "citationType": "journal article",
+        "authors": [
+          "Royer G.",
+          "Hanein S.",
+          "Raclin V.",
+          "Gigarel N.",
+          "Rozet J.-M.",
+          "Munnich A.",
+          "Steffann J.",
+          "Dufier J.-L.",
+          "Kaplan J.",
+          "Bonnefont J.-P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "14635119"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1002/humu.9204"
+          }
+        ],
+        "title": "NDP gene mutations in 14 French families with Norrie disease.",
+        "publicationDate": "2003",
+        "journal": "Hum. Mutat.",
+        "firstPage": "499",
+        "lastPage": "499",
+        "volume": "22"
+      },
+      "referencePositions": [
+        "VARIANTS ND CYS-38; GLN-43; CYS-44; MET-45; CYS-90 AND ARG-128"
+      ]
+    },
+    {
+      "referenceNumber": 33,
+      "citation": {
+        "id": "15609522",
+        "citationType": "journal article",
+        "authors": [
+          "Khan A.O.",
+          "Shamsi F.A.",
+          "Al-Saif A.",
+          "Kambouris M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15609522"
+          },
+          {
+            "database": "DOI",
+            "id": "10.3928/01913913-20041101-10"
+          }
+        ],
+        "title": "A novel missense Norrie disease mutation associated with a severe ocular phenotype.",
+        "publicationDate": "2004",
+        "journal": "J. Pediatr. Ophthalmol. Strabismus",
+        "firstPage": "361",
+        "lastPage": "363",
+        "volume": "41"
+      },
+      "referencePositions": [
+        "VARIANT ND PHE-95"
+      ]
+    },
+    {
+      "referenceNumber": 34,
+      "citation": {
+        "id": "16163268",
+        "citationType": "journal article",
+        "authors": [
+          "Riveiro-Alvarez R.",
+          "Trujillo-Tiebas M.J.",
+          "Gimenez-Pardo A.",
+          "Garcia-Hoyos M.",
+          "Cantalapiedra D.",
+          "Lorda-Sanchez I.",
+          "Rodriguez de Alba M.",
+          "Ramos C.",
+          "Ayuso C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "16163268"
+          }
+        ],
+        "title": "Genotype-phenotype variations in five Spanish families with Norrie disease or X-linked FEVR.",
+        "publicationDate": "2005",
+        "journal": "Mol. Vis.",
+        "firstPage": "705",
+        "lastPage": "712",
+        "volume": "11"
+      },
+      "referencePositions": [
+        "VARIANTS EVR2 CYS-38 AND GLN-121"
+      ]
+    },
+    {
+      "referenceNumber": 35,
+      "citation": {
+        "id": "16970763",
+        "citationType": "journal article",
+        "authors": [
+          "Dickinson J.L.",
+          "Sale M.M.",
+          "Passmore A.",
+          "FitzGerald L.M.",
+          "Wheatley C.M.",
+          "Burdon K.P.",
+          "Craig J.E.",
+          "Tengtrisorn S.",
+          "Carden S.M.",
+          "Maclean H.",
+          "Mackey D.A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "16970763"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1111/j.1442-9071.2006.01314.x"
+          }
+        ],
+        "title": "Mutations in the NDP gene: contribution to Norrie disease, familial exudative vitreoretinopathy and retinopathy of prematurity.",
+        "publicationDate": "2006",
+        "journal": "Clin. Exp. Ophthalmol.",
+        "firstPage": "682",
+        "lastPage": "688",
+        "volume": "34"
+      },
+      "referencePositions": [
+        "VARIANT EVR2 VAL-103",
+        "VARIANT ND ARG-43"
+      ]
+    },
+    {
+      "referenceNumber": 36,
+      "citation": {
+        "id": "15776010",
+        "citationType": "journal article",
+        "authors": [
+          "Allen R.C.",
+          "Russell S.R.",
+          "Streb L.M.",
+          "Alsheikheh A.",
+          "Stone E.M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15776010"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/sj.eye.6701840"
+          }
+        ],
+        "title": "Phenotypic heterogeneity associated with a novel mutation (Gly112Glu) in the Norrie disease protein.",
+        "publicationDate": "2006",
+        "journal": "Eye",
+        "firstPage": "234",
+        "lastPage": "241",
+        "volume": "20"
+      },
+      "referencePositions": [
+        "VARIANTS ND CYS-74 AND GLU-112"
+      ]
+    },
+    {
+      "referenceNumber": 37,
+      "citation": {
+        "id": "17128466",
+        "citationType": "journal article",
+        "authors": [
+          "Riveiro-Alvarez R.",
+          "Trujillo M.J.",
+          "Gimenez A.",
+          "Cantalapiedra D.",
+          "Vallespin E.",
+          "Villaverde C.",
+          "Ayuso C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "17128466"
+          }
+        ],
+        "title": "Gene symbol: NDP. Disease: Norrie disease.",
+        "publicationDate": "2006",
+        "journal": "Hum. Genet.",
+        "firstPage": "675",
+        "lastPage": "675",
+        "volume": "119"
+      },
+      "referencePositions": [
+        "VARIANT ND ASN-104"
+      ]
+    },
+    {
+      "referenceNumber": 38,
+      "citation": {
+        "id": "17334993",
+        "citationType": "journal article",
+        "authors": [
+          "Lev D.",
+          "Weigl Y.",
+          "Hasan M.",
+          "Gak E.",
+          "Davidovich M.",
+          "Vinkler C.",
+          "Leshinsky-Silver E.",
+          "Lerman-Sagie T.",
+          "Watemberg N."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "17334993"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1002/ajmg.a.31531"
+          }
+        ],
+        "title": "A novel missense mutation in the NDP gene in a child with Norrie disease and severe neurological involvement including infantile spasms.",
+        "publicationDate": "2007",
+        "journal": "Am. J. Med. Genet. A",
+        "firstPage": "921",
+        "lastPage": "924",
+        "volume": "143"
+      },
+      "referencePositions": [
+        "VARIANT ND GLU-45"
+      ]
+    },
+    {
+      "referenceNumber": 39,
+      "citation": {
+        "id": "17296899",
+        "citationType": "journal article",
+        "authors": [
+          "Wu W.-C.",
+          "Drenser K.",
+          "Trese M.",
+          "Capone A. Jr.",
+          "Dailey W."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "17296899"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1001/archopht.125.2.225"
+          }
+        ],
+        "title": "Retinal phenotype-genotype correlation of pediatric patients expressing mutations in the Norrie disease gene.",
+        "publicationDate": "2007",
+        "journal": "Arch. Ophthalmol.",
+        "firstPage": "225",
+        "lastPage": "230",
+        "volume": "125"
+      },
+      "referencePositions": [
+        "VARIANTS EVR2 ARG-42; ILE-61 AND TRP-121",
+        "VARIANTS ND ARG-39 AND TYR-65",
+        "VARIANT PERSISTENT FETAL VASCULATURE SYNDROME SER-41"
+      ]
+    },
+    {
+      "referenceNumber": 40,
+      "citation": {
+        "id": "17325173",
+        "citationType": "journal article",
+        "authors": [
+          "Kondo H.",
+          "Qin M.",
+          "Kusaka S.",
+          "Tahira T.",
+          "Hasebe H.",
+          "Hayashi H.",
+          "Uchio E.",
+          "Hayashi K."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "17325173"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1167/iovs.06-1042"
+          }
+        ],
+        "title": "Novel mutations in Norrie disease gene in Japanese patients with Norrie disease and familial exudative vitreoretinopathy.",
+        "publicationDate": "2007",
+        "journal": "Invest. Ophthalmol. Vis. Sci.",
+        "firstPage": "1276",
+        "lastPage": "1282",
+        "volume": "48"
+      },
+      "referencePositions": [
+        "VARIANTS EVR2 LYS-18; ASN-54 AND LEU-115",
+        "VARIANT ND PRO-97"
+      ]
+    },
+    {
+      "referenceNumber": 41,
+      "citation": {
+        "id": "20340138",
+        "citationType": "journal article",
+        "authors": [
+          "Nikopoulos K.",
+          "Venselaar H.",
+          "Collin R.W.J.",
+          "Riveiro-Alvarez R.",
+          "Boonstra F.N.",
+          "Hooymans J.M.",
+          "Mukhopadhyay A.",
+          "Shears D.",
+          "van Bers M.",
+          "de Wijs I.J.",
+          "van Essen A.J.",
+          "Sijmons R.H.",
+          "Tilanus M.A.D.",
+          "van Nouhuys C.E.",
+          "Ayuso C.",
+          "Hoefsloot L.H.",
+          "Cremers F.P.M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "20340138"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1002/humu.21250"
+          }
+        ],
+        "title": "Overview of the mutation spectrum in familial exudative vitreoretinopathy and Norrie disease with identification of 21 novel variants in FZD4, LRP5, and NDP.",
+        "publicationDate": "2010",
+        "journal": "Hum. Mutat.",
+        "firstPage": "656",
+        "lastPage": "666",
+        "volume": "31"
+      },
+      "referencePositions": [
+        "VARIANTS ND ARG-55; ARG-67; GLU-67; LEU-89; PRO-92 AND LEU-98"
+      ]
+    },
+    {
+      "referenceNumber": 42,
+      "citation": {
+        "id": "28192794",
+        "citationType": "journal article",
+        "authors": [
+          "Keser V.",
+          "Khan A.",
+          "Siddiqui S.",
+          "Lopez I.",
+          "Ren H.",
+          "Qamar R.",
+          "Nadaf J.",
+          "Majewski J.",
+          "Chen R.",
+          "Koenekoop R.K."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "28192794"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1167/iovs.16-20281"
+          }
+        ],
+        "title": "The Genetic Causes of Nonsyndromic Congenital Retinal Detachment: A Genetic and Phenotypic Study of Pakistani Families.",
+        "publicationDate": "2017",
+        "journal": "Invest. Ophthalmol. Vis. Sci.",
+        "firstPage": "1028",
+        "lastPage": "1036",
+        "volume": "58"
+      },
+      "referencePositions": [
+        "VARIANT ND GLY-69"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "X65724",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAA46639.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "X65882",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAA46713.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AL034370",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "-"
+        },
+        {
+          "key": "Status",
+          "value": "NOT_ANNOTATED_CDS"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AK313409",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "BAG36203.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "BC029901",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAH29901.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "CCDS",
+      "id": "CCDS14262.1",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "A57005",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "A57005"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_000257.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NM_000266.4"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "4MY2",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.40 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=30-133"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "5BPU",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.40 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B/C/D/E/F=25-133"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "5BQ8",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.00 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B/C/D=25-133"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "5BQB",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.30 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B/C/D=25-133"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "5BQC",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "3.00 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=25-133"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "5BQE",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.30 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B=25-133"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "5CL1",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "3.80 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B=31-133"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "8WVX",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "EM"
+        },
+        {
+          "key": "Resolution",
+          "value": "3.32 A"
+        },
+        {
+          "key": "Chains",
+          "value": "C/D=31-133"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "8WVY",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "EM"
+        },
+        {
+          "key": "Resolution",
+          "value": "3.29 A"
+        },
+        {
+          "key": "Chains",
+          "value": "E/F=31-133"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "9KHH",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "EM"
+        },
+        {
+          "key": "Resolution",
+          "value": "3.65 A"
+        },
+        {
+          "key": "Chains",
+          "value": "E/F=25-133"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "9MAN",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "EM"
+        },
+        {
+          "key": "Resolution",
+          "value": "3.78 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B=25-133"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "9UOK",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "EM"
+        },
+        {
+          "key": "Resolution",
+          "value": "3.05 A"
+        },
+        {
+          "key": "Chains",
+          "value": "E/F=25-133"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q00604",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EMDB",
+      "id": "EMD-37875",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EMDB",
+      "id": "EMD-37876",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EMDB",
+      "id": "EMD-63756",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "Q00604",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BioGRID",
+      "id": "110773",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "106"
+        }
+      ]
+    },
+    {
+      "database": "CORUM",
+      "id": "Q00604",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "FunCoup",
+      "id": "Q00604",
+      "properties": [
+        {
+          "key": "Number of interactors",
+          "value": "71"
+        }
+      ]
+    },
+    {
+      "database": "IntAct",
+      "id": "Q00604",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "31"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "9606.ENSP00000495811",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "iPTMnet",
+      "id": "Q00604",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PhosphoSitePlus",
+      "id": "Q00604",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BioMuta",
+      "id": "NDP",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "DMDM",
+      "id": "548342",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "MassIVE",
+      "id": "Q00604",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PaxDb",
+      "id": "9606-ENSP00000495811",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PeptideAtlas",
+      "id": "Q00604",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "ProteomicsDB",
+      "id": "57861",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Antibodypedia",
+      "id": "514",
+      "properties": [
+        {
+          "key": "antibodies",
+          "value": "187 antibodies from 32 providers"
+        }
+      ]
+    },
+    {
+      "database": "DNASU",
+      "id": "4693",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Ensembl",
+      "id": "ENST00000642620.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ENSP00000495972.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "ENSG00000124479.12"
+        }
+      ]
+    },
+    {
+      "database": "Ensembl",
+      "id": "ENST00000647044.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ENSP00000495811.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "ENSG00000124479.12"
+        }
+      ]
+    },
+    {
+      "database": "Ensembl",
+      "id": "ENST00000868527.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ENSP00000538586.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "ENSG00000124479.12"
+        }
+      ]
+    },
+    {
+      "database": "Ensembl",
+      "id": "ENST00000868528.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ENSP00000538587.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "ENSG00000124479.12"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "4693",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "hsa:4693",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "MANE-Select",
+      "id": "ENST00000642620.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ENSP00000495972.1"
+        },
+        {
+          "key": "RefSeqNucleotideId",
+          "value": "NM_000266.4"
+        },
+        {
+          "key": "RefSeqProteinId",
+          "value": "NP_000257.1"
+        }
+      ]
+    },
+    {
+      "database": "UCSC",
+      "id": "uc004dga.5",
+      "properties": [
+        {
+          "key": "OrganismName",
+          "value": "human"
+        }
+      ]
+    },
+    {
+      "database": "AGR",
+      "id": "HGNC:7678",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "ClinPGx",
+      "id": "PA31481",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "CTD",
+      "id": "4693",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "DisGeNET",
+      "id": "4693",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GeneCards",
+      "id": "NDP",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GeneReviews",
+      "id": "NDP",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "HGNC",
+      "id": "HGNC:7678",
+      "properties": [
+        {
+          "key": "GeneName",
+          "value": "NDP"
+        }
+      ]
+    },
+    {
+      "database": "HPA",
+      "id": "ENSG00000124479",
+      "properties": [
+        {
+          "key": "ExpressionPatterns",
+          "value": "Tissue enhanced (brain, ovary)"
+        }
+      ]
+    },
+    {
+      "database": "MalaCards",
+      "id": "NDP",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "MIM",
+      "id": "300658",
+      "properties": [
+        {
+          "key": "Type",
+          "value": "gene"
+        }
+      ]
+    },
+    {
+      "database": "MIM",
+      "id": "305390",
+      "properties": [
+        {
+          "key": "Type",
+          "value": "phenotype"
+        }
+      ]
+    },
+    {
+      "database": "MIM",
+      "id": "310600",
+      "properties": [
+        {
+          "key": "Type",
+          "value": "phenotype"
+        }
+      ]
+    },
+    {
+      "database": "OpenTargets",
+      "id": "ENSG00000124479",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Orphanet",
+      "id": "190",
+      "properties": [
+        {
+          "key": "Disease",
+          "value": "Coats disease"
+        }
+      ]
+    },
+    {
+      "database": "Orphanet",
+      "id": "891",
+      "properties": [
+        {
+          "key": "Disease",
+          "value": "Familial exudative vitreoretinopathy"
+        }
+      ]
+    },
+    {
+      "database": "Orphanet",
+      "id": "649",
+      "properties": [
+        {
+          "key": "Disease",
+          "value": "Norrie disease"
+        }
+      ]
+    },
+    {
+      "database": "Orphanet",
+      "id": "91495",
+      "properties": [
+        {
+          "key": "Disease",
+          "value": "Persistent hyperplastic primary vitreous"
+        }
+      ]
+    },
+    {
+      "database": "Orphanet",
+      "id": "90050",
+      "properties": [
+        {
+          "key": "Disease",
+          "value": "Retinopathy of prematurity"
+        }
+      ]
+    },
+    {
+      "database": "VEuPathDB",
+      "id": "HostDB:ENSG00000124479",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "KOG1216",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Eukaryota"
+        }
+      ]
+    },
+    {
+      "database": "GeneTree",
+      "id": "ENSGT00390000004304",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_153977_0_0_1",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "InParanoid",
+      "id": "Q00604",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "ACCAWTS",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OrthoDB",
+      "id": "6059567at2759",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PAN-GO",
+      "id": "Q00604",
+      "properties": [
+        {
+          "key": "Number of GO annotations",
+          "value": "4 GO annotations based on evolutionary models"
+        }
+      ]
+    },
+    {
+      "database": "PhylomeDB",
+      "id": "Q00604",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PathwayCommons",
+      "id": "Q00604",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SignaLink",
+      "id": "Q00604",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SIGNOR",
+      "id": "Q00604",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Agora",
+      "id": "ENSG00000124479",
+      "properties": [
+        {
+          "key": "NominatedTarget",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BioGRID-ORCS",
+      "id": "4693",
+      "properties": [
+        {
+          "key": "hits",
+          "value": "11 hits in 769 CRISPR screens"
+        }
+      ]
+    },
+    {
+      "database": "ChiTaRS",
+      "id": "NDP",
+      "properties": [
+        {
+          "key": "OrganismName",
+          "value": "human"
+        }
+      ]
+    },
+    {
+      "database": "EvolutionaryTrace",
+      "id": "Q00604",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GeneWiki",
+      "id": "Norrin",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GenomeRNAi",
+      "id": "4693",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Pharos",
+      "id": "Q00604",
+      "properties": [
+        {
+          "key": "DevelopmentLevel",
+          "value": "Tbio"
+        }
+      ]
+    },
+    {
+      "database": "PRO",
+      "id": "PR:Q00604",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000005640",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome X"
+        }
+      ]
+    },
+    {
+      "database": "RNAct",
+      "id": "Q00604",
+      "properties": [
+        {
+          "key": "moleculeType",
+          "value": "protein"
+        }
+      ]
+    },
+    {
+      "database": "Bgee",
+      "id": "ENSG00000124479",
+      "properties": [
+        {
+          "key": "ExpressionPatterns",
+          "value": "Expressed in cranial nerve II and 154 other cell types or tissues"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009986",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cell surface"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:BHF-UCL"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "17955262"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:BHF-UCL"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "15035989"
+        },
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "17955262"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005125",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:cytokine activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:BHF-UCL"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "17955262"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005109",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:frizzled binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IPI:BHF-UCL"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000353",
+          "source": "PubMed",
+          "id": "17955262"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0042803",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:protein homodimerization activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IPI:BHF-UCL"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000353",
+          "source": "PubMed",
+          "id": "17955262"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0046697",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:decidualization"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:Ensembl"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0035426",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:extracellular matrix-cell signaling"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:Ensembl"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0007399",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:nervous system development"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "TAS:ProtInc"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000304",
+          "source": "PubMed",
+          "id": "8252044"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0110135",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:Norrin signaling pathway"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:BHF-UCL"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "15035989"
+        },
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "17955262"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0045893",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:positive regulation of DNA-templated transcription"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:BHF-UCL"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "17955262"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0045944",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:positive regulation of transcription by RNA polymerase II"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:BHF-UCL"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "15035989"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0007033",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:vacuole organization"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "TAS:ProtInc"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000304",
+          "source": "PubMed",
+          "id": "10484772"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0007601",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:visual perception"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "TAS:ProtInc"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000304",
+          "source": "PubMed",
+          "id": "10484772"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0016055",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:Wnt signaling pathway"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "2.10.90.10:FF:000022",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Norrin"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.10.90.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cystine-knot cytokines"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR006207",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cys_knot_C"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR029034",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cystine-knot_cytokine"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR006208",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Glyco_hormone_CN"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR003064",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Norrie_dis"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR28611",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "NORRIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR28611:SF1",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "NORRIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00007",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cys_knot"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR01304",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "NORRIEDSEASE"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00041",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CT"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS01185",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CTCK_1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS01225",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CTCK_2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MRKHVLAASFSMLSLLVIMGDTDSKTDSSFIMDSDPRRCMRHHYVDSISHPLYKCSSKMVLLARCEGHCSQASRSEPLVSFSTVLKQPFRSSCHCCRPQTSKLKALRLRCSGGMRLTATYRYILSCHCEECNS",
+    "length": 133,
+    "molWeight": 15044,
+    "crc64": "D219E8B7F957286A",
+    "md5": "8BB62285F15294EDA01E6ACCDA7C7F17"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBUNIT": 1,
+      "INTERACTION": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "TISSUE SPECIFICITY": 1,
+      "DISEASE": 2
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1,
+      "Domain": 1,
+      "Disulfide bond": 7,
+      "Natural variant": 63,
+      "Mutagenesis": 1,
+      "Beta strand": 8,
+      "Turn": 1
+    },
+    "uniParcId": "UPI00000012E1"
+  }
+}

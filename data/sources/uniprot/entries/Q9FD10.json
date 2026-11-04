@@ -1,0 +1,1314 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "Q9FD10",
+  "secondaryAccessions": [
+    "Q7BIM8"
+  ],
+  "uniProtkbId": "SSEJ_SALTY",
+  "entryAudit": {
+    "firstPublicDate": "2010-02-09",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2001-03-01",
+    "entryVersion": 112,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 5.0,
+  "organism": {
+    "scientificName": "Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)",
+    "taxonId": 99287,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Gammaproteobacteria",
+      "Enterobacterales",
+      "Enterobacteriaceae",
+      "Salmonella"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Secreted effector protein SseJ"
+      },
+      "ecNumbers": [
+        {
+          "value": "3.-.-.-"
+        }
+      ]
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "Salmonella-translocated effector J"
+        },
+        "shortNames": [
+          {
+            "value": "STE J"
+          }
+        ]
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "sseJ"
+      },
+      "orderedLocusNames": [
+        {
+          "value": "STM1631"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "16177296"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "18333886"
+            }
+          ],
+          "value": "Effector proteins function to alter host cell physiology and promote bacterial survival in host tissues. This protein is required for endosomal tubulation and negatively regulates the formation of Salmonella-induced filaments (Sifs) in epithelial cells. Has both deacylase and esterification activities in vitro, but esterification is probably the dominant activity in host cells. Significantly contributes to cholesterol esterification, which reduces cellular cholesterol in cells and abrogates the ability of SifA to associate with cholesterol and LAMP-1 vesicles"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "18996344"
+            }
+          ],
+          "value": "Interacts with RhoA and indirectly with SifA"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "INTERACTION",
+      "interactions": [
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "Q9FD10",
+            "intActId": "EBI-10690199"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "P61586",
+            "geneName": "RHOA",
+            "intActId": "EBI-446668"
+          },
+          "numberOfExperiments": 3,
+          "organismDiffer": true
+        }
+      ]
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "note": {
+        "texts": [
+          {
+            "value": "Secreted via type III secretion system 2 (SPI-2 T3SS), and delivered into the host cytoplasm. Localizes to the Salmonella-containing vacuole (SCV) at early time points following invasion and subsequently traffics away from the SCV along Salmonella-induced filaments (Sifs) in epithelial cells"
+          }
+        ]
+      },
+      "subcellularLocations": [
+        {
+          "location": {
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        },
+        {
+          "location": {
+            "value": "Host cytoplasm",
+            "id": "SL-0381"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "19858298"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "21059643"
+            }
+          ],
+          "value": "Very highly expressed in host macrophages and when grown in an acidic environment; repressed by H-NS and induced by SsrB"
+        }
+      ],
+      "commentType": "INDUCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "18333886"
+            }
+          ],
+          "value": "Mutants have reduced cholesterol esterification activity as well as reduced lipid droplets"
+        }
+      ],
+      "commentType": "DISRUPTION PHENOTYPE"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the 'GDSL' lipolytic enzyme family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 408,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Secreted effector protein SseJ",
+      "featureId": "PRO_0000391492"
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 151,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 151,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Nucleophile",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ]
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 381,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 381,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250"
+        }
+      ]
+    },
+    {
+      "type": "Active site",
+      "location": {
+        "start": {
+          "value": 384,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 384,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ]
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 151,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 151,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "5-fold decrease in deacylase activity. Does not affect translocation by T3SS and cellular localization.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "16177296"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "S",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 153,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 153,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "No change in deacylase activity.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "16177296"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "S",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 247,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 247,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "5-fold decrease in deacylase activity. Does not affect translocation by T3SS and cellular localization.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "16177296"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "D",
+        "alternativeSequences": [
+          "N"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 384,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 384,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "5-fold decrease in deacylase activity. Does not affect translocation by T3SS and cellular localization.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "16177296"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "H",
+        "alternativeSequences": [
+          "N"
+        ]
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-1035",
+      "category": "Cellular component",
+      "name": "Host cytoplasm"
+    },
+    {
+      "id": "KW-0378",
+      "category": "Molecular function",
+      "name": "Hydrolase"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "10861017",
+        "citationType": "journal article",
+        "authors": [
+          "Miao E.A.",
+          "Miller S.I."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "10861017"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1073/pnas.97.13.7539"
+          }
+        ],
+        "title": "A conserved amino acid sequence directing intracellular type III secretion by Salmonella typhimurium.",
+        "publicationDate": "2000",
+        "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+        "firstPage": "7539",
+        "lastPage": "7544",
+        "volume": "97"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]",
+        "SUBCELLULAR LOCATION",
+        "SECRETION VIA TYPE III SECRETION SYSTEM"
+      ],
+      "referenceComments": [
+        {
+          "value": "LT2 / SGSC1412 / ATCC 700720",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "11677609",
+        "citationType": "journal article",
+        "authors": [
+          "McClelland M.",
+          "Sanderson K.E.",
+          "Spieth J.",
+          "Clifton S.W.",
+          "Latreille P.",
+          "Courtney L.",
+          "Porwollik S.",
+          "Ali J.",
+          "Dante M.",
+          "Du F.",
+          "Hou S.",
+          "Layman D.",
+          "Leonard S.",
+          "Nguyen C.",
+          "Scott K.",
+          "Holmes A.",
+          "Grewal N.",
+          "Mulvaney E.",
+          "Ryan E.",
+          "Sun H.",
+          "Florea L.",
+          "Miller W.",
+          "Stoneking T.",
+          "Nhan M.",
+          "Waterston R.",
+          "Wilson R.K."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11677609"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/35101614"
+          }
+        ],
+        "title": "Complete genome sequence of Salmonella enterica serovar Typhimurium LT2.",
+        "publicationDate": "2001",
+        "journal": "Nature",
+        "firstPage": "852",
+        "lastPage": "856",
+        "volume": "413"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "LT2 / SGSC1412 / ATCC 700720",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "12496192",
+        "citationType": "journal article",
+        "authors": [
+          "Freeman J.A.",
+          "Ohl M.E.",
+          "Miller S.I."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "12496192"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.71.1.418-427.2003"
+          }
+        ],
+        "title": "The Salmonella enterica serovar typhimurium translocated effectors SseJ and SifB are targeted to the Salmonella-containing vacuole.",
+        "publicationDate": "2003",
+        "journal": "Infect. Immun.",
+        "firstPage": "418",
+        "lastPage": "427",
+        "volume": "71"
+      },
+      "referencePositions": [
+        "SUBCELLULAR LOCATION",
+        "SECRETION VIA TYPE III SECRETION SYSTEM"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 14028s / SGSG 2262",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "16177296",
+        "citationType": "journal article",
+        "authors": [
+          "Ohlson M.B.",
+          "Fluhr K.",
+          "Birmingham C.L.",
+          "Brumell J.H.",
+          "Miller S.I."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "16177296"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.73.10.6249-6259.2005"
+          }
+        ],
+        "title": "SseJ deacylase activity by Salmonella enterica serovar Typhimurium promotes virulence in mice.",
+        "publicationDate": "2005",
+        "journal": "Infect. Immun.",
+        "firstPage": "6249",
+        "lastPage": "6259",
+        "volume": "73"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "DEACYLASE ACTIVITY",
+        "MUTAGENESIS OF SER-151; SER-153; ASP-247 AND HIS-384"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 14028s / SGSG 2262",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "18996344",
+        "citationType": "journal article",
+        "authors": [
+          "Ohlson M.B.",
+          "Huang Z.",
+          "Alto N.M.",
+          "Blanc M.-P.",
+          "Dixon J.E.",
+          "Chai J.",
+          "Miller S.I."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "18996344"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/j.chom.2008.08.012"
+          }
+        ],
+        "title": "Structure and function of Salmonella SifA indicate that its interactions with SKIP, SseJ, and RhoA family GTPases induce endosomal tubulation.",
+        "publicationDate": "2008",
+        "journal": "Cell Host Microbe",
+        "firstPage": "434",
+        "lastPage": "446",
+        "volume": "4"
+      },
+      "referencePositions": [
+        "INTERACTION WITH RHOA AND SIFA"
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "18333886",
+        "citationType": "journal article",
+        "authors": [
+          "Nawabi P.",
+          "Catron D.M.",
+          "Haldar K."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "18333886"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1111/j.1365-2958.2008.06142.x"
+          }
+        ],
+        "title": "Esterification of cholesterol by a type III secretion effector during intracellular Salmonella infection.",
+        "publicationDate": "2008",
+        "journal": "Mol. Microbiol.",
+        "firstPage": "173",
+        "lastPage": "185",
+        "volume": "68"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "ESTERIFICATION ACTIVITY",
+        "DISRUPTION PHENOTYPE"
+      ]
+    },
+    {
+      "referenceNumber": 7,
+      "citation": {
+        "id": "19858298",
+        "citationType": "journal article",
+        "authors": [
+          "Xu X.",
+          "Hensel M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "19858298"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.00931-09"
+          }
+        ],
+        "title": "Systematic analysis of the SsrAB virulon of Salmonella enterica.",
+        "publicationDate": "2010",
+        "journal": "Infect. Immun.",
+        "firstPage": "49",
+        "lastPage": "58",
+        "volume": "78"
+      },
+      "referencePositions": [
+        "INDUCTION"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "19858298"
+            }
+          ],
+          "value": "ATCC 14028 / SGSC 2980 / CDC 6516-60 / NCTC 12023",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 8,
+      "citation": {
+        "id": "21059643",
+        "citationType": "journal article",
+        "authors": [
+          "Walthers D.",
+          "Li Y.",
+          "Liu Y.",
+          "Anand G.",
+          "Yan J.",
+          "Kenney L.J."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "21059643"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1074/jbc.m110.164962"
+          }
+        ],
+        "title": "Salmonella enterica response regulator SsrB relieves H-NS silencing by displacing H-NS bound in polymerization mode and directly activates transcription.",
+        "publicationDate": "2011",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "1895",
+        "lastPage": "1902",
+        "volume": "286"
+      },
+      "referencePositions": [
+        "INDUCTION"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "21059643"
+            }
+          ],
+          "value": "14028s / SGSC 2262",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AF294582",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAG02230.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AE006468",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAL20549.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_460590.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_003197.2"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_001131430.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_003197.2"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q9FD10",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "Q9FD10",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "IntAct",
+      "id": "Q9FD10",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "99287.STM1631",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PaxDb",
+      "id": "99287-STM1631",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "1253149",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "stm:STM1631",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|99287.12.peg.1723",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_674196_0_0_6",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AEFEMCK",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BioCyc",
+      "id": "SENT99287:STM1631-MONOMER",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PHI-base",
+      "id": "PHI:10191",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PRO",
+      "id": "PR:Q9FD10",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000001014",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0044174",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:host cell endosome"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:AgBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "19887681"
+        },
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "22740689"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0033644",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:host cell membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:AgBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "22740689"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0052689",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:carboxylic ester hydrolase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0034736",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:cholesterol O-acyltransferase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:AgBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "19887681"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0047178",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:glycerophospholipid acyltransferase (CoA-dependent) activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:AgBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "19887681"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0016298",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:lipase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:AgBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "19887681"
+        },
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "22740689"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0031267",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:small GTPase binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IPI:AgBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000353",
+          "source": "PubMed",
+          "id": "19887681"
+        },
+        {
+          "evidenceCode": "ECO:0000353",
+          "source": "PubMed",
+          "id": "22740689"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0008610",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:lipid biosynthetic process"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd01846",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "fatty_acyltransferase_like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "3.30.2440.10:FF:000002",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SPI-2 type III secretion system effector SseJ"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.30.2440.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Secreted effector protein SifA"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.40.50.1110",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SGNH hydrolase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR001087",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "GDSL"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036514",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SGNH_hydro_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR010637",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Sif"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF011908",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PRK15381.1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR22835:SF659",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "GDSL LIPASE_ACYLHYDROLASE, PUTATIVE (AFU_ORTHOLOGUE AFUA_2G00510)-RELATED"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR22835",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ZINC FINGER FYVE DOMAIN CONTAINING PROTEIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00657",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Lipase_GDSL"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF06767",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Sif"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF52266",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SGNH hydrolase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MPLSVGQGYFTSSISSEKFNAIKESARLPELSLWEKIKAYFFTTHHAEALECIFNLYHHQELNLTPVQVRGAYIKLRALASQGCKEQFIIESQEHADKLIIKDDNGENILSIEVECHPEAFGLAKEINKSHPKPKNISLGDITRLVFFGDSLSDSLGRMFEKTHHILPSYGQYFGGRFTNGFTWTEFLSSPHFLGKEMLNFAEGGSTSASYSCFNCIGDFVSNTDRQVASYTPSHQDLAIFLLGANDYMTLHKDNVIMVVEQQIDDIEKIISGGVNNVLVMGIPDLSLTPYGKHSDEKRKLKDESIAHNALLKTNVEELKEKYPQHKICYYETADAFKVIMEAASNIGYDTENPYTHHGYVHVPGAKDPQLDICPQYVFNDLVHPTQEVHHCFAIMLESFIAHHYSTE",
+    "length": 408,
+    "molWeight": 46077,
+    "crc64": "8917A5A5590566F4",
+    "md5": "158D8A5AE73467F47AEB9D8251C8732E"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBUNIT": 1,
+      "INTERACTION": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "INDUCTION": 1,
+      "DISRUPTION PHENOTYPE": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Active site": 3,
+      "Mutagenesis": 4
+    },
+    "uniParcId": "UPI00000D018A"
+  }
+}

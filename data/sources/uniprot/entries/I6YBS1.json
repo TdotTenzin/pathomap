@@ -1,0 +1,331 @@
+{
+  "entryType": "UniProtKB unreviewed (TrEMBL)",
+  "primaryAccession": "I6YBS1",
+  "uniProtkbId": "I6YBS1_ORITS",
+  "entryAudit": {
+    "firstPublicDate": "2012-10-03",
+    "lastAnnotationUpdateDate": "2025-04-02",
+    "lastSequenceUpdateDate": "2012-10-03",
+    "entryVersion": 13,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 1.0,
+  "organism": {
+    "scientificName": "Orientia tsutsugamushi",
+    "commonName": "Rickettsia tsutsugamushi",
+    "taxonId": 784,
+    "evidences": [
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "EMBL",
+        "id": "AFN65466.1"
+      }
+    ],
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Alphaproteobacteria",
+      "Rickettsiales",
+      "Rickettsiaceae",
+      "Rickettsieae",
+      "Orientia"
+    ]
+  },
+  "proteinExistence": "4: Predicted",
+  "proteinDescription": {
+    "submissionNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AFN65466.1"
+            }
+          ],
+          "value": "ScaC"
+        }
+      }
+    ],
+    "flag": "Fragment"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "AFN65466.1"
+          }
+        ],
+        "value": "scaC"
+      }
+    }
+  ],
+  "features": [
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 22,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Coiled coil",
+      "location": {
+        "start": {
+          "value": 92,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 175,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "Coils"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 19,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Basic and acidic residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Non-terminal residue",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AFN65466.1"
+        }
+      ]
+    },
+    {
+      "type": "Non-terminal residue",
+      "location": {
+        "start": {
+          "value": 239,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 239,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AFN65466.1"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "Coils"
+        }
+      ],
+      "id": "KW-0175",
+      "category": "Domain",
+      "name": "Coiled coil"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "22787193",
+        "citationType": "journal article",
+        "authors": [
+          "Ha N.Y.",
+          "Kim Y.",
+          "Choi J.H.",
+          "Choi M.S.",
+          "Kim I.S.",
+          "Kim Y.S.",
+          "Cho N.H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "22787193"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/CVI.00285-12"
+          }
+        ],
+        "title": "Detection of Antibodies against Orientia tsutsugamushi Sca Proteins in Scrub Typhus Patients and Genetic Variation of sca Genes of Different Strains.",
+        "publicationDate": "2012",
+        "journal": "Clin. Vaccine Immunol.",
+        "firstPage": "1442",
+        "lastPage": "1451",
+        "volume": "19"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AFN65466.1"
+            }
+          ],
+          "value": "Gilliam",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AFN65466.1"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "CI-29VOSUNE736OF",
+        "citationType": "submission",
+        "authors": [
+          "Cho N.-H.",
+          "Ha N.-Y.",
+          "Choi M.-S.",
+          "Kim I.-S.",
+          "Choi J.-H.",
+          "Kim Y.-S."
+        ],
+        "publicationDate": "APR-2012",
+        "submissionDatabase": "EMBL/GenBank/DDBJ databases"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "AFN65466.1"
+            }
+          ],
+          "value": "Gilliam",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "AFN65466.1"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "JQ996626",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AFN65466.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "I6YBS1",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "KSITPEKGKYPQAEDIHKEDEEEIADNNLLNVVSNMNLDISNMGEAREGLRKDIAEVSKLLCMLEKSTASSKNLTMRLQQSDTRENEQSNHIRLLITEIESINKENDCLRQKNNQLKIKLHQLKVKLEQALARSTDLQQILPKSQAEMDNLWKQNEQLKIQLQQLQVKLQNLMSLQNKGSNLALINSVKLNYIRDIKYIALANIVIVKALASTFTEKLSKSNRIKKHRHITGSGSNIDK",
+    "length": 239,
+    "molWeight": 27320,
+    "crc64": "744BC579BD308B66",
+    "md5": "1EBAFF7C2A96D8CDB5579C0399396714"
+  },
+  "extraAttributes": {
+    "countByFeatureType": {
+      "Region": 1,
+      "Coiled coil": 1,
+      "Compositional bias": 1,
+      "Non-terminal residue": 2
+    },
+    "uniParcId": "UPI00026DE33E"
+  }
+}

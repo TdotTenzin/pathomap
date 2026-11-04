@@ -1,0 +1,582 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "B2HSU3",
+  "uniProtkbId": "ESXM_MYCMM",
+  "entryAudit": {
+    "firstPublicDate": "2023-02-22",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2008-06-10",
+    "entryVersion": 56,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 3.0,
+  "organism": {
+    "scientificName": "Mycobacterium marinum (strain ATCC BAA-535 / M)",
+    "taxonId": 216594,
+    "lineage": [
+      "Bacteria",
+      "Bacillati",
+      "Actinomycetota",
+      "Actinomycetes",
+      "Mycobacteriales",
+      "Mycobacteriaceae",
+      "Mycobacterium",
+      "Mycobacterium ulcerans group"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000305"
+          }
+        ],
+        "value": "ESAT-6-like protein EsxM"
+      }
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "36356582"
+            }
+          ],
+          "value": "Type VII-secreted effector EsxM"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000303",
+            "source": "PubMed",
+            "id": "36356582"
+          }
+        ],
+        "value": "esxM"
+      },
+      "orderedLocusNames": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000312",
+              "source": "EMBL",
+              "id": "ACC41117.1"
+            }
+          ],
+          "value": "MMAR_2674"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "36356582"
+            }
+          ],
+          "value": "Alters the host macrophage cytoskeleton and enhances macrophage motility (PubMed:36356582). Promotes granuloma efflux, extrapulmonary dissemination of infection and bone disease (PubMed:36356582)"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "note": {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000305",
+                "source": "PubMed",
+                "id": "36356582"
+              }
+            ],
+            "value": "Secreted via the ESX-5 / type VII secretion system (T7SS)"
+          }
+        ]
+      },
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "36356582"
+              }
+            ],
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "36356582"
+            }
+          ],
+          "value": "Expression is increased upon phosphate starvation and during infection"
+        }
+      ],
+      "commentType": "INDUCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "36356582"
+            }
+          ],
+          "value": "Disruption of the gene results in decreased dissemination independent of burden"
+        }
+      ],
+      "commentType": "DISRUPTION PHENOTYPE"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "36356582"
+            }
+          ],
+          "value": "M.marinum contains the ancestral full-length version of EsxM rather than the truncated inactive version which is present in other modern Mtb lineages, including M.tuberculosis H37Rv (PubMed:36356582). Reconstitution of this ancestral version of EsxM in M.tuberculosis H37Rv alters the migratory mode of infected macrophages, enhancing their motility (PubMed:36356582)"
+        }
+      ],
+      "commentType": "MISCELLANEOUS"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the WXG100 family. CFP-10 subfamily"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 98,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "ESAT-6-like protein EsxM",
+      "featureId": "PRO_0000457620"
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "18403782",
+        "citationType": "journal article",
+        "authors": [
+          "Stinear T.P.",
+          "Seemann T.",
+          "Harrison P.F.",
+          "Jenkin G.A.",
+          "Davies J.K.",
+          "Johnson P.D.",
+          "Abdellah Z.",
+          "Arrowsmith C.",
+          "Chillingworth T.",
+          "Churcher C.",
+          "Clarke K.",
+          "Cronin A.",
+          "Davis P.",
+          "Goodhead I.",
+          "Holroyd N.",
+          "Jagels K.",
+          "Lord A.",
+          "Moule S.",
+          "Mungall K.",
+          "Norbertczak H.",
+          "Quail M.A.",
+          "Rabbinowitsch E.",
+          "Walker D.",
+          "White B.",
+          "Whitehead S.",
+          "Small P.L.",
+          "Brosch R.",
+          "Ramakrishnan L.",
+          "Fischbach M.A.",
+          "Parkhill J.",
+          "Cole S.T."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "18403782"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1101/gr.075069.107"
+          }
+        ],
+        "title": "Insights from the complete genome sequence of Mycobacterium marinum on the evolution of Mycobacterium tuberculosis.",
+        "publicationDate": "2008",
+        "journal": "Genome Res.",
+        "firstPage": "729",
+        "lastPage": "741",
+        "volume": "18"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC BAA-535 / M",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "36356582",
+        "citationType": "journal article",
+        "authors": [
+          "Saelens J.W.",
+          "Sweeney M.I.",
+          "Viswanathan G.",
+          "Xet-Mull A.M.",
+          "Jurcic Smith K.L.",
+          "Sisk D.M.",
+          "Hu D.D.",
+          "Cronin R.M.",
+          "Hughes E.J.",
+          "Brewer W.J.",
+          "Coers J.",
+          "Champion M.M.",
+          "Champion P.A.",
+          "Lowe C.B.",
+          "Smith C.M.",
+          "Lee S.",
+          "Stout J.E.",
+          "Tobin D.M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "36356582"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/j.cell.2022.10.019"
+          }
+        ],
+        "title": "An ancestral mycobacterial effector promotes dissemination of infection.",
+        "publicationDate": "2022",
+        "journal": "Cell",
+        "firstPage": "4507",
+        "lastPage": "4525",
+        "volume": "185"
+      },
+      "referencePositions": [
+        "FUNCTION IN VIRULENCE",
+        "EXPRESSION IN M.TUBERCULOSIS",
+        "SUBCELLULAR LOCATION",
+        "INDUCTION",
+        "DISRUPTION PHENOTYPE"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC BAA-535 / M",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "CP000854",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ACC41117.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_012394389.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_010612.1"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "B2HSU3",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "B2HSU3",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "216594.MMAR_2674",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "mmi:MMAR_2674",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "COG4842",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Bacteria"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_171031_0_0_11",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AANYEQQ",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OrthoDB",
+      "id": "4739539at2",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000001190",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "36356582"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.10.287.1060",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ESAT-6-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036689",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ESAT-6-like_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR010310",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "T7SS_ESAT-6-like"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "TIGR03930",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "WXG100_ESAT6"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF06013",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "WXG100"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF140453",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "EsxAB dimer-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MTARFMTDPHAMRDMAGRFEMHAQTVEDEARKMWASSQNIAGAGWSGMASATSLDTMGQMNTAFRNIVNMLHSVRDGLVRDANNYEQQEQASQQVLRG",
+    "length": 98,
+    "molWeight": 10953,
+    "crc64": "27B0B02253395D45",
+    "md5": "F13481805E155F2B98CD761874335A06"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "INDUCTION": 1,
+      "DISRUPTION PHENOTYPE": 1,
+      "MISCELLANEOUS": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1
+    },
+    "uniParcId": "UPI000172EDF5"
+  }
+}

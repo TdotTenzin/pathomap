@@ -148,7 +148,7 @@ function rowsFor(def) {
   if (query) {
     out = rows.filter((row) =>
       def.columns.some((column) =>
-        String(row[column] ?? '').toLowerCase().includes(query)
+        searchText(row[column]).toLowerCase().includes(query)
       )
     );
   }
@@ -166,8 +166,8 @@ function rowsFor(def) {
       if (typeof av === 'boolean' && typeof bv === 'boolean') {
         return (Number(av) - Number(bv)) * direction;
       }
-      const aText = av === null || av === undefined ? '' : String(av);
-      const bText = bv === null || bv === undefined ? '' : String(bv);
+      const aText = searchText(av);
+      const bText = searchText(bv);
       return aText.localeCompare(bText) * direction;
     });
   }
@@ -257,6 +257,23 @@ function renderHead(def) {
   });
 }
 
+// Collapse repeated labels into "name (×n)" so long redundant domain lists
+// stay short; order of first appearance is preserved.
+function dedupeWithCount(names) {
+  const counts = new Map();
+  const order = [];
+  names.forEach((name) => {
+    if (!counts.has(name)) {
+      counts.set(name, 0);
+      order.push(name);
+    }
+    counts.set(name, counts.get(name) + 1);
+  });
+  return order
+    .map((name) => (counts.get(name) > 1 ? `${name} (×${counts.get(name)})` : name))
+    .join(', ');
+}
+
 // Format column values for display (handles special cases like booleans, enums, numbers)
 function displayValue(column, value) {
   if (value === null || value === undefined || value === '') return '';
@@ -265,6 +282,36 @@ function displayValue(column, value) {
   if (column === 'genome_size_mb') return Number(value).toFixed(2);
   if (column === 'gc_content') return Number(value).toFixed(1);
   if (column === 'last_updated') return String(value).slice(0, 10);
+
+  // Enrichment number formatting
+  if (column === 'sequence_length') return String(value);
+  if (column === 'molecular_weight_da') return Number(value).toFixed(1);
+  if (column === 'isoelectric_point') return Number(value).toFixed(2);
+  if (column === 'gravy_score') return Number(value).toFixed(3);
+
+  // Array fields render as a comma-separated list of names/labels
+  if (Array.isArray(value)) {
+    if (column === 'domains') return dedupeWithCount(value.map((d) => d.name || d.accession || '').filter(Boolean));
+    if (column === 'go_terms') return value.map((t) => t.term || t.id).filter(Boolean).join(', ');
+    if (column === 'pathways_detailed') return value.map((p) => p.name || p.id).filter(Boolean).join(', ');
+    if (column === 'interacting_partners') return value.map((p) => p.name || p.string_id).filter(Boolean).join(', ');
+    if (column === 'transmembrane_regions') return `${value.length} region${value.length === 1 ? '' : 's'}`;
+    return value.map((item) => (typeof item === 'object' ? JSON.stringify(item) : String(item))).join(', ');
+  }
+
+  // Signal peptide renders as its coordinate range
+  if (column === 'signal_peptide' && typeof value === 'object') {
+    return value.start != null && value.end != null ? `${value.start}-${value.end}` : 'yes';
+  }
+
+  return String(value);
+}
+
+// Text used for search matching: arrays/objects become JSON so nested values
+// (domain names, GO terms, interaction partners) stay searchable.
+function searchText(value) {
+  if (value === null || value === undefined) return '';
+  if (typeof value === 'object') return JSON.stringify(value);
   return String(value);
 }
 
@@ -317,6 +364,67 @@ function renderBody(def, rows) {
         link.rel = 'noopener noreferrer';
         link.textContent = value;
         td.appendChild(link);
+      }
+      // Sequences render as a truncated preview with a "Show full" toggle
+      else if (column === 'sequence' && typeof value === 'string' && value) {
+        const container = document.createElement('div');
+        container.className = 'sequence-container';
+
+        const preview = document.createElement('span');
+        preview.className = 'sequence-preview';
+        preview.textContent = value.length > 50 ? value.slice(0, 50) + '…' : value;
+        container.appendChild(preview);
+
+        if (value.length > 50) {
+          const toggle = document.createElement('button');
+          toggle.type = 'button';
+          toggle.className = 'tool-btn sequence-toggle';
+          toggle.textContent = 'Show full';
+          toggle.addEventListener('click', () => {
+            const expanded = toggle.dataset.expanded === 'true';
+            preview.textContent = expanded ? value.slice(0, 50) + '…' : value;
+            toggle.dataset.expanded = expanded ? 'false' : 'true';
+            toggle.textContent = expanded ? 'Show full' : 'Show less';
+          });
+          container.appendChild(toggle);
+        }
+
+        td.appendChild(container);
+      }
+      // Domain lists render as a truncated preview with a "See more" toggle
+      // so long repeated annotations don't stretch the table row
+      else if (column === 'domains' && Array.isArray(value)) {
+        const names = value.map((d) => d.name || d.accession || '').filter(Boolean);
+        const fullText = dedupeWithCount(names);
+
+        if (!fullText) {
+          td.textContent = '';
+        } else {
+          const container = document.createElement('div');
+          container.className = 'domain-container';
+
+          const preview = document.createElement('span');
+          preview.className = 'domain-preview';
+          const previewText = fullText.length > 80 ? fullText.slice(0, 80) + '…' : fullText;
+          preview.textContent = previewText;
+          container.appendChild(preview);
+
+          if (fullText.length > 80) {
+            const toggle = document.createElement('button');
+            toggle.type = 'button';
+            toggle.className = 'tool-btn domain-toggle';
+            toggle.textContent = 'See more';
+            toggle.addEventListener('click', () => {
+              const expanded = toggle.dataset.expanded === 'true';
+              preview.textContent = expanded ? previewText : fullText;
+              toggle.dataset.expanded = expanded ? 'false' : 'true';
+              toggle.textContent = expanded ? 'See more' : 'Show less';
+            });
+            container.appendChild(toggle);
+          }
+
+          td.appendChild(container);
+        }
       }
       // Add classification badges for effector columns
       else if (def.id === 'effectors' && EFFECTOR_CLASSIFICATION_COLUMNS.includes(column)) {
@@ -502,7 +610,12 @@ export function getCurrentRows() {
 function toCsv(def, rows) {
   // Escape a single field: wrap in quotes and double any inner quotes when needed
   const escape = (value) => {
-    const text = value === null || value === undefined ? '' : String(value);
+    const text =
+      value === null || value === undefined
+        ? ''
+        : typeof value === 'object'
+          ? JSON.stringify(value)
+          : String(value);
     return /[",\n]/.test(text) ? '"' + text.replace(/"/g, '""') + '"' : text;
   };
   const columns = def.exportColumns || def.columns;

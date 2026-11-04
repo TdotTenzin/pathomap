@@ -1,0 +1,2435 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "P14916",
+  "uniProtkbId": "URE23_HELPY",
+  "entryAudit": {
+    "firstPublicDate": "1990-04-01",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "1992-05-01",
+    "entryVersion": 181,
+    "sequenceVersion": 2
+  },
+  "annotationScore": 5.0,
+  "organism": {
+    "scientificName": "Helicobacter pylori (strain ATCC 700392 / 26695)",
+    "commonName": "Campylobacter pylori",
+    "taxonId": 85962,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Campylobacterota",
+      "Epsilonproteobacteria",
+      "Campylobacterales",
+      "Helicobacteraceae",
+      "Helicobacter"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000255",
+            "source": "HAMAP-Rule",
+            "id": "MF_01955"
+          }
+        ],
+        "value": "Urease subunit alpha"
+      },
+      "ecNumbers": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_01955"
+            }
+          ],
+          "value": "3.5.1.5"
+        }
+      ]
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_01955"
+            }
+          ],
+          "value": "Urea amidohydrolase subunit alpha"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000255",
+            "source": "HAMAP-Rule",
+            "id": "MF_01955"
+          }
+        ],
+        "value": "ureA"
+      },
+      "synonyms": [
+        {
+          "value": "hpuA"
+        }
+      ],
+      "orderedLocusNames": [
+        {
+          "value": "HP_0073"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "8039935"
+            }
+          ],
+          "value": "Ammonia produced by ureolysis increases the gastric pH thereby providing an environment permissive for colonization of the stomach"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "urea + 2 H2O + H(+) = hydrogencarbonate + 2 NH4(+)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:20557"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15377"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:16199"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:17544"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:28938"
+          }
+        ],
+        "ecNumber": "3.5.1.5",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000255",
+            "source": "HAMAP-Rule",
+            "id": "MF_01955"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "1612735"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "2188975"
+          }
+        ]
+      }
+    },
+    {
+      "commentType": "BIOPHYSICOCHEMICAL PROPERTIES",
+      "kineticParameters": {
+        "maximumVelocities": [
+          {
+            "velocity": 1.1,
+            "unit": "mmol/min/mg",
+            "enzyme": "enzyme",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "2188975"
+              }
+            ]
+          }
+        ],
+        "michaelisConstants": [
+          {
+            "constant": 0.48,
+            "unit": "mM",
+            "substrate": "urea",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "2188975"
+              }
+            ]
+          }
+        ]
+      },
+      "phDependence": {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "11373617"
+              },
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "2188975"
+              }
+            ],
+            "value": "Optimum pH is 8.0. Active from pH 4.0 to 10.0. In unbuffered solutions, the dodecameric complex is active at pH 3.0."
+          }
+        ]
+      }
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_01955"
+            }
+          ],
+          "value": "Nitrogen metabolism; urea degradation; CO(2) and NH(3) from urea (urease route): step 1/1"
+        }
+      ],
+      "commentType": "PATHWAY"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_01955"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11373617"
+            }
+          ],
+          "value": "Heterohexamer of 3 UreA (alpha) and 3 UreB (beta) subunits. Four heterohexamers assemble to form a 16 nm dodecameric complex"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "INTERACTION",
+      "interactions": [
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "P14916",
+            "intActId": "EBI-7737170"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "P69996",
+            "geneName": "ureB",
+            "intActId": "EBI-7566591"
+          },
+          "numberOfExperiments": 2,
+          "organismDiffer": false
+        }
+      ]
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "note": {
+        "texts": [
+          {
+            "value": "Also associates with the outer membrane upon autolysis of neighboring bacteria"
+          }
+        ]
+      },
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255",
+                "source": "HAMAP-Rule",
+                "id": "MF_01955"
+              },
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "8641799"
+              }
+            ],
+            "value": "Cytoplasm",
+            "id": "SL-0086"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "11447165"
+            }
+          ],
+          "value": "By nickel ions"
+        }
+      ],
+      "commentType": "INDUCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "1313413"
+            }
+          ],
+          "value": "Cells do not express urease"
+        }
+      ],
+      "commentType": "DISRUPTION PHENOTYPE"
+    },
+    {
+      "texts": [
+        {
+          "value": "The novel dodecameric structure of the enzyme may allow it to remain active at the cell surface at acidic gastric pH. Within this dodecameric structure the 12 active sites are clustered within the interior of the proteinaceous shell. This may allow a high local concentration of ammonia within the enzyme which may protect the nickel-chelating groups from protonation"
+        }
+      ],
+      "commentType": "MISCELLANEOUS"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_01955"
+            }
+          ],
+          "value": "In the N-terminal section; belongs to the urease gamma subunit family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_01955"
+            }
+          ],
+          "value": "In the C-terminal section; belongs to the urease beta subunit family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "The orthologous protein is known as the gamma/beta subunit (UreAB) in most other bacteria"
+        }
+      ],
+      "commentType": "CAUTION"
+    },
+    {
+      "commentType": "WEB RESOURCE",
+      "resourceName": "Protein Spotlight",
+      "resourceUrl": "https://www.proteinspotlight.org/back_issues/095",
+      "ftp": false,
+      "note": "Going unnoticed - Issue 95 of June 2008"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 238,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Urease subunit alpha",
+      "featureId": "PRO_0000098075"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 102,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Urease gamma"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 103,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 238,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Urease beta"
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 14,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 14,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 5; AA sequence",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "H",
+        "alternativeSequences": [
+          "S"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 37,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 37,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 1; CAA34932",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "A",
+        "alternativeSequences": [
+          "R"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 49,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 49,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 1; CAA34932",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "A",
+        "alternativeSequences": [
+          "R"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 132,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 133,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 1; CAA34932",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "KN",
+        "alternativeSequences": [
+          "PP"
+        ]
+      }
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 5,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 25,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6ZJA"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 32,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 49,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6ZJA"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 54,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 60,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6ZJA"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 61,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 63,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6ZJA"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 67,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 69,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6ZJA"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 74,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 77,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6ZJA"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 79,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 87,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6ZJA"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 90,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 97,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6ZJA"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 118,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 121,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6ZJA"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 127,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 133,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6ZJA"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 135,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 137,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6ZJA"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 139,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 142,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6ZJA"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 147,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 149,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6ZJA"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 154,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 156,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6ZJA"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 158,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 161,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6ZJA"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 164,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 166,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6ZJA"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 173,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 176,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6ZJA"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 181,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 188,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6ZJA"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 198,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 200,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6ZJA"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 208,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 220,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6ZJA"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0002",
+      "category": "Technical term",
+      "name": "3D-structure"
+    },
+    {
+      "id": "KW-0963",
+      "category": "Cellular component",
+      "name": "Cytoplasm"
+    },
+    {
+      "id": "KW-0903",
+      "category": "Technical term",
+      "name": "Direct protein sequencing"
+    },
+    {
+      "id": "KW-0378",
+      "category": "Molecular function",
+      "name": "Hydrolase"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "2326167",
+        "citationType": "journal article",
+        "authors": [
+          "Clayton C.L.",
+          "Pallen M.J.",
+          "Kleanthous H.",
+          "Wren B.W.",
+          "Tabaqchali S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "2326167"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1093/nar/18.2.362"
+          }
+        ],
+        "title": "Nucleotide sequence of two genes from Helicobacter pylori encoding for urease subunits.",
+        "publicationDate": "1990",
+        "journal": "Nucleic Acids Res.",
+        "firstPage": "362",
+        "lastPage": "362",
+        "volume": "18"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "CPM630",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "2001995",
+        "citationType": "journal article",
+        "authors": [
+          "Labigne A.",
+          "Cussac V.",
+          "Courcoux P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "2001995"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.173.6.1920-1931.1991"
+          }
+        ],
+        "title": "Shuttle cloning and nucleotide sequences of Helicobacter pylori genes responsible for urease activity.",
+        "publicationDate": "1991",
+        "journal": "J. Bacteriol.",
+        "firstPage": "1920",
+        "lastPage": "1931",
+        "volume": "173"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "85P",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "10844692",
+        "citationType": "journal article",
+        "authors": [
+          "Akada J.K.",
+          "Shirai M.",
+          "Takeuchi H.",
+          "Tsuda M.",
+          "Nakazawa T."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "10844692"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1046/j.1365-2958.2000.01918.x"
+          }
+        ],
+        "title": "Identification of the urease operon in Helicobacter pylori and its control by mRNA decay in response to pH.",
+        "publicationDate": "2000",
+        "journal": "Mol. Microbiol.",
+        "firstPage": "1071",
+        "lastPage": "1084",
+        "volume": "36"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "HPK5",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "9252185",
+        "citationType": "journal article",
+        "authors": [
+          "Tomb J.-F.",
+          "White O.",
+          "Kerlavage A.R.",
+          "Clayton R.A.",
+          "Sutton G.G.",
+          "Fleischmann R.D.",
+          "Ketchum K.A.",
+          "Klenk H.-P.",
+          "Gill S.R.",
+          "Dougherty B.A.",
+          "Nelson K.E.",
+          "Quackenbush J.",
+          "Zhou L.",
+          "Kirkness E.F.",
+          "Peterson S.N.",
+          "Loftus B.J.",
+          "Richardson D.L.",
+          "Dodson R.J.",
+          "Khalak H.G.",
+          "Glodek A.",
+          "McKenney K.",
+          "FitzGerald L.M.",
+          "Lee N.",
+          "Adams M.D.",
+          "Hickey E.K.",
+          "Berg D.E.",
+          "Gocayne J.D.",
+          "Utterback T.R.",
+          "Peterson J.D.",
+          "Kelley J.M.",
+          "Cotton M.D.",
+          "Weidman J.F.",
+          "Fujii C.",
+          "Bowman C.",
+          "Watthey L.",
+          "Wallin E.",
+          "Hayes W.S.",
+          "Borodovsky M.",
+          "Karp P.D.",
+          "Smith H.O.",
+          "Fraser C.M.",
+          "Venter J.C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9252185"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/41483"
+          }
+        ],
+        "title": "The complete genome sequence of the gastric pathogen Helicobacter pylori.",
+        "publicationDate": "1997",
+        "journal": "Nature",
+        "firstPage": "539",
+        "lastPage": "547",
+        "volume": "388"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 700392 / 26695",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "2318539",
+        "citationType": "journal article",
+        "authors": [
+          "Hu L.-T.",
+          "Mobley H.L.T."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "2318539"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.58.4.992-998.1990"
+          }
+        ],
+        "title": "Purification and N-terminal analysis of urease from Helicobacter pylori.",
+        "publicationDate": "1990",
+        "journal": "Infect. Immun.",
+        "firstPage": "992",
+        "lastPage": "998",
+        "volume": "58"
+      },
+      "referencePositions": [
+        "PROTEIN SEQUENCE OF 1-20"
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "2188975",
+        "citationType": "journal article",
+        "authors": [
+          "Dunn B.E.",
+          "Campbell G.P.",
+          "Perez-Perez G.I.",
+          "Blaser M.J."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "2188975"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/s0021-9258(19)38872-6"
+          }
+        ],
+        "title": "Purification and characterization of urease from Helicobacter pylori.",
+        "publicationDate": "1990",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "9464",
+        "lastPage": "9469",
+        "volume": "265"
+      },
+      "referencePositions": [
+        "PROTEIN SEQUENCE OF 1-20",
+        "CATALYTIC ACTIVITY",
+        "BIOPHYSICOCHEMICAL PROPERTIES",
+        "INTERACTION WITH UREB"
+      ]
+    },
+    {
+      "referenceNumber": 7,
+      "citation": {
+        "id": "1452359",
+        "citationType": "journal article",
+        "authors": [
+          "Turbett G.R.",
+          "Hoej P.B.",
+          "Horne R.",
+          "Mee B.J."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "1452359"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.60.12.5259-5266.1992"
+          }
+        ],
+        "title": "Purification and characterization of the urease enzymes of Helicobacter species from humans and animals.",
+        "publicationDate": "1992",
+        "journal": "Infect. Immun.",
+        "firstPage": "5259",
+        "lastPage": "5266",
+        "volume": "60"
+      },
+      "referencePositions": [
+        "PROTEIN SEQUENCE OF 1-20"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 43504 / NCTC 11637 / JCM 7653 / RPH 13487",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 8,
+      "citation": {
+        "id": "1313413",
+        "citationType": "journal article",
+        "authors": [
+          "Cussac V.",
+          "Ferrero R.L.",
+          "Labigne A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "1313413"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.174.8.2466-2473.1992"
+          }
+        ],
+        "title": "Expression of Helicobacter pylori urease genes in Escherichia coli grown under nitrogen-limiting conditions.",
+        "publicationDate": "1992",
+        "journal": "J. Bacteriol.",
+        "firstPage": "2466",
+        "lastPage": "2473",
+        "volume": "174"
+      },
+      "referencePositions": [
+        "DISRUPTION PHENOTYPE"
+      ],
+      "referenceComments": [
+        {
+          "value": "85P",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 9,
+      "citation": {
+        "id": "1612735",
+        "citationType": "journal article",
+        "authors": [
+          "Hu L.-T.",
+          "Foxall P.A.",
+          "Russell R.",
+          "Mobley H.L.T."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "1612735"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.60.7.2657-2666.1992"
+          }
+        ],
+        "title": "Purification of recombinant Helicobacter pylori urease apoenzyme encoded by ureA and ureB.",
+        "publicationDate": "1992",
+        "journal": "Infect. Immun.",
+        "firstPage": "2657",
+        "lastPage": "2666",
+        "volume": "60"
+      },
+      "referencePositions": [
+        "CATALYTIC ACTIVITY"
+      ]
+    },
+    {
+      "referenceNumber": 10,
+      "citation": {
+        "id": "8039935",
+        "citationType": "journal article",
+        "authors": [
+          "Tsuda M.",
+          "Karita M.",
+          "Morshed M.G.",
+          "Okita K.",
+          "Nakazawa T."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8039935"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.62.8.3586-3589.1994"
+          }
+        ],
+        "title": "A urease-negative mutant of Helicobacter pylori constructed by allelic exchange mutagenesis lacks the ability to colonize the nude mouse stomach.",
+        "publicationDate": "1994",
+        "journal": "Infect. Immun.",
+        "firstPage": "3586",
+        "lastPage": "3589",
+        "volume": "62"
+      },
+      "referencePositions": [
+        "FUNCTION"
+      ]
+    },
+    {
+      "referenceNumber": 11,
+      "citation": {
+        "id": "8641799",
+        "citationType": "journal article",
+        "authors": [
+          "Phadnis S.H.",
+          "Parlow M.H.",
+          "Levy M.",
+          "Ilver D.",
+          "Caulkins C.M.",
+          "Connors J.B.",
+          "Dunn B.E."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8641799"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.64.3.905-912.1996"
+          }
+        ],
+        "title": "Surface localization of Helicobacter pylori urease and a heat shock protein homolog requires bacterial autolysis.",
+        "publicationDate": "1996",
+        "journal": "Infect. Immun.",
+        "firstPage": "905",
+        "lastPage": "912",
+        "volume": "64"
+      },
+      "referencePositions": [
+        "SUBCELLULAR LOCATION"
+      ]
+    },
+    {
+      "referenceNumber": 12,
+      "citation": {
+        "id": "11447165",
+        "citationType": "journal article",
+        "authors": [
+          "van Vliet A.H.M.",
+          "Kuipers E.J.",
+          "Waidner B.",
+          "Davies B.J.",
+          "de Vries N.",
+          "Penn C.W.",
+          "Vandenbroucke-Grauls C.M.J.E.",
+          "Kist M.",
+          "Bereswill S.",
+          "Kusters J.G."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11447165"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.69.8.4891-4897.2001"
+          }
+        ],
+        "title": "Nickel-responsive induction of urease expression in Helicobacter pylori is mediated at the transcriptional level.",
+        "publicationDate": "2001",
+        "journal": "Infect. Immun.",
+        "firstPage": "4891",
+        "lastPage": "4897",
+        "volume": "69"
+      },
+      "referencePositions": [
+        "INDUCTION"
+      ]
+    },
+    {
+      "referenceNumber": 13,
+      "citation": {
+        "id": "17313591",
+        "citationType": "journal article",
+        "authors": [
+          "Clyne M.",
+          "Dolan B.",
+          "Reeves E.P."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "17313591"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1111/j.1574-6968.2007.00648.x"
+          }
+        ],
+        "title": "Bacterial factors that mediate colonization of the stomach and virulence of Helicobacter pylori.",
+        "publicationDate": "2007",
+        "journal": "FEMS Microbiol. Lett.",
+        "firstPage": "135",
+        "lastPage": "143",
+        "volume": "268"
+      },
+      "referencePositions": [
+        "REVIEW ON VIRULENCE OF H.PYLORI"
+      ]
+    },
+    {
+      "referenceNumber": 14,
+      "citation": {
+        "id": "11373617",
+        "citationType": "journal article",
+        "authors": [
+          "Ha N.-C.",
+          "Oh S.-T.",
+          "Sung J.Y.",
+          "Cha K.A.",
+          "Lee M.H.",
+          "Oh B.-H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11373617"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/88563"
+          }
+        ],
+        "title": "Supramolecular assembly and acid resistance of Helicobacter pylori urease.",
+        "publicationDate": "2001",
+        "journal": "Nat. Struct. Biol.",
+        "firstPage": "505",
+        "lastPage": "509",
+        "volume": "8"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY",
+        "SUBUNIT STRUCTURE",
+        "PH DEPENDENCE"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "X17079",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAA34932.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "M60398",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA25020.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AB032429",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "BAA84532.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AE000511",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAD07144.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "A38537",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "URKCAP"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_000779223.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_018939.1"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "1E9Y",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "3.00 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=1-238"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "1E9Z",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "3.00 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=1-238"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6QSU",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "EM"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.40 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/C/E/G/I/K/M/O/Q/S/U/W=1-238"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6ZJA",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "EM"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.00 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/C/E/G/I/K/M/O/Q/S/U/W=1-238"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "8HC1",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "EM"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.30 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/E/I/M/Q/U/Y/c/g/k/o/s=1-238"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "P14916",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EMDB",
+      "id": "EMD-34648",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "P14916",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "DIP",
+      "id": "DIP-3146N",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "IntAct",
+      "id": "P14916",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "7"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "85962.HP_0073",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BindingDB",
+      "id": "P14916",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "ChEMBL",
+      "id": "CHEMBL3885651",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PaxDb",
+      "id": "85962-HP_0073",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "DNASU",
+      "id": "900171",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblBacteria",
+      "id": "AAD07144",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAD07144"
+        },
+        {
+          "key": "GeneId",
+          "value": "HP_0073"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "heo:C694_00355",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "hpy:HP_0073",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|85962.47.peg.77",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "COG0831",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Bacteria"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "COG0832",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Bacteria"
+        }
+      ]
+    },
+    {
+      "database": "InParanoid",
+      "id": "P14916",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AEMLIQV",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OrthoDB",
+      "id": "9797217at2",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PhylomeDB",
+      "id": "P14916",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BioCyc",
+      "id": "MetaCyc:HP_RS00370-MONOMER",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BRENDA",
+      "id": "3.5.1.5",
+      "properties": [
+        {
+          "key": "OrganismId",
+          "value": "2604"
+        }
+      ]
+    },
+    {
+      "database": "SABIO-RK",
+      "id": "P14916",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "UniPathway",
+      "id": "UPA00258",
+      "properties": [
+        {
+          "key": "RectionId",
+          "value": "UER00370"
+        }
+      ]
+    },
+    {
+      "database": "EvolutionaryTrace",
+      "id": "P14916",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PHI-base",
+      "id": "PHI:7264",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PRO",
+      "id": "PR:P14916",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000000429",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0035550",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:urease complex"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0016151",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:nickel cation binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009039",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:urease activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0043419",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:urea catabolic process"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:CACAO"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "1313413"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd00407",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Urease_beta"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd00390",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Urease_gamma"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "3.30.280.10:FF:000001",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Urease subunit alpha"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "2.10.150.10:FF:000001",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Urease subunit beta"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.10.150.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Urease, beta subunit"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.30.280.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Urease, gamma-like subunit"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "HAMAP",
+      "id": "MF_01954",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Urease_beta"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "HAMAP",
+      "id": "MF_01955",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Urease_beta_gamma"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR002019",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Urease_beta-like"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036461",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Urease_betasu_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR008223",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Urease_gamma-beta_su"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR002026",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Urease_gamma/gamma-beta_su"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036463",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Urease_gamma_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR050069",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Urease_subunit"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF009671",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PRK13192.1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF009682",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PRK13203.1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF009712",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PRK13241.1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF010592",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "ureA"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "TIGR00192",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "urease_beta"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "TIGR00193",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "urease_gam"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR33569",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "UREASE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR33569:SF1",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "UREASE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00699",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Urease_beta"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00547",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Urease_gamma"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PIRSF",
+      "id": "PIRSF001225",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Urease_gammabeta"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF51278",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Urease, beta-subunit"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF54111",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Urease, gamma-subunit"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MKLTPKELDKLMLHYAGELAKKRKEKGIKLNYVEAVALISAHIMEEARAGKKTAAELMQEGRTLLKPDDVMDGVASMIHEVGIEAMFPDGTKLVTVHTPIEANGKLVPGELFLKNEDITINEGKKAVSVKVKNVGDRPVQIGSHFHFFEVNRCLDFDREKTFGKRLDIASGTAVRFEPGEEKSVELIDIGGNRRIFGFNALVDRQADNESKKIALHRAKERGFHGAKSDDNYVKTIKE",
+    "length": 238,
+    "molWeight": 26540,
+    "crc64": "4E77328669CD9A2D",
+    "md5": "B8D66E20A4E1843BC391C1AFF45A1497"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "CATALYTIC ACTIVITY": 1,
+      "BIOPHYSICOCHEMICAL PROPERTIES": 1,
+      "PATHWAY": 1,
+      "SUBUNIT": 1,
+      "INTERACTION": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "INDUCTION": 1,
+      "DISRUPTION PHENOTYPE": 1,
+      "MISCELLANEOUS": 1,
+      "SIMILARITY": 2,
+      "CAUTION": 1,
+      "WEB RESOURCE": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Region": 2,
+      "Sequence conflict": 4,
+      "Helix": 9,
+      "Beta strand": 10,
+      "Turn": 1
+    },
+    "uniParcId": "UPI000002C3CD"
+  }
+}

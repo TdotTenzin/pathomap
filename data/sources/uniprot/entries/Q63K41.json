@@ -1,0 +1,1344 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "Q63K41",
+  "uniProtkbId": "BOPE_BURPS",
+  "entryAudit": {
+    "firstPublicDate": "2008-07-22",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2004-10-25",
+    "entryVersion": 97,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 3.0,
+  "organism": {
+    "scientificName": "Burkholderia pseudomallei (strain K96243)",
+    "taxonId": 272560,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Betaproteobacteria",
+      "Burkholderiales",
+      "Burkholderiaceae",
+      "Burkholderia",
+      "pseudomallei group"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Guanine nucleotide exchange factor BopE"
+      }
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "Effector protein BopE"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "bopE"
+      },
+      "orderedLocusNames": [
+        {
+          "value": "BPSS1525"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "12410823"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "12897019"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "15289563"
+            }
+          ],
+          "value": "Activator for both CDC42 and RAC1 by directly interacting with these Rho GTPases and acting as a guanine nucleotide exchange factor (GEF). This activation results in actin cytoskeleton rearrangements and stimulates membrane ruffling, thus promoting bacterial entry into non-phagocytic cells"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "BIOPHYSICOCHEMICAL PROPERTIES",
+      "phDependence": {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "15063321"
+              }
+            ],
+            "value": "Active in pH ranges of 3.5-10.5."
+          }
+        ]
+      }
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "15063321"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "18052936"
+            },
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Monomer (Probable). Interacts with human CDC42"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "note": {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250"
+              }
+            ],
+            "value": "Secreted via the bsa type III secretion system"
+          }
+        ]
+      },
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "12897019"
+              }
+            ],
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "value": "Immunogenic protein that elicits T-cell-mediated immunity in mice"
+        }
+      ],
+      "commentType": "MISCELLANEOUS"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the GEF (guanine exchange factor) SopE family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 261,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Guanine nucleotide exchange factor BopE",
+      "featureId": "PRO_0000344030"
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 207,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 207,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Loss of GEF activity; when associated with P-216.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "18052936"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "R",
+        "alternativeSequences": [
+          "E"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 216,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 216,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Loss of GEF activity; when associated with E-207.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "18052936"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "N",
+        "alternativeSequences": [
+          "P"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 224,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 224,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Increased GEF activity; when associated with Q-230.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "18052936"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "N",
+        "alternativeSequences": [
+          "P"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 230,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 230,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Increased GEF activity; when associated with P-224.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "18052936"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "R",
+        "alternativeSequences": [
+          "Q"
+        ]
+      }
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 79,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 83,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2JOK"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 84,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 99,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2JOK"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 101,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 106,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2JOK"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 107,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 109,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2JOL"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 110,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 132,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2JOK"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 134,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 136,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2JOK"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 137,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 141,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2JOK"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 142,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 156,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2JOK"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 161,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 163,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2JOK"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 166,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 168,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2JOK"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 178,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 188,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2JOK"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 192,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 195,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2JOK"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 197,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 199,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2JOK"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 204,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 216,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2JOK"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 221,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 251,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2JOK"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 253,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 258,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2JOK"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0002",
+      "category": "Technical term",
+      "name": "3D-structure"
+    },
+    {
+      "id": "KW-0343",
+      "category": "Molecular function",
+      "name": "GTPase activation"
+    },
+    {
+      "id": "KW-0344",
+      "category": "Molecular function",
+      "name": "Guanine-nucleotide releasing factor"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "15377794",
+        "citationType": "journal article",
+        "authors": [
+          "Holden M.T.G.",
+          "Titball R.W.",
+          "Peacock S.J.",
+          "Cerdeno-Tarraga A.-M.",
+          "Atkins T.",
+          "Crossman L.C.",
+          "Pitt T.",
+          "Churcher C.",
+          "Mungall K.L.",
+          "Bentley S.D.",
+          "Sebaihia M.",
+          "Thomson N.R.",
+          "Bason N.",
+          "Beacham I.R.",
+          "Brooks K.",
+          "Brown K.A.",
+          "Brown N.F.",
+          "Challis G.L.",
+          "Cherevach I.",
+          "Chillingworth T.",
+          "Cronin A.",
+          "Crossett B.",
+          "Davis P.",
+          "DeShazer D.",
+          "Feltwell T.",
+          "Fraser A.",
+          "Hance Z.",
+          "Hauser H.",
+          "Holroyd S.",
+          "Jagels K.",
+          "Keith K.E.",
+          "Maddison M.",
+          "Moule S.",
+          "Price C.",
+          "Quail M.A.",
+          "Rabbinowitsch E.",
+          "Rutherford K.",
+          "Sanders M.",
+          "Simmonds M.",
+          "Songsivilai S.",
+          "Stevens K.",
+          "Tumapa S.",
+          "Vesaratchavest M.",
+          "Whitehead S.",
+          "Yeats C.",
+          "Barrell B.G.",
+          "Oyston P.C.F.",
+          "Parkhill J."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15377794"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1073/pnas.0403302101"
+          }
+        ],
+        "title": "Genomic plasticity of the causative agent of melioidosis, Burkholderia pseudomallei.",
+        "publicationDate": "2004",
+        "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+        "firstPage": "14240",
+        "lastPage": "14245",
+        "volume": "101"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "K96243",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "12410823",
+        "citationType": "journal article",
+        "authors": [
+          "Stevens M.P.",
+          "Wood M.W.",
+          "Taylor L.A.",
+          "Monaghan P.",
+          "Hawes P.",
+          "Jones P.W.",
+          "Wallis T.S.",
+          "Galyov E.E."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "12410823"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1046/j.1365-2958.2002.03190.x"
+          }
+        ],
+        "title": "An Inv/Mxi-Spa-like type III protein secretion system in Burkholderia pseudomallei modulates intracellular behaviour of the pathogen.",
+        "publicationDate": "2002",
+        "journal": "Mol. Microbiol.",
+        "firstPage": "649",
+        "lastPage": "659",
+        "volume": "46"
+      },
+      "referencePositions": [
+        "ROLE IN INVASION OF HOST CELLS"
+      ],
+      "referenceComments": [
+        {
+          "value": "10276",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "12897019",
+        "citationType": "journal article",
+        "authors": [
+          "Stevens M.P.",
+          "Friebel A.",
+          "Taylor L.A.",
+          "Wood M.W.",
+          "Brown P.J.",
+          "Hardt W.-D.",
+          "Galyov E.E."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "12897019"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.185.16.4992-4996.2003"
+          }
+        ],
+        "title": "A Burkholderia pseudomallei type III secreted protein, BopE, facilitates bacterial invasion of epithelial cells and exhibits guanine nucleotide exchange factor activity.",
+        "publicationDate": "2003",
+        "journal": "J. Bacteriol.",
+        "firstPage": "4992",
+        "lastPage": "4996",
+        "volume": "185"
+      },
+      "referencePositions": [
+        "ROLE IN INVASION OF HOST CELLS",
+        "SUBCELLULAR LOCATION"
+      ],
+      "referenceComments": [
+        {
+          "value": "576",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "15063321",
+        "citationType": "journal article",
+        "authors": [
+          "Upadhyay A.",
+          "Williams C.",
+          "Gill A.C.",
+          "Philippe D.L.",
+          "Davis K.",
+          "Taylor L.A.",
+          "Stevens M.P.",
+          "Galyov E.E.",
+          "Bagby S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15063321"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/j.bbapap.2003.11.004"
+          }
+        ],
+        "title": "Biophysical characterization of the catalytic domain of guanine nucleotide exchange factor BopE from Burkholderia pseudomallei.",
+        "publicationDate": "2004",
+        "journal": "Biochim. Biophys. Acta",
+        "firstPage": "111",
+        "lastPage": "119",
+        "volume": "1698"
+      },
+      "referencePositions": [
+        "BIOPHYSICOCHEMICAL PROPERTIES",
+        "SUBUNIT"
+      ],
+      "referenceComments": [
+        {
+          "value": "576",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "15289563",
+        "citationType": "journal article",
+        "authors": [
+          "Stevens M.P.",
+          "Haque A.",
+          "Atkins T.",
+          "Hill J.",
+          "Wood M.W.",
+          "Easton A.",
+          "Nelson M.",
+          "Underwood-Fowler C.",
+          "Titball R.W.",
+          "Bancroft G.J.",
+          "Galyov E.E."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15289563"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1099/mic.0.27146-0"
+          }
+        ],
+        "title": "Attenuated virulence and protective efficacy of a Burkholderia pseudomallei bsa type III secretion mutant in murine models of melioidosis.",
+        "publicationDate": "2004",
+        "journal": "Microbiology",
+        "firstPage": "2669",
+        "lastPage": "2676",
+        "volume": "150"
+      },
+      "referencePositions": [
+        "ROLE IN VIRULENCE"
+      ],
+      "referenceComments": [
+        {
+          "value": "576",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "17041850",
+        "citationType": "journal article",
+        "authors": [
+          "Haque A.",
+          "Chu K.",
+          "Easton A.",
+          "Stevens M.P.",
+          "Galyov E.E.",
+          "Atkins T.",
+          "Titball R.",
+          "Bancroft G.J."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "17041850"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1086/508217"
+          }
+        ],
+        "title": "A live experimental vaccine against Burkholderia pseudomallei elicits CD4+ T cell-mediated immunity, priming T cells specific for 2 type III secretion system proteins.",
+        "publicationDate": "2006",
+        "journal": "J. Infect. Dis.",
+        "firstPage": "1241",
+        "lastPage": "1248",
+        "volume": "194"
+      },
+      "referencePositions": [
+        "IMMUNOGENICITY"
+      ],
+      "referenceComments": [
+        {
+          "value": "576",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 7,
+      "citation": {
+        "id": "18052936",
+        "citationType": "journal article",
+        "authors": [
+          "Upadhyay A.",
+          "Wu H.-L.",
+          "Williams C.",
+          "Field T.",
+          "Galyov E.E.",
+          "van den Elsen J.M.H.",
+          "Bagby S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "18052936"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1042/bj20071546"
+          }
+        ],
+        "title": "The guanine-nucleotide-exchange factor BopE from Burkholderia pseudomallei adopts a compact version of the Salmonella SopE/SopE2 fold and undergoes a closed-to-open conformational change upon interaction with Cdc42.",
+        "publicationDate": "2008",
+        "journal": "Biochem. J.",
+        "firstPage": "485",
+        "lastPage": "493",
+        "volume": "411"
+      },
+      "referencePositions": [
+        "STRUCTURE BY NMR OF 78-261",
+        "MUTAGENESIS OF ARG-207; ASN-216; ASN-224 AND ARG-230",
+        "INTERACTION WITH HUMAN CDC42"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "BX571966",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAH38998.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_004528812.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_006351.1"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2JOK",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "NMR"
+        },
+        {
+          "key": "Resolution",
+          "value": "-"
+        },
+        {
+          "key": "Chains",
+          "value": "A=78-261"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2JOL",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "NMR"
+        },
+        {
+          "key": "Resolution",
+          "value": "-"
+        },
+        {
+          "key": "Chains",
+          "value": "A=78-261"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q63K41",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "MDposit",
+      "id": "Q63K41",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "Q63K41",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "272560.BPSS1525",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "bps:BPSS1525",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|272560.51.peg.4880",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "ENOG5033HJR",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Bacteria"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AKDRFCM",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EvolutionaryTrace",
+      "id": "Q63K41",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000000605",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome 2"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005085",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:guanyl-nucleotide exchange factor activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0030036",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:actin cytoskeleton organization"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.10.4120.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SopE-like, GEF domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR005414",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SopE"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR035949",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SopE-like_GEF_dom_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR016019",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SopE_GEF_dom"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF011808",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PRK15278.1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF07487",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SopE_GEF"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PIRSF",
+      "id": "PIRSF034781",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SecIII_sopE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR01593",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SOPEPROTEIN"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF81832",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SopE-like GEF domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MTYNPRIGGFTHVKQASFDVHVKRGEAQPRTSFAQQIKRIFSKIGETLGQLFRHRAPDSAPGRVRLQGVRYVGSYRPTGDAKQAIRHFVDEAVKQVAHARTPEIRQDAEFGRQVYEATLCAIFSEAKDRFCMDPATRAGNVRPAFIEALGDAARATGLPGADKQGVFTPSGAGTNPLYTEIRLRADTLMGAELAARPEYRELQPYARQQAIDLVANALPAERSNTLVEFRQTVQTLEATYRRAAQDASRDEKGATNAADGA",
+    "length": 261,
+    "molWeight": 28705,
+    "crc64": "A44EB3AB9CBFA621",
+    "md5": "3A409965F03BD70FBBA187842728B294"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "BIOPHYSICOCHEMICAL PROPERTIES": 1,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "MISCELLANEOUS": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Mutagenesis": 4,
+      "Turn": 2,
+      "Helix": 10,
+      "Beta strand": 4
+    },
+    "uniParcId": "UPI000043BD17"
+  }
+}

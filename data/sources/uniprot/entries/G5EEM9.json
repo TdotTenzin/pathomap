@@ -1,0 +1,2207 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "G5EEM9",
+  "secondaryAccessions": [
+    "A0A0K3AU10",
+    "G4SGS5",
+    "G4SGU1",
+    "G5EE61",
+    "G8JYA8",
+    "Q21478",
+    "Q8WQE0"
+  ],
+  "uniProtkbId": "PLA1_CAEEL",
+  "entryAudit": {
+    "firstPublicDate": "2021-06-02",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2011-12-14",
+    "entryVersion": 111,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 5.0,
+  "organism": {
+    "scientificName": "Caenorhabditis elegans",
+    "taxonId": 6239,
+    "lineage": [
+      "Eukaryota",
+      "Metazoa",
+      "Ecdysozoa",
+      "Nematoda",
+      "Chromadorea",
+      "Rhabditida",
+      "Rhabditina",
+      "Rhabditomorpha",
+      "Rhabditoidea",
+      "Rhabditidae",
+      "Peloderinae",
+      "Caenorhabditis"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000303",
+            "source": "PubMed",
+            "id": "18497747"
+          }
+        ],
+        "value": "Intracellular phospholipase A1"
+      },
+      "shortNames": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "20668164"
+            }
+          ],
+          "value": "IPLA-1"
+        },
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "18497747"
+            }
+          ],
+          "value": "PLA(1)"
+        }
+      ],
+      "ecNumbers": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "20668164"
+            }
+          ],
+          "value": "3.1.1.111"
+        },
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "23007400"
+            }
+          ],
+          "value": "3.1.1.4"
+        }
+      ]
+    }
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000312",
+            "source": "EMBL",
+            "id": "ABW23572.1"
+          },
+          {
+            "evidenceCode": "ECO:0000312",
+            "source": "WormBase",
+            "id": "M03A1.6e"
+          }
+        ],
+        "value": "ipla-1"
+      },
+      "orfNames": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000312",
+              "source": "WormBase",
+              "id": "M03A1.6e"
+            }
+          ],
+          "value": "M03A1.6"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "18497747"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "20668164"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "23007400"
+            }
+          ],
+          "value": "Hydrolyzes the ester bond at the sn-1 position of glycerophospholipids and produces 2-acyl lysophospholipids, being phosphatidylinositol (PI) its major substrate. PI is a versatile lipid that not only serves as a structural component of cellular membranes, but also plays important roles in signal transduction through distinct phosphorylated derivatives of the inositol head group (PubMed:20668164). Catalyzes the hydrolysis of phosphatidylcholine at sn-2 position in vitro (PubMed:23007400). Regulates asymmetric division, an important property of stem cells in C.elegans, by controlling the subcellular localizations of beta-catenin (PubMed:18497747, PubMed:20668164)"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "1,2-dihexadecanoyl-sn-glycero-3-phospho-(1D-myo-inositol) + H2O = 2-hexadecanoyl-sn-glycero-3-phospho-(1D-myo-inositol) + hexadecanoate + H(+)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:66708"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:7896"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15377"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:72835"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:167448"
+          }
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000305",
+            "source": "PubMed",
+            "id": "20668164"
+          }
+        ]
+      },
+      "physiologicalReactions": [
+        {
+          "directionType": "left-to-right",
+          "reactionCrossReference": {
+            "database": "Rhea",
+            "id": "RHEA:66709"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "20668164"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "a 1,2-diacyl-sn-glycero-3-phospho-L-serine + H2O = a 2-acyl-sn-glycero-3-phospho-L-serine + a fatty acid + H(+)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:42212"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15377"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:28868"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:57262"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:65214"
+          }
+        ],
+        "ecNumber": "3.1.1.111",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "20668164"
+          }
+        ]
+      },
+      "physiologicalReactions": [
+        {
+          "directionType": "left-to-right",
+          "reactionCrossReference": {
+            "database": "Rhea",
+            "id": "RHEA:42213"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "20668164"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "1-hexadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-phospho-L-serine + H2O = 2-(9Z-octadecenoyl)-sn-glycero-3-phospho-L-serine + hexadecanoate + H(+)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:43968"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:7896"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15377"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:75029"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:77342"
+          }
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "20668164"
+          }
+        ]
+      },
+      "physiologicalReactions": [
+        {
+          "directionType": "left-to-right",
+          "reactionCrossReference": {
+            "database": "Rhea",
+            "id": "RHEA:43969"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "20668164"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "1,2-di-(9Z-octadecenoyl)-sn-glycero-3-phosphocholine + H2O = (9Z-octadecenoyl)-sn-glycero-3-phosphocholine + (9Z)-octadecenoate + H(+)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:38699"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15377"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:30823"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:74669"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:76083"
+          }
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "20668164"
+          }
+        ]
+      },
+      "physiologicalReactions": [
+        {
+          "directionType": "left-to-right",
+          "reactionCrossReference": {
+            "database": "Rhea",
+            "id": "RHEA:38700"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "20668164"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "a 1,2-diacyl-sn-glycero-3-phosphocholine + H2O = a 1-acyl-sn-glycero-3-phosphocholine + a fatty acid + H(+)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:15801"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15377"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:28868"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:57643"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:58168"
+          }
+        ],
+        "ecNumber": "3.1.1.4",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "23007400"
+          }
+        ]
+      },
+      "physiologicalReactions": [
+        {
+          "directionType": "left-to-right",
+          "reactionCrossReference": {
+            "database": "Rhea",
+            "id": "RHEA:15802"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "23007400"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "1,2-dihexadecanoyl-sn-glycero-3-phosphocholine + H2O = 1-hexadecanoyl-sn-glycero-3-phosphocholine + hexadecanoate + H(+)",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:41223"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:7896"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15377"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:72998"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:72999"
+          }
+        ],
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "23007400"
+          }
+        ]
+      },
+      "physiologicalReactions": [
+        {
+          "directionType": "left-to-right",
+          "reactionCrossReference": {
+            "database": "Rhea",
+            "id": "RHEA:41224"
+          },
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "23007400"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "23007400"
+            }
+          ],
+          "value": "Inhibited by E-6-bromomethylene-3-1-naphthalenyl-2H-tetrahydropyran-2-one (BEL) in vitro"
+        }
+      ],
+      "commentType": "ACTIVITY REGULATION"
+    },
+    {
+      "commentType": "ALTERNATIVE PRODUCTS",
+      "events": [
+        "Alternative splicing"
+      ],
+      "isoforms": [
+        {
+          "name": {
+            "value": "e"
+          },
+          "isoformIds": [
+            "G5EEM9-1"
+          ],
+          "isoformSequenceStatus": "Displayed"
+        },
+        {
+          "name": {
+            "value": "c"
+          },
+          "isoformIds": [
+            "G5EEM9-2"
+          ],
+          "sequenceIds": [
+            "VSP_061036"
+          ],
+          "isoformSequenceStatus": "Described"
+        },
+        {
+          "name": {
+            "value": "d"
+          },
+          "isoformIds": [
+            "G5EEM9-3"
+          ],
+          "sequenceIds": [
+            "VSP_061035"
+          ],
+          "isoformSequenceStatus": "Described"
+        },
+        {
+          "name": {
+            "value": "b"
+          },
+          "isoformIds": [
+            "G5EEM9-4"
+          ],
+          "sequenceIds": [
+            "VSP_061034"
+          ],
+          "isoformSequenceStatus": "Described"
+        },
+        {
+          "name": {
+            "value": "a"
+          },
+          "isoformIds": [
+            "G5EEM9-5"
+          ],
+          "sequenceIds": [
+            "VSP_061033"
+          ],
+          "isoformSequenceStatus": "Described"
+        },
+        {
+          "name": {
+            "value": "f"
+          },
+          "isoformIds": [
+            "G5EEM9-6"
+          ],
+          "sequenceIds": [
+            "VSP_061032"
+          ],
+          "isoformSequenceStatus": "Described"
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the PA-PLA1 family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 840,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Intracellular phospholipase A1",
+      "featureId": "PRO_0000452653"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 564,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 827,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "DDHD",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00378"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 142,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 666,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 718,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 26,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 39,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Basic and acidic residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 97,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 111,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Low complexity",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 668,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 680,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Basic and acidic residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 681,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 694,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Acidic residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Alternative sequence",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 172,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in isoform f",
+      "featureId": "VSP_061032",
+      "alternativeSequence": {}
+    },
+    {
+      "type": "Alternative sequence",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 141,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in isoform a",
+      "featureId": "VSP_061033",
+      "alternativeSequence": {
+        "originalSequence": "MSGSEEEHLVSLTFRKNEEDMDEDEGKVKQKEKPKEKQMEFVNQNFVESTEDESEVSTPTAVGLPIGTSTPDGDETPTQPDPNGKYTMAQTKDADLSRPSGLPSNGNPGSSTTVPPASKSGPVAPPRPSGTPVAPQRNRRR",
+        "alternativeSequences": [
+          "MEKSPPTSPTPIPSIDSNFMISPKKSRSKSVPNARKILNDLVETTERNLEAPYRSIMWQKYIFDRP"
+        ]
+      }
+    },
+    {
+      "type": "Alternative sequence",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 87,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in isoform b",
+      "featureId": "VSP_061034",
+      "alternativeSequence": {}
+    },
+    {
+      "type": "Alternative sequence",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 78,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in isoform d",
+      "featureId": "VSP_061035",
+      "alternativeSequence": {
+        "originalSequence": "MSGSEEEHLVSLTFRKNEEDMDEDEGKVKQKEKPKEKQMEFVNQNFVESTEDESEVSTPTAVGLPIGTSTPDGDETPT",
+        "alternativeSequences": [
+          "MNIMFPEISAFSHYL"
+        ]
+      }
+    },
+    {
+      "type": "Alternative sequence",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 77,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in isoform c",
+      "featureId": "VSP_061036",
+      "alternativeSequence": {
+        "originalSequence": "MSGSEEEHLVSLTFRKNEEDMDEDEGKVKQKEKPKEKQMEFVNQNFVESTEDESEVSTPTAVGLPIGTSTPDGDETP",
+        "alternativeSequences": [
+          "MVLGKKKVSRATKSDD"
+        ]
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0025",
+      "category": "Coding sequence diversity",
+      "name": "Alternative splicing"
+    },
+    {
+      "id": "KW-0378",
+      "category": "Molecular function",
+      "name": "Hydrolase"
+    },
+    {
+      "id": "KW-0443",
+      "category": "Biological process",
+      "name": "Lipid metabolism"
+    },
+    {
+      "id": "KW-1208",
+      "category": "Biological process",
+      "name": "Phospholipid metabolism"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "18497747",
+        "citationType": "journal article",
+        "authors": [
+          "Kanamori T.",
+          "Inoue T.",
+          "Sakamoto T.",
+          "Gengyo-Ando K.",
+          "Tsujimoto M.",
+          "Mitani S.",
+          "Sawa H.",
+          "Aoki J.",
+          "Arai H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "18497747"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/emboj.2008.102"
+          }
+        ],
+        "title": "Beta-catenin asymmetry is regulated by PLA1 and retrograde traffic in C. elegans stem cell divisions.",
+        "publicationDate": "2008",
+        "journal": "EMBO J.",
+        "firstPage": "1647",
+        "lastPage": "1657",
+        "volume": "27"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [MRNA]",
+        "FUNCTION"
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "9851916",
+        "citationType": "journal article",
+        "authoringGroup": [
+          "The C. elegans sequencing consortium"
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9851916"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1126/science.282.5396.2012"
+          }
+        ],
+        "title": "Genome sequence of the nematode C. elegans: a platform for investigating biology.",
+        "publicationDate": "1998",
+        "journal": "Science",
+        "firstPage": "2012",
+        "lastPage": "2018",
+        "volume": "282"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "Bristol N2",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "20668164",
+        "citationType": "journal article",
+        "authors": [
+          "Imae R.",
+          "Inoue T.",
+          "Kimura M.",
+          "Kanamori T.",
+          "Tomioka N.H.",
+          "Kage-Nakadai E.",
+          "Mitani S.",
+          "Arai H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "20668164"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1091/mbc.e10-03-0195"
+          }
+        ],
+        "title": "Intracellular phospholipase A1 and acyltransferase, which are involved in Caenorhabditis elegans stem cell divisions, determine the sn-1 fatty acyl chain of phosphatidylinositol.",
+        "publicationDate": "2010",
+        "journal": "Mol. Biol. Cell",
+        "firstPage": "3114",
+        "lastPage": "3124",
+        "volume": "21"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "CATALYTIC ACTIVITY"
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "23007400",
+        "citationType": "journal article",
+        "authors": [
+          "Morrison K.",
+          "Witte K.",
+          "Mayers J.R.",
+          "Schuh A.L.",
+          "Audhya A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "23007400"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1074/jbc.m112.391508"
+          }
+        ],
+        "title": "Roles of acidic phospholipids and nucleotides in regulating membrane binding and activity of a calcium-independent phospholipase A2 isoform.",
+        "publicationDate": "2012",
+        "journal": "J. Biol. Chem.",
+        "firstPage": "38824",
+        "lastPage": "38834",
+        "volume": "287"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "CATALYTIC ACTIVITY",
+        "ACTIVITY REGULATION"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "EU180219",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ABW23572.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "BX284602",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CCD70559.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "BX284602",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CCD70557.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "BX284602",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CCD70558.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "BX284602",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CCD70553.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "BX284602",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CCD70552.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "BX284602",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CTQ86513.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "T29582",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "T29582"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_001040793.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NM_001047328.5"
+        }
+      ],
+      "isoformId": "G5EEM9-2"
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_001040794.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NM_001047329.4"
+        }
+      ],
+      "isoformId": "G5EEM9-3"
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_001300574.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NM_001313645.3"
+        }
+      ],
+      "isoformId": "G5EEM9-6"
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_001367816.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NM_001381395.3"
+        }
+      ],
+      "isoformId": "G5EEM9-4"
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_001367817.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NM_001381394.1"
+        }
+      ],
+      "isoformId": "G5EEM9-1"
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_740976.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NM_170979.6"
+        }
+      ],
+      "isoformId": "G5EEM9-5"
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "G5EEM9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "FunCoup",
+      "id": "G5EEM9",
+      "properties": [
+        {
+          "key": "Number of interactors",
+          "value": "1786"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "6239.M03A1.6e.1",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SwissLipids",
+      "id": "SLP:000001014",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PaxDb",
+      "id": "6239-M03A1.6e.1",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PeptideAtlas",
+      "id": "G5EEM9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblMetazoa",
+      "id": "M03A1.6a.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "M03A1.6a.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "WBGene00019747"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblMetazoa",
+      "id": "M03A1.6b.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "M03A1.6b.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "WBGene00019747"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblMetazoa",
+      "id": "M03A1.6b.2",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "M03A1.6b.2"
+        },
+        {
+          "key": "GeneId",
+          "value": "WBGene00019747"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblMetazoa",
+      "id": "M03A1.6b.3",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "M03A1.6b.3"
+        },
+        {
+          "key": "GeneId",
+          "value": "WBGene00019747"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblMetazoa",
+      "id": "M03A1.6b.4",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "M03A1.6b.4"
+        },
+        {
+          "key": "GeneId",
+          "value": "WBGene00019747"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblMetazoa",
+      "id": "M03A1.6c.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "M03A1.6c.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "WBGene00019747"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblMetazoa",
+      "id": "M03A1.6d.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "M03A1.6d.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "WBGene00019747"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblMetazoa",
+      "id": "M03A1.6e.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "M03A1.6e.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "WBGene00019747"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblMetazoa",
+      "id": "M03A1.6f.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "M03A1.6f.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "WBGene00019747"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "173795",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "cel:CELE_M03A1.6",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "UCSC",
+      "id": "M03A1.6c",
+      "properties": [
+        {
+          "key": "OrganismName",
+          "value": "c. elegans"
+        }
+      ]
+    },
+    {
+      "database": "AGR",
+      "id": "WB:WBGene00019747",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "CTD",
+      "id": "173795",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "WormBase",
+      "id": "M03A1.6a",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CE07393"
+        },
+        {
+          "key": "GeneId",
+          "value": "WBGene00019747"
+        },
+        {
+          "key": "GeneName",
+          "value": "ipla-1"
+        }
+      ],
+      "isoformId": "G5EEM9-5"
+    },
+    {
+      "database": "WormBase",
+      "id": "M03A1.6b",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CE29816"
+        },
+        {
+          "key": "GeneId",
+          "value": "WBGene00019747"
+        },
+        {
+          "key": "GeneName",
+          "value": "ipla-1"
+        }
+      ],
+      "isoformId": "G5EEM9-4"
+    },
+    {
+      "database": "WormBase",
+      "id": "M03A1.6c",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CE40099"
+        },
+        {
+          "key": "GeneId",
+          "value": "WBGene00019747"
+        },
+        {
+          "key": "GeneName",
+          "value": "ipla-1"
+        }
+      ],
+      "isoformId": "G5EEM9-2"
+    },
+    {
+      "database": "WormBase",
+      "id": "M03A1.6d",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CE40100"
+        },
+        {
+          "key": "GeneId",
+          "value": "WBGene00019747"
+        },
+        {
+          "key": "GeneName",
+          "value": "ipla-1"
+        }
+      ],
+      "isoformId": "G5EEM9-3"
+    },
+    {
+      "database": "WormBase",
+      "id": "M03A1.6e",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CE41917"
+        },
+        {
+          "key": "GeneId",
+          "value": "WBGene00019747"
+        },
+        {
+          "key": "GeneName",
+          "value": "ipla-1"
+        }
+      ],
+      "isoformId": "G5EEM9-1"
+    },
+    {
+      "database": "WormBase",
+      "id": "M03A1.6f",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CE50406"
+        },
+        {
+          "key": "GeneId",
+          "value": "WBGene00019747"
+        },
+        {
+          "key": "GeneName",
+          "value": "ipla-1"
+        }
+      ],
+      "isoformId": "G5EEM9-6"
+    },
+    {
+      "database": "eggNOG",
+      "id": "KOG2308",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Eukaryota"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_006932_2_0_1",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "InParanoid",
+      "id": "G5EEM9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AACYEQP",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OrthoDB",
+      "id": "431378at2759",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PhylomeDB",
+      "id": "G5EEM9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Reactome",
+      "id": "R-CEL-1483226",
+      "properties": [
+        {
+          "key": "PathwayName",
+          "value": "Synthesis of PI"
+        }
+      ]
+    },
+    {
+      "database": "PRO",
+      "id": "PR:G5EEM9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000001940",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome II"
+        }
+      ]
+    },
+    {
+      "database": "Bgee",
+      "id": "WBGene00019747",
+      "properties": [
+        {
+          "key": "ExpressionPatterns",
+          "value": "Expressed in germ line (C elegans) and 4 other cell types or tissues"
+        }
+      ]
+    },
+    {
+      "database": "ExpressionAtlas",
+      "id": "G5EEM9",
+      "properties": [
+        {
+          "key": "ExpressionPatterns",
+          "value": "baseline and differential"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005737",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cytoplasm"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005829",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cytosol"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:WormBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "18497747"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005783",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:endoplasmic reticulum"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:WormBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "20668164"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005634",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:nucleus"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:WormBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "18497747"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:1903293",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:phosphatase complex"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IPI:WormBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000353",
+          "source": "PubMed",
+          "id": "23007400"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0004623",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:A2-type glycerophospholipase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:WormBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "23007400"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0004620",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:glycerophospholipase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0008970",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:glycerophospholipid phospholipase A1 activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:WormBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "20668164"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0042802",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:identical protein binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IPI:WormBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000353",
+          "source": "PubMed",
+          "id": "23007400"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0046872",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:metal ion binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0070300",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:phosphatidic acid binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:WormBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "23007400"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005546",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:phosphatidylinositol-4,5-bisphosphate binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:WormBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "23007400"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0070273",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:phosphatidylinositol-4-phosphate binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:WormBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "23007400"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0001786",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:phosphatidylserine binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:WormBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "23007400"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0034638",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:phosphatidylcholine catabolic process"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:WormBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "23007400"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0031161",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:phosphatidylinositol catabolic process"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISS:WormBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "PubMed",
+          "id": "18497747"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0046488",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:phosphatidylinositol metabolic process"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:WormBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "20668164"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009786",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:regulation of asymmetric cell division"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:WormBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "18497747"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0032880",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:regulation of protein localization"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:WormBase"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "18497747"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR029058",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "AB_hydrolase_fold"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR004177",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "DDHD_dom"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR058055",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PA-PLA1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR23509:SF48",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "INTRACELLULAR PHOSPHOLIPASE A1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR23509",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PA-PL1 PHOSPHOLIPASE FAMILY"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF02862",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "DDHD"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM01127",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "DDHD"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF53474",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "alpha/beta-Hydrolases"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51043",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "DDHD"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MSGSEEEHLVSLTFRKNEEDMDEDEGKVKQKEKPKEKQMEFVNQNFVESTEDESEVSTPTAVGLPIGTSTPDGDETPTQPDPNGKYTMAQTKDADLSRPSGLPSNGNPGSSTTVPPASKSGPVAPPRPSGTPVAPQRNRRRKVTELKCSEVRWFFQEPKGTLWNPFNGRDSIMLEIKYRKEKGIELDEAMQEIYDESLTHYKMEMKDEPEIENGNIGMEQEKPMVVVMNGQYKVNKDNSKIDPIYWKDDSKEIRRGSWFSPDYQPLEMPLSDQIEKNHLQCFRNQMIPEGTTVFSKSETSNKPVLAELHVDGYDIRWSSVIDISLHQKGNAILRYLWAKSTPLRRGYEKEADWNDAAAEISHLILVVHGIGQKGYENLIAQNANQVRDGVVSAMEKVYPEEKSRPMFLPVEWRSALKLDNGLTDNITIPKMSSMRASLNSTAMDVMYYQSPLFRTEIVRGVVSQLNRTYKLFKANNPQFNGHVSVFGHSLGSVICYDVLTQYSPLMLFDKYVTKSIDEYLKRDDTNASEEARKALEAMKLAREQLRDNLEGGIHKLLVTKEEQLEFKVKYLFAVGSPLGVFLTMRGGESTDLLSKATNVERVFNIFHPYDPVAYRLEPFFAPEYRHIRPIKLFSNTDLRARASYENLPLDVYKHYLKKLKNLNKAKKNKDDKTADARSGGDDENEDEDECDSDEDARSGCSSPRSMTPPPFETAAANAAAAAKETKAVKKGWFSFGTSSNPKKTQSTASLGSVNATSTENIEFAKEAAEELPLAEKILGSGVRVPHRIDFQLQPALTEKSYWSVLKSHFAYWTNADLALFLANVLYCKPLKPEEAKPTWA",
+    "length": 840,
+    "molWeight": 94811,
+    "crc64": "955587D1ED425C6F",
+    "md5": "0C5E053E5EACD440EC8A9D14C006594C"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "CATALYTIC ACTIVITY": 6,
+      "ACTIVITY REGULATION": 1,
+      "ALTERNATIVE PRODUCTS": 6,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Domain": 1,
+      "Region": 2,
+      "Compositional bias": 4,
+      "Alternative sequence": 5
+    },
+    "uniParcId": "UPI00015E1B72"
+  }
+}

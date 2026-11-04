@@ -318,6 +318,76 @@ export const EFFECTOR_COLUMNS_META = [
     description: 'Biological classification of the mechanism (signalling_modulation, cytoskeletal_remodelling, membrane_trafficking, immune_evasion, cell_death_modulation, metabolic_manipulation, transcriptional_regulation, protein_modification, membrane_disruption, intracellular_survival, nutrient_acquisition).',
     source: 'PathoMap curation',
   },
+  {
+    key: 'uniprot_id',
+    label: 'UniProt ID',
+    type: 'string, nullable',
+    description: 'UniProt accession for the effector protein (curated mapping or search fallback).',
+    source: 'UniProt API',
+  },
+  {
+    key: 'sequence',
+    label: 'Sequence',
+    type: 'string, nullable',
+    description: 'Amino acid sequence of the effector.',
+    source: 'UniProt API',
+  },
+  {
+    key: 'sequence_length',
+    label: 'Length (aa)',
+    type: 'integer, nullable',
+    description: 'Number of amino acids in the sequence.',
+    source: 'Calculated from sequence',
+  },
+  {
+    key: 'molecular_weight_da',
+    label: 'MW (Da)',
+    type: 'number, nullable',
+    description: 'Molecular weight in Daltons.',
+    source: 'Calculated from sequence',
+  },
+  {
+    key: 'isoelectric_point',
+    label: 'pI',
+    type: 'number, nullable',
+    description: 'Isoelectric point of the effector.',
+    source: 'Calculated from sequence',
+  },
+  {
+    key: 'gravy_score',
+    label: 'GRAVY',
+    type: 'number, nullable',
+    description: 'Grand average of hydropathy (hydrophobicity).',
+    source: 'Calculated from sequence',
+  },
+  {
+    key: 'domains',
+    label: 'Domains',
+    type: 'array',
+    description: 'Protein domain annotations from UniProt/InterPro/Pfam.',
+    source: 'UniProt / InterPro API',
+  },
+  {
+    key: 'go_terms',
+    label: 'GO Terms',
+    type: 'array',
+    description: 'Gene Ontology annotations.',
+    source: 'UniProt API',
+  },
+  {
+    key: 'signal_peptide',
+    label: 'Signal Peptide',
+    type: 'object, nullable',
+    description: 'Signal peptide position {start, end} when annotated.',
+    source: 'UniProt API',
+  },
+  {
+    key: 'transmembrane_regions',
+    label: 'Transmembrane Regions',
+    type: 'array',
+    description: 'Transmembrane helix positions [{start, end}, ...].',
+    source: 'UniProt API',
+  },
 ];
 
 // Map effector column keys to their display labels
@@ -378,6 +448,55 @@ export const HOST_PROTEIN_COLUMNS_META = [
     source: 'UniProt',
   },
   {
+    key: 'sequence',
+    label: 'Sequence',
+    type: 'string, nullable',
+    description: 'Amino acid sequence of the protein.',
+    source: 'UniProt API',
+  },
+  {
+    key: 'sequence_length',
+    label: 'Length (aa)',
+    type: 'integer, nullable',
+    description: 'Number of amino acids in the sequence.',
+    source: 'Calculated from sequence',
+  },
+  {
+    key: 'molecular_weight_da',
+    label: 'MW (Da)',
+    type: 'number, nullable',
+    description: 'Molecular weight in Daltons.',
+    source: 'Calculated from sequence',
+  },
+  {
+    key: 'isoelectric_point',
+    label: 'pI',
+    type: 'number, nullable',
+    description: 'Isoelectric point (pI) of the protein.',
+    source: 'Calculated from sequence',
+  },
+  {
+    key: 'gravy_score',
+    label: 'GRAVY',
+    type: 'number, nullable',
+    description: 'Grand average of hydropathy (indicates hydrophobicity).',
+    source: 'Calculated from sequence',
+  },
+  {
+    key: 'domains',
+    label: 'Domains',
+    type: 'array',
+    description: 'Protein domain annotations from InterPro/Pfam.',
+    source: 'UniProt / InterPro API',
+  },
+  {
+    key: 'go_terms',
+    label: 'GO Terms',
+    type: 'array',
+    description: 'Gene Ontology annotations.',
+    source: 'UniProt API',
+  },
+  {
     key: 'localization',
     label: 'Localization',
     type: 'string',
@@ -397,6 +516,20 @@ export const HOST_PROTEIN_COLUMNS_META = [
     type: 'string, nullable',
     description: 'Pathways the protein participates in.',
     source: 'PathoMap curation',
+  },
+  {
+    key: 'pathways_detailed',
+    label: 'Pathways (Detailed)',
+    type: 'array',
+    description: 'Detailed pathway memberships from UniProt cross-references.',
+    source: 'UniProt API',
+  },
+  {
+    key: 'interacting_partners',
+    label: 'Interactions',
+    type: 'array',
+    description: 'Known protein interaction partners with confidence scores.',
+    source: 'STRING API',
   },
   {
     key: 'reference_doi',
@@ -429,12 +562,19 @@ export const HOST_PROTEIN_COLUMN_LABELS = Object.fromEntries(
 export const HOST_PROTEIN_COLUMNS = HOST_PROTEIN_COLUMNS_META.map((column) => column.key);
 
 export const HOST_PROTEIN_VISIBLE_COLUMNS = [
+  'host_protein_id',
   'protein_name',
   'gene_name',
   'uniprot_id',
+  'sequence_length',
+  'molecular_weight_da',
+  'isoelectric_point',
+  'gravy_score',
+  'domains',
   'localization',
   'function',
   'pathway',
+  'curation_status',
 ];
 
 // ---------------------------------------------------------------------------

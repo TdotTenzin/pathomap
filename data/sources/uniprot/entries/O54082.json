@@ -1,0 +1,455 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "O54082",
+  "uniProtkbId": "LUKD_STAAU",
+  "entryAudit": {
+    "firstPublicDate": "2012-10-31",
+    "lastAnnotationUpdateDate": "2026-09-02",
+    "lastSequenceUpdateDate": "1998-06-01",
+    "entryVersion": 78,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 3.0,
+  "organism": {
+    "scientificName": "Staphylococcus aureus",
+    "taxonId": 1280,
+    "lineage": [
+      "Bacteria",
+      "Bacillati",
+      "Bacillota",
+      "Bacilli",
+      "Caryophanales",
+      "Staphylococcaceae",
+      "Staphylococcus"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Leucotoxin LukD"
+      }
+    },
+    "flag": "Precursor"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "lukD"
+      }
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "9781679"
+            }
+          ],
+          "value": "Part of a bi-component leucotoxin that acts by forming pores in the membrane of the target cells. LukE-LukD is as effective as the Panton-Valentine leucocidin (PVL) for inducing dermonecrosis when injected in the rabbit skin, but not hemolytic and poorly leucotoxic on human blood cells compared to other leucotoxins expressed by S.aureus. HlgA-LukD is a Ca(2+) channel inducer"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "9781679"
+            }
+          ],
+          "value": "Toxicity requires sequential binding and synergistic association of a class S and a class F component which form heterooligomeric complexes (By similarity). LukE (class S) associates with LukD (class F). LukD can also associate with HlgA"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "9781679"
+              }
+            ],
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "9781679"
+            }
+          ],
+          "value": "Expressed at the late exponential growth. Is cotranscribed with lukE"
+        }
+      ],
+      "commentType": "INDUCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the aerolysin family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 26,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "9781679"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 27,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 327,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Leucotoxin LukD",
+      "featureId": "PRO_5000147159"
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0204",
+      "category": "Biological process",
+      "name": "Cytolysis"
+    },
+    {
+      "id": "KW-0903",
+      "category": "Technical term",
+      "name": "Direct protein sequencing"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    },
+    {
+      "id": "KW-0800",
+      "category": "Molecular function",
+      "name": "Toxin"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "9781679",
+        "citationType": "journal article",
+        "authors": [
+          "Gravet A.",
+          "Colin D.A.",
+          "Keller D.",
+          "Giradot R.",
+          "Monteil H.",
+          "Prevost G."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9781679"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/s0014-5793(98)01130-2"
+          }
+        ],
+        "title": "Characterization of a novel structural member, LukE-LukD, of the bi-component staphylococcal leucotoxins family.",
+        "publicationDate": "1998",
+        "journal": "FEBS Lett.",
+        "firstPage": "202",
+        "lastPage": "208",
+        "volume": "436"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]",
+        "PROTEIN SEQUENCE OF 27-44",
+        "FUNCTION",
+        "SUBUNIT",
+        "INDUCTION",
+        "SUBCELLULAR LOCATION"
+      ],
+      "referenceComments": [
+        {
+          "value": "Newman",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "Y13225",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAA73668.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "O54082",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "O54082",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "ABCD",
+      "id": "O54082",
+      "properties": [
+        {
+          "key": "antibodies",
+          "value": "8 sequenced antibodies"
+        }
+      ]
+    },
+    {
+      "database": "PHI-base",
+      "id": "PHI:10307",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PHI-base",
+      "id": "PHI:123361",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0051715",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:cytolysis in another organism"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.70.240.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Leukocidin/porin MspA"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR003963",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Bi-component_toxin_staph"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR016183",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Leukocidin/Hemolysin_toxin"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036435",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Leukocidin/porin_MspA_sf"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "TIGR01002",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "hlyII"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF07968",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Leukocidin"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR01468",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "BICOMPNTOXIN"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF56959",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Leukocidin-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MKIEKLGKSSVASSIALLLLSNTVDAAQNITPKREKKVDDKITLYKTTATSDNDKLNIFQILTFNFIKDKSYDKDTLVLKAAGNINSGYKNSNPKDYNYSQFYWGGKYNVSVSSESNDAVNVVDYAPKNQNEEFQVQQTLGYSYGGDINISNGLSGGLNGSKSFSETINYKQESYRTTIDRKTNHKSIGWGVEAHKIMNNGWGPYGRDSYDPTYGNELFLGGDKSSSNAGQNFLPTHQIPLLARGNFNPEFISVLSHKLFDTKKSKIKVTYQREMDRYTNQWNRSHWVGNNYKNQNTVTFTSTYEVDWQNILLKLIGTDSKETNPGV",
+    "length": 327,
+    "molWeight": 36876,
+    "crc64": "6CC5677521C3CD24",
+    "md5": "862BA769E773D62BB44F2C3AE0B22032"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "INDUCTION": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1
+    },
+    "uniParcId": "UPI00000B93C4"
+  }
+}

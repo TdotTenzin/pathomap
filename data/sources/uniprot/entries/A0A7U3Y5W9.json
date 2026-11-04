@@ -1,0 +1,747 @@
+{
+  "entryType": "UniProtKB unreviewed (TrEMBL)",
+  "primaryAccession": "A0A7U3Y5W9",
+  "uniProtkbId": "A0A7U3Y5W9_ACIB5",
+  "entryAudit": {
+    "firstPublicDate": "2021-06-02",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2021-06-02",
+    "entryVersion": 19,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 2.0,
+  "organism": {
+    "scientificName": "Acinetobacter baumannii (strain AB0057)",
+    "taxonId": 480119,
+    "evidences": [
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "EMBL",
+        "id": "ACJ40724.1"
+      },
+      {
+        "evidenceCode": "ECO:0000313",
+        "source": "Proteomes",
+        "id": "UP000007094"
+      }
+    ],
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Gammaproteobacteria",
+      "Moraxellales",
+      "Moraxellaceae",
+      "Acinetobacter",
+      "Acinetobacter calcoaceticus/baumannii complex"
+    ]
+  },
+  "proteinExistence": "4: Predicted",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000259",
+            "source": "PROSITE",
+            "id": "PS51123"
+          }
+        ],
+        "value": "OmpA-like domain-containing protein"
+      }
+    }
+  },
+  "genes": [
+    {
+      "orderedLocusNames": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "ACJ40724.1"
+            }
+          ],
+          "value": "AB57_0932"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "ARBA",
+                "id": "ARBA00004442"
+              }
+            ],
+            "value": "Cell outer membrane",
+            "id": "SL-0040"
+          }
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 18,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "SignalP"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 19,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 217,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "OmpA-like domain-containing protein",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00303"
+        },
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "SignalP"
+        }
+      ],
+      "featureId": "PRO_5051069757"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 100,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 217,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "OmpA-like",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000259",
+          "source": "PROSITE",
+          "id": "PS51123"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 183,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 205,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 188,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 203,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Polar residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Lipidation",
+      "location": {
+        "start": {
+          "value": 19,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 19,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "N-palmitoyl cysteine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00303"
+        }
+      ]
+    },
+    {
+      "type": "Lipidation",
+      "location": {
+        "start": {
+          "value": 19,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 19,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "S-diacylglycerol cysteine",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00303"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00023237"
+        }
+      ],
+      "id": "KW-0998",
+      "category": "Cellular component",
+      "name": "Cell outer membrane"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00303"
+        }
+      ],
+      "id": "KW-0449",
+      "category": "PTM",
+      "name": "Lipoprotein"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "ARBA",
+          "id": "ARBA00023136"
+        },
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00473"
+        }
+      ],
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00303"
+        }
+      ],
+      "id": "KW-0564",
+      "category": "PTM",
+      "name": "Palmitate"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "Proteomes",
+          "id": "UP000007094"
+        }
+      ],
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "PROSITE-ProRule",
+          "id": "PRU00303"
+        },
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "SignalP"
+        }
+      ],
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "18931120",
+        "citationType": "journal article",
+        "authors": [
+          "Adams M.D.",
+          "Goglin K.",
+          "Molyneaux N.",
+          "Hujer K.M.",
+          "Lavender H.",
+          "Jamison J.J.",
+          "MacDonald I.J.",
+          "Martin K.M.",
+          "Russo T.",
+          "Campagnari A.A.",
+          "Hujer A.M.",
+          "Bonomo R.A.",
+          "Gill S.R."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "18931120"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/JB.00834-08"
+          }
+        ],
+        "title": "Comparative genome sequence analysis of multidrug-resistant Acinetobacter baumannii.",
+        "publicationDate": "2008",
+        "journal": "J. Bacteriol.",
+        "firstPage": "8053",
+        "lastPage": "8064",
+        "volume": "190"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "EMBL",
+              "id": "ACJ40724.1"
+            },
+            {
+              "evidenceCode": "ECO:0000313",
+              "source": "Proteomes",
+              "id": "UP000007094"
+            }
+          ],
+          "value": "AB0057",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "EMBL",
+          "id": "ACJ40724.1"
+        },
+        {
+          "evidenceCode": "ECO:0000313",
+          "source": "Proteomes",
+          "id": "UP000007094"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "CP001182",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "ACJ40724.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_001202415.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_011586.2"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "A0A7U3Y5W9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "A0A7U3Y5W9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "92892813",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "abn:AB57_0932",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AACADMS",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000007094",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009279",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cell outer membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd07185",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OmpA_C-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.30.1330.60",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OmpA-like domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR050330",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Bact_OuterMem_StrucFunc"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR027367",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Gly-zipper_YMGG"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR006664",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OMP_bac"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR006665",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OmpA-like"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR006690",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OMPA-like_CS"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036737",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OmpA-like_sf"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR30329:SF21",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "LIPOPROTEIN YIAD-RELATED"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR30329",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "STATOR ELEMENT OF FLAGELLAR MOTOR COMPLEX"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF13441",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Gly-zipper_YMGG"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00691",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OmpA"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR01023",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "NAFLGMOTY"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR01021",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OMPADOMAIN"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF103088",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OmpA-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS01068",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OMPA_1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51123",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OMPA_2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51257",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PROKAR_LIPOPROTEIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MRALVISTVVGAAVVLSGCQTTGNNLGGVEYDKAALGTLIGAAAGYGISKSNANSSRQNNRAAAIGAVLGAAGGLYLDQKEKKLREQMAGTGVEVGRNPDGSVQLIMPGSITFDTNKSNIKPNFYATLDKVAQTLAEDNKSAILVTGYTDNTGNDSINIPLSQARAQSVKNYLAGKGVPSSRIDAQGYGSSNPIADNSTASGREQNRRVEISIYAKQ",
+    "length": 217,
+    "molWeight": 22485,
+    "crc64": "B5DD8315AC15DDB9",
+    "md5": "3EB3C3712EAA5F1EA0E1B59B1D5661DE"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "SUBCELLULAR LOCATION": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1,
+      "Domain": 1,
+      "Region": 1,
+      "Compositional bias": 1,
+      "Lipidation": 2
+    },
+    "uniParcId": "UPI0000F2F900"
+  }
+}

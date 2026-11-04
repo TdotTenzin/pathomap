@@ -1,0 +1,2532 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "P0C2E9",
+  "secondaryAccessions": [
+    "P19995"
+  ],
+  "uniProtkbId": "TACY_CLOPE",
+  "entryAudit": {
+    "firstPublicDate": "2007-01-23",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2007-01-23",
+    "entryVersion": 110,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 5.0,
+  "organism": {
+    "scientificName": "Clostridium perfringens (strain 13 / Type A)",
+    "taxonId": 195102,
+    "lineage": [
+      "Bacteria",
+      "Bacillati",
+      "Bacillota",
+      "Clostridia",
+      "Eubacteriales",
+      "Clostridiaceae",
+      "Clostridium"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Perfringolysin O"
+      },
+      "shortNames": [
+        {
+          "value": "PFO"
+        }
+      ]
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "Theta-toxin"
+        }
+      },
+      {
+        "fullName": {
+          "value": "Thiol-activated cytolysin"
+        }
+      }
+    ],
+    "flag": "Precursor"
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "pfo"
+      },
+      "synonyms": [
+        {
+          "value": "pfoA"
+        },
+        {
+          "value": "pfoR"
+        }
+      ],
+      "orderedLocusNames": [
+        {
+          "value": "CPE0163"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "17328912"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "20145114"
+            }
+          ],
+          "value": "A cholesterol-dependent toxin that causes cytolysis by forming pores in cholesterol-containing host membranes. After binding to target membranes, the protein assembles into a pre-pore complex. A major conformational change leads to insertion in the host membrane and formation of an oligomeric pore complex. Cholesterol is required for binding to host cell membranes, membrane insertion and pore formation; cholesterol binding is mediated by a Thr-Leu pair in the C-terminus. Can be reversibly inactivated by oxidation"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "15851031"
+            }
+          ],
+          "value": "Modeling based on cryo-EM shows a homooligomeric pore complex containing 38-44 subunits; when inserted in the host membrane"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "note": {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000305",
+                "source": "PubMed",
+                "id": "15851031"
+              }
+            ],
+            "value": "Secreted as soluble protein that then inserts into the host cell membrane and forms huge pores formed by transmembrane beta-strands"
+          }
+        ]
+      },
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "2878682"
+              }
+            ],
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        },
+        {
+          "location": {
+            "value": "Host cell membrane",
+            "id": "SL-0375"
+          },
+          "topology": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000305",
+                "source": "PubMed",
+                "id": "15851031"
+              }
+            ],
+            "value": "Multi-pass membrane protein",
+            "id": "SL-9909"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "15851031"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "9182756"
+            }
+          ],
+          "value": "Mature protein has 3 discontinuous domains; D1, D2, D3 followed by C-terminal D4; the domains rearrange substantially upon membrane insertion (PubMed:15851031, PubMed:9182756). A highly conserved undecapeptide in the D4 domain has residues important for membrane binding and cell lysis, and penetrates into the upper leaflet of cholesterol-rich bilayers in the pre-pore complex (PubMed:15851031)"
+        }
+      ],
+      "commentType": "DOMAIN"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the cholesterol-dependent cytolysin family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 28,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "2878682"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 29,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 500,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Perfringolysin O",
+      "featureId": "PRO_0000034104"
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 189,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 202,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Beta stranded",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q04IN8"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 209,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 218,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Beta stranded",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q04IN8"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 287,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 296,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Beta stranded",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q04IN8"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 304,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 316,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Beta stranded",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250",
+          "source": "UniProtKB",
+          "id": "Q04IN8"
+        }
+      ]
+    },
+    {
+      "type": "Motif",
+      "location": {
+        "start": {
+          "value": 458,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 468,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Conserved undecapeptide",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ]
+    },
+    {
+      "type": "Motif",
+      "location": {
+        "start": {
+          "value": 490,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 491,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Cholesterol binding",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "20145114"
+        }
+      ]
+    },
+    {
+      "type": "Site",
+      "location": {
+        "start": {
+          "value": 459,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 459,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Important for cholesterol binding",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305",
+          "source": "PubMed",
+          "id": "2888650"
+        }
+      ]
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 490,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 491,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Loss of hemolytic activity, loss of host membrane binding, loss of cholesterol binding.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "20145114"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "TL",
+        "alternativeSequences": [
+          "AA",
+          "GG",
+          "LT"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 490,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 490,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Loss of hemolytic activity.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "20145114"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "T",
+        "alternativeSequences": [
+          "A",
+          "G",
+          "S"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 491,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 491,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Severely impaired hemolytic activity.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "20145114"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "L",
+        "alternativeSequences": [
+          "A",
+          "G",
+          "I",
+          "V"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 30,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 30,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 3; AA sequence",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "D",
+        "alternativeSequences": [
+          "K"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 34,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 34,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 3; AA sequence",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "K",
+        "alternativeSequences": [
+          "I"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 71,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 71,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 1; AAA23271",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "T",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 38,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 43,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 49,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 51,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 52,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 56,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5DHL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 65,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 70,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 72,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 87,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 90,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 93,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 97,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 99,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 107,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 109,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 112,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 115,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 129,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 133,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 139,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 141,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5DHL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 143,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 148,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 151,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 168,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 169,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 171,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 174,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 176,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 178,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 185,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 189,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 196,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 203,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 207,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 211,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 215,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 218,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 235,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 241,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 244,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 251,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 256,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 260,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 263,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "5DHL"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 265,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 284,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 290,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 299,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 302,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 305,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 307,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 314,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 316,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 324,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 328,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 331,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1M3I"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 333,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 336,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 338,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 347,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 350,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 352,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 359,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 366,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 367,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 369,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 377,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 390,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 392,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 398,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 400,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 402,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1M3I"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 404,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 415,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 421,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 427,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 429,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 432,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 437,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 445,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 449,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 458,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 461,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 463,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 464,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 466,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 469,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 475,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 480,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 488,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 490,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 499,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0002",
+      "category": "Technical term",
+      "name": "3D-structure"
+    },
+    {
+      "id": "KW-0204",
+      "category": "Biological process",
+      "name": "Cytolysis"
+    },
+    {
+      "id": "KW-0903",
+      "category": "Technical term",
+      "name": "Direct protein sequencing"
+    },
+    {
+      "id": "KW-0354",
+      "category": "Biological process",
+      "name": "Hemolysis"
+    },
+    {
+      "id": "KW-1032",
+      "category": "Cellular component",
+      "name": "Host cell membrane"
+    },
+    {
+      "id": "KW-1043",
+      "category": "Cellular component",
+      "name": "Host membrane"
+    },
+    {
+      "id": "KW-0446",
+      "category": "Ligand",
+      "name": "Lipid-binding"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    },
+    {
+      "id": "KW-0800",
+      "category": "Molecular function",
+      "name": "Toxin"
+    },
+    {
+      "id": "KW-0812",
+      "category": "Domain",
+      "name": "Transmembrane"
+    },
+    {
+      "id": "KW-1134",
+      "category": "Domain",
+      "name": "Transmembrane beta strand"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "1987025",
+        "citationType": "journal article",
+        "authors": [
+          "Shimizu T.",
+          "Okabe A.",
+          "Minami J.",
+          "Hayashi H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "1987025"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.59.1.137-142.1991"
+          }
+        ],
+        "title": "An upstream regulatory sequence stimulates expression of the perfringolysin O gene of Clostridium perfringens.",
+        "publicationDate": "1991",
+        "journal": "Infect. Immun.",
+        "firstPage": "137",
+        "lastPage": "142",
+        "volume": "59"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "11792842",
+        "citationType": "journal article",
+        "authors": [
+          "Shimizu T.",
+          "Ohtani K.",
+          "Hirakawa H.",
+          "Ohshima K.",
+          "Yamashita A.",
+          "Shiba T.",
+          "Ogasawara N.",
+          "Hattori M.",
+          "Kuhara S.",
+          "Hayashi H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11792842"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1073/pnas.022493799"
+          }
+        ],
+        "title": "Complete genome sequence of Clostridium perfringens, an anaerobic flesh-eater.",
+        "publicationDate": "2002",
+        "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+        "firstPage": "996",
+        "lastPage": "1001",
+        "volume": "99"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "13 / Type A",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "2878682",
+        "citationType": "journal article",
+        "authors": [
+          "Ohno-Iwashita Y.",
+          "Iwamoto M.",
+          "Mitsui K.",
+          "Kawasaki H.",
+          "Ando S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "2878682"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1021/bi00368a032"
+          }
+        ],
+        "title": "Cold-labile hemolysin produced by limited proteolysis of theta-toxin from Clostridium perfringens.",
+        "publicationDate": "1986",
+        "journal": "Biochemistry",
+        "firstPage": "6048",
+        "lastPage": "6053",
+        "volume": "25"
+      },
+      "referencePositions": [
+        "PROTEIN SEQUENCE OF 29-45 AND 305-312",
+        "SUBCELLULAR LOCATION"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 10543 / DSM 798 / NCIB 8875 / BP6K / Type A",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "2888650",
+        "citationType": "journal article",
+        "authors": [
+          "Iwamoto M.",
+          "Ohno-Iwashita Y.",
+          "Ando S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "2888650"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1111/j.1432-1033.1987.tb13355.x"
+          }
+        ],
+        "title": "Role of the essential thiol group in the thiol-activated cytolysin from Clostridium perfringens.",
+        "publicationDate": "1987",
+        "journal": "Eur. J. Biochem.",
+        "firstPage": "425",
+        "lastPage": "430",
+        "volume": "167"
+      },
+      "referencePositions": [
+        "IMPORTANCE OF THIOL-GROUP IN CHOLESTEROL BINDING"
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "20145114",
+        "citationType": "journal article",
+        "authors": [
+          "Farrand A.J.",
+          "LaChapelle S.",
+          "Hotze E.M.",
+          "Johnson A.E.",
+          "Tweten R.K."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "20145114"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1073/pnas.0911581107"
+          }
+        ],
+        "title": "Only two amino acids are essential for cytolytic toxin recognition of cholesterol at the membrane surface.",
+        "publicationDate": "2010",
+        "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+        "firstPage": "4341",
+        "lastPage": "4346",
+        "volume": "107"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "CHOLESTEROL-BINDING",
+        "MUTAGENESIS OF 490-THR-LEU-491; THR-490 AND LEU-491"
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "8955365",
+        "citationType": "journal article",
+        "authors": [
+          "Feil S.C.",
+          "Rossjohn J.",
+          "Rohde K.",
+          "Tweten R.K.",
+          "Parker M.W."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8955365"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/s0014-5793(96)01200-8"
+          }
+        ],
+        "title": "Crystallization and preliminary X-ray analysis of a thiol-activated cytolysin.",
+        "publicationDate": "1996",
+        "journal": "FEBS Lett.",
+        "firstPage": "290",
+        "lastPage": "292",
+        "volume": "397"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY"
+      ]
+    },
+    {
+      "referenceNumber": 7,
+      "citation": {
+        "id": "9182756",
+        "citationType": "journal article",
+        "authors": [
+          "Rossjohn J.",
+          "Feil S.C.",
+          "McKinstry W.J.",
+          "Tweten R.K.",
+          "Parker M.W."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9182756"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/s0092-8674(00)80251-2"
+          }
+        ],
+        "title": "Structure of a cholesterol-binding, thiol-activated cytolysin and a model of its membrane form.",
+        "publicationDate": "1997",
+        "journal": "Cell",
+        "firstPage": "685",
+        "lastPage": "692",
+        "volume": "89"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY",
+        "DOMAIN"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 8,
+      "citation": {
+        "id": "15851031",
+        "citationType": "journal article",
+        "authors": [
+          "Tilley S.J.",
+          "Orlova E.V.",
+          "Gilbert R.J.",
+          "Andrew P.W.",
+          "Saibil H.R."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15851031"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/j.cell.2005.02.033"
+          }
+        ],
+        "title": "Structural basis of pore formation by the bacterial toxin pneumolysin.",
+        "publicationDate": "2005",
+        "journal": "Cell",
+        "firstPage": "247",
+        "lastPage": "256",
+        "volume": "121"
+      },
+      "referencePositions": [
+        "STRUCTURE BY ELECTRON MICROSCOPY (PREPORE)",
+        "STRUCTURE BY ELECTRON MICROSCOPY (PORE)",
+        "SUBUNIT",
+        "DOMAIN"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "2BK1"
+        },
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "2BK2"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 9,
+      "citation": {
+        "id": "17328912",
+        "citationType": "journal article",
+        "authors": [
+          "Rossjohn J.",
+          "Polekhina G.",
+          "Feil S.C.",
+          "Morton C.J.",
+          "Tweten R.K.",
+          "Parker M.W."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "17328912"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/j.jmb.2007.01.042"
+          }
+        ],
+        "title": "Structures of perfringolysin O suggest a pathway for activation of cholesterol-dependent cytolysins.",
+        "publicationDate": "2007",
+        "journal": "J. Mol. Biol.",
+        "firstPage": "1227",
+        "lastPage": "1236",
+        "volume": "367"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY",
+        "FUNCTION"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "1M3I"
+        },
+        {
+          "evidenceCode": "ECO:0007744",
+          "source": "PDB",
+          "id": "1PFO"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "M81080",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA23271.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "BA000016",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "BAB79869.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "B43577",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "B43577"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_003467630.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_003366.1"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "1M3I",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.90 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B/C/D=30-500"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "1M3J",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "3.00 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B=30-500"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "1PFO",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.20 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=1-500"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2BK1",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "EM"
+        },
+        {
+          "key": "Resolution",
+          "value": "29.00 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=53-500"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2BK2",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "EM"
+        },
+        {
+          "key": "Resolution",
+          "value": "28.00 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=36-500"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "5DHL",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.67 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B=29-500"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "5DIM",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "3.32 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=29-500"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "P0C2E9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "P0C2E9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "195102.gene:10489407",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "TCDB",
+      "id": "1.C.12.1.1",
+      "properties": [
+        {
+          "key": "FamilyName",
+          "value": "the thiol-activated cholesterol-dependent cytolysin (cdc) family"
+        }
+      ]
+    },
+    {
+      "database": "ABCD",
+      "id": "P0C2E9",
+      "properties": [
+        {
+          "key": "antibodies",
+          "value": "3 sequenced antibodies"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "cpe:CPE0163",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_026912_1_0_9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "ADHTVTM",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EvolutionaryTrace",
+      "id": "P0C2E9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "2878682"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0020002",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:host cell plasma membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0015485",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:cholesterol binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0044179",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:hemolysis in another organism"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:CACAO"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "18078439"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0001897",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:symbiont-mediated cytolysis of host cell"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:SigSci"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "26008232"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "2.60.40.1430:FF:000001",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Thiol-activated cytolysin"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.30.1040.20",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.40.30.40",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Perfringolysin"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.60.40.1430",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Perfringolysin, domain 4"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.90.840.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Thiol-activated cytolysin superfamily/Thiol-activated cytolysin, alpha-beta domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR035390",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Thiol_cytolys_C"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR038700",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Thiol_cytolys_C_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR001869",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Thiol_cytolysin"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036363",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Thiol_cytolysin_ab_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036359",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Thiol_cytolysin_sf"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF17440",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Thiol_cytolys_C"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF01289",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Thiol_cytolysin"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR01400",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TACYTOLYSIN"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF56978",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Perfringolysin"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS00481",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "THIOL_CYTOLYSINS"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MIRFKKTKLIASIAMALCLFSQPVISFSKDITDKNQSIDSGISSLSYNRNEVLASNGDKIESFVPKEGKKTGNKFIVVERQKRSLTTSPVDISIIDSVNDRTYPGALQLADKAFVENRPTILMVKRKPININIDLPGLKGENSIKVDDPTYGKVSGAIDELVSKWNEKYSSTHTLPARTQYSESMVYSKSQISSALNVNAKVLENSLGVDFNAVANNEKKVMILAYKQIFYTVSADLPKNPSDLFDDSVTFNDLKQKGVSNEAPPLMVSNVAYGRTIYVKLETTSSSKDVQAAFKALIKNTDIKNSQQYKDIYENSSFTAVVLGGDAQEHNKVVTKDFDEIRKVIKDNATFSTKNPAYPISYTSVFLKDNSVAAVHNKTDYIETTSTEYSKGKINLDHSGAYVAQFEVAWDEVSYDKEGNEVLTHKTWDGNYQDKTAHYSTVIPLEANARNIRIKARECTGLAWEWWRDVISEYDVPLTNNINVSIWGTTLYPGSSITYN",
+    "length": 500,
+    "molWeight": 55830,
+    "crc64": "E5584B7347413EF2",
+    "md5": "82F2662BE07FF6F804B245C49287AB8F"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "DOMAIN": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1,
+      "Transmembrane": 4,
+      "Motif": 2,
+      "Site": 1,
+      "Mutagenesis": 3,
+      "Sequence conflict": 3,
+      "Helix": 13,
+      "Turn": 6,
+      "Beta strand": 28
+    },
+    "uniParcId": "UPI000013686D"
+  }
+}

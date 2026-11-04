@@ -1,0 +1,567 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "Q9FD32",
+  "uniProtkbId": "UBIC_PSEPU",
+  "entryAudit": {
+    "firstPublicDate": "2006-06-27",
+    "lastAnnotationUpdateDate": "2025-04-09",
+    "lastSequenceUpdateDate": "2001-03-01",
+    "entryVersion": 64,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 2.0,
+  "organism": {
+    "scientificName": "Pseudomonas putida",
+    "commonName": "Arthrobacter siderocapsulatus",
+    "taxonId": 303,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Gammaproteobacteria",
+      "Pseudomonadales",
+      "Pseudomonadaceae",
+      "Pseudomonas"
+    ]
+  },
+  "proteinExistence": "3: Inferred from homology",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000255",
+            "source": "HAMAP-Rule",
+            "id": "MF_01632"
+          }
+        ],
+        "value": "Probable chorismate pyruvate-lyase"
+      },
+      "shortNames": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_01632"
+            }
+          ],
+          "value": "CL"
+        },
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_01632"
+            }
+          ],
+          "value": "CPL"
+        }
+      ],
+      "ecNumbers": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_01632"
+            }
+          ],
+          "value": "4.1.3.40"
+        }
+      ]
+    }
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000255",
+            "source": "HAMAP-Rule",
+            "id": "MF_01632"
+          }
+        ],
+        "value": "ubiC"
+      }
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_01632"
+            }
+          ],
+          "value": "Removes the pyruvyl group from chorismate, with concomitant aromatization of the ring, to provide 4-hydroxybenzoate (4HB) for the ubiquinone pathway"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "chorismate = 4-hydroxybenzoate + pyruvate",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:16505"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15361"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:17879"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:29748"
+          }
+        ],
+        "ecNumber": "4.1.3.40",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000255",
+            "source": "HAMAP-Rule",
+            "id": "MF_01632"
+          }
+        ]
+      }
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_01632"
+            }
+          ],
+          "value": "Cofactor biosynthesis; ubiquinone biosynthesis"
+        }
+      ],
+      "commentType": "PATHWAY"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255",
+                "source": "HAMAP-Rule",
+                "id": "MF_01632"
+              }
+            ],
+            "value": "Cytoplasm",
+            "id": "SL-0086"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "HAMAP-Rule",
+              "id": "MF_01632"
+            }
+          ],
+          "value": "Belongs to the UbiC family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 182,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Probable chorismate pyruvate-lyase",
+      "featureId": "PRO_0000240559"
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 81,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 81,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01632"
+        }
+      ],
+      "ligand": {
+        "name": "substrate"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 119,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 119,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01632"
+        }
+      ],
+      "ligand": {
+        "name": "substrate"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 171,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 171,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255",
+          "source": "HAMAP-Rule",
+          "id": "MF_01632"
+        }
+      ],
+      "ligand": {
+        "name": "substrate"
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0963",
+      "category": "Cellular component",
+      "name": "Cytoplasm"
+    },
+    {
+      "id": "KW-0456",
+      "category": "Molecular function",
+      "name": "Lyase"
+    },
+    {
+      "id": "KW-0670",
+      "category": "Ligand",
+      "name": "Pyruvate"
+    },
+    {
+      "id": "KW-0831",
+      "category": "Biological process",
+      "name": "Ubiquinone biosynthesis"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "11157934",
+        "citationType": "journal article",
+        "authors": [
+          "Hughes M.A.",
+          "Williams P.A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11157934"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.183.4.1225-1232.2001"
+          }
+        ],
+        "title": "Cloning and characterisation of the pnb genes, encoding enzymes for 4-nitrobenzoate catabolism in Pseudomonas putida TW3.",
+        "publicationDate": "2001",
+        "journal": "J. Bacteriol.",
+        "firstPage": "1225",
+        "lastPage": "1232",
+        "volume": "183"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "TW3",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AF292094",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAG01544.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q9FD32",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "Q9FD32",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "UniPathway",
+      "id": "UPA00232",
+      "properties": [
+        {
+          "key": "RectionId",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005829",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cytosol"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:TreeGrafter"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0008813",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:chorismate lyase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-UniRule"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0042866",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:pyruvate biosynthetic process"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-UniRule"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0006744",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:ubiquinone biosynthetic process"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-UniRule"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.40.1410.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Chorismate lyase-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "HAMAP",
+      "id": "MF_01632",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "UbiC"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR007440",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Chorismate--pyruvate_lyase"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR028978",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Chorismate_lyase_/UTRA_dom_sf"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR38683",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CHORISMATE PYRUVATE-LYASE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR38683:SF1",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CHORISMATE PYRUVATE-LYASE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF04345",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Chor_lyase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF64288",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Chorismate lyase-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MQVVYNFSQPGLQWKQSDHLRSLMTVTSRDWLLDRGSLTRRLRVLSDDDLEVVPLREEVGVILPHEADVLGLQLGAIGGVREVYLVGFGRPWVFARSIIVNSGSIEEGSALLQLGNMPLGDLLFGDGSFQRSEIEVCRYHDACNASARSTYPLWARRSVFKREKMHVLVQEMFLPALWEEMS",
+    "length": 182,
+    "molWeight": 20634,
+    "crc64": "CDC1A0BCB2C853F8",
+    "md5": "2CA30A862357FD69B37AC814773B80E7"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "CATALYTIC ACTIVITY": 1,
+      "PATHWAY": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Binding site": 3
+    },
+    "uniParcId": "UPI00000B85FE"
+  }
+}

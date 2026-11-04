@@ -1,0 +1,817 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "P39774",
+  "secondaryAccessions": [
+    "P33114",
+    "P36360"
+  ],
+  "uniProtkbId": "SPAB_BACIU",
+  "entryAudit": {
+    "firstPublicDate": "1995-02-01",
+    "lastAnnotationUpdateDate": "2026-09-02",
+    "lastSequenceUpdateDate": "1997-11-01",
+    "entryVersion": 71,
+    "sequenceVersion": 2
+  },
+  "annotationScore": 2.0,
+  "organism": {
+    "scientificName": "Bacillus subtilis",
+    "taxonId": 1423,
+    "lineage": [
+      "Bacteria",
+      "Bacillati",
+      "Bacillota",
+      "Bacilli",
+      "Caryophanales",
+      "Bacillaceae",
+      "Bacillus"
+    ]
+  },
+  "proteinExistence": "4: Predicted",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Subtilin biosynthesis protein SpaB"
+      }
+    }
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "spaB"
+      },
+      "synonyms": [
+        {
+          "value": "spaD"
+        },
+        {
+          "value": "spaE"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "value": "Involved in the post-translational modification of the lantibiotic subtilin"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "note": {
+        "texts": [
+          {
+            "value": "Possibly associated with, and anchored to, the cytoplasmic side of the membrane"
+          }
+        ]
+      },
+      "subcellularLocations": [
+        {
+          "location": {
+            "value": "Cell membrane",
+            "id": "SL-0039"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "To S.epidermidis EpiB and L.lactis NisB"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305",
+              "source": "PubMed",
+              "id": "1400221"
+            }
+          ],
+          "value": "Was originally proposed to code for two separate adjacent ORFs, SpaE and SpaD"
+        }
+      ],
+      "commentType": "CAUTION"
+    },
+    {
+      "commentType": "SEQUENCE CAUTION",
+      "sequenceCautionType": "Erroneous initiation",
+      "sequence": "AAA22769.1",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ]
+    },
+    {
+      "commentType": "SEQUENCE CAUTION",
+      "sequenceCautionType": "Frameshift",
+      "sequence": "AAA22774.1",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ]
+    },
+    {
+      "commentType": "SEQUENCE CAUTION",
+      "sequenceCautionType": "Frameshift",
+      "sequence": "AAA22775.1",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1030,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Subtilin biosynthesis protein SpaB",
+      "featureId": "PRO_0000072091"
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 126,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 126,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 3; AAA22774",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "L",
+        "alternativeSequences": [
+          "F"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 261,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 261,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 3; AAA22774",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "D",
+        "alternativeSequences": [
+          "N"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 304,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 305,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 3; AAA22774",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "LA",
+        "alternativeSequences": [
+          "AG"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 344,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 344,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 3; AAA22774",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "H",
+        "alternativeSequences": [
+          "K"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 553,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 553,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 3; AAA22774",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "N",
+        "alternativeSequences": [
+          "I"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 584,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 584,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 3; AAA22774",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "F",
+        "alternativeSequences": [
+          "L"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 647,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 647,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 3; AAA22774",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "P",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 730,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 730,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 3; AAA22774",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "E",
+        "alternativeSequences": [
+          "V"
+        ]
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-1003",
+      "category": "Cellular component",
+      "name": "Cell membrane"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-0813",
+      "category": "Biological process",
+      "name": "Transport"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "8117069",
+        "citationType": "journal article",
+        "authors": [
+          "Gutowski-Eckel Z.",
+          "Klein C.",
+          "Siegers K.",
+          "Bohm K.",
+          "Hammelmann M.",
+          "Entian K.-D."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8117069"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/aem.60.1.1-11.1994"
+          }
+        ],
+        "title": "Growth phase-dependent regulation and membrane localization of SpaB, a protein involved in biosynthesis of the lantibiotic subtilin.",
+        "publicationDate": "1994",
+        "journal": "Appl. Environ. Microbiol.",
+        "firstPage": "1",
+        "lastPage": "11",
+        "volume": "60"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 6633 / PCI 219 / NRS 231",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "8085823",
+        "citationType": "journal article",
+        "authors": [
+          "Klein C.",
+          "Entian K.-D."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8085823"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/aem.60.8.2793-2801.1994"
+          }
+        ],
+        "title": "Genes involved in self-protection against the lantibiotic subtilin produced by Bacillus subtilis ATCC 6633.",
+        "publicationDate": "1994",
+        "journal": "Appl. Environ. Microbiol.",
+        "firstPage": "2793",
+        "lastPage": "2801",
+        "volume": "60"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 6633 / PCI 219 / NRS 231",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "1400221",
+        "citationType": "journal article",
+        "authors": [
+          "Chung Y.J.",
+          "Hansen J.N."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "1400221"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.174.20.6699-6702.1992"
+          }
+        ],
+        "title": "Determination of the sequence of spaE and identification of a promoter in the subtilin (spa) operon in Bacillus subtilis.",
+        "publicationDate": "1992",
+        "journal": "J. Bacteriol.",
+        "firstPage": "6699",
+        "lastPage": "6702",
+        "volume": "174"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 6633 / PCI 219 / NRS 231",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "1539969",
+        "citationType": "journal article",
+        "authors": [
+          "Klein C.",
+          "Kaletta C.",
+          "Schnell N.",
+          "Entian K.-D."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "1539969"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/aem.58.1.132-142.1992"
+          }
+        ],
+        "title": "Analysis of genes involved in biosynthesis of the lantibiotic subtilin.",
+        "publicationDate": "1992",
+        "journal": "Appl. Environ. Microbiol.",
+        "firstPage": "132",
+        "lastPage": "142",
+        "volume": "58"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 641-1030"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 6633 / PCI 219 / NRS 231",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "1735728",
+        "citationType": "journal article",
+        "authors": [
+          "Chung Y.J.",
+          "Steen M.T.",
+          "Hansen J.N."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "1735728"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.174.4.1417-1422.1992"
+          }
+        ],
+        "title": "The subtilin gene of Bacillus subtilis ATCC 6633 is encoded in an operon that contains a homolog of the hemolysin B transport protein.",
+        "publicationDate": "1992",
+        "journal": "J. Bacteriol.",
+        "firstPage": "1417",
+        "lastPage": "1422",
+        "volume": "174"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 852-1030"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 6633 / PCI 219 / NRS 231",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "L24075",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA22779.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "U09819",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAB91586.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "M99263",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA22774.1"
+        },
+        {
+          "key": "Status",
+          "value": "ALT_FRAME"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "M99263",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA22775.1"
+        },
+        {
+          "key": "Status",
+          "value": "ALT_FRAME"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "M86869",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA22837.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "M83944",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA22769.1"
+        },
+        {
+          "key": "Status",
+          "value": "ALT_INIT"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "U38418",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAB01536.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "I39987",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "I39987"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "P39774",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "P39774",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005886",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:plasma membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR006827",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Lant_deHydtase_N"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR023809",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Thiopep_bacteriocin_synth_dom"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "TIGR03891",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "thiopep_ocin"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF14028",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Lant_dehydr_C"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF04738",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Lant_dehydr_N"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MKSLYTPTDYYMIRVPLVHQDLKNENSQDIDQLLHDLCNDSLFREQILVSSRTLYETIHTFLQAPDKLKGKKKRNFQQAILKYATRRATRTTPFGLFSSVGIGSFSDKNHLSFNQHSFYKKARVDLEWLYQLIRKLENEYTDRLSFTLNSACYIKGDRAYLLYSTDGKSEEVSVRATSVFYLINELCGESAAYQDIIRCLIDNYPNTPINKINQYVADLIDKEFLISNLRPPMTVSDQFQYLIDQAESRHIPNELIQACKDIQYQIDAYNRITIGEGEHQYLNLIETMNKLIKASSPLQVDAGLADSSIQLDNETSLAISELASMFTYMASPSANTLDHLEKYHNVFLERYGYEREVPLLEMLCSSTGIGAPATYTNPANEFFEETSFGEQFSPEMKQFFMRKYFESVRKKAPIQLDDETFHRICNSEIADEEIPLSFELNFFVKLRNGRVKLYLGPNVGSTRAGKTFGRFSHMSDSISEIIKTLHNKEKELTECNTKVCELSIVPNQTRSGNVTRNVSYREKEMSLFTNSALHLNDSVKAEDILIGINKDHNFYARHKTTGEILSFESNHMFNPLLMTNAVRFLLEISRDGKRKWNDFPWFSIYSDFKYIPEIKYKEITLSCEQWLIYKNDLSMHSNASLEEIKSPFFEFHRTYELPQTFYIVNADNRLLIDIENDCTLDVFFWELKKTNHNQPLQLVAVEHDADALMDRNQNDYSGEIVVPLLRKQPEKPLYLPVLNAIEGSGSDRIKMPFEDWLFIKLYCKQTREEELIAFEIADFYNQISDQYPVRHFFMRYRDPKPHIRLRFNGKAEVLYSLFPQLLNWLKSLREKGLVSESVITQYEREIERYGGLSLMEAAEQLFCEDSKVVEMMIRMHRMKDITISKEIAGMVSVIQFLEQFELTFEEQLTFLERNSLQNEYRTEFKKDREMYIEICNSDRDWDNLKKTSDGGMLYETLKTRKMAAAHYAFLIKKAFDNKDEVYSRIGSIIHLHCNRLFGTDRELENKILTLCRHSLYAQRYQKMNGSLAWK",
+    "length": 1030,
+    "molWeight": 120529,
+    "crc64": "89F3B147E02A9DF8",
+    "md5": "73138BB8FA2D83F5E15DE7223B9B66F1"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "SIMILARITY": 1,
+      "CAUTION": 1,
+      "SEQUENCE CAUTION": 3
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Sequence conflict": 8
+    },
+    "uniParcId": "UPI0000135D92"
+  }
+}

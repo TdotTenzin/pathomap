@@ -1,0 +1,414 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "Q04881",
+  "uniProtkbId": "OPA68_NEIGO",
+  "entryAudit": {
+    "firstPublicDate": "1993-10-01",
+    "lastAnnotationUpdateDate": "2026-01-28",
+    "lastSequenceUpdateDate": "1993-10-01",
+    "entryVersion": 74,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 2.0,
+  "organism": {
+    "scientificName": "Neisseria gonorrhoeae",
+    "taxonId": 485,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Betaproteobacteria",
+      "Neisseriales",
+      "Neisseriaceae",
+      "Neisseria"
+    ]
+  },
+  "proteinExistence": "3: Inferred from homology",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Opacity protein opA68"
+      }
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "opA27.5"
+        }
+      }
+    ],
+    "flag": "Fragment,Precursor"
+  },
+  "comments": [
+    {
+      "texts": [
+        {
+          "value": "Implicated in a number of adherence functions. OPA proteins are implicated in pathogenesis and are subject to phase variation"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "value": "Cell outer membrane",
+            "id": "SL-0040"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the opacity porin family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Signal",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "OUTSIDE"
+        },
+        "end": {
+          "value": 1,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 2,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 238,
+          "modifier": "OUTSIDE"
+        }
+      },
+      "description": "Opacity protein opA68",
+      "featureId": "PRO_0000021904"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 88,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 109,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Non-terminal residue",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1,
+          "modifier": "EXACT"
+        }
+      },
+      "description": ""
+    },
+    {
+      "type": "Non-terminal residue",
+      "location": {
+        "start": {
+          "value": 238,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 238,
+          "modifier": "EXACT"
+        }
+      },
+      "description": ""
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0998",
+      "category": "Cellular component",
+      "name": "Cell outer membrane"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-0732",
+      "category": "Domain",
+      "name": "Signal"
+    },
+    {
+      "id": "KW-0812",
+      "category": "Domain",
+      "name": "Transmembrane"
+    },
+    {
+      "id": "KW-1134",
+      "category": "Domain",
+      "name": "Transmembrane beta strand"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "8440254",
+        "citationType": "journal article",
+        "authors": [
+          "Kupsch E.-M.",
+          "Knepper B.",
+          "Kuroki T.",
+          "Heuer I.",
+          "Meyer T.F."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8440254"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1002/j.1460-2075.1993.tb05697.x"
+          }
+        ],
+        "title": "Variable opacity (Opa) outer membrane proteins account for the cell tropisms displayed by Neisseria gonorrhoeae for human leukocytes and epithelial cells.",
+        "publicationDate": "1993",
+        "journal": "EMBO J.",
+        "firstPage": "641",
+        "lastPage": "650",
+        "volume": "12"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "VP1",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "Z18936",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAA79369.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "S36344",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "S36344"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q04881",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "Q04881",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Reactome",
+      "id": "R-HSA-202733",
+      "properties": [
+        {
+          "key": "PathwayName",
+          "value": "Cell surface interactions at the vascular wall"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009279",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cell outer membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "TAS:Reactome"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0015288",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:porin activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "2.40.160.20:FF:000005",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Opacity protein opA54"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.40.160.20",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR011250",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OMP/PagP_B-barrel"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR003394",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Porin_opacity"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF02462",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Opacity"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF56925",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OMPA-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "AGEGNGRGPYVQADLAYAYEHITHDYPKPTDPSKGKLSTVSDYFRNIRTHSIHPRVSVGYDFGGWRIAADYARYRKWNDSKYSVSIKNLQRRTSNGNRRDRKTENQENGSFHAVSSLGLSAVYDFKLNDKFKPYIGARVAYGHVRHSIDSTKKITQFLTTAGARGTVSTVHPPYKSTQDAHHQSDSIRRVGLGVIAGVGFGITPKLTLDAGYRYHNWGRLENTRFKTHEASLGVRYRF",
+    "length": 238,
+    "molWeight": 26871,
+    "crc64": "23237779701AD68F",
+    "md5": "4EC0D065C0DFA94592FF8A57DA699840"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Signal": 1,
+      "Chain": 1,
+      "Region": 1,
+      "Non-terminal residue": 2
+    },
+    "uniParcId": "UPI0000130D4F"
+  }
+}

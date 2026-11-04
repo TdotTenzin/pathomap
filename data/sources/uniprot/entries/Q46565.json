@@ -1,0 +1,525 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "Q46565",
+  "secondaryAccessions": [
+    "Q46556",
+    "Q46566",
+    "Q46570",
+    "Q46572"
+  ],
+  "uniProtkbId": "VAPD_DICNO",
+  "entryAudit": {
+    "firstPublicDate": "1999-07-15",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "1996-11-01",
+    "entryVersion": 62,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 2.0,
+  "organism": {
+    "scientificName": "Dichelobacter nodosus",
+    "commonName": "Bacteroides nodosus",
+    "taxonId": 870,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Gammaproteobacteria",
+      "Cardiobacteriales",
+      "Cardiobacteriaceae",
+      "Dichelobacter"
+    ]
+  },
+  "proteinExistence": "3: Inferred from homology",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Endoribonuclease VapD"
+      },
+      "ecNumbers": [
+        {
+          "value": "3.1.-.-"
+        }
+      ]
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "Virulence-associated protein D"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "vapD"
+      }
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250"
+            }
+          ],
+          "value": "Cleaves ssRNA, mostly between U:A"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250"
+            }
+          ],
+          "value": "Homodimer"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the VapD ribonuclease family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 93,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Endoribonuclease VapD",
+      "featureId": "PRO_0000217270"
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0378",
+      "category": "Molecular function",
+      "name": "Hydrolase"
+    },
+    {
+      "id": "KW-0540",
+      "category": "Molecular function",
+      "name": "Nuclease"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "1748867",
+        "citationType": "journal article",
+        "authors": [
+          "Katz M.E.",
+          "Howarth P.M.",
+          "Yong W.K.",
+          "Riffkin G.G.",
+          "Depiazzi L.J.",
+          "Rood J.I."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "1748867"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1099/00221287-137-9-2117"
+          }
+        ],
+        "title": "Identification of three gene regions associated with virulence in Dichelobacter nodosus, the causative agent of ovine footrot.",
+        "publicationDate": "1991",
+        "journal": "J. Gen. Microbiol.",
+        "firstPage": "2117",
+        "lastPage": "2124",
+        "volume": "137"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "A198",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "1398971",
+        "citationType": "journal article",
+        "authors": [
+          "Katz M.E.",
+          "Rood J.I.",
+          "Strugnell R.A."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "1398971"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.60.11.4586-4592.1992"
+          }
+        ],
+        "title": "Molecular characterization of a genomic region associated with virulence in Dichelobacter nodosus.",
+        "publicationDate": "1992",
+        "journal": "Infect. Immun.",
+        "firstPage": "4586",
+        "lastPage": "4592",
+        "volume": "60"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "A198",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "8169216",
+        "citationType": "journal article",
+        "authors": [
+          "Katz M.E.",
+          "Wright C.L.",
+          "Gartside T.S.",
+          "Cheetham B.F.",
+          "Doidge C.V.",
+          "Moses E.K.",
+          "Rood J.I."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8169216"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.176.9.2663-2669.1994"
+          }
+        ],
+        "title": "Genetic organization of the duplicated vap region of the Dichelobacter nodosus genome.",
+        "publicationDate": "1994",
+        "journal": "J. Bacteriol.",
+        "firstPage": "2663",
+        "lastPage": "2669",
+        "volume": "176"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "A198",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "L31763",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAB00950.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "L31763",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAB00940.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "L22308",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA20204.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Unassigned_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "L22307",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA20123.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Unassigned_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "M74565",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA23348.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "A49205",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "A49205"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_012030611.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NZ_CBCRUT010000001.1"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q46565",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "Q46565",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "310198763",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|870.4.peg.1264",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AFKVEDW",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0004518",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:nuclease activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0003723",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:RNA binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.30.70.240",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "-"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR016368",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "VapD"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR019199",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Virulence_VapD/CRISPR_Cas2"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF09827",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CRISPR_Cas2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PIRSF",
+      "id": "PIRSF002882",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "VapD"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MYAIAFDLEIAELKKHYGEPYNGAYLEIGKELKAIGFEWTQGSVYLSNDNNLATVYRAISTLSKIDWFKSSVRDIRAFKVEDWSDFTAIVKGA",
+    "length": 93,
+    "molWeight": 10590,
+    "crc64": "15112582A678D9B0",
+    "md5": "29A2FB06369DDCA2D4C5E2F1A911C9D1"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBUNIT": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1
+    },
+    "uniParcId": "UPI0000138110"
+  }
+}

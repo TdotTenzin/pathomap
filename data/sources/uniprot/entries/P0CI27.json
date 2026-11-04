@@ -1,0 +1,1952 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "P0CI27",
+  "secondaryAccessions": [
+    "O84121",
+    "Q99Q56",
+    "Q9AM94",
+    "Q9AMA7",
+    "Q9AMA8",
+    "Q9AMA9",
+    "Q9AMB0",
+    "Q9AMB1",
+    "Q9F7K9",
+    "Q9RFX7"
+  ],
+  "uniProtkbId": "INCA_CHLTR",
+  "entryAudit": {
+    "firstPublicDate": "2010-11-02",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2010-11-02",
+    "entryVersion": 61,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 4.0,
+  "organism": {
+    "scientificName": "Chlamydia trachomatis serovar D (strain ATCC VR-885 / DSM 19411 / UW-3/Cx)",
+    "taxonId": 272561,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Chlamydiota",
+      "Chlamydiia",
+      "Chlamydiales",
+      "Chlamydiaceae",
+      "Chlamydia/Chlamydophila group",
+      "Chlamydia"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Inclusion membrane protein A"
+      }
+    }
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "incA"
+      },
+      "orderedLocusNames": [
+        {
+          "value": "CT_119"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "A0A0H3MD02"
+            }
+          ],
+          "value": "Chlamydia replicate within an intracellular vacuole, termed an inclusion. IncA is probably involved in the homotypic fusion of inclusions"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "A0A0H3MD02"
+            }
+          ],
+          "value": "Forms homooligomers"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "note": {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250",
+                "source": "UniProtKB",
+                "id": "A0A0H3MD02"
+              },
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "9826388"
+              },
+              {
+                "evidenceCode": "ECO:0000305",
+                "source": "PubMed",
+                "id": "10603409"
+              },
+              {
+                "evidenceCode": "ECO:0000305",
+                "source": "PubMed",
+                "id": "11402010"
+              }
+            ],
+            "value": "Secreted, probably by a type III secretion system (Probable) (PubMed:9826388). Localized in the inclusion membrane (Probable) (PubMed:9826388). In the inclusion, the C-terminus faces the host cytosol (By similarity)"
+          }
+        ]
+      },
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250",
+                "source": "UniProtKB",
+                "id": "A0A0H3MD02"
+              }
+            ],
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        },
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "9826388"
+              },
+              {
+                "evidenceCode": "ECO:0000305",
+                "source": "PubMed",
+                "id": "10603409"
+              },
+              {
+                "evidenceCode": "ECO:0000305",
+                "source": "PubMed",
+                "id": "11402010"
+              }
+            ],
+            "value": "Host vacuole, host pathogen-containing vacuole, host pathogen-containing vacuole membrane",
+            "id": "SL-0509"
+          },
+          "topology": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255"
+              }
+            ],
+            "value": "Multi-pass membrane protein",
+            "id": "SL-9909"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "A0A0H3MD02"
+            }
+          ],
+          "value": "IncA proteins share the same general organization: a short N-terminal domain, a large bilobed hydrophobic domain, and a C-terminal cytoplasmic domain"
+        }
+      ],
+      "commentType": "DOMAIN"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the IncA family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 273,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Inclusion membrane protein A",
+      "featureId": "PRO_0000084196"
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 41,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 61,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Transmembrane",
+      "location": {
+        "start": {
+          "value": 64,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 84,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Helical",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 20,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 254,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 273,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Coiled coil",
+      "location": {
+        "start": {
+          "value": 172,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 233,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 254,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 273,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Polar residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 47,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 47,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: D(s)/2923, D/IC-CAL8, D', F9334, D-9291, J9336, J9346, J(s)/5942, E/DK-20, F/MRC-301, E/4a, E/12a and E/7a",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "I",
+        "alternativeSequences": [
+          "T"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 62,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 62,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: H/UW-4",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "A",
+        "alternativeSequences": [
+          "T"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 90,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 90,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: C/UW-1",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "L",
+        "alternativeSequences": [
+          "P"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 116,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 116,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: D(s)2923, D/IC-CAL8, D', F9334, D-9291, J9336 and J9346",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "E",
+        "alternativeSequences": [
+          "K"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 119,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 119,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: Da/MT-566",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "H",
+        "alternativeSequences": [
+          "L"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 180,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 180,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: Da/MT-566",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "G",
+        "alternativeSequences": [
+          "D"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 218,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 218,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: J9329 and Ia/9309",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "T",
+        "alternativeSequences": [
+          "I"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 222,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 222,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: B9227",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "S",
+        "alternativeSequences": [
+          "N"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 252,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 252,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: C/UW-1",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "C",
+        "alternativeSequences": [
+          "R"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 260,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 260,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: K/UW-31",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "S",
+        "alternativeSequences": [
+          "P"
+        ]
+      }
+    },
+    {
+      "type": "Natural variant",
+      "location": {
+        "start": {
+          "value": 261,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 261,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in strain: I/UW-12",
+      "featureId": "",
+      "alternativeSequence": {
+        "originalSequence": "S",
+        "alternativeSequences": [
+          "F"
+        ]
+      }
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 89,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 123,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6E7E"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 124,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 127,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6E7E"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 129,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 142,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6E7E"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 145,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 149,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6E7E"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 150,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 158,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6E7E"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 164,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 167,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6E7E"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 172,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 192,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6E7E"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 195,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 204,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6E7E"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 210,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 246,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "6E7E"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0002",
+      "category": "Technical term",
+      "name": "3D-structure"
+    },
+    {
+      "id": "KW-0175",
+      "category": "Domain",
+      "name": "Coiled coil"
+    },
+    {
+      "id": "KW-1043",
+      "category": "Cellular component",
+      "name": "Host membrane"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0812",
+      "category": "Domain",
+      "name": "Transmembrane"
+    },
+    {
+      "id": "KW-1133",
+      "category": "Domain",
+      "name": "Transmembrane helix"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "10603409",
+        "citationType": "journal article",
+        "authors": [
+          "Suchland R.J.",
+          "Rockey D.D.",
+          "Bannantine J.P.",
+          "Stamm W.E."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "10603409"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.68.1.360-367.2000"
+          }
+        ],
+        "title": "Isolates of Chlamydia trachomatis that occupy nonfusogenic inclusions lack IncA, a protein localized to the inclusion membrane.",
+        "publicationDate": "2000",
+        "journal": "Infect. Immun.",
+        "firstPage": "360",
+        "lastPage": "367",
+        "volume": "68"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]",
+        "SUBCELLULAR LOCATION"
+      ],
+      "referenceComments": [
+        {
+          "value": "D(s)/2923",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "11402010",
+        "citationType": "journal article",
+        "authors": [
+          "Pannekoek Y.",
+          "van der Ende A.",
+          "Eijk P.P.",
+          "van Marle J.",
+          "de Witte M.A.",
+          "Ossewaarde J.M.",
+          "van den Brule A.J.C.",
+          "Morre S.A.",
+          "Dankert J."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11402010"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.69.7.4654-4656.2001"
+          }
+        ],
+        "title": "Normal IncA expression and fusogenicity of inclusions in Chlamydia trachomatis isolates with the incA I47T mutation.",
+        "publicationDate": "2001",
+        "journal": "Infect. Immun.",
+        "firstPage": "4654",
+        "lastPage": "4656",
+        "volume": "69"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]",
+        "SUBCELLULAR LOCATION"
+      ],
+      "referenceComments": [
+        {
+          "value": "A/Sa-1",
+          "type": "STRAIN"
+        },
+        {
+          "value": "Ba/Apache-2",
+          "type": "STRAIN"
+        },
+        {
+          "value": "C/UW-1",
+          "type": "STRAIN"
+        },
+        {
+          "value": "D'",
+          "type": "STRAIN"
+        },
+        {
+          "value": "D-/NL-326",
+          "type": "STRAIN"
+        },
+        {
+          "value": "D/IC-CAL8",
+          "type": "STRAIN"
+        },
+        {
+          "value": "Da/MT-566",
+          "type": "STRAIN"
+        },
+        {
+          "value": "E/10a",
+          "type": "STRAIN"
+        },
+        {
+          "value": "E/11a",
+          "type": "STRAIN"
+        },
+        {
+          "value": "E/12a",
+          "type": "STRAIN"
+        },
+        {
+          "value": "E/2b",
+          "type": "STRAIN"
+        },
+        {
+          "value": "E/4a",
+          "type": "STRAIN"
+        },
+        {
+          "value": "E/7a",
+          "type": "STRAIN"
+        },
+        {
+          "value": "E/DK-20",
+          "type": "STRAIN"
+        },
+        {
+          "value": "F/MRC-301",
+          "type": "STRAIN"
+        },
+        {
+          "value": "G/IOL-238",
+          "type": "STRAIN"
+        },
+        {
+          "value": "H/UW-4",
+          "type": "STRAIN"
+        },
+        {
+          "value": "I'",
+          "type": "STRAIN"
+        },
+        {
+          "value": "I/UW-12",
+          "type": "STRAIN"
+        },
+        {
+          "value": "J/UW-36",
+          "type": "STRAIN"
+        },
+        {
+          "value": "K/UW-31",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "12177343",
+        "citationType": "journal article",
+        "authors": [
+          "Rockey D.D.",
+          "Viratyosin W.",
+          "Bannantine J.P.",
+          "Suchland R.J.",
+          "Stamm W.E."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "12177343"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1099/00221287-148-8-2497"
+          }
+        ],
+        "title": "Diversity within inc genes of clinical Chlamydia trachomatis variant isolates that occupy non-fusogenic inclusions.",
+        "publicationDate": "2002",
+        "journal": "Microbiology",
+        "firstPage": "2497",
+        "lastPage": "2505",
+        "volume": "148"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "B9227",
+          "type": "STRAIN"
+        },
+        {
+          "value": "D-9291",
+          "type": "STRAIN"
+        },
+        {
+          "value": "F9334",
+          "type": "STRAIN"
+        },
+        {
+          "value": "G(s)/459",
+          "type": "STRAIN"
+        },
+        {
+          "value": "Ia/9309",
+          "type": "STRAIN"
+        },
+        {
+          "value": "J(s)/5942",
+          "type": "STRAIN"
+        },
+        {
+          "value": "J9329",
+          "type": "STRAIN"
+        },
+        {
+          "value": "J9336",
+          "type": "STRAIN"
+        },
+        {
+          "value": "J9346",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "9784136",
+        "citationType": "journal article",
+        "authors": [
+          "Stephens R.S.",
+          "Kalman S.",
+          "Lammel C.J.",
+          "Fan J.",
+          "Marathe R.",
+          "Aravind L.",
+          "Mitchell W.P.",
+          "Olinger L.",
+          "Tatusov R.L.",
+          "Zhao Q.",
+          "Koonin E.V.",
+          "Davis R.W."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9784136"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1126/science.282.5389.754"
+          }
+        ],
+        "title": "Genome sequence of an obligate intracellular pathogen of humans: Chlamydia trachomatis.",
+        "publicationDate": "1998",
+        "journal": "Science",
+        "firstPage": "754",
+        "lastPage": "759",
+        "volume": "282"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC VR-885 / DSM 19411 / UW-3/Cx",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "9826388",
+        "citationType": "journal article",
+        "authors": [
+          "Bannantine J.P.",
+          "Stamm W.E.",
+          "Suchland R.J.",
+          "Rockey D.D."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9826388"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.66.12.6017-6021.1998"
+          }
+        ],
+        "title": "Chlamydia trachomatis IncA is localized to the inclusion membrane and is recognized by antisera from infected humans and primates.",
+        "publicationDate": "1998",
+        "journal": "Infect. Immun.",
+        "firstPage": "6017",
+        "lastPage": "6021",
+        "volume": "66"
+      },
+      "referencePositions": [
+        "SUBCELLULAR LOCATION"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC VR-885 / DSM 19411 / UW-3/Cx",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AF163773",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAD48440.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF326992",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAG61089.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF326994",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAG61091.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF326995",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAG61092.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF326996",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAG61093.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF326997",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAG61094.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF326998",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAG61095.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF326999",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAG61096.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF327000",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAG61097.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF327001",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAG61098.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF327002",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAG61099.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF327003",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAG61100.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF327004",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAG61101.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF327005",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAG61102.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF327006",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAG61103.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF327007",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAG61104.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF327011",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAG61108.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF327012",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAG61109.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF327013",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAG61110.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF327014",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAG61111.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF327015",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAG61112.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF327016",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAG61113.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF327326",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAK11230.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF327327",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAK11231.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF327328",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAK11232.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF327330",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAK11234.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF327331",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAK11235.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF327332",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAK11236.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF327333",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAK11237.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF279346",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAG31466.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AF279354",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAG31469.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AE001273",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAC67710.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "C71553",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "C71553"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_219622.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_000117.1"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_009871466.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_000117.1"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6E6A",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.95 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B=87-246"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6E7E",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.12 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=87-246"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "P0CI27",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "P0CI27",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "IntAct",
+      "id": "P0CI27",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "3"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "272561.CT_119",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblBacteria",
+      "id": "AAC67710",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAC67710"
+        },
+        {
+          "key": "GeneId",
+          "value": "CT_119"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "884147",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "ctr:CT_119",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|272561.5.peg.131",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_067042_0_0_0",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "InParanoid",
+      "id": "P0CI27",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OrthoDB",
+      "id": "19210at2",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000000431",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "ISS:UniProtKB"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0140221",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:pathogen-containing vacuole membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "11402010"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MTTPTLIVTPPSPPAPSYSANRVPQPSLMDKIKKIAAIASLILIGTIGFLALLGHLVGFLIAPQITIVLLALFIISLAGNALYLQKTANLHLYQDLQREVGSLKEINFMLSVLQKEFLHLSKEFATTSKDLSAVSQDFYSCLQGFRDNYKGFESLLDEYKNSTEEMRKLFSQEIIADLKGSVASLREEIRFLTPLAEEVRRLAHNQQSLTVVIEELKTIRDSLRDEIGQLSQLSKTLTSQIALQRKESSDLCSQIRETLSSPRKSASPSTKSS",
+    "length": 273,
+    "molWeight": 30327,
+    "crc64": "6945AE7E8B8BEBF3",
+    "md5": "086370D427443C923BD75A104B8217F7"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBUNIT": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "DOMAIN": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Transmembrane": 2,
+      "Region": 2,
+      "Coiled coil": 1,
+      "Compositional bias": 1,
+      "Natural variant": 11,
+      "Helix": 8,
+      "Turn": 1
+    },
+    "uniParcId": "UPI00000D4510"
+  }
+}

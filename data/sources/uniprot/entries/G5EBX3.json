@@ -1,0 +1,1072 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "G5EBX3",
+  "uniProtkbId": "CYL1_CAEEL",
+  "entryAudit": {
+    "firstPublicDate": "2021-09-29",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2011-12-14",
+    "entryVersion": 106,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 3.0,
+  "organism": {
+    "scientificName": "Caenorhabditis elegans",
+    "taxonId": 6239,
+    "evidences": [
+      {
+        "evidenceCode": "ECO:0000312",
+        "source": "Proteomes",
+        "id": "UP000001940"
+      }
+    ],
+    "lineage": [
+      "Eukaryota",
+      "Metazoa",
+      "Ecdysozoa",
+      "Nematoda",
+      "Chromadorea",
+      "Rhabditida",
+      "Rhabditina",
+      "Rhabditomorpha",
+      "Rhabditoidea",
+      "Rhabditidae",
+      "Peloderinae",
+      "Caenorhabditis"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000305"
+          }
+        ],
+        "value": "Cyclin L homolog cyl-1"
+      }
+    }
+  },
+  "genes": [
+    {
+      "geneName": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000312",
+            "source": "WormBase",
+            "id": "C52E4.6a"
+          }
+        ],
+        "value": "cyl-1"
+      },
+      "orfNames": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000312",
+              "source": "WormBase",
+              "id": "C52E4.6a"
+            }
+          ],
+          "value": "C52E4.6"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250",
+              "source": "UniProtKB",
+              "id": "Q9UK58"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "15611166"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "27923661"
+            }
+          ],
+          "value": "Involved in pre-mRNA splicing (By similarity). Functions in association with cyclin-dependent kinases (CDKs) (By similarity). Involved in induction of expression of heat shock protein hsp-16.2 in response to heat shock (PubMed:15611166). Plays a role in male tail development, perhaps acting together with cell cycle regulators cdc-25.2, cdk-1, cyb-3, and cyd-1 (PubMed:27923661)"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "27923661"
+            }
+          ],
+          "value": "RNAi-mediated knockdown causes abnormal male tail morphology"
+        }
+      ],
+      "commentType": "DISRUPTION PHENOTYPE"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000255",
+              "source": "RuleBase",
+              "id": "RU000383"
+            }
+          ],
+          "value": "Belongs to the cyclin family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 480,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Cyclin L homolog cyl-1",
+      "featureId": "PRO_0000453733"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 91,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 230,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Cyclin N-terminal",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000255"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 25,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 58,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 368,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 480,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 33,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 44,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Basic and acidic residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 45,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 58,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Polar residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 384,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 409,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Basic and acidic residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 418,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 442,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Basic and acidic residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 443,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 453,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Basic residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Compositional bias",
+      "location": {
+        "start": {
+          "value": 454,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 472,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Basic and acidic residues",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 158,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 158,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "In sy433; Reduces induction of expression of heat shock protein hsp-16.2 in response to heat-shock.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "15611166"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "L",
+        "alternativeSequences": [
+          "F"
+        ]
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0195",
+      "category": "Molecular function",
+      "name": "Cyclin"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "15611166",
+        "citationType": "journal article",
+        "authors": [
+          "Hajdu-Cronin Y.M.",
+          "Chen W.J.",
+          "Sternberg P.W."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15611166"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1534/genetics.104.028423"
+          }
+        ],
+        "title": "The L-type cyclin CYL-1 and the heat-shock-factor HSF-1 are required for heat-shock-induced protein expression in Caenorhabditis elegans.",
+        "publicationDate": "2004",
+        "journal": "Genetics",
+        "firstPage": "1937",
+        "lastPage": "1949",
+        "volume": "168"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [MRNA]",
+        "FUNCTION",
+        "MUTAGENESIS OF LEU-158"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000312",
+          "source": "EMBL",
+          "id": "AAS64750.1"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "9851916",
+        "citationType": "journal article",
+        "authoringGroup": [
+          "The C. elegans sequencing consortium"
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9851916"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1126/science.282.5396.2012"
+          }
+        ],
+        "title": "Genome sequence of the nematode C. elegans: a platform for investigating biology.",
+        "publicationDate": "1998",
+        "journal": "Science",
+        "firstPage": "2012",
+        "lastPage": "2018",
+        "volume": "282"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000312",
+              "source": "Proteomes",
+              "id": "UP000001940"
+            }
+          ],
+          "value": "Bristol N2",
+          "type": "STRAIN"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000312",
+          "source": "Proteomes",
+          "id": "UP000001940"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "27923661",
+        "citationType": "journal article",
+        "authors": [
+          "Oh S.",
+          "Yoon S.",
+          "Youn E.",
+          "Kawasaki I.",
+          "Shim Y.H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "27923661"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/j.bbrc.2016.12.014"
+          }
+        ],
+        "title": "cdc-25.2, a Caenorhabditis elegans ortholog of cdc25, is required for male tail morphogenesis.",
+        "publicationDate": "2017",
+        "journal": "Biochem. Biophys. Res. Commun.",
+        "firstPage": "1213",
+        "lastPage": "1218",
+        "volume": "482"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "DISRUPTION PHENOTYPE"
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AY557405",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAS64750.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "BX284605",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAB01416.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "T20154",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "T20154"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "T20155",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "T20155"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_506007.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NM_073606.6"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "G5EBX3",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "G5EBX3",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "FunCoup",
+      "id": "G5EBX3",
+      "properties": [
+        {
+          "key": "Number of interactors",
+          "value": "3371"
+        }
+      ]
+    },
+    {
+      "database": "IntAct",
+      "id": "G5EBX3",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "6239.C52E4.6a.2",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PaxDb",
+      "id": "6239-C52E4.6a.2",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PeptideAtlas",
+      "id": "G5EBX3",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblMetazoa",
+      "id": "C52E4.6a.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "C52E4.6a.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "WBGene00000876"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "179643",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "cel:CELE_C52E4.6",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "AGR",
+      "id": "WB:WBGene00000876",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "CTD",
+      "id": "179643",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "WormBase",
+      "id": "C52E4.6a",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CE17597"
+        },
+        {
+          "key": "GeneId",
+          "value": "WBGene00000876"
+        },
+        {
+          "key": "GeneName",
+          "value": "cyl-1"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "KOG0835",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Eukaryota"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_022000_6_0_1",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "InParanoid",
+      "id": "G5EBX3",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "AASCIWL",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OrthoDB",
+      "id": "10264655at2759",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PhylomeDB",
+      "id": "G5EBX3",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PRO",
+      "id": "PR:G5EBX3",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000001940",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome V"
+        }
+      ]
+    },
+    {
+      "database": "Bgee",
+      "id": "WBGene00000876",
+      "properties": [
+        {
+          "key": "ExpressionPatterns",
+          "value": "Expressed in embryo and 4 other cell types or tissues"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005634",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:nucleus"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0016538",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:cyclin-dependent protein serine/threonine kinase regulator activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0045138",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:nematode male tail tip morphogenesis"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IMP:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000315",
+          "source": "PubMed",
+          "id": "27923661"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0006357",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:regulation of transcription by RNA polymerase II"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd20532",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CYCLIN_CCNL_rpt1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd20533",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CYCLIN_CCNL_rpt2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "1.10.472.10:FF:000108",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cyclin-dependent protein kinase regulator, putative"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "1.10.472.10:FF:000315",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "RNA polymerase II holoenzyme cyclin-like subunit"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.10.472.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cyclin-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR013763",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cyclin-like_dom"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036915",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cyclin-like_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR043198",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cyclin/Ssn8"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR006671",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cyclin_N"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR10026",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CYCLIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00134",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cyclin_N"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PIRSF",
+      "id": "PIRSF036580",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cyclin_L"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00385",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CYCLIN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF47954",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cyclin-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "2"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MASFVEMRKLAEAKVQNMIRTIVKPKEQNGNVEPKKEEDEKFESTYKQNENTQITPSSFGKRPLYSKVDINCDKWLMTLDEESRLKIDNPPSLVDGLSKETESELRYLGCELIQQGAILLKLPQTAAATGQILFQRYYYQKSFVRYHFEHAVQACLLLASKIEEEPRRPREVYNVFHRLERLHRLQQSGHDINKETTRGMKPPAVDMNYINTKQHMINSERRILATLGFVVHVKHPHRLIVAYGHTLGITQSRPDILQRSWNYMNDGLRTDIFMRYKPETIACACIFLAARTVENPIALPSTPFHWFEAFDTSDRDVEAIALQLVGLYARRTFPNWPRIKAELDALRSVKDAEMKAVKAKEIAENLAKMAPDGEKSTSTVTIGKDSRKVSPDRKNGTKDRGEADRGKKEKDRHRRRSNDRDGRGDRRDRDKDRGDRRKDEKKDRRKRTRSRSRDRKDKNRNRDVGKRYRKESSTPPRSRR",
+    "length": 480,
+    "molWeight": 55993,
+    "crc64": "190A6FDE9B96C7B4",
+    "md5": "3228F5BD3588ADE77EB1515FD9497050"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "DISRUPTION PHENOTYPE": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Domain": 1,
+      "Region": 2,
+      "Compositional bias": 6,
+      "Mutagenesis": 1
+    },
+    "uniParcId": "UPI0000164209"
+  }
+}

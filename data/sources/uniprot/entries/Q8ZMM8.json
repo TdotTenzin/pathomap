@@ -1,0 +1,1411 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "Q8ZMM8",
+  "secondaryAccessions": [
+    "Q6QNB4"
+  ],
+  "uniProtkbId": "PIPB2_SALTY",
+  "entryAudit": {
+    "firstPublicDate": "2007-02-20",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2002-03-01",
+    "entryVersion": 112,
+    "sequenceVersion": 1
+  },
+  "annotationScore": 4.0,
+  "organism": {
+    "scientificName": "Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)",
+    "taxonId": 99287,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Gammaproteobacteria",
+      "Enterobacterales",
+      "Enterobacteriaceae",
+      "Salmonella"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Secreted effector protein PipB2"
+      }
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "Type III effector PipB2"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "pipB2"
+      },
+      "orderedLocusNames": [
+        {
+          "value": "STM2780"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "12864852"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "15987736"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "16938850"
+            }
+          ],
+          "value": "Effector proteins function to alter host cell physiology and promote bacterial survival in host tissues. Involved in the reorganization of late endosome/lysosome (LE/Lys) compartments in mammalian cells. Necessary and sufficient to link kinesin-1 onto the Salmonella-containing vacuole (SCV) membrane. Required for centrifugal extension of lysosomal glycoprotein-rich membrane tubules, known as Salmonella-induced filaments (Sifs), away from the SCV and toward the cell periphery. Required for virulence, but not for intracellular survival and replication in phagocytic cells"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "16938850"
+            }
+          ],
+          "value": "Interacts with the host kinesin light chain (KLC), a subunit of the kinesin-1 motor complex"
+        }
+      ],
+      "commentType": "SUBUNIT"
+    },
+    {
+      "commentType": "INTERACTION",
+      "interactions": [
+        {
+          "interactantOne": {
+            "uniProtKBAccession": "Q8ZMM8",
+            "intActId": "EBI-15598815"
+          },
+          "interactantTwo": {
+            "uniProtKBAccession": "Q07866",
+            "geneName": "KLC1",
+            "intActId": "EBI-721019"
+          },
+          "numberOfExperiments": 4,
+          "organismDiffer": true
+        }
+      ]
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "note": {
+        "texts": [
+          {
+            "value": "Secreted via the type III secretion system 2 (SPI-2 T3SS), and delivered into the host cell. In phagocytic cells localizes to the Salmonella-containing vacuole (SCV) and tubular extensions from the SCV, Salmonella-induced filaments (Sifs). In epithelial cells localizes to peripheral vesicles, in addition to SCVs and Sifs. Concentrates in detergent-resistant microdomains (DRMs), present on the intracellular membranes of SCVs and Sifs"
+          }
+        ]
+      },
+      "subcellularLocations": [
+        {
+          "location": {
+            "value": "Secreted",
+            "id": "SL-0243"
+          }
+        },
+        {
+          "location": {
+            "value": "Host membrane",
+            "id": "SL-0380"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "12864852"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "15813739"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "19858298"
+            }
+          ],
+          "value": "Expression of the gene is regulated by the two-component regulatory system SsrA/SsrB (PubMed:12864852). It is also activated by SlyA and controlled by the two-component regulatory system PhoP/PhoQ (PubMed:15813739). Expressed in host macrophages and when grown in an acidic environment (PubMed:19858298)"
+        }
+      ],
+      "commentType": "INDUCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "12864852"
+            }
+          ],
+          "value": "Contains various tandem pentapeptide repeats in the C-terminal region. The pentapeptide motif is required to efficiently recruit kinesin-1. No position is completely conserved in these repeats, whose consensus sequence is A-[DN]-[FLM]-X-X. The C-terminal 38 amino acid residues, specifically, the C-terminal motif LFNEF, are required for peripheral localization of PipB2 and redistribution of lysosomal-associated membrane protein (LAMP). The N-terminal 225 amino acid residues are sufficient for type III translocation and association with Sifs and SCVs, but not accumulation in peripheral vesicles"
+        }
+      ],
+      "commentType": "DOMAIN"
+    }
+  ],
+  "features": [
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 350,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Secreted effector protein PipB2",
+      "featureId": "PRO_0000278299"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 162,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 201,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Pentapeptide repeat 1"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 202,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 241,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Pentapeptide repeat 2"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 247,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 286,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Pentapeptide repeat 3"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 287,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 326,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Pentapeptide repeat 4"
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 340,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 340,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "No effect.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "15987736"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "T",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 341,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 341,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Prevents the peripheral accumulation of GFP-PipB2 and LAMP-1. Slightly affects its LE/Lys redistribution.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "15987736"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "L",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 342,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 342,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Partial reduction in the peripheral accumulation of GFP-PipB2 and LAMP-1.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "15987736"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "F",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 343,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 343,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Increases LAMP-1 redistribution. No effect on peripheral accumulation of GFP-PipB2.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "15987736"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "N",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 344,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 344,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Decreases LAMP-1 redistribution. No effect on peripheral accumulation of GFP-PipB2.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "15987736"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "E",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 345,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 345,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Prevents LE/Lys redistribution. Does not affect the peripheral accumulation of GFP-PipB2.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "15987736"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "F",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Mutagenesis",
+      "location": {
+        "start": {
+          "value": 346,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 346,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "No effect.",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "15987736"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "Y",
+        "alternativeSequences": [
+          "A"
+        ]
+      }
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 21,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 25,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2LEZ"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 30,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 43,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2LEZ"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 47,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 49,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2LEZ"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 50,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 68,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2LEZ"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 69,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 74,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2LEZ"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 78,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 85,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2LEZ"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 88,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 93,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2LEZ"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 103,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 110,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2LEZ"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 113,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 120,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2LEZ"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 121,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 135,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "2LEZ"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0002",
+      "category": "Technical term",
+      "name": "3D-structure"
+    },
+    {
+      "id": "KW-1043",
+      "category": "Cellular component",
+      "name": "Host membrane"
+    },
+    {
+      "id": "KW-0472",
+      "category": "Cellular component",
+      "name": "Membrane"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0677",
+      "category": "Domain",
+      "name": "Repeat"
+    },
+    {
+      "id": "KW-0964",
+      "category": "Cellular component",
+      "name": "Secreted"
+    },
+    {
+      "id": "KW-0843",
+      "category": "Biological process",
+      "name": "Virulence"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "12864852",
+        "citationType": "journal article",
+        "authors": [
+          "Knodler L.A.",
+          "Vallance B.A.",
+          "Hensel M.",
+          "Jaeckel D.",
+          "Finlay B.B.",
+          "Steele-Mortimer O."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "12864852"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1046/j.1365-2958.2003.03598.x"
+          }
+        ],
+        "title": "Salmonella type III effectors PipB and PipB2 are targeted to detergent-resistant microdomains on internal host cell membranes.",
+        "publicationDate": "2003",
+        "journal": "Mol. Microbiol.",
+        "firstPage": "685",
+        "lastPage": "704",
+        "volume": "49"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]",
+        "FUNCTION",
+        "DOMAIN",
+        "REGULATION BY SSRA/SSRB",
+        "SIMILARITY",
+        "SUBCELLULAR LOCATION"
+      ],
+      "referenceComments": [
+        {
+          "value": "SL1344",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "11677609",
+        "citationType": "journal article",
+        "authors": [
+          "McClelland M.",
+          "Sanderson K.E.",
+          "Spieth J.",
+          "Clifton S.W.",
+          "Latreille P.",
+          "Courtney L.",
+          "Porwollik S.",
+          "Ali J.",
+          "Dante M.",
+          "Du F.",
+          "Hou S.",
+          "Layman D.",
+          "Leonard S.",
+          "Nguyen C.",
+          "Scott K.",
+          "Holmes A.",
+          "Grewal N.",
+          "Mulvaney E.",
+          "Ryan E.",
+          "Sun H.",
+          "Florea L.",
+          "Miller W.",
+          "Stoneking T.",
+          "Nhan M.",
+          "Waterston R.",
+          "Wilson R.K."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "11677609"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/35101614"
+          }
+        ],
+        "title": "Complete genome sequence of Salmonella enterica serovar Typhimurium LT2.",
+        "publicationDate": "2001",
+        "journal": "Nature",
+        "firstPage": "852",
+        "lastPage": "856",
+        "volume": "413"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "LT2 / SGSC1412 / ATCC 700720",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "15987736",
+        "citationType": "journal article",
+        "authors": [
+          "Knodler L.A.",
+          "Steele-Mortimer O."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15987736"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1091/mbc.e05-04-0367"
+          }
+        ],
+        "title": "The Salmonella effector PipB2 affects late endosome/lysosome distribution to mediate Sif extension.",
+        "publicationDate": "2005",
+        "journal": "Mol. Biol. Cell",
+        "firstPage": "4108",
+        "lastPage": "4123",
+        "volume": "16"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "FUNCTION OF C-TERMINAL DOMAIN",
+        "REGULATION",
+        "SUBCELLULAR LOCATION",
+        "MUTAGENESIS OF THR-340; LEU-341; PHE-342; ASN-343; GLU-344; PHE-345 AND TYR-346"
+      ],
+      "referenceComments": [
+        {
+          "value": "SL1344",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "15813739",
+        "citationType": "journal article",
+        "authors": [
+          "Navarre W.W.",
+          "Halsey T.A.",
+          "Walthers D.",
+          "Frye J.",
+          "McClelland M.",
+          "Potter J.L.",
+          "Kenney L.J.",
+          "Gunn J.S.",
+          "Fang F.C.",
+          "Libby S.J."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "15813739"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1111/j.1365-2958.2005.04553.x"
+          }
+        ],
+        "title": "Co-regulation of Salmonella enterica genes required for virulence and resistance to antimicrobial peptides by SlyA and PhoP/PhoQ.",
+        "publicationDate": "2005",
+        "journal": "Mol. Microbiol.",
+        "firstPage": "492",
+        "lastPage": "508",
+        "volume": "56"
+      },
+      "referencePositions": [
+        "REGULATION BY SLYA AND PHOP/PHOQ"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 14028s / SGSG 2262",
+          "type": "STRAIN"
+        },
+        {
+          "value": "LT2 / SGSC1412 / ATCC 700720",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "16938850",
+        "citationType": "journal article",
+        "authors": [
+          "Henry T.",
+          "Couillault C.",
+          "Rockenfeller P.",
+          "Boucrot E.",
+          "Dumont A.",
+          "Schroeder N.",
+          "Hermant A.",
+          "Knodler L.A.",
+          "Lecine P.",
+          "Steele-Mortimer O.",
+          "Borg J.-P.",
+          "Gorvel J.-P.",
+          "Meresse S."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "16938850"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1073/pnas.0605443103"
+          }
+        ],
+        "title": "The Salmonella effector protein PipB2 is a linker for kinesin-1.",
+        "publicationDate": "2006",
+        "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+        "firstPage": "13497",
+        "lastPage": "13502",
+        "volume": "103"
+      },
+      "referencePositions": [
+        "FUNCTION",
+        "FUNCTION OF THE C-TERMINAL PENTAPEPTIDE DOMAIN",
+        "SUBUNIT"
+      ],
+      "referenceComments": [
+        {
+          "value": "ATCC 14028 / SGSG 2980 / CDC 6516-60 / NCTC 12023",
+          "type": "STRAIN"
+        },
+        {
+          "value": "SL1344",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "19858298",
+        "citationType": "journal article",
+        "authors": [
+          "Xu X.",
+          "Hensel M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "19858298"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/iai.00931-09"
+          }
+        ],
+        "title": "Systematic analysis of the SsrAB virulon of Salmonella enterica.",
+        "publicationDate": "2010",
+        "journal": "Infect. Immun.",
+        "firstPage": "49",
+        "lastPage": "58",
+        "volume": "78"
+      },
+      "referencePositions": [
+        "INDUCTION"
+      ],
+      "referenceComments": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "19858298"
+            }
+          ],
+          "value": "ATCC 14028 / SGSC 2980 / CDC 6516-60 / NCTC 12023",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "AY532917",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAS66036.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AE006468",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAL21665.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_461706.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_003197.2"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_001738474.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_003197.2"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2LEZ",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "NMR"
+        },
+        {
+          "key": "Resolution",
+          "value": "-"
+        },
+        {
+          "key": "Chains",
+          "value": "A=17-161"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "Q8ZMM8",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BMRB",
+      "id": "Q8ZMM8",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "MDposit",
+      "id": "Q8ZMM8",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "Q8ZMM8",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "DIP",
+      "id": "DIP-61260N",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "IntAct",
+      "id": "Q8ZMM8",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "3"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "99287.STM2780",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PaxDb",
+      "id": "99287-STM2780",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "1254303",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "stm:STM2780",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|99287.12.peg.2931",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_067808_0_0_6",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "ADCDGAN",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PhylomeDB",
+      "id": "Q8ZMM8",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BioCyc",
+      "id": "SENT99287:STM2780-MONOMER",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EvolutionaryTrace",
+      "id": "Q8ZMM8",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000001014",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005576",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:extracellular region"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0033644",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:host cell membrane"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-SubCell"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.160.20.80",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "E3 ubiquitin-protein ligase SopA"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.30.2450.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Secreted effector protein pipB2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR001646",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "5peptide_repeat"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR048984",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PipB2_N"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF011743",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "pipB2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR47485",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "THYLAKOID LUMENAL 17.4 KDA PROTEIN, CHLOROPLASTIC"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR47485:SF1",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "THYLAKOID LUMENAL 17.4 KDA PROTEIN, CHLOROPLASTIC"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00805",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Pentapeptide"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "3"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF21684",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PipB2_N"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF141571",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Pentapeptide repeat-like"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MERSLDSLAGMAKSAFGAGTSAAMRQATSPKTILEYIINFFTCGGIRRRNETQYQELIETMAETLKSTMPDRGAPLPENIILDDMDGCRVEFNLPGENNEAGQVIVRVSKGDHSETREIPLASFEKICRALLFRCEFSLPQDSVILTAQGGMNLKGAVLTGANLTSENLCDADLSGANLEGAVLFMADCEGANFKGANLSGTSLGDSNFKNACLEDSIMCGATLDHANLTGANLQHASLLGCSMIECNCSGANMDHTNLSGATLIRADMSGATLQGATIMAAIMEGAVLTRANLRKASFISTNLDGADLAEANLNNTCFKDCTLTDLRTEDATMSTSTQTLFNEFYSENI",
+    "length": 350,
+    "molWeight": 37274,
+    "crc64": "701D5EFBA7EB11EF",
+    "md5": "272B16ACD8B41E6F5B6F93CA3037902F"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBUNIT": 1,
+      "INTERACTION": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "INDUCTION": 1,
+      "DOMAIN": 1
+    },
+    "countByFeatureType": {
+      "Chain": 1,
+      "Domain": 4,
+      "Mutagenesis": 7,
+      "Helix": 4,
+      "Beta strand": 6
+    },
+    "uniParcId": "UPI00000CD2F1"
+  }
+}

@@ -1,0 +1,687 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "P53651",
+  "uniProtkbId": "SODM_NOCAS",
+  "entryAudit": {
+    "firstPublicDate": "1996-10-01",
+    "lastAnnotationUpdateDate": "2026-11-04",
+    "lastSequenceUpdateDate": "2007-01-23",
+    "entryVersion": 88,
+    "sequenceVersion": 2
+  },
+  "annotationScore": 3.0,
+  "organism": {
+    "scientificName": "Nocardia asteroides",
+    "taxonId": 1824,
+    "lineage": [
+      "Bacteria",
+      "Bacillati",
+      "Actinomycetota",
+      "Actinomycetes",
+      "Mycobacteriales",
+      "Nocardiaceae",
+      "Nocardia"
+    ]
+  },
+  "proteinExistence": "3: Inferred from homology",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Superoxide dismutase [Mn]"
+      },
+      "ecNumbers": [
+        {
+          "value": "1.15.1.1"
+        }
+      ]
+    }
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "sodA"
+      },
+      "synonyms": [
+        {
+          "value": "sod"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "value": "Destroys superoxide anion radicals which are normally produced within the cells and which are toxic to biological systems"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "CATALYTIC ACTIVITY",
+      "reaction": {
+        "name": "2 superoxide + 2 H(+) = H2O2 + O2",
+        "reactionCrossReferences": [
+          {
+            "database": "Rhea",
+            "id": "RHEA:20696"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15378"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:15379"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:16240"
+          },
+          {
+            "database": "ChEBI",
+            "id": "CHEBI:18421"
+          }
+        ],
+        "ecNumber": "1.15.1.1"
+      }
+    },
+    {
+      "commentType": "COFACTOR",
+      "cofactors": [
+        {
+          "name": "Mn(2+)",
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000250"
+            }
+          ],
+          "cofactorCrossReference": {
+            "database": "ChEBI",
+            "id": "CHEBI:29035"
+          }
+        }
+      ],
+      "note": {
+        "texts": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250"
+              }
+            ],
+            "value": "Binds 1 Mn(2+) ion per subunit."
+          }
+        ]
+      }
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the iron/manganese superoxide dismutase family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Initiator methionine",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Removed",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 2,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 207,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Superoxide dismutase [Mn]",
+      "featureId": "PRO_0000160061"
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 28,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 28,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29035"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250"
+        }
+      ],
+      "ligand": {
+        "name": "Mn(2+)",
+        "id": "ChEBI:CHEBI:29035"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 76,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 76,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29035"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250"
+        }
+      ],
+      "ligand": {
+        "name": "Mn(2+)",
+        "id": "ChEBI:CHEBI:29035"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 160,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 160,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29035"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250"
+        }
+      ],
+      "ligand": {
+        "name": "Mn(2+)",
+        "id": "ChEBI:CHEBI:29035"
+      }
+    },
+    {
+      "type": "Binding site",
+      "location": {
+        "start": {
+          "value": 164,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 164,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "featureCrossReferences": [
+        {
+          "database": "ChEBI",
+          "id": "CHEBI:29035"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000250"
+        }
+      ],
+      "ligand": {
+        "name": "Mn(2+)",
+        "id": "ChEBI:CHEBI:29035"
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0464",
+      "category": "Ligand",
+      "name": "Manganese"
+    },
+    {
+      "id": "KW-0479",
+      "category": "Ligand",
+      "name": "Metal-binding"
+    },
+    {
+      "id": "KW-0560",
+      "category": "Molecular function",
+      "name": "Oxidoreductase"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "7590304",
+        "citationType": "journal article",
+        "authors": [
+          "Alcendor D.J.",
+          "Chapman G.D.",
+          "Beaman B.L."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "7590304"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/0378-1119(95)00476-m"
+          }
+        ],
+        "title": "Isolation, sequencing and expression of the superoxide dismutase-encoding gene (sod) of Nocardia asteroides strain GUH-2.",
+        "publicationDate": "1995",
+        "journal": "Gene",
+        "firstPage": "143",
+        "lastPage": "147",
+        "volume": "164"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "GUH2",
+          "type": "STRAIN"
+        }
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "U02341",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA91964.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "JC4351",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "JC4351"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "P53651",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "P53651",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0004784",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:superoxide dismutase activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-EC"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0046914",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:transition metal ion binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:UniProtKB-ARBA"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "1.10.287.990:FF:000001",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Superoxide dismutase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "3.55.40.20:FF:000004",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Superoxide dismutase [Fe]"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "1.10.287.990",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Fe,Mn superoxide dismutase (SOD) domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.55.40.20",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Iron/manganese superoxide dismutase, C-terminal domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR050265",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Fe/Mn_Superoxide_Dismutase"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR001189",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Mn/Fe_SOD"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR019833",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Mn/Fe_SOD_BS"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR019832",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Mn/Fe_SOD_C"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR019831",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Mn/Fe_SOD_N"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036324",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Mn/Fe_SOD_N_sf"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036314",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SOD_C_sf"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR11404",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SUPEROXIDE DISMUTASE 2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR11404:SF6",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SUPEROXIDE DISMUTASE [MN], MITOCHONDRIAL"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF02777",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Sod_Fe_C"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00081",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Sod_Fe_N"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PIRSF",
+      "id": "PIRSF000349",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SODismutase"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR01703",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "MNSODISMTASE"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF54719",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Fe,Mn superoxide dismutase (SOD), C-terminal domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF46609",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Fe,Mn superoxide dismutase (SOD), N-terminal domain"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS00088",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SOD_MN"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MAEYTLPDLDYDYSALEPHISGQINELHHSKHHAAYVAGANTALEKLEAAREAGDHSAIFLHEKNLAFHLGGHVNHSIWWKNLSPNGGDKPVGELAAAIDDQFGSFDKFRAQFTAAANGLQGSGWAVLGYDTLGQKLLTFQLYDQQANVPLGIIPLLQVDMWEHAFYLQYKNVKADYVTAFWNVVNWADVQDRFGKAVNQGKGLIFG",
+    "length": 207,
+    "molWeight": 22955,
+    "crc64": "C13781A1F76C5B2A",
+    "md5": "189CAA80B6D0C919A7DBE38CBA32513E"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "CATALYTIC ACTIVITY": 1,
+      "COFACTOR": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Initiator methionine": 1,
+      "Chain": 1,
+      "Binding site": 4
+    },
+    "uniParcId": "UPI000016FBEB"
+  }
+}
