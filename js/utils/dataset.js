@@ -26,8 +26,8 @@
   Normalization guarantees:
     - pathogen_id / host_protein_id are unique positive integers (auto-assigned
       when missing, non-positive, or duplicated).
-    - Enum fields (gram_stain, strategy, assembly_level, curation_status) fall
-      back to 'unknown' / 'needs_review' when the value isn't in the allowed set.
+    - Enum fields (gram_stain, strategy, assembly_level, curation_status for pathogens)
+      fall back to 'unknown' / 'needs_review' when the value isn't in the allowed set.
     - Output rows contain ONLY the columns declared in schema.js (extras dropped).
     - meta.tables always reflects the post-normalization row counts.
 
@@ -329,9 +329,6 @@ export function normalizeDataset(data) {
         pathways_detailed: asArray(row.pathways_detailed),
         interacting_partners: asArray(row.interacting_partners),
         reference_doi: nullableString(row.reference_doi),
-        curation_status: CURATION_STATUS_VALUES.includes(row.curation_status)
-          ? row.curation_status
-          : 'needs_review',
         last_updated: cleanString(row.last_updated),
       };
 

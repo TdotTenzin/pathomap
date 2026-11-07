@@ -539,13 +539,6 @@ export const HOST_PROTEIN_COLUMNS_META = [
     source: 'PathoMap curation',
   },
   {
-    key: 'curation_status',
-    label: 'Curation Status',
-    type: 'enum',
-    description: 'curated means all required fields were resolved; needs_review flags gaps.',
-    source: 'PathoMap curation',
-  },
-  {
     key: 'last_updated',
     label: 'Last Updated',
     type: 'date',
@@ -574,7 +567,6 @@ export const HOST_PROTEIN_VISIBLE_COLUMNS = [
   'localization',
   'function',
   'pathway',
-  'curation_status',
 ];
 
 // ---------------------------------------------------------------------------

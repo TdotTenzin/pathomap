@@ -46,8 +46,7 @@ Effector names are resolved to accessions through
 above, effectors get `signal_peptide` and `transmembrane_regions`.
 
 Records that cannot be resolved keep their curated seed data and are logged as
-warnings; host proteins whose UniProt fetch fails are marked
-`curation_status: "needs_review"`.
+warnings.
 
 ## Usage
 
@@ -101,8 +100,7 @@ If an API call fails:
 
 1. Retry up to 3 times with backoff
 2. Log a warning and continue with the next record
-3. Mark affected host-protein records as `curation_status: "needs_review"`
-4. Fall back to cached data when `--no-network` is set
+3. Fall back to cached data when `--no-network` is set
 
 Enrichment failures never abort the build; validation still runs on whatever
 fields are present (sequence alphabet, numeric feature types, list types).

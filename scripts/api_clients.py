@@ -1,8 +1,9 @@
 """API clients for protein data enrichment.
 
 Provides reusable functions for fetching data from UniProt, InterPro, Pfam,
-and STRING. Includes retry logic, rate limiting, and on-disk caching so builds
-are reproducible and can run offline with cached responses.
+and STRING. Uses the shared http_client module for HTTP infrastructure including
+retry logic, rate limiting, and on-disk caching so builds are reproducible and
+can run offline with cached responses.
 
 Cache layout (relative to ``data/sources``):
 
@@ -30,98 +31,21 @@ from __future__ import annotations
 
 import argparse
 import json
-import time
-import urllib.error
+import sys
 import urllib.parse
-import urllib.request
 from pathlib import Path
 from typing import Any, Optional
+
+# Add scripts directory to path for relative imports when run as module
+sys.path.insert(0, str(Path(__file__).parent))
+
+from http_client import ApiError, http_json, slug
 
 UNIPROT_BASE = "https://rest.uniprot.org/uniprotkb"
 INTERPRO_BASE = "https://www.ebi.ac.uk/interpro/api"
 STRING_BASE = "https://string-db.org/api/json"
 
 USER_AGENT = "PathoMap/2.0 (protein enrichment; contact: local development)"
-
-# Minimum seconds between requests per API host (respects provider rate limits)
-RATE_LIMITS = {
-    "rest.uniprot.org": 0.05,       # ~200 req/s allowed; we go far slower
-    "www.ebi.ac.uk": 0.15,          # InterPro/Pfam ~10 req/s
-    "string-db.org": 0.25,          # STRING ~5 req/s
-}
-
-# Last request timestamp per host, used for throttling
-_last_request_at: dict[str, float] = {}
-
-
-class ApiError(RuntimeError):
-    """Raised when an API request fails after retries or is unavailable offline."""
-
-
-def slug(value: str) -> str:
-    """Turn a free-text string into a filesystem-safe cache file name."""
-    return "".join(ch.lower() if ch.isalnum() else "-" for ch in value).strip("-") or "empty"
-
-
-def _host(url: str) -> str:
-    return urllib.parse.urlparse(url).netloc
-
-
-def _throttle(url: str) -> None:
-    """Sleep if needed so we stay under the per-host rate limit."""
-    host = _host(url)
-    interval = RATE_LIMITS.get(host, 0.1)
-    now = time.monotonic()
-    last = _last_request_at.get(host, 0.0)
-    wait = interval - (now - last)
-    if wait > 0:
-        time.sleep(wait)
-    _last_request_at[host] = time.monotonic()
-
-
-def http_json(
-    url: str,
-    args: argparse.Namespace,
-    cache_path: Optional[Path] = None,
-) -> Any:
-    """Fetch JSON from ``url`` with on-disk caching and retry logic.
-
-    Reads ``cache_path`` when it exists and ``--refresh`` was not passed.
-    Raises ``ApiError`` when ``--no-network`` is set and the cache is missing,
-    or when all retry attempts fail.
-    """
-    refresh = bool(getattr(args, "refresh", False))
-    no_network = bool(getattr(args, "no_network", False))
-
-    if cache_path is not None and cache_path.exists() and not refresh:
-        try:
-            return json.loads(cache_path.read_text(encoding="utf-8"))
-        except json.JSONDecodeError as exc:
-            raise ApiError(f"invalid JSON in cache {cache_path}: {exc}") from exc
-
-    if no_network:
-        raise ApiError(f"network access disabled and cache is missing: {cache_path}")
-
-    last_error: Optional[Exception] = None
-    for attempt in range(3):
-        try:
-            _throttle(url)
-            request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-            with urllib.request.urlopen(request, timeout=60) as response:
-                text = response.read().decode("utf-8")
-            # 204 No Content and other empty bodies mean "no data" (not an error)
-            payload = json.loads(text) if text.strip() else {}
-            if cache_path is not None:
-                cache_path.parent.mkdir(parents=True, exist_ok=True)
-                cache_path.write_text(
-                    json.dumps(payload, indent=2, ensure_ascii=False) + "\n",
-                    encoding="utf-8",
-                )
-            return payload
-        except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, json.JSONDecodeError) as exc:
-            last_error = exc
-            time.sleep(1.5 * (attempt + 1))
-    raise ApiError(f"request failed: {url}\n{last_error}")
 
 
 # ---------------------------------------------------------------------------
@@ -134,7 +58,7 @@ def fetch_uniprot_entry(
     """Fetch the complete UniProt entry for a protein accession."""
     cache_path = cache_root / "uniprot" / "entries" / f"{uniprot_id}.json"
     url = f"{UNIPROT_BASE}/{uniprot_id}.json"
-    payload = http_json(url, args, cache_path)
+    payload = http_json(url, args, cache_path, user_agent=USER_AGENT)
     if not isinstance(payload, dict) or "primaryAccession" not in payload:
         raise ApiError(f"unexpected UniProt response for {uniprot_id}")
     return payload
@@ -146,7 +70,7 @@ def fetch_uniprot_sequence(
     """Fetch only the sequence block from UniProt (lighter weight)."""
     cache_path = cache_root / "uniprot" / "sequences" / f"{uniprot_id}.json"
     url = f"{UNIPROT_BASE}/{uniprot_id}.json?fields=sequence"
-    payload = http_json(url, args, cache_path)
+    payload = http_json(url, args, cache_path, user_agent=USER_AGENT)
     if not isinstance(payload, dict):
         raise ApiError(f"unexpected UniProt sequence response for {uniprot_id}")
     return payload
@@ -174,7 +98,7 @@ def search_uniprot(
             "&fields=accession,protein_name,organism_name&format=json&size=5"
         )
         try:
-            data = http_json(url, args, cache_path)
+            data = http_json(url, args, cache_path, user_agent=USER_AGENT)
         except ApiError:
             if attempt == 0:
                 continue
@@ -245,12 +169,12 @@ def _fetch_interpro_entries(
             return cached
 
     wrapper_url = f"{INTERPRO_BASE}/protein/UniProt/{uniprot_id}/entry/{source}/?format=json"
-    wrapper = http_json(wrapper_url, args, None)
+    wrapper = http_json(wrapper_url, args, None, user_agent=USER_AGENT)
 
     payload: dict = {}
     if isinstance(wrapper, dict):
         if wrapper.get("entries_url"):
-            entries = http_json(str(wrapper["entries_url"]), args, None)
+            entries = http_json(str(wrapper["entries_url"]), args, None, user_agent=USER_AGENT)
             payload = entries if isinstance(entries, dict) else {}
         elif wrapper.get("results") is not None:
             payload = wrapper
@@ -288,7 +212,7 @@ def _resolve_string_id(
     """Map a UniProt accession to its STRING protein identifier."""
     cache_path = cache_root / "string" / "ids" / f"{uniprot_id}.json"
     url = f"{STRING_BASE}/get_string_ids?identifiers={uniprot_id}&echo_query=1"
-    payload = http_json(url, args, cache_path)
+    payload = http_json(url, args, cache_path, user_agent=USER_AGENT)
     rows = payload if isinstance(payload, list) else []
     for row in rows:
         if isinstance(row, dict) and row.get("stringId"):
@@ -311,7 +235,7 @@ def fetch_string_interactions(
 
     cache_path = cache_root / "string" / "interactions" / f"{uniprot_id}.json"
     url = f"{STRING_BASE}/network?identifiers={uniprot_id}&required_score=700"
-    payload = http_json(url, args, cache_path)
+    payload = http_json(url, args, cache_path, user_agent=USER_AGENT)
     rows = payload if isinstance(payload, list) else []
     query = query_string_id.upper()
     interactions: list[dict] = []

@@ -2,7 +2,7 @@
   "meta": {
     "dataset": "pathomap",
     "schema_version": "2.0",
-    "built_at": "2026-11-04T21:37:10Z",
+    "built_at": "2026-11-06T15:47:57Z",
     "tables": {
       "pathogens": 5,
       "effectors": 27,
@@ -47,7 +47,7 @@
       "description": "Resides in SCV; acquires LAMP1 but blocks hydrolase delivery; maintains non-degradative niche via SPI-2 T3SS effectors. SifA binds SKIP to displace Rab9, while SseJ deacylates cholesterol to prevent SCV-lysosome fusion. SCV matures into a LAMP1+ compartment that is non-degradative — Rab7 effectors (RILP, ORP1L) are decoupled from hydrolase delivery",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-04"
+      "last_updated": "2026-11-06"
     },
     {
       "pathogen_id": 3,
@@ -77,7 +77,7 @@
       "description": "Arrests phagosome at early stage; blocks Rab5-to-Rab7 conversion; maintains near-neutral pH (~6.4) by excluding V-ATPase. Secretes SapM phosphatase to deplete PI3P from phagosomal membranes, and lipoarabinomannan (LAM) inhibits Ca2+ signaling and Vps34 recruitment. PknG and PtpA further modulate host Rab trafficking to prevent lysosomal fusion",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-04"
+      "last_updated": "2026-11-06"
     },
     {
       "pathogen_id": 13,
@@ -107,7 +107,7 @@
       "description": "Resides in non-fusogenic membrane-bound inclusion that acquires host-derived membrane via T4SS. Ats-1 binds Rab5 and PI3P to anchor the inclusion to early endosomal compartments, while AnkA modulates host signaling through interaction with MYADM and Abl-1 tyrosine kinase. p44/Msp2 undergoes antigenic variation to evade immune detection",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-04"
+      "last_updated": "2026-11-06"
     },
     {
       "pathogen_id": 32,
@@ -137,7 +137,7 @@
       "description": "Anthrolysin O (ALO) enables phagosomal escape; lethal factor (LF) and edema factor (EF) modulate host. ALO is a cholesterol-dependent cytolysin that permeabilizes the phagosome. The tripartite toxin (PA + LF + EF) is the major virulence determinant: PA binds ANTXR1/2 to translocate LF (zinc metalloprotease cleaving MAPKKs) and EF (calmodulin-dependent adenylate cyclase) into the cytosol",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-04"
+      "last_updated": "2026-11-06"
     },
     {
       "pathogen_id": 48,
@@ -167,7 +167,7 @@
       "description": "Multidrug-resistant nosocomial pathogen; survives on hospital surfaces and exhibits remarkable antibiotic resistance. OmpA is a major virulence factor that targets mitochondria to induce host cell death. Plc (phospholipase C) degrades host membrane phospholipids. CsuA/B pilus and Bap surface protein mediate biofilm formation on abiotic surfaces including medical devices",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-04"
+      "last_updated": "2026-11-06"
     }
   ],
   "effectors": [
@@ -180,33 +180,7 @@
       "host_target_class": "organelle",
       "type_class": "surface_protein",
       "mechanism_class": "membrane_disruption",
-      "effector_name_class": "",
-      "uniprot_id": "A0A7U3Y5W9",
-      "sequence": "MRALVISTVVGAAVVLSGCQTTGNNLGGVEYDKAALGTLIGAAAGYGISKSNANSSRQNNRAAAIGAVLGAAGGLYLDQKEKKLREQMAGTGVEVGRNPDGSVQLIMPGSITFDTNKSNIKPNFYATLDKVAQTLAEDNKSAILVTGYTDNTGNDSINIPLSQARAQSVKNYLAGKGVPSSRIDAQGYGSSNPIADNSTASGREQNRRVEISIYAKQ",
-      "sequence_length": 217,
-      "molecular_weight_da": 22485.24,
-      "isoelectric_point": 9.63,
-      "gravy_score": -0.288,
-      "domains": [
-        {
-          "name": "OmpA-like",
-          "accession": null,
-          "start": 100,
-          "end": 217
-        }
-      ],
-      "go_terms": [
-        {
-          "id": "GO:0009279",
-          "term": "cell outer membrane",
-          "aspect": "C"
-        }
-      ],
-      "signal_peptide": {
-        "start": 1,
-        "end": 18
-      },
-      "transmembrane_regions": []
+      "effector_name_class": ""
     },
     {
       "pathogen_name": "Acinetobacter baumannii",
@@ -217,38 +191,7 @@
       "host_target_class": "cellular_structure",
       "type_class": "surface_protein",
       "mechanism_class": "intracellular_survival",
-      "effector_name_class": "",
-      "uniprot_id": "Q6RYW5",
-      "sequence": "MKLSRIALATMLVAAPLAAANAGVTVTPLLLGYTFQDSQHNNGGKDGNLTNGPELQDDLFVGAALGIELTPWLGFEAEYNQVKGDVDGASAGAEYKQKQINGNFYVTSDLITKNYDSKIKPYVLLGAGHYKYDFDGVNRGTRGTSEEGTLGNAGVGAFWRLNDALSLRTEARATYNADEEFWNYTALAGLNVVLGGHLKPAAPVVEVAPVEPTPVAPQPQELTEDLNMELRVFFDTNKSNIKDQYKPEIAKVAEKLSEYPNATARIEGHTDNTGPRKLNERLSLARANSVKSALVNEYNVDASRLSTQGFAWDQPIADNKTKEGRAMNRRVFATITGSRTVVVQPGQEAAAPAAAQ",
-      "sequence_length": 356,
-      "molecular_weight_da": 38420.11,
-      "isoelectric_point": 5.15,
-      "gravy_score": -0.388,
-      "domains": [
-        {
-          "name": "OmpA-like",
-          "accession": null,
-          "start": 221,
-          "end": 339
-        }
-      ],
-      "go_terms": [
-        {
-          "id": "GO:0009279",
-          "term": "cell outer membrane",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0033650",
-          "term": "host cell mitochondrion",
-          "aspect": "C"
-        }
-      ],
-      "signal_peptide": {
-        "start": 1,
-        "end": 19
-      },
-      "transmembrane_regions": []
+      "effector_name_class": ""
     },
     {
       "pathogen_name": "Acinetobacter baumannii",
@@ -259,27 +202,7 @@
       "host_target_class": "cellular_structure",
       "type_class": "surface_protein",
       "mechanism_class": "intracellular_survival",
-      "effector_name_class": "",
-      "uniprot_id": "Q6XBY7",
-      "sequence": "MNMKNIQKSLLAALIVAGYAVNTQAAVTGQVDVKLNISTGCTVGGSQTEGNMNKFGTLNFGKTSGTWNNVLTAEVASAATGGNISVTCDGTDPVDFTVAIDGGERTDRTLKNTASADVVAYNVYRDAARTNLYVVNQPQQFTTVSGQATAVPIFGAIAPNTGTPKAQGDYKDTLLVTVNF",
-      "sequence_length": 180,
-      "molecular_weight_da": 18705.02,
-      "isoelectric_point": 4.96,
-      "gravy_score": -0.051,
-      "domains": [
-        {
-          "name": "Spore coat protein U/FanG",
-          "accession": null,
-          "start": 28,
-          "end": 177
-        }
-      ],
-      "go_terms": [],
-      "signal_peptide": {
-        "start": 1,
-        "end": 25
-      },
-      "transmembrane_regions": []
+      "effector_name_class": ""
     },
     {
       "pathogen_name": "Acinetobacter baumannii",
@@ -290,246 +213,7 @@
       "host_target_class": "cellular_structure",
       "type_class": "surface_protein",
       "mechanism_class": "intracellular_survival",
-      "effector_name_class": "",
-      "uniprot_id": "A0ABX6CIS4",
-      "sequence": "MPEIQIIAKDNHKTLVTTEGTSAKLSEASVVLVKVAASDVLVVNREGTNAVIRLKNGETIVIEGFFSGTAEPKDNSLVFQDENGQLIWAKFKDAENDADADSDADADADSDVEPQALLGEDLPAALPAEAPQELVSDVIYQPISSIEPLLYHDAGVNPWLWAAIPLVAGGIIAAASNHDSNDDSSVPADTTPPSTDGVTFSVDPVTSDNVINASEASGNVTITGVLKNIPADAANTAVTVVINGVTYNATVDKAAGTWTVSVPGSGLVADADKTIDAKVTFTDAAGNSSSVNDTQTYTLDTTAPNAPVIDPVNGTDPITGTAEPGSTVTVTYPDGSTKTVVAGPDGTWTVPNPGLNDGDEVTAVATDPAGNTSGPGTAIVDAVAPTVALNDVLTNDSTPALTGTVNDPTATVVVKVDGIDYPAVNNGDGTWTLADNTLPVLTDGPHTITVTATDAAGNAGTDTGVVTVDTAAPNTAGVTFTIDSVTADNVINASEAAGNVTITGVLKNIPADATNTAVTVVINGVTYNATVDKTAGTWTVSVPGSGLTADADKTIDAKVTFTDAAGNSSSVNDTQTYTLDTTAPNAPVIDPVNGTDPITGTAEPGSTVTVTYPNGDTATVVAGPDGSWSVPNPGLNDGDEVEAIATDPAGNPSLPGTATVDAVGPNTDGVNFTVDSVTADNVINASEASGNVTVTGVLKNVPADAANTVVTVVINGQTYTATVDSTAGTWTVSVPGSDLTADADKTIDAKVTFTDAAGNSSSVNDTQTYTIDTTAPDAPVINPVNATDPITGTAEPGSTVTVTYPDGSTTTVVAGPDGTWTVPNPGLNDGDKVTAIATDPAGNPSLPGTAIVDAVGPNTDGVNFTVDSVTADNVINASEASGNVTVTGVLKNVPADAANTVVTVVINGQTYTATVDSTAGTWTVSVPGSGLTADADKTIDAKVTFTDAAGNSSSVNDTQTYTIDTTAPDAPVINPVNATDPITGTAEPGSTVTVTYPDGSTTTVVAGPDGTWTVPNPGLNDGDKVTAIATDPAGNPSLPGTAIVDAVGPNTDGVNFTVDSVTADNVINASEASGNVTVTGVLKNVPADAANTVVTVVINGQTYTATVDSTAGTWTVSVSGSDLTADADKTIDAKVTFTDAAGNSSSVNDTQTYTVDTVAPNAPVLDPINATDPVSGQAEPGSTVTVTYPDGTTATVVAGPDGSWSVPNPGNLVDGDTVTATATDPAGNTSLPGTGTVSADITAPVVALDDVLTNDSTPALTGTVNDPTATVVVNVDGVDYPAVNNGDGTWTLADNTLPTLADGPHTITVTATDAAGNVGNDTAVVTIDTVAPNAPVLDPINATDPVSGQAEPGSTVTVTYPDGTTATVVAGPDGSWSVPNPGNLVDGDTVTATATDPAGNTSLPGTGTVSADITAPVVALDDVLTNDSTPALTGTVNDPTATVVVNVDGVDYPAVNNGDGTWTLADNTLPTLADGPHTITVTATDAAGNVGNDTAVVTIDTVAPNAPVLDPINATDPVSGQAEPGSTVTVTYPDGTTATVVAGPDGSWSVPNPGNLVDGDTVTATATDPAGNTSLPGTGTVSADITAPVVALDDVLTNDSTPALTGTVNDPTATVVVNVDGVDYPAVNNGDGTWTLADNTLPTLADGPHTITVTATDAAGNVGNDTAVVTIDTVAPNAPVLDPINATDPVSGQAEPGSTVTVTYPDGTTATVVAGPDGSWSVPNPGNLVDGDTVTATATDPAGNTSLPGTGTVSADITAPVVALDDVLTNDSTPALTGTVNDPTATVVVNVDGVDYPAVNNGDGTWTLADNTLPTLADGPHTITVTATDAAGNVGNDTAVVTIDTVAPNAPVLDPINATDPVSGQAEPGSTVTVTYPDGTTATVVAGPDGSWSVPNPGNLVDGDTVTATATDPAGNTSLPGTGTVSADITAPVVALDDVLTNDSTPALTGTVNDPTATVVVNVDGVDYPAVNNGDGTWTLADNTLPTLADGPHTITVTATDAAGNVGNDTAVVTIDTVAPNAPVLDPINATDPVSGQAEPGSTVTVTYPDGTTATVVAGPDGSWSVPNPGNLVDGDTVTATATDPAGNTSLPGTGTVSADITAPVVALDDVLTNDSTPALTGTVNDPTATVVVNVDGVDYPAVNNGDGTWTLADNTLPTLADGPHTITVTATDAAGNVGNDTAVVTIDTVAPNAPVLDPINATDPVSGQAEPGSTVTVTYPDGTTATVVAGPDGSWSVPNPGNLVDGDTVTATATDPAGNTSLPGTGTVSADITAPVVALDDVLTNDSTPALTGTVNDPTATVVVNVDGVDYPAVNNGDGTWTLADNTLPTLADGPHTITVTATDAAGNVGNDTAVVTIDTVAPNAPVLDPINATDPVSGQAEPGSTVTVTYPDGTTATVVAGPDGSWSVPNPGNLVDGDTVTATATDPAGNTSLPGTGTVSADITAPVVALDDVLTNDSTPALTGTVNDPTATVVVNVDGVDYPAVNNGDGTWTLADNTLPTLADGPHTITVTATDAAGNVGNDTAVVTIDTVAPNAPVLDPINATDPVSGQAEPGSTVTVTYPDGTTATVVAGPDGSWSVPNPGNLVDGDTVTATATDPAGNTSLPGTGTVSADITAPVVALDDVLTNDSTPALTGTVNDPTATVVVNVDGVDYPAVNNGDGTWTLADNTLPTLADGPHTITVTATDAAGNVGNDTAVVTIDTVAPNAPVLDPINATDPVSGQAEPGSTVTVTYPDGTTATVVAGPDGSWSVPNPGNLVDGDTVTATATDPAGNTSLPGTGTVSADITAPVVALDDVLTNDSTPALTGTVNDPTATVVVNVDGVDYPAVNNGDGTWTLADNTLPTLADGPHTITVTATDAAGNVGNDTAVVTIDTVAPNAPVLDPINATDPVSGQAEPGSTVTVTYPDGTTATVVAGPDGSWSVPNPGNLVDGDTVTATATDPAGNTSLPGTGTVSADITAPVVALDDVLTNDSTPALTGTVNDPTATVVVNVDGVDYPAVNNGDGTWTLADNTLPTLADGPHTITVTATDAAGNVGNDTAVVTIDTVAPNAPVLDPINATDPVSGQAEPGSTVTVTYPDGTTATVVAGPDGSWSVPNPGNLVDGDTVTATATDPAGNTSLPGTGTVSADITAPVVALDDVLTNDSTPALTGTVNDPTATVVVNVDGVDYPAVNNGDGTWTLADNTLPTLADGPHTITVTATDAAGNVGNDTAVVTIDTVAPNAPVLDPINATDPVSGQAEPGSTVTVTYPDGTTATVVAGPDGSWSVPNPGNLVDGDTVTATATDPAGNTSLPGTGTVSADITAPVVALDDVLTNDSTPALTGTVNDPTATVVVNVDGVDYPAVNNGDGTWTLADNTLPTLADGPHTITVTATDAAGNVGNDTAVVTIDTSLPVVSLDDLTTNDTTPALTGAIDDPTATVVVNVDGIDYPATNNGDGTWTLADNTLPVLADGPHTVSVTATDVAGNVSTPVTGTVTVDATAPTLAITTDDLALAAGEDANITFTFSEAVAGFDVSDITVVGGTLTGLTTTDNITWTAVFTPDGTGTAPSIAVADGSYTDVAGNLGTGDVLDGTDGFIVDLVAPVVTFADVSTNDTTPALTGTIDDPTATVVVTVDGVDYPAVNNGDGTWTLADNTLPVLADGPHTVSVTATDVAGNVSTPVTGTVTVDATAPTLAITTDDLALAAGEDANITFTFSEAVAGFDVSDITVVGGTLTGLTTTDNITWTAVFTPDGTGTAPSIAVADGSYTDVAGNLGTGDVLDGTDGFIVDLVAPVVTFADVSTNDTTPALTGTIDDPTATVVVTVDGVDYPAVNNGDGTWTLADNTLPVLADGPHTVSVTATDVAGNVSTPVTGTVTVDATAPTLAITTDDLALAAGEDANITFTFSEAVAGFDVSDITVVGGTLTGLTTTDNITWTAVFTPDGTGTAPSIAVADGSYTDVAGNLGTGDVLDGTDGFIVDLVAPVVTFADVSTNDTTPALTGTIDDPTATVVVTVDGVDYPAVNNGDGTWTLADNTLPVLADGPHTVSVTATDVAGNVSTPVTGTVTVDATAPTLAITTDDLALAAGEDANITFTFSEAVAGFDVSDITVVGGTLTGLTTTDNITWTAVFTPDGTGTAPSIAVADGSYTDVAGNLGTGDVLDGTDGFIVDLVAPVVTFADVSTNDTTPALTGTIDDPTATVVVTVDGVDYPAVNNGDGTWTLADNTLPVLADGPHTVSVTATDVAGNVSTPVTGTVTVDATAPTLAITTDDLALAAGESANITFTFSEAVAGFDANDITLVGGTLSALVTTDNITWTAVFTPDGTGTAPSIAVADGSYTDLAGNLGTGDVLDGTDGFVVDIVAPVVGFTNVTTNDDTPPLTGTIDDPTATVVVTVDGVDYPATNNGDGTWTLADNTLPSLIDGPHTVSVTATDPAGNVSIPATGTVTISSSSILAFDNTDHAVLSPQPSLVGDDVSLGSTSYLVLTSVAGLDLQLGGNSLGFTVAAGHEGDVTFQYSGLIDAAVLSDYKLVVQKFNTTTNQWESIHGDANSSLISLHLLGIGTGNVPGAVLDGLDAGQYRAFLAYDGLLGLGVLGTLSATMDDYDLSVAGGYEIGNAEGNVITDPDPTTGQVDQVTANTYVSSVNGHPIDADGETFAGTYGTITFYQDGSYVYVPNADGSGVGQTDVFTYTLTDSVTGATGQANLNIVFDSIRAADNLVEVELNPQYQLVGTETDSAFYGVLLNVGNIVDLQLLTVDTVDFTIGAGQEGVATFNFNSLIGASALGDYNVVLQKYNDVTGQWEAVNGTGDRSLLNLTLLGNTPTAQIGGLTEGEYRAFLSFNGLVGGAVAVTLNGSVDVYNPAVITGYDVVAAHGNLISDPNTNGDVDIATPNSIISEVNGVAVSASPTEIIGTHGTLLIYANGDYTYTPNADSAGLGQVDQFTYTLLDPASNTTSQATFYVHLDSKVVDMNWDAADPPQPATVTITAVDDAVNAAIAAEPHLIEDDRALGSATYLALLSLAGINLQAPLPFVNSTVEFNVGAGETGTATFKYSSLINEGALGDYQLVVQKFNTATNRWESITGSSEASLLNLSVLGIGVNATPGVVVEGLDEGQYRAFMTYNGLYGKSILGTLSGTMDVYDPNQIDFTGLASEGNVITGLGVGTNADAVTGYTIVDSVTVNGVTTNVDPNTGTIIQGQYGTLQIFANGDYIYTPNNTNANLGLVDHFTYTLADPLGGNISASLDFTIGNSTPVIAVDDLAVAVVNPEYLQIGNDVAVGNTTYLALLTLTDNFDFQAGGQSVNFTLTDATLNDVTFNYSALISASLLADYVLVVQKFDTATNQWVAVNGTGDADLLSLAAFGGNSVTLEGLAAGQYRAYMTYAGSGVGVSLLGTLSVQKDVFDATNITGYSTQVAEGNVIHDVGLNGHADTASGFSTVTSVEFNGTAFAVNATGVTTIVGDHGTLSIYANGNYSYQPNGEAASLGQVDQFTYTLSDGLNTSQATLYLHIDSDAVDMTWNTSDPSQPAVITVTPVDAIDNVVSAGVDIVPQGELGVAVGSATYLALVGITENLNVSLLGTPSVAFTIDAGHEADVTFAYAPVLSLSLFNDYKVVLQQKGADGAWHNIDGGSSTGLLNIGLLGNGGIGVTVPDLGQGEYRAFMVYTGLGVGILGTMSVVKDDFDYTVAPTNTAVVADGNVLTDDVTTLTTQVTTVTSEVVGALPQTVGTDTVINGAYGTLVISTNGHYTYTPNTTDLSAIGKVDSFTYTIRDVLTGATDTATLHVQVGSPDVTIAWDAANPANDGVVQLTANPDHVVTTTDFSNAADLPVDVASPVVSVNLIGSNSVVSDQFVVGAGTVANIDLSAVYTAQPLASLLPTVSYVIQSWNGTAWVNTIYSGSQTALGSVATIQAGSVAFQDTVEHLAAGTYRVQYTLTGVSLGATSLDTNVSTTTVHLDTYRSDWISGNVLAGDNIGGVADTGILSHEGAKLQVWDNAQNAYVDAVGQTINTGNGVLIMQSNGEYEYRPNDVTTTTQLASTDSINYKIVSVTGNVESQSTLTIDLTHNDYNLLYTSTSANDTFTTGTGSDTVIYQVLNNVAIGNGGNTGGNGVDTWTDFHVGNVATDKQADLIDIRGLLDGAQTDANIGEYLNVTVSGGNTTIQIDRDGLTGLFPANNFTTLLVLQGVTTTETELLNNGQILY",
-      "sequence_length": 6180,
-      "molecular_weight_da": 617758.41,
-      "isoelectric_point": 2.94,
-      "gravy_score": 0.087,
-      "domains": [
-        {
-          "name": "Biofilm-associated protein BapA-like prefix-like",
-          "accession": null,
-          "start": 1,
-          "end": 118
-        },
-        {
-          "name": "Bacterial Ig",
-          "accession": null,
-          "start": 303,
-          "end": 379
-        },
-        {
-          "name": "Bacterial Ig-like",
-          "accession": null,
-          "start": 390,
-          "end": 470
-        },
-        {
-          "name": "Bacterial Ig",
-          "accession": null,
-          "start": 583,
-          "end": 660
-        },
-        {
-          "name": "Bacterial Ig",
-          "accession": null,
-          "start": 775,
-          "end": 851
-        },
-        {
-          "name": "Bacterial Ig",
-          "accession": null,
-          "start": 967,
-          "end": 1043
-        },
-        {
-          "name": "Bacterial Ig",
-          "accession": null,
-          "start": 1159,
-          "end": 1237
-        },
-        {
-          "name": "Bacterial Ig-like",
-          "accession": null,
-          "start": 1249,
-          "end": 1329
-        },
-        {
-          "name": "Bacterial Ig",
-          "accession": null,
-          "start": 1331,
-          "end": 1409
-        },
-        {
-          "name": "Bacterial Ig-like",
-          "accession": null,
-          "start": 1421,
-          "end": 1501
-        },
-        {
-          "name": "Bacterial Ig",
-          "accession": null,
-          "start": 1503,
-          "end": 1581
-        },
-        {
-          "name": "Bacterial Ig-like",
-          "accession": null,
-          "start": 1593,
-          "end": 1673
-        },
-        {
-          "name": "Bacterial Ig",
-          "accession": null,
-          "start": 1675,
-          "end": 1753
-        },
-        {
-          "name": "Bacterial Ig-like",
-          "accession": null,
-          "start": 1765,
-          "end": 1845
-        },
-        {
-          "name": "Bacterial Ig",
-          "accession": null,
-          "start": 1847,
-          "end": 1925
-        },
-        {
-          "name": "Bacterial Ig-like",
-          "accession": null,
-          "start": 1937,
-          "end": 2017
-        },
-        {
-          "name": "Bacterial Ig",
-          "accession": null,
-          "start": 2019,
-          "end": 2097
-        },
-        {
-          "name": "Bacterial Ig-like",
-          "accession": null,
-          "start": 2109,
-          "end": 2189
-        },
-        {
-          "name": "Bacterial Ig",
-          "accession": null,
-          "start": 2191,
-          "end": 2269
-        },
-        {
-          "name": "Bacterial Ig-like",
-          "accession": null,
-          "start": 2281,
-          "end": 2361
-        },
-        {
-          "name": "Bacterial Ig",
-          "accession": null,
-          "start": 2363,
-          "end": 2441
-        },
-        {
-          "name": "Bacterial Ig-like",
-          "accession": null,
-          "start": 2453,
-          "end": 2533
-        },
-        {
-          "name": "Bacterial Ig",
-          "accession": null,
-          "start": 2535,
-          "end": 2613
-        },
-        {
-          "name": "Bacterial Ig-like",
-          "accession": null,
-          "start": 2625,
-          "end": 2705
-        },
-        {
-          "name": "Bacterial Ig",
-          "accession": null,
-          "start": 2707,
-          "end": 2785
-        },
-        {
-          "name": "Bacterial Ig-like",
-          "accession": null,
-          "start": 2797,
-          "end": 2877
-        },
-        {
-          "name": "Bacterial Ig",
-          "accession": null,
-          "start": 2879,
-          "end": 2957
-        },
-        {
-          "name": "Bacterial Ig-like",
-          "accession": null,
-          "start": 2969,
-          "end": 3049
-        },
-        {
-          "name": "Bacterial Ig",
-          "accession": null,
-          "start": 3051,
-          "end": 3129
-        },
-        {
-          "name": "Bacterial Ig-like",
-          "accession": null,
-          "start": 3141,
-          "end": 3221
-        },
-        {
-          "name": "Bacterial Ig",
-          "accession": null,
-          "start": 3223,
-          "end": 3301
-        },
-        {
-          "name": "Bacterial Ig-like",
-          "accession": null,
-          "start": 3313,
-          "end": 3393
-        },
-        {
-          "name": "Bacterial Ig-like",
-          "accession": null,
-          "start": 3481,
-          "end": 3570
-        },
-        {
-          "name": "Bacterial Ig-like",
-          "accession": null,
-          "start": 3671,
-          "end": 3760
-        },
-        {
-          "name": "Bacterial Ig-like",
-          "accession": null,
-          "start": 3861,
-          "end": 3950
-        },
-        {
-          "name": "Bacterial Ig-like",
-          "accession": null,
-          "start": 4051,
-          "end": 4140
-        },
-        {
-          "name": "Bacterial Ig-like",
-          "accession": null,
-          "start": 4241,
-          "end": 4330
-        },
-        {
-          "name": "Bacterial Ig-like",
-          "accession": null,
-          "start": 4353,
-          "end": 4430
-        }
-      ],
-      "go_terms": [],
-      "signal_peptide": null,
-      "transmembrane_regions": []
+      "effector_name_class": ""
     },
     {
       "pathogen_name": "Acinetobacter baumannii",
@@ -540,44 +224,7 @@
       "host_target_class": "cellular_structure",
       "type_class": "enzyme",
       "mechanism_class": "membrane_disruption",
-      "effector_name_class": "",
-      "uniprot_id": "A0A0D5YHI6",
-      "sequence": "MITRRKFLNYSLNMGFGAAALAAFPSSIQKALAIPANNKTGTIQDVEHVIILMQENRSFDHYFGTLKGVRGFADRFTIPLPNGRRVWEQLRSNGQVLTPFHLDGTANNAQRADGTPHTWNDSQLAWDNGRMANWPTHKTDISMGYFKEKEIPYQFALANAFTICDAYHCSMHTGTDANRSFHLTGTNGATPTKRSFVNNEWDWIDGNPATADRGYTWKTYAERLEEAGISWICYQNMPDEWGDNMLGAFRSFRKANIASGYPVSSGGEPNKPYADTGQKLPYKAYDAATDNTKNPLYKGIANTLPGNKPEEYLDAFKRDIREGKLPQVSWINAPSIYCEHPDPSSPVQGAWFIQEIIDALTAGPEVWSKTALLINFDENDGYFDHMPSPSAPSRLKNGQYAGKSTLSNADMQDEYFDHAAPEGSRSQPTPDGRVYGPGPRVPLYVISPWSRGGWVNSQVFDHTSVLMFLEKRFGVKEPNISPYRRAVCGDLTSAFNFKTPNADVLPQLSGKQTRVQADALRENQEALPAVPVPTDIKLPIQQSGIRLSRALPYELHTSARCKADGKVQLIFSNTGKQAAVFHVYDKLNLDRIPKRYIVEPNKTLDDEWNALNDNLGRYDLWVLGPNGYHRHFKGDTQRIIDSGVKPEIRVCYDIANGDVYVELMNEGTKDTILTVKPCAYRQDAPLQLTIKAGQVVKQHWSLADVGHWYDFEVTSQSDPYYYRRFAGRVETGEDSFSDPAMI",
-      "sequence_length": 742,
-      "molecular_weight_da": 83304.63,
-      "isoelectric_point": 6.79,
-      "gravy_score": -0.574,
-      "domains": [
-        {
-          "name": "Bacterial phospholipase C C-terminal",
-          "accession": null,
-          "start": 548,
-          "end": 635
-        },
-        {
-          "name": "Bacterial phospholipase C C-terminal",
-          "accession": null,
-          "start": 646,
-          "end": 728
-        }
-      ],
-      "go_terms": [
-        {
-          "id": "GO:0034480",
-          "term": "phosphatidylcholine phospholipase C activity",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0016042",
-          "term": "lipid catabolic process",
-          "aspect": "P"
-        }
-      ],
-      "signal_peptide": {
-        "start": 1,
-        "end": 33
-      },
-      "transmembrane_regions": []
+      "effector_name_class": ""
     },
     {
       "pathogen_name": "Anaplasma phagocytophilum",
@@ -588,17 +235,7 @@
       "host_target_class": "protein",
       "type_class": "t4ss_effector",
       "mechanism_class": "membrane_trafficking",
-      "effector_name_class": "",
-      "uniprot_id": "D2D055",
-      "sequence": "MLIRRILTTSRNVAARIVSGFTAPATENTSARTSRNLLGTTGNFFNGLMGKGKPFYHRASEMQNLPWDKERGTKISSHYAQTGQLVLQIGDGRVSEGALQMLEALDNSDVGELDPSSKGLNPGMDIGARMDHNRAKNECGALLDLRKKLEETGGKISVERTGDGFTRMLVIKIDTKNKSEEEVEKEVQLVLGTLGVGSKILAKSIAKELMHQAKTKDMNALAPVSHTPPAQSKPDSDIQENSEKSASADAKNRSQAPDQEENSPRDTTRRNSTTNGEERIFSLSGDASPSRPSSGAGTDQAVQQAHFLRDSEDRVHGSSGITNQGAAAMQQAVLSAARGLSDVSHDDSAQTQGNPTVTPLVSAQNRGPETHGKGTR",
-      "sequence_length": 376,
-      "molecular_weight_da": 40282.82,
-      "isoelectric_point": 7.86,
-      "gravy_score": -0.728,
-      "domains": [],
-      "go_terms": [],
-      "signal_peptide": null,
-      "transmembrane_regions": []
+      "effector_name_class": ""
     },
     {
       "pathogen_name": "Anaplasma phagocytophilum",
@@ -609,42 +246,7 @@
       "host_target_class": "protein",
       "type_class": "t4ss_effector",
       "mechanism_class": "signalling_modulation",
-      "effector_name_class": "",
-      "uniprot_id": "A0A0A7RC74",
-      "sequence": "VDAQSHDGKTIIHCAAKDGNLEILQQALGRKSSYSKFPVRDGVPTPGVYAVREAKDPKGLEKVLDALMDREPNPQHVAVEAIKRGSRELLDHLITKKVVDVNERFVNSEGQETTLAFEALGAGQYDIVKYLIKNGAAVEGVANESALAAGILGGCFQGRRAVLHMERVIGAGAS",
-      "sequence_length": 174,
-      "molecular_weight_da": 18630.32,
-      "isoelectric_point": 7.06,
-      "gravy_score": -0.224,
-      "domains": [
-        {
-          "name": "Ankyrin repeat",
-          "accession": "IPR002110",
-          "start": 7,
-          "end": 36
-        },
-        {
-          "name": "Ankyrin repeat",
-          "accession": "IPR002110",
-          "start": 70,
-          "end": 103
-        },
-        {
-          "name": "Ankyrin repeat",
-          "accession": "IPR002110",
-          "start": 111,
-          "end": 141
-        },
-        {
-          "name": "Ankyrin repeat-containing domain superfamily",
-          "accession": "IPR036770",
-          "start": 1,
-          "end": 152
-        }
-      ],
-      "go_terms": [],
-      "signal_peptide": null,
-      "transmembrane_regions": []
+      "effector_name_class": ""
     },
     {
       "pathogen_name": "Anaplasma phagocytophilum",
@@ -655,24 +257,7 @@
       "host_target_class": "protein",
       "type_class": "surface_protein",
       "mechanism_class": "immune_evasion",
-      "effector_name_class": "",
-      "uniprot_id": "Q6DUY9",
-      "sequence": "PAFSKIRDFSIRESNGETKAVYPYLKDGKSVKLESHKFDWNTPDPRIGFKDNMLVAMEGSVGYGIGGARVELEIGYERFKTKGIRDSGSKEDEADTVYLLAKELAYDVVTG",
-      "sequence_length": 111,
-      "molecular_weight_da": 12371.95,
-      "isoelectric_point": 5.29,
-      "gravy_score": -0.561,
-      "domains": [
-        {
-          "name": "Msp4/OMP-like",
-          "accession": null,
-          "start": 1,
-          "end": 102
-        }
-      ],
-      "go_terms": [],
-      "signal_peptide": null,
-      "transmembrane_regions": []
+      "effector_name_class": ""
     },
     {
       "pathogen_name": "Bacillus anthracis",
@@ -683,43 +268,7 @@
       "host_target_class": "lipid",
       "type_class": "toxin",
       "mechanism_class": "membrane_disruption",
-      "effector_name_class": "",
-      "uniprot_id": "A0A6L7HHW7",
-      "sequence": "MIFLNIKKNTKRRKFLACLLVSLCTIHYSSISFAETQAGNATGAIKNASDINTGIANLKYDSRDILAVNGDKVESFIPKESINSNGKFVVVEREKKSLTTSPVDILIIDSVVNRTYPGAVQLANKAFADNQPSLLVAKRKPLNISIDLPGMRKENTITVQNPTYGNVAGAVDDLVSTWNEKYSTTHTLPARMQYTESMVYSKSQIASALNVNAKYLDNSLNIDFNAVANGEKKVMVAAYKQIFYTVSAELPNNPSDLFDNSVTFDELTRKGVSNSAPPVMVSNVAYGRTVYVKLETTSKSKDVQAAFKALLKNNSVETSGQYKDIFEESTFTAVVLGGDAKEHNKVVTKDFNEIRNIIKDNAELSFKNPAYPISYTSTFLKDNATAAVHNNTDYIETTTTEYSSAKMTLDHYGAYVAQFDVSWDEFTFDQNGKEVLTHKTWEGSGKDKTAHYSTVIPLPPNSKNIKIVARECTGLAWEWWRTIINEQNVPLTNEIKVSIGGTTLYPTATISH",
-      "sequence_length": 512,
-      "molecular_weight_da": 56647.17,
-      "isoelectric_point": 8.02,
-      "gravy_score": -0.325,
-      "domains": [
-        {
-          "name": "Thiol-activated cytolysin C-terminal",
-          "accession": null,
-          "start": 406,
-          "end": 506
-        }
-      ],
-      "go_terms": [
-        {
-          "id": "GO:0005576",
-          "term": "extracellular region",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0020002",
-          "term": "host cell plasma membrane",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0015485",
-          "term": "cholesterol binding",
-          "aspect": "F"
-        }
-      ],
-      "signal_peptide": {
-        "start": 1,
-        "end": 34
-      },
-      "transmembrane_regions": []
+      "effector_name_class": ""
     },
     {
       "pathogen_name": "Bacillus anthracis",
@@ -730,69 +279,7 @@
       "host_target_class": "protein",
       "type_class": "toxin",
       "mechanism_class": "protein_modification",
-      "effector_name_class": "",
-      "uniprot_id": "P15917",
-      "sequence": "MNIKKEFIKVISMSCLVTAITLSGPVFIPLVQGAGGHGDVGMHVKEKEKNKDENKRKDEERNKTQEEHLKEIMKHIVKIEVKGEEAVKKEAAEKLLEKVPSDVLEMYKAIGGKIYIVDGDITKHISLEALSEDKKKIKDIYGKDALLHEHYVYAKEGYEPVLVIQSSEDYVENTEKALNVYYEIGKILSRDILSKINQPYQKFLDVLNTIKNASDSDGQDLLFTNQLKEHPTDFSVEFLEQNSNEVQEVFAKAFAYYIEPQHRDVLQLYAPEAFNYMDKFNEQEINLSLEELKDQRMLARYEKWEKIKQHYQHWSDSLSEEGRGLLKKLQIPIEPKKDDIIHSLSQEEKELLKRIQIDSSDFLSTEEKEFLKKLQIDIRDSLSEEEKELLNRIQVDSSNPLSEKEKEFLKKLKLDIQPYDINQRLQDTGGLIDSPSINLDVRKQYKRDIQNIDALLHQSIGSTLYNKIYLYENMNINNLTATLGADLVDSTDNTKINRGIFNEFKKNFKYSISSNYMIVDINERPALDNERLKWRIQLSPDTRAGYLENGKLILQRNIGLEIKDVQIIKQSEKEYIRIDAKVVPKSKIDTKIQEAQLNINQEWNKALGLPKYTKLITFNVHNRYASNIVESAYLILNEWKNNIQSDLIKKVTNYLVDGNGRFVFTDITLPNIAEQYTHQDEIYEQVHSKGLYVPESRSILLHGPSKGVELRNDSEGFIHEFGHAVDDYAGYLLDKNQSDLVTNSKKFIDIFKEEGSNLTSYGRTNEAEFFAEAFRLMHSTDHAERLKVQKNAPKTFQFINDQIKFIINS",
-      "sequence_length": 809,
-      "molecular_weight_da": 93771.13,
-      "isoelectric_point": 5.73,
-      "gravy_score": -0.636,
-      "domains": [
-        {
-          "name": "ATLF-like 1",
-          "accession": null,
-          "start": 70,
-          "end": 282
-        },
-        {
-          "name": "ATLF-like 2",
-          "accession": null,
-          "start": 609,
-          "end": 804
-        }
-      ],
-      "go_terms": [
-        {
-          "id": "GO:0005576",
-          "term": "extracellular region",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0044164",
-          "term": "host cell cytosol",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0004222",
-          "term": "metalloendopeptidase activity",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0008237",
-          "term": "metallopeptidase activity",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0090729",
-          "term": "toxin activity",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0008270",
-          "term": "zinc ion binding",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0006508",
-          "term": "proteolysis",
-          "aspect": "P"
-        }
-      ],
-      "signal_peptide": {
-        "start": 1,
-        "end": 33
-      },
-      "transmembrane_regions": []
+      "effector_name_class": ""
     },
     {
       "pathogen_name": "Bacillus anthracis",
@@ -803,93 +290,7 @@
       "host_target_class": "protein",
       "type_class": "toxin",
       "mechanism_class": "signalling_modulation",
-      "effector_name_class": "",
-      "uniprot_id": "P40136",
-      "sequence": "MTRNKFIPNKFSIISFSVLLFAISSSQAIEVNAMNEHYTESDIKRNHKTEKNKTEKEKFKDSINNLVKTEFTNETLDKIQQTQDLLKKIPKDVLEIYSELGGEIYFTDIDLVEHKELQDLSEEEKNSMNSRGEKVPFASRFVFEKKRETPKLIINIKDYAINSEQSKEVYYEIGKGISLDIISKDKSLDPEFLNLIKSLSDDSDSSDLLFSQKFKEKLELNNKSIDINFIKENLTEFQHAFSLAFSYYFAPDHRTVLELYAPDMFEYMNKLEKGGFEKISESLKKEGVEKDRIDVLKGEKALKASGLVPEHADAFKKIARELNTYILFRPVNKLATNLIKSGVATKGLNVHGKSSDWGPVAGYIPFDQDLSKKHGQQLAVEKGNLENKKSITEHEGEIGKIPLKLDHLRIEELKENGIILKGKKEIDNGKKYYLLESNNQVYEFRISDENNEVQYKTKEGKITVLGEKFNWRNIEVMAKNVEGVLKPLTADYDLFALAPSLTEIKKQIPQKEWDKVVNTPNSLEKQKGVTNLLIKYGIERKPDSTKGTLSNWQKQMLDRLNEAVKYTGYTGGDVVNHGTEQDNEEFPEKDNEIFIINPEGEFILTKNWEMTGRFIEKNITGKDYLYYFNRSYNKIAPGNKAYIEWTDPITKAKINTIPTSAEFIKNLSSIRRSSNVGVYKDSGDKDEFAKKESVKKIAGYLSDYYNSANHIFSQEKKRKISIFRGIQAYNEIENVLKSKQIAPEYKNYFQYLKERITNQVQLLLTHQKSNIEFKLLYKQLNFTENETDNFEVFQKIIDEK",
-      "sequence_length": 800,
-      "molecular_weight_da": 92478.65,
-      "isoelectric_point": 7.23,
-      "gravy_score": -0.704,
-      "domains": [
-        {
-          "name": "ATLF-like",
-          "accession": null,
-          "start": 60,
-          "end": 273
-        }
-      ],
-      "go_terms": [
-        {
-          "id": "GO:1902494",
-          "term": "catalytic complex",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0005576",
-          "term": "extracellular region",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0044164",
-          "term": "host cell cytosol",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0010856",
-          "term": "adenylate cyclase activator activity",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0004016",
-          "term": "adenylate cyclase activity",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0005524",
-          "term": "ATP binding",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0008294",
-          "term": "calcium- and calmodulin-responsive adenylate cyclase activity",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0005516",
-          "term": "calmodulin binding",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0032564",
-          "term": "dATP binding",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0046872",
-          "term": "metal ion binding",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0008237",
-          "term": "metallopeptidase activity",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0141042",
-          "term": "symbiont-mediated cAMP intoxication of host cell",
-          "aspect": "P"
-        },
-        {
-          "id": "GO:0052027",
-          "term": "symbiont-mediated perturbation of host signal transduction pathway",
-          "aspect": "P"
-        }
-      ],
-      "signal_peptide": {
-        "start": 1,
-        "end": 33
-      },
-      "transmembrane_regions": []
+      "effector_name_class": ""
     },
     {
       "pathogen_name": "Bacillus anthracis",
@@ -900,72 +301,7 @@
       "host_target_class": "protein",
       "type_class": "toxin",
       "mechanism_class": "membrane_trafficking",
-      "effector_name_class": "",
-      "uniprot_id": "P13423",
-      "sequence": "MKKRKVLIPLMALSTILVSSTGNLEVIQAEVKQENRLLNESESSSQGLLGYYFSDLNFQAPMVVTSSTTGDLSIPSSELENIPSENQYFQSAIWSGFIKVKKSDEYTFATSADNHVTMWVDDQEVINKASNSNKIRLEKGRLYQIKIQYQRENPTEKGLDFKLYWTDSQNKKEVISSDNLQLPELKQKSSNSRKKRSTSAGPTVPDRDNDGIPDSLEVEGYTVDVKNKRTFLSPWISNIHEKKGLTKYKSSPEKWSTASDPYSDFEKVTGRIDKNVSPEARHPLVAAYPIVHVDMENIILSKNEDQSTQNTDSQTRTISKNTSTSRTHTSEVHGNAEVHASFFDIGGSVSAGFSNSNSSTVAIDHSLSLAGERTWAETMGLNTADTARLNANIRYVNTGTAPIYNVLPTTSLVLGKNQTLATIKAKENQLSQILAPNNYYPSKNLAPIALNAQDDFSSTPITMNYNQFLELEKTKQLRLDTDQVYGNIATYNFENGRVRVDTGSNWSEVLPQIQETTARIIFNGKDLNLVERRIAAVNPSDPLETTKPDMTLKEALKIAFGFNEPNGNLQYQGKDITEFDFNFDQQTSQNIKNQLAELNATNIYTVLDKIKLNAKMNILIRDKRFHYDRNNIAVGADESVVKEAHREVINSSTEGLLLNIDKDIRKILSGYIVEIEDTEGLKEVINDRYDMLNISSLRQDGKTFIDFKKYNDKLPLYISNPNYKVNVYAVTKENTIINPSENGDTSTNGIKKILIFSKKGYEIG",
-      "sequence_length": 764,
-      "molecular_weight_da": 85811.52,
-      "isoelectric_point": 6.1,
-      "gravy_score": -0.6,
-      "domains": [
-        {
-          "name": "PA14",
-          "accession": null,
-          "start": 43,
-          "end": 179
-        }
-      ],
-      "go_terms": [
-        {
-          "id": "GO:0005576",
-          "term": "extracellular region",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0044164",
-          "term": "host cell cytosol",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0044175",
-          "term": "host cell endosome membrane",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0020002",
-          "term": "host cell plasma membrane",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0042802",
-          "term": "identical protein binding",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0051260",
-          "term": "protein homooligomerization",
-          "aspect": "P"
-        },
-        {
-          "id": "GO:0141070",
-          "term": "symbiont-mediated suppression of host MAPK cascade",
-          "aspect": "P"
-        }
-      ],
-      "signal_peptide": {
-        "start": 1,
-        "end": 29
-      },
-      "transmembrane_regions": [
-        {
-          "start": 331,
-          "end": 342
-        },
-        {
-          "start": 345,
-          "end": 354
-        }
-      ]
+      "effector_name_class": ""
     },
     {
       "pathogen_name": "Bacillus anthracis",
@@ -987,74 +323,7 @@
       "host_target_class": "protein",
       "type_class": "surface_protein",
       "mechanism_class": "signalling_modulation",
-      "effector_name_class": "",
-      "uniprot_id": "P9WK45",
-      "sequence": "MRTPRRHCRRIAVLAAVSIAATVVAGCSSGSKPSGGPLPDAKPLVEEATAQTKALKSAHMVLTVNGKIPGLSLKTLSGDLTTNPTAATGNVKLTLGGSDIDADFVVFDGILYATLTPNQWSDFGPAADIYDPAQVLNPDTGLANVLANFADAKAEGRDTINGQNTIRISGKVSAQAVNQIAPPFNATQPVPATVWIQETGDHQLAQAQLDRGSGNSVQMTLSKWGEKVQVTKPPVS",
-      "sequence_length": 236,
-      "molecular_weight_da": 24547.91,
-      "isoelectric_point": 8.23,
-      "gravy_score": -0.127,
-      "domains": [
-        {
-          "name": "LppX/LprAFG lipoprotein family",
-          "accession": "IPR009830",
-          "start": 34,
-          "end": 230
-        },
-        {
-          "name": "Lipoprotein localisation LolA/LolB/LppX",
-          "accession": "IPR029046",
-          "start": 37,
-          "end": 231
-        }
-      ],
-      "go_terms": [
-        {
-          "id": "GO:0097691",
-          "term": "bacterial extracellular vesicle",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0009986",
-          "term": "cell surface",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0005829",
-          "term": "cytosol",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0005576",
-          "term": "extracellular region",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0009274",
-          "term": "peptidoglycan-based cell wall",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0005886",
-          "term": "plasma membrane",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0051861",
-          "term": "glycolipid binding",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0035091",
-          "term": "phosphatidylinositol binding",
-          "aspect": "F"
-        }
-      ],
-      "signal_peptide": {
-        "start": 1,
-        "end": 26
-      },
-      "transmembrane_regions": []
+      "effector_name_class": ""
     },
     {
       "pathogen_name": "Mycobacterium tuberculosis",
@@ -1065,109 +334,7 @@
       "host_target_class": "lipid",
       "type_class": "enzyme",
       "mechanism_class": "protein_modification",
-      "effector_name_class": "",
-      "uniprot_id": "O53361",
-      "sequence": "MLRGIQALSRPLTRVYRALAVIGVLAASLLASWVGAVPQVGLAASALPTFAHVVIVVEENRSQAAIIGNKSAPFINSLAANGAMMAQAFAETHPSEPNYLALFAGNTFGLTKNTCPVNGGALPNLGSELLSAGYTFMGFAEDLPAVGSTVCSAGKYARKHVPWVNFSNVPTTLSVPFSAFPKPQNYPGLPTVSFVIPNADNDMHDGSIAQGDAWLNRHLSAYANWAKTNNSLLVVTWDEDDGSSRNQIPTVFYGAHVRPGTYNETISHYNVLSTLEQIYGLPKTGYATNAPPITDIWGD",
-      "sequence_length": 299,
-      "molecular_weight_da": 31807.14,
-      "isoelectric_point": 6.63,
-      "gravy_score": 0.066,
-      "domains": [
-        {
-          "name": "Phospholipase C-like",
-          "accession": "IPR007312",
-          "start": 33,
-          "end": 286
-        },
-        {
-          "name": "Alkaline-phosphatase-like, core domain superfamily",
-          "accession": "IPR017850",
-          "start": 67,
-          "end": 297
-        }
-      ],
-      "go_terms": [
-        {
-          "id": "GO:0005737",
-          "term": "cytoplasm",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0005829",
-          "term": "cytosol",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0005576",
-          "term": "extracellular region",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0044161",
-          "term": "host cell cytoplasmic vesicle",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0009274",
-          "term": "peptidoglycan-based cell wall",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0003993",
-          "term": "acid phosphatase activity",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0016791",
-          "term": "phosphatase activity",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0034480",
-          "term": "phosphatidylcholine phospholipase C activity",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0004438",
-          "term": "phosphatidylinositol-3-phosphate phosphatase activity",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0050189",
-          "term": "phosphoenolpyruvate phosphatase activity",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0050192",
-          "term": "phosphoglycerate phosphatase activity",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0004805",
-          "term": "trehalose-phosphatase activity",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0006742",
-          "term": "NADP+ catabolic process",
-          "aspect": "P"
-        },
-        {
-          "id": "GO:0046854",
-          "term": "phosphatidylinositol phosphate biosynthetic process",
-          "aspect": "P"
-        },
-        {
-          "id": "GO:0052170",
-          "term": "symbiont-mediated suppression of host innate immune response",
-          "aspect": "P"
-        }
-      ],
-      "signal_peptide": {
-        "start": 1,
-        "end": 43
-      },
-      "transmembrane_regions": []
+      "effector_name_class": ""
     },
     {
       "pathogen_name": "Mycobacterium tuberculosis",
@@ -1178,111 +345,7 @@
       "host_target_class": "protein_complex",
       "type_class": "enzyme",
       "mechanism_class": "membrane_trafficking",
-      "effector_name_class": "",
-      "uniprot_id": "P9WIA1",
-      "sequence": "MSDPLHVTFVCTGNICRSPMAEKMFAQQLRHRGLGDAVRVTSAGTGNWHVGSCADERAAGVLRAHGYPTDHRAAQVGTEHLAADLLVALDRNHARLLRQLGVEAARVRMLRSFDPRSGTHALDVEDPYYGDHSDFEEVFAVIESALPGLHDWVDERLARNGPS",
-      "sequence_length": 163,
-      "molecular_weight_da": 17892.09,
-      "isoelectric_point": 6.51,
-      "gravy_score": -0.33,
-      "domains": [
-        {
-          "name": "Protein-tyrosine phosphatase, low molecular weight",
-          "accession": "IPR017867",
-          "start": 7,
-          "end": 24
-        },
-        {
-          "name": "Protein-tyrosine phosphatase, low molecular weight",
-          "accession": "IPR017867",
-          "start": 50,
-          "end": 66
-        },
-        {
-          "name": "Protein-tyrosine phosphatase, low molecular weight",
-          "accession": "IPR017867",
-          "start": 82,
-          "end": 97
-        },
-        {
-          "name": "Protein-tyrosine phosphatase, low molecular weight",
-          "accession": "IPR017867",
-          "start": 124,
-          "end": 139
-        },
-        {
-          "name": "Phosphotyrosine protein phosphatase I",
-          "accession": "IPR023485",
-          "start": 5,
-          "end": 155
-        },
-        {
-          "name": "Phosphotyrosine protein phosphatase I superfamily",
-          "accession": "IPR036196",
-          "start": 2,
-          "end": 153
-        },
-        {
-          "name": "Low Molecular Weight Phosphotyrosine Protein Phosphatase",
-          "accession": "IPR050438",
-          "start": 5,
-          "end": 147
-        }
-      ],
-      "go_terms": [
-        {
-          "id": "GO:0005829",
-          "term": "cytosol",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0005576",
-          "term": "extracellular region",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0030430",
-          "term": "host cell cytoplasm",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0044161",
-          "term": "host cell cytoplasmic vesicle",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0042025",
-          "term": "host cell nucleus",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0004725",
-          "term": "protein tyrosine phosphatase activity",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0052067",
-          "term": "symbiont-mediated perturbation of host phagocytosis",
-          "aspect": "P"
-        },
-        {
-          "id": "GO:0033668",
-          "term": "symbiont-mediated suppression of host apoptosis",
-          "aspect": "P"
-        },
-        {
-          "id": "GO:0052170",
-          "term": "symbiont-mediated suppression of host innate immune response",
-          "aspect": "P"
-        },
-        {
-          "id": "GO:0141159",
-          "term": "symbiont-mediated suppression of host phagosome acidification",
-          "aspect": "P"
-        }
-      ],
-      "signal_peptide": null,
-      "transmembrane_regions": []
+      "effector_name_class": ""
     },
     {
       "pathogen_name": "Mycobacterium tuberculosis",
@@ -1293,97 +356,7 @@
       "host_target_class": "lipid",
       "type_class": "enzyme",
       "mechanism_class": "protein_modification",
-      "effector_name_class": "",
-      "uniprot_id": "I6WXK4",
-      "sequence": "MAVRELPGAWNFRDVADTATALRPGRLFRSSELSRLDDAGRATLRRLGITDVADLRSSREVARRGPGRVPDGIDVHLLPFPDLADDDADDSAPHETAFKRLLTNDGSNGESGESSQSINDAATRYMTDEYRQFPTRNGAQRALHRVVTLLAAGRPVLTHCFAGKDRTGFVVALVLEAVGLDRDVIVADYLRSNDSVPQLRARISEMIQQRFDTELAPEVVTFTKARLSDGVLGVRAEYLAAARQTIDETYGSLGGYLRDAGISQATVNRMRGVLLG",
-      "sequence_length": 276,
-      "molecular_weight_da": 30153.85,
-      "isoelectric_point": 6.15,
-      "gravy_score": -0.32,
-      "domains": [
-        {
-          "name": "Tyrosine-specific protein phosphatases domain",
-          "accession": "IPR000387",
-          "start": 140,
-          "end": 214
-        },
-        {
-          "name": "Tyrosine/serine-protein phosphatase IphP-type",
-          "accession": "IPR026893",
-          "start": 5,
-          "end": 275
-        },
-        {
-          "name": "Protein-tyrosine phosphatase-like",
-          "accession": "IPR029021",
-          "start": 4,
-          "end": 276
-        }
-      ],
-      "go_terms": [
-        {
-          "id": "GO:0005576",
-          "term": "extracellular region",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0030430",
-          "term": "host cell cytoplasm",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0020002",
-          "term": "host cell plasma membrane",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0016791",
-          "term": "phosphatase activity",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0106019",
-          "term": "phosphatidylinositol-4,5-bisphosphate phosphatase activity",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0043812",
-          "term": "phosphatidylinositol-4-phosphate phosphatase activity",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0004722",
-          "term": "protein serine/threonine phosphatase activity",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0004725",
-          "term": "protein tyrosine phosphatase activity",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0043130",
-          "term": "ubiquitin binding",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0141081",
-          "term": "symbiont-mediated suppression of host inflammasome-mediated signal transduction",
-          "aspect": "P"
-        },
-        {
-          "id": "GO:0052036",
-          "term": "symbiont-mediated suppression of host inflammatory response",
-          "aspect": "P"
-        },
-        {
-          "id": "GO:0052041",
-          "term": "symbiont-mediated suppression of host programmed cell death",
-          "aspect": "P"
-        }
-      ],
-      "signal_peptide": null,
-      "transmembrane_regions": []
+      "effector_name_class": ""
     },
     {
       "pathogen_name": "Mycobacterium tuberculosis",
@@ -1394,105 +367,7 @@
       "host_target_class": "protein",
       "type_class": "secreted_protein",
       "mechanism_class": "immune_evasion",
-      "effector_name_class": "",
-      "uniprot_id": "P9WFK7",
-      "sequence": "MTVTLCSPTEDDWPGMFLLAAASFTDFIGPESATAWRTLVPTDGAVVVRDGAGPGSEVVGMALYMDLRLTVPGEVVLPTAGLSFVAVAPTHRRRGLLRAMCAELHRRIADSGYPVAALHASEGGIYGRFGYGPATTLHELTVDRRFARFHADAPGGGLGGSSVRLVRPTEHRGEFEAIYERWRQQVPGGLLRPQVLWDELLAECKAAPGGDRESFALLHPDGYALYRVDRTDLKLARVSELRAVTADAHCALWRALIGLDSMERISIITHPQDPLPHLLTDTRLARTTWRQDGLWLRIMNVPAALEARGYAHEVGEFSTVLEVSDGGRFALKIGDGRARCTPTDAAAEIEMDRDVLGSLYLGAHRASTLAAANRLRTKDSQLLRRLDAAFASDVPVQTAFEF",
-      "sequence_length": 402,
-      "molecular_weight_da": 43804.0,
-      "isoelectric_point": 6.51,
-      "gravy_score": -0.081,
-      "domains": [
-        {
-          "name": "N-acetyltransferase",
-          "accession": null,
-          "start": 3,
-          "end": 154
-        }
-      ],
-      "go_terms": [
-        {
-          "id": "GO:0097691",
-          "term": "bacterial extracellular vesicle",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0005829",
-          "term": "cytosol",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0005576",
-          "term": "extracellular region",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0044161",
-          "term": "host cell cytoplasmic vesicle",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0043655",
-          "term": "host extracellular region",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0034069",
-          "term": "aminoglycoside N-acetyltransferase activity",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0042802",
-          "term": "identical protein binding",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0008080",
-          "term": "N-acetyltransferase activity",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0061733",
-          "term": "protein-lysine-acetyltransferase activity",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0030649",
-          "term": "aminoglycoside antibiotic catabolic process",
-          "aspect": "P"
-        },
-        {
-          "id": "GO:0051701",
-          "term": "biological process involved in interaction with host",
-          "aspect": "P"
-        },
-        {
-          "id": "GO:0033661",
-          "term": "effector-mediated defense to host-produced reactive oxygen species",
-          "aspect": "P"
-        },
-        {
-          "id": "GO:0052032",
-          "term": "symbiont-mediated perturbation of host inflammatory response",
-          "aspect": "P"
-        },
-        {
-          "id": "GO:0052167",
-          "term": "symbiont-mediated perturbation of host innate immune response",
-          "aspect": "P"
-        },
-        {
-          "id": "GO:0052040",
-          "term": "symbiont-mediated perturbation of host programmed cell death",
-          "aspect": "P"
-        },
-        {
-          "id": "GO:0052041",
-          "term": "symbiont-mediated suppression of host programmed cell death",
-          "aspect": "P"
-        }
-      ],
-      "signal_peptide": null,
-      "transmembrane_regions": []
+      "effector_name_class": ""
     },
     {
       "pathogen_name": "Mycobacterium tuberculosis",
@@ -1503,110 +378,7 @@
       "host_target_class": "protein_family",
       "type_class": "enzyme",
       "mechanism_class": "protein_modification",
-      "effector_name_class": "",
-      "uniprot_id": "P9WI73",
-      "sequence": "MAKASETERSGPGTQPADAQTATSATVRPLSTQAVFRPDFGDEDNFPHPTLGPDTEPQDRMATTSRVRPPVRRLGGGLVEIPRAPDIDPLEALMTNPVVPESKRFCWNCGRPVGRSDSETKGASEGWCPYCGSPYSFLPQLNPGDIVAGQYEVKGCIAHGGLGWIYLALDRNVNGRPVVLKGLVHSGDAEAQAMAMAERQFLAEVVHPSIVQIFNFVEHTDRHGDPVGYIVMEYVGGQSLKRSKGQKLPVAEAIAYLLEILPALSYLHSIGLVYNDLKPENIMLTEEQLKLIDLGAVSRINSFGYLYGTPGFQAPEIVRTGPTVATDIYTVGRTLAALTLDLPTRNGRYVDGLPEDDPVLKTYDSYGRLLRRAIDPDPRQRFTTAEEMSAQLTGVLREVVAQDTGVPRPGLSTIFSPSRSTFGVDLLVAHTDVYLDGQVHAEKLTANEIVTALSVPLVDPTDVAASVLQATVLSQPVQTLDSLRAARHGALDADGVDFSESVELPLMEVRALLDLGDVAKATRKLDDLAERVGWRWRLVWYRAVAELLTGDYDSATKHFTEVLDTFPGELAPKLALAATAELAGNTDEHKFYQTVWSTNDGVISAAFGLARARSAEGDRVGAVRTLDEVPPTSRHFTTARLTSAVTLLSGRSTSEVTEEQIRDAARRVEALPPTEPRVLQIRALVLGGALDWLKDNKASTNHILGFPFTSHGLRLGVEASLRSLARVAPTQRHRYTLVDMANKVRPTSTF",
-      "sequence_length": 750,
-      "molecular_weight_da": 81577.68,
-      "isoelectric_point": 5.56,
-      "gravy_score": -0.193,
-      "domains": [
-        {
-          "name": "Protein kinase",
-          "accession": null,
-          "start": 151,
-          "end": 396
-        }
-      ],
-      "go_terms": [
-        {
-          "id": "GO:0005829",
-          "term": "cytosol",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0005886",
-          "term": "plasma membrane",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0005524",
-          "term": "ATP binding",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0042802",
-          "term": "identical protein binding",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0106310",
-          "term": "protein serine kinase activity",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0004674",
-          "term": "protein serine/threonine kinase activity",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0035556",
-          "term": "intracellular signal transduction",
-          "aspect": "P"
-        },
-        {
-          "id": "GO:0006538",
-          "term": "L-glutamate catabolic process",
-          "aspect": "P"
-        },
-        {
-          "id": "GO:0006543",
-          "term": "L-glutamine catabolic process",
-          "aspect": "P"
-        },
-        {
-          "id": "GO:0046777",
-          "term": "protein autophosphorylation",
-          "aspect": "P"
-        },
-        {
-          "id": "GO:0043457",
-          "term": "regulation of cellular respiration",
-          "aspect": "P"
-        },
-        {
-          "id": "GO:0042783",
-          "term": "symbiont-mediated evasion of host immune response",
-          "aspect": "P"
-        },
-        {
-          "id": "GO:0044068",
-          "term": "symbiont-mediated perturbation of host cellular process",
-          "aspect": "P"
-        },
-        {
-          "id": "GO:0030682",
-          "term": "symbiont-mediated perturbation of host defenses",
-          "aspect": "P"
-        },
-        {
-          "id": "GO:0052067",
-          "term": "symbiont-mediated perturbation of host phagocytosis",
-          "aspect": "P"
-        },
-        {
-          "id": "GO:0052027",
-          "term": "symbiont-mediated perturbation of host signal transduction pathway",
-          "aspect": "P"
-        },
-        {
-          "id": "GO:0052170",
-          "term": "symbiont-mediated suppression of host innate immune response",
-          "aspect": "P"
-        }
-      ],
-      "signal_peptide": null,
-      "transmembrane_regions": []
+      "effector_name_class": ""
     },
     {
       "pathogen_name": "Mycobacterium tuberculosis",
@@ -1617,115 +389,7 @@
       "host_target_class": "cellular_structure",
       "type_class": "secreted_protein",
       "mechanism_class": "membrane_disruption",
-      "effector_name_class": "",
-      "uniprot_id": "P9WNK7",
-      "sequence": "MTEQQWNFAGIEAAASAIQGNVTSIHSLLDEGKQSLTKLAAAWGGSGSEAYQGVQQKWDATATELNNALQNLARTISEAGQAMASTEGNVTGMFA",
-      "sequence_length": 95,
-      "molecular_weight_da": 9903.93,
-      "isoelectric_point": 4.27,
-      "gravy_score": -0.256,
-      "domains": [
-        {
-          "name": "Type VII secretion system ESAT-6-like",
-          "accession": "IPR010310",
-          "start": 5,
-          "end": 89
-        },
-        {
-          "name": "ESAT-6-like superfamily",
-          "accession": "IPR036689",
-          "start": 5,
-          "end": 94
-        }
-      ],
-      "go_terms": [
-        {
-          "id": "GO:0005737",
-          "term": "cytoplasm",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0005829",
-          "term": "cytosol",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0005576",
-          "term": "extracellular region",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0030430",
-          "term": "host cell cytoplasm",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0044165",
-          "term": "host cell endoplasmic reticulum",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0020002",
-          "term": "host cell plasma membrane",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0044228",
-          "term": "host cell surface",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0009274",
-          "term": "peptidoglycan-based cell wall",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0005886",
-          "term": "plasma membrane",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0046812",
-          "term": "host cell surface binding",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0042803",
-          "term": "protein homodimerization activity",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0044315",
-          "term": "protein secretion by the type VII secretion system",
-          "aspect": "P"
-        },
-        {
-          "id": "GO:0052027",
-          "term": "symbiont-mediated perturbation of host signal transduction pathway",
-          "aspect": "P"
-        },
-        {
-          "id": "GO:0052170",
-          "term": "symbiont-mediated suppression of host innate immune response",
-          "aspect": "P"
-        },
-        {
-          "id": "GO:0052085",
-          "term": "symbiont-mediated suppression of host T-cell mediated immune response",
-          "aspect": "P"
-        }
-      ],
-      "signal_peptide": null,
-      "transmembrane_regions": [
-        {
-          "start": 11,
-          "end": 43
-        },
-        {
-          "start": 49,
-          "end": 85
-        }
-      ]
+      "effector_name_class": ""
     },
     {
       "pathogen_name": "Salmonella enterica serovar Typhimurium",
@@ -1736,58 +400,7 @@
       "host_target_class": "protein",
       "type_class": "t3ss_effector",
       "mechanism_class": "protein_modification",
-      "effector_name_class": "",
-      "uniprot_id": "O52623",
-      "sequence": "MTKITLSPQNFRIQKQETTLLKEKSTEKNSLAKSILAVKNHFIELRSKLSERFISHKNTESSATHFHRGSASEGRAVLTNKVVKDFMLQTLNDIDIRGSASKDPAYASQTREAILSAVYSKNKDQCCNLLISKGINIAPFLQEIGEAAKNAGLPGTTKNDVFTPSGAGANPFITPLISSANSKYPRMFINQHQQASFKIYAEKIIMTEVAPLFNECAMPTPQQFQLILENIANKYIQNTP",
-      "sequence_length": 240,
-      "molecular_weight_da": 26635.69,
-      "isoelectric_point": 9.97,
-      "gravy_score": -0.368,
-      "domains": [
-        {
-          "name": "Guanine nucleotide exchange factor SopE",
-          "accession": "IPR005414",
-          "start": 1,
-          "end": 239
-        },
-        {
-          "name": "Guanine nucleotide exchange factor SopE, N-terminal domain",
-          "accession": "IPR016018",
-          "start": 2,
-          "end": 75
-        },
-        {
-          "name": "Guanine nucleotide exchange factor SopE, GEF domain",
-          "accession": "IPR016019",
-          "start": 103,
-          "end": 238
-        },
-        {
-          "name": "SopE-like, GEF domain superfamily",
-          "accession": "IPR035949",
-          "start": 73,
-          "end": 240
-        }
-      ],
-      "go_terms": [
-        {
-          "id": "GO:0005576",
-          "term": "extracellular region",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0005085",
-          "term": "guanyl-nucleotide exchange factor activity",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0030036",
-          "term": "actin cytoskeleton organization",
-          "aspect": "P"
-        }
-      ],
-      "signal_peptide": null,
-      "transmembrane_regions": []
+      "effector_name_class": ""
     },
     {
       "pathogen_name": "Salmonella enterica serovar Typhimurium",
@@ -1798,54 +411,7 @@
       "host_target_class": "protein",
       "type_class": "t3ss_effector",
       "mechanism_class": "cytoskeletal_remodelling",
-      "effector_name_class": "",
-      "uniprot_id": "P0CL52",
-      "sequence": "MVTSVRTQPPVIMPGMQTEIKTQATNLAANLSAVRESATATLSGEIKGPQLEDFPALIKQASLDALFKCGKDAEALKEVFTNSNNVAGKKAIMEFAGLFRSALNATSDSPEAKTLLMKVGAEYTAQIIKDGLKEKSAFGPWLPETKKAEAKLENLEKQLLDIIKNNTGGELSKLSTNLVMQEVMPYIASCIEHNFGCTLDPLTRSNLTHLVDKAAAKAVEALDMCHQKLTQEQGTSVGREARHLEMQTLIPLLLRNVFAQIPADKLPDPKIPEPAAGPVPDGGKKAEPTGINININIDSSNHSVDNSKHINNSRSHVDNSQRHIDNSNHDNSRKTIDNSRTFIDNSQRNGESHHSTNSSNVSHSHSRVDSTTHQTETAHSASTGAIDHGIAGKIDVTAHATAEAVTNASSESKDGKVVTSEKGTTGETTSFDEVDGVTSKSIIGKPVQATVHGVDDNKQQSQTAEIVNVKPLASQLAGVENVKTDTLQSDTTVITGNKAGTTDNDNSQTDKTGPFSGLKFKQNSFLSTVPSVTNMHSMHFDARETFLGVIRKALEPDTSTPFPVRRAFDGLRAEILPNDTIKSAALKAQCSDIDKHPELKAKMETLKEVITHHPQKEKLAEIALQFAREAGLTRLKGETDYVLSNVLDGLIGDGSWRAGPAYESYLNKPGVDRVITTVDGLHMQR",
-      "sequence_length": 685,
-      "molecular_weight_da": 73942.27,
-      "isoelectric_point": 6.59,
-      "gravy_score": -0.5,
-      "domains": [
-        {
-          "name": "Salmonella invasion protein A, N-terminal",
-          "accession": "IPR015138",
-          "start": 50,
-          "end": 263
-        },
-        {
-          "name": "Salmonella invasion protein A, C-terminal actin-binding domain superfamily",
-          "accession": "IPR023224",
-          "start": 514,
-          "end": 670
-        },
-        {
-          "name": "Salmonella invasion protein A, chaperone-binding",
-          "accession": "IPR023225",
-          "start": 23,
-          "end": 263
-        },
-        {
-          "name": "Cell invasion protein SipA, C-terminal actin binding domain",
-          "accession": "IPR054043",
-          "start": 520,
-          "end": 655
-        },
-        {
-          "name": "SPI-1 type III secretion system effector SipA",
-          "accession": "IPR061302",
-          "start": 1,
-          "end": 685
-        }
-      ],
-      "go_terms": [
-        {
-          "id": "GO:0005576",
-          "term": "extracellular region",
-          "aspect": "C"
-        }
-      ],
-      "signal_peptide": null,
-      "transmembrane_regions": []
+      "effector_name_class": ""
     },
     {
       "pathogen_name": "Salmonella enterica serovar Typhimurium",
@@ -1856,75 +422,7 @@
       "host_target_class": "lipid",
       "type_class": "t3ss_effector",
       "mechanism_class": "protein_modification",
-      "effector_name_class": "",
-      "uniprot_id": "O30916",
-      "sequence": "MQIQSFYHSASLKTQEAFKSLQKTLYNGMQILSGQGKAPAKAPDARPEIIVLREPGATWGNYLQHQKASNHSLHNLYNLQRDLLTVAATVLGKQDPVLTSMANQMELAKVKADRPATKQEEAAAKALKKNLIELIAARTQQQDGLPAKEAHRFAAVAFRDAQVKQLNNQPWQTIKNTLTHNGHHYTNTQLPAAEMKIGAKDIFPSAYEGKGVCSWDTKNIHHANNLWMSTVSVHEDGKDKTLFCGIRHGVLSPYHEKDPLLRHVGAENKAKEVLTAALFSKPELLNKALAGEAVSLKLVSVGLLTASNIFGKEGTMVEDQMRAWQSLTQPGKMIHLKIRNKDGDLQTVKIKPDVAAFNVGVNELALKLGFGLKASDSYNAEALHQLLGNDLRPEARPGGWVGEWLAQYPDNYEVVNTLARQIKDIWKNNQHHKDGGEPYKLAQRLAMLAHEIDAVPAWNCKSGKDRTGMMDSEIKREIISLHQTHMLSAPGSLPDSGGQKIFQKVLLNSGNLEIQKQNTGGAGNKVMKNLSPEVLNLSYQKRVGDENIWQSVKGISSLITS",
-      "sequence_length": 561,
-      "molecular_weight_da": 61935.3,
-      "isoelectric_point": 9.8,
-      "gravy_score": -0.474,
-      "domains": [
-        {
-          "name": "Phosphatase IpgD/SopB",
-          "accession": "IPR008108",
-          "start": 1,
-          "end": 561
-        }
-      ],
-      "go_terms": [
-        {
-          "id": "GO:0071944",
-          "term": "cell periphery",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0005576",
-          "term": "extracellular region",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0020003",
-          "term": "symbiont-containing vacuole",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0042577",
-          "term": "lipid phosphatase activity",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0030308",
-          "term": "negative regulation of cell growth",
-          "aspect": "P"
-        },
-        {
-          "id": "GO:0023057",
-          "term": "negative regulation of signaling",
-          "aspect": "P"
-        },
-        {
-          "id": "GO:0045740",
-          "term": "positive regulation of DNA replication",
-          "aspect": "P"
-        },
-        {
-          "id": "GO:0045859",
-          "term": "regulation of protein kinase activity",
-          "aspect": "P"
-        },
-        {
-          "id": "GO:0044075",
-          "term": "symbiont-mediated perturbation of host vacuole organization",
-          "aspect": "P"
-        },
-        {
-          "id": "GO:0141083",
-          "term": "symbiont-mediated suppression of host reactive oxygen species generation",
-          "aspect": "P"
-        }
-      ],
-      "signal_peptide": null,
-      "transmembrane_regions": []
+      "effector_name_class": ""
     },
     {
       "pathogen_name": "Salmonella enterica serovar Typhimurium",
@@ -1935,61 +433,7 @@
       "host_target_class": "protein",
       "type_class": "t3ss_effector",
       "mechanism_class": "membrane_trafficking",
-      "effector_name_class": "",
-      "uniprot_id": "Q56061",
-      "sequence": "MPITIGNGFLKSEILTNSPRNTKEAWWKVLWEKIKDFFFSTGKAKADRCLHEMLFAERAPTRERLTEIFFELKELACASQRDRFQVHNPHENDATIILRIMDQNEENELLRITQNTDTFSCEVMGNLYFLMKDRPDILKSHPQMTAMIKRRYSEIVDYPLPSTLCLNPAGAPILSVPLDNIEGYLYTELRKGHLDGWKAQEKATYLAAKIQSGIEKTTRILHHANISESTQQNAFLETMAMCGLKQLEIPPPHTHIPIEKMVKEVLLADKTFQAFLVTDPSTSQSMLAEIVEAISDQVFHAIFRIDPQAIQKMAEEQLTTLHVRSEQQSGCLCCFL",
-      "sequence_length": 336,
-      "molecular_weight_da": 38498.71,
-      "isoelectric_point": 6.3,
-      "gravy_score": -0.289,
-      "domains": [
-        {
-          "name": "Sif",
-          "accession": "IPR010637",
-          "start": 1,
-          "end": 336
-        },
-        {
-          "name": "Secreted effector protein SifA, C-terminal domain superfamily",
-          "accession": "IPR044928",
-          "start": 193,
-          "end": 327
-        }
-      ],
-      "go_terms": [
-        {
-          "id": "GO:0005576",
-          "term": "extracellular region",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0030430",
-          "term": "host cell cytoplasm",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0020002",
-          "term": "host cell plasma membrane",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0141028",
-          "term": "symbiont-mediated perturbation of host microtubule cytoskeleton",
-          "aspect": "P"
-        },
-        {
-          "id": "GO:0141127",
-          "term": "symbiont-mediated perturbation of host Rab small GTPase signal transduction",
-          "aspect": "P"
-        },
-        {
-          "id": "GO:0044082",
-          "term": "symbiont-mediated perturbation of host small GTPase-mediated signal transduction",
-          "aspect": "P"
-        }
-      ],
-      "signal_peptide": null,
-      "transmembrane_regions": []
+      "effector_name_class": ""
     },
     {
       "pathogen_name": "Salmonella enterica serovar Typhimurium",
@@ -2000,53 +444,7 @@
       "host_target_class": "protein",
       "type_class": "t3ss_effector",
       "mechanism_class": "membrane_trafficking",
-      "effector_name_class": "",
-      "uniprot_id": "Q8ZMM8",
-      "sequence": "MERSLDSLAGMAKSAFGAGTSAAMRQATSPKTILEYIINFFTCGGIRRRNETQYQELIETMAETLKSTMPDRGAPLPENIILDDMDGCRVEFNLPGENNEAGQVIVRVSKGDHSETREIPLASFEKICRALLFRCEFSLPQDSVILTAQGGMNLKGAVLTGANLTSENLCDADLSGANLEGAVLFMADCEGANFKGANLSGTSLGDSNFKNACLEDSIMCGATLDHANLTGANLQHASLLGCSMIECNCSGANMDHTNLSGATLIRADMSGATLQGATIMAAIMEGAVLTRANLRKASFISTNLDGADLAEANLNNTCFKDCTLTDLRTEDATMSTSTQTLFNEFYSENI",
-      "sequence_length": 350,
-      "molecular_weight_da": 37274.26,
-      "isoelectric_point": 4.31,
-      "gravy_score": -0.084,
-      "domains": [
-        {
-          "name": "Pentapeptide repeat 1",
-          "accession": null,
-          "start": 162,
-          "end": 201
-        },
-        {
-          "name": "Pentapeptide repeat 2",
-          "accession": null,
-          "start": 202,
-          "end": 241
-        },
-        {
-          "name": "Pentapeptide repeat 3",
-          "accession": null,
-          "start": 247,
-          "end": 286
-        },
-        {
-          "name": "Pentapeptide repeat 4",
-          "accession": null,
-          "start": 287,
-          "end": 326
-        }
-      ],
-      "go_terms": [
-        {
-          "id": "GO:0005576",
-          "term": "extracellular region",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0033644",
-          "term": "host cell membrane",
-          "aspect": "C"
-        }
-      ],
-      "signal_peptide": null,
-      "transmembrane_regions": []
+      "effector_name_class": ""
     },
     {
       "pathogen_name": "Salmonella enterica serovar Typhimurium",
@@ -2057,82 +455,7 @@
       "host_target_class": "lipid",
       "type_class": "t3ss_effector",
       "mechanism_class": "protein_modification",
-      "effector_name_class": "",
-      "uniprot_id": "Q9FD10",
-      "sequence": "MPLSVGQGYFTSSISSEKFNAIKESARLPELSLWEKIKAYFFTTHHAEALECIFNLYHHQELNLTPVQVRGAYIKLRALASQGCKEQFIIESQEHADKLIIKDDNGENILSIEVECHPEAFGLAKEINKSHPKPKNISLGDITRLVFFGDSLSDSLGRMFEKTHHILPSYGQYFGGRFTNGFTWTEFLSSPHFLGKEMLNFAEGGSTSASYSCFNCIGDFVSNTDRQVASYTPSHQDLAIFLLGANDYMTLHKDNVIMVVEQQIDDIEKIISGGVNNVLVMGIPDLSLTPYGKHSDEKRKLKDESIAHNALLKTNVEELKEKYPQHKICYYETADAFKVIMEAASNIGYDTENPYTHHGYVHVPGAKDPQLDICPQYVFNDLVHPTQEVHHCFAIMLESFIAHHYSTE",
-      "sequence_length": 408,
-      "molecular_weight_da": 46077.42,
-      "isoelectric_point": 5.92,
-      "gravy_score": -0.305,
-      "domains": [
-        {
-          "name": "GDSL lipase/esterase",
-          "accession": "IPR001087",
-          "start": 145,
-          "end": 394
-        },
-        {
-          "name": "Sif",
-          "accession": "IPR010637",
-          "start": 1,
-          "end": 108
-        },
-        {
-          "name": "SGNH hydrolase superfamily",
-          "accession": "IPR036514",
-          "start": 137,
-          "end": 405
-        }
-      ],
-      "go_terms": [
-        {
-          "id": "GO:0005576",
-          "term": "extracellular region",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0044174",
-          "term": "host cell endosome",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0033644",
-          "term": "host cell membrane",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0052689",
-          "term": "carboxylic ester hydrolase activity",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0034736",
-          "term": "cholesterol O-acyltransferase activity",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0047178",
-          "term": "glycerophospholipid acyltransferase (CoA-dependent) activity",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0016298",
-          "term": "lipase activity",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0031267",
-          "term": "small GTPase binding",
-          "aspect": "F"
-        },
-        {
-          "id": "GO:0008610",
-          "term": "lipid biosynthetic process",
-          "aspect": "P"
-        }
-      ],
-      "signal_peptide": null,
-      "transmembrane_regions": []
+      "effector_name_class": ""
     },
     {
       "pathogen_name": "Salmonella enterica serovar Typhimurium",
@@ -2143,45 +466,7 @@
       "host_target_class": "protein",
       "type_class": "t3ss_effector",
       "mechanism_class": "membrane_trafficking",
-      "effector_name_class": "",
-      "uniprot_id": "Q8ZQC8",
-      "sequence": "MPVTLSFGNRHNYEINHSRLARLMSPDKEEALYMGVWDRFKDCFRTHKKQEVLEVLYTLIHGCERENQAELNVDITGMEKIHAFTQLKEYANPSQQDRFVMRFDMNQTQVLFEIDGKVIDKCNLHRLLNVSENCIFKVMEEDEEELFLKICIKYGEKISRYPELLEGFANKLKDAVNEDDDVKDEVYKLMRSGEDRKMECVEWNGTLTEEEKNKLRCLQMGSFNITTQFFKIGYWELEGEVLFDMVHPTLSYLLQAYKPSLSSDLIETNTMLFSDVLNKDYDDYQNNKREIDAILRRIYRSHNNTLFISEKSSCRNMLI",
-      "sequence_length": 319,
-      "molecular_weight_da": 37782.34,
-      "isoelectric_point": 4.99,
-      "gravy_score": -0.57,
-      "domains": [
-        {
-          "name": "Salmonella outer protein D",
-          "accession": "IPR022747",
-          "start": 1,
-          "end": 319
-        }
-      ],
-      "go_terms": [
-        {
-          "id": "GO:0005576",
-          "term": "extracellular region",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0033644",
-          "term": "host cell membrane",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0020002",
-          "term": "host cell plasma membrane",
-          "aspect": "C"
-        },
-        {
-          "id": "GO:0030254",
-          "term": "protein secretion by the type III secretion system",
-          "aspect": "P"
-        }
-      ],
-      "signal_peptide": null,
-      "transmembrane_regions": []
+      "effector_name_class": ""
     }
   ],
   "host_proteins": [
@@ -2194,7 +479,6 @@
       "function": "Small GTPase that regulates early endosome fusion and trafficking",
       "pathway": "Endocytic pathway",
       "reference_doi": "10.1016/j.cell.2008.12.035",
-      "curation_status": "curated",
       "last_updated": "2026-10-31",
       "sequence": "MASRGATRPNGPNTGNKICQFKLVLLGESAVGKSSLVLRFVKGQFHEFQESTIGAAFLTQTVCLDDTTVKFEIWDTAGQERYHSLAPMYYRGAQAAIVVYDITNEESFARAKNWVKELQRQASPNIVIALSGNKADLANKRAVDFQEAQSYADDNSLLFMETSAKTSMNVNEIFMAIAKKLPKNEPQNPGANSARGRGVDLTEPTQPTRNQCCSN",
       "sequence_length": 215,
@@ -2577,7 +861,6 @@
       "function": "Small GTPase that regulates late endosomal/lysosomal trafficking and maturation",
       "pathway": "Endocytic pathway",
       "reference_doi": "10.1038/sj.onc.1205352",
-      "curation_status": "curated",
       "last_updated": "2026-10-31",
       "sequence": "MTSRKKVLLKVIILGDSGVGKTSLMNQYVNKKFSNQYKATIGADFLTKEVMVDDRLVTMQIWDTAGQERFQSLGVAFYRGADCCVLVFDVTAPNTFKTLDSWRDEFLIQASPRDPENFPFVVLGNKIDLENRQVATKRAQAWCYSKNNIPYFETSAKEAINVEQAFQTIARNALKQETEVELYNEFPEPIKLDKNDRAKASAESCSC",
       "sequence_length": 207,
@@ -3000,7 +1283,6 @@
       "function": "Membrane protein involved in myeloid cell differentiation and signaling",
       "pathway": null,
       "reference_doi": "10.1186/1471-2121-10-1",
-      "curation_status": "curated",
       "last_updated": "2026-10-31",
       "sequence": "MPVTVTRTTITTTTTSSSGLGSPMIVGSPRALTQPLGLLRLLQLVSTCVAFSLVASVGAWTGSMGNWSMFTWCFCFSVTLIILIVELCGLQARFPLSWRNFPITFACYAALFCLSASIIYPTTYVQFLSHGRSRDHAIAATFFSCIACVAYATEVAWTRARPGEITGYMATVPGLLKVLETFVACIIFAFISDPNLYQHQPALEWCVAVYAICFILAAIAILLNLGECTNVLPIPFPSFLSGLALLSVLLYATALVLWPLYQFDEKYGGQPRRSRDVSCSRSHAYYVCAWDRRLAVAILTAINLLAYVADLVHSAHLVFVKV",
       "sequence_length": 322,
@@ -3122,7 +1404,6 @@
       "function": "Non-receptor tyrosine kinase involved in cell proliferation, differentiation, and adhesion",
       "pathway": "Signal transduction",
       "reference_doi": "10.1038/sj.onc.1206042",
-      "curation_status": "curated",
       "last_updated": "2026-10-31",
       "sequence": "MLEICLKLVGCKSKKGLSSSSSCYLEEALQRPVASDFEPQGLSEAARWNSKENLLAGPSENDPNLFVALYDFVASGDNTLSITKGEKLRVLGYNHNGEWCEAQTKNGQGWVPSNYITPVNSLEKHSWYHGPVSRNAAEYLLSSGINGSFLVRESESSPGQRSISLRYEGRVYHYRINTASDGKLYVSSESRFNTLAELVHHHSTVADGLITTLHYPAPKRNKPTVYGVSPNYDKWEMERTDITMKHKLGGGQYGEVYEGVWKKYSLTVAVKTLKEDTMEVEEFLKEAAVMKEIKHPNLVQLLGVCTREPPFYIITEFMTYGNLLDYLRECNRQEVNAVVLLYMATQISSAMEYLEKKNFIHRDLAARNCLVGENHLVKVADFGLSRLMTGDTYTAHAGAKFPIKWTAPESLAYNKFSIKSDVWAFGVLLWEIATYGMSPYPGIDLSQVYELLEKDYRMERPEGCPEKVYELMRACWQWNPSDRPSFAEIHQAFETMFQESSISDEVEKELGKQGVRGAVSTLLQAPELPTKTRTSRRAAEHRDTTDVPEMPHSKGQGESDPLDHEPAVSPLLPRKERGPPEGGLNEDERLLPKDKKTNLFSALIKKKKKTAPTPPKRSSSFREMDGQPERRGAGEEEGRDISNGALAFTPLDTADPAKSPKPSNGAGVPNGALRESGGSGFRSPHLWKKSSTLTSSRLATGEEEGGGSSSKRFLRSCSASCVPHGAKDTEWRSVTLPRDLQSTGRQFDSSTFGGHKSEKPALPRKRAGENRSDQVTRGTVTPPPRLVKKNEEAADEVFKDIMESSPGSSPPNLTPKPLRRQVTVAPASGLPHKEEAGKGSALGTPAAAEPVTPTSKAGSGAPGGTSKGPAEESRVRRHKHSSESPGRDKGKLSRLKPAPPPPPAASAGKAGGKPSQSPSQEAAGEAVLGAKTKATSLVDAVNSDAAKPSQPGEGLKKPVLPATPKPQSAKPSGTPISPAPVPSTLPSASSALAGDQPSSTAFIPLISTRVSLRKTRQPPERIASGAITKGVVLDSTEALCLAISRNSEQMASHSAVLEAGKNLYTFCVSYVDSIQQMRNKFAFREAINKLENNLRELQICPATAGSGPAATQDFSKLLSSVKEISDIVQR",
       "sequence_length": 1130,
@@ -3835,7 +2116,6 @@
       "function": "Major lysosomal membrane protein involved in lysosome biogenesis and autophagy",
       "pathway": "Autophagy / lysosomal degradation",
       "reference_doi": "10.1016/0955-0674(91)90032-C",
-      "curation_status": "curated",
       "last_updated": "2026-10-31",
       "sequence": "MAAPGSARRPLLLLLLLLLLGLMHCASAAMFMVKNGNGTACIMANFSAAFSVNYDTKSGPKNMTFDLPSDATVVLNRSSCGKENTSDPSLVIAFGRGHTLTLNFTRNATRYSVQLMSFVYNLSDTHLFPNASSKEIKTVESITDIRADIDKKYRCVSGTQVHMNNVTVTLHDATIQAYLSNSSFSRGETRCEQDRPSPTTAPPAPPSPSPSPVPKSPSVDKYNVSGTNGTCLLASMGLQLNLTYERKDNTTVTRLLNINPNKTSASGSCGAHLVTLELHSEGTTVLLFQFGMNASSSRFFLQGIQLNTILPDARDPAFKAANGSLRALQATVGNSYKCNAEEHVRVTKAFSVNIFKVWVQAFKVEGGQFGSVEECLLDENSMLIPIAVGGALAGLVLIVLIAYLVGRKRSHAGYQTI",
       "sequence_length": 417,
@@ -4097,7 +2377,6 @@
       "function": "Small GTPase that mediates recycling of internalized cargo from early endosomes",
       "pathway": "Endocytic pathway",
       "reference_doi": null,
-      "curation_status": "curated",
       "last_updated": "2026-11-04",
       "sequence": "MSQTAMSETYDFLFKFLVIGNAGTGKSCLLHQFIEKKFKDDSNHTIGVEFGSKIINVGGKYVKLQIWDTAGQERFRSVTRSYYRGAAGALLVYDITSRETYNALTNWLTDARMLASQNIVIILCGNKKDLDADREVTFLEASRFAQENELMFLETSALTGENVEEAFVQCARKILNKIESGELDPERMGSGIQYGDAALRQLRSPRRAQAPNAQECGC",
       "sequence_length": 218,
@@ -4317,7 +2596,6 @@
       "function": "Small GTPase that regulates retrograde endosome-to-Golgi and intra-Golgi transport",
       "pathway": "Secretory pathway",
       "reference_doi": null,
-      "curation_status": "curated",
       "last_updated": "2026-11-04",
       "sequence": "MSTGGDFGNPLRKFKLVFLGEQSVGKTSLITRFMYDSFDNTYQATIGIDFLSKTMYLEDRTVRLQLWDTAGQERFRSLIPSYIRDSTVAVVVYDITNVNSFQQTTKWIDDVRTERGSDVIIMLVGNKTDLADKRQVSIEEGERKAKELNVMFIETSAKAGYNVKQLFRRVAAALPGMESTQDRSREDMIDIKLEKPQEQPVSEGGCSC",
       "sequence_length": 208,
@@ -4606,7 +2884,6 @@
       "function": "Small GTPase that regulates recycling endosome trafficking and receptor return to the plasma membrane",
       "pathway": "Endocytic pathway",
       "reference_doi": null,
-      "curation_status": "curated",
       "last_updated": "2026-11-04",
       "sequence": "MGTRDDEYDYLFKVVLIGDSGVGKSNLLSRFTRNEFNLESKSTIGVEFATRSIQVDGKTIKAQIWDTAGQERYRAITSAYYRGAVGALLVYDIAKHLTYENVERWLKELRDHADSNIVIMLVGNKSDLRHLRAVPTDEARAFAEKNGLSFIETSALDSTNVEAAFQTILTEIYRIVSQKQMSDRRENDMSPSNNVVPIHVPPTTENKPKVQCCQNI",
       "sequence_length": 216,
@@ -5055,7 +3332,6 @@
       "function": "Small GTPase that regulates actin cytoskeleton dynamics, cell migration, and gene expression",
       "pathway": "Signal transduction",
       "reference_doi": null,
-      "curation_status": "curated",
       "last_updated": "2026-11-04",
       "sequence": "MQAIKCVVVGDGAVGKTCLLISYTTNAFPGEYIPTVFDNYSANVMVDGKPVNLGLWDTAGQEDYDRLRPLSYPQTDVFLICFSLVSPASFENVRAKWYPEVRHHCPNTPIILVGTKLDLRDDKDTIEKLKEKKLTPITYPQGLAMAKEIGAVKYLECSALTQRGLKTVFDEAIRAVLCPPPVKKRKRKCLLL",
       "sequence_length": 192,
@@ -5864,7 +4140,6 @@
       "function": "Small GTPase that controls cell polarity, actin remodeling, and membrane trafficking",
       "pathway": "Signal transduction",
       "reference_doi": null,
-      "curation_status": "curated",
       "last_updated": "2026-11-04",
       "sequence": "MQTIKCVVVGDGAVGKTCLLISYTTNKFPSEYVPTVFDNYAVTVMIGGEPYTLGLFDTAGQEDYDRLRPLSYPQTDVFLVCFSVVSPSSFENVKEKWVPEITHHCPKTPFLLVGTQIDLRDDPSTIEKLAKNKQKPITPETAEKLARDLKAVKYVECSALTQKGLKNVFDEAILAALEPPEPKKSRRCVLL",
       "sequence_length": 191,
@@ -6454,7 +4729,6 @@
       "function": "Small GTPase that regulates stress fiber formation, cell contraction, and transcription",
       "pathway": "Signal transduction",
       "reference_doi": null,
-      "curation_status": "curated",
       "last_updated": "2026-11-04",
       "sequence": "MAAIRKKLVIVGDGACGKTCLLIVFSKDQFPEVYVPTVFENYVADIEVDGKQVELALWDTAGQEDYDRLRPLSYPDTDVILMCFSIDSPDSLENIPEKWTPEVKHFCPNVPIILVGNKKDLRNDEHTRRELAKMKQEPVKPEEGRDMANRIGAFGYMECSAKTKDGVREVFEMATRAALQARRGKKKSGCLVL",
       "sequence_length": 193,
@@ -7093,7 +5367,6 @@
       "function": "Major coat protein of clathrin-coated vesicles mediating receptor-mediated endocytosis",
       "pathway": "Endocytic pathway",
       "reference_doi": null,
-      "curation_status": "curated",
       "last_updated": "2026-11-04",
       "sequence": "MAQILPIRFQEHLQLQNLGINPANIGFSTLTMESDKFICIREKVGEQAQVVIIDMNDPSNPIRRPISADSAIMNPASKVIALKAGKTLQIFNIEMKSKMKAHTMTDDVTFWKWISLNTVALVTDNAVYHWSMEGESQPVKMFDRHSSLAGCQIINYRTDAKQKWLLLTGISAQQNRVVGAMQLYSVDRKVSQPIEGHAASFAQFKMEGNAEESTLFCFAVRGQAGGKLHIIEVGTPPTGNQPFPKKAVDVFFPPEAQNDFPVAMQISEKHDVVFLITKYGYIHLYDLETGTCIYMNRISGETIFVTAPHEATAGIIGVNRKGQVLSVCVEEENIIPYITNVLQNPDLALRMAVRNNLAGAEELFARKFNALFAQGNYSEAAKVAANAPKGILRTPDTIRRFQSVPAQPGQTSPLLQYFGILLDQGQLNKYESLELCRPVLQQGRKQLLEKWLKEDKLECSEELGDLVKSVDPTLALSVYLRANVPNKVIQCFAETGQVQKIVLYAKKVGYTPDWIFLLRNVMRISPDQGQQFAQMLVQDEEPLADITQIVDVFMEYNLIQQCTAFLLDALKNNRPSEGPLQTRLLEMNLMHAPQVADAILGNQMFTHYDRAHIAQLCEKAGLLQRALEHFTDLYDIKRAVVHTHLLNPEWLVNYFGSLSVEDSLECLRAMLSANIRQNLQICVQVASKYHEQLSTQSLIELFESFKSFEGLFYFLGSIVNFSQDPDVHFKYIQAACKTGQIKEVERICRESNCYDPERVKNFLKEAKLTDQLPLIIVCDRFDFVHDLVLYLYRNNLQKYIEIYVQKVNPSRLPVVIGGLLDVDCSEDVIKNLILVVRGQFSTDELVAEVEKRNRLKLLLPWLEARIHEGCEEPATHNALAKIYIDSNNNPERFLRENPYYDSRVVGKYCEKRDPHLACVAYERGQCDLELINVCNENSLFKSLSRYLVRRKDPELWGSVLLESNPYRRPLIDQVVQTALSETQDPEEVSVTVKAFMTADLPNELIELLEKIVLDNSVFSEHRNLQNLLILTAIKADRTRVMEYINRLDNYDAPDIANIAISNELFEEAFAIFRKFDVNTSAVQVLIEHIGNLDRAYEFAERCNEPAVWSQLAKAQLQKGMVKEAIDSYIKADDPSSYMEVVQAANTSGNWEELVKYLQMARKKARESYVETELIFALAKTNRLAELEEFINGPNNAHIQQVGDRCYDEKMYDAAKLLYNNVSNFGRLASTLVHLGEYQAAVDGARKANSTRTWKEVCFACVDGKEFRLAQMCGLHIVVHADELEELINYYQDRGYFEELITMLEAALGLERAHMGMFTELAILYSKFKPQKMREHLELFWSRVNIPKVLRAAEQAHLWAELVFLYDKYEEYDNAIITMMNHPTDAWKEGQFKDIITKVANVELYYRAIQFYLEFKPLLLNDLLMVLSPRLDHTRAVNYFSKVKQLPLVKPYLRSVQNHNNKSVNESLNNLFITEEDYQALRTSIDAYDNFDNISLAQRLEKHELIEFRRIAAYLFKGNNRWKQSVELCKKDSLYKDAMQYASESKDTELAEELLQWFLQEEKRECFGACLFTCYDLLRPDVVLETAWRHNIMDFAMPYFIQVMKEYLTKVDKLDASESLRKEEEQATETQPIVYGQPQLMLTAGPSVAVPPQAPFGYGYTAPPYGQPQPGFGYSM",
       "sequence_length": 1675,
@@ -7689,7 +5962,6 @@
       "function": "Pattern recognition receptor that senses bacterial flagellin and activates innate immunity",
       "pathway": "Innate immune signaling",
       "reference_doi": null,
-      "curation_status": "curated",
       "last_updated": "2026-11-04",
       "sequence": "MGDHLDLLLGVVLMAGPVFGIPSCSFDGRIAFYRFCNLTQVPQVLNTTERLLLSFNYIRTVTASSFPFLEQLQLLELGSQYTPLTIDKEAFRNLPNLRILDLGSSKIYFLHPDAFQGLFHLFELRLYFCGLSDAVLKDGYFRNLKALTRLDLSKNQIRSLYLHPSFGKLNSLKSIDFSSNQIFLVCEHELEPLQGKTLSFFSLAANSLYSRVSVDWGKCMNPFRNMVLEILDVSGNGWTVDITGNFSNAISKSQAFSLILAHHIMGAGFGFHNIKDPDQNTFAGLARSSVRHLDLSHGFVFSLNSRVFETLKDLKVLNLAYNKINKIADEAFYGLDNLQVLNLSYNLLGELYSSNFYGLPKVAYIDLQKNHIAIIQDQTFKFLEKLQTLDLRDNALTTIHFIPSIPDIFLSGNKLVTLPKINLTANLIHLSENRLENLDILYFLLRVPHLQILILNQNRFSSCSGDQTPSENPSLEQLFLGENMLQLAWETELCWDVFEGLSHLQVLYLNHNYLNSLPPGVFSHLTALRGLSLNSNRLTVLSHNDLPANLEILDISRNQLLAPNPDVFVSLSVLDITHNKFICECELSTFINWLNHTNVTIAGPPADIYCVYPDSFSGVSLFSLSTEGCDEEEVLKSLKFSLFIVCTVTLTLFLMTILTVTKFRGFCFICYKTAQRLVFKDHPQGTEPDMYKYDAYLCFSSKDFTWVQNALLKHLDTQYSDQNRFNLCFEERDFVPGENRIANIQDAIWNSRKIVCLVSRHFLRDGWCLEAFSYAQGRCLSDLNSALIMVVVGSLSQYQLMKHQSIRGFVQKQQYLRWPEDLQDVGWFLHKLSQQILKKEKEKKKDNNIPLQTVATIS",
       "sequence_length": 858,
@@ -7851,7 +6123,6 @@
       "function": "Calcium-dependent adhesion molecule mediating epithelial cell-cell junctions",
       "pathway": "Cell adhesion",
       "reference_doi": null,
-      "curation_status": "curated",
       "last_updated": "2026-11-04",
       "sequence": "MGPWSRSLSALLLLLQVSSWLCQEPEPCHPGFDAESYTFTVPRRHLERGRVLGRVNFEDCTGRQRTAYFSLDTRFKVGTDGVITVKRPLRFHNPQIHFLVYAWDSTYRKFSTKVTLNTVGHHHRPPPHQASVSGIQAELLTFPNSSPGLRRQKRDWVIPPISCPENEKGPFPKNLVQIKSNKDKEGKVFYSITGQGADTPPVGVFIIERETGWLKVTEPLDRERIATYTLFSHAVSSNGNAVEDPMEILITVTDQNDNKPEFTQEVFKGSVMEGALPGTSVMEVTATDADDDVNTYNAAIAYTILSQDPELPDKNMFTINRNTGVISVVTTGLDRESFPTYTLVVQAADLQGEGLSTTATAVITVTDTNDNPPIFNPTTYKGQVPENEANVVITTLKVTDADAPNTPAWEAVYTILNDDGGQFVVTTNPVNNDGILKTAKGLDFEAKQQYILHVAVTNVVPFEVSLTTSTATVTVDVLDVNEAPIFVPPEKRVEVSEDFGVGQEITSYTAQEPDTFMEQKITYRIWRDTANWLEINPDTGAISTRAELDREDFEHVKNSTYTALIIATDNGSPVATGTGTLLLILSDVNDNAPIPEPRTIFFCERNPKPQVINIIDADLPPNTSPFTAELTHGASANWTIQYNDPTQESIILKPKMALEVGDYKINLKLMDNQNKDQVTTLEVSVCDCEGAAGVCRKAQPVEAGLQIPAILGILGGILALLILILLLLLFLRRRAVVKEPLLPPEDDTRDNVYYYDEEGGGEEDQDFDLSQLHRGLDARPEVTRNDVAPTLMSVPRYLPRPANPDEIGNFIDENLKAADTDPTAPPYDSLLVFDYEGSGSEAASLSSLNSSESDKDQDYDYLNEWGNRFKKLADMYGGGEDD",
       "sequence_length": 882,
@@ -8361,7 +6632,6 @@
       "function": "Small leucine-rich proteoglycan that binds collagen and modulates TGF-beta signaling",
       "pathway": "Extracellular matrix organization",
       "reference_doi": null,
-      "curation_status": "curated",
       "last_updated": "2026-11-04",
       "sequence": "MKATIILLLLAQVSWAGPFQQRGLFDFMLEDEASGIGPEVPDDRDFEPSLGPVCPFRCQCHLRVVQCSDLGLDKVPKDLPPDTTLLDLQNNKITEIKDGDFKNLKNLHALILVNNKISKVSPGAFTPLVKLERLYLSKNQLKELPEKMPKTLQELRAHENEITKVRKVTFNGLNQMIVIELGTNPLKSSGIENGAFQGMKKLSYIRIADTNITSIPQGLPPSLTELHLDGNKISRVDAASLKGLNNLAKLGLSFNSISAVDNGSLANTPHLRELHLDNNKLTRVPGGLAEHKYIQVVYLHNNNISVVGSSDFCPPGHNTKKASYSGVSLFSNPVQYWEIQPSTFRCVYVRSAIQLGNYK",
       "sequence_length": 359,
@@ -8669,7 +6939,6 @@
       "function": "Intermediate filament protein that maintains cell shape and mechanical stability",
       "pathway": "Cytoskeleton organization",
       "reference_doi": null,
-      "curation_status": "curated",
       "last_updated": "2026-11-04",
       "sequence": "MSTRSVSSSSYRRMFGGPGTASRPSSSRSYVTTSTRTYSLGSALRPSTSRSLYASSPGGVYATRSSAVRLRSSVPGVRLLQDSVDFSLADAINTEFKNTRTNEKVELQELNDRFANYIDKVRFLEQQNKILLAELEQLKGQGKSRLGDLYEEEMRELRRQVDQLTNDKARVEVERDNLAEDIMRLREKLQEEMLQREEAENTLQSFRQDVDNASLARLDLERKVESLQEEIAFLKKLHEEEIQELQAQIQEQHVQIDVDVSKPDLTAALRDVRQQYESVAAKNLQEAEEWYKSKFADLSEAANRNNDALRQAKQESTEYRRQVQSLTCEVDALKGTNESLERQMREMEENFAVEAANYQDTIGRLQDEIQNMKEEMARHLREYQDLLNVKMALDIEIATYRKLLEGEESRISLPLPNFSSLNLRETNLDSLPLVDTHSKRTLLIKTVETRDGQVINETSQHHDDLE",
       "sequence_length": 466,
@@ -8940,7 +7209,6 @@
       "function": "GTPase that catalyzes ribosomal translocation during protein synthesis elongation",
       "pathway": "Translation",
       "reference_doi": null,
-      "curation_status": "curated",
       "last_updated": "2026-11-04",
       "sequence": "MVNFTVDQIRAIMDKKANIRNMSVIAHVDHGKSTLTDSLVCKAGIIASARAGETRFTDTRKDEQERCITIKSTAISLFYELSENDLNFIKQSKDGAGFLINLIDSPGHVDFSSEVTAALRVTDGALVVVDCVSGVCVQTETVLRQAIAERIKPVLMMNKMDRALLELQLEPEELYQTFQRIVENVNVIISTYGEGESGPMGNIMIDPVLGTVGFGSGLHGWAFTLKQFAEMYVAKFAAKGEGQLGPAERAKKVEDMMKKLWGDRYFDPANGKFSKSATSPEGKKLPRTFCQLILDPIFKVFDAIMNFKKEETAKLIEKLDIKLDSEDKDKEGKPLLKAVMRRWLPAGDALLQMITIHLPSPVTAQKYRCELLYEGPPDDEAAMGIKSCDPKGPLMMYISKMVPTSDKGRFYAFGRVFSGLVSTGLKVRIMGPNYTPGKKEDLYLKPIQRTILMMGRYVEPIEDVPCGNIVGLVGVDQFLVKTGTITTFEHAHNMRVMKFSVSPVVRVAVEAKNPADLPKLVEGLKRLAKSDPMVQCIIEESGEHIIAGAGELHLEICLKDLEEDHACIPIKKSDPVVSYRETVSEESNVLCLSKSPNKHNRLYMKARPFPDGLAEDIDKGEVSARQELKQRARYLAEKYEWDVAEARKIWCFGPDGTGPNILTDITKGVQYLNEIKDSVVAGFQWATKEGALCEENMRGVRFDVHDVTLHADAIHRGGGQIIPTARRCLYASVLTAQPRLMEPIYLVEIQCPEQVVGGIYGVLNRKRGHVFEESQVAGTPMFVVKAYLPVNESFGFTADLRSNTGGQAFPQCVFDHWQILPGDPFDNSSRPSQVVAETRKRKGLKEGIPALDNFLDKL",
       "sequence_length": 858,
@@ -9221,7 +7489,6 @@
       "function": "Ubiquitous cytoplasmic actin involved in cell motility, shape, and mechanical support",
       "pathway": "Cytoskeleton organization",
       "reference_doi": null,
-      "curation_status": "curated",
       "last_updated": "2026-11-04",
       "sequence": "MDDDIAALVVDNGSGMCKAGFAGDDAPRAVFPSIVGRPRHQGVMVGMGQKDSYVGDEAQSKRGILTLKYPIEHGIVTNWDDMEKIWHHTFYNELRVAPEEHPVLLTEAPLNPKANREKMTQIMFETFNTPAMYVAIQAVLSLYASGRTTGIVMDSGDGVTHTVPIYEGYALPHAILRLDLAGRDLTDYLMKILTERGYSFTTTAEREIVRDIKEKLCYVALDFEQEMATAASSSSLEKSYELPDGQVITIGNERFRCPEALFQPSFLGMESCGIHETTFNSIMKCDVDIRKDLYANTVLSGGTTMYPGIADRMQKEITALAPSTMKIKIIAPPERKYSVWIGGSILASLSTFQQMWISKQEYDESGPSIVHRKCF",
       "sequence_length": 375,
@@ -10002,7 +8269,6 @@
       "function": "SNARE protein that mediates vesicle fusion with the plasma membrane",
       "pathway": "SNARE-mediated vesicle trafficking",
       "reference_doi": null,
-      "curation_status": "curated",
       "last_updated": "2026-11-04",
       "sequence": "MSATAATAPPAAPAGEGGPPAPPPNLTSNRRLQQTQAQVDEVVDIMRVNVDKVLERDQKLSELDDRADALQAGASQFETSAAKLKRKYWWKNLKMMIILGVICAIILIIIIVYFST",
       "sequence_length": 116,
@@ -10458,7 +8724,6 @@
       "function": "Tight junction component that forms a paracellular barrier to small molecules",
       "pathway": "Tight junction barrier",
       "reference_doi": null,
-      "curation_status": "curated",
       "last_updated": "2026-11-04",
       "sequence": "MANAGLQLLGFILAFLGWIGAIVSTALPQWRIYSYAGDNIVTAQAMYEGLWMSCVSQSTGQIQCKVFDSLLNLSSTLQATRALMVVGILLGVIAIFVATVGMKCMKCLEDDEVQKMRMAVIGGAIFLLAGLAILVATAWYGNRIVQEFYDPMTPVNARYEFGQALFTGWAAASLCLLGGALLCCSCPRKTTSYPTPRPYPKPAPSSGKDYV",
       "sequence_length": 211,

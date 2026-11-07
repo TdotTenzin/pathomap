@@ -22,15 +22,17 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
-import json
 import sqlite3
 import sys
-import time
 import urllib.parse
-import urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
 from typing import Any
+
+# Add scripts directory to path for relative imports when run as module
+sys.path.insert(0, str(Path(__file__).parent))
+
+from http_client import ApiError, http_json, http_text, read_json, slug, write_json
 
 ROOT = Path(__file__).resolve().parents[1]
 SEED_PATH = ROOT / "data" / "sources" / "pathogens_seed.json"
@@ -99,53 +101,6 @@ class BuildError(RuntimeError):
     pass
 
 
-def read_json(path: Path) -> Any:
-    return json.loads(path.read_text(encoding="utf-8"))
-
-
-def write_json(path: Path, payload: Any) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(
-        json.dumps(payload, indent=2, ensure_ascii=False, allow_nan=False) + "\n",
-        encoding="utf-8",
-    )
-
-
-def slug(value: str) -> str:
-    return "".join(ch.lower() if ch.isalnum() else "-" for ch in value).strip("-")
-
-
-def http_text(url: str, args: argparse.Namespace, cache_path: Path | None = None) -> str:
-    if cache_path and cache_path.exists() and not args.refresh:
-        return cache_path.read_text(encoding="utf-8")
-    if args.no_network:
-        raise BuildError(f"network access disabled and cache is missing: {cache_path}")
-
-    last_error: Exception | None = None
-    for attempt in range(3):
-        try:
-            req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-            with urllib.request.urlopen(req, timeout=60) as response:
-                text = response.read().decode("utf-8")
-            time.sleep(0.34)
-            if cache_path:
-                cache_path.parent.mkdir(parents=True, exist_ok=True)
-                cache_path.write_text(text, encoding="utf-8")
-            return text
-        except Exception as exc:  # noqa: BLE001 - retried below
-            last_error = exc
-            time.sleep(1.5 * (attempt + 1))
-    raise BuildError(f"request failed: {url}\n{last_error}")
-
-
-def http_json(url: str, args: argparse.Namespace, cache_path: Path | None = None) -> dict:
-    text = http_text(url, args, cache_path)
-    try:
-        return json.loads(text)
-    except json.JSONDecodeError as exc:
-        raise BuildError(f"invalid JSON from {url}: {exc}") from exc
-
-
 def taxonomy_search(
     name: str, pathogen_id: int, args: argparse.Namespace, tax_name: str | None = None
 ) -> int:
@@ -160,7 +115,10 @@ def taxonomy_search(
         last_cache = cache
         term = urllib.parse.quote(candidate)
         url = f"{EUTILS}/esearch.fcgi?db=taxonomy&term={term}&retmode=json&retmax=10"
-        payload = http_json(url, args, cache)
+        try:
+            payload = http_json(url, args, cache, user_agent=USER_AGENT)
+        except ApiError as exc:
+            raise BuildError(str(exc)) from exc
         ids = payload.get("esearchresult", {}).get("idlist", [])
         if ids:
             return int(ids[0])
@@ -213,7 +171,10 @@ def taxonomy_summaries(tax_ids: set[int], args: argparse.Namespace) -> dict[int,
         ids = ",".join(str(t) for t in chunk)
         url = f"{EUTILS}/efetch.fcgi?db=taxonomy&id={ids}&retmode=xml"
         batch_cache = CACHE_DIR / "taxonomy" / "batches" / f"{chunk[0]}-{chunk[-1]}.xml"
-        text = http_text(url, args, batch_cache)
+        try:
+            text = http_text(url, args, batch_cache, user_agent=USER_AGENT)
+        except ApiError as exc:
+            raise BuildError(str(exc)) from exc
         parsed = parse_taxonomy_xml(text)
         for tax_id in chunk:
             item = parsed.get(tax_id)
@@ -290,7 +251,7 @@ def genome_report(tax_id: int, pathogen_id: int, args: argparse.Namespace) -> di
         reference_cache = CACHE_DIR / "genomes" / f"{pathogen_id}-{tax_id}-reference.json"
         reference_url = f"{DATASETS}/genome/taxon/{tax_id}/dataset_report?filters.reference_only=true"
         try:
-            reference_payload = http_json(reference_url, args, reference_cache)
+            reference_payload = http_json(reference_url, args, reference_cache, user_agent=USER_AGENT)
             reference = choose_report(reference_payload)
             if reference:
                 pool.append(reference)
@@ -306,7 +267,7 @@ def genome_report(tax_id: int, pathogen_id: int, args: argparse.Namespace) -> di
                         },
                     )
                     return reference
-        except BuildError:
+        except (BuildError, ApiError):
             pass
 
     evaluated = False
@@ -316,22 +277,22 @@ def genome_report(tax_id: int, pathogen_id: int, args: argparse.Namespace) -> di
         "?filters.assembly_source=refseq&page_size=100"
     )
     try:
-        refseq_payload = http_json(refseq_url, args, refseq_cache)
+        refseq_payload = http_json(refseq_url, args, refseq_cache, user_agent=USER_AGENT)
         pool.extend(refseq_payload.get("reports") or [])
         queries.append("refseq")
         evaluated = True
-    except BuildError:
+    except (BuildError, ApiError):
         pass
 
     if not pool:
         all_cache = CACHE_DIR / "genomes" / f"{pathogen_id}-{tax_id}-all.json"
         all_url = f"{DATASETS}/genome/taxon/{tax_id}/dataset_report?page_size=100"
         try:
-            all_payload = http_json(all_url, args, all_cache)
+            all_payload = http_json(all_url, args, all_cache, user_agent=USER_AGENT)
             pool.extend(all_payload.get("reports") or [])
             queries.append("all")
             evaluated = True
-        except BuildError:
+        except (BuildError, ApiError):
             pass
 
     best = choose_report({"reports": pool}) if pool else None
@@ -357,7 +318,10 @@ def genome_report_by_accession(
     """
     cache = CACHE_DIR / "genomes" / f"{pathogen_id}-accession-{slug(accession)}.json"
     url = f"{DATASETS}/genome/accession/{urllib.parse.quote(accession, safe='')}/dataset_report"
-    payload = http_json(url, args, cache)
+    try:
+        payload = http_json(url, args, cache, user_agent=USER_AGENT)
+    except ApiError as exc:
+        raise BuildError(str(exc)) from exc
     reports = payload.get("reports") or []
     report = next((item for item in reports if item.get("accession") == accession), None)
     if report is None and len(reports) == 1:

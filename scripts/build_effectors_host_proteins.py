@@ -29,6 +29,9 @@ import sys
 from pathlib import Path
 from typing import Any
 
+# Add scripts directory to path for relative imports when run as module
+sys.path.insert(0, str(Path(__file__).parent))
+
 from api_clients import (
     ApiError,
     extract_domains,
@@ -169,7 +172,6 @@ def validate_host_proteins(host_proteins: list[dict]) -> list[str]:
             "uniprot_id",
             "localization",
             "function",
-            "curation_status",
             "last_updated",
         ]
         for key in required:
@@ -192,10 +194,6 @@ def validate_host_proteins(host_proteins: list[dict]) -> list[str]:
             if uniprot in seen_uniprot:
                 errors.append(f"{label}: duplicate uniprot_id {uniprot!r}")
             seen_uniprot.add(uniprot)
-
-        # Check curation_status
-        if row.get("curation_status") not in ["curated", "needs_review"]:
-            errors.append(f"{label}: invalid curation_status {row.get('curation_status')!r}")
 
         # Check DOI
         doi = row.get("reference_doi")
@@ -354,7 +352,6 @@ def enrich_host_protein(protein: dict, args: argparse.Namespace) -> dict:
             f"warning: host protein {protein.get('protein_name', '?')} has no uniprot_id",
             file=sys.stderr,
         )
-        protein["curation_status"] = "needs_review"
         return protein
 
     try:
@@ -365,7 +362,6 @@ def enrich_host_protein(protein: dict, args: argparse.Namespace) -> dict:
             f"({protein.get('gene_name', '?')}): {exc}",
             file=sys.stderr,
         )
-        protein["curation_status"] = "needs_review"
         return protein
 
     apply_uniprot_enrichment(protein, entry, args, with_pathways=True)
@@ -641,7 +637,6 @@ HOST_PROTEIN_COLUMNS = [
     "pathways_detailed",
     "interacting_partners",
     "reference_doi",
-    "curation_status",
     "last_updated",
 ]
 
@@ -692,11 +687,6 @@ def _host_proteins_table_sql() -> str:
     for column in HOST_PROTEIN_COLUMNS:
         if column == "host_protein_id":
             definitions.append("  host_protein_id      INTEGER PRIMARY KEY")
-        elif column == "curation_status":
-            definitions.append(
-                "  curation_status      TEXT    NOT NULL "
-                "CHECK (curation_status IN ('curated', 'needs_review'))"
-            )
         elif column in ("protein_name", "gene_name", "localization", "function", "last_updated"):
             definitions.append(f"  {column:<21} TEXT    NOT NULL")
         elif column == "uniprot_id":

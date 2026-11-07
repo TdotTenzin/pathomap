@@ -83,7 +83,6 @@ CREATE TABLE host_proteins (
   pathways_detailed     TEXT,
   interacting_partners  TEXT,
   reference_doi         TEXT,
-  curation_status      TEXT    NOT NULL CHECK (curation_status IN ('curated', 'needs_review')),
   last_updated          TEXT    NOT NULL
 );
 
