@@ -1,58 +1,39 @@
 # Sources Directory
 
-Manually curated seed files and API caches used by the build scripts.
+Curated seed files and regenerable API caches. The build pipeline and enrichment rules are
+documented in `docs/DATA_PIPELINE.md`; schemas are in `docs/DATASET.md`.
 
-## Seed Files
+## Curated files (source of truth)
 
-- `pathogens_seed.json` — curated pathogen records (primary source of truth)
-- `effectors_seed.json` — effector records linked to pathogens
-- `host_proteins_seed.json` — host protein reference records
-- `pathogen_overrides.json` — manual NCBI lookup overrides
-- `classification-mapping.json` — (lives one level up) effector classification categories
+| File | Contents |
+|---|---|
+| `pathogens_seed.json` | Base pathogen records |
+| `effectors_seed.json` | Effector records linked to pathogens |
+| `host_proteins_seed.json` | Host protein reference records |
+| `pathogen_overrides.json` | Manual NCBI lookup overrides (pinned accessions, name fixes) |
+| `effector_uniprot_mapping.json` | Effector name → UniProt accession |
+| `../classification-mapping.json` | Classification categories (lives one level up) |
 
-## Effector UniProt Mapping
+### Effector UniProt mapping
 
-`effector_uniprot_mapping.json` maps effector names to UniProt accessions for
-API enrichment.
+Keys are either `"Effector"` or `"Effector|Pathogen name"`. Use the qualified key when the same
+effector name occurs in more than one pathogen (for example `OmpA` in *Acinetobacter baumannii*
+and *Escherichia coli K1*).
 
-### Format
+If an effector is not mapped, the build searches UniProt by effector name + pathogen name and
+keeps only organism-matching hits. If nothing matches, the curated row is kept unenriched and a
+warning is logged.
 
-```json
-{
-  "effector_name": "uniprot_accession",
-  "Effector|Pathogen name": "uniprot_accession"
-}
-```
+## API caches (regenerable)
 
-Use the qualified `"Effector|Pathogen name"` key when the same effector name is
-used by more than one pathogen (for example `OmpA` in both *Acinetobacter
-baumannii* and *Escherichia coli K1*).
+| Directory | Contents |
+|---|---|
+| `ncbi/` | Taxonomy and genome responses (see `ncbi/README.md`) |
+| `uniprot/entries/` | Full UniProt entries |
+| `uniprot/search/` | Effector name → accession searches |
+| `interpro/matches/` | InterPro domain matches |
+| `pfam/matches/` | Pfam domain matches |
+| `string/ids/` | UniProt → STRING id resolution |
+| `string/interactions/` | STRING interaction networks |
 
-### Adding New Mappings
-
-1. Search UniProt (https://www.uniprot.org/) for the effector protein
-2. Filter by organism (pathogen name)
-3. Copy the UniProt accession (e.g., `P00588`)
-4. Add it to this JSON file
-
-### Fallback Behavior
-
-If an effector is not in this mapping file, the build script will:
-
-1. Search UniProt by effector name + pathogen name
-2. Keep the first result whose organism matches the pathogen
-3. Log a warning if no organism-matching results are found (the effector stays
-   unenriched)
-
-For best results, manually curate the mapping file.
-
-## API Caches
-
-- `ncbi/` — NCBI Taxonomy and NCBI Datasets responses (see `ncbi/README.md`)
-- `uniprot/` — UniProt entries, sequences, and search results
-- `interpro/matches/` — InterPro domain matches
-- `pfam/matches/` — Pfam domain matches
-- `string/ids/`, `string/interactions/` — STRING id resolution and interaction networks
-
-Caches make builds reproducible and allow offline runs with `--no-network`.
-See `docs/API_ENRICHMENT.md` for details.
+Caches are safe to delete. `--refresh` ignores them; `--no-network` requires them.

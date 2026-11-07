@@ -67,7 +67,8 @@ To clean up the cache:
 
 1. Remove failed search results from `taxonomy_search/` (files with `"count": "0"`)
 2. Remove duplicate genome files if both regular and `-refseq.json` exist and are not needed
-3. Delete entire cache directories to force rebuild: `rm -rf data/sources/ncbi/*`
+3. Delete entire cache directories to force rebuild:
+   `Remove-Item -Recurse -Force data/sources/ncbi/*`
 
 ## Adding New Pathogens
 

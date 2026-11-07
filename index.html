@@ -50,7 +50,7 @@
     <div class="container">
       <h1 class="hero-title">PathoMap</h1>
       <p class="hero-subtitle">
-        PathoMap is a curated host&ndash;pathogen interaction dataset. The current release focuses on the pathogen table; effector, host-protein, interaction, and trafficking tables are being rebuilt one at a time.
+        PathoMap is a curated host&ndash;pathogen interaction dataset. The current release contains pathogen, effector, and host-protein tables; interaction, reference, and derived-analysis tables are being rebuilt one at a time.
       </p>
 
       <div class="research-objective">
@@ -60,7 +60,7 @@
         </h3>
         <ul class="research-list">
           <li><strong>Background:</strong> Intracellular pathogens evade phagolysosomal killing by arresting maturation, escaping to the cytosol, rerouting vesicles, or remodeling vacuoles; some remain extracellular.</li>
-          <li><strong>Methods:</strong> Compute hydrophobicity, intrinsic disorder, and charge from effector sequences; additional features include amino acid composition, molecular weight, isoelectric point (pI), aliphatic index, GRAVY, signal peptide probability, and low-complexity region count and length.</li>
+          <li><strong>Methods:</strong> Compute molecular weight, isoelectric point, GRAVY, and hydrophobicity windows from effector sequences; planned features include amino acid composition, aliphatic index, signal peptide probability, and low-complexity region count and length.</li>
           <li><strong>Approach:</strong> Train and evaluate a machine learning classifier on curated effector data to predict intracellular survival strategy.</li>
         </ul>
       </div>
@@ -75,20 +75,20 @@
           <p class="section-label">Database</p>
           <h2 class="section-title">Browse &amp; Upload Dataset</h2>
           <p class="section-subtitle">
-            Browse the NCBI-enriched pathogen table, filter, sort, or export it, or upload your own pathogens JSON.
+            Browse the NCBI-enriched pathogen, effector, and host-protein tables; filter, sort, or export them; or upload your own dataset JSON.
           </p>
         </header>
 
         <!-- Upload bar: file picker, curated/sample dataset loaders, status message -->
         <div class="db-upload-bar">
           <div class="db-upload-actions">
-            <label class="file-input-label" title="Upload a JSON file with a pathogens array">
+            <label class="file-input-label" title="Upload a dataset JSON file (pathogens required; effectors and host_proteins optional)">
               <input type="file" id="dataset-file" accept="application/json,.json" class="upload-input-inline" hidden>
               <span class="tool-btn">Choose File</span>
               <span class="file-input-name" id="file-input-name"></span>
             </label>
-            <button type="button" id="dataset-load-builtin" class="tool-btn" title="Load the full NCBI-enriched pathogen table (data/pathomap-dataset.json)">Load Curated Dataset</button>
-            <button type="button" id="dataset-load-sample" class="tool-btn" title="Load a small test subset (data/sample-dataset.json, 5 pathogens)">Load Built-in Sample</button>
+            <button type="button" id="dataset-load-builtin" class="tool-btn" title="Load the full curated dataset: pathogens, effectors, and host proteins (data/pathomap-dataset.json)">Load Curated Dataset</button>
+            <button type="button" id="dataset-load-sample" class="tool-btn" title="Load a small test subset of all three tables (data/sample-dataset.json)">Load Built-in Sample</button>
           </div>
           <p id="dataset-status" class="upload-status"></p>
         </div>
