@@ -878,6 +878,141 @@ a.tool-btn {
   cursor: not-allowed;
 }
 
+
+/* =========================================
+   Generated Analyses
+========================================= */
+
+/* Section spacing and header typography come from .section / .section-* in layout.css */
+
+/* Avoid doubling the vertical rhythm: the database section already pads its bottom */
+#generated-analyses {
+  padding-top: 0;
+}
+
+/* Single-column vertical list; DOM order (01 → 08) sets the card order */
+#analysis-modules {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Individual analysis cards */
+
+.analysis-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+  min-height: 190px;
+  padding: 22px;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.analysis-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-blue-mid);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Card header */
+
+.analysis-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.analysis-number {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+}
+
+.analysis-status {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  padding: 4px 9px;
+}
+
+/* Card content */
+
+.analysis-card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.analysis-card-content h3 {
+  font-size: 1.05rem;
+  font-weight: 650;
+  line-height: 1.4;
+  color: var(--color-text);
+  margin: 0 0 9px;
+}
+
+.analysis-card-content p {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin: 0 0 20px;
+}
+
+/* Data eligibility */
+
+.analysis-eligibility {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: var(--color-bg-alt);
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Missing data requirements */
+
+.analysis-requirements {
+  margin: 12px 0 0;
+  padding-left: 18px;
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.analysis-requirements li {
+  margin-bottom: 4px;
+}
+
+/* Responsive card sizing; the list stays single-column at every width */
+
+@media (max-width: 600px) {
+  .analysis-card {
+    min-height: 170px;
+    padding: 20px;
+  }
+}
+
+/* Restore the pre-existing pagination behavior on narrow screens */
 @media (max-width: 768px) {
   .db-pagination {
     align-items: flex-start;
@@ -886,5 +1021,211 @@ a.tool-btn {
 
   .db-pagination-controls {
     width: 100%;
+  }
+}
+
+/* =========================================
+   Interaction Analysis (skeleton page)
+======================================== */
+
+/* Overview stats: four equal cards, reflowing on narrow screens */
+.ia-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.ia-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 18px 20px;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.ia-stat-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-text);
+}
+
+.ia-stat-label {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+/* Status line under the overview cards (dataset load errors) */
+.ia-stats-status {
+  margin: -16px 0 28px;
+}
+
+/* Filter bar */
+.ia-filters {
+  padding: 18px 20px;
+  margin-bottom: 28px;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.ia-filters-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.ia-filters-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.ia-filter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+}
+
+.ia-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+/* Search spans the full filter row above the selects */
+.ia-filter-search {
+  grid-column: 1 / -1;
+}
+
+.ia-filter .tool-input {
+  width: 100%;
+}
+
+/* Author display rules would otherwise beat the UA [hidden] rule */
+.ia-filter[hidden] {
+  display: none;
+}
+
+/* Read-only pathogen classification shown for a single selected pathogen */
+.ia-filter-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.ia-filter-meta[hidden] {
+  display: none;
+}
+
+/* Panels: network + records */
+.ia-panel {
+  margin-bottom: 28px;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.ia-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.ia-panel-header h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.ia-panel-note {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  padding: 3px 9px;
+}
+
+/* Network placeholder uses a dashed inner frame to signal "not yet built" */
+.ia-network-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 260px;
+  margin: 20px;
+  padding: 24px;
+  text-align: center;
+  color: var(--color-text-muted);
+  background: var(--color-bg-alt);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius);
+}
+
+.ia-muted {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+/* Planned component list */
+.ia-components {
+  padding: 20px;
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.ia-components h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.ia-component-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 10px 24px;
+}
+
+.ia-component-list li {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.ia-component-list strong {
+  color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+  .ia-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .ia-stats {
+    grid-template-columns: 1fr;
   }
 }

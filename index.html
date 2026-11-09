@@ -1,4 +1,4 @@
-<!--
+﻿<!--
   PathoMap - Single-page host-pathogen dataset browser.
 
   Purpose: Entry point for the PathoMap v2 web app. Defines the full page
@@ -10,6 +10,7 @@
     - <main>         Database section (#database): upload bar, table tabs, search/CSV toolbar,
                      row count/status line, pagination controls, empty data table shell,
                      and a collapsible "Data dictionary" (<details>) for schema docs.
+                     Generated Analyses section (#generated-analyses).
 
   Key element IDs consumed by JS:
     dataset-file, file-input-name, dataset-load-builtin, dataset-load-sample, dataset-status  -> js/ui/upload.js
@@ -39,7 +40,7 @@
       <a class="nav-brand" href="#hero">PathoMap</a>
       <ul class="nav-links" id="nav-links">
         <li><a href="#hero">Home</a></li>
-        <li><a href="#database">Database</a></li>
+        <li><a href="interaction-analysis.html">Interaction Analysis</a></li>
       </ul>
       <button class="dark-toggle" id="dark-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9790;</button>
     </div>
@@ -145,6 +146,27 @@
           <summary>Data dictionary</summary>
           <div id="db-schema-body" class="db-schema-body"></div>
         </details>
+      </div>
+    </section>
+
+    <section id="generated-analyses" class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Analytics</p>
+          <h2 class="section-title">Generated Analyses</h2>
+          <p class="section-subtitle">
+            Explore biological analyses generated
+            from your uploaded dataset.
+          </p>
+        </div>
+
+        <div id="analysis-overview">
+            <!-- Analysis overview will go here -->
+        </div>
+
+        <div id="analysis-modules">
+            <!-- Eight analysis module cards will go here -->
+        </div>
       </div>
     </section>
   </main>

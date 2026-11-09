@@ -1,86 +1,106 @@
-﻿/*
+﻿
+/*
   main.js - Application entry point / bootstrap for PathoMap.
 
-  Purpose: Wires together the three subsystems (database view, upload UI,
-  dataset loader) and starts the app once the DOM is ready. Also owns the
-  dark-mode toggle behavior.
+  Purpose:
+    Connects the database view, upload interface, dataset loader,
+    and Generated Analyses section.
 
-  Exports: none (runs as an IIFE on load).
-
-  Key behaviors:
-    - Applies the saved theme (localStorage key "pathomap-theme") to <html>
-      by toggling the data-theme attribute.
-    - Binds the #dark-toggle button to flip the theme and persist the choice.
-    - boot(): initializes the database view and upload UI, then fetches the
-      curated dataset via loadDataset() and reports success/failure in the
-      upload status bar. On fetch failure, prompts the user to serve over HTTP.
+  Responsibilities:
+    - Initialize and persist dark mode.
+    - Initialize database and upload interfaces.
+    - Load the curated dataset.
+    - Render the Generated Analyses modules.
+    - Evaluate dataset eligibility for each analysis.
+    - Report dataset loading success or failure.
 
   Imports:
-    - loadDataset            js/data/loader.js
+    - loadDataset                    js/data/loader.js
     - initDatabase,
-      renderDatabase         js/views/database.js
+      renderDatabase                js/views/database.js
     - initUpload,
-      setUploadStatus        js/ui/upload.js
+      setUploadStatus               js/ui/upload.js
+    - renderAnalyses                js/ui/analyses.js
+    - initTheme                      js/ui/theme.js
 
-  Loaded by: index.html via <script type="module" src="js/main.js">.
+  Loaded by:
+    index.html via <script type="module" src="js/main.js">
 */
 
 import { loadDataset } from './data/loader.js';
 import { initDatabase, renderDatabase } from './views/database.js';
 import { initUpload, setUploadStatus } from './ui/upload.js';
+import { renderAnalyses } from './ui/analyses.js';
+import { initTheme } from './ui/theme.js';
 
 (function () {
-  // Apply the persisted theme (if any) before anything renders to avoid a flash
-  const root = document.documentElement;
-  const toggle = document.getElementById('dark-toggle');
-  const saved = localStorage.getItem('pathomap-theme');
-  if (saved === 'dark') {
-    root.setAttribute('data-theme', 'dark');
-  } else if (saved === 'light') {
-    root.removeAttribute('data-theme');
-  }
 
-  // Toggle dark mode on button click; persists the choice for next visit
-  if (toggle) {
-    toggle.addEventListener('click', function () {
-      if (root.getAttribute('data-theme') === 'dark') {
-        root.removeAttribute('data-theme');
-        localStorage.setItem('pathomap-theme', 'light');
-      } else {
-        root.setAttribute('data-theme', 'dark');
-        localStorage.setItem('pathomap-theme', 'dark');
-      }
-    });
-  }
+    // ========================================
+    // DARK MODE
+    // ========================================
 
-  // Boot the application: initialize components and load dataset
-  async function boot() {
-    initDatabase();
-    initUpload({ render: renderDatabase });
+    initTheme();
 
-    try {
-      const dataset = await loadDataset();
-      renderDatabase();
-      const pathogenCount = dataset.pathogens.length;
-      const effectorCount = dataset.effectors?.length || 0;
-      setUploadStatus(
-        `Loaded ${pathogenCount} pathogen${pathogenCount === 1 ? '' : 's'} and ${effectorCount} effector${effectorCount === 1 ? '' : 's'} from data/pathomap-dataset.json.`,
-        'success'
-      );
-    } catch (error) {
-      // Most common cause: opened via file:// instead of an HTTP server
-      setUploadStatus(
-        'Could not load data/pathomap-dataset.json. Serve the site over HTTP (for example, python -m http.server).',
-        'error'
-      );
-      console.error(error);
+
+    // ========================================
+    // APPLICATION BOOTSTRAP
+    // ========================================
+
+    async function boot() {
+
+        // Initialize application interfaces
+        initDatabase();
+        initUpload({
+            // upload.js passes the updated dataset after every successful load
+            render: (dataset) => {
+                renderDatabase();
+                renderAnalyses(dataset);
+            }
+        });
+
+        try {
+
+            // Load the default dataset
+            const dataset = await loadDataset();
+
+            // Render database and evaluate analysis eligibility
+            renderDatabase();
+            renderAnalyses(dataset);
+
+            // Dataset statistics
+            const pathogenCount = dataset.pathogens.length;
+            const effectorCount = dataset.effectors?.length || 0;
+
+            // Report successful loading
+            setUploadStatus(
+                `Loaded ${pathogenCount} pathogen${pathogenCount === 1 ? '' : 's'} and ${effectorCount} effector${effectorCount === 1 ? '' : 's'} from data/pathomap-dataset.json.`,
+                'success'
+            );
+
+        } catch (error) {
+
+            // Render analysis modules without an available dataset
+            renderAnalyses(null);
+
+            // Report loading failure
+            setUploadStatus(
+                'Could not load data/pathomap-dataset.json. Serve the site over HTTP (for example, python -m http.server).',
+                'error'
+            );
+
+            console.error(error);
+        }
     }
-  }
 
-  // Wait for DOM to be ready before booting (handles both slow-fast load orders)
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', boot);
-  } else {
-    boot();
-  }
+
+    // ========================================
+    // DOM INITIALIZATION
+    // ========================================
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', boot);
+    } else {
+        boot();
+    }
+
 })();

@@ -10,6 +10,7 @@
     loadDataset(url)     Fetch + parse + normalize a dataset; returns the
                          normalized object and replaces the in-memory copy.
     setDataset(data)     Replace the in-memory dataset (used by upload.js).
+    loadStoredDataset()  Restore the last persisted dataset, or null.
     getDataset()         Return the whole in-memory dataset object.
     getPathogens()       Shorthand for dataset.pathogens.
     getEffectors()       Shorthand for dataset.effectors (defaults to []).
@@ -19,6 +20,12 @@
     dataset  Module-scoped variable holding the normalized dataset. Starts as
              an empty normalized structure so getters never crash before load.
 
+  Persistence:
+    Every setDataset()/loadDataset() call mirrors the normalized dataset into
+    localStorage (key `pathomap-dataset`). Standalone pages such as
+    interaction-analysis.html use loadStoredDataset() so a dataset loaded or
+    uploaded on index.html carries across navigation.
+
   Note: Normalization is delegated to normalizeDataset() (js/utils/dataset.js)
   so both the fetch path and the upload path share identical cleaning logic.
 */
@@ -27,6 +34,9 @@ import { normalizeDataset } from '../utils/dataset.js';
 
 // Default URL for the curated PathoMap dataset
 export const DEFAULT_DATASET_URL = 'data/pathomap-dataset.json';
+
+// localStorage key used to carry the dataset between standalone pages
+const STORAGE_KEY = 'pathomap-dataset';
 
 // In-memory dataset storage (module-scoped singleton)
 let dataset = normalizeDataset({ pathogens: [], effectors: [], host_proteins: [] });
@@ -45,7 +55,31 @@ export async function loadDataset(url = DEFAULT_DATASET_URL) {
 // Set the current dataset (normalizes data structure)
 export function setDataset(data) {
   dataset = normalizeDataset(data);
+  persistDataset(dataset);
   return dataset;
+}
+
+// Mirror the dataset into localStorage so other pages can reuse it. Failures
+// (quota exceeded, storage disabled) are non-fatal: the in-memory copy remains.
+function persistDataset(normalized) {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(normalized));
+  } catch (error) {
+    console.warn('Could not persist dataset to localStorage.', error);
+  }
+}
+
+// Restore the dataset persisted by a previous page load, or null when absent
+export function loadStoredDataset() {
+  try {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (!stored) return null;
+    dataset = normalizeDataset(JSON.parse(stored));
+    return dataset;
+  } catch (error) {
+    console.warn('Could not restore persisted dataset.', error);
+    return null;
+  }
 }
 
 // Get the current dataset

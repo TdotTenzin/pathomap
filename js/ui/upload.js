@@ -1,15 +1,16 @@
+
 /*
   upload.js - Dataset upload / load UI controller.
 
   Purpose: Manages the upload bar in index.html — lets users pick a JSON file,
   load the built-in curated or sample dataset, and download an empty template.
   Every load path validates first, then swaps the in-memory dataset and
-  triggers a re-render of the database view.
+  triggers a re-render of the database view and analysis eligibility.
 
   Exports:
     initUpload({ render })   Binds all upload-bar event listeners. `render` is
-                             a callback (usually renderDatabase) invoked after
-                             the dataset changes.
+                             a callback invoked after the dataset changes,
+                             receiving the updated normalized dataset.
     setUploadStatus(msg, state)  Writes a status line into #dataset-status;
                              `state` is '', 'success', 'warning', or 'error'
                              (drives the colored status text via data-state).
@@ -22,12 +23,12 @@
                              download, then revokes the object URL.
 
   DOM elements it binds to (all defined in index.html):
-    #dataset-file            <input type="file"> — JSON file picker
-    #file-input-name         Displays the chosen file name
-    #dataset-load-builtin    Button: load data/pathomap-dataset.json
-    #dataset-load-sample     Button: load data/sample-dataset.json
-    #dataset-download-template  Button: download empty template JSON
-    #dataset-status          Status message element (via setUploadStatus)
+    #dataset-file               <input type="file"> — JSON file picker
+    #file-input-name             Displays the chosen file name
+    #dataset-load-builtin        Button: load data/pathomap-dataset.json
+    #dataset-load-sample         Button: load data/sample-dataset.json
+    #dataset-download-template   Button: download empty template JSON
+    #dataset-status              Status message element (via setUploadStatus)
 
   Note: The file-upload path uses FileReader (async read) then JSON.parse;
   malformed JSON or validation errors surface as status-bar messages.
@@ -37,14 +38,16 @@ import { DEFAULT_DATASET_URL, loadDataset, setDataset } from '../data/loader.js'
 import { SCHEMA_VERSION } from '../data/schema.js';
 import { validateDataset } from '../utils/dataset.js';
 
-// Callback to re-render the database view after data changes
+// Callback to re-render the application after data changes
 let renderCallback = () => {};
 
-// Set the status message in the upload UI (state drives color: success/warning/error)
+// Set the status message in the upload UI
 export function setUploadStatus(message, state = '') {
   const el = document.getElementById('dataset-status');
   if (!el) return;
+
   el.textContent = message || '';
+
   if (state) {
     el.dataset.state = state;
   } else {
@@ -52,63 +55,79 @@ export function setUploadStatus(message, state = '') {
   }
 }
 
-// Generate a suffix message for validation warnings ("N warning(s).")
+// Generate a suffix message for validation warnings
 function warningSuffix(warnings) {
   if (!warnings.length) return '';
   return ` ${warnings.length} warning${warnings.length === 1 ? '' : 's'}.`;
 }
 
-// Validate and apply new dataset data: rejects on hard errors, otherwise
-// stores the data, re-renders, and reports row count + warnings
+// Validate and apply new dataset data
 function applyData(data, sourceLabel) {
   const result = validateDataset(data);
+
   if (!result.valid) {
     setUploadStatus(`Invalid dataset: ${result.errors[0]}`, 'error');
     console.warn('PathoMap dataset validation errors:', result.errors);
     return false;
   }
 
-  setDataset(data);
-  renderCallback();
-  const count = Array.isArray(data.pathogens) ? data.pathogens.length : 0;
+  const updatedDataset = setDataset(data);
+
+  // Refresh database and analysis eligibility
+  renderCallback(updatedDataset);
+
+  const count = Array.isArray(updatedDataset.pathogens)
+    ? updatedDataset.pathogens.length
+    : 0;
+
   setUploadStatus(
     `${sourceLabel} loaded: ${count} pathogen${count === 1 ? '' : 's'}.${warningSuffix(result.warnings)}`,
     result.warnings.length ? 'warning' : 'success'
   );
+
   if (result.warnings.length) {
     console.warn('PathoMap dataset validation warnings:', result.warnings);
   }
+
   return true;
 }
 
-// Download a text blob as a file (creates a temp object URL and cleans it up)
+// Download a text blob as a file
 function downloadBlob(text, filename, type) {
   const blob = new Blob([text], { type });
   const url = URL.createObjectURL(blob);
   const anchor = document.createElement('a');
+
   anchor.href = url;
   anchor.download = filename;
+
   document.body.appendChild(anchor);
   anchor.click();
   document.body.removeChild(anchor);
+
   URL.revokeObjectURL(url);
 }
 
-// Initialize upload UI with event listeners for file input and dataset loading
+// Initialize upload UI with event listeners
 export function initUpload({ render } = {}) {
   renderCallback = typeof render === 'function' ? render : () => {};
 
   const fileInput = document.getElementById('dataset-file');
   const fileName = document.getElementById('file-input-name');
 
-  // Handle file upload via file input: read as text, parse JSON, apply
+  // Handle file upload via file input
   if (fileInput) {
     fileInput.addEventListener('change', (event) => {
       const file = event.target.files && event.target.files[0];
-      if (fileName) fileName.textContent = file ? file.name : '';
+
+      if (fileName) {
+        fileName.textContent = file ? file.name : '';
+      }
+
       if (!file) return;
 
       const reader = new FileReader();
+
       reader.onload = (loadEvent) => {
         try {
           const data = JSON.parse(loadEvent.target.result);
@@ -118,20 +137,28 @@ export function initUpload({ render } = {}) {
           console.error(error);
         }
       };
-      reader.onerror = () => setUploadStatus('Could not read that file.', 'error');
+
+      reader.onerror = () => {
+        setUploadStatus('Could not read that file.', 'error');
+      };
+
       reader.readAsText(file);
     });
   }
 
-  // Load the built-in curated dataset (full pathomap-dataset.json)
+  // Load the built-in curated dataset
   const loadBuiltin = document.getElementById('dataset-load-builtin');
+
   if (loadBuiltin) {
     loadBuiltin.addEventListener('click', () => {
       setUploadStatus('Loading curated dataset...');
+
       loadDataset(DEFAULT_DATASET_URL)
         .then((dataset) => {
-          renderCallback();
+          renderCallback(dataset);
+
           const count = dataset.pathogens.length;
+
           setUploadStatus(
             `Curated dataset loaded: ${count} pathogen${count === 1 ? '' : 's'}.`,
             'success'
@@ -142,20 +169,25 @@ export function initUpload({ render } = {}) {
             'Could not load data/pathomap-dataset.json. Serve the site over HTTP (for example, python -m http.server).',
             'error'
           );
+
           console.error(error);
         });
     });
   }
 
-  // Load the small sample dataset (5 pathogens) for quick demos/tests
+  // Load the small sample dataset
   const loadSample = document.getElementById('dataset-load-sample');
+
   if (loadSample) {
     loadSample.addEventListener('click', () => {
       setUploadStatus('Loading sample dataset...');
+
       loadDataset('data/sample-dataset.json')
         .then((dataset) => {
-          renderCallback();
+          renderCallback(dataset);
+
           const count = dataset.pathogens.length;
+
           setUploadStatus(
             `Sample dataset loaded: ${count} pathogen${count === 1 ? '' : 's'}.`,
             'success'
@@ -168,11 +200,11 @@ export function initUpload({ render } = {}) {
     });
   }
 
-  // Download a template JSON file for users to fill in
+  // Download a template JSON file
   const downloadTemplate = document.getElementById('dataset-download-template');
+
   if (downloadTemplate) {
     downloadTemplate.addEventListener('click', () => {
-      // Minimal valid skeleton: meta block + empty pathogens array
       const template = {
         meta: {
           dataset: 'pathomap',
@@ -181,12 +213,17 @@ export function initUpload({ render } = {}) {
         },
         pathogens: [],
       };
+
       downloadBlob(
         JSON.stringify(template, null, 2) + '\n',
         'pathomap-pathogens-template.json',
         'application/json'
       );
-      setUploadStatus('Template downloaded. Only the pathogens array is required.', 'success');
+
+      setUploadStatus(
+        'Template downloaded. Only the pathogens array is required.',
+        'success'
+      );
     });
   }
 }

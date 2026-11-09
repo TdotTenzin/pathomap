@@ -1,0 +1,146 @@
+<!--
+  PathoMap - Interaction Analysis module page (skeleton).
+
+  Purpose: Standalone page for Module 01. Placeholders only; no dataset wiring
+  yet. The companion app entry point is index.html.
+
+  Structure:
+    - <nav>   Brand (back to index.html), page links, dark-mode toggle.
+    - <main>  Module header, overview stats, filters, network placeholder,
+              interaction records table, and planned module components.
+
+  Scripts: js/pages/interaction-analysis.js (theme toggle only).
+  Requires serving over HTTP for consistent relative paths.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interaction Analysis - PathoMap</title>
+  <meta name="description" content="Explore molecular relationships between pathogens and host proteins in PathoMap.">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/utilities.css">
+</head>
+<body>
+  <!-- Sticky navigation: brand links back to the app home -->
+  <nav>
+    <div class="container nav-inner">
+      <a class="nav-brand" href="index.html">PathoMap</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="interaction-analysis.html" aria-current="page">Interaction Analysis</a></li>
+      </ul>
+      <button class="dark-toggle" id="dark-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9790;</button>
+    </div>
+  </nav>
+
+  <main>
+    <section id="interaction-analysis" class="section ia-section">
+      <div class="container">
+
+        <!-- Page header: title and subtitle -->
+        <div class="section-header ia-header">
+          <h1 class="section-title">Interaction Analysis</h1>
+          <p class="section-subtitle">
+            Explore molecular relationships between pathogens and host proteins.
+          </p>
+        </div>
+
+        <!-- Overview stats, populated from the loaded dataset by interaction-analysis.js -->
+        <div class="ia-stats" aria-label="Interaction overview">
+          <div class="ia-stat">
+            <span class="ia-stat-value" data-stat="interactions">&mdash;</span>
+            <span class="ia-stat-label">Interaction records</span>
+          </div>
+          <div class="ia-stat">
+            <span class="ia-stat-value" data-stat="pathogens">&mdash;</span>
+            <span class="ia-stat-label">Pathogens</span>
+          </div>
+          <div class="ia-stat">
+            <span class="ia-stat-value" data-stat="effectors">&mdash;</span>
+            <span class="ia-stat-label">Effectors</span>
+          </div>
+          <div class="ia-stat">
+            <span class="ia-stat-value" data-stat="host-proteins">&mdash;</span>
+            <span class="ia-stat-label">Host proteins</span>
+          </div>
+        </div>
+        <p class="ia-muted ia-stats-status" id="ia-stats-status" role="status" hidden></p>
+
+        <!-- Search and filters; options and results are wired in interaction-analysis.js -->
+        <div class="ia-filters">
+          <div class="ia-filters-heading">
+            <p class="ia-filters-title">Search and filter interactions</p>
+            <button type="button" class="tool-btn" id="ia-reset">Reset</button>
+          </div>
+          <div class="ia-filter-grid">
+            <label class="ia-filter ia-filter-search">
+              <span>Search</span>
+              <input
+                class="tool-input"
+                id="ia-search"
+                type="search"
+                placeholder="Search effector, host protein, pathogen, or mechanism"
+                autocomplete="off"
+              >
+            </label>
+            <label class="ia-filter">
+              <span>Pathogen</span>
+              <select class="tool-input" id="ia-pathogen">
+                <option value="">All pathogens</option>
+              </select>
+            </label>
+            <label class="ia-filter" id="ia-classification-field">
+              <span>Pathogen classification</span>
+              <select class="tool-input" id="ia-classification">
+                <option value="">All classifications</option>
+                <option value="Gram-positive">Gram-positive</option>
+                <option value="Gram-negative">Gram-negative</option>
+                <option value="Virus">Virus</option>
+                <option value="Fungus">Fungus</option>
+                <option value="Parasite">Parasite</option>
+              </select>
+            </label>
+          </div>
+          <!-- Shown instead of the classification select when one pathogen is chosen -->
+          <div class="ia-filter-meta" id="ia-pathogen-meta" hidden>
+            <span>Classification</span>
+            <span class="ia-panel-note" id="ia-pathogen-classification">&mdash;</span>
+          </div>
+        </div>
+
+        <!-- Network visualization placeholder -->
+        <div class="ia-panel">
+          <div class="ia-panel-header">
+            <h3>Interaction Network</h3>
+            <span class="ia-panel-note">Placeholder</span>
+          </div>
+          <div class="ia-network-placeholder">
+            <p>Interactive network visualization will render here.</p>
+            <p class="ia-muted">Illustrative placeholder &mdash; not actual PathoMap data.</p>
+          </div>
+        </div>
+
+        <!-- Planned module components: future sub-sections of this page -->
+        <div class="ia-components">
+          <h3>Module components</h3>
+          <ul class="ia-component-list">
+            <li><strong>Overview</strong> &mdash; total interactions, pathogens, effectors, host proteins.</li>
+            <li><strong>Interaction Explorer</strong> &mdash; searchable and filterable interaction records.</li>
+            <li><strong>Network Visualization</strong> &mdash; interactive host&ndash;pathogen interaction network.</li>
+            <li><strong>Pathogen Analysis</strong> &mdash; compare interactions across pathogens.</li>
+            <li><strong>Host Protein Analysis</strong> &mdash; identify targeted host proteins and interaction frequency.</li>
+            <li><strong>Evidence &amp; Methodology</strong> &mdash; sources, experimental evidence, confidence, and provenance.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="js/pages/interaction-analysis.js"></script>
+</body>
+</html>
