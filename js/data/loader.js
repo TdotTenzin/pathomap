@@ -15,6 +15,8 @@
     getPathogens()       Shorthand for dataset.pathogens.
     getEffectors()       Shorthand for dataset.effectors (defaults to []).
     getHostProteins()    Shorthand for dataset.host_proteins (defaults to []).
+    getHostTargets()     Shorthand for dataset.host_targets (defaults to []).
+    getReferences()      Shorthand for dataset.references (defaults to []).
 
   Internal state:
     dataset  Module-scoped variable holding the normalized dataset. Starts as
@@ -39,7 +41,10 @@ export const DEFAULT_DATASET_URL = 'data/pathomap-dataset.json';
 const STORAGE_KEY = 'pathomap-dataset';
 
 // In-memory dataset storage (module-scoped singleton)
-let dataset = normalizeDataset({ pathogens: [], effectors: [], host_proteins: [] });
+let dataset = normalizeDataset({
+  pathogens: [], effectors: [], host_proteins: [], host_targets: [], references: [],
+  interactions: [], interaction_evidence: [],
+});
 
 // Load dataset from a URL: fetch JSON, normalize, store, and return it
 export async function loadDataset(url = DEFAULT_DATASET_URL) {
@@ -100,4 +105,22 @@ export function getEffectors() {
 // Get the host_proteins array from the current dataset
 export function getHostProteins() {
   return dataset.host_proteins || [];
+}
+
+// Get the audited host-target array from the current dataset.
+export function getHostTargets() {
+  return dataset.host_targets || [];
+}
+
+// Get the normalized reference array from the current dataset.
+export function getReferences() {
+  return dataset.references || [];
+}
+
+export function getInteractions() {
+  return dataset.interactions || [];
+}
+
+export function getInteractionEvidence() {
+  return dataset.interaction_evidence || [];
 }

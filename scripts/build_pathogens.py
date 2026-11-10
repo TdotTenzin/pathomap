@@ -33,10 +33,20 @@ from typing import Any
 sys.path.insert(0, str(Path(__file__).parent))
 
 from http_client import ApiError, http_json, http_text, read_json, slug, write_json
+from identifiers import (
+    assign_registry_ids,
+    entity_id,
+    is_entity_id,
+    load_registry,
+    reference_key,
+    validate_registry,
+    write_registry,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 SEED_PATH = ROOT / "data" / "sources" / "pathogens_seed.json"
 OVERRIDES_PATH = ROOT / "data" / "sources" / "pathogen_overrides.json"
+REFERENCE_ID_REGISTRY_PATH = ROOT / "data" / "sources" / "reference_ids.json"
 CACHE_DIR = ROOT / "data" / "sources" / "ncbi"
 DATASET_PATH = ROOT / "data" / "pathomap-dataset.json"
 SAMPLE_PATH = ROOT / "data" / "sample-dataset.json"
@@ -44,7 +54,7 @@ DB_PATH = ROOT / "data" / "pathomap.db"
 SQL_PATH = ROOT / "data" / "schema.sql"
 JSON_SCHEMA_PATH = ROOT / "data" / "schema" / "pathogens.schema.json"
 
-SCHEMA_VERSION = "2.0"
+SCHEMA_VERSION = "2.2"
 DATASET_NAME = "pathomap"
 
 GRAM_STAIN_VALUES = ["Gram-positive", "Gram-negative", "Gram-variable", "unknown"]
@@ -60,6 +70,7 @@ ASSEMBLY_LEVEL_VALUES = ["Complete Genome", "Chromosome", "Scaffold", "Contig", 
 CURATION_STATUS_VALUES = ["curated", "needs_review"]
 
 COLUMNS = [
+    "entity_id",
     "pathogen_id",
     "name",
     "genus",
@@ -84,6 +95,7 @@ COLUMNS = [
     "gc_content",
     "n_contigs",
     "reference_doi",
+    "reference_ids",
     "description",
     "curation_notes",
     "curation_status",
@@ -392,6 +404,8 @@ def build_rows(args: argparse.Namespace) -> list[dict]:
             n_contigs = None
 
         row = {
+            # Canonical ID derived from the curated, immutable pathogen_id
+            "entity_id": entity_id("pathogen", int(seed["pathogen_id"])),
             "pathogen_id": int(seed["pathogen_id"]),
             "name": seed["name"],
             "genus": seed["genus"],
@@ -432,16 +446,119 @@ def build_rows(args: argparse.Namespace) -> list[dict]:
         rows.append({k: row.get(k) for k in COLUMNS})
 
     rows.sort(key=lambda r: r["pathogen_id"])
-    return rows
+    registry, doi_display = assign_reference_ids(rows)
+    return rows, registry, doi_display
+
+
+def assign_reference_ids(rows: list[dict]) -> tuple[dict[str, str], dict[str, str]]:
+    """Assign stable reference IDs and attach them to each pathogen row."""
+    registry = load_registry(REFERENCE_ID_REGISTRY_PATH, "references")
+    registry_errors = validate_registry(registry, "reference")
+    if registry_errors:
+        raise BuildError("; ".join(registry_errors))
+
+    doi_display: dict[str, str] = {}
+    for row in rows:
+        doi = row.get("reference_doi")
+        if isinstance(doi, str) and doi.strip():
+            doi_display.setdefault(reference_key(doi), doi.strip())
+
+    registry = assign_registry_ids(sorted(doi_display), registry, "reference")
+    for row in rows:
+        doi = row.get("reference_doi")
+        key = reference_key(doi) if isinstance(doi, str) and doi.strip() else None
+        row["reference_ids"] = [registry[key]] if key else []
+    return registry, doi_display
+
+
+def build_reference_rows(
+    rows: list[dict],
+    registry: dict[str, str],
+    doi_display: dict[str, str],
+) -> list[dict]:
+    """Build the references table for DOIs currently used by the dataset."""
+    used: set[str] = set()
+    for row in rows:
+        doi = row.get("reference_doi")
+        if isinstance(doi, str) and doi.strip():
+            used.add(reference_key(doi))
+
+    references = [
+        {
+            "entity_id": registry[key],
+            "doi": doi_display[key],
+            "url": f"https://doi.org/{doi_display[key]}",
+        }
+        for key in used
+    ]
+    references.sort(key=lambda r: int(r["entity_id"].rsplit("-", 1)[1]))
+    return references
+
+
+def references_for_rows(rows: list[dict], references: list[dict]) -> list[dict]:
+    """Select the reference rows used by a subset of dataset rows."""
+    used = {ref_id for row in rows for ref_id in row.get("reference_ids", [])}
+    return [ref for ref in references if ref["entity_id"] in used]
+
+
+def validate_references(rows: list[dict], references: list[dict]) -> list[str]:
+    errors: list[str] = []
+    seen_ids: set[str] = set()
+    seen_dois: set[str] = set()
+    for index, ref in enumerate(references):
+        label = f"reference row {index} ({ref.get('entity_id', '?')})"
+        eid = ref.get("entity_id")
+        if not is_entity_id(eid, "reference"):
+            errors.append(f"{label}: invalid reference entity_id {eid!r}")
+        elif eid in seen_ids:
+            errors.append(f"{label}: duplicate entity_id {eid}")
+        else:
+            seen_ids.add(eid)
+        doi = ref.get("doi")
+        if not isinstance(doi, str) or not doi.startswith("10."):
+            errors.append(f"{label}: doi must start with 10.")
+            continue
+        key = reference_key(doi)
+        if key in seen_dois:
+            errors.append(f"{label}: duplicate DOI {doi!r}")
+        else:
+            seen_dois.add(key)
+        if ref.get("url") != f"https://doi.org/{doi}":
+            errors.append(f"{label}: url must be https://doi.org/<doi>")
+
+    for index, row in enumerate(rows):
+        label = f"row {index} ({row.get('name', '?')})"
+        ref_ids = row.get("reference_ids")
+        if not isinstance(ref_ids, list) or not ref_ids:
+            errors.append(f"{label}: reference_ids must be a non-empty list")
+            continue
+        if len(set(ref_ids)) != len(ref_ids):
+            errors.append(f"{label}: reference_ids contains duplicates")
+        for ref_id in ref_ids:
+            if not is_entity_id(ref_id, "reference"):
+                errors.append(f"{label}: invalid reference ID {ref_id!r}")
+            elif ref_id not in seen_ids:
+                errors.append(f"{label}: unknown reference ID {ref_id}")
+        doi = row.get("reference_doi")
+        expected = [
+            ref["entity_id"]
+            for ref in references
+            if isinstance(doi, str) and reference_key(ref["doi"]) == reference_key(doi)
+        ]
+        if expected and ref_ids != expected:
+            errors.append(f"{label}: reference_ids do not match reference_doi")
+    return errors
 
 
 def validate_rows(rows: list[dict]) -> list[str]:
     errors: list[str] = []
     seen_ids: set[int] = set()
+    seen_entity_ids: set[str] = set()
     seen_names: set[str] = set()
     seen_tax: set[int] = set()
 
     required = [
+        "entity_id",
         "pathogen_id",
         "name",
         "genus",
@@ -466,6 +583,13 @@ def validate_rows(rows: list[dict]) -> list[str]:
             value = row.get(key)
             if value is None or (isinstance(value, str) and not value.strip()):
                 errors.append(f"{label}: missing required field {key}")
+        eid = row.get("entity_id")
+        if not is_entity_id(eid, "pathogen"):
+            errors.append(f"{label}: invalid pathogen entity_id {eid!r}")
+        elif eid in seen_entity_ids:
+            errors.append(f"{label}: duplicate entity_id {eid}")
+        else:
+            seen_entity_ids.add(eid)
         pid = row.get("pathogen_id")
         if not isinstance(pid, int) or pid <= 0:
             errors.append(f"{label}: pathogen_id must be a positive integer")
@@ -528,13 +652,23 @@ def validate_rows(rows: list[dict]) -> list[str]:
     return errors
 
 
-def dataset_payload(rows: list[dict]) -> dict:
+def dataset_payload(rows: list[dict], references: list[dict]) -> dict:
     return {
         "meta": {
             "dataset": DATASET_NAME,
             "schema_version": SCHEMA_VERSION,
             "built_at": dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
-            "tables": {"pathogens": len(rows)},
+            "tables": {"pathogens": len(rows), "references": len(references)},
+            "identifiers": {
+                "scheme": "PM-<TYPE>-<NNNN>",
+                "types": {
+                    "pathogen": "PAT",
+                    "effector": "EFF",
+                    "host_protein": "HST",
+                    "reference": "REF",
+                    "host_target": "TGT",
+                },
+            },
             "sources": {
                 "curation": "data/sources/pathogens_seed.json",
                 "overrides": "data/sources/pathogen_overrides.json",
@@ -543,12 +677,14 @@ def dataset_payload(rows: list[dict]) -> dict:
             },
         },
         "pathogens": rows,
+        "references": references,
     }
 
 
 def write_schema_sql() -> None:
-    sql = """-- PathoMap v2 pathogens schema
+    sql = """-- PathoMap v2.2 primary schema
 CREATE TABLE pathogens (
+  entity_id          TEXT    NOT NULL UNIQUE,
   pathogen_id        INTEGER PRIMARY KEY,
   name               TEXT    NOT NULL UNIQUE,
   genus              TEXT    NOT NULL,
@@ -583,6 +719,22 @@ CREATE INDEX idx_pathogens_strategy ON pathogens(strategy);
 CREATE INDEX idx_pathogens_gram_stain ON pathogens(gram_stain);
 CREATE INDEX idx_pathogens_tax_id ON pathogens(tax_id);
 
+CREATE TABLE "references" (
+  entity_id  TEXT PRIMARY KEY,
+  doi        TEXT NOT NULL UNIQUE,
+  url        TEXT NOT NULL
+);
+
+CREATE INDEX idx_references_doi ON "references"(doi);
+
+CREATE TABLE pathogen_references (
+  pathogen_id  INTEGER NOT NULL REFERENCES pathogens(pathogen_id) ON DELETE CASCADE,
+  reference_id TEXT    NOT NULL REFERENCES "references"(entity_id) ON DELETE CASCADE,
+  PRIMARY KEY (pathogen_id, reference_id)
+);
+
+CREATE INDEX idx_pathogen_references_ref ON pathogen_references(reference_id);
+
 CREATE TABLE meta (
   key   TEXT PRIMARY KEY,
   value TEXT NOT NULL
@@ -591,22 +743,35 @@ CREATE TABLE meta (
     SQL_PATH.write_text(sql, encoding="utf-8")
 
 
-def write_sqlite(rows: list[dict]) -> None:
+def write_sqlite(rows: list[dict], references: list[dict]) -> None:
     if DB_PATH.exists():
         DB_PATH.unlink()
     con = sqlite3.connect(DB_PATH)
     try:
         con.executescript(SQL_PATH.read_text(encoding="utf-8"))
-        placeholders = ", ".join("?" for _ in COLUMNS)
-        columns = ", ".join(COLUMNS)
+        insert_columns = [col for col in COLUMNS if col != "reference_ids"]
+        placeholders = ", ".join("?" for _ in insert_columns)
+        columns = ", ".join(insert_columns)
         con.executemany(
             f"INSERT INTO pathogens ({columns}) VALUES ({placeholders})",
             [
                 tuple(
                     int(row["acid_fast"]) if key == "acid_fast" else row[key]
-                    for key in COLUMNS
+                    for key in insert_columns
                 )
                 for row in rows
+            ],
+        )
+        con.executemany(
+            "INSERT INTO \"references\" (entity_id, doi, url) VALUES (?, ?, ?)",
+            [(ref["entity_id"], ref["doi"], ref["url"]) for ref in references],
+        )
+        con.executemany(
+            "INSERT INTO pathogen_references (pathogen_id, reference_id) VALUES (?, ?)",
+            [
+                (row["pathogen_id"], ref_id)
+                for row in rows
+                for ref_id in row.get("reference_ids", [])
             ],
         )
         meta = {
@@ -614,6 +779,7 @@ def write_sqlite(rows: list[dict]) -> None:
             "schema_version": SCHEMA_VERSION,
             "built_at": dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
             "pathogen_count": str(len(rows)),
+            "reference_count": str(len(references)),
         }
         con.executemany("INSERT INTO meta (key, value) VALUES (?, ?)", meta.items())
         con.commit()
@@ -628,7 +794,7 @@ def write_json_schema() -> None:
         "title": "PathoMap pathogens dataset",
         "type": "object",
         "additionalProperties": False,
-        "required": ["meta", "pathogens"],
+        "required": ["meta", "pathogens", "references"],
         "properties": {
             "meta": {
                 "type": "object",
@@ -648,6 +814,7 @@ def write_json_schema() -> None:
                     "additionalProperties": False,
                     "required": COLUMNS,
                     "properties": {
+                        "entity_id": {"type": "string", "pattern": "^PM-PAT-\\d{4,}$"},
                         "pathogen_id": {"type": "integer", "minimum": 1},
                         "name": {"type": "string", "minLength": 1},
                         "genus": {"type": "string", "minLength": 1},
@@ -672,10 +839,28 @@ def write_json_schema() -> None:
                         "gc_content": {"type": ["number", "null"], "minimum": 10, "maximum": 90},
                         "n_contigs": {"type": ["integer", "null"], "minimum": 1},
                         "reference_doi": {"type": "string", "pattern": "^10\\."},
+                        "reference_ids": {
+                            "type": "array",
+                            "minItems": 1,
+                            "items": {"type": "string", "pattern": "^PM-REF-\\d{4,}$"},
+                        },
                         "description": {"type": "string", "minLength": 1},
                         "curation_notes": {"type": ["string", "null"]},
                         "curation_status": {"enum": CURATION_STATUS_VALUES},
                         "last_updated": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+                    },
+                },
+            },
+            "references": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "additionalProperties": False,
+                    "required": ["entity_id", "doi", "url"],
+                    "properties": {
+                        "entity_id": {"type": "string", "pattern": "^PM-REF-\\d{4,}$"},
+                        "doi": {"type": "string", "pattern": "^10\\."},
+                        "url": {"type": "string", "pattern": "^https://doi\\.org/10\\."},
                     },
                 },
             },
@@ -696,14 +881,16 @@ def main() -> int:
         return 1
 
     try:
-        rows = build_rows(args)
+        rows, reference_registry, doi_display = build_rows(args)
     except BuildError as exc:
         print(f"error: {exc}", file=sys.stderr)
         return 1
 
-    errors = validate_rows(rows)
+    references = build_reference_rows(rows, reference_registry, doi_display)
+    errors = validate_rows(rows) + validate_references(rows, references)
     review = [r for r in rows if r["curation_status"] == "needs_review"]
     print(f"pathogens: {len(rows)}")
+    print(f"references: {len(references)}")
     print(f"needs review: {len(review)}")
     for row in review:
         print(f"  - {row['pathogen_id']}: {row['name']} (tax_id {row['tax_id']})")
@@ -717,12 +904,26 @@ def main() -> int:
     if args.check:
         return 0
 
-    payload = dataset_payload(rows)
+    payload = dataset_payload(rows, references)
     write_json(DATASET_PATH, payload)
-    write_json(SAMPLE_PATH, dataset_payload([r for r in rows if r["pathogen_id"] in SAMPLE_IDS]))
+    sample_rows = [r for r in rows if r["pathogen_id"] in SAMPLE_IDS]
+    write_json(
+        SAMPLE_PATH,
+        dataset_payload(sample_rows, references_for_rows(sample_rows, references)),
+    )
     write_schema_sql()
     write_json_schema()
-    write_sqlite(rows)
+    write_sqlite(rows, references)
+    write_registry(
+        REFERENCE_ID_REGISTRY_PATH,
+        "references",
+        reference_registry,
+        (
+            "Stable reference entity IDs. Keys are normalized DOIs. IDs are "
+            "assigned once and never reused; do not edit by hand unless you are "
+            "intentionally repairing an assignment."
+        ),
+    )
     print(f"wrote {DATASET_PATH.relative_to(ROOT)}")
     print(f"wrote {SAMPLE_PATH.relative_to(ROOT)}")
     print(f"wrote {DB_PATH.relative_to(ROOT)}")

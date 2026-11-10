@@ -1,8 +1,9 @@
 # PathoMap dataset
 
-Schema version **2.0**. The current release contains three tables: `pathogens` (53),
-`effectors` (246) and `host_proteins` (20). References and generated analyses are not yet part of
-the dataset.
+Schema version **2.1**. The current release contains three tables: `pathogens` (53),
+`effectors` (246) and `host_proteins` (20). Every row carries a stable, prefixed `entity_id`
+(`PM-PAT-…`, `PM-EFF-…`, `PM-HST-…`). References and generated analyses are not yet part of the
+dataset.
 
 This is the authoritative reference for table structure. The v1 flat export is not present in
 this repository; tables are rebuilt from `data/sources/` one stage at a time.
@@ -15,6 +16,7 @@ this repository; tables are rebuilt from `data/sources/` one stage at a time.
 | `data/sources/effectors_seed.json` | Source | Curated effector rows linked to pathogens. |
 | `data/sources/host_proteins_seed.json` | Source | Curated host protein rows. |
 | `data/sources/effector_uniprot_mapping.json` | Source | Effector name -> UniProt accession. |
+| `data/sources/effector_ids.json` | Source | Persistent effector entity-ID registry (assigned once, never reused). |
 | `data/sources/pathogen_overrides.json` | Source | Manual overrides for NCBI lookups. |
 | `data/sources/ncbi/` | Cache | NCBI Taxonomy and Datasets responses. |
 | `data/sources/uniprot/`, `interpro/`, `pfam/`, `string/` | Cache | Protein enrichment responses. |
@@ -27,27 +29,56 @@ this repository; tables are rebuilt from `data/sources/` one stage at a time.
 ## Table relationships
 
 ```
-pathogens (pathogen_id)
-    └──< effectors (pathogen_name -> pathogens.name)
-             └──< host_target (name/class, not a foreign key yet)
+pathogens (entity_id, pathogen_id)
+    └──< effectors (entity_id, pathogen_id FK)
+             └──> host_proteins (entity_id, host_protein_id FK, nullable)
 
-host_proteins (host_protein_id)
+host_proteins (entity_id, host_protein_id)
     └── interacting_partners (STRING ids, not a foreign key)
 ```
 
-- `pathogens` is the parent table. `pathogen_id` is the only stable ID currently used for joins.
-- `effectors` currently join to pathogens by `pathogen_name`, not `pathogen_id`. This is a known
-  weakness; a stable `effector_id` and a `pathogen_id` foreign key are planned (see
-  `docs/ROADMAP.md` Phase 1).
-- `effectors.host_target` and `host_proteins.protein_name` are not yet linked by a foreign key.
+- `entity_id` is the canonical cross-table identifier. `pathogen_id` and `host_protein_id` remain
+  stable internal integer keys for SQLite joins and existing code.
+- `effectors` reference their pathogen by `pathogen_id` (with `pathogen_name` retained for display).
+- `effectors.host_protein_id` is populated only when `host_target` exactly matches a curated host
+  protein's name, gene symbol, or UniProt accession. Unmatched targets remain free text and the
+  foreign key is null; the build does not fuzzy-match biological names.
 - `host_proteins.interacting_partners` stores STRING protein IDs, which cannot be joined back to
   `host_proteins` without a separate mapping.
 - No references table exists; citations are stored per row (`reference_doi`).
+
+## Entity identifiers
+
+Canonical IDs use the form `PM-<TYPE>-<NNNN>`:
+
+| Entity | Prefix | Example | Derived from |
+|---|---|---|---|
+| Pathogen | `PM-PAT` | `PM-PAT-0001` | Curated `pathogen_id` |
+| Effector protein | `PM-EFF` | `PM-EFF-0001` | Registry keyed by `<pathogen_id>|<effector_name>` |
+| Human host protein | `PM-HST` | `PM-HST-0001` | Curated `host_protein_id` |
+
+Rules:
+
+- One ID identifies one biological entity. IDs are unique within a table and unambiguous across
+  tables because of the prefix.
+- The ID format never encodes a display name, so no join depends on labels.
+- Pathogen and host-protein IDs are deterministic from their curated integer keys and do not
+  change when names are edited.
+- Effector IDs are assigned once and recorded in `data/sources/effector_ids.json`, keyed by
+  `<pathogen_id>|<effector_name>`. Existing assignments are never renumbered or reused, including
+  after a row is temporarily removed. If an effector is deliberately renamed, update its registry
+  key to keep the same ID.
+- Future interaction and analysis records should store `entity_id` values (and may store the
+  integer foreign keys for efficient joins), never display names.
+
+The JSON envelope advertises the scheme in `meta.identifiers`, and `js/data/identifiers.js`
+provides the matching frontend helpers.
 
 ## Schema version history
 
 | Version | Date | Changes |
 |---|---|---|
+| 2.1 | 2026-11 | Stable `entity_id` on all three tables; effector `pathogen_id` foreign key; nullable effector `host_protein_id`; effector ID registry. |
 | 2.0 | 2026-11 | Three-table release (`pathogens`, `effectors`, `host_proteins`); NCBI and protein enrichment; computed sequence features; `n_effectors` removed because it was derivable and went stale. |
 | 1.0 | — | Flat v1 export with six tables and derived analyses. Not present in this repository. |
 
@@ -58,6 +89,7 @@ and `js/data/schema.js`; all three must agree.
 
 | Field | Type | Allowed values / notes | Source |
 |---|---|---|---|
+| `entity_id` | string | Canonical ID, `PM-PAT-<pathogen_id>`. | Identifier system |
 | `pathogen_id` | integer | Stable internal ID, unchanged from v1. | Curation |
 | `name` | string | Display name, including serovar/strain where relevant. | Curation |
 | `genus` | string | Taxonomic genus. | NCBI Taxonomy |
@@ -91,13 +123,17 @@ and `js/data/schema.js`; all three must agree.
 
 ## Effectors schema
 
-Key `(effector_name, pathogen_name)`. A stable `effector_id` is planned (see `docs/ROADMAP.md`).
+Primary key `entity_id`. The natural uniqueness rule remains
+`(effector_name, pathogen_name)`.
 
 | Field | Type | Notes |
 |---|---|---|
+| `entity_id` | string | Canonical ID, `PM-EFF-<n>`. |
 | `effector_name` | string | Effector display name. |
 | `effector_name_class` | string or null | Protein-family classification. |
-| `pathogen_name` | string | Producing pathogen (display name; will move to `pathogen_id`). |
+| `pathogen_id` | integer | Foreign key to `pathogens.pathogen_id`. |
+| `pathogen_name` | string | Producing pathogen display name. |
+| `host_protein_id` | integer or null | Foreign key to `host_proteins.host_protein_id` on exact target match; null otherwise. |
 | `host_target` | string | Host protein or cellular component targeted. |
 | `host_target_class` | string or null | Target classification (protein, organelle, pathway, ...). |
 | `type`, `type_class` | string | Secretion type (T3SS/T4SS/T6SS, toxin, ...) and its classification. |
@@ -114,12 +150,13 @@ Key `(effector_name, pathogen_name)`. A stable `effector_id` is planned (see `do
 | `transmembrane_regions` | array | `[{start, end}, ...]` annotations. |
 
 Sequence-derived values are currently stored on the curated rows. The target state moves them to a
-derived table keyed by `effector_id`, with method and input-version provenance.
+derived table keyed by `entity_id`, with method and input-version provenance.
 
 ## Host proteins schema
 
 | Field | Type | Notes |
 |---|---|---|
+| `entity_id` | string | Canonical ID, `PM-HST-<host_protein_id>`. |
 | `host_protein_id` | integer | Stable internal ID. |
 | `protein_name`, `gene_name` | string | Display name and gene symbol. |
 | `uniprot_id` | string | Unique UniProt accession. |
@@ -133,12 +170,42 @@ derived table keyed by `effector_id`, with method and input-version provenance.
 | `reference_doi` | string or null | Curation reference. |
 | `last_updated` | date | ISO date of the last build. |
 
+## Interaction evidence schema (Phase 3)
+
+`interactions` is a normalized relationship table. Its stable primary key is
+`interaction_id` (`PM-INT-<n>`); each row references an `effectors.entity_id`
+(`PM-EFF-<n>`) and `host_proteins.entity_id` (`PM-HST-<n>`), and records the
+mechanism, relationship predicate and provenance.
+
+`interaction_evidence` is a separate one-to-many table. Its stable primary key
+is `evidence_id` (`PM-EVD-<n>`) and it references `interaction_id`. Evidence
+is classified as `experimental`, `predicted`, `annotation-derived` or
+`hypothetical`; each record can retain DOI, PMID, database accession,
+provenance and a note. This preserves multiple sources for one relationship
+without duplicating that relationship.
+
+The initial build creates annotation-derived records only where a curated
+effector target has been audited as a single resolved human protein. It does
+not infer interactions for ambiguous, family, complex or non-protein targets.
+Add manual support to `data/sources/interaction_evidence_seed.json` and run
+`python scripts/build_interactions.py`.
+
+## Interaction analysis output (Phase 4)
+
+Run `python scripts/analyze_interactions.py` to write
+`data/derived/interaction_analysis.json`. This derived-only artifact records
+the input dataset version/hash, validation and deterministic deduplication
+results, interaction/evidence statistics, host proteins targeted by multiple
+pathogens, and a structured network of pathogen, effector and host-protein
+nodes with interaction edges. `--check` performs the same work without
+replacing the output file.
+
 ## Generated analyses (target state)
 
 Analyses are not part of the curated dataset. When added they must live in a separate derived
 layer (`data/derived/` or an equivalent cache) and carry:
 
-- Stable generated-record ID and source record IDs.
+- Stable generated-record ID and source `entity_id` values (never display names).
 - Module and software version.
 - Input dataset version or content hash.
 - Algorithm, parameters and reference-resource versions.
@@ -184,12 +251,15 @@ python scripts/build_pathogens.py --no-network
 
 python scripts/build_effectors_host_proteins.py --enrich-effectors
 python scripts/build_effectors_host_proteins.py --check
+python scripts/build_interactions.py --check
+python scripts/analyze_interactions.py --check
 ```
 
-The pathogens build fails if validation fails. It checks unique IDs, names and tax IDs; required
-fields; enum values; DOI format; ISO dates; and numeric ranges. The protein build validates
-sequence alphabets, numeric feature types and list types; enrichment failures are logged as
-warnings rather than aborting.
+The pathogens build fails if validation fails. It checks unique entity IDs, integer IDs, names
+and tax IDs; required fields; enum values; DOI format; ISO dates; and numeric ranges. The protein
+build additionally validates entity-ID format/uniqueness, effector `pathogen_id` and
+`host_protein_id` referential integrity, sequence alphabets, numeric feature types and list
+types. Enrichment failures are logged as warnings rather than aborting.
 
 ## Adding the next table
 
@@ -197,6 +267,8 @@ warnings rather than aborting.
 2. Extend the build script (or add a sibling script) to emit it into the same envelope.
 3. Add its schema/config to `js/data/schema.js` and a tab entry in `js/views/database.js`.
 4. Add its SQLite DDL, validation rules and JSON Schema.
-5. Update this document.
+5. Add its entity prefix to `scripts/identifiers.py` and `js/data/identifiers.js`, with a
+   deterministic or registered numbering rule.
+6. Update this document.
 
 Keep joins keyed by stable IDs, never by display names.

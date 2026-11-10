@@ -11,6 +11,7 @@ data/
 ├── sample-dataset.json          # generated; 5 pathogens, 27 effectors, 20 host proteins
 ├── pathomap.db                  # generated SQLite database
 ├── schema.sql                   # generated SQLite DDL
+├── derived/interaction_analysis.json # generated interaction-analysis artifact
 ├── classification-mapping.json  # manually maintained classification map
 ├── schema/
 │   └── pathogens.schema.json    # generated JSON Schema
@@ -21,10 +22,12 @@ data/
 
 **Generated — do not edit by hand.** Rebuild with the scripts below:
 
-- `pathomap-dataset.json` — `{ meta, pathogens, effectors, host_proteins }`
+- `pathomap-dataset.json` — `{ meta, pathogens, effectors, host_proteins, host_targets, references, interactions, interaction_evidence }`; every entity row has a
+  stable `entity_id`
 - `sample-dataset.json` — deterministic subset used by **Load Built-in Sample**
 - `pathomap.db`, `schema.sql` — SQLite mirror of the JSON dataset
 - `schema/pathogens.schema.json`
+- `derived/interaction_analysis.json` — validated/deduplicated interaction statistics and network
 
 **Manually maintained:**
 
@@ -37,6 +40,8 @@ data/
 ```powershell
 python scripts/build_pathogens.py
 python scripts/build_effectors_host_proteins.py --enrich-effectors
+python scripts/build_interactions.py
+python scripts/analyze_interactions.py
 ```
 
 Common flags: `--check`, `--refresh`, `--no-network`. Outputs and enrichment rules:

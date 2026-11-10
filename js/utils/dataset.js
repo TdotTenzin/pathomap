@@ -12,7 +12,8 @@
                               Errors block loading (structural problems);
                               warnings are non-fatal (bad enums, dupes, etc.).
     normalizeDataset(data)    Returns { meta, pathogens[], effectors[],
-                              host_proteins[] } with every field coerced to
+                              host_proteins[], host_targets[], references[] }
+                              with every field coerced to
                               its expected type and unknown values defaulted.
 
   Private helpers:
@@ -22,10 +23,17 @@
     asInteger(v)      Parse integer; null if not a whole number.
     asBoolean(v)      Truthy coercion accepting true/1/'yes'/'y' strings.
     inferGenus(name)  Fallback: first word of the organism name.
+    normalizeEntityId(v, type, used, fallback)  Preserve or generate a PM-* ID.
 
   Normalization guarantees:
     - pathogen_id / host_protein_id are unique positive integers (auto-assigned
       when missing, non-positive, or duplicated).
+    - Every entity has a unique canonical entity_id (PM-PAT / PM-EFF / PM-HST /
+      PM-TGT / PM-REF).
+      Existing valid IDs are preserved; missing ones are generated.
+    - Effector pathogen_id is resolved by name when absent; host-target links
+      are stored through host_target_id and target-to-protein resolution lives
+      in the host_targets table.
     - Enum fields (gram_stain, strategy, assembly_level, curation_status for pathogens)
       fall back to 'unknown' / 'needs_review' when the value isn't in the allowed set.
     - Output rows contain ONLY the columns declared in schema.js (extras dropped).
@@ -45,7 +53,15 @@ import {
   STRATEGY_VALUES,
   EFFECTOR_COLUMNS,
   HOST_PROTEIN_COLUMNS,
+  HOST_TARGET_COLUMNS,
+  REFERENCE_COLUMNS,
+  AUDIT_STATUS_VALUES,
+  RESOLUTION_STATUS_VALUES,
+  INTERACTION_COLUMNS,
+  INTERACTION_EVIDENCE_COLUMNS,
+  INTERACTION_EVIDENCE_CLASS_VALUES,
 } from '../data/schema.js';
+import { isEntityId, makeEntityId } from '../data/identifiers.js';
 
 export const DATA_SCHEMA_VERSION = SCHEMA_VERSION;
 
@@ -90,6 +106,28 @@ function asArray(value) {
   return Array.isArray(value) ? value : [];
 }
 
+// Normalize an array of scalar strings (references, aliases, evidence URLs)
+function asStringArray(value) {
+  return asArray(value).map(cleanString).filter(Boolean);
+}
+
+// Normalize an array of member objects (host-target family/complex members)
+function asMemberArray(value) {
+  return asArray(value)
+    .filter((member) => member && typeof member === 'object' && !Array.isArray(member))
+    .map((member) => ({
+      name: cleanString(member.name),
+      gene_symbol: cleanString(member.gene_symbol),
+      uniprot_id: cleanString(member.uniprot_id),
+    }))
+    .filter((member) => member.name || member.gene_symbol || member.uniprot_id);
+}
+
+// Preserve only syntactically valid PM-REF identifiers.
+function asReferenceIds(value) {
+  return asStringArray(value).filter((id) => isEntityId(id, 'reference'));
+}
+
 // Keep a value only when it is a plain object (e.g. signal_peptide), else null
 function asObjectOrNull(value) {
   return value && typeof value === 'object' && !Array.isArray(value) ? value : null;
@@ -106,12 +144,49 @@ function normalizeEnrichment(row) {
     gravy_score: asNumber(row.gravy_score),
     domains: asArray(row.domains),
     go_terms: asArray(row.go_terms),
+    feature_status: nullableString(row.feature_status),
   };
 }
 
 // Infer genus from a pathogen name (first word) when the genus field is empty
 function inferGenus(name) {
   return name.split(/\s+/).filter(Boolean)[0] || '';
+}
+
+// Preserve a valid, unused entity ID; otherwise derive one from the curated
+// numeric key (pathogens/host proteins) or assign the next free sequence.
+function normalizeEntityId(value, entityType, usedIds, fallbackNumber = null) {
+  if (isEntityId(value, entityType) && !usedIds.has(value)) {
+    usedIds.add(value);
+    return value;
+  }
+  let number =
+    Number.isInteger(fallbackNumber) && fallbackNumber > 0 ? fallbackNumber : 1;
+  let generated = makeEntityId(entityType, number);
+  while (usedIds.has(generated)) {
+    number += 1;
+    generated = makeEntityId(entityType, number);
+  }
+  usedIds.add(generated);
+  return generated;
+}
+
+// Report malformed/duplicate entity IDs without blocking an upload.
+function validateEntityIds(rows, entityType, warnings, label) {
+  const seen = new Set();
+  rows.forEach((row, index) => {
+    if (!row || typeof row !== 'object' || Array.isArray(row)) return;
+    const id = row.entity_id;
+    if (id === undefined || id === null || id === '') return;
+    if (!isEntityId(id, entityType)) {
+      warnings.push(`${label} row ${index + 1}: invalid entity_id "${id}".`);
+      return;
+    }
+    if (seen.has(id)) {
+      warnings.push(`${label} row ${index + 1}: duplicate entity_id ${id}.`);
+    }
+    seen.add(id);
+  });
 }
 
 // ---------------------------------------------------------------------------
@@ -139,13 +214,20 @@ export function validateDataset(data) {
   }
 
   // Warn about unrecognized top-level arrays (ignored by the app)
+  const knownTables = [
+    'pathogens',
+    'effectors',
+    'host_proteins',
+    'host_targets',
+    'references',
+    'interactions',
+    'interaction_evidence',
+  ];
   const extraTables = Object.keys(data).filter(
-    (key) => !['meta', 'pathogens', 'effectors', 'host_proteins'].includes(key) && Array.isArray(data[key])
+    (key) => !['meta', ...knownTables].includes(key) && Array.isArray(data[key])
   );
   if (extraTables.length) {
-    warnings.push(
-      `Only the pathogens, effectors, and host_proteins tables are used in this build; ignored: ${extraTables.join(', ')}.`
-    );
+    warnings.push(`Ignored unrecognized tables: ${extraTables.join(', ')}.`);
   }
 
   // Track duplicates across rows for name and id uniqueness checks
@@ -205,6 +287,95 @@ export function validateDataset(data) {
     }
   });
 
+  // Entity-ID format/uniqueness for every table
+  validateEntityIds(data.pathogens, 'pathogen', warnings, 'Pathogen');
+  const effectorRows = Array.isArray(data.effectors) ? data.effectors : [];
+  const hostProteinRows = Array.isArray(data.host_proteins) ? data.host_proteins : [];
+  const hostTargetRows = Array.isArray(data.host_targets) ? data.host_targets : [];
+  const referenceRows = Array.isArray(data.references) ? data.references : [];
+  const interactionRows = Array.isArray(data.interactions) ? data.interactions : [];
+  const interactionEvidenceRows = Array.isArray(data.interaction_evidence) ? data.interaction_evidence : [];
+  validateEntityIds(effectorRows, 'effector', warnings, 'Effector');
+  validateEntityIds(hostProteinRows, 'host_protein', warnings, 'Host protein');
+  validateEntityIds(hostTargetRows, 'host_target', warnings, 'Host target');
+  validateEntityIds(referenceRows, 'reference', warnings, 'Reference');
+  interactionRows.forEach((row, index) => {
+    if (!isEntityId(row?.interaction_id, 'interaction')) warnings.push(`Interaction row ${index + 1}: invalid interaction_id.`);
+  });
+  interactionEvidenceRows.forEach((row, index) => {
+    if (!isEntityId(row?.evidence_id, 'interaction_evidence')) warnings.push(`Interaction evidence row ${index + 1}: invalid evidence_id.`);
+    if (row?.evidence_class && !INTERACTION_EVIDENCE_CLASS_VALUES.includes(row.evidence_class)) warnings.push(`Interaction evidence row ${index + 1}: invalid evidence_class.`);
+  });
+
+  // Referential integrity for foreign keys (advisory; normalization keeps rows)
+  const pathogenIds = new Set(
+    data.pathogens.map((row) => asInteger(row?.pathogen_id)).filter((id) => id !== null)
+  );
+  const hostProteinIds = new Set(
+    hostProteinRows.map((row) => asInteger(row?.host_protein_id)).filter((id) => id !== null)
+  );
+  const hostTargetIds = new Set(
+    hostTargetRows.map((row) => asInteger(row?.host_target_id)).filter((id) => id !== null)
+  );
+  const referenceIds = new Set(referenceRows.map((row) => row?.entity_id).filter(Boolean));
+  effectorRows.forEach((row, index) => {
+    if (!row || typeof row !== 'object' || Array.isArray(row)) return;
+    const label = `Effector row ${index + 1}`;
+    const pathogenId = asInteger(row.pathogen_id);
+    if (pathogenId !== null && !pathogenIds.has(pathogenId)) {
+      warnings.push(`${label}: unknown pathogen_id ${pathogenId}.`);
+    }
+    const hostTargetId = asInteger(row.host_target_id);
+    if (hostTargetId !== null && !hostTargetIds.has(hostTargetId)) {
+      warnings.push(`${label}: unknown host_target_id ${hostTargetId}.`);
+    }
+  });
+  [
+    ['Pathogen', data.pathogens],
+    ['Effector', effectorRows],
+    ['Host protein', hostProteinRows],
+  ].forEach(([label, rows]) => {
+    rows.forEach((row, index) => {
+      if (!row || typeof row !== 'object' || Array.isArray(row)) return;
+      asStringArray(row.reference_ids).forEach((refId) => {
+        if (!referenceIds.has(refId)) {
+          warnings.push(`${label} row ${index + 1}: unknown reference_id ${refId}.`);
+        }
+      });
+    });
+  });
+  hostTargetRows.forEach((row, index) => {
+    if (!row || typeof row !== 'object' || Array.isArray(row)) return;
+    const label = `Host target row ${index + 1}`;
+    const hostProteinId = asInteger(row.host_protein_id);
+    if (hostProteinId !== null && !hostProteinIds.has(hostProteinId)) {
+      warnings.push(`${label}: unknown host_protein_id ${hostProteinId}.`);
+    }
+    if (row.audit_status && !AUDIT_STATUS_VALUES.includes(row.audit_status)) {
+      warnings.push(`${label}: unknown audit_status "${row.audit_status}".`);
+    }
+    if (row.resolution_status && !RESOLUTION_STATUS_VALUES.includes(row.resolution_status)) {
+      warnings.push(`${label}: unknown resolution_status "${row.resolution_status}".`);
+    }
+  });
+
+  // Legacy/uploaded rows without IDs still load; normalization assigns them.
+  if (data.pathogens.some((row) => !row?.entity_id)) {
+    warnings.push('Some pathogens lack an entity_id; IDs will be generated on load.');
+  }
+  if (effectorRows.some((row) => !row?.entity_id)) {
+    warnings.push('Some effectors lack an entity_id; IDs will be generated on load.');
+  }
+  if (hostProteinRows.some((row) => !row?.entity_id)) {
+    warnings.push('Some host proteins lack an entity_id; IDs will be generated on load.');
+  }
+  if (hostTargetRows.some((row) => !row?.entity_id)) {
+    warnings.push('Some host targets lack an entity_id; IDs will be generated on load.');
+  }
+  if (referenceRows.some((row) => !row?.entity_id)) {
+    warnings.push('Some references lack an entity_id; IDs will be generated on load.');
+  }
+
   return { valid: errors.length === 0, errors, warnings };
 }
 
@@ -217,6 +388,7 @@ export function validateDataset(data) {
 export function normalizeDataset(data) {
   const sourceRows = Array.isArray(data?.pathogens) ? data.pathogens : [];
   const usedIds = new Set();
+  const usedEntityIds = new Set();
   let nextId = 1;
 
   const pathogens = sourceRows
@@ -240,6 +412,12 @@ export function normalizeDataset(data) {
 
       // Normalize all fields: enums fall back to defaults, numbers to null
       const normalized = {
+        entity_id: normalizeEntityId(
+          row.entity_id,
+          'pathogen',
+          usedEntityIds,
+          pathogenId
+        ),
         pathogen_id: pathogenId,
         name,
         genus,
@@ -261,6 +439,7 @@ export function normalizeDataset(data) {
         gc_content: asNumber(row.gc_content),
         n_contigs: asInteger(row.n_contigs),
         reference_doi: cleanString(row.reference_doi),
+        reference_ids: asReferenceIds(row.reference_ids),
         description: cleanString(row.description),
         curation_status: CURATION_STATUS_VALUES.includes(row.curation_status)
           ? row.curation_status
@@ -272,15 +451,34 @@ export function normalizeDataset(data) {
       return Object.fromEntries(PATHOGEN_COLUMNS.map((key) => [key, normalized[key]]));
     });
 
-  // Normalize effectors (string-only columns; no ID or enum handling needed)
+  // Resolve effector -> pathogen links by display name when the integer FK is
+  // missing (legacy uploads) so the stable identifier link survives import.
+  const pathogenIdByName = new Map(
+    pathogens
+      .filter((row) => row.name)
+      .map((row) => [row.name.toLowerCase(), row.pathogen_id])
+  );
+
+  // Normalize effectors (stable ID plus nullable foreign keys)
   const sourceEffectors = Array.isArray(data?.effectors) ? data.effectors : [];
+  const usedEffectorEntityIds = new Set();
   const effectors = sourceEffectors
     .filter((row) => row && typeof row === 'object' && !Array.isArray(row))
     .map((row) => {
       const normalized = {
+        entity_id: normalizeEntityId(
+          row.entity_id,
+          'effector',
+          usedEffectorEntityIds
+        ),
         effector_name: cleanString(row.effector_name),
         effector_name_class: cleanString(row.effector_name_class),
+        pathogen_id:
+          asInteger(row.pathogen_id) ??
+          pathogenIdByName.get(cleanString(row.pathogen_name).toLowerCase()) ??
+          null,
         pathogen_name: cleanString(row.pathogen_name),
+        host_target_id: asInteger(row.host_target_id),
         host_target: cleanString(row.host_target),
         host_target_class: cleanString(row.host_target_class),
         type: cleanString(row.type),
@@ -291,6 +489,7 @@ export function normalizeDataset(data) {
         ...normalizeEnrichment(row),
         signal_peptide: asObjectOrNull(row.signal_peptide),
         transmembrane_regions: asArray(row.transmembrane_regions),
+        reference_ids: asReferenceIds(row.reference_ids),
       };
 
       // Keep only declared columns
@@ -300,6 +499,7 @@ export function normalizeDataset(data) {
   // Normalize host_proteins (same ID-dedup pattern as pathogens)
   const sourceHostProteins = Array.isArray(data?.host_proteins) ? data.host_proteins : [];
   const usedHostProteinIds = new Set();
+  const usedHostEntityIds = new Set();
   let nextHostProteinId = 1;
   const host_proteins = sourceHostProteins
     .filter((row) => row && typeof row === 'object' && !Array.isArray(row))
@@ -318,6 +518,12 @@ export function normalizeDataset(data) {
       nextHostProteinId = Math.max(nextHostProteinId, hostProteinId + 1);
 
       const normalized = {
+        entity_id: normalizeEntityId(
+          row.entity_id,
+          'host_protein',
+          usedHostEntityIds,
+          hostProteinId
+        ),
         host_protein_id: hostProteinId,
         protein_name: cleanString(row.protein_name),
         gene_name: cleanString(row.gene_name),
@@ -329,6 +535,8 @@ export function normalizeDataset(data) {
         pathways_detailed: asArray(row.pathways_detailed),
         interacting_partners: asArray(row.interacting_partners),
         reference_doi: nullableString(row.reference_doi),
+        reference_ids: asReferenceIds(row.reference_ids),
+        evidence_source: nullableString(row.evidence_source),
         last_updated: cleanString(row.last_updated),
       };
 
@@ -336,16 +544,126 @@ export function normalizeDataset(data) {
       return Object.fromEntries(HOST_PROTEIN_COLUMNS.map((key) => [key, normalized[key]]));
     });
 
+  // Normalize audited host targets. Keep the original target annotation and
+  // ensure that only known resolution statuses make it into the UI state.
+  const sourceHostTargets = Array.isArray(data?.host_targets) ? data.host_targets : [];
+  const usedHostTargetIds = new Set();
+  const usedHostTargetEntityIds = new Set();
+  let nextHostTargetId = 1;
+  const host_targets = sourceHostTargets
+    .filter((row) => row && typeof row === 'object' && !Array.isArray(row))
+    .map((row) => {
+      let hostTargetId = asInteger(row.host_target_id);
+      if (hostTargetId === null || hostTargetId <= 0 || usedHostTargetIds.has(hostTargetId)) {
+        while (usedHostTargetIds.has(nextHostTargetId)) nextHostTargetId += 1;
+        hostTargetId = nextHostTargetId;
+      }
+      usedHostTargetIds.add(hostTargetId);
+      nextHostTargetId = Math.max(nextHostTargetId, hostTargetId + 1);
+
+      const auditStatus = AUDIT_STATUS_VALUES.includes(row.audit_status)
+        ? row.audit_status
+        : 'unresolved';
+      const resolutionStatus = RESOLUTION_STATUS_VALUES.includes(row.resolution_status)
+        ? row.resolution_status
+        : 'unresolved';
+      const normalized = {
+        entity_id: normalizeEntityId(
+          row.entity_id,
+          'host_target',
+          usedHostTargetEntityIds,
+          hostTargetId
+        ),
+        host_target_id: hostTargetId,
+        name: cleanString(row.name),
+        host_target_class: cleanString(row.host_target_class),
+        host_protein_id: asInteger(row.host_protein_id),
+        resolution_status: resolutionStatus,
+        audit_status: auditStatus,
+        resolved_name: nullableString(row.resolved_name),
+        gene_symbol: nullableString(row.gene_symbol),
+        uniprot_id: nullableString(row.uniprot_id),
+        aliases: asStringArray(row.aliases),
+        members: asMemberArray(row.members),
+        evidence_sources: asStringArray(row.evidence_sources),
+        audit_notes: nullableString(row.audit_notes),
+      };
+      return Object.fromEntries(HOST_TARGET_COLUMNS.map((key) => [key, normalized[key]]));
+    });
+
+  // Normalize DOI references independently of the rows that cite them. A
+  // missing ID remains loadable, but gets a stable PM-REF identifier in memory.
+  const sourceReferences = Array.isArray(data?.references) ? data.references : [];
+  const usedReferenceEntityIds = new Set();
+  const references = sourceReferences
+    .filter((row) => row && typeof row === 'object' && !Array.isArray(row))
+    .map((row, index) => {
+      const doi = cleanString(row.doi);
+      const normalized = {
+        entity_id: normalizeEntityId(
+          row.entity_id,
+          'reference',
+          usedReferenceEntityIds,
+          index + 1
+        ),
+        doi,
+        url: nullableString(row.url) || (doi ? `https://doi.org/${doi}` : null),
+      };
+      return Object.fromEntries(REFERENCE_COLUMNS.map((key) => [key, normalized[key]]));
+    });
+
+  const interactions = (Array.isArray(data?.interactions) ? data.interactions : [])
+    .filter((row) => row && typeof row === 'object' && !Array.isArray(row))
+    .map((row) => ({
+      interaction_id: isEntityId(row.interaction_id, 'interaction') ? row.interaction_id : null,
+      effector_id: isEntityId(row.effector_id, 'effector') ? row.effector_id : null,
+      host_protein_id: isEntityId(row.host_protein_id, 'host_protein') ? row.host_protein_id : null,
+      mechanism: nullableString(row.mechanism),
+      interaction_type: cleanString(row.interaction_type),
+      provenance: cleanString(row.provenance),
+    }))
+    .filter((row) => row.interaction_id && row.effector_id && row.host_protein_id);
+  const interaction_evidence = (Array.isArray(data?.interaction_evidence) ? data.interaction_evidence : [])
+    .filter((row) => row && typeof row === 'object' && !Array.isArray(row))
+    .map((row) => ({
+      evidence_id: isEntityId(row.evidence_id, 'interaction_evidence') ? row.evidence_id : null,
+      interaction_id: isEntityId(row.interaction_id, 'interaction') ? row.interaction_id : null,
+      evidence_class: INTERACTION_EVIDENCE_CLASS_VALUES.includes(row.evidence_class) ? row.evidence_class : 'hypothetical',
+      doi: nullableString(row.doi),
+      pmid: nullableString(row.pmid),
+      database_accession: nullableString(row.database_accession),
+      provenance: cleanString(row.provenance),
+      note: nullableString(row.note),
+    }))
+    .filter((row) => row.evidence_id && row.interaction_id);
+
   // Merge caller meta with our own fields; tables[] always reflects final counts
   const meta = {
     dataset: 'pathomap',
     schema_version: SCHEMA_VERSION,
     ...(data?.meta && typeof data.meta === 'object' ? data.meta : {}),
-    tables: { pathogens: pathogens.length, effectors: effectors.length, host_proteins: host_proteins.length },
+    tables: {
+      pathogens: pathogens.length,
+      effectors: effectors.length,
+      host_proteins: host_proteins.length,
+      host_targets: host_targets.length,
+      references: references.length,
+      interactions: interactions.length,
+      interaction_evidence: interaction_evidence.length,
+    },
   };
 
-  return { meta, pathogens, effectors, host_proteins };
+  return { meta, pathogens, effectors, host_proteins, host_targets, references, interactions, interaction_evidence };
 }
 
 // Re-export column lists and enums for convenience (avoids deep imports)
-export { PATHOGEN_COLUMNS, EFFECTOR_COLUMNS, HOST_PROTEIN_COLUMNS, ENUMS };
+export {
+  PATHOGEN_COLUMNS,
+  EFFECTOR_COLUMNS,
+  HOST_PROTEIN_COLUMNS,
+  HOST_TARGET_COLUMNS,
+  REFERENCE_COLUMNS,
+  INTERACTION_COLUMNS,
+  INTERACTION_EVIDENCE_COLUMNS,
+  ENUMS,
+};

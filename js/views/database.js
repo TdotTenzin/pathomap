@@ -62,7 +62,16 @@
   data), which avoids XSS from user-uploaded datasets.
 */
 
-import { getDataset, getPathogens, getEffectors, getHostProteins } from '../data/loader.js';
+import {
+  getDataset,
+  getPathogens,
+  getEffectors,
+  getHostProteins,
+  getHostTargets,
+  getReferences,
+  getInteractions,
+  getInteractionEvidence,
+} from '../data/loader.js';
 import {
   COLUMN_LABELS,
   COLUMN_META,
@@ -79,6 +88,22 @@ import {
   HOST_PROTEIN_COLUMN_LABELS,
   HOST_PROTEIN_VISIBLE_COLUMNS,
   HOST_PROTEIN_COLUMNS,
+  HOST_TARGET_COLUMNS_META,
+  HOST_TARGET_COLUMN_LABELS,
+  HOST_TARGET_VISIBLE_COLUMNS,
+  HOST_TARGET_COLUMNS,
+  REFERENCE_COLUMNS_META,
+  REFERENCE_COLUMN_LABELS,
+  REFERENCE_VISIBLE_COLUMNS,
+  REFERENCE_COLUMNS,
+  INTERACTION_COLUMNS_META,
+  INTERACTION_COLUMN_LABELS,
+  INTERACTION_VISIBLE_COLUMNS,
+  INTERACTION_COLUMNS,
+  INTERACTION_EVIDENCE_COLUMNS_META,
+  INTERACTION_EVIDENCE_COLUMN_LABELS,
+  INTERACTION_EVIDENCE_VISIBLE_COLUMNS,
+  INTERACTION_EVIDENCE_COLUMNS,
 } from '../data/schema.js';
 
 // Available tables to display in the database view (id, label, description,
@@ -107,6 +132,35 @@ const TABLES = [
       'Host proteins targeted by pathogen effectors, with UniProt identifiers, cellular localization, and functional annotations.',
     columns: HOST_PROTEIN_VISIBLE_COLUMNS,
     exportColumns: HOST_PROTEIN_COLUMNS,
+  },
+  {
+    id: 'host_targets',
+    label: 'Host Targets',
+    description:
+      'Audited original effector target annotations, including resolved human proteins and non-protein or ambiguous targets.',
+    columns: HOST_TARGET_VISIBLE_COLUMNS,
+    exportColumns: HOST_TARGET_COLUMNS,
+  },
+  {
+    id: 'references',
+    label: 'References',
+    description: 'Normalized DOI references linked to curated PathoMap records.',
+    columns: REFERENCE_VISIBLE_COLUMNS,
+    exportColumns: REFERENCE_COLUMNS,
+  },
+  {
+    id: 'interactions',
+    label: 'Interactions',
+    description: 'Normalized effector-to-human-protein relationships with stable IDs and mechanisms.',
+    columns: INTERACTION_VISIBLE_COLUMNS,
+    exportColumns: INTERACTION_COLUMNS,
+  },
+  {
+    id: 'interaction_evidence',
+    label: 'Interaction Evidence',
+    description: 'Multiple classified evidence records may support one interaction.',
+    columns: INTERACTION_EVIDENCE_VISIBLE_COLUMNS,
+    exportColumns: INTERACTION_EVIDENCE_COLUMNS,
   },
 ];
 
@@ -140,7 +194,19 @@ function tableDef(id) {
 // numeric-aware for numbers, boolean-aware for booleans, and localeCompare
 // for strings/nulls.
 function rowsFor(def) {
-  const rows = def.id === 'effectors' ? getEffectors() : def.id === 'host_proteins' ? getHostProteins() : getPathogens();
+  const rows = def.id === 'effectors'
+    ? getEffectors()
+    : def.id === 'host_proteins'
+      ? getHostProteins()
+      : def.id === 'host_targets'
+        ? getHostTargets()
+        : def.id === 'references'
+          ? getReferences()
+          : def.id === 'interactions'
+            ? getInteractions()
+            : def.id === 'interaction_evidence'
+              ? getInteractionEvidence()
+          : getPathogens();
   const query = state.search.trim().toLowerCase();
   let out = rows;
 
@@ -230,7 +296,7 @@ function renderHead(def) {
   const el = document.getElementById('db-head');
   if (!el) return;
   el.replaceChildren();
-  const labels = def.id === 'effectors' ? EFFECTOR_COLUMN_LABELS : def.id === 'host_proteins' ? HOST_PROTEIN_COLUMN_LABELS : COLUMN_LABELS;
+  const labels = columnLabelsFor(def.id);
   def.columns.forEach((column) => {
     const th = document.createElement('th');
     const label = labels[column] || column.replace(/_/g, ' ');
@@ -307,6 +373,28 @@ function displayValue(column, value) {
   return String(value);
 }
 
+// Pick the field-label map for a table. Keeping this centralized prevents the
+// newer normalized tables from falling back to raw snake_case keys.
+function columnLabelsFor(tableId) {
+  if (tableId === 'effectors') return EFFECTOR_COLUMN_LABELS;
+  if (tableId === 'host_proteins') return HOST_PROTEIN_COLUMN_LABELS;
+  if (tableId === 'host_targets') return HOST_TARGET_COLUMN_LABELS;
+  if (tableId === 'references') return REFERENCE_COLUMN_LABELS;
+  if (tableId === 'interactions') return INTERACTION_COLUMN_LABELS;
+  if (tableId === 'interaction_evidence') return INTERACTION_EVIDENCE_COLUMN_LABELS;
+  return COLUMN_LABELS;
+}
+
+function columnMetaFor(tableId) {
+  if (tableId === 'effectors') return EFFECTOR_COLUMNS_META;
+  if (tableId === 'host_proteins') return HOST_PROTEIN_COLUMNS_META;
+  if (tableId === 'host_targets') return HOST_TARGET_COLUMNS_META;
+  if (tableId === 'references') return REFERENCE_COLUMNS_META;
+  if (tableId === 'interactions') return INTERACTION_COLUMNS_META;
+  if (tableId === 'interaction_evidence') return INTERACTION_EVIDENCE_COLUMNS_META;
+  return COLUMN_META;
+}
+
 // Text used for search matching: arrays/objects become JSON so nested values
 // (domain names, GO terms, interaction partners) stay searchable.
 function searchText(value) {
@@ -355,11 +443,20 @@ function renderBody(def, rows) {
       const td = document.createElement('td');
       const value = row[column];
 
-      // Handle reference_doi links
+      // DOI and reference URLs render as external links.
       if (column === 'reference_doi' && value) {
         const link = document.createElement('a');
         link.className = 'db-link';
         link.href = `https://doi.org/${value}`;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.textContent = value;
+        td.appendChild(link);
+      }
+      else if (column === 'url' && value) {
+        const link = document.createElement('a');
+        link.className = 'db-link';
+        link.href = value;
         link.target = '_blank';
         link.rel = 'noopener noreferrer';
         link.textContent = value;
@@ -514,12 +611,12 @@ function renderSchema() {
   const def = tableDef(state.active);
   const meta = getDataset().meta || {};
   const counts = meta.tables || {};
-  // Meta line: "Schema 2.0 · 53 pathogens · Built 2024-…"
+  // Meta line: "Schema 2.1 · 53 pathogens · Built 2024-…"
   const metaLine = document.createElement('p');
   metaLine.className = 'schema-meta';
-  const columnMeta = def.id === 'effectors' ? EFFECTOR_COLUMNS_META : def.id === 'host_proteins' ? HOST_PROTEIN_COLUMNS_META : COLUMN_META;
-  const tableLabel = def.id === 'effectors' ? 'effectors' : def.id === 'host_proteins' ? 'host proteins' : 'pathogens';
-  const count = def.id === 'effectors' ? (counts.effectors ?? getEffectors().length) : def.id === 'host_proteins' ? (counts.host_proteins ?? getHostProteins().length) : (counts.pathogens ?? getPathogens().length);
+  const columnMeta = columnMetaFor(def.id);
+  const tableLabel = def.label.toLowerCase();
+  const count = counts[def.id] ?? rowsFor(def).length;
   metaLine.textContent = [
     `Schema ${meta.schema_version || SCHEMA_VERSION}`,
     `${count} ${tableLabel}`,
@@ -619,7 +716,7 @@ function toCsv(def, rows) {
     return /[",\n]/.test(text) ? '"' + text.replace(/"/g, '""') + '"' : text;
   };
   const columns = def.exportColumns || def.columns;
-  const labels = def.id === 'effectors' ? EFFECTOR_COLUMN_LABELS : def.id === 'host_proteins' ? HOST_PROTEIN_COLUMN_LABELS : COLUMN_LABELS;
+  const labels = columnLabelsFor(def.id);
   const header = columns.map((column) => escape(labels[column] || column)).join(',');
   const lines = rows.map((row) => columns.map((column) => escape(row[column])).join(','));
   return [header, ...lines].join('\n');

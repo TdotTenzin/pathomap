@@ -135,7 +135,8 @@ protein enrichment are in `docs/DATA_PIPELINE.md`.
 ## Conventions
 
 - Curated sources live in `data/sources/`; generated artifacts live in `data/`.
-- Join by stable IDs (`pathogen_id`, later `effector_id`, `host_protein_id`), never display names.
+- Join by stable IDs (`entity_id`; optional integer keys `pathogen_id`, `host_protein_id`), never
+  display names.
 - Keep derived or model outputs out of the curated dataset.
 - Update `docs/DATASET.md` when the schema changes and `docs/ANALYSES.md` when module behaviour
   changes.

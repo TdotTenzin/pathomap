@@ -1,0 +1,2791 @@
+{
+  "schema_version": "1.0",
+  "description": "Curated audit of every host_target annotation. Original effector annotations are preserved unchanged; this file records the resolution decision, canonical protein/family/complex names, UniProt accessions, members and evidence sources.",
+  "target_count": 129,
+  "targets": [
+    {
+      "original_target": "Abiotic surfaces",
+      "original_class": "cellular_structure",
+      "audit_status": "non_protein",
+      "resolved_name": "Abiotic surface",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Non-biological surface; no human protein target."
+    },
+    {
+      "original_target": "Actin",
+      "original_class": "protein",
+      "audit_status": "verified_protein",
+      "resolved_name": "Actin, cytoplasmic 1",
+      "gene_symbol": "ACTB",
+      "uniprot_id": "P60709",
+      "aliases": [
+        "ACTB",
+        "beta-actin"
+      ],
+      "members": [],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P60709/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "Generic actin annotation canonicalized to cytoplasmic beta-actin (ACTB); gamma-actin (ACTG1) and muscle actins are paralogues."
+    },
+    {
+      "original_target": "Actin / RhoA",
+      "original_class": "protein",
+      "audit_status": "ambiguous",
+      "resolved_name": "Actin and RhoA (multi-target)",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Actin, cytoplasmic 1",
+          "gene_symbol": "ACTB",
+          "uniprot_id": "P60709"
+        },
+        {
+          "name": "Transforming protein RhoA",
+          "gene_symbol": "RHOA",
+          "uniprot_id": "P61586"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P60709/entry",
+        "https://www.uniprot.org/uniprotkb/P61586/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "Original annotation names two proteins; no single host_protein_id link is valid."
+    },
+    {
+      "original_target": "ADAM10",
+      "original_class": "protein",
+      "audit_status": "verified_protein",
+      "resolved_name": "Disintegrin and metalloproteinase domain-containing protein 10",
+      "gene_symbol": "ADAM10",
+      "uniprot_id": "O35598",
+      "aliases": [
+        "CD156c",
+        "KUZ"
+      ],
+      "members": [],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/O35598/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "Hla binds ADAM10 on the host membrane."
+    },
+    {
+      "original_target": "Antibiotics",
+      "original_class": "metabolite",
+      "audit_status": "non_protein",
+      "resolved_name": "Antibiotic substrate",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Drug target/antibiotic inactivation; not a human protein."
+    },
+    {
+      "original_target": "ANTXR1/2",
+      "original_class": "protein",
+      "audit_status": "ambiguous",
+      "resolved_name": "ANTXR1 and ANTXR2 (multi-target)",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Anthrax toxin receptor 1",
+          "gene_symbol": "ANTXR1",
+          "uniprot_id": "Q9H6X2"
+        },
+        {
+          "name": "Anthrax toxin receptor 2",
+          "gene_symbol": "ANTXR2",
+          "uniprot_id": "P58335"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/Q9H6X2/entry",
+        "https://www.uniprot.org/uniprotkb/P58335/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "PA binds either ANTXR1 (TEM8) or ANTXR2 (CMG2); two distinct receptors."
+    },
+    {
+      "original_target": "Arp2/3",
+      "original_class": "protein_complex",
+      "audit_status": "verified_complex",
+      "resolved_name": "Actin-related protein 2/3 complex",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Actin-related protein 2",
+          "gene_symbol": "ACTR2",
+          "uniprot_id": "P61160"
+        },
+        {
+          "name": "Actin-related protein 3",
+          "gene_symbol": "ACTR3",
+          "uniprot_id": "P61158"
+        },
+        {
+          "name": "Actin-related protein 2/3 complex subunit 1B",
+          "gene_symbol": "ARPC1B",
+          "uniprot_id": "O15143"
+        },
+        {
+          "name": "Actin-related protein 2/3 complex subunit 2",
+          "gene_symbol": "ARPC2",
+          "uniprot_id": "O15144"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P61160/entry",
+        "https://www.uniprot.org/uniprotkb/P61158/entry",
+        "https://www.uniprot.org/uniprotkb/O15143/entry",
+        "https://www.uniprot.org/uniprotkb/O15144/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "Seven-subunit actin nucleation complex; representative subunits listed."
+    },
+    {
+      "original_target": "Biofilm",
+      "original_class": "cellular_structure",
+      "audit_status": "non_protein",
+      "resolved_name": "Biofilm matrix",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Extracellular bacterial community; not a human protein."
+    },
+    {
+      "original_target": "C5aR / CD88",
+      "original_class": "protein",
+      "audit_status": "verified_protein",
+      "resolved_name": "C5a anaphylatoxin chemotactic receptor 1",
+      "gene_symbol": "C5AR1",
+      "uniprot_id": "P21730",
+      "aliases": [
+        "C5aR",
+        "CD88"
+      ],
+      "members": [],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P21730/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "Slash notation is an alias, not a second target."
+    },
+    {
+      "original_target": "CaM/adenylate cyclase",
+      "original_class": "protein",
+      "audit_status": "ambiguous",
+      "resolved_name": "Calmodulin and adenylate cyclase (multi-target)",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Calmodulin-1",
+          "gene_symbol": "CALM1",
+          "uniprot_id": "P0DP23"
+        },
+        {
+          "name": "Adenylate cyclase type 1",
+          "gene_symbol": "ADCY1",
+          "uniprot_id": "Q08828"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P0DP23/entry",
+        "https://www.uniprot.org/uniprotkb/Q08828/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "Edema factor and CyaA are calmodulin-dependent adenylate cyclases; both host components are involved."
+    },
+    {
+      "original_target": "cAMP/cGMP",
+      "original_class": "metabolite",
+      "audit_status": "non_protein",
+      "resolved_name": "Cyclic nucleotide",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Second messenger; not a protein."
+    },
+    {
+      "original_target": "CD14/TLR2",
+      "original_class": "protein",
+      "audit_status": "verified_complex",
+      "resolved_name": "CD14-TLR2 receptor complex",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Monocyte differentiation antigen CD14",
+          "gene_symbol": "CD14",
+          "uniprot_id": "P08571"
+        },
+        {
+          "name": "Toll-like receptor 2",
+          "gene_symbol": "TLR2",
+          "uniprot_id": "O60603"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P08571/entry",
+        "https://www.uniprot.org/uniprotkb/O60603/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "FimA signals through the CD14/TLR2 complex."
+    },
+    {
+      "original_target": "CD46",
+      "original_class": "protein",
+      "audit_status": "verified_protein",
+      "resolved_name": "Membrane cofactor protein",
+      "gene_symbol": "CD46",
+      "uniprot_id": "P15529",
+      "aliases": [
+        "MCP",
+        "TLX"
+      ],
+      "members": [],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P15529/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "PilE binds human CD46."
+    },
+    {
+      "original_target": "Cdc42",
+      "original_class": "protein",
+      "audit_status": "verified_protein",
+      "resolved_name": "Cell division control protein 42 homolog",
+      "gene_symbol": "CDC42",
+      "uniprot_id": "P60953",
+      "aliases": [
+        "CDC42Hs",
+        "G25K"
+      ],
+      "members": [],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P60953/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "SopE is a GEF for Cdc42."
+    },
+    {
+      "original_target": "Cdc42 / Rac1",
+      "original_class": "protein",
+      "audit_status": "ambiguous",
+      "resolved_name": "Cdc42 and Rac1 (multi-target)",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Cell division control protein 42 homolog",
+          "gene_symbol": "CDC42",
+          "uniprot_id": "P60953"
+        },
+        {
+          "name": "Ras-related C3 botulinum toxin substrate 1",
+          "gene_symbol": "RAC1",
+          "uniprot_id": "P63000"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P60953/entry",
+        "https://www.uniprot.org/uniprotkb/P63000/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "BopE, ExoT and SopE can act on both GTPases; no single host_protein_id link is valid."
+    },
+    {
+      "original_target": "CEACAM family",
+      "original_class": "protein_family",
+      "audit_status": "verified_protein_family",
+      "resolved_name": "Carcinoembryonic antigen-related cell adhesion molecule family",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Carcinoembryonic antigen-related cell adhesion molecule 1",
+          "gene_symbol": "CEACAM1",
+          "uniprot_id": "P13688"
+        },
+        {
+          "name": "Carcinoembryonic antigen-related cell adhesion molecule 3",
+          "gene_symbol": "CEACAM3",
+          "uniprot_id": "P40198"
+        },
+        {
+          "name": "Carcinoembryonic antigen-related cell adhesion molecule 5",
+          "gene_symbol": "CEACAM5",
+          "uniprot_id": "P06731"
+        },
+        {
+          "name": "Carcinoembryonic antigen-related cell adhesion molecule 6",
+          "gene_symbol": "CEACAM6",
+          "uniprot_id": "P40199"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P13688/entry",
+        "https://www.uniprot.org/uniprotkb/P40198/entry",
+        "https://www.uniprot.org/uniprotkb/P06731/entry",
+        "https://www.uniprot.org/uniprotkb/P40199/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "Opa proteins bind several CEACAM family members."
+    },
+    {
+      "original_target": "CEACAM/fibronectin",
+      "original_class": "protein",
+      "audit_status": "ambiguous",
+      "resolved_name": "CEACAM and fibronectin (multi-target)",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Carcinoembryonic antigen-related cell adhesion molecule 1",
+          "gene_symbol": "CEACAM1",
+          "uniprot_id": "P13688"
+        },
+        {
+          "name": "Fibronectin",
+          "gene_symbol": "FN1",
+          "uniprot_id": "P02751"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P13688/entry",
+        "https://www.uniprot.org/uniprotkb/P02751/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "Original annotation names two distinct protein targets."
+    },
+    {
+      "original_target": "Cholesterol",
+      "original_class": "lipid",
+      "audit_status": "non_protein",
+      "resolved_name": "Cholesterol",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Membrane lipid; not a protein."
+    },
+    {
+      "original_target": "Ciliated cells",
+      "original_class": "cellular_structure",
+      "audit_status": "non_protein",
+      "resolved_name": "Ciliated epithelial cell",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Cell type, not a protein."
+    },
+    {
+      "original_target": "Clathrin",
+      "original_class": "protein",
+      "audit_status": "verified_protein",
+      "resolved_name": "Clathrin heavy chain 1",
+      "gene_symbol": "CLTC",
+      "uniprot_id": "Q00610",
+      "aliases": [
+        "CLH1",
+        "CHC"
+      ],
+      "members": [],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/Q00610/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "Canonicalized to clathrin heavy chain 1; clathrin is a triskelion assembly."
+    },
+    {
+      "original_target": "Claudins",
+      "original_class": "protein",
+      "audit_status": "verified_protein_family",
+      "resolved_name": "Claudin family",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Claudin-1",
+          "gene_symbol": "CLDN1",
+          "uniprot_id": "O95832"
+        },
+        {
+          "name": "Claudin-3",
+          "gene_symbol": "CLDN3",
+          "uniprot_id": "O15551"
+        },
+        {
+          "name": "Claudin-4",
+          "gene_symbol": "CLDN4",
+          "uniprot_id": "O14493"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/O95832/entry",
+        "https://www.uniprot.org/uniprotkb/O15551/entry",
+        "https://www.uniprot.org/uniprotkb/O14493/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "CTA binds several claudins; CLDN1 is the curated representative."
+    },
+    {
+      "original_target": "Collagen",
+      "original_class": "protein",
+      "audit_status": "verified_protein_family",
+      "resolved_name": "Fibrillar collagen family",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Collagen alpha-1(I) chain",
+          "gene_symbol": "COL1A1",
+          "uniprot_id": "P02452"
+        },
+        {
+          "name": "Collagen alpha-2(I) chain",
+          "gene_symbol": "COL1A2",
+          "uniprot_id": "P08123"
+        },
+        {
+          "name": "Collagen alpha-1(III) chain",
+          "gene_symbol": "COL3A1",
+          "uniprot_id": "P02461"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P02452/entry",
+        "https://www.uniprot.org/uniprotkb/P08123/entry",
+        "https://www.uniprot.org/uniprotkb/P02461/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "Ace and Loa22 bind collagen; exact collagen type is annotation-dependent."
+    },
+    {
+      "original_target": "Complement",
+      "original_class": "protein_complex",
+      "audit_status": "ambiguous",
+      "resolved_name": "Complement system (multi-protein)",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Complement C3",
+          "gene_symbol": "C3",
+          "uniprot_id": "P01024"
+        },
+        {
+          "name": "Complement factor H",
+          "gene_symbol": "CFH",
+          "uniprot_id": "P08603"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P01024/entry",
+        "https://www.uniprot.org/uniprotkb/P08603/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "Broad complement-system annotation; no single protein is specified."
+    },
+    {
+      "original_target": "CR3 / integrins",
+      "original_class": "protein_complex",
+      "audit_status": "verified_complex",
+      "resolved_name": "Complement receptor 3 / integrin complex",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Integrin alpha-M",
+          "gene_symbol": "ITGAM",
+          "uniprot_id": "P11215"
+        },
+        {
+          "name": "Integrin beta-2",
+          "gene_symbol": "ITGB2",
+          "uniprot_id": "P05107"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P11215/entry",
+        "https://www.uniprot.org/uniprotkb/P05107/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "CR3 is the alpha-M/beta-2 integrin heterodimer; other integrins may also be bound."
+    },
+    {
+      "original_target": "Decorin",
+      "original_class": "protein",
+      "audit_status": "verified_protein",
+      "resolved_name": "Decorin",
+      "gene_symbol": "DCN",
+      "uniprot_id": "P07585",
+      "aliases": [
+        "DCN",
+        "SLRR1B"
+      ],
+      "members": [],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P07585/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "DbpA binds decorin."
+    },
+    {
+      "original_target": "Drug resistance",
+      "original_class": "pathway",
+      "audit_status": "non_protein",
+      "resolved_name": "Drug resistance phenotype",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Phenotype/pathway, not a protein."
+    },
+    {
+      "original_target": "E-cadherin",
+      "original_class": "protein",
+      "audit_status": "verified_protein",
+      "resolved_name": "Cadherin-1",
+      "gene_symbol": "CDH1",
+      "uniprot_id": "P12830",
+      "aliases": [
+        "E-cadherin",
+        "CDHE",
+        "UVO"
+      ],
+      "members": [],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P12830/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "InlA and HtrA target E-cadherin."
+    },
+    {
+      "original_target": "ECM proteins",
+      "original_class": "protein_complex",
+      "audit_status": "ambiguous",
+      "resolved_name": "Extracellular matrix proteins (multi-protein)",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Fibronectin",
+          "gene_symbol": "FN1",
+          "uniprot_id": "P02751"
+        },
+        {
+          "name": "Collagen alpha-1(I) chain",
+          "gene_symbol": "COL1A1",
+          "uniprot_id": "P02452"
+        },
+        {
+          "name": "Laminin subunit alpha-1",
+          "gene_symbol": "LAMA1",
+          "uniprot_id": "P25391"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P02751/entry",
+        "https://www.uniprot.org/uniprotkb/P02452/entry",
+        "https://www.uniprot.org/uniprotkb/P25391/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "Broad ECM annotation; no single protein is specified."
+    },
+    {
+      "original_target": "EF-2",
+      "original_class": "protein",
+      "audit_status": "verified_protein",
+      "resolved_name": "Elongation factor 2",
+      "gene_symbol": "EEF2",
+      "uniprot_id": "P13639",
+      "aliases": [
+        "EF2",
+        "EEF2"
+      ],
+      "members": [],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P13639/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "DT and ToxA ADP-ribosylate EF-2."
+    },
+    {
+      "original_target": "Endosomal Rab5/Rab22",
+      "original_class": "protein",
+      "audit_status": "ambiguous",
+      "resolved_name": "Endosomal Rab5/Rab22 GTPases (multi-target)",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Ras-related protein Rab-5A",
+          "gene_symbol": "RAB5A",
+          "uniprot_id": "P20339"
+        },
+        {
+          "name": "Ras-related protein Rab-22A",
+          "gene_symbol": "RAB22A",
+          "uniprot_id": "Q9UL26"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P20339/entry",
+        "https://www.uniprot.org/uniprotkb/Q9UL26/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "VipD acts on several endosomal Rab GTPases; annotation names two."
+    },
+    {
+      "original_target": "Epithelial cells",
+      "original_class": "cellular_structure",
+      "audit_status": "non_protein",
+      "resolved_name": "Epithelial cell",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Cell type, not a protein."
+    },
+    {
+      "original_target": "ER membranes",
+      "original_class": "organelle",
+      "audit_status": "non_protein",
+      "resolved_name": "Endoplasmic reticulum membrane",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Organelle membrane, not a protein."
+    },
+    {
+      "original_target": "ER stress response",
+      "original_class": "pathway",
+      "audit_status": "non_protein",
+      "resolved_name": "ER stress response pathway",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Pathway, not a protein."
+    },
+    {
+      "original_target": "Exocyst complex",
+      "original_class": "protein_complex",
+      "audit_status": "verified_complex",
+      "resolved_name": "Exocyst complex",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Exocyst complex component 1",
+          "gene_symbol": "EXOC1",
+          "uniprot_id": "Q9NV70"
+        },
+        {
+          "name": "Exocyst complex component 2",
+          "gene_symbol": "EXOC2",
+          "uniprot_id": "Q96KP1"
+        },
+        {
+          "name": "Exocyst complex component 3",
+          "gene_symbol": "EXOC3",
+          "uniprot_id": "O60645"
+        },
+        {
+          "name": "Exocyst complex component 4",
+          "gene_symbol": "EXOC4",
+          "uniprot_id": "Q96A65"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/Q9NV70/entry",
+        "https://www.uniprot.org/uniprotkb/Q96KP1/entry",
+        "https://www.uniprot.org/uniprotkb/O60645/entry",
+        "https://www.uniprot.org/uniprotkb/Q96A65/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "Octameric tethering complex; representative subunits listed."
+    },
+    {
+      "original_target": "Extracellular matrix",
+      "original_class": "cellular_structure",
+      "audit_status": "non_protein",
+      "resolved_name": "Extracellular matrix",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Structural compartment, not a single protein."
+    },
+    {
+      "original_target": "Factor H",
+      "original_class": "protein",
+      "audit_status": "verified_protein",
+      "resolved_name": "Complement factor H",
+      "gene_symbol": "CFH",
+      "uniprot_id": "P08603",
+      "aliases": [
+        "CFH",
+        "HF",
+        "HUS"
+      ],
+      "members": [],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P08603/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "PspC binds complement factor H."
+    },
+    {
+      "original_target": "Factor H / C4BP",
+      "original_class": "protein",
+      "audit_status": "ambiguous",
+      "resolved_name": "Factor H and C4BP (multi-target)",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Complement factor H",
+          "gene_symbol": "CFH",
+          "uniprot_id": "P08603"
+        },
+        {
+          "name": "C4b-binding protein alpha chain",
+          "gene_symbol": "C4BPA",
+          "uniprot_id": "P04003"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P08603/entry",
+        "https://www.uniprot.org/uniprotkb/P04003/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "M protein binds both complement regulators."
+    },
+    {
+      "original_target": "FAK / p130Cas",
+      "original_class": "protein",
+      "audit_status": "ambiguous",
+      "resolved_name": "FAK and p130Cas (multi-target)",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Focal adhesion kinase 1",
+          "gene_symbol": "PTK2",
+          "uniprot_id": "Q05397"
+        },
+        {
+          "name": "Breast cancer anti-estrogen resistance protein 1",
+          "gene_symbol": "BCAR1",
+          "uniprot_id": "P56945"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/Q05397/entry",
+        "https://www.uniprot.org/uniprotkb/P56945/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "YopH dephosphorylates both focal-adhesion proteins."
+    },
+    {
+      "original_target": "Fibrinogen",
+      "original_class": "protein",
+      "audit_status": "verified_complex",
+      "resolved_name": "Fibrinogen complex",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Fibrinogen alpha chain",
+          "gene_symbol": "FGA",
+          "uniprot_id": "P02671"
+        },
+        {
+          "name": "Fibrinogen beta chain",
+          "gene_symbol": "FGB",
+          "uniprot_id": "P02675"
+        },
+        {
+          "name": "Fibrinogen gamma chain",
+          "gene_symbol": "FGG",
+          "uniprot_id": "P02679"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P02671/entry",
+        "https://www.uniprot.org/uniprotkb/P02675/entry",
+        "https://www.uniprot.org/uniprotkb/P02679/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "Fibrinogen is a hexamer of three polypeptide chains."
+    },
+    {
+      "original_target": "Gi/adenylate cyclase",
+      "original_class": "protein",
+      "audit_status": "ambiguous",
+      "resolved_name": "Gi protein and adenylate cyclase (multi-target)",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Guanine nucleotide-binding protein G(i) subunit alpha-1",
+          "gene_symbol": "GNAI1",
+          "uniprot_id": "P63096"
+        },
+        {
+          "name": "Adenylate cyclase type 1",
+          "gene_symbol": "ADCY1",
+          "uniprot_id": "Q08828"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P63096/entry",
+        "https://www.uniprot.org/uniprotkb/Q08828/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "Pertussis toxin ADP-ribosylates Gi and thereby dysregulates adenylate cyclase."
+    },
+    {
+      "original_target": "GPI-anchored proteins",
+      "original_class": "protein",
+      "audit_status": "ambiguous",
+      "resolved_name": "GPI-anchored protein class",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "CD59 glycoprotein",
+          "gene_symbol": "CD59",
+          "uniprot_id": "P13987"
+        },
+        {
+          "name": "Urokinase plasminogen activator surface receptor",
+          "gene_symbol": "PLAUR",
+          "uniprot_id": "Q03405"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P13987/entry",
+        "https://www.uniprot.org/uniprotkb/Q03405/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "Large heterogeneous protein class; no single UniProt target."
+    },
+    {
+      "original_target": "Gs/adenylate cyclase",
+      "original_class": "protein",
+      "audit_status": "ambiguous",
+      "resolved_name": "Gs protein and adenylate cyclase (multi-target)",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Guanine nucleotide-binding protein G(s) subunit alpha isoforms short",
+          "gene_symbol": "GNAS",
+          "uniprot_id": "P63092"
+        },
+        {
+          "name": "Adenylate cyclase type 1",
+          "gene_symbol": "ADCY1",
+          "uniprot_id": "Q08828"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P63092/entry",
+        "https://www.uniprot.org/uniprotkb/Q08828/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "Cholera toxin ADP-ribosylates Gs and constitutively activates adenylate cyclase."
+    },
+    {
+      "original_target": "H2O2",
+      "original_class": "metabolite",
+      "audit_status": "non_protein",
+      "resolved_name": "Hydrogen peroxide",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Reactive oxygen metabolite; not a protein."
+    },
+    {
+      "original_target": "HOPS complex",
+      "original_class": "protein_complex",
+      "audit_status": "verified_complex",
+      "resolved_name": "Homotypic fusion and vacuole protein sorting (HOPS) complex",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Vacuolar protein sorting-associated protein 11 homolog",
+          "gene_symbol": "VPS11",
+          "uniprot_id": "Q9H270"
+        },
+        {
+          "name": "Vacuolar protein sorting-associated protein 16 homolog",
+          "gene_symbol": "VPS16",
+          "uniprot_id": "Q9H269"
+        },
+        {
+          "name": "Vacuolar protein sorting-associated protein 18 homolog",
+          "gene_symbol": "VPS18",
+          "uniprot_id": "Q9P253"
+        },
+        {
+          "name": "Vacuolar protein sorting-associated protein 33A",
+          "gene_symbol": "VPS33A",
+          "uniprot_id": "Q96AX1"
+        },
+        {
+          "name": "Vacuolar protein sorting-associated protein 39 homolog",
+          "gene_symbol": "VPS39",
+          "uniprot_id": "Q96JC1"
+        },
+        {
+          "name": "Vacuolar protein sorting-associated protein 41 homolog",
+          "gene_symbol": "VPS41",
+          "uniprot_id": "P49754"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/Q9H270/entry",
+        "https://www.uniprot.org/uniprotkb/Q9H269/entry",
+        "https://www.uniprot.org/uniprotkb/Q9P253/entry",
+        "https://www.uniprot.org/uniprotkb/Q96AX1/entry",
+        "https://www.uniprot.org/uniprotkb/Q96JC1/entry",
+        "https://www.uniprot.org/uniprotkb/P49754/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "Six-subunit tethering complex."
+    },
+    {
+      "original_target": "Host apoptosis",
+      "original_class": "pathway",
+      "audit_status": "non_protein",
+      "resolved_name": "Host apoptosis pathway",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Cellular pathway, not a protein."
+    },
+    {
+      "original_target": "Host cell actin",
+      "original_class": "protein",
+      "audit_status": "verified_protein",
+      "resolved_name": "Actin, cytoplasmic 1",
+      "gene_symbol": "ACTB",
+      "uniprot_id": "P60709",
+      "aliases": [
+        "ACTB",
+        "beta-actin"
+      ],
+      "members": [],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P60709/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "Same canonical actin target as 'Actin'; BepA promotes actin polymerization."
+    },
+    {
+      "original_target": "Host cell adhesion",
+      "original_class": "pathway",
+      "audit_status": "non_protein",
+      "resolved_name": "Host cell adhesion pathway",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Cellular process, not a protein."
+    },
+    {
+      "original_target": "Host cells",
+      "original_class": "cellular_structure",
+      "audit_status": "non_protein",
+      "resolved_name": "Host cell",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Whole-cell annotation; no single molecular target."
+    },
+    {
+      "original_target": "Host DNA",
+      "original_class": "nucleic_acid",
+      "audit_status": "non_protein",
+      "resolved_name": "Host DNA",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Nucleic acid target, not a protein."
+    },
+    {
+      "original_target": "Host glycans",
+      "original_class": "metabolite",
+      "audit_status": "non_protein",
+      "resolved_name": "Host glycans",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Carbohydrate target, not a protein."
+    },
+    {
+      "original_target": "Host immune",
+      "original_class": "pathway",
+      "audit_status": "non_protein",
+      "resolved_name": "Host immune response",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Immune pathway, not a protein."
+    },
+    {
+      "original_target": "Host immune evasion",
+      "original_class": "pathway",
+      "audit_status": "non_protein",
+      "resolved_name": "Host immune evasion",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Immune-evasion phenotype/pathway, not a protein."
+    },
+    {
+      "original_target": "Host intestinal cells",
+      "original_class": "cellular_structure",
+      "audit_status": "non_protein",
+      "resolved_name": "Host intestinal epithelial cell",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Cell type, not a protein."
+    },
+    {
+      "original_target": "Host iron",
+      "original_class": "metabolite",
+      "audit_status": "non_protein",
+      "resolved_name": "Host iron",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Metal/ion nutrient, not a protein."
+    },
+    {
+      "original_target": "Host membranes",
+      "original_class": "cellular_structure",
+      "audit_status": "non_protein",
+      "resolved_name": "Host membrane",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Membrane compartment, not a protein."
+    },
+    {
+      "original_target": "Host proteins",
+      "original_class": "protein",
+      "audit_status": "ambiguous",
+      "resolved_name": "Unspecified host proteins",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Fibronectin",
+          "gene_symbol": "FN1",
+          "uniprot_id": "P02751"
+        },
+        {
+          "name": "Fibrinogen alpha chain",
+          "gene_symbol": "FGA",
+          "uniprot_id": "P02671"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P02751/entry",
+        "https://www.uniprot.org/uniprotkb/P02671/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "Broad protease-substrate annotation; no specific protein is named."
+    },
+    {
+      "original_target": "Host signaling",
+      "original_class": "pathway",
+      "audit_status": "non_protein",
+      "resolved_name": "Host signaling pathway",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Pathway, not a protein."
+    },
+    {
+      "original_target": "Host tissue",
+      "original_class": "cellular_structure",
+      "audit_status": "non_protein",
+      "resolved_name": "Host tissue",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Tissue-level annotation, not a protein."
+    },
+    {
+      "original_target": "Host transcription",
+      "original_class": "pathway",
+      "audit_status": "non_protein",
+      "resolved_name": "Host transcription",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Nuclear process, not a protein."
+    },
+    {
+      "original_target": "ICAM-1",
+      "original_class": "protein",
+      "audit_status": "verified_protein",
+      "resolved_name": "Intercellular adhesion molecule 1",
+      "gene_symbol": "ICAM1",
+      "uniprot_id": "P05362",
+      "aliases": [
+        "ICAM-1",
+        "CD54"
+      ],
+      "members": [],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P05362/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "P5 binds ICAM-1."
+    },
+    {
+      "original_target": "IgG / VH3",
+      "original_class": "protein",
+      "audit_status": "ambiguous",
+      "resolved_name": "Immunoglobulin G / VH3 framework",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Immunoglobulin heavy constant gamma 1",
+          "gene_symbol": "IGHG1",
+          "uniprot_id": "P01857"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P01857/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "Antibody Fc/VH3 framework; polyclonal and not a single host protein target."
+    },
+    {
+      "original_target": "IL-8 induction",
+      "original_class": "pathway",
+      "audit_status": "non_protein",
+      "resolved_name": "IL-8 induction",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Host response phenotype, not a protein."
+    },
+    {
+      "original_target": "Immune evasion",
+      "original_class": "pathway",
+      "audit_status": "non_protein",
+      "resolved_name": "Immune evasion",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Phenotype/pathway, not a protein."
+    },
+    {
+      "original_target": "Immune modulation",
+      "original_class": "pathway",
+      "audit_status": "non_protein",
+      "resolved_name": "Immune modulation",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Phenotype/pathway, not a protein."
+    },
+    {
+      "original_target": "JNK/AMPK",
+      "original_class": "protein",
+      "audit_status": "ambiguous",
+      "resolved_name": "JNK and AMPK kinases (multi-target)",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Mitogen-activated protein kinase 8",
+          "gene_symbol": "MAPK8",
+          "uniprot_id": "P45983"
+        },
+        {
+          "name": "5'-AMP-activated protein kinase catalytic subunit alpha-1",
+          "gene_symbol": "PRKAA1",
+          "uniprot_id": "Q13131"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P45983/entry",
+        "https://www.uniprot.org/uniprotkb/Q13131/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "Eis is reported to modulate both kinase pathways."
+    },
+    {
+      "original_target": "Kinesin-1",
+      "original_class": "protein",
+      "audit_status": "verified_complex",
+      "resolved_name": "Kinesin-1 motor complex",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Kinesin heavy chain isoform 5A",
+          "gene_symbol": "KIF5A",
+          "uniprot_id": "Q12840"
+        },
+        {
+          "name": "Kinesin heavy chain isoform 5B",
+          "gene_symbol": "KIF5B",
+          "uniprot_id": "P33176"
+        },
+        {
+          "name": "Kinesin heavy chain isoform 5C",
+          "gene_symbol": "KIF5C",
+          "uniprot_id": "O60282"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/Q12840/entry",
+        "https://www.uniprot.org/uniprotkb/P33176/entry",
+        "https://www.uniprot.org/uniprotkb/O60282/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "Kinesin-1 is a heavy/light-chain motor complex; isoforms listed."
+    },
+    {
+      "original_target": "Lactoferrin",
+      "original_class": "protein",
+      "audit_status": "verified_protein",
+      "resolved_name": "Lactotransferrin",
+      "gene_symbol": "LTF",
+      "uniprot_id": "P02788",
+      "aliases": [
+        "Lactoferrin",
+        "LF",
+        "GIG12"
+      ],
+      "members": [],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P02788/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "PspA binds lactoferrin."
+    },
+    {
+      "original_target": "Laminin / fibrinogen",
+      "original_class": "protein",
+      "audit_status": "ambiguous",
+      "resolved_name": "Laminin and fibrinogen (multi-target)",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Laminin subunit alpha-1",
+          "gene_symbol": "LAMA1",
+          "uniprot_id": "P25391"
+        },
+        {
+          "name": "Fibrinogen alpha chain",
+          "gene_symbol": "FGA",
+          "uniprot_id": "P02671"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P25391/entry",
+        "https://www.uniprot.org/uniprotkb/P02671/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "Tp0751 binds both extracellular matrix proteins."
+    },
+    {
+      "original_target": "LC3",
+      "original_class": "protein",
+      "audit_status": "verified_protein_family",
+      "resolved_name": "Microtubule-associated protein 1 light chain 3 family",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Microtubule-associated proteins 1A/1B light chain 3A",
+          "gene_symbol": "MAP1LC3A",
+          "uniprot_id": "Q9H492"
+        },
+        {
+          "name": "Microtubule-associated proteins 1A/1B light chain 3B",
+          "gene_symbol": "MAP1LC3B",
+          "uniprot_id": "Q9GZQ8"
+        },
+        {
+          "name": "Microtubule-associated proteins 1A/1B light chain 3C",
+          "gene_symbol": "MAP1LC3C",
+          "uniprot_id": "Q9BXW4"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/Q9H492/entry",
+        "https://www.uniprot.org/uniprotkb/Q9GZQ8/entry",
+        "https://www.uniprot.org/uniprotkb/Q9BXW4/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "LC3 is a protein family; IcsB interferes with LC3 lipidation."
+    },
+    {
+      "original_target": "Macrophages",
+      "original_class": "cellular_structure",
+      "audit_status": "non_protein",
+      "resolved_name": "Macrophage",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Cell type, not a protein."
+    },
+    {
+      "original_target": "Mannose receptors",
+      "original_class": "protein",
+      "audit_status": "verified_protein_family",
+      "resolved_name": "Mannose receptor family",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Macrophage mannose receptor 1",
+          "gene_symbol": "MRC1",
+          "uniprot_id": "P22897"
+        },
+        {
+          "name": "C-type mannose receptor 2",
+          "gene_symbol": "MRC2",
+          "uniprot_id": "Q9UBG0"
+        },
+        {
+          "name": "C-type lectin domain family 4 member E",
+          "gene_symbol": "CLEC4E",
+          "uniprot_id": "Q9ULY5"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P22897/entry",
+        "https://www.uniprot.org/uniprotkb/Q9UBG0/entry",
+        "https://www.uniprot.org/uniprotkb/Q9ULY5/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "FimH binds mannose receptors; several C-type lectins are possible."
+    },
+    {
+      "original_target": "MAPKK",
+      "original_class": "protein",
+      "audit_status": "verified_protein_family",
+      "resolved_name": "Mitogen-activated protein kinase kinase family",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Dual specificity mitogen-activated protein kinase kinase 1",
+          "gene_symbol": "MAP2K1",
+          "uniprot_id": "Q02750"
+        },
+        {
+          "name": "Dual specificity mitogen-activated protein kinase kinase 2",
+          "gene_symbol": "MAP2K2",
+          "uniprot_id": "P36507"
+        },
+        {
+          "name": "Dual specificity mitogen-activated protein kinase kinase 4",
+          "gene_symbol": "MAP2K4",
+          "uniprot_id": "P45985"
+        },
+        {
+          "name": "Dual specificity mitogen-activated protein kinase kinase 7",
+          "gene_symbol": "MAP2K7",
+          "uniprot_id": "O14733"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/Q02750/entry",
+        "https://www.uniprot.org/uniprotkb/P36507/entry",
+        "https://www.uniprot.org/uniprotkb/P45985/entry",
+        "https://www.uniprot.org/uniprotkb/O14733/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "YopJ acetylates MAP2K family members; family not a single protein."
+    },
+    {
+      "original_target": "MAPKK / IKK",
+      "original_class": "protein",
+      "audit_status": "ambiguous",
+      "resolved_name": "MAPKK and IKK families (multi-target)",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Dual specificity mitogen-activated protein kinase kinase 1",
+          "gene_symbol": "MAP2K1",
+          "uniprot_id": "Q02750"
+        },
+        {
+          "name": "Inhibitor of nuclear factor kappa-B kinase subunit beta",
+          "gene_symbol": "IKBKB",
+          "uniprot_id": "O14920"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/Q02750/entry",
+        "https://www.uniprot.org/uniprotkb/O14920/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "YopJ acts on MAPKK and IKK family kinases; no single target."
+    },
+    {
+      "original_target": "MAPKKs",
+      "original_class": "protein",
+      "audit_status": "verified_protein_family",
+      "resolved_name": "Mitogen-activated protein kinase kinase family",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Dual specificity mitogen-activated protein kinase kinase 1",
+          "gene_symbol": "MAP2K1",
+          "uniprot_id": "Q02750"
+        },
+        {
+          "name": "Dual specificity mitogen-activated protein kinase kinase 2",
+          "gene_symbol": "MAP2K2",
+          "uniprot_id": "P36507"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/Q02750/entry",
+        "https://www.uniprot.org/uniprotkb/P36507/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "LF cleaves MAPKK family members; family not a single protein."
+    },
+    {
+      "original_target": "Membrane",
+      "original_class": "cellular_structure",
+      "audit_status": "non_protein",
+      "resolved_name": "Membrane",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Membrane compartment, not a protein."
+    },
+    {
+      "original_target": "Met receptor",
+      "original_class": "protein",
+      "audit_status": "verified_protein",
+      "resolved_name": "Hepatocyte growth factor receptor",
+      "gene_symbol": "MET",
+      "uniprot_id": "P08581",
+      "aliases": [
+        "MET",
+        "HGFR",
+        "c-Met"
+      ],
+      "members": [],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P08581/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "InlB activates the Met receptor tyrosine kinase."
+    },
+    {
+      "original_target": "MHC II / TCR",
+      "original_class": "protein_complex",
+      "audit_status": "verified_complex",
+      "resolved_name": "MHC class II / T-cell receptor complex",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "HLA class II histocompatibility antigen, DR alpha chain",
+          "gene_symbol": "HLA-DRA",
+          "uniprot_id": "P01903"
+        },
+        {
+          "name": "HLA class II histocompatibility antigen, DRB1 beta chain",
+          "gene_symbol": "HLA-DRB1",
+          "uniprot_id": "P01911"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P01903/entry",
+        "https://www.uniprot.org/uniprotkb/P01911/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "Superantigen bridges MHC II and TCR; heterologous multi-protein complex."
+    },
+    {
+      "original_target": "Microtubules",
+      "original_class": "cellular_structure",
+      "audit_status": "non_protein",
+      "resolved_name": "Microtubule",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Cytoskeletal polymer; not a single protein target."
+    },
+    {
+      "original_target": "Mitochondria",
+      "original_class": "organelle",
+      "audit_status": "non_protein",
+      "resolved_name": "Mitochondrion",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Organelle, not a protein."
+    },
+    {
+      "original_target": "Mitochondria / lysosomes",
+      "original_class": "organelle",
+      "audit_status": "non_protein",
+      "resolved_name": "Mitochondria and lysosomes",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Organelles, not a protein."
+    },
+    {
+      "original_target": "Mucin",
+      "original_class": "protein",
+      "audit_status": "verified_protein_family",
+      "resolved_name": "Mucin family",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Mucin-1",
+          "gene_symbol": "MUC1",
+          "uniprot_id": "P15941"
+        },
+        {
+          "name": "Mucin-5AC",
+          "gene_symbol": "MUC5AC",
+          "uniprot_id": "P98088"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P15941/entry",
+        "https://www.uniprot.org/uniprotkb/P98088/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "VvpE is a mucinase; mucins are a large glycoprotein family."
+    },
+    {
+      "original_target": "MYADM / Abl-1",
+      "original_class": "protein",
+      "audit_status": "ambiguous",
+      "resolved_name": "MYADM and ABL1 (multi-target)",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Myeloid-associated differentiation marker",
+          "gene_symbol": "MYADM",
+          "uniprot_id": "Q96S97"
+        },
+        {
+          "name": "Tyrosine-protein kinase ABL1",
+          "gene_symbol": "ABL1",
+          "uniprot_id": "P00519"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/Q96S97/entry",
+        "https://www.uniprot.org/uniprotkb/P00519/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "AnkA interacts with both MYADM and ABL1."
+    },
+    {
+      "original_target": "N-WASP / Arp2/3",
+      "original_class": "protein_complex",
+      "audit_status": "verified_complex",
+      "resolved_name": "N-WASP and Arp2/3 complex",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Neural Wiskott-Aldrich syndrome protein",
+          "gene_symbol": "WASL",
+          "uniprot_id": "O00401"
+        },
+        {
+          "name": "Actin-related protein 2",
+          "gene_symbol": "ACTR2",
+          "uniprot_id": "P61160"
+        },
+        {
+          "name": "Actin-related protein 3",
+          "gene_symbol": "ACTR3",
+          "uniprot_id": "P61158"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/O00401/entry",
+        "https://www.uniprot.org/uniprotkb/P61160/entry",
+        "https://www.uniprot.org/uniprotkb/P61158/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "IcsA/VirG recruits N-WASP and Arp2/3 to nucleate actin."
+    },
+    {
+      "original_target": "Notch pathway",
+      "original_class": "pathway",
+      "audit_status": "non_protein",
+      "resolved_name": "Notch signaling pathway",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Pathway, not a protein."
+    },
+    {
+      "original_target": "P-selectin glycoprotein",
+      "original_class": "protein",
+      "audit_status": "verified_protein",
+      "resolved_name": "P-selectin glycoprotein ligand 1",
+      "gene_symbol": "SELPLG",
+      "uniprot_id": "Q14242",
+      "aliases": [
+        "PSGL-1",
+        "CD162"
+      ],
+      "members": [],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/Q14242/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "The original label omits 'ligand'; the actual target is PSGL-1, not P-selectin itself."
+    },
+    {
+      "original_target": "Peptidoglycan",
+      "original_class": "metabolite",
+      "audit_status": "non_protein",
+      "resolved_name": "Peptidoglycan",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Bacterial cell-wall polymer; not a human protein."
+    },
+    {
+      "original_target": "Phagosomal membrane",
+      "original_class": "cellular_structure",
+      "audit_status": "non_protein",
+      "resolved_name": "Phagosomal membrane",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Membrane compartment, not a protein."
+    },
+    {
+      "original_target": "Phosphatidylcholine",
+      "original_class": "lipid",
+      "audit_status": "non_protein",
+      "resolved_name": "Phosphatidylcholine",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Membrane lipid; not a protein."
+    },
+    {
+      "original_target": "Phospholipids",
+      "original_class": "lipid",
+      "audit_status": "non_protein",
+      "resolved_name": "Phospholipids",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Membrane lipid class; not a protein."
+    },
+    {
+      "original_target": "PI(3,5)P2",
+      "original_class": "lipid",
+      "audit_status": "non_protein",
+      "resolved_name": "Phosphatidylinositol 3,5-bisphosphate",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Membrane lipid; not a protein."
+    },
+    {
+      "original_target": "PI(4,5)P2",
+      "original_class": "lipid",
+      "audit_status": "non_protein",
+      "resolved_name": "Phosphatidylinositol 4,5-bisphosphate",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Membrane lipid; not a protein."
+    },
+    {
+      "original_target": "PI3K / Akt",
+      "original_class": "protein",
+      "audit_status": "ambiguous",
+      "resolved_name": "PI3K/Akt signaling module (multi-protein)",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit alpha isoform",
+          "gene_symbol": "PIK3CA",
+          "uniprot_id": "P42336"
+        },
+        {
+          "name": "RAC-alpha serine/threonine-protein kinase",
+          "gene_symbol": "AKT1",
+          "uniprot_id": "P31749"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P42336/entry",
+        "https://www.uniprot.org/uniprotkb/P31749/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "BepC modulates PI3K/Akt signaling; no single protein target."
+    },
+    {
+      "original_target": "PI3P",
+      "original_class": "lipid",
+      "audit_status": "non_protein",
+      "resolved_name": "Phosphatidylinositol 3-phosphate",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Membrane lipid; not a protein."
+    },
+    {
+      "original_target": "PI3P / Rab5",
+      "original_class": "protein",
+      "audit_status": "ambiguous",
+      "resolved_name": "PI3P and Rab5 (mixed lipid/protein target)",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Ras-related protein Rab-5A",
+          "gene_symbol": "RAB5A",
+          "uniprot_id": "P20339"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P20339/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "CvpB binds PI3P and Rab5; mixed lipid/protein annotation."
+    },
+    {
+      "original_target": "PP2C",
+      "original_class": "protein",
+      "audit_status": "verified_protein_family",
+      "resolved_name": "Protein phosphatase 2C family",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Protein phosphatase 1A",
+          "gene_symbol": "PPM1A",
+          "uniprot_id": "P35813"
+        },
+        {
+          "name": "Protein phosphatase 1B",
+          "gene_symbol": "PPM1B",
+          "uniprot_id": "O75688"
+        },
+        {
+          "name": "Protein phosphatase 1D",
+          "gene_symbol": "PPM1D",
+          "uniprot_id": "O15297"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P35813/entry",
+        "https://www.uniprot.org/uniprotkb/O75688/entry",
+        "https://www.uniprot.org/uniprotkb/O15297/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "PP2C is a phosphatase family; FevR target specificity is not established."
+    },
+    {
+      "original_target": "PRP kinases",
+      "original_class": "protein",
+      "audit_status": "unresolved",
+      "resolved_name": null,
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "Original annotation 'PRP kinases' is not a standard human gene/protein name and could not be mapped confidently. Possible PRK/RSK kinases require curator confirmation."
+    },
+    {
+      "original_target": "Rab GTPases",
+      "original_class": "protein_family",
+      "audit_status": "verified_protein_family",
+      "resolved_name": "Rab GTPase family",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Ras-related protein Rab-5A",
+          "gene_symbol": "RAB5A",
+          "uniprot_id": "P20339"
+        },
+        {
+          "name": "Ras-related protein Rab-7A",
+          "gene_symbol": "RAB7A",
+          "uniprot_id": "P51149"
+        },
+        {
+          "name": "Ras-related protein Rab-11A",
+          "gene_symbol": "RAB11A",
+          "uniprot_id": "P62491"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P20339/entry",
+        "https://www.uniprot.org/uniprotkb/P51149/entry",
+        "https://www.uniprot.org/uniprotkb/P62491/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "Large Rab GTPase family; specific Rab not resolved by the original annotation."
+    },
+    {
+      "original_target": "Rab proteins",
+      "original_class": "protein_family",
+      "audit_status": "verified_protein_family",
+      "resolved_name": "Rab GTPase family",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Ras-related protein Rab-5A",
+          "gene_symbol": "RAB5A",
+          "uniprot_id": "P20339"
+        },
+        {
+          "name": "Ras-related protein Rab-7A",
+          "gene_symbol": "RAB7A",
+          "uniprot_id": "P51149"
+        },
+        {
+          "name": "Ras-related protein Rab-11A",
+          "gene_symbol": "RAB11A",
+          "uniprot_id": "P62491"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P20339/entry",
+        "https://www.uniprot.org/uniprotkb/P51149/entry",
+        "https://www.uniprot.org/uniprotkb/P62491/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "Large Rab GTPase family; specific Rab not resolved by the original annotation."
+    },
+    {
+      "original_target": "Rab1",
+      "original_class": "protein",
+      "audit_status": "verified_protein_family",
+      "resolved_name": "Rab1 GTPase family",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Ras-related protein Rab-1A",
+          "gene_symbol": "RAB1A",
+          "uniprot_id": "P62820"
+        },
+        {
+          "name": "Ras-related protein Rab-1B",
+          "gene_symbol": "RAB1B",
+          "uniprot_id": "Q9H0U4"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P62820/entry",
+        "https://www.uniprot.org/uniprotkb/Q9H0U4/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "Rab1 has RAB1A and RAB1B paralogues; effectors may act on both."
+    },
+    {
+      "original_target": "Rab1 / Rab35",
+      "original_class": "protein",
+      "audit_status": "ambiguous",
+      "resolved_name": "Rab1 and Rab35 (multi-target)",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Ras-related protein Rab-1A",
+          "gene_symbol": "RAB1A",
+          "uniprot_id": "P62820"
+        },
+        {
+          "name": "Ras-related protein Rab-35",
+          "gene_symbol": "RAB35",
+          "uniprot_id": "Q15286"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P62820/entry",
+        "https://www.uniprot.org/uniprotkb/Q15286/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "AnkX acts on both Rab1 and Rab35."
+    },
+    {
+      "original_target": "Rab4",
+      "original_class": "protein",
+      "audit_status": "verified_protein",
+      "resolved_name": "Ras-related protein Rab-4A",
+      "gene_symbol": "RAB4A",
+      "uniprot_id": "P20338",
+      "aliases": [
+        "RAB4A",
+        "RAB4"
+      ],
+      "members": [],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P20338/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "Canonicalized to RAB4A; RAB4B is a close paralogue."
+    },
+    {
+      "original_target": "Rab5 / PI3P",
+      "original_class": "protein",
+      "audit_status": "ambiguous",
+      "resolved_name": "Rab5 and PI3P (mixed lipid/protein target)",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Ras-related protein Rab-5A",
+          "gene_symbol": "RAB5A",
+          "uniprot_id": "P20339"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P20339/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "Ats-1 binds Rab5 and PI3P; mixed lipid/protein annotation."
+    },
+    {
+      "original_target": "Rab6 / Rab11",
+      "original_class": "protein",
+      "audit_status": "ambiguous",
+      "resolved_name": "Rab6 and Rab11 (multi-target)",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Ras-related protein Rab-6A",
+          "gene_symbol": "RAB6A",
+          "uniprot_id": "P20340"
+        },
+        {
+          "name": "Ras-related protein Rab-11A",
+          "gene_symbol": "RAB11A",
+          "uniprot_id": "P62491"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P20340/entry",
+        "https://www.uniprot.org/uniprotkb/P62491/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "IncC interacts with both Rab6 and Rab11."
+    },
+    {
+      "original_target": "Rab7",
+      "original_class": "protein",
+      "audit_status": "verified_protein",
+      "resolved_name": "Ras-related protein Rab-7A",
+      "gene_symbol": "RAB7A",
+      "uniprot_id": "P51149",
+      "aliases": [
+        "RAB7A",
+        "RAB7"
+      ],
+      "members": [],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P51149/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "Canonicalized to RAB7A; RAB7B is a close paralogue."
+    },
+    {
+      "original_target": "Rho / Ras",
+      "original_class": "protein_family",
+      "audit_status": "verified_protein_family",
+      "resolved_name": "Rho and Ras GTPase families",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Transforming protein RhoA",
+          "gene_symbol": "RHOA",
+          "uniprot_id": "P61586"
+        },
+        {
+          "name": "HRas proto-oncogene",
+          "gene_symbol": "HRAS",
+          "uniprot_id": "P01112"
+        },
+        {
+          "name": "KRas proto-oncogene",
+          "gene_symbol": "KRAS",
+          "uniprot_id": "P01116"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P61586/entry",
+        "https://www.uniprot.org/uniprotkb/P01112/entry",
+        "https://www.uniprot.org/uniprotkb/P01116/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "ExoS GAP activity can target Rho and Ras family GTPases."
+    },
+    {
+      "original_target": "Rho GTPases",
+      "original_class": "protein_family",
+      "audit_status": "verified_protein_family",
+      "resolved_name": "Rho GTPase family",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Transforming protein RhoA",
+          "gene_symbol": "RHOA",
+          "uniprot_id": "P61586"
+        },
+        {
+          "name": "Ras-related C3 botulinum toxin substrate 1",
+          "gene_symbol": "RAC1",
+          "uniprot_id": "P63000"
+        },
+        {
+          "name": "Cell division control protein 42 homolog",
+          "gene_symbol": "CDC42",
+          "uniprot_id": "P60953"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P61586/entry",
+        "https://www.uniprot.org/uniprotkb/P63000/entry",
+        "https://www.uniprot.org/uniprotkb/P60953/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "Large Rho GTPase family; several members are targeted by glucosyltransferases/GAPs/GEFs."
+    },
+    {
+      "original_target": "ROS",
+      "original_class": "metabolite",
+      "audit_status": "non_protein",
+      "resolved_name": "Reactive oxygen species",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Reactive oxygen metabolites; not a protein."
+    },
+    {
+      "original_target": "Schwann cells",
+      "original_class": "cellular_structure",
+      "audit_status": "non_protein",
+      "resolved_name": "Schwann cell",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Cell type, not a protein."
+    },
+    {
+      "original_target": "Secretory pathway",
+      "original_class": "pathway",
+      "audit_status": "non_protein",
+      "resolved_name": "Secretory pathway",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Cellular pathway, not a protein."
+    },
+    {
+      "original_target": "SHP-2 / PAR1",
+      "original_class": "protein",
+      "audit_status": "ambiguous",
+      "resolved_name": "SHP-2 and PAR1 (multi-target)",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Tyrosine-protein phosphatase non-receptor type 11",
+          "gene_symbol": "PTPN11",
+          "uniprot_id": "Q06124"
+        },
+        {
+          "name": "Proteinase-activated receptor 1",
+          "gene_symbol": "F2R",
+          "uniprot_id": "P25116"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/Q06124/entry",
+        "https://www.uniprot.org/uniprotkb/P25116/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "CagA interacts with SHP-2 and PAR1/MARK2; no single target."
+    },
+    {
+      "original_target": "Sialic acid",
+      "original_class": "metabolite",
+      "audit_status": "non_protein",
+      "resolved_name": "Sialic acid",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Carbohydrate metabolite; not a protein."
+    },
+    {
+      "original_target": "SKIP",
+      "original_class": "protein",
+      "audit_status": "verified_protein",
+      "resolved_name": "Pleckstrin homology domain-containing family M member 2",
+      "gene_symbol": "PLEKHM2",
+      "uniprot_id": "Q8IWE5",
+      "aliases": [
+        "SKIP",
+        "KIAA0859"
+      ],
+      "members": [],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/Q8IWE5/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "SKIP is the SifA-and-kinesin-interacting protein PLEKHM2."
+    },
+    {
+      "original_target": "SNARE proteins",
+      "original_class": "protein_complex",
+      "audit_status": "verified_complex",
+      "resolved_name": "SNARE membrane-fusion complex",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Vesicle-associated membrane protein 2",
+          "gene_symbol": "VAMP2",
+          "uniprot_id": "P63027"
+        },
+        {
+          "name": "Syntaxin-4",
+          "gene_symbol": "STX4",
+          "uniprot_id": "Q12846"
+        },
+        {
+          "name": "Synaptosomal-associated protein 23",
+          "gene_symbol": "SNAP23",
+          "uniprot_id": "O00161"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P63027/entry",
+        "https://www.uniprot.org/uniprotkb/Q12846/entry",
+        "https://www.uniprot.org/uniprotkb/O00161/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "SNAREs form multi-protein fusion complexes; representative members listed."
+    },
+    {
+      "original_target": "SNAREs",
+      "original_class": "protein_complex",
+      "audit_status": "verified_complex",
+      "resolved_name": "SNARE membrane-fusion complex",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Vesicle-associated membrane protein 2",
+          "gene_symbol": "VAMP2",
+          "uniprot_id": "P63027"
+        },
+        {
+          "name": "Syntaxin-4",
+          "gene_symbol": "STX4",
+          "uniprot_id": "Q12846"
+        },
+        {
+          "name": "Synaptosomal-associated protein 23",
+          "gene_symbol": "SNAP23",
+          "uniprot_id": "O00161"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P63027/entry",
+        "https://www.uniprot.org/uniprotkb/Q12846/entry",
+        "https://www.uniprot.org/uniprotkb/O00161/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "SNAREs form multi-protein fusion complexes; representative members listed."
+    },
+    {
+      "original_target": "Sphingomyelin",
+      "original_class": "lipid",
+      "audit_status": "non_protein",
+      "resolved_name": "Sphingomyelin",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Membrane lipid; not a protein."
+    },
+    {
+      "original_target": "Stomach acid",
+      "original_class": "metabolite",
+      "audit_status": "non_protein",
+      "resolved_name": "Gastric acid",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Chemical environment; not a protein."
+    },
+    {
+      "original_target": "TIRAP/Mal",
+      "original_class": "protein",
+      "audit_status": "verified_protein",
+      "resolved_name": "Toll/interleukin-1 receptor domain-containing adapter protein",
+      "gene_symbol": "TIRAP",
+      "uniprot_id": "P58753",
+      "aliases": [
+        "Mal",
+        "TIRAP"
+      ],
+      "members": [],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P58753/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "TIRAP is also known as Mal; alias is not a second target."
+    },
+    {
+      "original_target": "TLR2",
+      "original_class": "protein",
+      "audit_status": "verified_protein",
+      "resolved_name": "Toll-like receptor 2",
+      "gene_symbol": "TLR2",
+      "uniprot_id": "O60603",
+      "aliases": [
+        "TLR2",
+        "CD282"
+      ],
+      "members": [],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/O60603/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "OspA and BtpA signal through TLR2."
+    },
+    {
+      "original_target": "TLR2 / CD14",
+      "original_class": "protein",
+      "audit_status": "verified_complex",
+      "resolved_name": "TLR2-CD14 receptor complex",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "Toll-like receptor 2",
+          "gene_symbol": "TLR2",
+          "uniprot_id": "O60603"
+        },
+        {
+          "name": "Monocyte differentiation antigen CD14",
+          "gene_symbol": "CD14",
+          "uniprot_id": "P08571"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/O60603/entry",
+        "https://www.uniprot.org/uniprotkb/P08571/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "LcrV signals through the TLR2/CD14 complex."
+    },
+    {
+      "original_target": "TLR4",
+      "original_class": "protein",
+      "audit_status": "verified_protein",
+      "resolved_name": "Toll-like receptor 4",
+      "gene_symbol": "TLR4",
+      "uniprot_id": "O00206",
+      "aliases": [
+        "TLR4",
+        "CD284"
+      ],
+      "members": [],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/O00206/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "LPS signals through TLR4."
+    },
+    {
+      "original_target": "TLR5",
+      "original_class": "protein",
+      "audit_status": "verified_protein",
+      "resolved_name": "Toll-like receptor 5",
+      "gene_symbol": "TLR5",
+      "uniprot_id": "O60602",
+      "aliases": [
+        "TLR5",
+        "TIL3"
+      ],
+      "members": [],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/O60602/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "Flagellin signals through TLR5."
+    },
+    {
+      "original_target": "Transcription",
+      "original_class": "pathway",
+      "audit_status": "non_protein",
+      "resolved_name": "Transcription",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Nuclear process, not a protein."
+    },
+    {
+      "original_target": "Ubiquitin pathway",
+      "original_class": "pathway",
+      "audit_status": "non_protein",
+      "resolved_name": "Ubiquitin pathway",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Pathway, not a protein."
+    },
+    {
+      "original_target": "V-ATPase",
+      "original_class": "protein_complex",
+      "audit_status": "verified_complex",
+      "resolved_name": "Vacuolar-type H+-ATPase",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [
+        {
+          "name": "V-type proton ATPase catalytic subunit A",
+          "gene_symbol": "ATP6V1A",
+          "uniprot_id": "P38606"
+        },
+        {
+          "name": "V-type proton ATPase subunit B, brain isoform",
+          "gene_symbol": "ATP6V1B2",
+          "uniprot_id": "P21281"
+        },
+        {
+          "name": "V-type proton ATPase 116 kDa subunit a isoform 1",
+          "gene_symbol": "ATP6V0A1",
+          "uniprot_id": "Q93050"
+        }
+      ],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P38606/entry",
+        "https://www.uniprot.org/uniprotkb/P21281/entry",
+        "https://www.uniprot.org/uniprotkb/Q93050/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "Multi-subunit rotary proton pump; representative subunits listed."
+    },
+    {
+      "original_target": "Vacuolar membrane",
+      "original_class": "cellular_structure",
+      "audit_status": "non_protein",
+      "resolved_name": "Vacuolar membrane",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Membrane compartment, not a protein."
+    },
+    {
+      "original_target": "Vacuole",
+      "original_class": "organelle",
+      "audit_status": "non_protein",
+      "resolved_name": "Vacuole",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Organelle, not a protein."
+    },
+    {
+      "original_target": "Vimentin",
+      "original_class": "protein",
+      "audit_status": "verified_protein",
+      "resolved_name": "Vimentin",
+      "gene_symbol": "VIM",
+      "uniprot_id": "P08670",
+      "aliases": [
+        "VIM",
+        "Vimentin"
+      ],
+      "members": [],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/P08670/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "IbeA binds vimentin."
+    },
+    {
+      "original_target": "Vps34",
+      "original_class": "protein",
+      "audit_status": "verified_protein",
+      "resolved_name": "Phosphatidylinositol 3-kinase catalytic subunit type 3",
+      "gene_symbol": "PIK3C3",
+      "uniprot_id": "Q8NEB9",
+      "aliases": [
+        "Vps34",
+        "PI3K-III"
+      ],
+      "members": [],
+      "evidence_sources": [
+        "https://www.uniprot.org/uniprotkb/Q8NEB9/entry",
+        "data/sources/effectors_seed.json"
+      ],
+      "notes": "Vps34 is the class III PI3K catalytic subunit PIK3C3."
+    },
+    {
+      "original_target": "Wnt pathway",
+      "original_class": "pathway",
+      "audit_status": "non_protein",
+      "resolved_name": "Wnt signaling pathway",
+      "gene_symbol": null,
+      "uniprot_id": null,
+      "aliases": [],
+      "members": [],
+      "evidence_sources": [
+        "data/sources/effectors_seed.json",
+        "data/classification-mapping.json"
+      ],
+      "notes": "Pathway, not a protein."
+    }
+  ]
+}

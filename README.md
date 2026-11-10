@@ -5,13 +5,14 @@ proteins, and the host proteins they target.
 
 ## Dataset
 
-Schema version **2.0**, three tables:
+Schema version **2.1**, three tables. Every row carries a stable entity ID
+(`PM-PAT-…`, `PM-EFF-…`, `PM-HST-…`) used for cross-table joins and future analyses:
 
 | Table | Rows | Contents |
 |---|---|---|
-| `pathogens` | 53 | NCBI taxonomy, genome assembly metadata, Gram/acid-fast status, intracellular strategy |
-| `effectors` | 246 | Effector proteins with sequences, UniProt/InterPro/Pfam annotations and computed features |
-| `host_proteins` | 20 | Host targets with UniProt, GO, pathway and STRING partner data |
+| `pathogens` | 53 | Stable ID, NCBI taxonomy, genome assembly metadata, Gram/acid-fast status, intracellular strategy |
+| `effectors` | 246 | Stable ID, pathogen/host foreign keys, UniProt/InterPro/Pfam annotations and computed features |
+| `host_proteins` | 20 | Stable ID, UniProt, GO, pathway and STRING partner data |
 
 A 5-pathogen, 27-effector sample is bundled for demos. Generated analyses (interaction, pathway,
 network, enrichment, sequence, comparative, host-response, predictive) are **planned, not

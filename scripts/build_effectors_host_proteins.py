@@ -32,6 +32,20 @@ from typing import Any
 # Add scripts directory to path for relative imports when run as module
 sys.path.insert(0, str(Path(__file__).parent))
 
+from identifiers import (
+    assign_effector_ids,
+    assign_registry_ids,
+    entity_id,
+    host_target_key,
+    is_entity_id,
+    load_effector_registry,
+    load_registry,
+    reference_key,
+    validate_effector_registry,
+    validate_registry,
+    write_effector_registry,
+    write_registry,
+)
 from api_clients import (
     ApiError,
     extract_domains,
@@ -52,13 +66,19 @@ PATHOGENS_DATASET_PATH = ROOT / "data" / "pathomap-dataset.json"
 SAMPLE_DATASET_PATH = ROOT / "data" / "sample-dataset.json"
 EFFECTORS_SEED_PATH = ROOT / "data" / "sources" / "effectors_seed.json"
 HOST_PROTEINS_SEED_PATH = ROOT / "data" / "sources" / "host_proteins_seed.json"
+HOST_PROTEINS_AUDIT_SEED_PATH = ROOT / "data" / "sources" / "host_proteins_audit_seed.json"
+HOST_TARGET_AUDIT_PATH = ROOT / "data" / "sources" / "host_target_audit.json"
 CLASSIFICATION_MAPPING_PATH = ROOT / "data" / "classification-mapping.json"
 EFFECTOR_UNIPROT_MAPPING_PATH = ROOT / "data" / "sources" / "effector_uniprot_mapping.json"
+EFFECTOR_ID_REGISTRY_PATH = ROOT / "data" / "sources" / "effector_ids.json"
+REFERENCE_ID_REGISTRY_PATH = ROOT / "data" / "sources" / "reference_ids.json"
+HOST_TARGET_ID_REGISTRY_PATH = ROOT / "data" / "sources" / "host_target_ids.json"
+DERIVED_FEATURES_PATH = ROOT / "data" / "derived" / "effector_features.json"
 CACHE_ROOT = ROOT / "data" / "sources"
 DB_PATH = ROOT / "data" / "pathomap.db"
 SQL_PATH = ROOT / "data" / "schema.sql"
 
-SCHEMA_VERSION = "2.0"
+SCHEMA_VERSION = "2.2"
 DATASET_NAME = "pathomap"
 
 # Amino acid sequences are standard IUPAC one-letter codes (including the
@@ -80,6 +100,15 @@ SAMPLE_PATHOGEN_NAMES = [
 
 class BuildError(RuntimeError):
     pass
+
+
+def utc_now() -> str:
+    return (
+        dt.datetime.now(dt.timezone.utc)
+        .replace(microsecond=0)
+        .isoformat()
+        .replace("+00:00", "Z")
+    )
 
 
 def read_json(path: Path) -> Any:
@@ -131,20 +160,311 @@ def apply_classifications(effectors: list[dict], mapping: dict[str, dict[str, st
     return effectors
 
 
-def validate_effectors(effectors: list[dict]) -> list[str]:
-    """Validate effector records."""
+AUDIT_STATUSES = {
+    "verified_protein",
+    "verified_protein_family",
+    "verified_complex",
+    "ambiguous",
+    "non_protein",
+    "unresolved",
+}
+RESOLUTION_BY_AUDIT_STATUS = {
+    "verified_protein": "resolved_protein",
+    "verified_protein_family": "protein_family",
+    "verified_complex": "protein_complex",
+    "ambiguous": "ambiguous",
+    "non_protein": "non_protein",
+    "unresolved": "unresolved",
+}
+HOST_TARGET_RESOLUTION_VALUES = set(RESOLUTION_BY_AUDIT_STATUS.values())
+
+
+def load_host_target_audit() -> dict[str, dict]:
+    """Load the curated host-target audit, keyed by original annotation."""
+    if not HOST_TARGET_AUDIT_PATH.exists():
+        raise BuildError(f"missing host-target audit {HOST_TARGET_AUDIT_PATH}")
+    payload = read_json(HOST_TARGET_AUDIT_PATH)
+    entries = payload.get("targets")
+    if not isinstance(entries, list):
+        raise BuildError("host-target audit must contain a targets list")
+    audit: dict[str, dict] = {}
+    for entry in entries:
+        name = entry.get("original_target")
+        if not isinstance(name, str) or not name.strip():
+            raise BuildError("host-target audit entry is missing original_target")
+        if name in audit:
+            raise BuildError(f"duplicate host-target audit entry {name!r}")
+        audit[name] = entry
+    return audit
+
+
+def assign_entity_identifiers(
+    effectors: list[dict],
+    host_proteins: list[dict],
+    pathogens: dict[str, dict],
+) -> tuple[list[dict], list[dict], list[dict], dict[str, str], dict[str, str]]:
+    """Attach stable entity IDs and resolve cross-table references.
+
+    Effector -> pathogen is linked by ``pathogen_id``. Each distinct
+    ``host_target`` becomes a ``host_targets`` row; it links to a curated host
+    protein only on an exact, case-insensitive match of the target to a host
+    protein's name, gene symbol or UniProt accession.
+    """
+    host_target_lookup: dict[str, int] = {}
+    protein_by_uniprot: dict[str, dict] = {}
+    for protein in host_proteins:
+        host_protein_id = int(protein["host_protein_id"])
+        protein["entity_id"] = entity_id("host_protein", host_protein_id)
+        uniprot = str(protein.get("uniprot_id") or "").strip().upper()
+        if uniprot:
+            protein_by_uniprot[uniprot] = protein
+        for candidate in ("protein_name", "gene_name", "uniprot_id"):
+            value = protein.get(candidate)
+            if isinstance(value, str) and value.strip():
+                host_target_lookup.setdefault(value.strip().lower(), host_protein_id)
+
+    audit = load_host_target_audit()
+
+    # Collect distinct targets while checking for classification conflicts.
+    target_info: dict[str, dict] = {}
+    for effector in effectors:
+        name = (effector.get("host_target") or "").strip()
+        if not name:
+            raise BuildError(f"effector {effector.get('effector_name')!r} has no host_target")
+        key = host_target_key(name)
+        host_target_class = effector.get("host_target_class") or ""
+        existing = target_info.get(key)
+        if existing is None:
+            target_info[key] = {"name": name, "host_target_class": host_target_class}
+        elif existing["host_target_class"] != host_target_class:
+            raise BuildError(
+                f"host target {name!r} has conflicting classes "
+                f"{existing['host_target_class']!r} and {host_target_class!r}"
+            )
+
+    target_registry = load_registry(HOST_TARGET_ID_REGISTRY_PATH, "host_targets")
+    target_errors = validate_registry(target_registry, "host_target")
+    if target_errors:
+        raise BuildError("; ".join(target_errors))
+    target_registry = assign_registry_ids(sorted(target_info), target_registry, "host_target")
+
+    target_ids: dict[str, int] = {}
+    host_targets: list[dict] = []
+    for key, info in target_info.items():
+        eid = target_registry[key]
+        target_id = int(eid.rsplit("-", 1)[1])
+        target_ids[key] = target_id
+
+        audit_entry = audit.get(info["name"])
+        if audit_entry is None:
+            raise BuildError(f"host target {info['name']!r} has no audit entry")
+        if audit_entry.get("original_class") != info["host_target_class"]:
+            raise BuildError(
+                f"audit class for {info['name']!r} is "
+                f"{audit_entry.get('original_class')!r}, expected "
+                f"{info['host_target_class']!r}"
+            )
+        audit_status = audit_entry.get("audit_status")
+        if audit_status not in AUDIT_STATUSES:
+            raise BuildError(
+                f"host target {info['name']!r} has invalid audit_status {audit_status!r}"
+            )
+
+        host_protein_id = None
+        if audit_status == "verified_protein":
+            uniprot = str(audit_entry.get("uniprot_id") or "").strip().upper()
+            protein = protein_by_uniprot.get(uniprot)
+            if protein is None:
+                host_protein_id = host_target_lookup.get(info["name"].strip().lower())
+            else:
+                host_protein_id = int(protein["host_protein_id"])
+            if host_protein_id is None:
+                raise BuildError(
+                    f"verified protein target {info['name']!r} ({uniprot}) "
+                    "has no host_proteins row"
+                )
+
+        host_targets.append(
+            {
+                "entity_id": eid,
+                "host_target_id": target_id,
+                "name": info["name"],
+                "host_target_class": info["host_target_class"],
+                "host_protein_id": host_protein_id,
+                "resolution_status": RESOLUTION_BY_AUDIT_STATUS[audit_status],
+                "audit_status": audit_status,
+                "resolved_name": audit_entry.get("resolved_name"),
+                "gene_symbol": audit_entry.get("gene_symbol"),
+                "uniprot_id": audit_entry.get("uniprot_id"),
+                "aliases": audit_entry.get("aliases", []),
+                "members": audit_entry.get("members", []),
+                "evidence_sources": audit_entry.get("evidence_sources", []),
+                "audit_notes": audit_entry.get("notes"),
+            }
+        )
+    host_targets.sort(key=lambda row: row["host_target_id"])
+
+    for effector in effectors:
+        pathogen = pathogens[effector["pathogen_name"]]
+        effector["pathogen_id"] = int(pathogen["pathogen_id"])
+        key = host_target_key(effector["host_target"])
+        effector["host_target_id"] = target_ids[key]
+        # Host-protein links live on host_targets; curated effector references
+        # are empty until per-effector evidence is added.
+        effector.pop("host_protein_id", None)
+        effector["reference_ids"] = []
+
+    registry = load_effector_registry(EFFECTOR_ID_REGISTRY_PATH)
+    registry_errors = validate_effector_registry(registry)
+    if registry_errors:
+        raise BuildError("; ".join(registry_errors))
+
+    assigned, registry = assign_effector_ids(effectors, registry)
+    for index, effector in enumerate(effectors):
+        effector["entity_id"] = assigned[index]
+
+    return effectors, host_proteins, host_targets, registry, target_registry
+
+
+def assign_dataset_references(
+    pathogens: list[dict], host_proteins: list[dict]
+) -> tuple[list[dict], dict[str, str]]:
+    """Assign stable reference IDs to pathogen and host-protein rows."""
+    registry = load_registry(REFERENCE_ID_REGISTRY_PATH, "references")
+    registry_errors = validate_registry(registry, "reference")
+    if registry_errors:
+        raise BuildError("; ".join(registry_errors))
+
+    rows = [*pathogens, *host_proteins]
+    doi_display: dict[str, str] = {}
+    for row in rows:
+        doi = row.get("reference_doi")
+        if isinstance(doi, str) and doi.strip():
+            doi_display.setdefault(reference_key(doi), doi.strip())
+
+    registry = assign_registry_ids(sorted(doi_display), registry, "reference")
+    for row in rows:
+        doi = row.get("reference_doi")
+        key = reference_key(doi) if isinstance(doi, str) and doi.strip() else None
+        row["reference_ids"] = [registry[key]] if key else []
+
+    references = [
+        {
+            "entity_id": registry[key],
+            "doi": doi_display[key],
+            "url": f"https://doi.org/{doi_display[key]}",
+        }
+        for key in doi_display
+    ]
+    references.sort(key=lambda row: int(row["entity_id"].rsplit("-", 1)[1]))
+    return references, registry
+
+
+def references_for_rows(rows: list[dict], references: list[dict]) -> list[dict]:
+    """Select the reference rows used by a subset of dataset rows."""
+    used = {ref_id for row in rows for ref_id in row.get("reference_ids", [])}
+    return [ref for ref in references if ref["entity_id"] in used]
+
+
+def validate_references(rows: list[dict], references: list[dict]) -> list[str]:
+    """Validate reference rows and per-row reference links."""
+    errors: list[str] = []
+    seen_ids: set[str] = set()
+    seen_dois: set[str] = set()
+    for index, ref in enumerate(references):
+        label = f"reference row {index} ({ref.get('entity_id', '?')})"
+        eid = ref.get("entity_id")
+        if not is_entity_id(eid, "reference"):
+            errors.append(f"{label}: invalid reference entity_id {eid!r}")
+        elif eid in seen_ids:
+            errors.append(f"{label}: duplicate entity_id {eid}")
+        else:
+            seen_ids.add(eid)
+        doi = ref.get("doi")
+        if not isinstance(doi, str) or not doi.startswith("10."):
+            errors.append(f"{label}: doi must start with 10.")
+            continue
+        key = reference_key(doi)
+        if key in seen_dois:
+            errors.append(f"{label}: duplicate DOI {doi!r}")
+        else:
+            seen_dois.add(key)
+        if ref.get("url") != f"https://doi.org/{doi}":
+            errors.append(f"{label}: url must be https://doi.org/<doi>")
+
+    for index, row in enumerate(rows):
+        label = f"reference link row {index}"
+        ref_ids = row.get("reference_ids")
+        if not isinstance(ref_ids, list):
+            errors.append(f"{label}: reference_ids must be a list")
+            continue
+        if len(set(ref_ids)) != len(ref_ids):
+            errors.append(f"{label}: reference_ids contains duplicates")
+        for ref_id in ref_ids:
+            if not is_entity_id(ref_id, "reference"):
+                errors.append(f"{label}: invalid reference ID {ref_id!r}")
+            elif ref_id not in seen_ids:
+                errors.append(f"{label}: unknown reference ID {ref_id}")
+        doi = row.get("reference_doi")
+        if isinstance(doi, str) and doi.strip():
+            expected = [
+                ref["entity_id"]
+                for ref in references
+                if reference_key(ref["doi"]) == reference_key(doi)
+            ]
+            if expected and ref_ids != expected:
+                errors.append(f"{label}: reference_ids do not match reference_doi")
+    return errors
+
+
+def validate_effectors(
+    effectors: list[dict],
+    pathogen_ids: set[int] | None = None,
+    host_target_ids: set[int] | None = None,
+) -> list[str]:
+    """Validate effector records, stable IDs and foreign keys."""
     errors: list[str] = []
     seen: set[tuple] = set()
+    seen_entity_ids: set[str] = set()
 
     for index, row in enumerate(effectors):
         label = f"row {index}"
 
         # Check required fields
-        required = ["effector_name", "pathogen_name", "type", "host_target", "mechanism"]
+        required = [
+            "entity_id",
+            "effector_name",
+            "pathogen_id",
+            "pathogen_name",
+            "type",
+            "host_target",
+            "mechanism",
+        ]
         for key in required:
             value = row.get(key)
             if value is None or (isinstance(value, str) and not value.strip()):
                 errors.append(f"{label}: missing required field {key}")
+
+        # Canonical entity ID must be valid and unique
+        eid = row.get("entity_id")
+        if not isinstance(eid, str) or not re.fullmatch(r"PM-EFF-\d{4,}", eid):
+            errors.append(f"{label}: invalid effector entity_id {eid!r}")
+        elif eid in seen_entity_ids:
+            errors.append(f"{label}: duplicate entity_id {eid}")
+        else:
+            seen_entity_ids.add(eid)
+
+        # Foreign keys resolve to existing rows
+        pathogen_id = row.get("pathogen_id")
+        if not isinstance(pathogen_id, int) or pathogen_id <= 0:
+            errors.append(f"{label}: pathogen_id must be a positive integer")
+        elif pathogen_ids is not None and pathogen_id not in pathogen_ids:
+            errors.append(f"{label}: unknown pathogen_id {pathogen_id}")
+        host_target_id = row.get("host_target_id")
+        if not isinstance(host_target_id, int) or host_target_id <= 0:
+            errors.append(f"{label}: host_target_id must be a positive integer")
+        elif host_target_ids is not None and host_target_id not in host_target_ids:
+            errors.append(f"{label}: unknown host_target_id {host_target_id}")
 
         # Check for duplicates
         key = (row.get("effector_name"), row.get("pathogen_name"))
@@ -159,6 +479,7 @@ def validate_host_proteins(host_proteins: list[dict]) -> list[str]:
     """Validate host_protein records."""
     errors: list[str] = []
     seen_ids: set[int] = set()
+    seen_entity_ids: set[str] = set()
     seen_uniprot: set[str] = set()
 
     for index, row in enumerate(host_proteins):
@@ -166,6 +487,7 @@ def validate_host_proteins(host_proteins: list[dict]) -> list[str]:
 
         # Check required fields
         required = [
+            "entity_id",
             "host_protein_id",
             "protein_name",
             "gene_name",
@@ -178,6 +500,15 @@ def validate_host_proteins(host_proteins: list[dict]) -> list[str]:
             value = row.get(key)
             if value is None or (isinstance(value, str) and not value.strip()):
                 errors.append(f"{label}: missing required field {key}")
+
+        # Check canonical entity ID
+        eid = row.get("entity_id")
+        if not isinstance(eid, str) or not re.fullmatch(r"PM-HST-\d{4,}", eid):
+            errors.append(f"{label}: invalid host protein entity_id {eid!r}")
+        elif eid in seen_entity_ids:
+            errors.append(f"{label}: duplicate entity_id {eid}")
+        else:
+            seen_entity_ids.add(eid)
 
         # Check IDs
         pid = row.get("host_protein_id")
@@ -205,6 +536,101 @@ def validate_host_proteins(host_proteins: list[dict]) -> list[str]:
             dt.date.fromisoformat(row.get("last_updated", ""))
         except ValueError:
             errors.append(f"{label}: last_updated must be an ISO date")
+
+    return errors
+
+
+def validate_host_targets(
+    host_targets: list[dict], host_protein_ids: set[int]
+) -> list[str]:
+    """Validate host-target identity, classification and resolution links."""
+    errors: list[str] = []
+    seen_ids: set[int] = set()
+    seen_entity_ids: set[str] = set()
+    seen_names: set[str] = set()
+
+    for index, row in enumerate(host_targets):
+        label = f"host_target row {index} ({row.get('name', '?')})"
+        for key in ("entity_id", "host_target_id", "name", "host_target_class", "resolution_status"):
+            value = row.get(key)
+            if value is None or (isinstance(value, str) and not value.strip()):
+                errors.append(f"{label}: missing required field {key}")
+
+        eid = row.get("entity_id")
+        if not is_entity_id(eid, "host_target"):
+            errors.append(f"{label}: invalid host_target entity_id {eid!r}")
+        elif eid in seen_entity_ids:
+            errors.append(f"{label}: duplicate entity_id {eid}")
+        else:
+            seen_entity_ids.add(eid)
+
+        target_id = row.get("host_target_id")
+        if not isinstance(target_id, int) or target_id <= 0:
+            errors.append(f"{label}: host_target_id must be a positive integer")
+        elif target_id in seen_ids:
+            errors.append(f"{label}: duplicate host_target_id {target_id}")
+        else:
+            seen_ids.add(target_id)
+        if is_entity_id(eid, "host_target") and isinstance(target_id, int):
+            if int(eid.rsplit("-", 1)[1]) != target_id:
+                errors.append(f"{label}: entity_id does not match host_target_id")
+
+        name = row.get("name")
+        if isinstance(name, str):
+            key = host_target_key(name)
+            if key in seen_names:
+                errors.append(f"{label}: duplicate normalized name {name!r}")
+            seen_names.add(key)
+
+        host_protein_id = row.get("host_protein_id")
+        if host_protein_id is not None:
+            if not isinstance(host_protein_id, int) or host_protein_id <= 0:
+                errors.append(f"{label}: host_protein_id must be a positive integer or null")
+            elif host_protein_id not in host_protein_ids:
+                errors.append(f"{label}: unknown host_protein_id {host_protein_id}")
+
+        audit_status = row.get("audit_status")
+        if audit_status not in AUDIT_STATUSES:
+            errors.append(f"{label}: invalid audit_status {audit_status!r}")
+        else:
+            expected = RESOLUTION_BY_AUDIT_STATUS[audit_status]
+            status = row.get("resolution_status")
+            if status not in HOST_TARGET_RESOLUTION_VALUES:
+                errors.append(f"{label}: invalid resolution_status {status!r}")
+            elif status != expected:
+                errors.append(
+                    f"{label}: resolution_status {status!r} should be {expected!r}"
+                )
+            if audit_status == "verified_protein":
+                if host_protein_id is None:
+                    errors.append(f"{label}: verified_protein needs host_protein_id")
+                for key in ("resolved_name", "gene_symbol", "uniprot_id"):
+                    if not row.get(key):
+                        errors.append(f"{label}: verified_protein needs {key}")
+            else:
+                if host_protein_id is not None:
+                    errors.append(
+                        f"{label}: {audit_status} must not link host_protein_id"
+                    )
+                if audit_status in ("verified_protein_family", "verified_complex"):
+                    if not row.get("members"):
+                        errors.append(f"{label}: {audit_status} needs members")
+                if audit_status == "non_protein" and row.get("uniprot_id"):
+                    errors.append(f"{label}: non_protein must not have uniprot_id")
+
+        for key in ("aliases", "members", "evidence_sources"):
+            value = row.get(key)
+            if not isinstance(value, list):
+                errors.append(f"{label}: {key} must be a list")
+        for member in row.get("members") or []:
+            if not isinstance(member, dict):
+                errors.append(f"{label}: each member must be an object")
+                continue
+            for key in ("name", "gene_symbol", "uniprot_id"):
+                if not member.get(key):
+                    errors.append(f"{label}: member missing {key}")
+        if not row.get("evidence_sources"):
+            errors.append(f"{label}: needs at least one evidence source")
 
     return errors
 
@@ -511,8 +937,121 @@ def _validate_sequence_fields(label: str, row: dict) -> list[str]:
     return errors
 
 
-def build_tables(args: argparse.Namespace) -> tuple[list[dict], list[dict]]:
-    """Build effectors and host_proteins tables from seed files."""
+EFFECTOR_DERIVED_FIELDS = [
+    "sequence_length",
+    "molecular_weight_da",
+    "isoelectric_point",
+    "gravy_score",
+]
+
+
+def build_derived_features(
+    effectors: list[dict], source_built_at: str
+) -> dict:
+    """Build the derived effector feature matrix (one row per effector)."""
+    features = []
+    for effector in sorted(
+        effectors, key=lambda row: int(row["entity_id"].rsplit("-", 1)[1])
+    ):
+        values = {field: effector.get(field) for field in EFFECTOR_DERIVED_FIELDS}
+        if not effector.get("sequence"):
+            status = "missing_sequence"
+        elif all(value is not None for value in values.values()):
+            status = "computed"
+        else:
+            status = "incomplete"
+        features.append(
+            {
+                "entity_id": effector["entity_id"],
+                **values,
+                "feature_status": status,
+            }
+        )
+
+    return {
+        "meta": {
+            "dataset": DATASET_NAME,
+            "table": "effector_features",
+            "schema_version": SCHEMA_VERSION,
+            "generated_at": source_built_at,
+            "source_table": "effectors",
+            "source_row_count": len(effectors),
+            "feature_count": len(features),
+            "methods": {
+                "sequence_length": "len(sequence)",
+                "molecular_weight_da": "sum of residue masses minus water",
+                "isoelectric_point": "Henderson-Hasselbalch bisection",
+                "gravy_score": "Kyte-Doolittle mean",
+            },
+            "notes": (
+                "Computed features only; they are not curated annotations. "
+                "Rows with no sequence are reported explicitly as missing_sequence."
+            ),
+        },
+        "features": features,
+    }
+
+
+def validate_derived_features(
+    effectors: list[dict], payload: dict
+) -> list[str]:
+    """Validate the derived feature matrix against effector sequences."""
+    errors: list[str] = []
+    features = payload.get("features")
+    if not isinstance(features, list):
+        return ["derived features payload must contain a features list"]
+
+    by_id = {row.get("entity_id"): row for row in effectors}
+    seen: set[str] = set()
+    for index, row in enumerate(features):
+        label = f"derived row {index} ({row.get('entity_id', '?')})"
+        eid = row.get("entity_id")
+        if not is_entity_id(eid, "effector"):
+            errors.append(f"{label}: invalid effector entity_id {eid!r}")
+            continue
+        if eid in seen:
+            errors.append(f"{label}: duplicate entity_id {eid}")
+        seen.add(eid)
+        effector = by_id.get(eid)
+        if effector is None:
+            errors.append(f"{label}: unknown effector entity_id")
+            continue
+
+        for field in EFFECTOR_DERIVED_FIELDS:
+            value = row.get(field)
+            if value is not None and not isinstance(value, (int, float)):
+                errors.append(f"{label}: {field} must be numeric or null")
+        sequence = effector.get("sequence")
+        if sequence:
+            length = row.get("sequence_length")
+            if length != len(sequence):
+                errors.append(f"{label}: sequence_length does not match sequence")
+            if row.get("feature_status") not in ("computed", "incomplete"):
+                errors.append(f"{label}: sequence present but feature_status is not computed")
+        else:
+            if any(row.get(field) is not None for field in EFFECTOR_DERIVED_FIELDS):
+                errors.append(f"{label}: missing sequence must have null computed features")
+            if row.get("feature_status") != "missing_sequence":
+                errors.append(f"{label}: missing sequence needs feature_status=missing_sequence")
+
+    missing = set(by_id) - seen
+    if missing:
+        errors.append(f"derived features missing {len(missing)} effector rows")
+    return errors
+
+
+def build_tables(
+    args: argparse.Namespace,
+) -> tuple[
+    list[dict],
+    list[dict],
+    list[dict],
+    list[dict],
+    dict[str, str],
+    dict[str, str],
+    dict[str, str],
+]:
+    """Build effectors, host_proteins, host_targets and references tables."""
     # Read seed files
     if not EFFECTORS_SEED_PATH.exists():
         raise BuildError(f"missing seed file {EFFECTORS_SEED_PATH}")
@@ -521,6 +1060,17 @@ def build_tables(args: argparse.Namespace) -> tuple[list[dict], list[dict]]:
 
     effectors = read_json(EFFECTORS_SEED_PATH)
     host_proteins = read_json(HOST_PROTEINS_SEED_PATH)
+    if HOST_PROTEINS_AUDIT_SEED_PATH.exists():
+        audit_seed = read_json(HOST_PROTEINS_AUDIT_SEED_PATH)
+        host_proteins.extend(
+            audit_seed if isinstance(audit_seed, list) else audit_seed.get("host_proteins", [])
+        )
+    for protein in host_proteins:
+        if not protein.get("evidence_source"):
+            doi = protein.get("reference_doi")
+            protein["evidence_source"] = (
+                f"https://doi.org/{doi}" if isinstance(doi, str) and doi else None
+            )
 
     # Read classification mapping
     if not CLASSIFICATION_MAPPING_PATH.exists():
@@ -531,7 +1081,8 @@ def build_tables(args: argparse.Namespace) -> tuple[list[dict], list[dict]]:
     effectors = apply_classifications(effectors, classification_mapping)
 
     # Read pathogens to validate pathogen_name references
-    pathogens = read_pathogens(PATHOGENS_DATASET_PATH)
+    pathogen_rows = read_json(PATHOGENS_DATASET_PATH).get("pathogens", [])
+    pathogens = {row["name"]: row for row in pathogen_rows}
 
     # Validate that all pathogen_name references exist in pathogens table
     for effector in effectors:
@@ -541,10 +1092,28 @@ def build_tables(args: argparse.Namespace) -> tuple[list[dict], list[dict]]:
                 f"effector references unknown pathogen {pathogen_name!r}"
             )
 
+    # Attach stable entity IDs and resolve pathogen/host-target foreign keys
+    effectors, host_proteins, host_targets, effector_registry, target_registry = (
+        assign_entity_identifiers(effectors, host_proteins, pathogens)
+    )
+
     # Enrich with external API data (UniProt/InterPro/Pfam/STRING)
     effectors, host_proteins = enrich_records(effectors, host_proteins, args)
 
-    return effectors, host_proteins
+    # References come after enrichment so host-protein DOIs are included.
+    references, reference_registry = assign_dataset_references(
+        pathogen_rows, host_proteins
+    )
+
+    return (
+        effectors,
+        host_proteins,
+        host_targets,
+        references,
+        effector_registry,
+        target_registry,
+        reference_registry,
+    )
 
 
 def filter_sample(
@@ -567,19 +1136,22 @@ def update_dataset(
     dataset_path: Path,
     effectors: list[dict],
     host_proteins: list[dict],
+    host_targets: list[dict],
+    references: list[dict],
+    built_at: str,
 ) -> dict:
-    """Update the dataset file with new effectors and host_proteins tables."""
+    """Update the dataset file with the generated primary tables."""
     dataset = read_json(dataset_path)
 
     # Update meta
     dataset["meta"]["tables"]["effectors"] = len(effectors)
     dataset["meta"]["tables"]["host_proteins"] = len(host_proteins)
-    dataset["meta"]["built_at"] = (
-        dt.datetime.now(dt.timezone.utc)
-        .replace(microsecond=0)
-        .isoformat()
-        .replace("+00:00", "Z")
-    )
+    dataset["meta"]["tables"]["host_targets"] = len(host_targets)
+    dataset["meta"]["tables"]["references"] = len(references)
+    dataset["meta"]["built_at"] = built_at
+    dataset["meta"]["derived"] = {
+        "effector_features": DERIVED_FEATURES_PATH.relative_to(ROOT).as_posix()
+    }
 
     # Record enrichment sources when API data is present
     if any(row.get("sequence") for row in host_proteins) or any(
@@ -590,17 +1162,31 @@ def update_dataset(
         sources.setdefault("interpro", "https://www.ebi.ac.uk/interpro/")
         sources.setdefault("string", "https://string-db.org/")
 
-    # Update tables
-    dataset["effectors"] = effectors
-    dataset["host_proteins"] = host_proteins
+    # Project rows so computed features stay in data/derived/effector_features.json
+    dataset["effectors"] = [
+        {column: row.get(column) for column in EFFECTOR_COLUMNS}
+        for row in effectors
+    ]
+    dataset["host_proteins"] = [
+        {column: row.get(column) for column in HOST_PROTEIN_COLUMNS}
+        for row in host_proteins
+    ]
+    dataset["host_targets"] = [
+        {column: row.get(column) for column in HOST_TARGET_COLUMNS}
+        for row in host_targets
+    ]
+    dataset["references"] = references
 
     return dataset
 
 
 EFFECTOR_COLUMNS = [
+    "entity_id",
     "effector_name",
     "effector_name_class",
+    "pathogen_id",
     "pathogen_name",
+    "host_target_id",
     "host_target",
     "host_target_class",
     "type",
@@ -609,17 +1195,15 @@ EFFECTOR_COLUMNS = [
     "mechanism_class",
     "uniprot_id",
     "sequence",
-    "sequence_length",
-    "molecular_weight_da",
-    "isoelectric_point",
-    "gravy_score",
     "domains",
     "go_terms",
     "signal_peptide",
     "transmembrane_regions",
+    "reference_ids",
 ]
 
 HOST_PROTEIN_COLUMNS = [
+    "entity_id",
     "host_protein_id",
     "protein_name",
     "gene_name",
@@ -637,7 +1221,38 @@ HOST_PROTEIN_COLUMNS = [
     "pathways_detailed",
     "interacting_partners",
     "reference_doi",
+    "reference_ids",
+    "evidence_source",
     "last_updated",
+]
+
+HOST_TARGET_COLUMNS = [
+    "entity_id",
+    "host_target_id",
+    "name",
+    "host_target_class",
+    "host_protein_id",
+    "resolution_status",
+    "audit_status",
+    "resolved_name",
+    "gene_symbol",
+    "uniprot_id",
+    "aliases",
+    "members",
+    "evidence_sources",
+    "audit_notes",
+]
+
+REFERENCE_COLUMNS = [
+    "entity_id",
+    "doi",
+    "url",
+]
+
+# Array fields are stored in link tables, not as JSON columns.
+EFFECTOR_SQL_COLUMNS = [col for col in EFFECTOR_COLUMNS if col != "reference_ids"]
+HOST_PROTEIN_SQL_COLUMNS = [
+    col for col in HOST_PROTEIN_COLUMNS if col != "reference_ids"
 ]
 
 # SQLite column types for enrichment fields (array/object fields store JSON text)
@@ -657,19 +1272,26 @@ ENRICHMENT_SQL_TYPES = {
     "interacting_partners": "TEXT",
 }
 
-SQL_SECTION_MARKER = "-- PathoMap v2 effectors and host_proteins schema"
+SQL_SECTION_MARKER = "-- PathoMap v2.2 derived tables schema"
 
 
 def _effectors_table_sql() -> str:
     definitions = []
-    for column in EFFECTOR_COLUMNS:
-        if column in ("effector_name", "pathogen_name", "host_target", "type", "mechanism"):
+    for column in EFFECTOR_SQL_COLUMNS:
+        if column == "entity_id":
+            definitions.append("  entity_id              TEXT    PRIMARY KEY")
+        elif column == "pathogen_id":
+            definitions.append("  pathogen_id            INTEGER NOT NULL")
+        elif column == "host_target_id":
+            definitions.append("  host_target_id         INTEGER NOT NULL")
+        elif column in ("effector_name", "pathogen_name", "host_target", "type", "mechanism"):
             definitions.append(f"  {column:<22} TEXT    NOT NULL")
         elif column in ENRICHMENT_SQL_TYPES:
             definitions.append(f"  {column:<22} {ENRICHMENT_SQL_TYPES[column]}")
         else:
             definitions.append(f"  {column:<22} TEXT")
-    definitions.append("  PRIMARY KEY (effector_name, pathogen_name)")
+    definitions.append("  FOREIGN KEY (pathogen_id) REFERENCES pathogens(pathogen_id)")
+    definitions.append("  FOREIGN KEY (host_target_id) REFERENCES host_targets(host_target_id)")
 
     return "\n".join(
         [
@@ -677,15 +1299,69 @@ def _effectors_table_sql() -> str:
             ",\n".join(definitions),
             ");",
             "",
+            "CREATE INDEX idx_effectors_pathogen_id ON effectors(pathogen_id);",
             "CREATE INDEX idx_effectors_pathogen_name ON effectors(pathogen_name);",
+            "CREATE INDEX idx_effectors_host_target_id ON effectors(host_target_id);",
+        ]
+    )
+
+
+def _host_targets_table_sql() -> str:
+    return "\n".join(
+        [
+            "CREATE TABLE host_targets (",
+            "  entity_id              TEXT    PRIMARY KEY,",
+            "  host_target_id         INTEGER NOT NULL UNIQUE,",
+            "  name                   TEXT    NOT NULL UNIQUE,",
+            "  host_target_class      TEXT    NOT NULL,",
+            "  host_protein_id        INTEGER,",
+            "  resolution_status      TEXT    NOT NULL CHECK (resolution_status IN ('resolved_protein', 'protein_family', 'protein_complex', 'ambiguous', 'non_protein', 'unresolved')),",
+            "  audit_status           TEXT    NOT NULL CHECK (audit_status IN ('verified_protein', 'verified_protein_family', 'verified_complex', 'ambiguous', 'non_protein', 'unresolved')),",
+            "  resolved_name          TEXT,",
+            "  gene_symbol            TEXT,",
+            "  uniprot_id             TEXT,",
+            "  aliases                TEXT,",
+            "  members                TEXT,",
+            "  evidence_sources       TEXT    NOT NULL,",
+            "  audit_notes            TEXT,",
+            "  FOREIGN KEY (host_protein_id) REFERENCES host_proteins(host_protein_id)",
+            ");",
+            "",
+            "CREATE INDEX idx_host_targets_host_protein_id ON host_targets(host_protein_id);",
+            "CREATE INDEX idx_host_targets_class ON host_targets(host_target_class);",
+            "CREATE INDEX idx_host_targets_resolution ON host_targets(resolution_status);",
+            "CREATE INDEX idx_host_targets_uniprot_id ON host_targets(uniprot_id);",
+        ]
+    )
+
+
+def _reference_links_table_sql() -> str:
+    return "\n".join(
+        [
+            "CREATE TABLE host_protein_references (",
+            "  host_protein_id INTEGER NOT NULL REFERENCES host_proteins(host_protein_id) ON DELETE CASCADE,",
+            "  reference_id    TEXT    NOT NULL REFERENCES \"references\"(entity_id) ON DELETE CASCADE,",
+            "  PRIMARY KEY (host_protein_id, reference_id)",
+            ");",
+            "",
+            "CREATE TABLE effector_references (",
+            "  effector_id  TEXT NOT NULL REFERENCES effectors(entity_id) ON DELETE CASCADE,",
+            "  reference_id TEXT NOT NULL REFERENCES \"references\"(entity_id) ON DELETE CASCADE,",
+            "  PRIMARY KEY (effector_id, reference_id)",
+            ");",
+            "",
+            "CREATE INDEX idx_host_protein_references_ref ON host_protein_references(reference_id);",
+            "CREATE INDEX idx_effector_references_ref ON effector_references(reference_id);",
         ]
     )
 
 
 def _host_proteins_table_sql() -> str:
     definitions = []
-    for column in HOST_PROTEIN_COLUMNS:
-        if column == "host_protein_id":
+    for column in HOST_PROTEIN_SQL_COLUMNS:
+        if column == "entity_id":
+            definitions.append("  entity_id            TEXT    NOT NULL UNIQUE")
+        elif column == "host_protein_id":
             definitions.append("  host_protein_id      INTEGER PRIMARY KEY")
         elif column in ("protein_name", "gene_name", "localization", "function", "last_updated"):
             definitions.append(f"  {column:<21} TEXT    NOT NULL")
@@ -714,12 +1390,21 @@ def write_schema_sql() -> None:
     existing schema.sql files instead of being skipped as duplicates.
     """
     existing_sql = SQL_PATH.read_text(encoding="utf-8") if SQL_PATH.exists() else ""
-    base_sql = existing_sql.split(SQL_SECTION_MARKER)[0].rstrip()
+    # Strip both the current marker and the pre-2.2 marker so rebuilds never
+    # append a duplicate effectors/host_proteins section.
+    for marker in (
+        SQL_SECTION_MARKER,
+        "-- PathoMap v2 effectors and host_proteins schema",
+    ):
+        existing_sql = existing_sql.split(marker)[0]
+    base_sql = existing_sql.rstrip()
 
     section = (
         f"\n\n{SQL_SECTION_MARKER}\n"
+        f"{_host_proteins_table_sql()}\n\n"
+        f"{_host_targets_table_sql()}\n\n"
         f"{_effectors_table_sql()}\n\n"
-        f"{_host_proteins_table_sql()}\n"
+        f"{_reference_links_table_sql()}\n"
     )
     SQL_PATH.write_text(base_sql + section, encoding="utf-8")
 
@@ -731,69 +1416,94 @@ def _sqlite_value(value: Any) -> Any:
     return value
 
 
-def _ensure_columns(con: sqlite3.Connection, table: str, columns: list[str]) -> None:
-    """ALTER TABLE ... ADD COLUMN for any enrichment columns missing from an old table."""
-    existing = {
-        row[1] for row in con.execute(f"PRAGMA table_info({table})").fetchall()
-    }
-    for column in columns:
-        if column not in existing:
-            sql_type = ENRICHMENT_SQL_TYPES.get(column, "TEXT")
-            con.execute(f"ALTER TABLE {table} ADD COLUMN {column} {sql_type}")
+def _execute_ddl(con: sqlite3.Connection, sql: str) -> None:
+    """Execute each ;-separated statement from generated DDL."""
+    for statement in sql.split(";"):
+        statement = statement.strip()
+        if statement:
+            con.execute(statement)
 
 
-def write_sqlite(effectors: list[dict], host_proteins: list[dict]) -> None:
-    """Write effectors and host_proteins to SQLite database."""
+def write_sqlite(
+    effectors: list[dict],
+    host_proteins: list[dict],
+    host_targets: list[dict],
+    references: list[dict],
+    built_at: str,
+) -> None:
+    """Rebuild the generated tables in SQLite.
+
+    Tables are recreated from the generated DDL on every build so schema
+    changes (new columns, primary keys, foreign keys) always apply.
+    """
     con = sqlite3.connect(DB_PATH)
     try:
-        # Check if tables exist, create if not
-        cursor = con.cursor()
-        cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='effectors'")
-        effectors_exists = cursor.fetchone() is not None
-        cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='host_proteins'")
-        host_proteins_exists = cursor.fetchone() is not None
+        con.execute("PRAGMA foreign_keys = ON")
+        for table in (
+            "effector_references",
+            "host_protein_references",
+            "effectors",
+            "host_targets",
+            "host_proteins",
+        ):
+            con.execute(f"DROP TABLE IF EXISTS {table}")
+        _execute_ddl(con, _host_proteins_table_sql())
+        _execute_ddl(con, _host_targets_table_sql())
+        _execute_ddl(con, _effectors_table_sql())
+        _execute_ddl(con, _reference_links_table_sql())
 
-        # Only create the new tables if they don't exist
-        if not effectors_exists:
-            create_sql = "\n".join(
-                line
-                for line in _effectors_table_sql().splitlines()
-                if not line.startswith("CREATE INDEX")
-            )
-            con.execute(create_sql)
-
-        if not host_proteins_exists:
-            create_sql = "\n".join(
-                line
-                for line in _host_proteins_table_sql().splitlines()
-                if not line.startswith("CREATE INDEX")
-            )
-            con.execute(create_sql)
-
-        # Migrate older tables by adding any missing enrichment columns
-        _ensure_columns(con, "effectors", EFFECTOR_COLUMNS)
-        _ensure_columns(con, "host_proteins", HOST_PROTEIN_COLUMNS)
-
-        # Delete existing data and insert fresh
-        con.execute("DELETE FROM effectors")
-        con.execute("DELETE FROM host_proteins")
-
-        # Insert effectors
-        effector_placeholders = ", ".join("?" for _ in EFFECTOR_COLUMNS)
-        effector_columns = ", ".join(EFFECTOR_COLUMNS)
+        # Stage 1 wrote pathogen references; add any host-protein references
+        # that were not known until this stage.
         con.executemany(
-            f"INSERT INTO effectors ({effector_columns}) VALUES ({effector_placeholders})",
-            [tuple(_sqlite_value(row.get(col)) for col in EFFECTOR_COLUMNS) for row in effectors],
+            'INSERT OR IGNORE INTO "references" (entity_id, doi, url) VALUES (?, ?, ?)',
+            [(ref["entity_id"], ref["doi"], ref["url"]) for ref in references],
         )
 
-        # Insert host_proteins
-        host_protein_placeholders = ", ".join("?" for _ in HOST_PROTEIN_COLUMNS)
-        host_protein_columns = ", ".join(HOST_PROTEIN_COLUMNS)
+        # Insert host proteins and targets first; effectors reference them.
+        host_protein_placeholders = ", ".join("?" for _ in HOST_PROTEIN_SQL_COLUMNS)
+        host_protein_columns = ", ".join(HOST_PROTEIN_SQL_COLUMNS)
         con.executemany(
             f"INSERT INTO host_proteins ({host_protein_columns}) VALUES ({host_protein_placeholders})",
             [
-                tuple(_sqlite_value(row.get(col)) for col in HOST_PROTEIN_COLUMNS)
+                tuple(_sqlite_value(row.get(col)) for col in HOST_PROTEIN_SQL_COLUMNS)
                 for row in host_proteins
+            ],
+        )
+
+        target_placeholders = ", ".join("?" for _ in HOST_TARGET_COLUMNS)
+        target_columns = ", ".join(HOST_TARGET_COLUMNS)
+        con.executemany(
+            f"INSERT INTO host_targets ({target_columns}) VALUES ({target_placeholders})",
+            [
+                tuple(_sqlite_value(row.get(col)) for col in HOST_TARGET_COLUMNS)
+                for row in host_targets
+            ],
+        )
+
+        effector_placeholders = ", ".join("?" for _ in EFFECTOR_SQL_COLUMNS)
+        effector_columns = ", ".join(EFFECTOR_SQL_COLUMNS)
+        con.executemany(
+            f"INSERT INTO effectors ({effector_columns}) VALUES ({effector_placeholders})",
+            [
+                tuple(_sqlite_value(row.get(col)) for col in EFFECTOR_SQL_COLUMNS)
+                for row in effectors
+            ],
+        )
+
+        con.executemany(
+            "INSERT INTO host_protein_references (host_protein_id, reference_id) VALUES (?, ?)",
+            [
+                (row["host_protein_id"], ref_id)
+                for row in host_proteins
+                for ref_id in row.get("reference_ids", [])
+            ],
+        )
+        con.executemany(
+            "INSERT INTO effector_references (effector_id, reference_id) VALUES (?, ?)",
+            [
+                (row["entity_id"], ref_id)
+                for row in effectors
+                for ref_id in row.get("reference_ids", [])
             ],
         )
 
@@ -801,9 +1511,11 @@ def write_sqlite(effectors: list[dict], host_proteins: list[dict]) -> None:
         meta = {
             "dataset": DATASET_NAME,
             "schema_version": SCHEMA_VERSION,
-            "built_at": dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
+            "built_at": built_at,
             "effector_count": str(len(effectors)),
             "host_protein_count": str(len(host_proteins)),
+            "host_target_count": str(len(host_targets)),
+            "reference_count": str(len(references)),
         }
         con.executemany("INSERT OR REPLACE INTO meta (key, value) VALUES (?, ?)", meta.items())
         con.commit()
@@ -827,16 +1539,35 @@ def main() -> int:
         print(f"error: missing pathogens dataset {PATHOGENS_DATASET_PATH}", file=sys.stderr)
         return 1
 
+    built_at = utc_now()
     try:
-        effectors, host_proteins = build_tables(args)
+        (
+            effectors,
+            host_proteins,
+            host_targets,
+            references,
+            effector_registry,
+            target_registry,
+            reference_registry,
+        ) = build_tables(args)
     except BuildError as exc:
         print(f"error: {exc}", file=sys.stderr)
         return 1
 
     # Validate
-    effector_errors = validate_effectors(effectors)
+    pathogen_rows = read_json(PATHOGENS_DATASET_PATH).get("pathogens", [])
+    pathogen_ids = {int(row["pathogen_id"]) for row in pathogen_rows}
+    host_protein_ids = {int(row["host_protein_id"]) for row in host_proteins}
+    host_target_ids = {int(row["host_target_id"]) for row in host_targets}
+    effector_errors = validate_effectors(effectors, pathogen_ids, host_target_ids)
     host_protein_errors = validate_host_proteins(host_proteins)
+    host_target_errors = validate_host_targets(host_targets, host_protein_ids)
+    reference_errors = validate_references(
+        [*pathogen_rows, *host_proteins], references
+    )
     enrichment_errors = validate_enriched_records(effectors, host_proteins)
+    derived_payload = build_derived_features(effectors, built_at)
+    derived_errors = validate_derived_features(effectors, derived_payload)
 
     if effector_errors:
         print(f"effector validation errors: {len(effector_errors)}", file=sys.stderr)
@@ -848,18 +1579,47 @@ def main() -> int:
         for error in host_protein_errors:
             print(f"  - {error}", file=sys.stderr)
 
+    if host_target_errors:
+        print(f"host_target validation errors: {len(host_target_errors)}", file=sys.stderr)
+        for error in host_target_errors:
+            print(f"  - {error}", file=sys.stderr)
+
+    if reference_errors:
+        print(f"reference validation errors: {len(reference_errors)}", file=sys.stderr)
+        for error in reference_errors:
+            print(f"  - {error}", file=sys.stderr)
+
     if enrichment_errors:
         print(f"enrichment validation errors: {len(enrichment_errors)}", file=sys.stderr)
         for error in enrichment_errors:
             print(f"  - {error}", file=sys.stderr)
 
-    if effector_errors or host_protein_errors or enrichment_errors:
+    if derived_errors:
+        print(f"derived feature validation errors: {len(derived_errors)}", file=sys.stderr)
+        for error in derived_errors:
+            print(f"  - {error}", file=sys.stderr)
+
+    if (
+        effector_errors
+        or host_protein_errors
+        or host_target_errors
+        or reference_errors
+        or enrichment_errors
+        or derived_errors
+    ):
         return 1
 
     enriched_effectors = sum(1 for row in effectors if row.get("sequence"))
     enriched_host_proteins = sum(1 for row in host_proteins if row.get("sequence"))
+    computed_features = sum(
+        1 for row in derived_payload["features"] if row["feature_status"] == "computed"
+    )
+    missing_features = len(derived_payload["features"]) - computed_features
     print(f"effectors: {len(effectors)} ({enriched_effectors} enriched)")
     print(f"host_proteins: {len(host_proteins)} ({enriched_host_proteins} enriched)")
+    print(f"host_targets: {len(host_targets)}")
+    print(f"references: {len(references)}")
+    print(f"derived effector features: {computed_features} computed, {missing_features} missing/incomplete")
     print("validation: ok")
 
     if args.check:
@@ -867,22 +1627,78 @@ def main() -> int:
 
     # Filter for sample
     sample_effectors, sample_host_proteins = filter_sample(effectors, host_proteins)
+    sample_target_ids = {
+        row["host_target_id"] for row in sample_effectors
+    }
+    sample_targets = [
+        row for row in host_targets if row["host_target_id"] in sample_target_ids
+    ]
+    sample_pathogens = read_json(SAMPLE_DATASET_PATH).get("pathogens", [])
+    sample_references = references_for_rows(
+        [*sample_pathogens, *sample_host_proteins], references
+    )
     print(f"sample effectors: {len(sample_effectors)}")
     print(f"sample host_proteins: {len(sample_host_proteins)}")
+    print(f"sample host_targets: {len(sample_targets)}")
 
     # Update full dataset
-    full_dataset = update_dataset(PATHOGENS_DATASET_PATH, effectors, host_proteins)
+    full_dataset = update_dataset(
+        PATHOGENS_DATASET_PATH,
+        effectors,
+        host_proteins,
+        host_targets,
+        references,
+        built_at,
+    )
     write_json(PATHOGENS_DATASET_PATH, full_dataset)
     print(f"updated {PATHOGENS_DATASET_PATH.relative_to(ROOT)}")
 
     # Update sample dataset
-    sample_dataset = update_dataset(SAMPLE_DATASET_PATH, sample_effectors, sample_host_proteins)
+    sample_dataset = update_dataset(
+        SAMPLE_DATASET_PATH,
+        sample_effectors,
+        sample_host_proteins,
+        sample_targets,
+        sample_references,
+        built_at,
+    )
     write_json(SAMPLE_DATASET_PATH, sample_dataset)
     print(f"updated {SAMPLE_DATASET_PATH.relative_to(ROOT)}")
 
+    # Derived features live outside the curated tables so they can be
+    # recomputed without touching curated annotations.
+    write_json(DERIVED_FEATURES_PATH, derived_payload)
+    print(f"wrote {DERIVED_FEATURES_PATH.relative_to(ROOT)}")
+
+    # Persist registries so future builds never renumber identities
+    write_effector_registry(EFFECTOR_ID_REGISTRY_PATH, effector_registry)
+    write_registry(
+        HOST_TARGET_ID_REGISTRY_PATH,
+        "host_targets",
+        target_registry,
+        (
+            "Stable host-target entity IDs. Keys are normalized target names. "
+            "IDs are assigned once and never reused; do not edit by hand unless "
+            "you are intentionally repairing an assignment."
+        ),
+    )
+    write_registry(
+        REFERENCE_ID_REGISTRY_PATH,
+        "references",
+        reference_registry,
+        (
+            "Stable reference entity IDs. Keys are normalized DOIs. IDs are "
+            "assigned once and never reused; do not edit by hand unless you are "
+            "intentionally repairing an assignment."
+        ),
+    )
+    print(f"wrote {EFFECTOR_ID_REGISTRY_PATH.relative_to(ROOT)}")
+    print(f"wrote {HOST_TARGET_ID_REGISTRY_PATH.relative_to(ROOT)}")
+    print(f"wrote {REFERENCE_ID_REGISTRY_PATH.relative_to(ROOT)}")
+
     # Write SQLite database and SQL schema
     write_schema_sql()
-    write_sqlite(effectors, host_proteins)
+    write_sqlite(effectors, host_proteins, host_targets, references, built_at)
     print(f"wrote {DB_PATH.relative_to(ROOT)}")
     print(f"wrote {SQL_PATH.relative_to(ROOT)}")
 

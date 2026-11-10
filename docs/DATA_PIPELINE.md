@@ -15,6 +15,7 @@ data/sources/*.json (curation)
 
 Both scripts share `scripts/http_client.py` for caching, per-host throttling and retries.
 `scripts/api_clients.py` wraps the protein APIs and is used only by the second stage.
+`scripts/identifiers.py` is the shared source of truth for stable entity IDs.
 
 ## Stage 1: pathogens
 
@@ -33,7 +34,8 @@ Both scripts share `scripts/http_client.py` for caching, per-host throttling and
 2. Fill lineage fields (`phylum`, `class_name`, `order_name`, `family`, `genus`, `species`) from the taxonomy record.
 3. Choose a representative genome, preferring complete assemblies over chromosome/scaffold/contig and RefSeq over GenBank at the same level.
 4. Convert length to `genome_size_mb` (two decimals) and GC to one decimal.
-5. Emit `pathomap-dataset.json`, `pathomap.db`, `schema.sql` and `data/schema/pathogens.schema.json`.
+5. Assign `entity_id` as `PM-PAT-<pathogen_id>`.
+6. Emit `pathomap-dataset.json`, `pathomap.db`, `schema.sql` and `data/schema/pathogens.schema.json`.
 
 The build fails on validation errors (duplicate IDs/names/tax IDs, missing required fields,
 invalid enums, bad DOIs, non-ISO dates, out-of-range numbers).
@@ -47,9 +49,19 @@ invalid enums, bad DOIs, non-ISO dates, out-of-range numbers).
 | `data/sources/effectors_seed.json` | Curated effector rows |
 | `data/sources/host_proteins_seed.json` | Curated host protein rows |
 | `data/sources/effector_uniprot_mapping.json` | Effector name → UniProt accession |
+| `data/sources/effector_ids.json` | Persistent effector entity-ID registry |
 | UniProt | Sequences, domains, GO terms, pathways, signal peptide, transmembrane regions |
 | InterPro / Pfam | Domain fallback with coordinates |
 | STRING | Host-protein interaction partners (`required_score=700`) |
+
+**Identifier and link assignment** runs before enrichment:
+
+1. Host proteins get `PM-HST-<host_protein_id>`.
+2. Effectors get `pathogen_id` from the pathogens table and their `PM-EFF-…` ID from the registry.
+3. `host_protein_id` is set only on an exact (case-insensitive) match between `host_target` and a
+   host protein name, gene symbol, or UniProt accession.
+4. New effector registry keys are appended deterministically and written back to
+   `data/sources/effector_ids.json`.
 
 **Host proteins** are always enriched (they carry `uniprot_id`). **Effectors** are enriched only
 with `--enrich-effectors`, because resolving them is slower and less reliable.
@@ -82,6 +94,9 @@ All responses are cached under `data/sources/`:
 - `string/ids/{accession}.json` — UniProt → STRING id resolution
 - `string/interactions/{accession}.json` — STRING networks
 - `ncbi/` — see `data/sources/ncbi/README.md`
+
+The effector ID registry is **not** a cache: it is a curated source file that must be committed
+with effector seed changes so IDs stay stable.
 
 `api_clients.py` also defines an `uniprot/sequences/` cache path, but current builds do not
 populate it. Caches are safe to delete; they are regenerable.

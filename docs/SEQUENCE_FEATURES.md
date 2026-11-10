@@ -120,7 +120,7 @@ Molecular weight, pI, GRAVY and domain presence already ship.
 
 ## Output requirements
 
-- One row per effector, keyed by a stable `effector_id`.
+- One row per effector, keyed by the stable `entity_id`.
 - Every feature records its method/version and whether it is calculated, annotation-derived or
   predicted.
 - Report invalid or missing sequences explicitly; never silently impute.
