@@ -1,6 +1,6 @@
 # Data Pipeline
 
-How manually curated seed files become the production datasets. Two stages run in order.
+How manually curated seed files become the production datasets. Four stages run in order.
 
 ## Overview
 
@@ -11,10 +11,13 @@ data/sources/*.json (curation)
     -> build_effectors_host_proteins.py (UniProt/InterPro/Pfam/STRING)
     -> data/pathomap-dataset.json + data/sample-dataset.json
     -> data/pathomap.db + data/schema.sql
+    -> build_interactions.py (relationships + row-level evidence)
+    -> analyze_interactions.py (validation, statistics, network)
+    -> data/derived/interaction_analysis.json
 ```
 
-Both scripts share `scripts/http_client.py` for caching, per-host throttling and retries.
-`scripts/api_clients.py` wraps the protein APIs and is used only by the second stage.
+The build scripts share `scripts/http_client.py` for caching, per-host throttling and retries.
+`scripts/api_clients.py` wraps the protein APIs and is used only by the protein stage.
 `scripts/identifiers.py` is the shared source of truth for stable entity IDs.
 
 ## Stage 1: pathogens
@@ -83,6 +86,42 @@ UniProt annotations, not predictions.
 **Outputs:** updated `pathomap-dataset.json`, `sample-dataset.json`, `pathomap.db`, `schema.sql`.
 The sample keeps 5 pathogens, 27 effectors and all 20 host proteins.
 
+## Stage 3: interaction evidence
+
+`scripts/build_interactions.py`
+
+| Input | Source |
+|---|---|
+| Dataset effectors and host targets | Stage 2 output |
+| `data/sources/interaction_evidence_seed.json` | Optional curator-supplied evidence |
+| `data/sources/interaction_ids.json`, `interaction_evidence_ids.json` | Persistent ID registries |
+
+Creates one `interactions` row per resolved effector → host-protein pair and a separate
+`interaction_evidence` row describing its derivation. The initial build emits
+`annotation-derived` evidence only where a curated target audited as a single human protein.
+Manual evidence may add DOI, PMID, accession, provenance and a note without duplicating the
+relationship. Ambiguous, family, complex and non-protein targets are intentionally excluded.
+
+**Outputs:** updated `pathomap-dataset.json`, `sample-dataset.json`, `pathomap.db`,
+`schema.sql`, interaction and evidence registries.
+
+## Stage 4: interaction analysis
+
+`scripts/analyze_interactions.py`
+
+A read-only analysis engine over the validated interaction tables. It checks stable-ID
+format/resolution, deduplicates relationships (retaining the earliest stable interaction ID)
+and evidence (by interaction, class, identifiers and provenance), and records every discarded
+row with a code and message. It computes unique effectors, host proteins, curated host targets
+and pathogens; multi-pathogen host proteins; evidence counts/coverage by class and citation;
+unresolved targets by resolution status; and a bipartite network of pathogen, effector and
+host-protein nodes with evidence-bearing edges.
+
+**Outputs:** `data/derived/interaction_analysis.json`, including source schema/build timestamp,
+input SHA-256 and analysis parameters. Curated tables are never modified.
+`--check` validates without writing, `--dataset`/`--output` override paths, and `--strict`
+returns a non-zero exit code when any validation or result issue exists.
+
 ## Caching
 
 All responses are cached under `data/sources/`:
@@ -134,9 +173,21 @@ python scripts/build_effectors_host_proteins.py --enrich-effectors --refresh
 python scripts/build_pathogens.py --no-network
 python scripts/build_effectors_host_proteins.py --enrich-effectors --no-network
 
+# Build and analyze interactions
+python scripts/build_interactions.py
+python scripts/analyze_interactions.py
+
 # Validate without writing outputs
 python scripts/build_pathogens.py --check
 python scripts/build_effectors_host_proteins.py --check
+python scripts/build_interactions.py --check
+python scripts/analyze_interactions.py --check
+
+# Fail CI on interaction-analysis validation warnings
+python scripts/analyze_interactions.py --strict
+
+# Run interaction-analysis known-answer tests
+python -m unittest discover -s tests -v
 ```
 
 `--check` still builds and enriches in memory, then validates and skips file writes.

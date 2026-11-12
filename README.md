@@ -30,15 +30,20 @@ Open <http://localhost:8000>.
 
 ## Build the dataset
 
-Run the two stages in order:
+Run the stages in order:
 
 ```powershell
 python scripts/build_pathogens.py                        # NCBI enrichment
 python scripts/build_effectors_host_proteins.py          # host proteins (UniProt/STRING)
 python scripts/build_effectors_host_proteins.py --enrich-effectors  # also effectors
+python scripts/build_interactions.py                     # relationships + evidence
+python scripts/analyze_interactions.py                   # validated statistics + network
 ```
 
-Useful flags on both scripts:
+The final step writes `data/derived/interaction_analysis.json`. Add `--strict` to make
+validation warnings fail (useful in CI).
+
+Useful build flags:
 
 | Flag | Effect |
 |---|---|

@@ -27,7 +27,8 @@ data/
 - `sample-dataset.json` — deterministic subset used by **Load Built-in Sample**
 - `pathomap.db`, `schema.sql` — SQLite mirror of the JSON dataset
 - `schema/pathogens.schema.json`
-- `derived/interaction_analysis.json` — validated/deduplicated interaction statistics and network
+- `derived/interaction_analysis.json` — validation/deduplication report, interaction and
+  evidence statistics, unresolved targets, multi-pathogen host proteins and network nodes/edges
 
 **Manually maintained:**
 

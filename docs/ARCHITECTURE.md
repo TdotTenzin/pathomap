@@ -1,8 +1,8 @@
 # Architecture
 
 PathoMap has two independent concerns: a static browser application (presentation) and an
-offline Python build pipeline (data production). Analysis engines are planned; they are not
-implemented yet.
+offline Python build pipeline (data production and derived analysis). The Interaction Analysis
+engine is implemented in Python; browser-side analysis orchestration remains planned.
 
 ## System overview
 
@@ -111,7 +111,7 @@ analysis module.
 - Keep the data dictionary and dataset downloads inside Database.
 - Generated Analyses appears only after a dataset loads and validates.
 - Show honest module states: queued, running, complete, insufficient data, skipped, failed.
-- See `docs/ANALYSES.md` for module specs and `docs/ROADMAP.md` for delivery order.
+- See `docs/ANALYSES.md` for module specs.
 
 ## Build pipeline
 
@@ -119,9 +119,11 @@ analysis module.
 |---|---|---|---|
 | Pathogens | `build_pathogens.py` | `pathogens_seed.json`, `pathogen_overrides.json`, NCBI APIs | `pathomap-dataset.json`, `pathomap.db`, `schema.sql`, `schema/pathogens.schema.json` |
 | Proteins | `build_effectors_host_proteins.py` | `effectors_seed.json`, `host_proteins_seed.json`, `effector_uniprot_mapping.json`, UniProt/InterPro/Pfam/STRING APIs | Updated `pathomap-dataset.json`, `sample-dataset.json`, `pathomap.db`, `schema.sql` |
+| Interactions | `build_interactions.py` | Dataset effectors/host targets/host proteins, interaction seeds, ID registries | `interactions`, `interaction_evidence`, updated dataset/sample, SQLite tables, registries |
+| Analysis | `analyze_interactions.py` | Validated dataset interactions/evidence | `data/derived/interaction_analysis.json` |
 
-Run order matters: the protein build expects the pathogens dataset to exist. Details of the
-protein enrichment are in `docs/DATA_PIPELINE.md`.
+Run order matters: proteins expect the pathogens dataset, interactions expect resolved proteins,
+and analysis expects the interaction table. Details are in `docs/DATA_PIPELINE.md`.
 
 ## Caching
 

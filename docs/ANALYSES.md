@@ -132,6 +132,29 @@ unresolved targets; source and rationale per edge.
 **Guardrail:** broad target annotations and host-host network data cannot be promoted to confirmed
 effector-host interactions.
 
+**Python implementation:** `scripts/analyze_interactions.py` (analysis version 1.1) writes
+`data/derived/interaction_analysis.json` without modifying curated tables.
+
+- **Eligibility:** requires `pathogens`, `effectors`, `host_proteins`, `host_targets`,
+  `interactions` and `interaction_evidence` tables.
+- **Validation:** checks stable-ID type/format, referential integrity (effector → pathogen,
+  interaction → effector/host protein), duplicate IDs, broken relationships, duplicate
+  effector-to-host pairs, evidence class, provenance, orphan evidence and semantic duplicate
+  evidence. Discarded rows are recorded with `code`, `detail` and `row_id`.
+- **Deduplication:** one edge per `(effector_id, host_protein_id)`, retaining the
+  lexicographically earliest `interaction_id`; conflicting duplicate details are reported.
+  Evidence identity is `interaction_id|evidence_class|doi|pmid|database_accession|provenance`.
+- **Outputs:** provenance metadata (dataset schema/build time/SHA-256, analysis parameters),
+  validation summary, unique effector/host-protein/host-target/pathogen statistics,
+  interaction and evidence statistics, host proteins targeted by multiple pathogens,
+  unresolved targets grouped by `resolution_status`, and sorted network nodes/edges. Edges
+  carry relationship predicate, mechanism, provenance, evidence classes and citations.
+- **CLI:** `--check` validates without writing, `--dataset`/`--output` override paths, and
+  `--strict` exits non-zero when validation or result issues exist. Result self-validation
+  checks edge/node integrity and count reconciliation before export.
+- **Tests:** `python -m unittest discover -s tests -v` covers known-answer, validation,
+  deduplication, unresolved-target, network and CLI cases.
+
 ## 2. Effector Sequence Analysis
 
 **Question:** What molecular and sequence-derived properties characterise the effector set?

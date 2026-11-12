@@ -193,12 +193,26 @@ Add manual support to `data/sources/interaction_evidence_seed.json` and run
 ## Interaction analysis output (Phase 4)
 
 Run `python scripts/analyze_interactions.py` to write
-`data/derived/interaction_analysis.json`. This derived-only artifact records
-the input dataset version/hash, validation and deterministic deduplication
-results, interaction/evidence statistics, host proteins targeted by multiple
-pathogens, and a structured network of pathogen, effector and host-protein
-nodes with interaction edges. `--check` performs the same work without
-replacing the output file.
+`data/derived/interaction_analysis.json`. This derived-only artifact has
+`schema_version`/`analysis_version` and contains:
+
+- `meta` — source dataset path, schema version, build timestamp and SHA-256,
+  input tables and analysis parameters.
+- `validation` — raw/retained/discarded counts plus coded interaction, evidence
+  and result issues; one edge is retained per effector-to-host pair.
+- `statistics` — interactions; unique effectors, host proteins, curated host
+  targets and pathogens; multi-pathogen host count; unresolved target/effector
+  counts; evidence count, coverage, mean/median per interaction, classes and
+  citation availability; interactions and effectors per pathogen.
+- `host_proteins_targeted_by_multiple_pathogens` — pathogen IDs/names,
+  effector IDs and interaction counts per host protein.
+- `unresolved_targets` — targets excluded from the network, grouped by
+  `resolution_status`, with their effectors and reasons.
+- `network` — sorted pathogen, effector and host-protein nodes plus edges with
+  predicate, mechanism, provenance, evidence classes and citations.
+
+`--check` performs the same work without replacing the output file;
+`--strict` exits non-zero on any validation or result issue.
 
 ## Generated analyses (target state)
 
