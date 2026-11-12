@@ -1,15 +1,12 @@
 <!--
-  PathoMap - Interaction Analysis module page (skeleton).
-
-  Purpose: Standalone page for Module 01. Placeholders only; no dataset wiring
-  yet. The companion app entry point is index.html.
+  PathoMap - Interactive molecular network page.
 
   Structure:
     - <nav>   Brand (back to index.html), page links, dark-mode toggle.
-    - <main>  Module header, overview stats, filters, network placeholder,
-              interaction records table, and planned module components.
+    - <main>  Module header, overview stats, filters, network workspace,
+              legend, node/edge details, and interpretation notes.
 
-  Scripts: js/pages/interaction-analysis.js (theme toggle only).
+  Scripts: js/pages/interaction-analysis.js (loads dataset + Phase 4 output).
   Requires serving over HTTP for consistent relative paths.
 -->
 <!DOCTYPE html>
@@ -26,7 +23,6 @@
   <link rel="stylesheet" href="css/utilities.css">
 </head>
 <body>
-  <!-- Sticky navigation: brand links back to the app home -->
   <nav>
     <div class="container nav-inner">
       <a class="nav-brand" href="index.html">PathoMap</a>
@@ -42,19 +38,18 @@
     <section id="interaction-analysis" class="section ia-section">
       <div class="container">
 
-        <!-- Page header: title and subtitle -->
         <div class="section-header ia-header">
           <h1 class="section-title">Interaction Analysis</h1>
           <p class="section-subtitle">
-            Explore molecular relationships between pathogens and host proteins.
+            Explore pathogen &rarr; effector &rarr; host protein relationships, inspect the
+            evidence behind each link, and export the current network view.
           </p>
         </div>
 
-        <!-- Overview stats, populated from the loaded dataset by interaction-analysis.js -->
         <div class="ia-stats" aria-label="Interaction overview">
           <div class="ia-stat">
             <span class="ia-stat-value" data-stat="interactions">&mdash;</span>
-            <span class="ia-stat-label">Interaction records</span>
+            <span class="ia-stat-label">Interactions</span>
           </div>
           <div class="ia-stat">
             <span class="ia-stat-value" data-stat="pathogens">&mdash;</span>
@@ -71,11 +66,10 @@
         </div>
         <p class="ia-muted ia-stats-status" id="ia-stats-status" role="status" hidden></p>
 
-        <!-- Search and filters; options and results are wired in interaction-analysis.js -->
         <div class="ia-filters">
           <div class="ia-filters-heading">
             <p class="ia-filters-title">Search and filter interactions</p>
-            <button type="button" class="tool-btn" id="ia-reset">Reset</button>
+            <button type="button" class="tool-btn" id="ia-reset">Reset filters</button>
           </div>
           <div class="ia-filter-grid">
             <label class="ia-filter ia-filter-search">
@@ -84,7 +78,7 @@
                 class="tool-input"
                 id="ia-search"
                 type="search"
-                placeholder="Search effector, host protein, pathogen, or mechanism"
+                placeholder="Search pathogen, effector, host protein, mechanism, evidence, or DOI"
                 autocomplete="off"
               >
             </label>
@@ -94,47 +88,100 @@
                 <option value="">All pathogens</option>
               </select>
             </label>
+            <label class="ia-filter">
+              <span>Host protein</span>
+              <select class="tool-input" id="ia-host-protein">
+                <option value="">All host proteins</option>
+              </select>
+            </label>
+            <label class="ia-filter">
+              <span>Evidence</span>
+              <select class="tool-input" id="ia-evidence">
+                <option value="">All evidence classes</option>
+              </select>
+            </label>
+            <label class="ia-filter">
+              <span>Interaction type</span>
+              <select class="tool-input" id="ia-interaction-type">
+                <option value="">All interaction types</option>
+              </select>
+            </label>
             <label class="ia-filter" id="ia-classification-field">
               <span>Pathogen classification</span>
               <select class="tool-input" id="ia-classification">
                 <option value="">All classifications</option>
-                <option value="Gram-positive">Gram-positive</option>
-                <option value="Gram-negative">Gram-negative</option>
-                <option value="Virus">Virus</option>
-                <option value="Fungus">Fungus</option>
-                <option value="Parasite">Parasite</option>
               </select>
             </label>
           </div>
-          <!-- Shown instead of the classification select when one pathogen is chosen -->
           <div class="ia-filter-meta" id="ia-pathogen-meta" hidden>
             <span>Classification</span>
             <span class="ia-panel-note" id="ia-pathogen-classification">&mdash;</span>
           </div>
         </div>
 
-        <!-- Network visualization placeholder -->
-        <div class="ia-panel">
+        <div class="ia-panel ia-network-panel">
           <div class="ia-panel-header">
-            <h3>Interaction Network</h3>
-            <span class="ia-panel-note">Placeholder</span>
+            <div>
+              <h3>Interaction Network</h3>
+              <p class="ia-network-source" id="ia-network-source">Loading network and provenance&hellip;</p>
+            </div>
+            <details class="ia-export">
+              <summary class="tool-btn">Export</summary>
+              <div class="ia-export-menu">
+                <button type="button" class="ia-export-item" data-export="json">Network JSON</button>
+                <button type="button" class="ia-export-item" data-export="nodes">Nodes CSV</button>
+                <button type="button" class="ia-export-item" data-export="edges">Edges CSV</button>
+                <button type="button" class="ia-export-item" data-export="svg">Network SVG</button>
+              </div>
+            </details>
           </div>
-          <div class="ia-network-placeholder">
-            <p>Interactive network visualization will render here.</p>
-            <p class="ia-muted">Illustrative placeholder &mdash; not actual PathoMap data.</p>
+
+          <div class="ia-network-layout">
+            <div class="ia-network-main">
+              <div class="ia-network-toolbar">
+                <p class="ia-network-status" id="ia-network-status" role="status">Loading&hellip;</p>
+                <div class="ia-network-controls" id="ia-network-controls" aria-label="Network view controls">
+                  <button type="button" class="tool-btn tool-btn-sm" data-network-action="zoom-out" title="Zoom out">&minus;</button>
+                  <button type="button" class="tool-btn tool-btn-sm" data-network-action="fit" title="Fit network">Fit</button>
+                  <button type="button" class="tool-btn tool-btn-sm" data-network-action="zoom-in" title="Zoom in">+</button>
+                </div>
+              </div>
+
+              <div class="ia-network-canvas" id="ia-network-canvas" aria-label="Interactive interaction network"></div>
+              <div class="ia-network-empty" id="ia-network-empty" hidden>
+                <p>No interactions match the active filters.</p>
+                <p class="ia-muted">Reset the filters or load a dataset with resolved interaction records.</p>
+              </div>
+
+              <div class="ia-network-legend" aria-label="Network legend">
+                <div class="ia-legend-group">
+                  <span class="ia-legend-title">Nodes</span>
+                  <span class="ia-legend-item"><span class="ia-legend-node ia-legend-node--pathogen"></span>Pathogen</span>
+                  <span class="ia-legend-item"><span class="ia-legend-node ia-legend-node--effector"></span>Effector</span>
+                  <span class="ia-legend-item"><span class="ia-legend-node ia-legend-node--host"></span>Host protein</span>
+                </div>
+                <div class="ia-legend-group">
+                  <span class="ia-legend-title">Evidence</span>
+                  <span class="ia-legend-item"><span class="ia-legend-line ia-legend-line--experimental"></span>Experimental</span>
+                  <span class="ia-legend-item"><span class="ia-legend-line ia-legend-line--predicted"></span>Predicted</span>
+                  <span class="ia-legend-item"><span class="ia-legend-line ia-legend-line--annotation"></span>Annotation-derived</span>
+                  <span class="ia-legend-item"><span class="ia-legend-line ia-legend-line--hypothetical"></span>Hypothetical</span>
+                  <span class="ia-legend-item"><span class="ia-legend-line ia-legend-line--membership"></span>Pathogen encodes effector</span>
+                </div>
+              </div>
+            </div>
+
+            <aside class="ia-details" id="ia-details" aria-label="Selected node details" aria-live="polite"></aside>
           </div>
         </div>
 
-        <!-- Planned module components: future sub-sections of this page -->
         <div class="ia-components">
-          <h3>Module components</h3>
+          <h3>Reading this network</h3>
           <ul class="ia-component-list">
-            <li><strong>Overview</strong> &mdash; total interactions, pathogens, effectors, host proteins.</li>
-            <li><strong>Interaction Explorer</strong> &mdash; searchable and filterable interaction records.</li>
-            <li><strong>Network Visualization</strong> &mdash; interactive host&ndash;pathogen interaction network.</li>
-            <li><strong>Pathogen Analysis</strong> &mdash; compare interactions across pathogens.</li>
-            <li><strong>Host Protein Analysis</strong> &mdash; identify targeted host proteins and interaction frequency.</li>
-            <li><strong>Evidence &amp; Methodology</strong> &mdash; sources, experimental evidence, confidence, and provenance.</li>
+            <li><strong>Relationships</strong> &mdash; pathogens point to their encoded effectors, then to resolved host proteins.</li>
+            <li><strong>Evidence</strong> &mdash; line style and colour show the strongest evidence class recorded for each effector&ndash;host relationship.</li>
+            <li><strong>Exclusions</strong> &mdash; unresolved, family, complex, and non-protein targets are not drawn; counts are reported from the analysis output.</li>
+            <li><strong>Exports</strong> &mdash; downloads reflect the active filters and carry source/filter provenance.</li>
           </ul>
         </div>
 

@@ -5,10 +5,11 @@ export const ANALYSIS_MODULES = [
         number: "01",
         name: "Interaction Analysis",
         description: "Explore host–pathogen interaction relationships.",
-        version: "0.1.0",
-        status: "planned",
+        version: "1.0.0",
+        status: "available",
+        page: "interaction-analysis.html",
         prerequisites: {
-            tables: ["pathogens", "host_proteins"],
+            tables: ["pathogens", "effectors", "host_proteins", "interactions", "interaction_evidence"],
             fields: []
         }
     },

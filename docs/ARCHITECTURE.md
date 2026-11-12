@@ -15,7 +15,10 @@ data/sources/ (curated seeds + API caches)
     -> data/pathomap.db + data/schema.sql
 
 index.html -> js/main.js -> js/data/loader.js -> js/views/database.js
-                                       \-> js/analysis/* (planned) -> js/views/analyses/* (planned)
+interaction-analysis.html -> js/pages/interaction-analysis.js
+    -> js/data/loader.js + js/data/analysis.js
+    -> js/analysis/network.js
+    -> js/views/interaction-network.js
 ```
 
 The web app never computes curated data. It loads a validated JSON envelope and renders it.
@@ -32,14 +35,24 @@ host-pathogen-tracker/
 │   ├── main.js                 # Boot: init database view + upload, load dataset
 │   ├── data/
 │   │   ├── loader.js           # Fetch + in-memory dataset
+│   │   ├── analysis.js         # Fetch derived interaction-analysis output
 │   │   └── schema.js           # Columns, labels, enums, data dictionary
 │   ├── ui/
+│   │   ├── analyses.js         # Generated Analyses cards
+│   │   ├── theme.js            # Dark-mode persistence
 │   │   └── upload.js           # Upload, built-in, sample and template loading
 │   ├── utils/
-│   │   └── dataset.js          # Upload validation + normalization
+│   │   ├── dataset.js          # Upload validation + normalization
+│   │   └── export.js           # JSON/CSV/SVG download helpers
 │   ├── views/
-│   │   └── database.js         # Tables, tabs, search, sort, pagination, CSV, schema panel
-│   └── analysis/               # (planned) registry, orchestrator, engines
+│   │   ├── database.js         # Tables, tabs, search, sort, pagination, CSV, schema panel
+│   │   └── interaction-network.js # Layered SVG network, focus, details, SVG export
+│   ├── analysis/
+│   │   ├── eligibility.js      # Module prerequisite checks
+│   │   ├── network.js          # Network model, filters, node/edge details
+│   │   └── registry.js         # Analysis module registry
+│   └── pages/
+│       └── interaction-analysis.js # Interaction Analysis orchestration
 ├── scripts/
 │   ├── build_pathogens.py      # NCBI enrichment, validation, JSON/SQLite exports
 │   ├── build_effectors_host_proteins.py  # Protein enrichment, validation, exports
@@ -71,9 +84,15 @@ Vanilla ES modules, no build step, no external dependencies.
 | `js/utils/dataset.js` | Validate and normalize uploads | `validateDataset()`, `normalizeDataset()` |
 | `js/ui/upload.js` | Upload/sample/template flow | `initUpload()` |
 | `js/views/database.js` | Database browser rendering | `initDatabase()`, `renderDatabase()` |
+| `js/data/analysis.js` | Fetch optional Phase 4 analysis artifact | `loadInteractionAnalysis()` |
+| `js/analysis/network.js` | Derived/dataset network model, filtering, detail joins | `buildNetworkModel()`, `filterNetwork()`, `buildNodeDetail()`, `buildEdgeDetail()` |
+| `js/views/interaction-network.js` | Layered SVG network, selection, details, SVG export | `createNetworkView()` |
+| `js/utils/export.js` | Download, CSV and XML helpers | `downloadText()`, `toCsv()`, `escapeXml()` |
 
 **Data flow:** `index.html` → `main.js` → `loader.js` (fetch JSON) → `database.js` (render) with
-`upload.js` replacing the in-memory dataset after validation.
+`upload.js` replacing the in-memory dataset after validation. `interaction-analysis.html` loads the
+same dataset, optionally fetches `data/derived/interaction_analysis.json`, and falls back to the
+normalized interaction tables when the derived artifact does not match.
 
 **Separation of concerns:**
 
@@ -89,9 +108,9 @@ Vanilla ES modules, no build step, no external dependencies.
 
 | Area | Status |
 |---|---|
-| Database tables | `pathogens` (53), `effectors` (246), `host_proteins` (20) |
-| Navigation | Home and Database only (`index.html`) |
-| Generated analyses | Not implemented; no `js/analysis/` layer |
+| Database tables | `pathogens` (53), `effectors` (246), `host_proteins` (33), plus host targets, references, interactions and evidence |
+| Navigation | Home, Database and Interaction Analysis |
+| Generated analyses | Interaction Analysis network page implemented; seven other modules planned |
 | Research & Methods page | Not implemented |
 
 **Target navigation:** four top-level destinations. Do not create one top-level link per

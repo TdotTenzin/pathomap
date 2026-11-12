@@ -155,6 +155,26 @@ effector-host interactions.
 - **Tests:** `python -m unittest discover -s tests -v` covers known-answer, validation,
   deduplication, unresolved-target, network and CLI cases.
 
+**Browser implementation (Phase 5):** `interaction-analysis.html` renders the network model from
+`data/derived/interaction_analysis.json` when its dataset build timestamp, schema version and
+interaction count match the loaded dataset. Sample or uploaded datasets fall back to a
+display-only graph built from `interactions` and `interaction_evidence`; the page labels this
+difference honestly.
+
+- **View:** layered pathogen → effector → host-protein SVG layout with display-only
+  pathogen-encodes-effector membership links. Effector-host edges use the strongest evidence
+  class for line style and colour (experimental solid, predicted dashed, annotation-derived
+  dotted, hypothetical dash-dot).
+- **Filters:** text search, pathogen, host protein, evidence class, interaction type, and
+  pathogen classification. Orphan effectors, pathogens and host proteins are pruned after
+  filtering.
+- **Details:** clicking a node or edge opens biological fields joined by stable ID, related
+  entities, evidence records, citations and external UniProt/DOI links.
+- **Exports:** filtered network JSON with provenance and active filters, node/edge CSV, and SVG
+  with embedded metadata. Downloads reflect the current filters.
+- **Tests:** `node --test tests/network_model.test.mjs` covers derived/fallback selection,
+  membership links, combined filters, detail joins and CSV escaping.
+
 ## 2. Effector Sequence Analysis
 
 **Question:** What molecular and sequence-derived properties characterise the effector set?

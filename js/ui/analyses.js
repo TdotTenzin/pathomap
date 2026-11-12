@@ -53,6 +53,10 @@ export function renderAnalyses(dataset = null) {
                     <span class="analysis-eligibility">
                         ${eligibilityLabel}
                     </span>
+
+                    ${module.page && eligibility.eligible
+                        ? `<a class="analysis-open" href="${module.page}">Open analysis</a>`
+                        : ''}
                 </div>
             </article>
         `;

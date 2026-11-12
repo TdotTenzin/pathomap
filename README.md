@@ -14,9 +14,10 @@ Schema version **2.1**, three tables. Every row carries a stable entity ID
 | `effectors` | 246 | Stable ID, pathogen/host foreign keys, UniProt/InterPro/Pfam annotations and computed features |
 | `host_proteins` | 20 | Stable ID, UniProt, GO, pathway and STRING partner data |
 
-A 5-pathogen, 27-effector sample is bundled for demos. Generated analyses (interaction, pathway,
-network, enrichment, sequence, comparative, host-response, predictive) are **planned, not
-implemented**; see `docs/ANALYSES.md` and `docs/ROADMAP.md`.
+A 5-pathogen, 27-effector sample is bundled for demos. The Interaction Analysis page implements
+an interactive, filterable pathogen → effector → host-protein network with evidence-aware edge
+styling, node details and JSON/CSV/SVG exports. Other generated analyses are planned; see
+`docs/ANALYSES.md`.
 
 ## Quick start
 
@@ -26,7 +27,9 @@ Serve the directory over HTTP (the browser must be able to fetch JSON):
 python -m http.server 8000
 ```
 
-Open <http://localhost:8000>.
+Open <http://localhost:8000>. The interactive network is at
+<http://localhost:8000/interaction-analysis.html> after loading a dataset on the home page, or it
+will fetch the curated dataset directly.
 
 ## Build the dataset
 
