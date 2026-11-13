@@ -5,19 +5,36 @@ proteins, and the host proteins they target.
 
 ## Dataset
 
-Schema version **2.1**, three tables. Every row carries a stable entity ID
-(`PM-PAT-…`, `PM-EFF-…`, `PM-HST-…`) used for cross-table joins and future analyses:
+Schema version **3.0**. Every row carries a stable entity ID (`PM-PAT-…`, `PM-EFF-…`,
+`PM-HST-…`) used for cross-table joins and generated analyses:
 
 | Table | Rows | Contents |
 |---|---|---|
 | `pathogens` | 53 | Stable ID, NCBI taxonomy, genome assembly metadata, Gram/acid-fast status, intracellular strategy |
 | `effectors` | 246 | Stable ID, pathogen/host foreign keys, UniProt/InterPro/Pfam annotations and computed features |
-| `host_proteins` | 20 | Stable ID, UniProt, GO, pathway and STRING partner data |
+| `host_proteins` | 33 | Stable ID, UniProt, GO, pathway and STRING partner data |
+| `host_targets` | 129 | Audited effector target names and resolution status |
+| `interactions` | 39 | Resolved effector–host protein relationships |
+| `interaction_evidence` | 39 | Evidence class and provenance for each interaction |
+| `references` | 58 | Citations used by curated records |
 
-A 5-pathogen, 27-effector sample is bundled for demos. The Interaction Analysis page implements
-an interactive, filterable pathogen → effector → host-protein network with evidence-aware edge
-styling, node details and JSON/CSV/SVG exports. Other generated analyses are planned; see
-`docs/ANALYSES.md`.
+A 5-pathogen, 27-effector sample is bundled for demos. Six generated analyses are implemented:
+
+- Interaction Analysis — filterable pathogen → effector → host-protein network with evidence-aware
+  edge styling, node details and JSON/CSV/SVG exports.
+- Effector Sequence Analysis — composition, physicochemical features, motifs, domain coverage and
+  per-pathogen/type summaries.
+- Functional Enrichment — GO over-representation with Benjamini–Hochberg correction.
+- Pathway Analysis — Reactome and KEGG pathway representation and over-representation.
+- Protein Network Analysis — STRING host–host edges plus curated effector–host edges, centrality,
+  components, communities and hubs.
+- Comparative Pathogen Analysis — per-pathogen summaries, Jaccard similarity and average-linkage
+  clustering.
+
+Open `index.html` and use the Generated Analyses cards, or go directly to
+`effector-sequence-analysis.html`, `functional-enrichment.html`, `pathway-analysis.html`,
+`protein-network-analysis.html`, or `comparative-pathogen-analysis.html`. See
+`docs/ANALYSES.md` for methods and limitations.
 
 ## Quick start
 
@@ -40,11 +57,17 @@ python scripts/build_pathogens.py                        # NCBI enrichment
 python scripts/build_effectors_host_proteins.py          # host proteins (UniProt/STRING)
 python scripts/build_effectors_host_proteins.py --enrich-effectors  # also effectors
 python scripts/build_interactions.py                     # relationships + evidence
-python scripts/analyze_interactions.py                   # validated statistics + network
+python scripts/analyze_interactions.py                   # Phase 4 statistics + network
+python scripts/analyze_effector_sequences.py             # sequence/domain features
+python scripts/analyze_functional_enrichment.py          # GO over-representation
+python scripts/analyze_pathways.py                       # Reactome + KEGG
+python scripts/analyze_protein_network.py                # STRING + curated network
+python scripts/analyze_comparative_pathogens.py          # cross-pathogen comparison
 ```
 
-The final step writes `data/derived/interaction_analysis.json`. Add `--strict` to make
-validation warnings fail (useful in CI).
+The analysis scripts write JSON artifacts under `data/derived/`; they never modify curated
+tables. Add `--strict` to make validation warnings fail (useful in CI). Pathway and network
+scripts support `--no-network` (cached responses only) and `--refresh` (ignore caches).
 
 Useful build flags:
 
@@ -111,4 +134,4 @@ When adding a pathogen:
 - **Backend:** none (static files)
 - **Data:** JSON (primary), SQLite (generated)
 - **Build:** Python 3
-- **External APIs:** NCBI Taxonomy/Datasets, UniProt, InterPro/Pfam, STRING
+- **External APIs:** NCBI Taxonomy/Datasets, UniProt, InterPro/Pfam, STRING, KEGG REST

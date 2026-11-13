@@ -21,7 +21,13 @@ no prediction/probability; **Planned** = not implemented.
 | Transmembrane regions | `transmembrane_regions` | Partial | UniProt annotation, no predictor |
 | Eukaryotic-like domains | `domains` | Partial | Annotated, not classified |
 
-Everything below is **Planned** unless stated otherwise.
+**Phase 6 implementation:** `scripts/analyze_effector_sequences.py` computes the following into
+`data/derived/effector_sequence_analysis.json` without modifying effector rows: amino-acid
+composition, Cys/Pro/Gly fractions, aliphatic index, aromaticity, Shannon entropy, a labelled
+low-complexity fraction, N-terminal composition, RxLR/PEXEL motif hits, and domain coverage plus
+domain-family summaries. Dipeptide/tripeptide composition, polarity, repeats and hydrogen-bonding
+counts remain unimplemented. External prediction tools remain out of scope for the current
+standard-library pipeline.
 
 ## Directly computable with Python / Biopython
 

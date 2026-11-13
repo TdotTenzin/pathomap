@@ -1,9 +1,10 @@
 # PathoMap dataset
 
-Schema version **2.1**. The current release contains three tables: `pathogens` (53),
-`effectors` (246) and `host_proteins` (20). Every row carries a stable, prefixed `entity_id`
-(`PM-PAT-…`, `PM-EFF-…`, `PM-HST-…`). References and generated analyses are not yet part of the
-dataset.
+Schema version **3.0**. The current release contains seven tables: `pathogens` (53),
+`references` (58), `effectors` (246), `host_proteins` (33), `host_targets` (129),
+`interactions` (39) and `interaction_evidence` (39). Entity rows carry a stable, prefixed
+`entity_id` (`PM-PAT-…`, `PM-REF-…`, `PM-EFF-…`, `PM-HST-…`, `PM-TGT-…`, `PM-INT-…`,
+`PM-EVD-…`). Generated analyses live outside the curated dataset under `data/derived/`.
 
 This is the authoritative reference for table structure. The v1 flat export is not present in
 this repository; tables are rebuilt from `data/sources/` one stage at a time.
@@ -15,37 +16,56 @@ this repository; tables are rebuilt from `data/sources/` one stage at a time.
 | `data/sources/pathogens_seed.json` | Source | Curated base pathogen rows. |
 | `data/sources/effectors_seed.json` | Source | Curated effector rows linked to pathogens. |
 | `data/sources/host_proteins_seed.json` | Source | Curated host protein rows. |
+| `data/sources/host_proteins_audit_seed.json` | Source | Supplemental host-protein rows added during target audit. |
+| `data/sources/host_target_audit.json` | Source | Audited resolution decisions for every host target. |
 | `data/sources/effector_uniprot_mapping.json` | Source | Effector name -> UniProt accession. |
 | `data/sources/effector_ids.json` | Source | Persistent effector entity-ID registry (assigned once, never reused). |
+| `data/sources/host_target_ids.json` | Source | Persistent host-target entity-ID registry (`PM-TGT`). |
+| `data/sources/reference_ids.json` | Source | Persistent reference entity-ID registry (`PM-REF`). |
 | `data/sources/pathogen_overrides.json` | Source | Manual overrides for NCBI lookups. |
+| `data/sources/interaction_evidence_seed.json` | Source | Optional manually curated interaction evidence. |
+| `data/sources/interaction_ids.json` | Source | Persistent interaction-ID registry (`PM-INT`). |
+| `data/sources/interaction_evidence_ids.json` | Source | Persistent interaction-evidence ID registry (`PM-EVD`). |
 | `data/sources/ncbi/` | Cache | NCBI Taxonomy and Datasets responses. |
-| `data/sources/uniprot/`, `interpro/`, `pfam/`, `string/` | Cache | Protein enrichment responses. |
-| `data/pathomap-dataset.json` | Generated | The JSON the web app loads. `{ meta, pathogens, effectors, host_proteins }`. |
-| `data/sample-dataset.json` | Generated | Five-pathogen sample used by **Load Built-in Sample**. |
+| `data/sources/uniprot/`, `interpro/`, `pfam/`, `string/`, `kegg/` | Cache | Protein and pathway enrichment responses. |
+| `data/pathomap-dataset.json` | Generated | The JSON the web app loads. `{ meta, pathogens, references, effectors, host_proteins, host_targets, interactions, interaction_evidence }`. |
+| `data/sample-dataset.json` | Generated | Deterministic subset used by **Load Built-in Sample**. |
 | `data/pathomap.db` | Generated | SQLite database with the same tables. |
 | `data/schema.sql` | Generated | SQLite DDL. |
 | `data/schema/pathogens.schema.json` | Generated | JSON Schema for the dataset envelope and pathogen rows. |
+| `data/derived/*.json` | Generated | Interaction, sequence, GO, pathway, network and comparative analysis artifacts. |
 
 ## Table relationships
 
 ```
 pathogens (entity_id, pathogen_id)
-    └──< effectors (entity_id, pathogen_id FK)
-             └──> host_proteins (entity_id, host_protein_id FK, nullable)
+    └──< effectors (entity_id, pathogen_id FK, host_target_id FK)
 
-host_proteins (entity_id, host_protein_id)
-    └── interacting_partners (STRING ids, not a foreign key)
+host_targets (entity_id, host_target_id)
+    └──> host_proteins (entity_id, nullable)
+
+effectors (entity_id)
+    └──< interactions (interaction_id, effector_id FK)
+             ├──> host_proteins (entity_id, host_protein_id FK)
+             └──< interaction_evidence (evidence_id, interaction_id FK)
+
+references (entity_id)
+    └── linked from pathogens/effectors/host_proteins via reference_ids
 ```
 
-- `entity_id` is the canonical cross-table identifier. `pathogen_id` and `host_protein_id` remain
-  stable internal integer keys for SQLite joins and existing code.
-- `effectors` reference their pathogen by `pathogen_id` (with `pathogen_name` retained for display).
-- `effectors.host_protein_id` is populated only when `host_target` exactly matches a curated host
-  protein's name, gene symbol, or UniProt accession. Unmatched targets remain free text and the
-  foreign key is null; the build does not fuzzy-match biological names.
+- `entity_id` is the canonical cross-table identifier. `pathogen_id`, `host_protein_id`,
+  `host_target_id` and the interaction/evidence integer keys remain stable internal keys for
+  SQLite joins and existing code.
+- `effectors` reference their pathogen by `pathogen_id` (with `pathogen_name` retained for display)
+  and their audited target by `host_target_id`.
+- `host_targets.host_protein_id` is populated only when the audit resolves the target to a single
+  curated human protein; unmatched, ambiguous and non-protein targets keep `resolution_status`
+  and a null protein link. The build does not fuzzy-match biological names.
+- `interactions.effector_id` and `interactions.host_protein_id` store `PM-EFF`/`PM-HST` entity IDs.
+  Each interaction may have zero or more `interaction_evidence` rows.
 - `host_proteins.interacting_partners` stores STRING protein IDs, which cannot be joined back to
   `host_proteins` without a separate mapping.
-- No references table exists; citations are stored per row (`reference_doi`).
+- Citations are normalized in `references`; legacy `reference_doi` fields remain for display.
 
 ## Entity identifiers
 
@@ -54,8 +74,12 @@ Canonical IDs use the form `PM-<TYPE>-<NNNN>`:
 | Entity | Prefix | Example | Derived from |
 |---|---|---|---|
 | Pathogen | `PM-PAT` | `PM-PAT-0001` | Curated `pathogen_id` |
+| Reference | `PM-REF` | `PM-REF-0001` | Registry keyed by normalized DOI |
 | Effector protein | `PM-EFF` | `PM-EFF-0001` | Registry keyed by `<pathogen_id>|<effector_name>` |
 | Human host protein | `PM-HST` | `PM-HST-0001` | Curated `host_protein_id` |
+| Host target | `PM-TGT` | `PM-TGT-0001` | Registry keyed by normalized target name |
+| Interaction | `PM-INT` | `PM-INT-0001` | Registry keyed by effector/host-protein pair |
+| Interaction evidence | `PM-EVD` | `PM-EVD-0001` | Registry keyed by source evidence |
 
 Rules:
 
@@ -68,8 +92,8 @@ Rules:
   `<pathogen_id>|<effector_name>`. Existing assignments are never renumbered or reused, including
   after a row is temporarily removed. If an effector is deliberately renamed, update its registry
   key to keep the same ID.
-- Future interaction and analysis records should store `entity_id` values (and may store the
-  integer foreign keys for efficient joins), never display names.
+- Interaction, evidence and generated-analysis records store `entity_id` values (and may store
+  integer foreign keys for efficient joins), never display names as keys.
 
 The JSON envelope advertises the scheme in `meta.identifiers`, and `js/data/identifiers.js`
 provides the matching frontend helpers.
@@ -78,12 +102,15 @@ provides the matching frontend helpers.
 
 | Version | Date | Changes |
 |---|---|---|
-| 2.1 | 2026-11 | Stable `entity_id` on all three tables; effector `pathogen_id` foreign key; nullable effector `host_protein_id`; effector ID registry. |
+| 3.0 | 2026-11 | References, host targets, interactions and interaction evidence; stable `PM-REF`/`PM-TGT`/`PM-INT`/`PM-EVD` IDs; final build pins schema 3.0. |
+| 2.2 | 2026-11 | Host-target audit, target registry and effector `host_target_id`; intermediate pathogen/effector builders. |
+| 2.1 | 2026-11 | Stable `entity_id` on all three core tables; effector `pathogen_id` foreign key; effector ID registry. |
 | 2.0 | 2026-11 | Three-table release (`pathogens`, `effectors`, `host_proteins`); NCBI and protein enrichment; computed sequence features; `n_effectors` removed because it was derivable and went stale. |
 | 1.0 | — | Flat v1 export with six tables and derived analyses. Not present in this repository. |
 
-`SCHEMA_VERSION` is defined in `scripts/build_pathogens.py`, `scripts/build_effectors_host_proteins.py`
-and `js/data/schema.js`; all three must agree.
+`SCHEMA_VERSION` is defined in `scripts/build_pathogens.py`, `scripts/build_effectors_host_proteins.py`,
+`scripts/build_interactions.py` and `js/data/schema.js`. The pathogen and effector builders emit the
+intermediate 2.2 envelope; the final interaction build promotes it to 3.0.
 
 ## Pathogens schema
 
@@ -133,8 +160,8 @@ Primary key `entity_id`. The natural uniqueness rule remains
 | `effector_name_class` | string or null | Protein-family classification. |
 | `pathogen_id` | integer | Foreign key to `pathogens.pathogen_id`. |
 | `pathogen_name` | string | Producing pathogen display name. |
-| `host_protein_id` | integer or null | Foreign key to `host_proteins.host_protein_id` on exact target match; null otherwise. |
-| `host_target` | string | Host protein or cellular component targeted. |
+| `host_target_id` | integer | Foreign key to `host_targets.host_target_id`. |
+| `host_target` | string | Curated host protein or cellular component targeted. |
 | `host_target_class` | string or null | Target classification (protein, organelle, pathway, ...). |
 | `type`, `type_class` | string | Secretion type (T3SS/T4SS/T6SS, toxin, ...) and its classification. |
 | `mechanism`, `mechanism_class` | string | Host-cell manipulation mechanism and its classification. |
@@ -148,6 +175,7 @@ Primary key `entity_id`. The natural uniqueness rule remains
 | `go_terms` | array | UniProt GO annotations. |
 | `signal_peptide` | object or null | `{start, end}` annotation. |
 | `transmembrane_regions` | array | `[{start, end}, ...]` annotations. |
+| `reference_ids` | array | `PM-REF` citations supporting the row. |
 
 Sequence-derived values are currently stored on the curated rows. The target state moves them to a
 derived table keyed by `entity_id`, with method and input-version provenance.
@@ -167,18 +195,44 @@ derived table keyed by `entity_id`, with method and input-version provenance.
 | `function` | string | Curated functional summary. |
 | `pathway`, `pathways_detailed` | string / array | Pathway membership (KEGG/Reactome). |
 | `interacting_partners` | array | STRING partners with scores. |
-| `reference_doi` | string or null | Curation reference. |
+| `reference_doi` | string or null | Legacy curation reference. |
+| `reference_ids` | array | `PM-REF` citations supporting the row. |
 | `last_updated` | date | ISO date of the last build. |
+
+## References schema
+
+| Field | Type | Notes |
+|---|---|---|
+| `entity_id` | string | Canonical ID, `PM-REF-<n>`. |
+| `doi` | string | Normalized DOI. |
+| `url` | string | Resolvable DOI URL. |
+
+## Host targets schema
+
+| Field | Type | Notes |
+|---|---|---|
+| `entity_id` | string | Canonical ID, `PM-TGT-<n>`. |
+| `host_target_id` | integer | Stable internal ID. |
+| `name` | string | Original curated target string. |
+| `host_target_class` | string | Target class such as protein, organelle, process or non-protein. |
+| `host_protein_id` | integer or null | Resolved `host_proteins.host_protein_id`; null when unresolved. |
+| `resolution_status` | string | Audit outcome (resolved, ambiguous, non-protein, ...). |
+| `audit_status` | string | Audit state used by the interaction build. |
+| `resolved_name`, `gene_symbol`, `uniprot_id` | string or null | Canonical resolved protein identity. |
+| `aliases`, `members` | array | Accepted aliases and complex members. |
+| `evidence_sources`, `audit_notes` | array / string | Audit provenance and rationale. |
 
 ## Interaction evidence schema (Phase 3)
 
 `interactions` is a normalized relationship table. Its stable primary key is
-`interaction_id` (`PM-INT-<n>`); each row references an `effectors.entity_id`
-(`PM-EFF-<n>`) and `host_proteins.entity_id` (`PM-HST-<n>`), and records the
-mechanism, relationship predicate and provenance.
+`interaction_id` (`PM-INT-<n>`); its `effector_id` and `host_protein_id` fields
+store `effectors.entity_id` (`PM-EFF-<n>`) and `host_proteins.entity_id`
+(`PM-HST-<n>`), and each row records the mechanism, relationship predicate and
+provenance.
 
 `interaction_evidence` is a separate one-to-many table. Its stable primary key
-is `evidence_id` (`PM-EVD-<n>`) and it references `interaction_id`. Evidence
+is `evidence_id` (`PM-EVD-<n>`) and its `interaction_id` field references
+`interactions.interaction_id`. Evidence
 is classified as `experimental`, `predicted`, `annotation-derived` or
 `hypothetical`; each record can retain DOI, PMID, database accession,
 provenance and a note. This preserves multiple sources for one relationship
@@ -214,19 +268,20 @@ Run `python scripts/analyze_interactions.py` to write
 `--check` performs the same work without replacing the output file;
 `--strict` exits non-zero on any validation or result issue.
 
-## Generated analyses (target state)
+## Generated analyses (Phase 6)
 
-Analyses are not part of the curated dataset. When added they must live in a separate derived
-layer (`data/derived/` or an equivalent cache) and carry:
+Analyses are not part of the curated dataset. They live under `data/derived/`:
+`interaction_analysis.json`, `effector_sequence_analysis.json`, `functional_enrichment.json`,
+`pathway_analysis.json`, `protein_network.json` and `comparative_pathogen.json`. Every artifact
+carries:
 
-- Stable generated-record ID and source `entity_id` values (never display names).
-- Module and software version.
-- Input dataset version or content hash.
-- Algorithm, parameters and reference-resource versions.
-- Evidence class (`experimental`, `predicted`, `annotation-derived`, `hypothetical`).
-- Confidence/score definition, citation/accession, timestamp and validation status.
+- Analysis name/version, generation timestamp and source dataset SHA-256.
+- Input table names and analysis parameters.
+- Validation issues and an explicit completeness/power status.
+- Stable source `entity_id` values (never display names as keys).
+- Algorithm-specific parameters, scores and evidence class where applicable.
 
-Module definitions and evidence rules: `docs/ANALYSES.md`.
+Module definitions, evidence rules and output schemas: `docs/ANALYSES.md`.
 
 ## Enrichment rules
 

@@ -18,8 +18,9 @@ export const ANALYSIS_MODULES = [
         number: "02",
         name: "Effector Sequence Analysis",
         description: "Examine pathogen effector sequences and features.",
-        version: "0.1.0",
-        status: "planned",
+        version: "1.0.0",
+        status: "available",
+        page: "effector-sequence-analysis.html",
         prerequisites: {
             tables: ["effectors"],
             fields: []
@@ -30,8 +31,9 @@ export const ANALYSIS_MODULES = [
         number: "03",
         name: "Pathway Analysis",
         description: "Explore biological pathways and their relationships.",
-        version: "0.1.0",
-        status: "planned",
+        version: "1.0.0",
+        status: "available",
+        page: "pathway-analysis.html",
         prerequisites: {
             tables: ["pathogens", "host_proteins"],
             fields: []
@@ -42,8 +44,9 @@ export const ANALYSIS_MODULES = [
         number: "04",
         name: "Functional Enrichment",
         description: "Identify enriched biological functions.",
-        version: "0.1.0",
-        status: "planned",
+        version: "1.0.0",
+        status: "available",
+        page: "functional-enrichment.html",
         prerequisites: {
             tables: ["host_proteins"],
             fields: []
@@ -54,10 +57,11 @@ export const ANALYSIS_MODULES = [
         number: "05",
         name: "Protein Network Analysis",
         description: "Explore host and pathogen protein networks.",
-        version: "0.1.0",
-        status: "planned",
+        version: "1.0.0",
+        status: "available",
+        page: "protein-network-analysis.html",
         prerequisites: {
-            tables: ["pathogens", "effectors", "host_proteins"],
+            tables: ["pathogens", "effectors", "host_proteins", "interactions"],
             fields: []
         }
     },
@@ -66,8 +70,9 @@ export const ANALYSIS_MODULES = [
         number: "06",
         name: "Comparative Pathogen Analysis",
         description: "Compare biological features across pathogens.",
-        version: "0.1.0",
-        status: "planned",
+        version: "1.0.0",
+        status: "available",
+        page: "comparative-pathogen-analysis.html",
         prerequisites: {
             tables: ["pathogens", "effectors"],
             fields: []

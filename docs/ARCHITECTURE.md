@@ -84,15 +84,20 @@ Vanilla ES modules, no build step, no external dependencies.
 | `js/utils/dataset.js` | Validate and normalize uploads | `validateDataset()`, `normalizeDataset()` |
 | `js/ui/upload.js` | Upload/sample/template flow | `initUpload()` |
 | `js/views/database.js` | Database browser rendering | `initDatabase()`, `renderDatabase()` |
-| `js/data/analysis.js` | Fetch optional Phase 4 analysis artifact | `loadInteractionAnalysis()` |
+| `js/data/analysis.js` | Fetch generated analysis artifacts by name | `loadAnalysisArtifact()`, `loadInteractionAnalysis()` |
 | `js/analysis/network.js` | Derived/dataset network model, filtering, detail joins | `buildNetworkModel()`, `filterNetwork()`, `buildNodeDetail()`, `buildEdgeDetail()` |
+| `js/analysis/artifact.js` | Shared status, provenance, formatting and CSV helpers | `renderStatus()`, `renderProvenance()`, `exportCsv()` |
+| `js/pages/artifact-page.js` | Shared controller for Phase 6 analysis pages | `initArtifactPage()` |
 | `js/views/interaction-network.js` | Layered SVG network, selection, details, SVG export | `createNetworkView()` |
 | `js/utils/export.js` | Download, CSV and XML helpers | `downloadText()`, `toCsv()`, `escapeXml()` |
 
 **Data flow:** `index.html` → `main.js` → `loader.js` (fetch JSON) → `database.js` (render) with
 `upload.js` replacing the in-memory dataset after validation. `interaction-analysis.html` loads the
 same dataset, optionally fetches `data/derived/interaction_analysis.json`, and falls back to the
-normalized interaction tables when the derived artifact does not match.
+normalized interaction tables when the derived artifact does not match. The five Phase 6 pages
+(`effector-sequence-analysis.html`, `functional-enrichment.html`, `pathway-analysis.html`,
+`protein-network-analysis.html`, `comparative-pathogen-analysis.html`) each load one generated
+artifact through `artifact-page.js`; they do not recompute scientific metrics in the browser.
 
 **Separation of concerns:**
 
@@ -109,8 +114,8 @@ normalized interaction tables when the derived artifact does not match.
 | Area | Status |
 |---|---|
 | Database tables | `pathogens` (53), `effectors` (246), `host_proteins` (33), plus host targets, references, interactions and evidence |
-| Navigation | Home, Database and Interaction Analysis |
-| Generated analyses | Interaction Analysis network page implemented; seven other modules planned |
+| Navigation | Home, Database and deep-linked analysis pages |
+| Generated analyses | Interaction, effector sequence, functional enrichment, pathway, protein network and comparative pathogen pages implemented |
 | Research & Methods page | Not implemented |
 
 **Target navigation:** four top-level destinations. Do not create one top-level link per
@@ -139,7 +144,12 @@ analysis module.
 | Pathogens | `build_pathogens.py` | `pathogens_seed.json`, `pathogen_overrides.json`, NCBI APIs | `pathomap-dataset.json`, `pathomap.db`, `schema.sql`, `schema/pathogens.schema.json` |
 | Proteins | `build_effectors_host_proteins.py` | `effectors_seed.json`, `host_proteins_seed.json`, `effector_uniprot_mapping.json`, UniProt/InterPro/Pfam/STRING APIs | Updated `pathomap-dataset.json`, `sample-dataset.json`, `pathomap.db`, `schema.sql` |
 | Interactions | `build_interactions.py` | Dataset effectors/host targets/host proteins, interaction seeds, ID registries | `interactions`, `interaction_evidence`, updated dataset/sample, SQLite tables, registries |
-| Analysis | `analyze_interactions.py` | Validated dataset interactions/evidence | `data/derived/interaction_analysis.json` |
+| Interaction analysis | `analyze_interactions.py` | Validated dataset interactions/evidence | `data/derived/interaction_analysis.json` |
+| Sequence analysis | `analyze_effector_sequences.py` | Dataset effectors/domains | `data/derived/effector_sequence_analysis.json` |
+| Functional enrichment | `analyze_functional_enrichment.py` | Dataset host proteins/interactions | `data/derived/functional_enrichment.json` |
+| Pathway analysis | `analyze_pathways.py` | Dataset host proteins + KEGG REST | `data/derived/pathway_analysis.json` |
+| Protein network | `analyze_protein_network.py` | Dataset proteins/interactions + STRING | `data/derived/protein_network.json` |
+| Comparative pathogens | `analyze_comparative_pathogens.py` | Dataset pathogens/effectors/interactions | `data/derived/comparative_pathogen.json` |
 
 Run order matters: proteins expect the pathogens dataset, interactions expect resolved proteins,
 and analysis expects the interaction table. Details are in `docs/DATA_PIPELINE.md`.

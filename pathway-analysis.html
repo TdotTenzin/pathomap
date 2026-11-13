@@ -1,0 +1,80 @@
+<!--
+  Pathway Analysis - Phase 6 generated-analysis page.
+  Data: data/derived/pathway_analysis.json
+  Generator: python scripts/analyze_pathways.py
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pathway Analysis - PathoMap</title>
+  <meta name="description" content="Reactome and KEGG pathway representation and over-representation for targeted host proteins.">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/utilities.css">
+</head>
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <a class="nav-brand" href="index.html">PathoMap</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="interaction-analysis.html">Interaction Analysis</a></li>
+        <li><a href="pathway-analysis.html" aria-current="page">Pathway Analysis</a></li>
+      </ul>
+      <button class="dark-toggle" id="dark-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9790;</button>
+    </div>
+  </nav>
+
+  <main>
+    <section id="pathway-analysis" class="section ia-section">
+      <div class="container">
+        <div class="section-header ia-header">
+          <h1 class="section-title">Pathway Analysis</h1>
+          <p class="section-subtitle">
+            Reactome memberships from curated annotations and KEGG pathways mapped
+            from stored human gene identifiers.
+          </p>
+          <div class="analysis-status-row" id="analysis-status">Loading analysis…</div>
+        </div>
+
+        <div id="analysis-error" hidden></div>
+        <div class="ia-stats" id="analysis-stats" aria-label="Pathway analysis summary"></div>
+
+        <div class="analysis-toolbar" id="analysis-toolbar">
+          <label class="analysis-filter" id="analysis-filter-field" hidden>
+            <span>Filter</span>
+            <select class="tool-input" id="analysis-filter"></select>
+          </label>
+          <input class="tool-input analysis-search" id="analysis-search" type="search" autocomplete="off">
+          <button class="tool-btn" id="analysis-export" type="button">Download CSV</button>
+          <span class="analysis-count" id="analysis-count"></span>
+        </div>
+
+        <div id="analysis-extra"></div>
+
+        <div class="ia-panel">
+          <div class="ia-panel-header">
+            <h3>Pathway enrichment</h3>
+            <span class="ia-panel-note">Reactome + KEGG</span>
+          </div>
+          <div class="analysis-table-wrap" id="analysis-table-wrap">
+            <table class="db-table analysis-table">
+              <thead><tr id="analysis-table-head"></tr></thead>
+              <tbody id="analysis-table-body"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="analysis-notes"></div>
+        <div id="analysis-provenance"></div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="js/pages/pathways.js"></script>
+</body>
+</html>

@@ -10,6 +10,10 @@ documented in `docs/DATA_PIPELINE.md`; schemas are in `docs/DATASET.md`.
 | `pathogens_seed.json` | Base pathogen records |
 | `effectors_seed.json` | Effector records linked to pathogens |
 | `host_proteins_seed.json` | Host protein reference records |
+| `host_proteins_audit_seed.json` | Supplemental host-protein rows added during target audit |
+| `host_target_audit.json` | Audited resolution decisions for every curated host target |
+| `host_target_ids.json` | Persistent host-target entity-ID registry (`PM-TGT`) |
+| `reference_ids.json` | Persistent reference entity-ID registry (`PM-REF`) |
 | `pathogen_overrides.json` | Manual NCBI lookup overrides (pinned accessions, name fixes) |
 | `effector_uniprot_mapping.json` | Effector name → UniProt accession |
 | `effector_ids.json` | Persistent effector entity-ID registry (assigned once, never reused) |
@@ -56,5 +60,8 @@ warning is logged.
 | `pfam/matches/` | Pfam domain matches |
 | `string/ids/` | UniProt → STRING id resolution |
 | `string/interactions/` | STRING interaction networks |
+| `string/network/` | Combined host-set STRING network responses |
+| `kegg/links/` | KEGG gene-to-pathway link responses |
+| `kegg/pathways_hsa.txt` | KEGG human pathway-name list |
 
 Caches are safe to delete. `--refresh` ignores them; `--no-network` requires them.
