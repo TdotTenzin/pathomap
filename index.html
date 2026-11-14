@@ -11,11 +11,13 @@
                      row count/status line, pagination controls, empty data table shell,
                      and a collapsible "Data dictionary" (<details>) for schema docs.
                      Generated Analyses section (#generated-analyses).
+                     References & Evidence section (#references).
 
   Key element IDs consumed by JS:
     dataset-file, file-input-name, dataset-load-builtin, dataset-load-sample, dataset-status  -> js/ui/upload.js
     db-tabs, db-search, db-download, db-count, db-hint, db-prev, db-next, db-page-size,
     db-page-info, db-pagination-info, db-head, db-body, db-schema-body                       -> js/views/database.js
+    references-content                                                                        -> js/ui/references.js
     dark-toggle                                                                               -> js/main.js
 
   Stylesheets are loaded in cascade order: base -> layout -> components -> utilities.
@@ -168,6 +170,20 @@
         <div id="analysis-modules">
             <!-- Eight analysis module cards will go here -->
         </div>
+      </div>
+    </section>
+
+    <section id="references" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Provenance</p>
+          <h2 class="section-title">References &amp; Evidence</h2>
+          <p class="section-subtitle">
+            Citations and interaction-evidence records supporting the curated dataset.
+          </p>
+        </div>
+
+        <div id="references-content" class="references-content"></div>
       </div>
     </section>
   </main>

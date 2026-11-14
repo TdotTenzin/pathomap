@@ -21,6 +21,7 @@
     - initUpload,
       setUploadStatus               js/ui/upload.js
     - renderAnalyses                js/ui/analyses.js
+    - renderReferences              js/ui/references.js
     - initTheme                      js/ui/theme.js
 
   Loaded by:
@@ -31,6 +32,7 @@ import { loadDataset } from './data/loader.js';
 import { initDatabase, renderDatabase } from './views/database.js';
 import { initUpload, setUploadStatus } from './ui/upload.js';
 import { renderAnalyses } from './ui/analyses.js';
+import { renderReferences } from './ui/references.js';
 import { initTheme } from './ui/theme.js';
 
 (function () {
@@ -55,6 +57,7 @@ import { initTheme } from './ui/theme.js';
             render: (dataset) => {
                 renderDatabase();
                 renderAnalyses(dataset);
+                renderReferences(dataset);
             }
         });
 
@@ -66,6 +69,7 @@ import { initTheme } from './ui/theme.js';
             // Render database and evaluate analysis eligibility
             renderDatabase();
             renderAnalyses(dataset);
+            renderReferences(dataset);
 
             // Dataset statistics
             const pathogenCount = dataset.pathogens.length;
@@ -81,6 +85,7 @@ import { initTheme } from './ui/theme.js';
 
             // Render analysis modules without an available dataset
             renderAnalyses(null);
+            renderReferences(null);
 
             // Report loading failure
             setUploadStatus(

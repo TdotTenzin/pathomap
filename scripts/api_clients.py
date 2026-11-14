@@ -1,9 +1,9 @@
 """API clients for protein data enrichment.
 
 Provides reusable functions for fetching data from UniProt, InterPro, Pfam,
-STRING, and KEGG. Uses the shared http_client module for HTTP infrastructure
-including retry logic, rate limiting, and on-disk caching so builds are
-reproducible and can run offline with cached responses.
+and STRING. Uses the shared http_client module for HTTP infrastructure including
+retry logic, rate limiting, and on-disk caching so builds are reproducible and
+can run offline with cached responses.
 
 Cache layout (relative to ``data/sources``):
 
@@ -14,9 +14,6 @@ Cache layout (relative to ``data/sources``):
     pfam/matches/{accession}.json         Pfam domain annotations
     string/ids/{accession}.json           UniProt -> STRING id resolution
     string/interactions/{accession}.json  STRING interaction networks
-    string/network/set_{hash}.json        Combined STRING networks
-    kegg/links/{gene}.txt                 KEGG gene -> pathway links
-    kegg/pathways_hsa.txt                 KEGG human pathway names
 
 Usage (from a build script)::
 
@@ -33,7 +30,6 @@ gracefully (log a warning and keep the curated seed data).
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
 import sys
 import urllib.parse
@@ -43,12 +39,11 @@ from typing import Any, Optional
 # Add scripts directory to path for relative imports when run as module
 sys.path.insert(0, str(Path(__file__).parent))
 
-from http_client import ApiError, http_json, http_text, slug
+from http_client import ApiError, http_json, slug
 
 UNIPROT_BASE = "https://rest.uniprot.org/uniprotkb"
 INTERPRO_BASE = "https://www.ebi.ac.uk/interpro/api"
 STRING_BASE = "https://string-db.org/api/json"
-KEGG_BASE = "https://rest.kegg.jp"
 
 USER_AGENT = "PathoMap/2.0 (protein enrichment; contact: local development)"
 
@@ -270,92 +265,6 @@ def fetch_string_interactions(
             }
         )
     return interactions
-
-
-def resolve_string_id(
-    uniprot_id: str, cache_root: Path, args: argparse.Namespace
-) -> Optional[str]:
-    """Public wrapper for UniProt -> STRING identifier resolution."""
-    return _resolve_string_id(uniprot_id, cache_root, args)
-
-
-def fetch_string_network_for_ids(
-    string_ids: list[str],
-    cache_root: Path,
-    args: argparse.Namespace,
-    *,
-    required_score: int = 700,
-    species: int = 9606,
-) -> list[dict]:
-    """Fetch a combined STRING network for resolved STRING identifiers.
-
-    STRING expects identifiers to be newline-separated; a comma-separated
-    list returns HTTP 404 for multi-protein queries. The raw response is
-    cached on a hash of the sorted identifier set, the score threshold and
-    the species, so repeated analysis builds are reproducible and can run
-    offline.
-    """
-    identifiers = sorted({str(item).strip() for item in string_ids if str(item).strip()})
-    if not identifiers:
-        return []
-    fingerprint = hashlib.sha1(
-        "|".join([*identifiers, str(required_score), str(species)]).encode("utf-8")
-    ).hexdigest()[:16]
-    cache_path = cache_root / "string" / "network" / f"set_{fingerprint}.json"
-    query = urllib.parse.quote("\r".join(identifiers))
-    url = (
-        f"{STRING_BASE}/network?identifiers={query}"
-        f"&required_score={required_score}&species={species}"
-        "&caller_identity=pathomap"
-    )
-    payload = http_json(url, args, cache_path, user_agent=USER_AGENT)
-    return payload if isinstance(payload, list) else []
-
-
-# ---------------------------------------------------------------------------
-# KEGG (UniProt KEGG gene IDs -> KEGG pathways)
-# ---------------------------------------------------------------------------
-
-def fetch_kegg_gene_pathways(
-    gene_id: str, cache_root: Path, args: argparse.Namespace
-) -> list[dict]:
-    """Return KEGG pathway links for a KEGG gene identifier such as ``hsa:5868``."""
-    gene = str(gene_id or "").strip()
-    if not gene:
-        return []
-    cache_path = cache_root / "kegg" / "links" / f"{slug(gene)}.txt"
-    url = f"{KEGG_BASE}/link/pathway/{urllib.parse.quote(gene)}"
-    text = http_text(url, args, cache_path, rate_limit=0.34, user_agent=USER_AGENT)
-    links: list[dict] = []
-    for line in text.splitlines():
-        parts = line.split("\t")
-        if len(parts) < 2:
-            continue
-        target = parts[1].strip()
-        if target.startswith("path:"):
-            target = target[len("path:"):]
-        if target:
-            links.append({"gene_id": parts[0].strip(), "pathway_id": target})
-    return links
-
-
-def fetch_kegg_pathway_names(
-    cache_root: Path, args: argparse.Namespace, *, organism: str = "hsa"
-) -> dict[str, str]:
-    """Return KEGG pathway IDs -> names for an organism."""
-    cache_path = cache_root / "kegg" / f"pathways_{organism}.txt"
-    url = f"{KEGG_BASE}/list/pathway/{organism}"
-    text = http_text(url, args, cache_path, rate_limit=0.34, user_agent=USER_AGENT)
-    names: dict[str, str] = {}
-    for line in text.splitlines():
-        parts = line.split("\t")
-        if len(parts) < 2:
-            continue
-        pathway_id = parts[0].strip()
-        if pathway_id.startswith("path:"):
-            pathway_id = pathway_id[len("path:"):]
-        names[pathway_id] = parts[1].strip()
-    return names
 
 
 # ---------------------------------------------------------------------------

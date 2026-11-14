@@ -2,10 +2,10 @@
   database.js - Main database-browser view (tabs, table, search, sort,
   pagination, CSV export, and the collapsible data dictionary).
 
-  Purpose: Renders the three dataset tables (pathogens / effectors /
-  host_proteins) into the #database section of index.html. All DOM updates go
-  through renderDatabase(), which is re-invoked on every state change (tab
-  switch, search keystroke, sort click, page nav).
+  Purpose: Renders the five primary dataset tables (pathogens / effectors /
+  host_targets / host_proteins / interactions) into the #database section of
+  index.html. All DOM updates go through renderDatabase(), which is re-invoked
+  on every state change (tab switch, search keystroke, sort click, page nav).
 
   Exports:
     initDatabase()        Binds toolbar/search/pagination event listeners and
@@ -17,7 +17,8 @@
                           CSV export).
 
   Internal state (module-scoped `state` object):
-    active   Current table id ('pathogens' | 'effectors' | 'host_proteins').
+    active   Current table id ('pathogens' | 'effectors' | 'host_targets' |
+             'host_proteins' | 'interactions').
     search   Lowercase search string; filters across all visible columns.
     sortKey  Column key being sorted (null = no sort).
     sortDir  'asc' or 'desc'.
@@ -68,9 +69,7 @@ import {
   getEffectors,
   getHostProteins,
   getHostTargets,
-  getReferences,
   getInteractions,
-  getInteractionEvidence,
 } from '../data/loader.js';
 import {
   COLUMN_LABELS,
@@ -92,18 +91,10 @@ import {
   HOST_TARGET_COLUMN_LABELS,
   HOST_TARGET_VISIBLE_COLUMNS,
   HOST_TARGET_COLUMNS,
-  REFERENCE_COLUMNS_META,
-  REFERENCE_COLUMN_LABELS,
-  REFERENCE_VISIBLE_COLUMNS,
-  REFERENCE_COLUMNS,
   INTERACTION_COLUMNS_META,
   INTERACTION_COLUMN_LABELS,
   INTERACTION_VISIBLE_COLUMNS,
   INTERACTION_COLUMNS,
-  INTERACTION_EVIDENCE_COLUMNS_META,
-  INTERACTION_EVIDENCE_COLUMN_LABELS,
-  INTERACTION_EVIDENCE_VISIBLE_COLUMNS,
-  INTERACTION_EVIDENCE_COLUMNS,
 } from '../data/schema.js';
 
 // Available tables to display in the database view (id, label, description,
@@ -126,14 +117,6 @@ const TABLES = [
     exportColumns: EFFECTOR_COLUMNS,
   },
   {
-    id: 'host_proteins',
-    label: 'Host Proteins',
-    description:
-      'Host proteins targeted by pathogen effectors, with UniProt identifiers, cellular localization, and functional annotations.',
-    columns: HOST_PROTEIN_VISIBLE_COLUMNS,
-    exportColumns: HOST_PROTEIN_COLUMNS,
-  },
-  {
     id: 'host_targets',
     label: 'Host Targets',
     description:
@@ -142,11 +125,12 @@ const TABLES = [
     exportColumns: HOST_TARGET_COLUMNS,
   },
   {
-    id: 'references',
-    label: 'References',
-    description: 'Normalized DOI references linked to curated PathoMap records.',
-    columns: REFERENCE_VISIBLE_COLUMNS,
-    exportColumns: REFERENCE_COLUMNS,
+    id: 'host_proteins',
+    label: 'Host Proteins',
+    description:
+      'Canonical host-protein records used by interactions and target resolution, including proteins referenced by unresolved or ambiguous target annotations.',
+    columns: HOST_PROTEIN_VISIBLE_COLUMNS,
+    exportColumns: HOST_PROTEIN_COLUMNS,
   },
   {
     id: 'interactions',
@@ -154,13 +138,6 @@ const TABLES = [
     description: 'Normalized effector-to-human-protein relationships with stable IDs and mechanisms.',
     columns: INTERACTION_VISIBLE_COLUMNS,
     exportColumns: INTERACTION_COLUMNS,
-  },
-  {
-    id: 'interaction_evidence',
-    label: 'Interaction Evidence',
-    description: 'Multiple classified evidence records may support one interaction.',
-    columns: INTERACTION_EVIDENCE_VISIBLE_COLUMNS,
-    exportColumns: INTERACTION_EVIDENCE_COLUMNS,
   },
 ];
 
@@ -196,16 +173,12 @@ function tableDef(id) {
 function rowsFor(def) {
   const rows = def.id === 'effectors'
     ? getEffectors()
-    : def.id === 'host_proteins'
-      ? getHostProteins()
-      : def.id === 'host_targets'
-        ? getHostTargets()
-        : def.id === 'references'
-          ? getReferences()
-          : def.id === 'interactions'
-            ? getInteractions()
-            : def.id === 'interaction_evidence'
-              ? getInteractionEvidence()
+    : def.id === 'host_targets'
+      ? getHostTargets()
+      : def.id === 'host_proteins'
+        ? getHostProteins()
+        : def.id === 'interactions'
+          ? getInteractions()
           : getPathogens();
   const query = state.search.trim().toLowerCase();
   let out = rows;
@@ -377,21 +350,17 @@ function displayValue(column, value) {
 // newer normalized tables from falling back to raw snake_case keys.
 function columnLabelsFor(tableId) {
   if (tableId === 'effectors') return EFFECTOR_COLUMN_LABELS;
-  if (tableId === 'host_proteins') return HOST_PROTEIN_COLUMN_LABELS;
   if (tableId === 'host_targets') return HOST_TARGET_COLUMN_LABELS;
-  if (tableId === 'references') return REFERENCE_COLUMN_LABELS;
+  if (tableId === 'host_proteins') return HOST_PROTEIN_COLUMN_LABELS;
   if (tableId === 'interactions') return INTERACTION_COLUMN_LABELS;
-  if (tableId === 'interaction_evidence') return INTERACTION_EVIDENCE_COLUMN_LABELS;
   return COLUMN_LABELS;
 }
 
 function columnMetaFor(tableId) {
   if (tableId === 'effectors') return EFFECTOR_COLUMNS_META;
-  if (tableId === 'host_proteins') return HOST_PROTEIN_COLUMNS_META;
   if (tableId === 'host_targets') return HOST_TARGET_COLUMNS_META;
-  if (tableId === 'references') return REFERENCE_COLUMNS_META;
+  if (tableId === 'host_proteins') return HOST_PROTEIN_COLUMNS_META;
   if (tableId === 'interactions') return INTERACTION_COLUMNS_META;
-  if (tableId === 'interaction_evidence') return INTERACTION_EVIDENCE_COLUMNS_META;
   return COLUMN_META;
 }
 
@@ -600,8 +569,8 @@ function schemaLink(label, href) {
 }
 
 // Render schema documentation table with column metadata (the "Data dictionary"
-// <details> panel). Pulls COLUMN_META (or effector/host-protein equivalent)
-// for the active table and renders field/type/description/source rows plus
+// <details> panel). Pulls the active table's column metadata and renders
+// field/type/description/source rows plus
 // links to the SQL schema, SQLite DB, and JSON Schema files.
 function renderSchema() {
   const body = document.getElementById('db-schema-body');

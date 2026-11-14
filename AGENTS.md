@@ -1,5 +1,7 @@
 # Efficiency rules
 
+- For non-trivial code work, load the `token-efficiency` skill before searching.
+- Comment-heavy files: skip header comments; grep code symbols and read only the needed slice.
 - Grep/glob before read; never read a file you can search.
 - Read with offset/limit — only the lines you need, never whole files by default.
 - Batch independent tool calls in one message.

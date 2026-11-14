@@ -68,7 +68,6 @@ RATE_LIMITS = {
     "rest.uniprot.org": 0.05,   # ~20 req/s (UniProt allows more, but we stay conservative)
     "www.ebi.ac.uk": 0.10,     # ~10 req/s (InterPro/Pfam don't specify hard limits)
     "string-db.org": 1.00,     # 1 req/s (per STRING's explicit recommendation)
-    "rest.kegg.jp": 0.34,      # ~3 req/s (conservative KEGG REST spacing)
     "eutils.ncbi.nlm.nih.gov": 0.34,  # NCBI E-Utilities (custom rate limit for pathogen builds)
     "api.ncbi.nlm.nih.gov": 0.34,     # NCBI Datasets API (custom rate limit for pathogen builds)
 }

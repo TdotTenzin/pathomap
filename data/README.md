@@ -11,7 +11,7 @@ data/
 ├── sample-dataset.json          # generated; 5 pathogens, 27 effectors, 33 host proteins
 ├── pathomap.db                  # generated SQLite database
 ├── schema.sql                   # generated SQLite DDL
-├── derived/                     # generated analysis artifacts
+├── derived/interaction_analysis.json # generated interaction-analysis artifact
 ├── classification-mapping.json  # manually maintained classification map
 ├── schema/
 │   └── pathogens.schema.json    # generated JSON Schema
@@ -29,11 +29,6 @@ data/
 - `schema/pathogens.schema.json`
 - `derived/interaction_analysis.json` — validation/deduplication report, interaction and
   evidence statistics, unresolved targets, multi-pathogen host proteins and network nodes/edges
-- `derived/effector_sequence_analysis.json` — sequence composition, domains, motifs and flags
-- `derived/functional_enrichment.json` — GO over-representation against the annotated host background
-- `derived/pathway_analysis.json` — Reactome and KEGG pathway over-representation
-- `derived/protein_network.json` — STRING host network, centrality, components, communities and hubs
-- `derived/comparative_pathogen.json` — per-pathogen summaries, Jaccard similarity and clustering
 
 **Manually maintained:**
 
@@ -48,11 +43,6 @@ python scripts/build_pathogens.py
 python scripts/build_effectors_host_proteins.py --enrich-effectors
 python scripts/build_interactions.py
 python scripts/analyze_interactions.py
-python scripts/analyze_effector_sequences.py
-python scripts/analyze_functional_enrichment.py
-python scripts/analyze_pathways.py
-python scripts/analyze_protein_network.py
-python scripts/analyze_comparative_pathogens.py
 ```
 
 Common flags: `--check`, `--refresh`, `--no-network`. Outputs and enrichment rules:

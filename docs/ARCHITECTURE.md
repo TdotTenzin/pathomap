@@ -29,7 +29,7 @@ scientific metrics.
 
 ```
 host-pathogen-tracker/
-├── index.html                  # SPA shell: nav, hero, database section
+├── index.html                  # SPA shell: nav, hero, database, analyses, references
 ├── css/                        # base, layout, components, utilities
 ├── js/
 │   ├── main.js                 # Boot: init database view + upload, load dataset
@@ -39,6 +39,7 @@ host-pathogen-tracker/
 │   │   └── schema.js           # Columns, labels, enums, data dictionary
 │   ├── ui/
 │   │   ├── analyses.js         # Generated Analyses cards
+│   │   ├── references.js       # Home-page References & Evidence section
 │   │   ├── theme.js            # Dark-mode persistence
 │   │   └── upload.js           # Upload, built-in, sample and template loading
 │   ├── utils/
@@ -83,21 +84,18 @@ Vanilla ES modules, no build step, no external dependencies.
 | `js/data/schema.js` | Column metadata, labels, enums | `COLUMN_META`, `EFFECTOR_COLUMNS_META`, `HOST_PROTEIN_COLUMNS_META`, `ENUMS` |
 | `js/utils/dataset.js` | Validate and normalize uploads | `validateDataset()`, `normalizeDataset()` |
 | `js/ui/upload.js` | Upload/sample/template flow | `initUpload()` |
+| `js/ui/references.js` | Home-page references and evidence rendering | `renderReferences()` |
 | `js/views/database.js` | Database browser rendering | `initDatabase()`, `renderDatabase()` |
-| `js/data/analysis.js` | Fetch generated analysis artifacts by name | `loadAnalysisArtifact()`, `loadInteractionAnalysis()` |
+| `js/data/analysis.js` | Fetch optional Phase 4 analysis artifact | `loadInteractionAnalysis()` |
 | `js/analysis/network.js` | Derived/dataset network model, filtering, detail joins | `buildNetworkModel()`, `filterNetwork()`, `buildNodeDetail()`, `buildEdgeDetail()` |
-| `js/analysis/artifact.js` | Shared status, provenance, formatting and CSV helpers | `renderStatus()`, `renderProvenance()`, `exportCsv()` |
-| `js/pages/artifact-page.js` | Shared controller for Phase 6 analysis pages | `initArtifactPage()` |
 | `js/views/interaction-network.js` | Layered SVG network, selection, details, SVG export | `createNetworkView()` |
 | `js/utils/export.js` | Download, CSV and XML helpers | `downloadText()`, `toCsv()`, `escapeXml()` |
 
-**Data flow:** `index.html` → `main.js` → `loader.js` (fetch JSON) → `database.js` (render) with
-`upload.js` replacing the in-memory dataset after validation. `interaction-analysis.html` loads the
-same dataset, optionally fetches `data/derived/interaction_analysis.json`, and falls back to the
-normalized interaction tables when the derived artifact does not match. The five Phase 6 pages
-(`effector-sequence-analysis.html`, `functional-enrichment.html`, `pathway-analysis.html`,
-`protein-network-analysis.html`, `comparative-pathogen-analysis.html`) each load one generated
-artifact through `artifact-page.js`; they do not recompute scientific metrics in the browser.
+**Data flow:** `index.html` → `main.js` → `loader.js` (fetch JSON) → `database.js` and
+`references.js` (render) with `upload.js` replacing the in-memory dataset after validation.
+`interaction-analysis.html` loads the same dataset, optionally fetches
+`data/derived/interaction_analysis.json`, and falls back to the normalized interaction tables when
+the derived artifact does not match.
 
 **Separation of concerns:**
 
@@ -113,9 +111,9 @@ artifact through `artifact-page.js`; they do not recompute scientific metrics in
 
 | Area | Status |
 |---|---|
-| Database tables | `pathogens` (53), `effectors` (246), `host_proteins` (33), plus host targets, references, interactions and evidence |
-| Navigation | Home, Database and deep-linked analysis pages |
-| Generated analyses | Interaction, effector sequence, functional enrichment, pathway, protein network and comparative pathogen pages implemented |
+| Database tables | Primary tabs: `pathogens` (53), `effectors` (246), `host_targets` (129), `host_proteins` (33), `interactions` (39). `references` (58) and `interaction_evidence` (39) render in the Home page References & Evidence section. |
+| Navigation | Home, Database and Interaction Analysis |
+| Generated analyses | Interaction Analysis network page implemented; seven other modules planned |
 | Research & Methods page | Not implemented |
 
 **Target navigation:** four top-level destinations. Do not create one top-level link per
@@ -123,8 +121,8 @@ analysis module.
 
 | Section | Purpose | Contents |
 |---|---|---|
-| Home | Introduce PathoMap and route users | Overview, capabilities, dataset status, entry points |
-| Database | Load and inspect primary records | Upload/load controls; Pathogens; Effectors; Host Proteins; data dictionary; export |
+| Home | Introduce PathoMap and route users | Overview, capabilities, dataset status, entry points, References & Evidence |
+| Database | Load and inspect primary records | Upload/load controls; Pathogens; Effectors; Host Targets; Host Proteins; Interactions; data dictionary; export |
 | Generated Analyses | Monitor computation and explore findings | Dashboard, eight module cards, module pages |
 | Research & Methods | Explain the science and computation | Sources, schemas, algorithms, statistics, evidence rules, limitations |
 
@@ -133,6 +131,7 @@ analysis module.
 - Only link to sections that exist; do not expose dead navigation links.
 - Deep-link module pages from the dashboard, not the top navigation.
 - Keep the data dictionary and dataset downloads inside Database.
+- Keep references and interaction evidence in the Home page References & Evidence section, not as primary database tabs.
 - Generated Analyses appears only after a dataset loads and validates.
 - Show honest module states: queued, running, complete, insufficient data, skipped, failed.
 - See `docs/ANALYSES.md` for module specs.
@@ -144,12 +143,7 @@ analysis module.
 | Pathogens | `build_pathogens.py` | `pathogens_seed.json`, `pathogen_overrides.json`, NCBI APIs | `pathomap-dataset.json`, `pathomap.db`, `schema.sql`, `schema/pathogens.schema.json` |
 | Proteins | `build_effectors_host_proteins.py` | `effectors_seed.json`, `host_proteins_seed.json`, `effector_uniprot_mapping.json`, UniProt/InterPro/Pfam/STRING APIs | Updated `pathomap-dataset.json`, `sample-dataset.json`, `pathomap.db`, `schema.sql` |
 | Interactions | `build_interactions.py` | Dataset effectors/host targets/host proteins, interaction seeds, ID registries | `interactions`, `interaction_evidence`, updated dataset/sample, SQLite tables, registries |
-| Interaction analysis | `analyze_interactions.py` | Validated dataset interactions/evidence | `data/derived/interaction_analysis.json` |
-| Sequence analysis | `analyze_effector_sequences.py` | Dataset effectors/domains | `data/derived/effector_sequence_analysis.json` |
-| Functional enrichment | `analyze_functional_enrichment.py` | Dataset host proteins/interactions | `data/derived/functional_enrichment.json` |
-| Pathway analysis | `analyze_pathways.py` | Dataset host proteins + KEGG REST | `data/derived/pathway_analysis.json` |
-| Protein network | `analyze_protein_network.py` | Dataset proteins/interactions + STRING | `data/derived/protein_network.json` |
-| Comparative pathogens | `analyze_comparative_pathogens.py` | Dataset pathogens/effectors/interactions | `data/derived/comparative_pathogen.json` |
+| Analysis | `analyze_interactions.py` | Validated dataset interactions/evidence | `data/derived/interaction_analysis.json` |
 
 Run order matters: proteins expect the pathogens dataset, interactions expect resolved proteins,
 and analysis expects the interaction table. Details are in `docs/DATA_PIPELINE.md`.

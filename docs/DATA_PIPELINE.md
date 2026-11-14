@@ -1,7 +1,6 @@
 # Data Pipeline
 
-How manually curated seed files become the production datasets. Four build stages run in order,
-followed by independent read-only analysis engines.
+How manually curated seed files become the production datasets. Four stages run in order.
 
 ## Overview
 
@@ -15,17 +14,10 @@ data/sources/*.json (curation)
     -> build_interactions.py (relationships + row-level evidence)
     -> analyze_interactions.py (validation, statistics, network)
     -> data/derived/interaction_analysis.json
-    -> analyze_effector_sequences.py
-    -> analyze_functional_enrichment.py
-    -> analyze_pathways.py (KEGG REST mapping)
-    -> analyze_protein_network.py (STRING combined network)
-    -> analyze_comparative_pathogens.py
-    -> data/derived/*.json (one artifact per module)
 ```
 
 The build scripts share `scripts/http_client.py` for caching, per-host throttling and retries.
-`scripts/api_clients.py` wraps the protein APIs and is used by the protein, pathway and network
-stages. `scripts/analysis_common.py` owns shared provenance, statistics and validation helpers.
+`scripts/api_clients.py` wraps the protein APIs and is used only by the protein stage.
 `scripts/identifiers.py` is the shared source of truth for stable entity IDs.
 
 ## Stage 1: pathogens
@@ -130,25 +122,6 @@ input SHA-256 and analysis parameters. Curated tables are never modified.
 `--check` validates without writing, `--dataset`/`--output` override paths, and `--strict`
 returns a non-zero exit code when any validation or result issue exists.
 
-## Stage 5: Phase 6 analyses
-
-Each engine is read-only: it loads the validated dataset, computes one artifact under
-`data/derived/`, and never writes back to curated tables. Every artifact records the source
-schema/build timestamp/SHA-256, input tables, analysis version, parameters, validation issues and
-an explicit status (`complete`, `low_power`, `insufficient_data`).
-
-| Script | Output | External input |
-|---|---|---|
-| `scripts/analyze_effector_sequences.py` | `effector_sequence_analysis.json` | none |
-| `scripts/analyze_functional_enrichment.py` | `functional_enrichment.json` | none |
-| `scripts/analyze_pathways.py` | `pathway_analysis.json` | KEGG REST `/link` |
-| `scripts/analyze_protein_network.py` | `protein_network.json` | STRING network API |
-| `scripts/analyze_comparative_pathogens.py` | `comparative_pathogen.json` | none |
-
-Pathway and network engines accept `--refresh` (ignore caches) and `--no-network` (require cached
-responses). The protein network marks itself `low_power` when the STRING host–host graph is too
-sparse for stable centrality/community estimates.
-
 ## Caching
 
 All responses are cached under `data/sources/`:
@@ -160,10 +133,6 @@ All responses are cached under `data/sources/`:
 - `string/ids/{accession}.json` — UniProt → STRING id resolution
 - `string/interactions/{accession}.json` — STRING networks
 - `ncbi/` — see `data/sources/ncbi/README.md`
-
-- `string/network/` - combined host-set STRING network responses
-- `kegg/links/` - KEGG gene -> pathway link responses
-- `kegg/pathways_hsa.txt` - KEGG human pathway names
 
 The effector ID registry is **not** a cache: it is a curated source file that must be committed
 with effector seed changes so IDs stay stable.
@@ -180,7 +149,6 @@ Per-host minimum spacing in `http_client.py`:
 | `rest.uniprot.org` | 0.05 s | ~20 req/s (conservative) |
 | `www.ebi.ac.uk` (InterPro/Pfam) | 0.10 s | ~10 req/s |
 | `string-db.org` | 1.00 s | 1 req/s |
-| `rest.kegg.jp` | 0.34 s | ~3 req/s |
 | NCBI hosts | 0.34 s | ~3 req/s |
 
 Each request is attempted 3 times. On 429/502/503/504 the client honours `Retry-After` when
@@ -209,29 +177,13 @@ python scripts/build_effectors_host_proteins.py --enrich-effectors --no-network
 python scripts/build_interactions.py
 python scripts/analyze_interactions.py
 
-# Generate the remaining Phase 6 artifacts
-python scripts/analyze_effector_sequences.py
-python scripts/analyze_functional_enrichment.py
-python scripts/analyze_pathways.py
-python scripts/analyze_protein_network.py
-python scripts/analyze_comparative_pathogens.py
-
-# Offline analysis using cached STRING/KEGG responses
-python scripts/analyze_pathways.py --no-network
-python scripts/analyze_protein_network.py --no-network
-
 # Validate without writing outputs
 python scripts/build_pathogens.py --check
 python scripts/build_effectors_host_proteins.py --check
 python scripts/build_interactions.py --check
 python scripts/analyze_interactions.py --check
-python scripts/analyze_effector_sequences.py --check
-python scripts/analyze_functional_enrichment.py --check
-python scripts/analyze_pathways.py --check
-python scripts/analyze_protein_network.py --check
-python scripts/analyze_comparative_pathogens.py --check
 
-# Fail CI on analysis validation warnings
+# Fail CI on interaction-analysis validation warnings
 python scripts/analyze_interactions.py --strict
 
 # Run Python known-answer tests and the browser network-model test

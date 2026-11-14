@@ -60,8 +60,5 @@ warning is logged.
 | `pfam/matches/` | Pfam domain matches |
 | `string/ids/` | UniProt → STRING id resolution |
 | `string/interactions/` | STRING interaction networks |
-| `string/network/` | Combined host-set STRING network responses |
-| `kegg/links/` | KEGG gene-to-pathway link responses |
-| `kegg/pathways_hsa.txt` | KEGG human pathway-name list |
 
 Caches are safe to delete. `--refresh` ignores them; `--no-network` requires them.

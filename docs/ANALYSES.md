@@ -191,14 +191,6 @@ report; exportable feature matrix.
 **Guardrail:** sequence-derived properties are not direct evidence of localization, secretion,
 structure or function.
 
-**Implementation (Phase 6):** `scripts/analyze_effector_sequences.py` writes
-`data/derived/effector_sequence_analysis.json`. It computes composition, molecular weight,
-theoretical pI, GRAVY, Shannon entropy, aliphatic index, aromaticity, Cys/Pro/Gly fractions,
-a labelled low-complexity heuristic, N-terminal composition, RxLR/PEXEL motif hits, and
-annotation-derived domain coverage/families. Per-pathogen and per-type summaries plus the
-missing-sequence list are included. The browser page is `effector-sequence-analysis.html`.
-Known-answer tests: `tests/test_analyze_effector_sequences.py`.
-
 Feature backlog and current implementation status: `docs/SEQUENCE_FEATURES.md`.
 
 ## 3. Pathway Analysis
@@ -218,14 +210,6 @@ where valid; unmapped records.
 **Guardrail:** pathway association is not proof of perturbation; enrichment requires a defensible
 background and multiple-testing correction.
 
-**Implementation (Phase 6):** `scripts/analyze_pathways.py` writes
-`data/derived/pathway_analysis.json`. Reactome memberships use curated host-protein annotations.
-Stored KEGG values are human gene IDs (`hsa:…`), so they are mapped to KEGG pathways through the
-cached KEGG REST `link` endpoint. Foreground is the targeted host-protein set; background is all
-annotated host proteins. Hypergeometric tests are corrected with Benjamini-Hochberg within each
-database. The artifact reports tested/significant pathways and unresolved KEGG genes. Browser page:
-`pathway-analysis.html`; tests: `tests/test_analyze_pathways.py`.
-
 ## 4. Functional Enrichment
 
 **Question:** Does a host-protein set contain more annotations from a category than expected?
@@ -239,14 +223,6 @@ proteins; annotation coverage; background definition.
 
 **Guardrail:** small sets and incomplete annotations produce unstable results; never report
 significance without background and correction.
-
-**Implementation (Phase 6):** `scripts/analyze_functional_enrichment.py` writes
-`data/derived/functional_enrichment.json`. The foreground is the 23 host proteins targeted by
-curated effector interactions; the background is all annotated host proteins. GO terms are tested
-per aspect with the hypergeometric survival function and Benjamini-Hochberg correction. With the
-current small background no term reaches q < 0.05, so the artifact correctly reports zero
-significant terms rather than promoting nominal p-values. Browser page: `functional-enrichment.html`;
-tests: `tests/test_analyze_functional_enrichment.py`.
 
 ## 5. Protein Network Analysis
 
@@ -262,16 +238,6 @@ components; community detection where size supports it; evidence-aware node/edge
 **Guardrail:** centrality describes graph structure, not biological importance; results depend on
 coverage and edge provenance.
 
-**Implementation (Phase 6):** `scripts/analyze_protein_network.py` writes
-`data/derived/protein_network.json`. It builds an undirected host–host graph from a cached STRING
-combined network (`required_score=700`, `species=9606`), with a fallback to cached
-`interacting_partners` when the network endpoint is unavailable. Curated effector–host edges are
-reported separately. The pure-Python engine computes degree, weighted degree, Brandes
-betweenness, harmonic closeness, connected components, greedy-modularity communities and hubs.
-The current combined query yields 47 STRING host–host edges across 27 host proteins, so the
-artifact is marked `complete`; centrality rankings remain descriptive and depend on STRING coverage. Browser page: `protein-network-analysis.html`;
-tests: `tests/test_analyze_protein_network.py`.
-
 ## 6. Comparative Pathogen Analysis
 
 **Question:** How do pathogens differ by effector repertoire, annotations, targets and strategy?
@@ -286,14 +252,6 @@ annotations; comparative summaries.
 
 **Guardrail:** account for unequal annotation coverage, dataset size and missingness; similarity
 does not establish shared evolutionary origin.
-
-**Implementation (Phase 6):** `scripts/analyze_comparative_pathogens.py` writes
-`data/derived/comparative_pathogen.json`. It summarises effectors, domain families, host targets,
-GO terms, type classes, strategy and genome size per pathogen; computes Jaccard similarity for
-effector names, domain families, host targets and type classes; performs average-linkage clustering
-over a 4-dimensional distance vector; and reports shared domains, effector names and host targets.
-Pathogens with too few effectors are excluded from clustering and counted explicitly. Browser page:
-`comparative-pathogen-analysis.html`; tests: `tests/test_analyze_comparative_pathogens.py`.
 
 ## 7. Host Response Analysis
 

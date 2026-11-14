@@ -27,13 +27,13 @@ this repository; tables are rebuilt from `data/sources/` one stage at a time.
 | `data/sources/interaction_ids.json` | Source | Persistent interaction-ID registry (`PM-INT`). |
 | `data/sources/interaction_evidence_ids.json` | Source | Persistent interaction-evidence ID registry (`PM-EVD`). |
 | `data/sources/ncbi/` | Cache | NCBI Taxonomy and Datasets responses. |
-| `data/sources/uniprot/`, `interpro/`, `pfam/`, `string/`, `kegg/` | Cache | Protein and pathway enrichment responses. |
+| `data/sources/uniprot/`, `interpro/`, `pfam/`, `string/` | Cache | Protein enrichment responses. |
 | `data/pathomap-dataset.json` | Generated | The JSON the web app loads. `{ meta, pathogens, references, effectors, host_proteins, host_targets, interactions, interaction_evidence }`. |
 | `data/sample-dataset.json` | Generated | Deterministic subset used by **Load Built-in Sample**. |
 | `data/pathomap.db` | Generated | SQLite database with the same tables. |
 | `data/schema.sql` | Generated | SQLite DDL. |
 | `data/schema/pathogens.schema.json` | Generated | JSON Schema for the dataset envelope and pathogen rows. |
-| `data/derived/*.json` | Generated | Interaction, sequence, GO, pathway, network and comparative analysis artifacts. |
+| `data/derived/interaction_analysis.json` | Generated | Interaction validation, statistics and network artifact. |
 
 ## Table relationships
 
@@ -268,12 +268,10 @@ Run `python scripts/analyze_interactions.py` to write
 `--check` performs the same work without replacing the output file;
 `--strict` exits non-zero on any validation or result issue.
 
-## Generated analyses (Phase 6)
+## Generated analyses (Phase 4)
 
-Analyses are not part of the curated dataset. They live under `data/derived/`:
-`interaction_analysis.json`, `effector_sequence_analysis.json`, `functional_enrichment.json`,
-`pathway_analysis.json`, `protein_network.json` and `comparative_pathogen.json`. Every artifact
-carries:
+Analyses are not part of the curated dataset. The interaction analysis lives under
+`data/derived/interaction_analysis.json`. Every artifact carries:
 
 - Analysis name/version, generation timestamp and source dataset SHA-256.
 - Input table names and analysis parameters.
