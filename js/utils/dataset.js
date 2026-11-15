@@ -7,7 +7,6 @@
   values, and unique IDs regardless of input quality.
 
   Exports:
-    DATA_SCHEMA_VERSION       Re-export of SCHEMA_VERSION.
     validateDataset(data)     Returns { valid, errors[], warnings[] }.
                               Errors block loading (structural problems);
                               warnings are non-fatal (bad enums, dupes, etc.).
@@ -62,8 +61,6 @@ import {
   INTERACTION_EVIDENCE_CLASS_VALUES,
 } from '../data/schema.js';
 import { isEntityId, makeEntityId } from '../data/identifiers.js';
-
-export const DATA_SCHEMA_VERSION = SCHEMA_VERSION;
 
 // ---------------------------------------------------------------------------
 // Type-coercion helpers (private)

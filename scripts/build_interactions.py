@@ -11,15 +11,14 @@ separate table: any interaction may have zero or many supporting records.
 from __future__ import annotations
 
 import argparse
-import datetime as dt
-import json
 import sqlite3
 import sys
 from pathlib import Path
-from typing import Any
 
 sys.path.insert(0, str(Path(__file__).parent))
 
+from build_common import BuildError
+from http_client import read_json, write_json
 from identifiers import (
     assign_registry_ids,
     interaction_evidence_key,

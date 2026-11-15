@@ -754,6 +754,6 @@ export function buildEdgeDetail(dataset, model, edgeId) {
     };
 }
 
-export function evidenceClassLabel(value) {
-    return EVIDENCE_CLASS_LABELS[value] || value || 'No evidence';
+export function evidenceClassLabel(value, fallback = 'No evidence') {
+    return EVIDENCE_CLASS_LABELS[value] || value || fallback;
 }

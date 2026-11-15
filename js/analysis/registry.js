@@ -102,7 +102,3 @@ export const ANALYSIS_MODULES = [
 export function getAnalysisModules() {
     return [...ANALYSIS_MODULES];
 }
-
-export function getAnalysisModule(id) {
-    return ANALYSIS_MODULES.find(module => module.id === id) ?? null;
-}

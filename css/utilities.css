@@ -6,50 +6,13 @@
   utilities win over component/base rules when both apply.
 
   Contents:
-    - .sr-only       Screen-reader-only text (visually hidden but accessible).
     - .hidden        Force display:none (overrides other display rules).
-    - .flex          display:flex shorthand.
-    - .items-center  align-items:center.
-    - .justify-between justify-content:space-between.
-    - .gap-sm/.gap-md  Row/column gap helpers for flex containers.
 
   Note: These are intentionally terse; most layout lives in layout.css and
   components.css. Prefer the semantic classes over utilities when possible.
 */
 
-.sr-only {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  padding: 0 !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  clip: rect(0, 0, 0, 0) !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-}
-
 .hidden {
   display: none !important;
-}
-
-.flex {
-  display: flex;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.gap-sm {
-  gap: 0.75rem;
-}
-
-.gap-md {
-  gap: 1rem;
 }
 

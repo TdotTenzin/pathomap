@@ -61,17 +61,6 @@ def is_entity_id(value: Any, entity_type: str | None = None) -> bool:
     return entity_type is None or match.group(1) == ENTITY_PREFIXES[entity_type]
 
 
-def entity_type_from_id(value: Any) -> str | None:
-    """Return the entity type encoded in an ID, or None if it is malformed."""
-    if not isinstance(value, str):
-        return None
-    match = ENTITY_ID_PATTERN.fullmatch(value)
-    if match is None:
-        return None
-    by_prefix = {prefix: name for name, prefix in ENTITY_PREFIXES.items()}
-    return by_prefix.get(match.group(1))
-
-
 # ---------------------------------------------------------------------------
 # Stable natural keys for registered entity types
 # ---------------------------------------------------------------------------

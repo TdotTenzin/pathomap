@@ -1,11 +1,5 @@
 import { getDataset } from '../data/loader.js';
-
-const EVIDENCE_CLASS_LABELS = {
-  experimental: 'Experimental',
-  predicted: 'Predicted',
-  'annotation-derived': 'Annotation-derived',
-  hypothetical: 'Hypothetical',
-};
+import { evidenceClassLabel } from '../analysis/network.js';
 
 function plural(count, singular, pluralForm = `${singular}s`) {
   return `${count} ${count === 1 ? singular : pluralForm}`;
@@ -109,15 +103,11 @@ function renderReferencesTable(references) {
   );
 }
 
-function evidenceClassLabel(evidenceClass) {
-  return EVIDENCE_CLASS_LABELS[evidenceClass] || evidenceClass || 'Unknown';
-}
-
 function createEvidenceBadge(evidenceClass) {
   const badge = document.createElement('span');
   badge.className = 'references-evidence-class';
   badge.setAttribute('data-class', evidenceClass || 'unknown');
-  badge.textContent = evidenceClassLabel(evidenceClass);
+  badge.textContent = evidenceClassLabel(evidenceClass, 'Unknown');
   return badge;
 }
 
@@ -149,7 +139,7 @@ function createCitation(evidence) {
   return citation;
 }
 
-function evidenceSummary(evidence) {
+function evidenceSummaryText(evidence) {
   const counts = new Map();
   evidence.forEach((row) => {
     const key = row.evidence_class || 'unknown';
@@ -159,7 +149,7 @@ function evidenceSummary(evidence) {
   if (!counts.size) return 'No evidence records';
 
   return Array.from(counts.entries())
-    .map(([evidenceClass, count]) => `${evidenceClassLabel(evidenceClass)} (${count})`)
+    .map(([evidenceClass, count]) => `${evidenceClassLabel(evidenceClass, 'Unknown')} (${count})`)
     .join(' · ');
 }
 
@@ -222,7 +212,7 @@ export function renderReferences(dataset = getDataset()) {
   const evidenceBlock = createDetails('Interaction evidence', `(${evidence.length})`);
   const evidenceMeta = document.createElement('p');
   evidenceMeta.className = 'references-meta';
-  evidenceMeta.textContent = evidenceSummary(evidence);
+  evidenceMeta.textContent = evidenceSummaryText(evidence);
   evidenceBlock.body.appendChild(evidenceMeta);
   evidenceBlock.body.appendChild(renderEvidenceTable(evidence));
   container.appendChild(evidenceBlock.details);

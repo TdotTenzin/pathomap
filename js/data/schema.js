@@ -861,9 +861,7 @@ export const INTERACTION_EVIDENCE_COLUMNS_META = [
   { key: 'provenance', label: 'Provenance', type: 'string', description: 'Source file, database or method supporting this evidence record.', source: 'Curated evidence' },
   { key: 'note', label: 'Note', type: 'string, nullable', description: 'Interpretive note or limitation.', source: 'Curated evidence' },
 ];
-export const INTERACTION_EVIDENCE_COLUMN_LABELS = Object.fromEntries(INTERACTION_EVIDENCE_COLUMNS_META.map((column) => [column.key, column.label]));
 export const INTERACTION_EVIDENCE_COLUMNS = INTERACTION_EVIDENCE_COLUMNS_META.map((column) => column.key);
-export const INTERACTION_EVIDENCE_VISIBLE_COLUMNS = ['evidence_id', 'interaction_id', 'evidence_class', 'doi', 'pmid', 'database_accession'];
 
 // ---------------------------------------------------------------------------
 // Enum registry + human-readable classification labels

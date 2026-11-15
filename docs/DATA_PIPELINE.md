@@ -137,8 +137,7 @@ All responses are cached under `data/sources/`:
 The effector ID registry is **not** a cache: it is a curated source file that must be committed
 with effector seed changes so IDs stay stable.
 
-`api_clients.py` also defines an `uniprot/sequences/` cache path, but current builds do not
-populate it. Caches are safe to delete; they are regenerable.
+Caches are safe to delete; they are regenerable.
 
 ## Rate limits and retries
 

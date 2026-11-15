@@ -96,6 +96,7 @@ import {
   INTERACTION_VISIBLE_COLUMNS,
   INTERACTION_COLUMNS,
 } from '../data/schema.js';
+import { downloadText, toCsv as serializeCsv } from '../utils/export.js';
 
 // Available tables to display in the database view (id, label, description,
 // visible columns for the UI, and full column list for CSV export)
@@ -672,37 +673,24 @@ export function getCurrentRows() {
   return { def, rows: rowsFor(def) };
 }
 
-// Convert rows to CSV format with RFC 4180 escaping (quotes, commas, newlines)
+// Serialize the current table to CSV using the shared CSV helpers.
 function toCsv(def, rows) {
-  // Escape a single field: wrap in quotes and double any inner quotes when needed
-  const escape = (value) => {
-    const text =
-      value === null || value === undefined
-        ? ''
-        : typeof value === 'object'
-          ? JSON.stringify(value)
-          : String(value);
-    return /[",\n]/.test(text) ? '"' + text.replace(/"/g, '""') + '"' : text;
-  };
   const columns = def.exportColumns || def.columns;
   const labels = columnLabelsFor(def.id);
-  const header = columns.map((column) => escape(labels[column] || column)).join(',');
-  const lines = rows.map((row) => columns.map((column) => escape(row[column])).join(','));
-  return [header, ...lines].join('\n');
+  return serializeCsv(
+    columns.map((column) => ({ key: column, label: labels[column] || column })),
+    rows
+  );
 }
 
-// Download current table as CSV file (creates a Blob and triggers browser download)
+// Download current table as CSV file
 function downloadCsv() {
   const { def, rows } = getCurrentRows();
-  const blob = new Blob([toCsv(def, rows)], { type: 'text/csv;charset=utf-8;' });
-  const url = URL.createObjectURL(blob);
-  const anchor = document.createElement('a');
-  anchor.href = url;
-  anchor.download = `pathomap-${def.id}.csv`;
-  document.body.appendChild(anchor);
-  anchor.click();
-  document.body.removeChild(anchor);
-  URL.revokeObjectURL(url);
+  downloadText(
+    toCsv(def, rows),
+    `pathomap-${def.id}.csv`,
+    'text/csv;charset=utf-8;'
+  );
 }
 
 // Initialize database view with event listeners for search, page-size,

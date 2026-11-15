@@ -64,18 +64,6 @@ def fetch_uniprot_entry(
     return payload
 
 
-def fetch_uniprot_sequence(
-    uniprot_id: str, cache_root: Path, args: argparse.Namespace
-) -> dict:
-    """Fetch only the sequence block from UniProt (lighter weight)."""
-    cache_path = cache_root / "uniprot" / "sequences" / f"{uniprot_id}.json"
-    url = f"{UNIPROT_BASE}/{uniprot_id}.json?fields=sequence"
-    payload = http_json(url, args, cache_path, user_agent=USER_AGENT)
-    if not isinstance(payload, dict):
-        raise ApiError(f"unexpected UniProt sequence response for {uniprot_id}")
-    return payload
-
-
 def search_uniprot(
     query: str, organism: str, cache_root: Path, args: argparse.Namespace
 ) -> list[str]:

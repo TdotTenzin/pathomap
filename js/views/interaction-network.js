@@ -7,7 +7,6 @@
 */
 
 import {
-    EVIDENCE_CLASS_LABELS,
     NODE_TYPE_LABELS,
     buildEdgeDetail,
     buildNodeDetail,

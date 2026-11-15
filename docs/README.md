@@ -9,7 +9,6 @@ instead of duplicating content elsewhere.
 | Table schemas, relationships, provenance, schema history | `DATASET.md` |
 | Seed → dataset build, API enrichment, caching, rate limits | `DATA_PIPELINE.md` |
 | Analysis modules, evidence classes, provenance rules | `ANALYSES.md` |
-| Priorities, phases, implementation status | `ROADMAP.md` |
 | Effector sequence features and backlog | `SEQUENCE_FEATURES.md` |
 | Data directory reference | `../data/README.md` |
 | Seed files and API cache reference | `../data/sources/README.md` |
@@ -21,7 +20,6 @@ instead of duplicating content elsewhere.
 - How data is fetched or built → `DATA_PIPELINE.md`.
 - How the app is structured or navigated → `ARCHITECTURE.md`.
 - What an analysis module should compute → `ANALYSES.md`.
-- When work happens → `ROADMAP.md`.
 - Feature-level sequence detail → `SEQUENCE_FEATURES.md`.
 
 Do not restate a topic in a second document; link to its owner.

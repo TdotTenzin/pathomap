@@ -27,11 +27,11 @@ import sys
 import urllib.parse
 import xml.etree.ElementTree as ET
 from pathlib import Path
-from typing import Any
 
 # Add scripts directory to path for relative imports when run as module
 sys.path.insert(0, str(Path(__file__).parent))
 
+from build_common import BuildError, references_for_rows, validate_references
 from http_client import ApiError, http_json, http_text, read_json, slug, write_json
 from identifiers import (
     assign_registry_ids,
@@ -107,10 +107,6 @@ SAMPLE_IDS = [1, 3, 13, 32, 48]
 EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
 DATASETS = "https://api.ncbi.nlm.nih.gov/datasets/v2alpha"
 USER_AGENT = "PathoMap/2.0 (curated pathogens build; contact: local development)"
-
-
-class BuildError(RuntimeError):
-    pass
 
 
 def taxonomy_search(
@@ -493,61 +489,6 @@ def build_reference_rows(
     ]
     references.sort(key=lambda r: int(r["entity_id"].rsplit("-", 1)[1]))
     return references
-
-
-def references_for_rows(rows: list[dict], references: list[dict]) -> list[dict]:
-    """Select the reference rows used by a subset of dataset rows."""
-    used = {ref_id for row in rows for ref_id in row.get("reference_ids", [])}
-    return [ref for ref in references if ref["entity_id"] in used]
-
-
-def validate_references(rows: list[dict], references: list[dict]) -> list[str]:
-    errors: list[str] = []
-    seen_ids: set[str] = set()
-    seen_dois: set[str] = set()
-    for index, ref in enumerate(references):
-        label = f"reference row {index} ({ref.get('entity_id', '?')})"
-        eid = ref.get("entity_id")
-        if not is_entity_id(eid, "reference"):
-            errors.append(f"{label}: invalid reference entity_id {eid!r}")
-        elif eid in seen_ids:
-            errors.append(f"{label}: duplicate entity_id {eid}")
-        else:
-            seen_ids.add(eid)
-        doi = ref.get("doi")
-        if not isinstance(doi, str) or not doi.startswith("10."):
-            errors.append(f"{label}: doi must start with 10.")
-            continue
-        key = reference_key(doi)
-        if key in seen_dois:
-            errors.append(f"{label}: duplicate DOI {doi!r}")
-        else:
-            seen_dois.add(key)
-        if ref.get("url") != f"https://doi.org/{doi}":
-            errors.append(f"{label}: url must be https://doi.org/<doi>")
-
-    for index, row in enumerate(rows):
-        label = f"row {index} ({row.get('name', '?')})"
-        ref_ids = row.get("reference_ids")
-        if not isinstance(ref_ids, list) or not ref_ids:
-            errors.append(f"{label}: reference_ids must be a non-empty list")
-            continue
-        if len(set(ref_ids)) != len(ref_ids):
-            errors.append(f"{label}: reference_ids contains duplicates")
-        for ref_id in ref_ids:
-            if not is_entity_id(ref_id, "reference"):
-                errors.append(f"{label}: invalid reference ID {ref_id!r}")
-            elif ref_id not in seen_ids:
-                errors.append(f"{label}: unknown reference ID {ref_id}")
-        doi = row.get("reference_doi")
-        expected = [
-            ref["entity_id"]
-            for ref in references
-            if isinstance(doi, str) and reference_key(ref["doi"]) == reference_key(doi)
-        ]
-        if expected and ref_ids != expected:
-            errors.append(f"{label}: reference_ids do not match reference_doi")
-    return errors
 
 
 def validate_rows(rows: list[dict]) -> list[str]:

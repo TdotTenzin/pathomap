@@ -95,7 +95,6 @@ Frontend modules, navigation and data flow are documented in `docs/ARCHITECTURE.
 | `docs/DATASET.md` | Table schemas, relationships, provenance, schema history |
 | `docs/DATA_PIPELINE.md` | Seed → dataset build, API enrichment, caching, rate limits |
 | `docs/ANALYSES.md` | Planned analysis modules, evidence classes, provenance rules |
-| `docs/ROADMAP.md` | Prioritised roadmap and implementation status |
 | `docs/SEQUENCE_FEATURES.md` | Effector sequence-feature backlog and status |
 | `data/README.md` | Data directory reference |
 | `data/sources/README.md` | Seed files and API cache reference |

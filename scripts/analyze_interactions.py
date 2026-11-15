@@ -9,7 +9,6 @@ statistics, and writes a derived JSON artifact suitable for a UI or notebook.
 from __future__ import annotations
 
 import argparse
-import datetime as dt
 import hashlib
 import json
 import statistics
@@ -19,6 +18,7 @@ from pathlib import Path
 from typing import Any
 
 sys.path.insert(0, str(Path(__file__).parent))
+from build_common import utc_now
 from identifiers import interaction_evidence_key, is_entity_id
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -40,14 +40,6 @@ PARAMETERS = {
     "host_target_scope": "curated_host_target_ids",
 }
 INPUT_TABLES = ["pathogens", "effectors", "host_proteins", "host_targets", "interactions", "interaction_evidence"]
-
-
-def read_json(path: Path) -> Any:
-    return json.loads(path.read_text(encoding="utf-8"))
-
-
-def timestamp() -> str:
-    return dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
 
 def issue(code: str, detail: str, row_id: str | None = None) -> dict:
@@ -467,7 +459,7 @@ def analyze(
         "meta": {
             "analysis": "interaction_analysis",
             "analysis_version": ANALYSIS_VERSION,
-            "generated_at": timestamp(),
+            "generated_at": utc_now(),
             "source_dataset_path": source_path_label(dataset_path),
             "source_dataset_schema_version": dataset.get("meta", {}).get("schema_version"),
             "source_dataset_built_at": dataset.get("meta", {}).get("built_at"),

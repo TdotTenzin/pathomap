@@ -24,9 +24,13 @@ export function downloadText(text, filename, mime = 'text/plain;charset=utf-8') 
     URL.revokeObjectURL(url);
 }
 
-function csvCell(value) {
+export function csvCell(value) {
     if (value === null || value === undefined) return '';
-    const text = Array.isArray(value) ? value.join('; ') : String(value);
+    const text = Array.isArray(value)
+        ? value.join('; ')
+        : typeof value === 'object'
+          ? JSON.stringify(value)
+          : String(value);
     return /[",\r\n]/.test(text) ? `"${text.replaceAll('"', '""')}"` : text;
 }
 

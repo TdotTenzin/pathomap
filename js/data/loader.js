@@ -16,7 +16,6 @@
     getEffectors()       Shorthand for dataset.effectors (defaults to []).
     getHostProteins()    Shorthand for dataset.host_proteins (defaults to []).
     getHostTargets()     Shorthand for dataset.host_targets (defaults to []).
-    getReferences()      Shorthand for dataset.references (defaults to []).
 
   Internal state:
     dataset  Module-scoped variable holding the normalized dataset. Starts as
@@ -112,15 +111,6 @@ export function getHostTargets() {
   return dataset.host_targets || [];
 }
 
-// Get the normalized reference array from the current dataset.
-export function getReferences() {
-  return dataset.references || [];
-}
-
 export function getInteractions() {
   return dataset.interactions || [];
-}
-
-export function getInteractionEvidence() {
-  return dataset.interaction_evidence || [];
 }
