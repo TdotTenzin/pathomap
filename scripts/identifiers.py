@@ -27,6 +27,8 @@ import re
 from pathlib import Path
 from typing import Any, Iterable, Mapping
 
+from io_utils import write_json_atomic
+
 ENTITY_PREFIXES = {
     "pathogen": "PAT",
     "effector": "EFF",
@@ -58,7 +60,10 @@ def is_entity_id(value: Any, entity_type: str | None = None) -> bool:
     match = ENTITY_ID_PATTERN.fullmatch(value)
     if match is None:
         return False
-    return entity_type is None or match.group(1) == ENTITY_PREFIXES[entity_type]
+    if entity_type is None:
+        return True
+    prefix = ENTITY_PREFIXES.get(entity_type)
+    return prefix is not None and match.group(1) == prefix
 
 
 # ---------------------------------------------------------------------------
@@ -181,11 +186,7 @@ def write_registry(
         "description": description,
         section: {key: registry[key] for key in sorted(registry, key=sort_key)},
     }
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(
-        json.dumps(payload, indent=2, ensure_ascii=False) + "\n",
-        encoding="utf-8",
-    )
+    write_json_atomic(path, payload)
 
 
 # ---------------------------------------------------------------------------

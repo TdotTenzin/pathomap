@@ -16,9 +16,14 @@ data/sources/*.json (curation)
     -> data/derived/interaction_analysis.json
 ```
 
-The build scripts share `scripts/http_client.py` for caching, per-host throttling and retries.
-`scripts/api_clients.py` wraps the protein APIs and is used only by the protein stage.
-`scripts/identifiers.py` is the shared source of truth for stable entity IDs.
+`scripts/build_all.py` calls each stage's `build()` in-process, stops on the first failure,
+and records output hashes in `data/build-manifest.json` after a successful run. `--check`
+re-runs validation with writes suppressed and compares the on-disk artifacts with the
+manifest, so a skipped stage is reported instead of silently shipping stale data.
+
+The build scripts share `scripts/http_client.py` for caching, per-host throttling and retries,
+`scripts/io_utils.py` for guarded atomic writes, `scripts/build_common.py` for build helpers,
+`scripts/api_clients.py` for protein APIs, and `scripts/identifiers.py` for stable entity IDs.
 
 ## Stage 1: pathogens
 
@@ -157,40 +162,33 @@ warnings and never abort the build.
 ## Usage
 
 ```powershell
-# Stage 1 (cached) and stage 2 (host proteins only)
-python scripts/build_pathogens.py
-python scripts/build_effectors_host_proteins.py
+# Full pipeline (cached API responses)
+python scripts/build_all.py
 
-# Also enrich effectors
-python scripts/build_effectors_host_proteins.py --enrich-effectors
-
-# Force fresh API calls
-python scripts/build_pathogens.py --refresh
-python scripts/build_effectors_host_proteins.py --enrich-effectors --refresh
+# Also enrich effectors; force fresh API calls
+python scripts/build_all.py --enrich-effectors --refresh
 
 # Offline (cached responses only)
-python scripts/build_pathogens.py --no-network
-python scripts/build_effectors_host_proteins.py --enrich-effectors --no-network
+python scripts/build_all.py --no-network
 
-# Build and analyze interactions
-python scripts/build_interactions.py
-python scripts/analyze_interactions.py
+# One stage only
+python scripts/build_all.py --only interactions
 
-# Validate without writing outputs
-python scripts/build_pathogens.py --check
-python scripts/build_effectors_host_proteins.py --check
-python scripts/build_interactions.py --check
-python scripts/analyze_interactions.py --check
+# Validate without writing, and verify artifacts against the manifest
+python scripts/build_all.py --check --no-network
 
 # Fail CI on interaction-analysis validation warnings
-python scripts/analyze_interactions.py --strict
+python scripts/build_all.py --strict
 
-# Run Python known-answer tests and the browser network-model test
+# Run Python tests and the browser network-model test
 python -m unittest discover -s tests -v
 node --test tests/network_model.test.mjs
 ```
 
-`--check` still builds and enriches in memory, then validates and skips file writes.
+The stage scripts can still be invoked directly; the flags above are shared by them where
+applicable. `--check` builds and enriches in memory, then validates without writing any
+JSON, schema, SQLite, registry or cache file. JSON/schema writes use atomic replacement,
+and each SQLite stage rebuilds a temporary database before swapping it into place.
 
 ## Adding a new data source
 

@@ -45,7 +45,6 @@
 import {
   ASSEMBLY_LEVEL_VALUES,
   CURATION_STATUS_VALUES,
-  ENUMS,
   GRAM_STAIN_VALUES,
   PATHOGEN_COLUMNS,
   SCHEMA_VERSION,
@@ -56,8 +55,6 @@ import {
   REFERENCE_COLUMNS,
   AUDIT_STATUS_VALUES,
   RESOLUTION_STATUS_VALUES,
-  INTERACTION_COLUMNS,
-  INTERACTION_EVIDENCE_COLUMNS,
   INTERACTION_EVIDENCE_CLASS_VALUES,
 } from '../data/schema.js';
 import { isEntityId, makeEntityId } from '../data/identifiers.js';
@@ -130,18 +127,23 @@ function asObjectOrNull(value) {
   return value && typeof value === 'object' && !Array.isArray(value) ? value : null;
 }
 
-// Shared enrichment fields added by the API build pipeline (sequence, molecular
-// features, domains, GO terms). Arrays default to [], scalars to null.
-function normalizeEnrichment(row) {
+// Shared sequence/annotation enrichment added by the API build pipeline.
+function normalizeSequenceEnrichment(row) {
   return {
     sequence: nullableString(row.sequence),
+    domains: asArray(row.domains),
+    go_terms: asArray(row.go_terms),
+  };
+}
+
+// Host proteins also carry molecular metrics computed during the protein build.
+function normalizeHostProteinFeatures(row) {
+  return {
+    ...normalizeSequenceEnrichment(row),
     sequence_length: asInteger(row.sequence_length),
     molecular_weight_da: asNumber(row.molecular_weight_da),
     isoelectric_point: asNumber(row.isoelectric_point),
     gravy_score: asNumber(row.gravy_score),
-    domains: asArray(row.domains),
-    go_terms: asArray(row.go_terms),
-    feature_status: nullableString(row.feature_status),
   };
 }
 
@@ -483,7 +485,7 @@ export function normalizeDataset(data) {
         mechanism: cleanString(row.mechanism),
         mechanism_class: cleanString(row.mechanism_class),
         uniprot_id: nullableString(row.uniprot_id),
-        ...normalizeEnrichment(row),
+        ...normalizeSequenceEnrichment(row),
         signal_peptide: asObjectOrNull(row.signal_peptide),
         transmembrane_regions: asArray(row.transmembrane_regions),
         reference_ids: asReferenceIds(row.reference_ids),
@@ -525,7 +527,7 @@ export function normalizeDataset(data) {
         protein_name: cleanString(row.protein_name),
         gene_name: cleanString(row.gene_name),
         uniprot_id: cleanString(row.uniprot_id),
-        ...normalizeEnrichment(row),
+        ...normalizeHostProteinFeatures(row),
         localization: cleanString(row.localization),
         function: cleanString(row.function),
         pathway: nullableString(row.pathway),
@@ -652,15 +654,3 @@ export function normalizeDataset(data) {
 
   return { meta, pathogens, effectors, host_proteins, host_targets, references, interactions, interaction_evidence };
 }
-
-// Re-export column lists and enums for convenience (avoids deep imports)
-export {
-  PATHOGEN_COLUMNS,
-  EFFECTOR_COLUMNS,
-  HOST_PROTEIN_COLUMNS,
-  HOST_TARGET_COLUMNS,
-  REFERENCE_COLUMNS,
-  INTERACTION_COLUMNS,
-  INTERACTION_EVIDENCE_COLUMNS,
-  ENUMS,
-};

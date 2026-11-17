@@ -11,6 +11,15 @@
   The module never touches the DOM and never changes the generated analysis.
 */
 
+import {
+    EVIDENCE_CLASS_LABELS,
+    EVIDENCE_RANK,
+    STRATEGY_LABELS,
+    evidenceClassLabel,
+} from '../utils/labels.js';
+
+export { evidenceClassLabel };
+
 export const UNCLASSIFIED = 'Unclassified';
 
 export const NODE_TYPE_ORDER = ['pathogen', 'effector', 'host_protein'];
@@ -19,29 +28,6 @@ export const NODE_TYPE_LABELS = {
     pathogen: 'Pathogen',
     effector: 'Effector',
     host_protein: 'Host protein',
-};
-
-export const EVIDENCE_CLASS_LABELS = {
-    experimental: 'Experimental',
-    predicted: 'Predicted',
-    'annotation-derived': 'Annotation-derived',
-    hypothetical: 'Hypothetical',
-};
-
-const EVIDENCE_RANK = {
-    experimental: 4,
-    predicted: 3,
-    'annotation-derived': 2,
-    hypothetical: 1,
-};
-
-const STRATEGY_LABELS = {
-    arrest: 'Arrest',
-    escape: 'Escape',
-    reroute: 'Reroute',
-    modified_compartment: 'Modified compartment',
-    extracellular: 'Extracellular',
-    unknown: 'Unknown',
 };
 
 export function classifyPathogen(row = {}) {
@@ -91,14 +77,19 @@ export function analysisMatchesDataset(analysis, dataset) {
         ? dataset.interactions.length
         : 0;
     const analysisInteractionCount = Number(analysis.statistics?.interaction_count);
+    const sourceSha = meta.source_dataset_sha256;
+    const loadedSha = datasetMeta.source_dataset_sha256 || datasetMeta.sha256;
+    const shaMatches = !sourceSha || !loadedSha || sourceSha === loadedSha;
 
     return (
         meta.analysis === 'interaction_analysis' &&
+        Boolean(datasetMeta.built_at) &&
         meta.source_dataset_built_at === datasetMeta.built_at &&
         String(meta.source_dataset_schema_version || '') ===
             String(datasetMeta.schema_version || '') &&
         Number.isFinite(analysisInteractionCount) &&
-        analysisInteractionCount === datasetInteractionCount
+        analysisInteractionCount === datasetInteractionCount &&
+        shaMatches
     );
 }
 
@@ -202,16 +193,16 @@ function fromAnalysis(analysis, dataset) {
     const interactionEdges = (analysis.network.edges || [])
         .filter((edge) => nodeById.has(edge.source) && nodeById.has(edge.target))
         .map((edge) => {
-            const classes = [...(edge.evidence_classes || [])].sort();
             const sourceNode = nodeById.get(edge.source);
             return {
                 ...edge,
                 kind: 'interaction',
+                type: edge.relationship || edge.interaction_type || edge.type || 'effector_targets_host_protein',
                 pathogen_id: edge.pathogen_id || sourceNode?.pathogen_id || null,
-                evidence_classes: classes,
+                evidence_classes: edge.evidence_classes || [],
                 strongest_evidence_class:
-                    edge.strongest_evidence_class || strongestEvidenceClass(classes),
-                evidence_records: sortEvidence(edge.evidence_records || []),
+                    edge.strongest_evidence_class || strongestEvidenceClass(edge.evidence_classes || []),
+                evidence_records: edge.evidence_records || [],
             };
         });
 
@@ -489,7 +480,7 @@ function uniqueEvidence(edges) {
         (edge.evidence_records || []).forEach((record) => {
             const key =
                 record.evidence_id ||
-                `${edge.id}|${record.evidence_class}|${record.doi}|${record.pmid}|${record.database_accession}`;
+                `${edge.id}|${record.evidence_class}|${record.doi}|${record.pmid}|${record.database_accession}|${record.provenance}`;
             if (!byId.has(key)) byId.set(key, record);
         });
     });
@@ -659,11 +650,6 @@ export function buildNodeDetail(dataset, model, nodeId) {
             field('Host target', row.host_target),
             field('Target resolution', target?.resolution_status),
             field('UniProt', row.uniprot_id),
-            field('Sequence length (aa)', row.sequence_length),
-            field('Molecular weight (Da)', row.molecular_weight_da),
-            field('Isoelectric point', row.isoelectric_point),
-            field('GRAVY', row.gravy_score),
-            field('Feature status', row.feature_status),
             field('Linked interactions', incidentEdges.length),
         ]);
         if (target?.audit_notes) {
@@ -752,8 +738,4 @@ export function buildEdgeDetail(dataset, model, edgeId) {
         evidence: evidenceSummary(edge.evidence_records || []),
         externalLinks: [],
     };
-}
-
-export function evidenceClassLabel(value, fallback = 'No evidence') {
-    return EVIDENCE_CLASS_LABELS[value] || value || fallback;
 }

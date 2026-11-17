@@ -10,8 +10,8 @@ import {
     NODE_TYPE_LABELS,
     buildEdgeDetail,
     buildNodeDetail,
-    evidenceClassLabel,
 } from '../analysis/network.js';
+import { evidenceClassLabel } from '../utils/labels.js';
 const SVG_NS = 'http://www.w3.org/2000/svg';
 const NODE_RADIUS = 9;
 const PATHOGEN_X = 190;
@@ -136,6 +136,8 @@ export function createNetworkView({
 }) {
     let dataset = null;
     let model = null;
+    let edgeById = new Map();
+    let membershipById = new Map();
     let filtered = null;
     let selected = null;
     let svg = null;
@@ -400,7 +402,7 @@ export function createNetworkView({
 
         svg.querySelectorAll('[data-edge-id]').forEach((path) => {
             const id = path.dataset.edgeId;
-            const edge = model?.interactionEdges.find((item) => item.id === id);
+            const edge = edgeById.get(id);
             let relevant = !selected;
 
             if (selected?.kind === 'edge') {
@@ -417,7 +419,7 @@ export function createNetworkView({
 
         svg.querySelectorAll('[data-membership-id]').forEach((path) => {
             const edgeId = path.dataset.membershipId;
-            const edge = model?.membershipEdges.find((item) => item.id === edgeId);
+            const edge = membershipById.get(edgeId);
             const relevant =
                 !selected ||
                 (selected.kind === 'node' && edge && (edge.source === selected.id || edge.target === selected.id));
@@ -502,12 +504,11 @@ export function createNetworkView({
         }
 
         const width = Math.max(920, Math.round(canvas.clientWidth || 920));
-        const maxLane = Math.max(
-            1,
-            ...['pathogen', 'effector', 'host_protein'].map(
-                (type) => filtered.nodes.filter((node) => node.type === type).length
-            )
-        );
+        const laneCounts = { pathogen: 0, effector: 0, host_protein: 0 };
+        filtered.nodes.forEach((node) => {
+            if (Object.hasOwn(laneCounts, node.type)) laneCounts[node.type] += 1;
+        });
+        const maxLane = Math.max(1, ...Object.values(laneCounts));
         const height = Math.max(640, maxLane * 25 + 140);
         contentSize = { width, height };
 
@@ -545,9 +546,9 @@ export function createNetworkView({
         viewport = svgElement('g', { class: 'ia-viewport' });
         svg.appendChild(viewport);
 
-        drawLaneTitle(viewport, `Pathogens (${filtered.nodes.filter((node) => node.type === 'pathogen').length})`, PATHOGEN_X);
-        drawLaneTitle(viewport, `Effectors (${filtered.nodes.filter((node) => node.type === 'effector').length})`, width / 2);
-        drawLaneTitle(viewport, `Host proteins (${filtered.nodes.filter((node) => node.type === 'host_protein').length})`, width - PATHOGEN_X);
+        drawLaneTitle(viewport, `Pathogens (${laneCounts.pathogen})`, PATHOGEN_X);
+        drawLaneTitle(viewport, `Effectors (${laneCounts.effector})`, width / 2);
+        drawLaneTitle(viewport, `Host proteins (${laneCounts.host_protein})`, width - PATHOGEN_X);
 
         const lanes = orderedLanes(filtered.nodes, filtered.interactionEdges);
         const top = 92;
@@ -677,7 +678,7 @@ export function createNetworkView({
             selected = null;
             renderEmptyDetail();
         }
-        if (selected?.kind === 'edge' && !filtered.interactionEdges.some((edge) => edge.id === selected.id)) {
+        if (selected?.kind === 'edge' && !edgeById.has(selected.id)) {
             selected = null;
             renderEmptyDetail();
         }
@@ -806,12 +807,10 @@ export function createNetworkView({
         render(nextDataset, nextModel, nextFiltered) {
             dataset = nextDataset;
             model = nextModel;
+            edgeById = new Map((model?.interactionEdges || []).map((edge) => [edge.id, edge]));
+            membershipById = new Map((model?.membershipEdges || []).map((edge) => [edge.id, edge]));
             filtered = nextFiltered;
             drawGraph();
-        },
-        clearSelection,
-        getSelection() {
-            return selected;
         },
         serializeSvg(metadata = {}) {
             if (!svg) return null;
@@ -861,9 +860,6 @@ export function createNetworkView({
             clone.insertBefore(metadataNode, style.nextSibling);
 
             return `<?xml version="1.0" encoding="UTF-8"?>\n${new XMLSerializer().serializeToString(clone)}`;
-        },
-        getSvgText(metadata) {
-            return this.serializeSvg(metadata);
         },
     };
 }

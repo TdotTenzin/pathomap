@@ -23,6 +23,7 @@ import {
 } from '../analysis/network.js';
 import { createNetworkView } from '../views/interaction-network.js';
 import { downloadText, escapeXml, timestampSlug, toCsv } from '../utils/export.js';
+import { EVIDENCE_CLASS_LABELS } from '../utils/labels.js';
 
 initTheme();
 
@@ -87,10 +88,11 @@ function uniqueCount(edges, key) {
 }
 
 function renderStats(model) {
-    setStat('interactions', model.interactionEdges.length);
-    setStat('pathogens', uniqueCount(model.interactionEdges, 'pathogen_id'));
-    setStat('effectors', uniqueCount(model.interactionEdges, 'source'));
-    setStat('host-proteins', uniqueCount(model.interactionEdges, 'target'));
+    const stats = model.source?.kind === 'derived' ? model.source.statistics : null;
+    setStat('interactions', stats?.interaction_count ?? model.interactionEdges.length);
+    setStat('pathogens', stats?.unique_pathogen_count ?? uniqueCount(model.interactionEdges, 'pathogen_id'));
+    setStat('effectors', stats?.unique_effector_count ?? uniqueCount(model.interactionEdges, 'source'));
+    setStat('host-proteins', stats?.unique_host_protein_count ?? uniqueCount(model.interactionEdges, 'target'));
 }
 
 function formatDate(value) {
@@ -158,7 +160,7 @@ function populateFilters(model) {
         els.evidence,
         options.evidenceClasses.map((value) => ({
             value,
-            label: value.charAt(0).toUpperCase() + value.slice(1),
+            label: EVIDENCE_CLASS_LABELS[value] || value,
         })),
         'All evidence classes'
     );

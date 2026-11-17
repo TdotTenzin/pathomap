@@ -45,7 +45,7 @@ insufficient - return `insufficient data` with the missing requirement instead.
 ```js
 {
   id: "interaction-analysis",
-  version: "0.1.0",
+  version: "1.1",
   prerequisites: ["pathogens", "effectors", "host_proteins"],
   canRun(dataset) -> { eligible, reasons },
   run(dataset, context) -> {
@@ -86,7 +86,8 @@ normalization, provenance, statistics and validation. Unit tests use small known
 
 ## Dashboard cards
 
-Each card shows its own state and progress. Summary metrics must be analysis-specific and
+Each card shows its own state and progress. Only Interaction Analysis is currently available;
+the remaining rows describe the planned catalogue. Summary metrics must be analysis-specific and
 data-derived:
 
 | Module | Summary metrics |

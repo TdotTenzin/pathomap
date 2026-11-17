@@ -4,13 +4,28 @@
 from __future__ import annotations
 
 import datetime as dt
+import os
+import shutil
+import sqlite3
 import sys
 from pathlib import Path
+from typing import Callable
 
 # Add scripts directory to path for relative imports when run as module
 sys.path.insert(0, str(Path(__file__).parent))
 
 from identifiers import is_entity_id, reference_key
+from io_utils import (  # re-exported for the build scripts
+    no_writes,
+    read_json,
+    write_json,
+    write_json_atomic,
+    write_text,
+    writes_enabled,
+)
+
+ROOT = Path(__file__).resolve().parents[1]
+DATA_DIR = ROOT / "data"
 
 
 class BuildError(RuntimeError):
@@ -24,6 +39,47 @@ def utc_now() -> str:
         .isoformat()
         .replace("+00:00", "Z")
     )
+
+
+def begin_sqlite_write(
+    path: Path,
+    *,
+    reuse_existing: bool = False,
+) -> tuple[sqlite3.Connection, Callable[[sqlite3.Connection], None]]:
+    """Open a temporary SQLite DB for an atomic rebuild.
+
+    The returned ``finalize`` callback commits and swaps the temp file into
+    place on success, or discards it on failure. When writes are suppressed
+    (strict ``--check``), an in-memory DB is used and no file is touched.
+    """
+    if not writes_enabled():
+        connection = sqlite3.connect(":memory:")
+        return connection, lambda con: con.close()
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_name(f".{path.name}.{os.getpid()}.tmp")
+    if temporary.exists():
+        temporary.unlink()
+    if reuse_existing and path.exists():
+        shutil.copyfile(path, temporary)
+
+    connection = sqlite3.connect(temporary)
+
+    def finalize(con: sqlite3.Connection) -> None:
+        failed = sys.exc_info()[0] is not None
+        try:
+            if failed:
+                con.rollback()
+            else:
+                con.commit()
+                con.close()
+                temporary.replace(path)
+        finally:
+            con.close()
+            if temporary.exists():
+                temporary.unlink()
+
+    return connection, finalize
 
 
 def references_for_rows(rows: list[dict], references: list[dict]) -> list[dict]:

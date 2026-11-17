@@ -17,6 +17,15 @@
   <title>Interaction Analysis - PathoMap</title>
   <meta name="description" content="Explore molecular relationships between pathogens and host proteins in PathoMap.">
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('pathomap-theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (error) {}
+    })();
+  </script>
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/components.css">

@@ -1,5 +1,5 @@
 import { getDataset } from '../data/loader.js';
-import { evidenceClassLabel } from '../analysis/network.js';
+import { evidenceClassLabel } from '../utils/labels.js';
 
 function plural(count, singular, pluralForm = `${singular}s`) {
   return `${count} ${count === 1 ? singular : pluralForm}`;

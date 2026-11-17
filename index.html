@@ -31,6 +31,15 @@
   <title>PathoMap - Microbial Genomics, Hosts &amp; Ecology</title>
   <meta name="description" content="PathoMap maps the connections between microbial genomes, biological interactions, evolution and ecological environments.">
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('pathomap-theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (error) {}
+    })();
+  </script>
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/components.css">
@@ -168,9 +177,9 @@
             <!-- Analysis overview will go here -->
         </div>
 
-        <div id="analysis-modules">
-            <!-- Eight analysis module cards will go here -->
-        </div>
+      <div id="analysis-modules">
+          <!-- Analysis module cards will go here (currently: Interaction Analysis) -->
+      </div>
       </div>
     </section>
 
@@ -185,6 +194,25 @@
         </div>
 
         <div id="references-content" class="references-content"></div>
+      </div>
+    </section>
+
+    <section id="limitations-scope" class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Transparency</p>
+          <h2 class="section-title">Limitations &amp; scope</h2>
+          <p class="section-subtitle">
+            What this release is (and is not), to interpret results responsibly.
+          </p>
+        </div>
+        <ul class="research-list">
+          <li><strong>Curated prototype, not a comprehensive resource:</strong> current tables cover a focused, curated subset (bacterial host&ndash;pathogen effectors, host targets/proteins, and related interaction records as available in the loaded dataset).</li>
+          <li><strong>Coverage is limited:</strong> interaction counts are small (demonstration-scale); absence of a record does not mean an interaction is absent in biology.</li>
+          <li><strong>Evidence is labeled, not inferred silently:</strong> interaction evidence is categorized (e.g. experimental, predicted, annotation-derived, hypothetical). Labels reflect curation/provenance—not clinical or functional certainty.</li>
+          <li><strong>Derived analyses are reproducible outputs:</strong> generated artifacts (e.g. interaction network outputs) depend on validated inputs and explicit methods; they are not curated ground truth.</li>
+          <li><strong>Demo/sample data:</strong> built-in sample and uploaded datasets are for exploration; validate against the curated pipeline outputs for serious use.</li>
+        </ul>
       </div>
     </section>
   </main>

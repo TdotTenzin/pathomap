@@ -97,6 +97,7 @@ import {
   INTERACTION_COLUMNS,
 } from '../data/schema.js';
 import { downloadText, toCsv as serializeCsv } from '../utils/export.js';
+import { STRATEGY_LABELS } from '../utils/labels.js';
 
 // Available tables to display in the database view (id, label, description,
 // visible columns for the UI, and full column list for CSV export)
@@ -141,16 +142,6 @@ const TABLES = [
     exportColumns: INTERACTION_COLUMNS,
   },
 ];
-
-// Display labels for intracellular survival strategies
-const STRATEGY_LABELS = {
-  arrest: 'Arrest',
-  escape: 'Escape',
-  reroute: 'Reroute',
-  modified_compartment: 'Modified compartment',
-  extracellular: 'Extracellular',
-  unknown: 'Unknown',
-};
 
 // Global state for database view (active table, search, sort, pagination)
 const state = {
@@ -242,24 +233,41 @@ function renderTabs() {
   const el = document.getElementById('db-tabs');
   if (!el) return;
   el.replaceChildren();
-  TABLES.forEach((table) => {
+
+  function activateTable(tableId) {
+    state.active = tableId;
+    state.search = '';
+    state.sortKey = null;
+    state.sortDir = 'asc';
+    state.page = 1;
+    const search = document.getElementById('db-search');
+    if (search) search.value = '';
+    renderDatabase();
+  }
+
+  TABLES.forEach((table, index) => {
     const button = document.createElement('button');
     button.type = 'button';
+    button.id = `db-tab-${table.id}`;
     button.className = 'db-tab' + (table.id === state.active ? ' active' : '');
     button.setAttribute('role', 'tab');
     button.setAttribute('aria-selected', table.id === state.active ? 'true' : 'false');
+    button.setAttribute('aria-controls', 'db-table');
+    button.tabIndex = table.id === state.active ? 0 : -1;
     button.textContent = table.label;
     button.title = table.description;
-    button.addEventListener('click', () => {
-      // Reset all view state when switching tables
-      state.active = table.id;
-      state.search = '';
-      state.sortKey = null;
-      state.sortDir = 'asc';
-      state.page = 1;
-      const search = document.getElementById('db-search');
-      if (search) search.value = '';
-      renderDatabase();
+    button.addEventListener('click', () => activateTable(table.id));
+    button.addEventListener('keydown', (event) => {
+      let next = null;
+      if (event.key === 'ArrowRight') next = TABLES[(index + 1) % TABLES.length];
+      if (event.key === 'ArrowLeft') next = TABLES[(index - 1 + TABLES.length) % TABLES.length];
+      if (event.key === 'Home') next = TABLES[0];
+      if (event.key === 'End') next = TABLES[TABLES.length - 1];
+      if (!next) return;
+      event.preventDefault();
+      activateTable(next.id);
+      const nextButton = document.getElementById(`db-tab-${next.id}`);
+      if (nextButton) nextButton.focus();
     });
     el.appendChild(button);
   });
@@ -274,25 +282,24 @@ function renderHead(def) {
   def.columns.forEach((column) => {
     const th = document.createElement('th');
     const label = labels[column] || column.replace(/_/g, ' ');
-    th.textContent = label;
-    // Show direction indicator on the active sort column
-    if (column === state.sortKey) {
-      th.textContent += state.sortDir === 'asc' ? ' ▲' : ' ▼';
-    }
-    th.style.cursor = 'pointer';
-    th.title = 'Sort by ' + label;
-    th.addEventListener('click', () => {
+    const active = column === state.sortKey;
+    const sortButton = document.createElement('button');
+    sortButton.type = 'button';
+    sortButton.className = 'db-sort';
+    sortButton.title = 'Sort by ' + label;
+    sortButton.textContent = label + (active ? (state.sortDir === 'asc' ? ' ▲' : ' ▼') : '');
+    th.setAttribute('aria-sort', active ? (state.sortDir === 'asc' ? 'ascending' : 'descending') : 'none');
+    sortButton.addEventListener('click', () => {
       if (state.sortKey === column) {
-        // Same column: flip direction
         state.sortDir = state.sortDir === 'asc' ? 'desc' : 'asc';
       } else {
-        // New column: start ascending
         state.sortKey = column;
         state.sortDir = 'asc';
       }
       state.page = 1;
       renderDatabase();
     });
+    th.appendChild(sortButton);
     el.appendChild(th);
   });
 }

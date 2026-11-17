@@ -7,7 +7,7 @@ logic. Used by both protein enrichment (api_clients.py) and pathogen enrichment
 Features:
 - Configurable rate limiting (fixed delay or host-based throttling)
 - On-disk caching with refresh and offline modes
-- Retry logic with exponential backoff and Retry-After header support
+- Retry logic with linear backoff and Retry-After header support
 - Graceful degradation with ApiError exception
 
 Usage (from a build script)::
@@ -33,6 +33,8 @@ import urllib.request
 from pathlib import Path
 from typing import Any, Optional
 
+from io_utils import read_json, write_json, write_json_atomic, write_text
+
 
 class ApiError(RuntimeError):
     """Raised when an HTTP request fails after retries or is unavailable offline."""
@@ -41,20 +43,6 @@ class ApiError(RuntimeError):
 def slug(value: str) -> str:
     """Turn a free-text string into a filesystem-safe cache file name."""
     return "".join(ch.lower() if ch.isalnum() else "-" for ch in value).strip("-") or "empty"
-
-
-def read_json(path: Path) -> Any:
-    """Read and parse a JSON file."""
-    return json.loads(path.read_text(encoding="utf-8"))
-
-
-def write_json(path: Path, payload: Any) -> None:
-    """Write a JSON file with standard formatting."""
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(
-        json.dumps(payload, indent=2, ensure_ascii=False, allow_nan=False) + "\n",
-        encoding="utf-8",
-    )
 
 
 def _host(url: str) -> str:
@@ -172,10 +160,9 @@ def http_text(
             with urllib.request.urlopen(request, timeout=60) as response:
                 text = response.read().decode("utf-8")
 
-                # Cache the response
+                # Cache the response (suppressed in strict --check mode)
                 if cache_path is not None:
-                    cache_path.parent.mkdir(parents=True, exist_ok=True)
-                    cache_path.write_text(text, encoding="utf-8")
+                    write_text(cache_path, text, atomic=False)
 
                 return text
 
@@ -185,14 +172,17 @@ def http_text(
             if exc.code in (429, 502, 503, 504):
                 retry_after = _parse_retry_after(dict(exc.headers))
                 if retry_after is not None:
-                    time.sleep(retry_after)
+                    if attempt < 2:
+                        time.sleep(retry_after)
                     continue
-            # Exponential backoff for other errors
-            time.sleep(1.5 * (attempt + 1))
+            # Linear backoff for other errors
+            if attempt < 2:
+                time.sleep(1.5 * (attempt + 1))
 
         except (urllib.error.URLError, TimeoutError) as exc:
             last_error = exc
-            time.sleep(1.5 * (attempt + 1))
+            if attempt < 2:
+                time.sleep(1.5 * (attempt + 1))
 
     raise ApiError(f"request failed: {url}\n{last_error}")
 
@@ -203,7 +193,7 @@ def http_json(
     cache_path: Optional[Path] = None,
     rate_limit: Optional[float] = None,
     user_agent: str = "PathoMap/2.0 (build script; contact: local development)",
-) -> dict:
+) -> Any:
     """Fetch JSON from URL with caching, rate limiting, and retry logic.
 
     Args:
@@ -214,7 +204,7 @@ def http_json(
         user_agent: User-Agent header value
 
     Returns:
-        The parsed JSON response as a dict
+        The parsed JSON response (dict or list, depending on the endpoint)
 
     Raises:
         ApiError: If request fails after retries or is unavailable offline

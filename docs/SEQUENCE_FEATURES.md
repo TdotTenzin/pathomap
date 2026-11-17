@@ -4,17 +4,18 @@ Feature specification for **Effector Sequence Analysis** (module 2 in `docs/ANAL
 implementation phase in `docs/ROADMAP.md`). Statuses reflect the current build
 (`scripts/build_effectors_host_proteins.py`, `js/data/schema.js`).
 
-Status legend: **Implemented** = stored on the effector row; **Partial** = annotation present but
-no prediction/probability; **Planned** = not implemented.
+Status legend: **Implemented** = annotation stored on the effector row; **Derived artifact** =
+generated in `data/derived/effector_features.json` but not consumed by the web app; **Partial** =
+annotation present but no prediction/probability; **Planned** = not implemented.
 
 ## Status summary
 
 | Feature | Field | Status | Method |
 |---|---|---|---|
-| Sequence length | `sequence_length` | Implemented | Calculated |
-| Molecular weight | `molecular_weight_da` | Implemented | Residue mass sum minus water |
-| Isoelectric point | `isoelectric_point` | Implemented | Henderson–Hasselbalch + bisection |
-| GRAVY | `gravy_score` | Implemented | Kyte–Doolittle mean |
+| Sequence length | `sequence_length` | Derived artifact | Calculated |
+| Molecular weight | `molecular_weight_da` | Derived artifact | Residue mass sum minus water |
+| Isoelectric point | `isoelectric_point` | Derived artifact | Henderson–Hasselbalch + bisection |
+| GRAVY | `gravy_score` | Derived artifact | Kyte–Doolittle mean |
 | Domains | `domains` | Implemented | UniProt / InterPro / Pfam |
 | GO terms | `go_terms` | Implemented | UniProt |
 | Signal peptide | `signal_peptide` | Partial | UniProt annotation, no probability |
@@ -103,7 +104,8 @@ Each of these must record tool name, version and parameters in the output proven
 - Shannon entropy
 - Low-complexity region count and length
 
-Molecular weight, pI, GRAVY and domain presence already ship.
+Molecular weight, pI and GRAVY ship only in `data/derived/effector_features.json`; domain presence
+ships on both effectors and host proteins.
 
 ### Priority 2 — moderate cost
 - Dipeptide composition with PCA or feature selection

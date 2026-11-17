@@ -21,7 +21,13 @@ export function renderAnalyses(dataset = null) {
         return;
     }
 
-    container.innerHTML = getAnalysisModules().map(module => {
+    const modules = getAnalysisModules();
+    if (modules.length === 0) {
+        container.innerHTML = '<p class="muted">No analyses are surfaced in the UI yet. Planned analyses remain listed in the project registry for future release.</p>';
+        return;
+    }
+
+    container.innerHTML = modules.map(module => {
         const eligibility = checkAnalysisEligibility(module, dataset);
 
         const eligibilityLabel = eligibility.eligible

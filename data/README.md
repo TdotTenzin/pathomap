@@ -39,11 +39,12 @@ data/
 ## Build
 
 ```powershell
-python scripts/build_pathogens.py
-python scripts/build_effectors_host_proteins.py --enrich-effectors
-python scripts/build_interactions.py
-python scripts/analyze_interactions.py
+python scripts/build_all.py --enrich-effectors
 ```
 
-Common flags: `--check`, `--refresh`, `--no-network`. Outputs and enrichment rules:
-`docs/DATA_PIPELINE.md`.
+Or run the stages individually: `build_pathogens.py`, `build_effectors_host_proteins.py`,
+`build_interactions.py`, `analyze_interactions.py` (in that order).
+
+Common flags: `--check`, `--refresh`, `--no-network`, `--only <stage>`. A successful build
+writes `data/build-manifest.json` so `--check` can detect stale or missing artifacts.
+Outputs and enrichment rules: `docs/DATA_PIPELINE.md`.

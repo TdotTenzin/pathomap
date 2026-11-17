@@ -19,8 +19,7 @@
     warningSuffix(warnings)  Appends "N warning(s)" text for status messages.
     applyData(data, label)   Validates + stores a parsed dataset; shows an
                              error and aborts if validation fails hard.
-    downloadBlob(text, name, type)  Creates a Blob, triggers a browser
-                             download, then revokes the object URL.
+    (downloads use downloadText() from js/utils/export.js)
 
   DOM elements it binds to (all defined in index.html):
     #dataset-file               <input type="file"> — JSON file picker
@@ -37,6 +36,7 @@
 import { DEFAULT_DATASET_URL, loadDataset, setDataset } from '../data/loader.js';
 import { SCHEMA_VERSION } from '../data/schema.js';
 import { validateDataset } from '../utils/dataset.js';
+import { downloadText } from '../utils/export.js';
 
 // Callback to re-render the application after data changes
 let renderCallback = () => {};
@@ -90,22 +90,6 @@ function applyData(data, sourceLabel) {
   }
 
   return true;
-}
-
-// Download a text blob as a file
-function downloadBlob(text, filename, type) {
-  const blob = new Blob([text], { type });
-  const url = URL.createObjectURL(blob);
-  const anchor = document.createElement('a');
-
-  anchor.href = url;
-  anchor.download = filename;
-
-  document.body.appendChild(anchor);
-  anchor.click();
-  document.body.removeChild(anchor);
-
-  URL.revokeObjectURL(url);
 }
 
 // Initialize upload UI with event listeners
@@ -214,7 +198,7 @@ export function initUpload({ render } = {}) {
         pathogens: [],
       };
 
-      downloadBlob(
+      downloadText(
         JSON.stringify(template, null, 2) + '\n',
         'pathomap-pathogens-template.json',
         'application/json'

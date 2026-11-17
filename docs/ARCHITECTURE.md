@@ -2,7 +2,7 @@
 
 PathoMap has two independent concerns: a static browser application (presentation) and an
 offline Python build pipeline (data production and derived analysis). The Interaction Analysis
-engine is implemented in Python; browser-side analysis orchestration remains planned.
+artifact is produced in Python and consumed by the browser; no browser-side re-derivation occurs.
 
 ## System overview
 
@@ -21,9 +21,8 @@ interaction-analysis.html -> js/pages/interaction-analysis.js
     -> js/views/interaction-network.js
 ```
 
-The web app never computes curated data. It loads a validated JSON envelope and renders it.
-Analysis engines (planned) return structured results that views display without re-deriving
-scientific metrics.
+The web app never computes curated data or scientific metrics. It loads a validated JSON envelope
+plus the generated analysis artifact and renders them directly.
 
 ## Repository layout
 
@@ -144,6 +143,7 @@ analysis module.
 | Proteins | `build_effectors_host_proteins.py` | `effectors_seed.json`, `host_proteins_seed.json`, `effector_uniprot_mapping.json`, UniProt/InterPro/Pfam/STRING APIs | Updated `pathomap-dataset.json`, `sample-dataset.json`, `pathomap.db`, `schema.sql` |
 | Interactions | `build_interactions.py` | Dataset effectors/host targets/host proteins, interaction seeds, ID registries | `interactions`, `interaction_evidence`, updated dataset/sample, SQLite tables, registries |
 | Analysis | `analyze_interactions.py` | Validated dataset interactions/evidence | `data/derived/interaction_analysis.json` |
+| Orchestration | `build_all.py` | All stages above | Full artifact set, `data/build-manifest.json`, automatic rollback on failure |
 
 Run order matters: proteins expect the pathogens dataset, interactions expect resolved proteins,
 and analysis expects the interaction table. Details are in `docs/DATA_PIPELINE.md`.
@@ -154,8 +154,7 @@ and analysis expects the interaction table. Details are in `docs/DATA_PIPELINE.m
 - `--refresh` ignores cached responses; `--no-network` uses only cached data and fails if a
   required cache file is missing.
 - Caches exist for reproducibility and offline builds, not as curated data.
-- Planned analysis caches belong under `data/derived/` and must key on input version/hash,
-  module version, parameters and reference-resource versions.
+- Derived artifacts live under `data/derived/`; the manifest records input hashes and staleness.
 
 ## Conventions
 

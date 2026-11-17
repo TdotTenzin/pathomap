@@ -1,4 +1,4 @@
--- PathoMap v2.2 primary schema
+-- PathoMap v3.0 primary schema
 CREATE TABLE pathogens (
   entity_id          TEXT    NOT NULL UNIQUE,
   pathogen_id        INTEGER PRIMARY KEY,
@@ -33,15 +33,12 @@ CREATE TABLE pathogens (
 
 CREATE INDEX idx_pathogens_strategy ON pathogens(strategy);
 CREATE INDEX idx_pathogens_gram_stain ON pathogens(gram_stain);
-CREATE INDEX idx_pathogens_tax_id ON pathogens(tax_id);
 
 CREATE TABLE "references" (
   entity_id  TEXT PRIMARY KEY,
   doi        TEXT NOT NULL UNIQUE,
   url        TEXT NOT NULL
 );
-
-CREATE INDEX idx_references_doi ON "references"(doi);
 
 CREATE TABLE pathogen_references (
   pathogen_id  INTEGER NOT NULL REFERENCES pathogens(pathogen_id) ON DELETE CASCADE,
@@ -56,7 +53,7 @@ CREATE TABLE meta (
   value TEXT NOT NULL
 );
 
--- PathoMap v2.2 derived tables schema
+-- PathoMap v3.0 derived tables schema
 CREATE TABLE host_proteins (
   entity_id            TEXT    NOT NULL UNIQUE,
   host_protein_id      INTEGER PRIMARY KEY,
@@ -79,8 +76,6 @@ CREATE TABLE host_proteins (
   evidence_source       TEXT,
   last_updated          TEXT    NOT NULL
 );
-
-CREATE INDEX idx_host_proteins_uniprot_id ON host_proteins(uniprot_id);
 
 CREATE TABLE host_targets (
   entity_id              TEXT    PRIMARY KEY,
@@ -156,7 +151,6 @@ CREATE TABLE interactions (
   provenance TEXT NOT NULL,
   UNIQUE (effector_id, host_protein_id)
 );
-CREATE INDEX idx_interactions_effector_id ON interactions(effector_id);
 CREATE INDEX idx_interactions_host_protein_id ON interactions(host_protein_id);
 CREATE TABLE interaction_evidence (
   evidence_id TEXT PRIMARY KEY,

@@ -6,13 +6,12 @@
   utilities win over component/base rules when both apply.
 
   Contents:
-    - .hidden        Force display:none (overrides other display rules).
+    - .muted        Muted secondary text (e.g. empty-state explanations).
 
   Note: These are intentionally terse; most layout lives in layout.css and
   components.css. Prefer the semantic classes over utilities when possible.
 */
 
-.hidden {
-  display: none !important;
+.muted {
+  color: var(--color-text-muted);
 }
-

@@ -23,8 +23,7 @@
         HOST_TARGET_COLUMNS_META, HOST_TARGET_COLUMN_LABELS,
         HOST_TARGET_COLUMNS, HOST_TARGET_VISIBLE_COLUMNS
     - Reference table:
-        REFERENCE_COLUMNS_META, REFERENCE_COLUMN_LABELS,
-        REFERENCE_COLUMNS, REFERENCE_VISIBLE_COLUMNS
+        REFERENCE_COLUMNS
     - Display helpers:
         CLASSIFICATION_LABELS (raw enum value -> human-readable label)
 
@@ -402,41 +401,6 @@ export const EFFECTOR_COLUMNS_META = [
     source: 'UniProt API',
   },
   {
-    key: 'sequence_length',
-    label: 'Length (aa)',
-    type: 'integer, nullable',
-    description: 'Number of amino acids in the sequence (merged from the derived feature file at load time).',
-    source: 'data/derived/effector_features.json',
-  },
-  {
-    key: 'molecular_weight_da',
-    label: 'MW (Da)',
-    type: 'number, nullable',
-    description: 'Molecular weight in Daltons (derived feature).',
-    source: 'data/derived/effector_features.json',
-  },
-  {
-    key: 'isoelectric_point',
-    label: 'pI',
-    type: 'number, nullable',
-    description: 'Isoelectric point of the effector (derived feature).',
-    source: 'data/derived/effector_features.json',
-  },
-  {
-    key: 'gravy_score',
-    label: 'GRAVY',
-    type: 'number, nullable',
-    description: 'Grand average of hydropathy (derived feature).',
-    source: 'data/derived/effector_features.json',
-  },
-  {
-    key: 'feature_status',
-    label: 'Feature Status',
-    type: 'string, nullable',
-    description: 'Derived-feature status: computed, incomplete or missing_sequence.',
-    source: 'data/derived/effector_features.json',
-  },
-  {
     key: 'domains',
     label: 'Domains',
     type: 'array',
@@ -803,37 +767,7 @@ export const HOST_TARGET_VISIBLE_COLUMNS = [
 // References table metadata
 // ---------------------------------------------------------------------------
 
-export const REFERENCE_COLUMNS_META = [
-  {
-    key: 'entity_id',
-    label: 'Entity ID',
-    type: 'string',
-    description: 'Stable cross-table identifier in the form PM-REF-0001.',
-    source: 'PathoMap identifier system',
-  },
-  {
-    key: 'doi',
-    label: 'DOI',
-    type: 'string',
-    description: 'Normalized DOI shared by the rows that cite this reference.',
-    source: 'PathoMap curation',
-  },
-  {
-    key: 'url',
-    label: 'URL',
-    type: 'string',
-    description: 'Resolvable https://doi.org/ link.',
-    source: 'doi.org',
-  },
-];
-
-export const REFERENCE_COLUMN_LABELS = Object.fromEntries(
-  REFERENCE_COLUMNS_META.map((column) => [column.key, column.label])
-);
-
-export const REFERENCE_COLUMNS = REFERENCE_COLUMNS_META.map((column) => column.key);
-
-export const REFERENCE_VISIBLE_COLUMNS = ['entity_id', 'doi', 'url'];
+export const REFERENCE_COLUMNS = ['entity_id', 'doi', 'url'];
 
 // ---------------------------------------------------------------------------
 // Interaction and interaction-evidence metadata
@@ -851,17 +785,10 @@ export const INTERACTION_COLUMN_LABELS = Object.fromEntries(INTERACTION_COLUMNS_
 export const INTERACTION_COLUMNS = INTERACTION_COLUMNS_META.map((column) => column.key);
 export const INTERACTION_VISIBLE_COLUMNS = ['interaction_id', 'effector_id', 'host_protein_id', 'mechanism', 'interaction_type'];
 
-export const INTERACTION_EVIDENCE_COLUMNS_META = [
-  { key: 'evidence_id', label: 'Evidence ID', type: 'string', description: 'Stable evidence identifier in the form PM-EVD-0001.', source: 'PathoMap identifier registry' },
-  { key: 'interaction_id', label: 'Interaction ID', type: 'string', description: 'Foreign key to the normalized interaction relationship.', source: 'interactions.interaction_id' },
-  { key: 'evidence_class', label: 'Evidence Class', type: 'enum', description: 'experimental, predicted, annotation-derived or hypothetical.', source: 'Curation / build' },
-  { key: 'doi', label: 'DOI', type: 'string, nullable', description: 'Supporting publication DOI when available.', source: 'Curated evidence' },
-  { key: 'pmid', label: 'PMID', type: 'string, nullable', description: 'Supporting PubMed identifier when available.', source: 'Curated evidence' },
-  { key: 'database_accession', label: 'Database Accession', type: 'string, nullable', description: 'Supporting database record accession when available.', source: 'Curated evidence' },
-  { key: 'provenance', label: 'Provenance', type: 'string', description: 'Source file, database or method supporting this evidence record.', source: 'Curated evidence' },
-  { key: 'note', label: 'Note', type: 'string, nullable', description: 'Interpretive note or limitation.', source: 'Curated evidence' },
+export const INTERACTION_EVIDENCE_COLUMNS = [
+  'evidence_id', 'interaction_id', 'evidence_class', 'doi', 'pmid',
+  'database_accession', 'provenance', 'note',
 ];
-export const INTERACTION_EVIDENCE_COLUMNS = INTERACTION_EVIDENCE_COLUMNS_META.map((column) => column.key);
 
 // ---------------------------------------------------------------------------
 // Enum registry + human-readable classification labels

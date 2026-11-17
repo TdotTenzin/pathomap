@@ -34,6 +34,7 @@ this repository; tables are rebuilt from `data/sources/` one stage at a time.
 | `data/schema.sql` | Generated | SQLite DDL. |
 | `data/schema/pathogens.schema.json` | Generated | JSON Schema for the dataset envelope and pathogen rows. |
 | `data/derived/interaction_analysis.json` | Generated | Interaction validation, statistics and network artifact. |
+| `data/derived/effector_features.json` | Generated | Per-effector sequence metrics snapshot; not merged into effector rows by the web app. |
 
 ## Table relationships
 
@@ -109,8 +110,8 @@ provides the matching frontend helpers.
 | 1.0 | — | Flat v1 export with six tables and derived analyses. Not present in this repository. |
 
 `SCHEMA_VERSION` is defined in `scripts/build_pathogens.py`, `scripts/build_effectors_host_proteins.py`,
-`scripts/build_interactions.py` and `js/data/schema.js`. The pathogen and effector builders emit the
-intermediate 2.2 envelope; the final interaction build promotes it to 3.0.
+`scripts/build_interactions.py` and `js/data/schema.js`. All builders emit the 3.0 envelope;
+`scripts/build_all.py` orchestrates them and writes the final dataset and manifest.
 
 ## Pathogens schema
 
@@ -167,18 +168,14 @@ Primary key `entity_id`. The natural uniqueness rule remains
 | `mechanism`, `mechanism_class` | string | Host-cell manipulation mechanism and its classification. |
 | `uniprot_id` | string or null | UniProt accession (curated or search fallback). |
 | `sequence` | string or null | Amino-acid sequence. |
-| `sequence_length` | integer or null | Length in residues. |
-| `molecular_weight_da` | number or null | Calculated molecular weight. |
-| `isoelectric_point` | number or null | Calculated pI. |
-| `gravy_score` | number or null | Calculated GRAVY. |
 | `domains` | array | UniProt/InterPro/Pfam domain annotations. |
 | `go_terms` | array | UniProt GO annotations. |
 | `signal_peptide` | object or null | `{start, end}` annotation. |
 | `transmembrane_regions` | array | `[{start, end}, ...]` annotations. |
 | `reference_ids` | array | `PM-REF` citations supporting the row. |
 
-Sequence-derived values are currently stored on the curated rows. The target state moves them to a
-derived table keyed by `entity_id`, with method and input-version provenance.
+Sequence-derived metrics are published in `data/derived/effector_features.json`; the web app does
+not merge them into curated effector rows.
 
 ## Host proteins schema
 

@@ -40,6 +40,7 @@ from typing import Any, Optional
 sys.path.insert(0, str(Path(__file__).parent))
 
 from http_client import ApiError, http_json, slug
+from io_utils import write_json_atomic
 
 UNIPROT_BASE = "https://rest.uniprot.org/uniprotkb"
 INTERPRO_BASE = "https://www.ebi.ac.uk/interpro/api"
@@ -167,10 +168,7 @@ def _fetch_interpro_entries(
         elif wrapper.get("results") is not None:
             payload = wrapper
 
-    cache_path.parent.mkdir(parents=True, exist_ok=True)
-    cache_path.write_text(
-        json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
-    )
+    write_json_atomic(cache_path, payload)
     return payload
 
 

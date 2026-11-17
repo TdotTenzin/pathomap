@@ -11,13 +11,13 @@ separate table: any interaction may have zero or many supporting records.
 from __future__ import annotations
 
 import argparse
-import sqlite3
 import sys
+from contextlib import nullcontext
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 
-from build_common import BuildError
+from build_common import BuildError, begin_sqlite_write, no_writes, write_text
 from http_client import read_json, write_json
 from identifiers import (
     assign_registry_ids,
@@ -40,18 +40,6 @@ EVIDENCE_SEED_PATH = ROOT / "data" / "sources" / "interaction_evidence_seed.json
 
 SCHEMA_VERSION = "3.0"
 EVIDENCE_CLASSES = {"experimental", "predicted", "annotation-derived", "hypothetical"}
-
-
-class BuildError(RuntimeError):
-    pass
-
-
-def read_json(path: Path) -> Any:
-    return json.loads(path.read_text(encoding="utf-8"))
-
-
-def write_json(path: Path, payload: Any) -> None:
-    path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
 def load_manual_evidence() -> list[dict]:
@@ -164,7 +152,6 @@ CREATE TABLE interactions (
   provenance TEXT NOT NULL,
   UNIQUE (effector_id, host_protein_id)
 );
-CREATE INDEX idx_interactions_effector_id ON interactions(effector_id);
 CREATE INDEX idx_interactions_host_protein_id ON interactions(host_protein_id);
 CREATE TABLE interaction_evidence (
   evidence_id TEXT PRIMARY KEY,
@@ -182,7 +169,8 @@ CREATE INDEX idx_interaction_evidence_class ON interaction_evidence(evidence_cla
 
 
 def write_sqlite(interactions: list[dict], evidence: list[dict]) -> None:
-    with sqlite3.connect(DB_PATH) as con:
+    con, finalize = begin_sqlite_write(DB_PATH, reuse_existing=True)
+    try:
         con.execute("PRAGMA foreign_keys = ON")
         con.execute("DROP TABLE IF EXISTS interaction_evidence")
         con.execute("DROP TABLE IF EXISTS interactions")
@@ -198,6 +186,8 @@ def write_sqlite(interactions: list[dict], evidence: list[dict]) -> None:
         issues = con.execute("PRAGMA foreign_key_check").fetchall()
         if issues:
             raise BuildError(f"SQLite foreign-key violations: {issues}")
+    finally:
+        finalize(con)
 
 
 def update_sql_file() -> None:
@@ -205,7 +195,7 @@ def update_sql_file() -> None:
     marker = "-- PathoMap v3.0 interaction evidence schema"
     if marker in existing:
         existing = existing.split(marker, 1)[0].rstrip() + "\n\n"
-    SQL_PATH.write_text(existing + INTERACTIONS_DDL, encoding="utf-8")
+    write_text(SQL_PATH, existing + INTERACTIONS_DDL)
 
 
 def update_dataset(path: Path, interactions: list[dict], evidence: list[dict]) -> None:
@@ -219,10 +209,7 @@ def update_dataset(path: Path, interactions: list[dict], evidence: list[dict]) -
     write_json(path, payload)
 
 
-def main() -> int:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--check", action="store_true", help="validate/build in memory without writing")
-    args = parser.parse_args()
+def _run_build(args: argparse.Namespace) -> int:
     dataset = read_json(DATASET_PATH)
     interactions, evidence, interaction_registry, evidence_registry = build_records(dataset)
     if not args.check:
@@ -240,6 +227,20 @@ def main() -> int:
     print(f"interaction evidence: {len(evidence)}")
     print("validation: ok")
     return 0
+
+
+def build(*, check: bool = False) -> int:
+    """Build the interactions stage in-process; ``check=True`` writes nothing."""
+    args = argparse.Namespace(check=check)
+    with no_writes() if check else nullcontext():
+        return _run_build(args)
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--check", action="store_true", help="validate/build in memory without writing")
+    args = parser.parse_args(argv)
+    return build(check=args.check)
 
 
 if __name__ == "__main__":

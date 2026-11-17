@@ -26,13 +26,22 @@ import json
 import re
 import sqlite3
 import sys
+from contextlib import nullcontext
 from pathlib import Path
 from typing import Any
 
 # Add scripts directory to path for relative imports when run as module
 sys.path.insert(0, str(Path(__file__).parent))
 
-from build_common import BuildError, references_for_rows, utc_now, validate_references
+from build_common import (
+    BuildError,
+    begin_sqlite_write,
+    no_writes,
+    references_for_rows,
+    utc_now,
+    validate_references,
+    write_text,
+)
 from http_client import read_json, write_json
 from identifiers import (
     assign_effector_ids,
@@ -80,7 +89,7 @@ CACHE_ROOT = ROOT / "data" / "sources"
 DB_PATH = ROOT / "data" / "pathomap.db"
 SQL_PATH = ROOT / "data" / "schema.sql"
 
-SCHEMA_VERSION = "2.2"
+SCHEMA_VERSION = "3.0"
 DATASET_NAME = "pathomap"
 
 # Amino acid sequences are standard IUPAC one-letter codes (including the
@@ -1185,7 +1194,7 @@ ENRICHMENT_SQL_TYPES = {
     "interacting_partners": "TEXT",
 }
 
-SQL_SECTION_MARKER = "-- PathoMap v2.2 derived tables schema"
+SQL_SECTION_MARKER = "-- PathoMap v3.0 derived tables schema"
 
 
 def _effectors_table_sql() -> str:
@@ -1290,8 +1299,6 @@ def _host_proteins_table_sql() -> str:
             "CREATE TABLE host_proteins (",
             ",\n".join(definitions),
             ");",
-            "",
-            "CREATE INDEX idx_host_proteins_uniprot_id ON host_proteins(uniprot_id);",
         ]
     )
 
@@ -1307,6 +1314,7 @@ def write_schema_sql() -> None:
     # append a duplicate effectors/host_proteins section.
     for marker in (
         SQL_SECTION_MARKER,
+        "-- PathoMap v2.2 derived tables schema",
         "-- PathoMap v2 effectors and host_proteins schema",
     ):
         existing_sql = existing_sql.split(marker)[0]
@@ -1319,7 +1327,7 @@ def write_schema_sql() -> None:
         f"{_effectors_table_sql()}\n\n"
         f"{_reference_links_table_sql()}\n"
     )
-    SQL_PATH.write_text(base_sql + section, encoding="utf-8")
+    write_text(SQL_PATH, base_sql + section)
 
 
 def _sqlite_value(value: Any) -> Any:
@@ -1349,7 +1357,7 @@ def write_sqlite(
     Tables are recreated from the generated DDL on every build so schema
     changes (new columns, primary keys, foreign keys) always apply.
     """
-    con = sqlite3.connect(DB_PATH)
+    con, finalize = begin_sqlite_write(DB_PATH, reuse_existing=True)
     try:
         con.execute("PRAGMA foreign_keys = ON")
         for table in (
@@ -1431,23 +1439,11 @@ def write_sqlite(
             "reference_count": str(len(references)),
         }
         con.executemany("INSERT OR REPLACE INTO meta (key, value) VALUES (?, ?)", meta.items())
-        con.commit()
     finally:
-        con.close()
+        finalize(con)
 
 
-def main() -> int:
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--check", action="store_true", help="validate without writing output files")
-    parser.add_argument("--refresh", action="store_true", help="force fresh API calls (ignore cache)")
-    parser.add_argument("--no-network", action="store_true", help="use only cached data (no API calls)")
-    parser.add_argument(
-        "--enrich-effectors",
-        action="store_true",
-        help="enrich effectors via UniProt mapping/search (slower, more API calls)",
-    )
-    args = parser.parse_args()
-
+def _run_build(args: argparse.Namespace) -> int:
     if not PATHOGENS_DATASET_PATH.exists():
         print(f"error: missing pathogens dataset {PATHOGENS_DATASET_PATH}", file=sys.stderr)
         return 1
@@ -1616,6 +1612,43 @@ def main() -> int:
     print(f"wrote {SQL_PATH.relative_to(ROOT)}")
 
     return 0
+
+
+def build(
+    *,
+    check: bool = False,
+    refresh: bool = False,
+    no_network: bool = False,
+    enrich_effectors: bool = False,
+) -> int:
+    """Build the effectors/host-proteins stage in-process; ``check=True`` writes nothing."""
+    args = argparse.Namespace(
+        refresh=refresh,
+        no_network=no_network,
+        check=check,
+        enrich_effectors=enrich_effectors,
+    )
+    with no_writes() if check else nullcontext():
+        return _run_build(args)
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--check", action="store_true", help="validate without writing output files")
+    parser.add_argument("--refresh", action="store_true", help="force fresh API calls (ignore cache)")
+    parser.add_argument("--no-network", action="store_true", help="use only cached data (no API calls)")
+    parser.add_argument(
+        "--enrich-effectors",
+        action="store_true",
+        help="enrich effectors via UniProt mapping/search (slower, more API calls)",
+    )
+    args = parser.parse_args(argv)
+    return build(
+        check=args.check,
+        refresh=args.refresh,
+        no_network=args.no_network,
+        enrich_effectors=args.enrich_effectors,
+    )
 
 
 if __name__ == "__main__":

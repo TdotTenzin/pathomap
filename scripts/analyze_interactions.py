@@ -14,11 +14,12 @@ import json
 import statistics
 import sys
 from collections import Counter, defaultdict
+from contextlib import nullcontext
 from pathlib import Path
 from typing import Any
 
 sys.path.insert(0, str(Path(__file__).parent))
-from build_common import utc_now
+from build_common import no_writes, utc_now, write_json_atomic
 from identifiers import interaction_evidence_key, is_entity_id
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -528,11 +529,50 @@ def total_issue_count(result: dict) -> int:
     )
 
 
-def write_json_atomic(path: Path, payload: dict) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    temporary = path.with_name(path.name + ".tmp")
-    temporary.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    temporary.replace(path)
+def build(
+    *,
+    check: bool = False,
+    strict: bool = False,
+    dataset_path: Path = DATASET_PATH,
+    output_path: Path = OUTPUT_PATH,
+) -> int:
+    """Analyze the dataset in-process; ``check=True`` writes nothing."""
+    with no_writes() if check else nullcontext():
+        try:
+            source_bytes = dataset_path.read_bytes()
+        except OSError as exc:
+            print(f"error: cannot read dataset: {exc}", file=sys.stderr)
+            return 2
+        try:
+            dataset = json.loads(source_bytes)
+        except json.JSONDecodeError as exc:
+            print(f"error: dataset is not valid JSON: {exc}", file=sys.stderr)
+            return 2
+
+        result = analyze(dataset, source_bytes, dataset_path=dataset_path)
+        if not check:
+            write_json_atomic(output_path, result)
+
+        stats = result["statistics"]
+        print(f"interactions: {stats['interaction_count']}")
+        print(f"unique effectors: {stats['unique_effector_count']}")
+        print(f"unique host proteins: {stats['unique_host_protein_count']}")
+        print(f"unique host targets: {stats['unique_host_target_count']}")
+        print(f"multi-pathogen host proteins: {stats['host_proteins_targeted_by_multiple_pathogens_count']}")
+        print(f"evidence records: {stats['evidence_count']}")
+        issues = total_issue_count(result)
+        if issues:
+            print(f"validation: {issues} issue(s)", file=sys.stderr)
+            for item in (
+                result["validation"]["interaction_issues"]
+                + result["validation"]["evidence_issues"]
+                + result["validation"]["result_issues"]
+            )[:10]:
+                row = f" [{item['row_id']}]" if item.get("row_id") else ""
+                print(f"  {item['code']}{row}: {item['detail']}", file=sys.stderr)
+        else:
+            print("validation: ok")
+        return 1 if strict and issues else 0
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -542,42 +582,12 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--check", action="store_true", help="validate and calculate without writing the JSON artifact")
     parser.add_argument("--strict", action="store_true", help="exit non-zero when validation or result issues exist")
     args = parser.parse_args(argv)
-
-    try:
-        source_bytes = args.dataset.read_bytes()
-    except OSError as exc:
-        print(f"error: cannot read dataset: {exc}", file=sys.stderr)
-        return 2
-    try:
-        dataset = json.loads(source_bytes)
-    except json.JSONDecodeError as exc:
-        print(f"error: dataset is not valid JSON: {exc}", file=sys.stderr)
-        return 2
-
-    result = analyze(dataset, source_bytes, dataset_path=args.dataset)
-    if not args.check:
-        write_json_atomic(args.output, result)
-
-    stats = result["statistics"]
-    print(f"interactions: {stats['interaction_count']}")
-    print(f"unique effectors: {stats['unique_effector_count']}")
-    print(f"unique host proteins: {stats['unique_host_protein_count']}")
-    print(f"unique host targets: {stats['unique_host_target_count']}")
-    print(f"multi-pathogen host proteins: {stats['host_proteins_targeted_by_multiple_pathogens_count']}")
-    print(f"evidence records: {stats['evidence_count']}")
-    issues = total_issue_count(result)
-    if issues:
-        print(f"validation: {issues} issue(s)", file=sys.stderr)
-        for item in (
-            result["validation"]["interaction_issues"]
-            + result["validation"]["evidence_issues"]
-            + result["validation"]["result_issues"]
-        )[:10]:
-            row = f" [{item['row_id']}]" if item.get("row_id") else ""
-            print(f"  {item['code']}{row}: {item['detail']}", file=sys.stderr)
-    else:
-        print("validation: ok")
-    return 1 if args.strict and issues else 0
+    return build(
+        check=args.check,
+        strict=args.strict,
+        dataset_path=args.dataset,
+        output_path=args.output,
+    )
 
 
 if __name__ == "__main__":

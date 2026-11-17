@@ -11,7 +11,7 @@ Schema version **3.0**. Every row carries a stable entity ID (`PM-PAT-…`, `PM-
 | Table | Rows | Contents |
 |---|---|---|
 | `pathogens` | 53 | Stable ID, NCBI taxonomy, genome assembly metadata, Gram/acid-fast status, intracellular strategy |
-| `effectors` | 246 | Stable ID, pathogen/host foreign keys, UniProt/InterPro/Pfam annotations and computed features |
+| `effectors` | 246 | Stable ID, pathogen/host foreign keys, UniProt/InterPro/Pfam annotations |
 | `host_proteins` | 33 | Stable ID, UniProt, GO, pathway and STRING partner data |
 | `host_targets` | 129 | Audited effector target names and resolution status |
 | `interactions` | 39 | Resolved effector–host protein relationships |
@@ -40,18 +40,26 @@ will fetch the curated dataset directly.
 
 ## Build the dataset
 
-Run the stages in order:
+Run all four stages in dependency order with the orchestrator:
+
+```powershell
+python scripts/build_all.py                              # full build + build manifest
+python scripts/build_all.py --enrich-effectors            # also enrich effector proteins
+python scripts/build_all.py --check --no-network          # validate; write nothing; check freshness
+```
+
+The individual stages remain available for advanced use:
 
 ```powershell
 python scripts/build_pathogens.py                        # NCBI enrichment
 python scripts/build_effectors_host_proteins.py          # host proteins (UniProt/STRING)
-python scripts/build_effectors_host_proteins.py --enrich-effectors  # also effectors
 python scripts/build_interactions.py                     # relationships + evidence
 python scripts/analyze_interactions.py                   # validated statistics + network
 ```
 
-The final step writes `data/derived/interaction_analysis.json`. Add `--strict` to make
-validation warnings fail (useful in CI).
+A successful build records output hashes in `data/build-manifest.json`; `--check` compares
+current artifacts against it and fails if a stage was skipped or an output changed.
+Add `--strict` to make analysis validation warnings fail (useful in CI).
 
 Useful build flags:
 
@@ -60,6 +68,9 @@ Useful build flags:
 | `--check` | Build and validate in memory; write nothing |
 | `--refresh` | Ignore cached API responses |
 | `--no-network` | Use only cached responses |
+| `--only <stage>` | Run one stage (`pathogens`, `effectors`, `interactions`, `analysis`) |
+
+Verify the backend with `python -m unittest discover -s tests -v`.
 
 Requirements: Python 3, internet access for uncached API calls. No frontend build step or
 dependencies. Full pipeline details: `docs/DATA_PIPELINE.md`.

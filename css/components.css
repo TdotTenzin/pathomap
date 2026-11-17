@@ -158,6 +158,17 @@
   letter-spacing: 0.01em;
 }
 
+.db-table th .db-sort {
+  all: unset;
+  cursor: pointer;
+  display: inline-block;
+}
+.db-table th .db-sort:focus-visible {
+  outline: 2px solid var(--color-blue);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
 .db-table td {
   font-family: var(--font);
   padding: 10px 14px;
@@ -507,21 +518,9 @@
   background: #fecaca;
   color: #b91c1c;
 }
-.classification-badge[data-class="toxin"] {
-  background: #fee2e2;
-  color: #991b1b;
-}
-.classification-badge[data-class="adhesin"] {
-  background: #e0f2fe;
-  color: #075985;
-}
 .classification-badge[data-class="secreted_protein"] {
   background: #d1fae5;
   color: #065f46;
-}
-.classification-badge[data-class="surface_protein"] {
-  background: #e0f2fe;
-  color: #075985;
 }
 .classification-badge[data-class="enzyme"] {
   background: #dbeafe;
@@ -550,10 +549,6 @@
   color: #166534;
 }
 .classification-badge[data-class="phospholipase"] {
-  background: #dcfce7;
-  color: #166534;
-}
-.classification-badge[data-class="lipoprotein"] {
   background: #dcfce7;
   color: #166534;
 }
@@ -777,7 +772,6 @@
   background: #064e3b;
   color: #6ee7b7;
 }
-[data-theme="dark"] .classification-badge[data-class="enzyme"],
 [data-theme="dark"] .classification-badge[data-class="protein_modification"] {
   background: #1e3a5f;
   color: #93c5fd;
@@ -819,11 +813,6 @@
   background: #374151;
   color: #9ca3af;
 }
-[data-theme="dark"] .classification-badge[data-class="adhesin"],
-[data-theme="dark"] .classification-badge[data-class="surface_protein"] {
-  background: #0c4a6e;
-  color: #7dd3fc;
-}
 [data-theme="dark"] .classification-badge[data-class="membrane_protein"] {
   background: #423207;
   color: #fde68a;
@@ -863,10 +852,6 @@
 [data-theme="dark"] .classification-badge[data-class="effector"] {
   background: #1e3a5f;
   color: #93c5fd;
-}
-[data-theme="dark"] .classification-badge[data-class="enzyme"] {
-  background: #14532d;
-  color: #86efac;
 }
 [data-theme="dark"] .classification-badge[data-class="invasin"] {
   background: #4a1d36;
@@ -983,7 +968,7 @@ a.tool-btn {
 }
 
 .db-pagination-info {
-  color: var(--text-muted);
+  color: var(--color-text-muted);
   font-size: 0.85rem;
 }
 
@@ -995,7 +980,7 @@ a.tool-btn {
 }
 
 .db-pagination-controls label {
-  color: var(--text-muted);
+  color: var(--color-text-muted);
   font-size: 0.85rem;
 }
 
@@ -1006,7 +991,7 @@ a.tool-btn {
 
 #db-page-info {
   font-size: 0.85rem;
-  color: var(--text-muted);
+  color: var(--color-text-muted);
   white-space: nowrap;
 }
 
@@ -1056,7 +1041,7 @@ a.tool-btn {
 .analysis-card:hover {
   transform: translateY(-3px);
   border-color: var(--color-blue-mid);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-hover);
 }
 
 /* Card header */
@@ -1307,23 +1292,6 @@ a.tool-btn {
   border: 1px solid var(--color-border);
   border-radius: 20px;
   padding: 3px 9px;
-}
-
-/* Network placeholder uses a dashed inner frame to signal "not yet built" */
-.ia-network-placeholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  min-height: 260px;
-  margin: 20px;
-  padding: 24px;
-  text-align: center;
-  color: var(--color-text-muted);
-  background: var(--color-bg-alt);
-  border: 1px dashed var(--color-border);
-  border-radius: var(--radius);
 }
 
 .ia-muted {

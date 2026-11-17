@@ -22,16 +22,24 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
-import sqlite3
 import sys
 import urllib.parse
 import xml.etree.ElementTree as ET
+from contextlib import nullcontext
 from pathlib import Path
 
 # Add scripts directory to path for relative imports when run as module
 sys.path.insert(0, str(Path(__file__).parent))
 
-from build_common import BuildError, references_for_rows, validate_references
+from build_common import (
+    BuildError,
+    begin_sqlite_write,
+    no_writes,
+    references_for_rows,
+    utc_now,
+    validate_references,
+    write_text,
+)
 from http_client import ApiError, http_json, http_text, read_json, slug, write_json
 from identifiers import (
     assign_registry_ids,
@@ -54,7 +62,7 @@ DB_PATH = ROOT / "data" / "pathomap.db"
 SQL_PATH = ROOT / "data" / "schema.sql"
 JSON_SCHEMA_PATH = ROOT / "data" / "schema" / "pathogens.schema.json"
 
-SCHEMA_VERSION = "2.2"
+SCHEMA_VERSION = "3.0"
 DATASET_NAME = "pathomap"
 
 GRAM_STAIN_VALUES = ["Gram-positive", "Gram-negative", "Gram-variable", "unknown"]
@@ -598,7 +606,7 @@ def dataset_payload(rows: list[dict], references: list[dict]) -> dict:
         "meta": {
             "dataset": DATASET_NAME,
             "schema_version": SCHEMA_VERSION,
-            "built_at": dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
+            "built_at": utc_now(),
             "tables": {"pathogens": len(rows), "references": len(references)},
             "identifiers": {
                 "scheme": "PM-<TYPE>-<NNNN>",
@@ -623,7 +631,7 @@ def dataset_payload(rows: list[dict], references: list[dict]) -> dict:
 
 
 def write_schema_sql() -> None:
-    sql = """-- PathoMap v2.2 primary schema
+    sql = """-- PathoMap v3.0 primary schema
 CREATE TABLE pathogens (
   entity_id          TEXT    NOT NULL UNIQUE,
   pathogen_id        INTEGER PRIMARY KEY,
@@ -658,15 +666,12 @@ CREATE TABLE pathogens (
 
 CREATE INDEX idx_pathogens_strategy ON pathogens(strategy);
 CREATE INDEX idx_pathogens_gram_stain ON pathogens(gram_stain);
-CREATE INDEX idx_pathogens_tax_id ON pathogens(tax_id);
 
 CREATE TABLE "references" (
   entity_id  TEXT PRIMARY KEY,
   doi        TEXT NOT NULL UNIQUE,
   url        TEXT NOT NULL
 );
-
-CREATE INDEX idx_references_doi ON "references"(doi);
 
 CREATE TABLE pathogen_references (
   pathogen_id  INTEGER NOT NULL REFERENCES pathogens(pathogen_id) ON DELETE CASCADE,
@@ -681,15 +686,15 @@ CREATE TABLE meta (
   value TEXT NOT NULL
 );
 """
-    SQL_PATH.write_text(sql, encoding="utf-8")
+    write_text(SQL_PATH, sql)
 
 
 def write_sqlite(rows: list[dict], references: list[dict]) -> None:
-    if DB_PATH.exists():
-        DB_PATH.unlink()
-    con = sqlite3.connect(DB_PATH)
+    con, finalize = begin_sqlite_write(DB_PATH)
     try:
+        con.execute("PRAGMA foreign_keys = ON")
         con.executescript(SQL_PATH.read_text(encoding="utf-8"))
+        con.execute("PRAGMA foreign_keys = ON")
         insert_columns = [col for col in COLUMNS if col != "reference_ids"]
         placeholders = ", ".join("?" for _ in insert_columns)
         columns = ", ".join(insert_columns)
@@ -718,14 +723,13 @@ def write_sqlite(rows: list[dict], references: list[dict]) -> None:
         meta = {
             "dataset": DATASET_NAME,
             "schema_version": SCHEMA_VERSION,
-            "built_at": dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
+            "built_at": utc_now(),
             "pathogen_count": str(len(rows)),
             "reference_count": str(len(references)),
         }
         con.executemany("INSERT INTO meta (key, value) VALUES (?, ?)", meta.items())
-        con.commit()
     finally:
-        con.close()
+        finalize(con)
 
 
 def write_json_schema() -> None:
@@ -810,13 +814,7 @@ def write_json_schema() -> None:
     write_json(JSON_SCHEMA_PATH, schema)
 
 
-def main() -> int:
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--check", action="store_true", help="validate without writing output files")
-    parser.add_argument("--refresh", action="store_true", help="ignore cached NCBI responses")
-    parser.add_argument("--no-network", action="store_true", help="use cache only")
-    args = parser.parse_args()
-
+def _run_build(args: argparse.Namespace) -> int:
     if not SEED_PATH.exists():
         print(f"error: missing seed file {SEED_PATH}", file=sys.stderr)
         return 1
@@ -871,6 +869,27 @@ def main() -> int:
     print(f"wrote {SQL_PATH.relative_to(ROOT)}")
     print(f"wrote {JSON_SCHEMA_PATH.relative_to(ROOT)}")
     return 0
+
+
+def build(
+    *,
+    check: bool = False,
+    refresh: bool = False,
+    no_network: bool = False,
+) -> int:
+    """Build the pathogens stage in-process; ``check=True`` writes nothing."""
+    args = argparse.Namespace(refresh=refresh, no_network=no_network, check=check)
+    with no_writes() if check else nullcontext():
+        return _run_build(args)
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--check", action="store_true", help="validate without writing output files")
+    parser.add_argument("--refresh", action="store_true", help="ignore cached NCBI responses")
+    parser.add_argument("--no-network", action="store_true", help="use cache only")
+    args = parser.parse_args(argv)
+    return build(check=args.check, refresh=args.refresh, no_network=args.no_network)
 
 
 if __name__ == "__main__":

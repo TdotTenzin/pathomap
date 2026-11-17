@@ -45,22 +45,39 @@ let dataset = normalizeDataset({
   interactions: [], interaction_evidence: [],
 });
 
+async function sha256Hex(buffer) {
+  if (typeof crypto === 'undefined' || !crypto.subtle) return null;
+  const digest = await crypto.subtle.digest('SHA-256', buffer);
+  return Array.from(new Uint8Array(digest), (byte) => byte.toString(16).padStart(2, '0')).join('');
+}
+
+// Single ingest path: validate/annotate meta, normalize, persist, cache.
+function ingestDataset(data, { sha256 } = {}) {
+  const normalized = normalizeDataset(
+    sha256
+      ? { ...(data || {}), meta: { ...(data?.meta || {}), source_dataset_sha256: sha256 } }
+      : data
+  );
+  dataset = normalized;
+  persistDataset(normalized);
+  return normalized;
+}
+
 // Load dataset from a URL: fetch JSON, normalize, store, and return it
 export async function loadDataset(url = DEFAULT_DATASET_URL) {
   const response = await fetch(url, { cache: 'no-store' });
   if (!response.ok) {
     throw new Error(`Could not load ${url} (HTTP ${response.status}).`);
   }
-  const data = await response.json();
-  setDataset(data);
-  return dataset;
+  const buffer = await response.arrayBuffer();
+  const data = JSON.parse(new TextDecoder().decode(buffer));
+  const sha256 = await sha256Hex(buffer);
+  return ingestDataset(data, { sha256 });
 }
 
 // Set the current dataset (normalizes data structure)
 export function setDataset(data) {
-  dataset = normalizeDataset(data);
-  persistDataset(dataset);
-  return dataset;
+  return ingestDataset(data);
 }
 
 // Mirror the dataset into localStorage so other pages can reuse it. Failures
