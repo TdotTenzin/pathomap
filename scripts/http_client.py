@@ -210,6 +210,8 @@ def http_json(
         ApiError: If request fails after retries or is unavailable offline
     """
     text = http_text(url, args, cache_path, rate_limit, user_agent)
+    if not text.strip():
+        return {}
     try:
         return json.loads(text)
     except json.JSONDecodeError as exc:

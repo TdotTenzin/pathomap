@@ -28,7 +28,8 @@
     index.html via <script type="module" src="js/main.js">
 */
 
-import { loadDataset } from './data/loader.js';
+import { DEFAULT_DATASET_URL, HTTP_SETUP_HINT, loadDataset } from './data/loader.js';
+import { pluralize } from './utils/format.js';
 import { initDatabase, renderDatabase } from './views/database.js';
 import { initUpload, setUploadStatus } from './ui/upload.js';
 import { renderAnalyses } from './ui/analyses.js';
@@ -48,7 +49,7 @@ import { initTheme } from './ui/theme.js';
     // APPLICATION BOOTSTRAP
     // ========================================
 
-    async function boot() {
+    async function initApp() {
 
         // Initialize application interfaces
         initDatabase();
@@ -76,7 +77,7 @@ import { initTheme } from './ui/theme.js';
 
             // Report successful loading
             setUploadStatus(
-                `Loaded ${pathogenCount} pathogen${pathogenCount === 1 ? '' : 's'} and ${effectorCount} effector${effectorCount === 1 ? '' : 's'} from data/pathomap-dataset.json.`,
+                `Loaded ${pluralize(pathogenCount, 'pathogen')} and ${pluralize(effectorCount, 'effector')} from ${DEFAULT_DATASET_URL}.`,
                 'success'
             );
 
@@ -88,7 +89,7 @@ import { initTheme } from './ui/theme.js';
 
             // Report loading failure
             setUploadStatus(
-                'Could not load data/pathomap-dataset.json. Serve the site over HTTP (for example, python -m http.server).',
+                `Could not load ${DEFAULT_DATASET_URL}. ${HTTP_SETUP_HINT}`,
                 'error'
             );
 
@@ -102,9 +103,9 @@ import { initTheme } from './ui/theme.js';
     // ========================================
 
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', boot);
+        document.addEventListener('DOMContentLoaded', initApp);
     } else {
-        boot();
+        initApp();
     }
 
 })();

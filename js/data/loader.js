@@ -33,11 +33,15 @@
 
 import { normalizeDataset } from '../utils/dataset.js';
 
-// Default URL for the curated PathoMap dataset
+// Default URLs for the built-in datasets
 export const DEFAULT_DATASET_URL = 'data/pathomap-dataset.json';
+export const DEFAULT_SAMPLE_DATASET_URL = 'data/sample-dataset.json';
+
+// Shared hint shown when a fetch fails because the site is opened as a file
+export const HTTP_SETUP_HINT = 'Serve the site over HTTP (for example, python -m http.server).';
 
 // localStorage key used to carry the dataset between standalone pages
-const STORAGE_KEY = 'pathomap-dataset';
+const DATASET_STORAGE_KEY = 'pathomap-dataset';
 
 // In-memory dataset storage (module-scoped singleton)
 let dataset = normalizeDataset({
@@ -84,7 +88,7 @@ export function setDataset(data) {
 // (quota exceeded, storage disabled) are non-fatal: the in-memory copy remains.
 function persistDataset(normalized) {
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(normalized));
+    localStorage.setItem(DATASET_STORAGE_KEY, JSON.stringify(normalized));
   } catch (error) {
     console.warn('Could not persist dataset to localStorage.', error);
   }
@@ -93,7 +97,7 @@ function persistDataset(normalized) {
 // Restore the dataset persisted by a previous page load, or null when absent
 export function loadStoredDataset() {
   try {
-    const stored = localStorage.getItem(STORAGE_KEY);
+    const stored = localStorage.getItem(DATASET_STORAGE_KEY);
     if (!stored) return null;
     dataset = normalizeDataset(JSON.parse(stored));
     return dataset;

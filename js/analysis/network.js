@@ -13,9 +13,9 @@
 
 import {
     EVIDENCE_CLASS_LABELS,
-    EVIDENCE_RANK,
     STRATEGY_LABELS,
     evidenceClassLabel,
+    evidenceRank,
 } from '../utils/labels.js';
 
 export { evidenceClassLabel };
@@ -56,7 +56,7 @@ export function strongestEvidenceClass(classes = []) {
     let rank = 0;
 
     classes.forEach((value) => {
-        const current = EVIDENCE_RANK[value] || 0;
+        const current = evidenceRank(value);
         if (current > rank) {
             strongest = value;
             rank = current;
@@ -76,10 +76,11 @@ export function analysisMatchesDataset(analysis, dataset) {
     const datasetInteractionCount = Array.isArray(dataset?.interactions)
         ? dataset.interactions.length
         : 0;
+    const rawInteractionCount = Number(analysis.validation?.raw_interaction_count);
     const analysisInteractionCount = Number(analysis.statistics?.interaction_count);
     const sourceSha = meta.source_dataset_sha256;
     const loadedSha = datasetMeta.source_dataset_sha256 || datasetMeta.sha256;
-    const shaMatches = !sourceSha || !loadedSha || sourceSha === loadedSha;
+    const shaMatches = Boolean(sourceSha && loadedSha && sourceSha === loadedSha);
 
     return (
         meta.analysis === 'interaction_analysis' &&
@@ -87,8 +88,10 @@ export function analysisMatchesDataset(analysis, dataset) {
         meta.source_dataset_built_at === datasetMeta.built_at &&
         String(meta.source_dataset_schema_version || '') ===
             String(datasetMeta.schema_version || '') &&
+        Number.isFinite(rawInteractionCount) &&
+        rawInteractionCount === datasetInteractionCount &&
         Number.isFinite(analysisInteractionCount) &&
-        analysisInteractionCount === datasetInteractionCount &&
+        analysisInteractionCount <= rawInteractionCount &&
         shaMatches
     );
 }
@@ -125,7 +128,7 @@ function membershipId(pathogenId, effectorId) {
     return `MEMBERSHIP:${pathogenId}:${effectorId}`;
 }
 
-function membershipLink(effectorNode) {
+function buildMembershipLink(effectorNode) {
     if (!effectorNode?.pathogen_id) return null;
     return {
         id: membershipId(effectorNode.pathogen_id, effectorNode.id),
@@ -166,13 +169,13 @@ function sortNodes(nodes) {
 
 function sortEvidence(records = []) {
     return [...records].sort((a, b) => {
-        const classRank = (EVIDENCE_RANK[b.evidence_class] || 0) - (EVIDENCE_RANK[a.evidence_class] || 0);
+        const classRank = evidenceRank(b.evidence_class) - evidenceRank(a.evidence_class);
         if (classRank) return classRank;
         return String(a.evidence_id || '').localeCompare(String(b.evidence_id || ''));
     });
 }
 
-function fromAnalysis(analysis, dataset) {
+function buildFromAnalysis(analysis, dataset) {
     const indexes = datasetIndexes(dataset);
     const nodes = [];
     const nodeById = new Map();
@@ -184,7 +187,9 @@ function fromAnalysis(analysis, dataset) {
         const node = labelsForNode({ ...source }, indexes);
         if (node.type === 'pathogen') {
             const row = indexes.pathogensById.get(node.id);
-            node.classification = row ? classifyPathogen(row) : UNCLASSIFIED;
+            node.classification =
+                source.classification ||
+                (row ? classifyPathogen(row) : UNCLASSIFIED);
         }
         nodes.push(node);
         nodeById.set(node.id, node);
@@ -208,7 +213,7 @@ function fromAnalysis(analysis, dataset) {
 
     const membershipEdges = nodes
         .filter((node) => node.type === 'effector' && node.pathogen_id && nodeById.has(node.pathogen_id))
-        .map(membershipLink)
+        .map(buildMembershipLink)
         .filter(Boolean);
 
     return {
@@ -221,6 +226,11 @@ function fromAnalysis(analysis, dataset) {
             generatedAt: analysis.meta?.generated_at || null,
             datasetBuiltAt: analysis.meta?.source_dataset_built_at || null,
             datasetSha256: analysis.meta?.source_dataset_sha256 || null,
+            verified: Boolean(
+                analysis.meta?.source_dataset_sha256 &&
+                (dataset?.meta?.source_dataset_sha256 || dataset?.meta?.sha256) ===
+                    analysis.meta.source_dataset_sha256
+            ),
             statistics: analysis.statistics || null,
             validation: analysis.validation || null,
             unresolvedTargets: analysis.unresolved_targets || null,
@@ -228,7 +238,7 @@ function fromAnalysis(analysis, dataset) {
     };
 }
 
-function fromDataset(dataset) {
+function buildFromDataset(dataset) {
     const indexes = datasetIndexes(dataset);
     const nodes = [];
     const nodeById = new Map();
@@ -318,7 +328,7 @@ function fromDataset(dataset) {
 
     const membershipEdges = nodes
         .filter((node) => node.type === 'effector' && node.pathogen_id && nodeById.has(node.pathogen_id))
-        .map(membershipLink)
+        .map(buildMembershipLink)
         .filter(Boolean);
 
     return {
@@ -331,6 +341,7 @@ function fromDataset(dataset) {
             generatedAt: null,
             datasetBuiltAt: dataset?.meta?.built_at || null,
             datasetSha256: null,
+            verified: false,
             statistics: null,
             validation: null,
             unresolvedTargets: null,
@@ -340,8 +351,18 @@ function fromDataset(dataset) {
 
 export function buildNetworkModel(dataset, analysis = null) {
     const model = analysisMatchesDataset(analysis, dataset)
-        ? fromAnalysis(analysis, dataset)
-        : fromDataset(dataset || {});
+        ? buildFromAnalysis(analysis, dataset)
+        : buildFromDataset(dataset || {});
+    const nodeById = new Map(model.nodes.map((node) => [node.id, node]));
+
+    model.interactionEdges.forEach((edge) => {
+        edge.searchText = searchTextForEdge(
+            edge,
+            nodeById.get(edge.source),
+            nodeById.get(edge.target),
+            nodeById.get(edge.pathogen_id)
+        );
+    });
 
     return {
         ...model,
@@ -432,7 +453,10 @@ export function filterNetwork(model, filters = {}) {
         ) {
             return false;
         }
-        if (query && !searchTextForEdge(edge, sourceNode, targetNode, pathogenNode).includes(query)) {
+        if (
+            query &&
+            !(edge.searchText || searchTextForEdge(edge, sourceNode, targetNode, pathogenNode)).includes(query)
+        ) {
             return false;
         }
 
@@ -474,20 +498,32 @@ export function filterNetwork(model, filters = {}) {
     };
 }
 
-function uniqueEvidence(edges) {
+function evidenceIdentity(edgeId, record = {}) {
+    return [
+        edgeId,
+        record.evidence_id,
+        record.evidence_class,
+        record.doi,
+        record.pmid,
+        record.database_accession,
+        record.provenance,
+    ]
+        .map((value) => (value === null || value === undefined ? '' : String(value)))
+        .join('|');
+}
+
+function dedupeEvidence(edges) {
     const byId = new Map();
     edges.forEach((edge) => {
         (edge.evidence_records || []).forEach((record) => {
-            const key =
-                record.evidence_id ||
-                `${edge.id}|${record.evidence_class}|${record.doi}|${record.pmid}|${record.database_accession}|${record.provenance}`;
+            const key = evidenceIdentity(edge.id, record);
             if (!byId.has(key)) byId.set(key, record);
         });
     });
     return sortEvidence([...byId.values()]);
 }
 
-function field(label, value, href = null) {
+function buildField(label, value, href = null) {
     if (value === null || value === undefined || value === '') return null;
     if (Array.isArray(value)) {
         value = value.filter(Boolean).join('; ');
@@ -596,7 +632,7 @@ export function buildNodeDetail(dataset, model, nodeId) {
         (edge) => edge.source === nodeId || edge.target === nodeId || edge.pathogen_id === nodeId
     );
     const related = linkedRelated(model, nodeId, dataset);
-    const evidence = evidenceSummary(uniqueEvidence(incidentEdges));
+    const evidence = evidenceSummary(dedupeEvidence(incidentEdges));
     const base = {
         kind: 'node',
         id: node.id,
@@ -616,17 +652,17 @@ export function buildNodeDetail(dataset, model, nodeId) {
         const row = indexes.pathogensById.get(node.id) || {};
         base.subtitle = row.ncbi_scientific_name || null;
         base.fields = compactFields([
-            field('NCBI Tax ID', row.tax_id),
-            field('Gram stain', row.gram_stain),
-            field('Acid-fast', row.acid_fast ? 'Yes' : 'No'),
-            field('Strategy', STRATEGY_LABELS[row.strategy] || row.strategy),
-            field('Intracellular niche', row.intracellular_niche),
-            field('Strain / serovar', row.serovar || row.strain),
-            field('Genome size (Mb)', row.genome_size_mb),
-            field('GC content (%)', row.gc_content),
-            field('Assembly', row.assembly_level),
-            field('Genome accession', row.genome_accession),
-            field('Linked interactions', incidentEdges.length),
+            buildField('NCBI Tax ID', row.tax_id),
+            buildField('Gram stain', row.gram_stain),
+            buildField('Acid-fast', row.acid_fast ? 'Yes' : 'No'),
+            buildField('Strategy', STRATEGY_LABELS[row.strategy] || row.strategy),
+            buildField('Intracellular niche', row.intracellular_niche),
+            buildField('Strain / serovar', row.serovar || row.strain),
+            buildField('Genome size (Mb)', row.genome_size_mb),
+            buildField('GC content (%)', row.gc_content),
+            buildField('Assembly', row.assembly_level),
+            buildField('Genome accession', row.genome_accession),
+            buildField('Linked interactions', incidentEdges.length),
         ]);
         if (row.description) base.paragraphs.push({ label: 'Description', text: row.description });
         if (row.curation_notes) base.paragraphs.push({ label: 'Curation notes', text: row.curation_notes });
@@ -644,13 +680,13 @@ export function buildNodeDetail(dataset, model, nodeId) {
         const target = indexes.hostTargetsById.get(Number(row.host_target_id));
         base.subtitle = row.type || null;
         base.fields = compactFields([
-            field('Pathogen', pathogen?.name || row.pathogen_name),
-            field('Type', row.type),
-            field('Mechanism', row.mechanism),
-            field('Host target', row.host_target),
-            field('Target resolution', target?.resolution_status),
-            field('UniProt', row.uniprot_id),
-            field('Linked interactions', incidentEdges.length),
+            buildField('Pathogen', pathogen?.name || row.pathogen_name),
+            buildField('Type', row.type),
+            buildField('Mechanism', row.mechanism),
+            buildField('Host target', row.host_target),
+            buildField('Target resolution', target?.resolution_status),
+            buildField('UniProt', row.uniprot_id),
+            buildField('Linked interactions', incidentEdges.length),
         ]);
         if (target?.audit_notes) {
             base.paragraphs.push({ label: 'Target audit note', text: target.audit_notes });
@@ -671,15 +707,15 @@ export function buildNodeDetail(dataset, model, nodeId) {
         const row = indexes.hostProteinsById.get(node.id) || {};
         base.subtitle = row.gene_name || null;
         base.fields = compactFields([
-            field('Gene', row.gene_name),
-            field('UniProt', row.uniprot_id),
-            field('Localization', row.localization),
-            field('Pathway', row.pathway),
-            field('Sequence length (aa)', row.sequence_length),
-            field('Molecular weight (Da)', row.molecular_weight_da),
-            field('Isoelectric point', row.isoelectric_point),
-            field('GRAVY', row.gravy_score),
-            field('Linked interactions', incidentEdges.length),
+            buildField('Gene', row.gene_name),
+            buildField('UniProt', row.uniprot_id),
+            buildField('Localization', row.localization),
+            buildField('Pathway', row.pathway),
+            buildField('Sequence length (aa)', row.sequence_length),
+            buildField('Molecular weight (Da)', row.molecular_weight_da),
+            buildField('Isoelectric point', row.isoelectric_point),
+            buildField('GRAVY', row.gravy_score),
+            buildField('Linked interactions', incidentEdges.length),
         ]);
         if (row.function) base.paragraphs.push({ label: 'Function', text: row.function });
         const domains = domainItems(row);
@@ -718,24 +754,24 @@ export function buildEdgeDetail(dataset, model, edgeId) {
         title: `${sourceNode?.label || edge.source} -> ${targetNode?.gene_name || targetNode?.label || edge.target}`,
         subtitle: pathogenNode?.label || edge.pathogen_name || null,
         fields: compactFields([
-            field('Interaction ID', edge.id),
-            field('Relationship', edge.type),
-            field('Mechanism', edge.mechanism),
-            field('Pathogen', pathogenNode?.label || edge.pathogen_name),
-            field('Effector', sourceNode?.label),
-            field('Host protein', targetNode?.label),
-            field('Host gene', hostRow.gene_name),
-            field('Host UniProt', hostRow.uniprot_id),
-            field('Evidence classes', (edge.evidence_classes || []).map((value) => EVIDENCE_CLASS_LABELS[value] || value)),
-            field('Evidence count', edge.evidence_count),
-            field('Provenance', edge.provenance),
+            buildField('Interaction ID', edge.id),
+            buildField('Relationship', edge.type),
+            buildField('Mechanism', edge.mechanism),
+            buildField('Pathogen', pathogenNode?.label || edge.pathogen_name),
+            buildField('Effector', sourceNode?.label),
+            buildField('Host protein', targetNode?.label),
+            buildField('Host gene', hostRow.gene_name),
+            buildField('Host UniProt', hostRow.uniprot_id),
+            buildField('Evidence classes', (edge.evidence_classes || []).map((value) => EVIDENCE_CLASS_LABELS[value] || value)),
+            buildField('Evidence count', edge.evidence_count),
+            buildField('Provenance', edge.provenance),
         ]),
         paragraphs: [],
         lists: [],
         related: [pathogenNode, sourceNode, targetNode]
             .filter(Boolean)
             .map((node) => ({ id: node.id, type: node.type, label: node.label })),
-        evidence: evidenceSummary(edge.evidence_records || []),
+        evidence: evidenceSummary(dedupeEvidence([edge])),
         externalLinks: [],
     };
 }

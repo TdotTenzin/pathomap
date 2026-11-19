@@ -16,14 +16,14 @@
                              (drives the colored status text via data-state).
 
   Internal functions:
-    warningSuffix(warnings)  Appends "N warning(s)" text for status messages.
-    applyData(data, label)   Validates + stores a parsed dataset; shows an
-                             error and aborts if validation fails hard.
+    formatWarningSuffix(warnings)  Appends "N warning(s)" text for status messages.
+    applyDataset(data, label)      Validates + stores a parsed dataset; shows an
+                                   error and aborts if validation fails hard.
     (downloads use downloadText() from js/utils/export.js)
 
   DOM elements it binds to (all defined in index.html):
     #dataset-file               <input type="file"> — JSON file picker
-    #file-input-name             Displays the chosen file name
+    #dataset-file-name           Displays the chosen file name
     #dataset-load-builtin        Button: load data/pathomap-dataset.json
     #dataset-load-sample         Button: load data/sample-dataset.json
     #dataset-download-template   Button: download empty template JSON
@@ -33,10 +33,17 @@
   malformed JSON or validation errors surface as status-bar messages.
 */
 
-import { DEFAULT_DATASET_URL, loadDataset, setDataset } from '../data/loader.js';
+import {
+    DEFAULT_DATASET_URL,
+    DEFAULT_SAMPLE_DATASET_URL,
+    HTTP_SETUP_HINT,
+    loadDataset,
+    setDataset,
+} from '../data/loader.js';
 import { SCHEMA_VERSION } from '../data/schema.js';
 import { validateDataset } from '../utils/dataset.js';
 import { downloadText } from '../utils/export.js';
+import { pluralize } from '../utils/format.js';
 
 // Callback to re-render the application after data changes
 let renderCallback = () => {};
@@ -56,13 +63,13 @@ export function setUploadStatus(message, state = '') {
 }
 
 // Generate a suffix message for validation warnings
-function warningSuffix(warnings) {
+function formatWarningSuffix(warnings) {
   if (!warnings.length) return '';
-  return ` ${warnings.length} warning${warnings.length === 1 ? '' : 's'}.`;
+  return ` ${pluralize(warnings.length, 'warning')}.`;
 }
 
 // Validate and apply new dataset data
-function applyData(data, sourceLabel) {
+function applyDataset(data, sourceLabel) {
   const result = validateDataset(data);
 
   if (!result.valid) {
@@ -81,7 +88,7 @@ function applyData(data, sourceLabel) {
     : 0;
 
   setUploadStatus(
-    `${sourceLabel} loaded: ${count} pathogen${count === 1 ? '' : 's'}.${warningSuffix(result.warnings)}`,
+    `${sourceLabel} loaded: ${pluralize(count, 'pathogen')}.${formatWarningSuffix(result.warnings)}`,
     result.warnings.length ? 'warning' : 'success'
   );
 
@@ -97,7 +104,7 @@ export function initUpload({ render } = {}) {
   renderCallback = typeof render === 'function' ? render : () => {};
 
   const fileInput = document.getElementById('dataset-file');
-  const fileName = document.getElementById('file-input-name');
+  const fileName = document.getElementById('dataset-file-name');
 
   // Handle file upload via file input
   if (fileInput) {
@@ -115,7 +122,7 @@ export function initUpload({ render } = {}) {
       reader.onload = (loadEvent) => {
         try {
           const data = JSON.parse(loadEvent.target.result);
-          applyData(data, file.name);
+          applyDataset(data, file.name);
         } catch (error) {
           setUploadStatus('Could not parse that file as JSON.', 'error');
           console.error(error);
@@ -144,13 +151,13 @@ export function initUpload({ render } = {}) {
           const count = dataset.pathogens.length;
 
           setUploadStatus(
-            `Curated dataset loaded: ${count} pathogen${count === 1 ? '' : 's'}.`,
+            `Curated dataset loaded: ${pluralize(count, 'pathogen')}.`,
             'success'
           );
         })
         .catch((error) => {
           setUploadStatus(
-            'Could not load data/pathomap-dataset.json. Serve the site over HTTP (for example, python -m http.server).',
+            `Could not load ${DEFAULT_DATASET_URL}. ${HTTP_SETUP_HINT}`,
             'error'
           );
 
@@ -166,19 +173,19 @@ export function initUpload({ render } = {}) {
     loadSample.addEventListener('click', () => {
       setUploadStatus('Loading sample dataset...');
 
-      loadDataset('data/sample-dataset.json')
+      loadDataset(DEFAULT_SAMPLE_DATASET_URL)
         .then((dataset) => {
           renderCallback(dataset);
 
           const count = dataset.pathogens.length;
 
           setUploadStatus(
-            `Sample dataset loaded: ${count} pathogen${count === 1 ? '' : 's'}.`,
+            `Sample dataset loaded: ${pluralize(count, 'pathogen')}.`,
             'success'
           );
         })
         .catch((error) => {
-          setUploadStatus('Could not load data/sample-dataset.json.', 'error');
+          setUploadStatus(`Could not load ${DEFAULT_SAMPLE_DATASET_URL}.`, 'error');
           console.error(error);
         });
     });

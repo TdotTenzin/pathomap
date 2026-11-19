@@ -11,12 +11,15 @@ import {
     buildEdgeDetail,
     buildNodeDetail,
 } from '../analysis/network.js';
+import { createLink } from '../utils/dom.js';
+import { pluralize } from '../utils/format.js';
 import { evidenceClassLabel } from '../utils/labels.js';
+import { createNetworkLayout } from './network-physics.js';
 const SVG_NS = 'http://www.w3.org/2000/svg';
 const NODE_RADIUS = 9;
 const PATHOGEN_X = 190;
 
-function svgElement(tag, attributes = {}) {
+function createSvgElement(tag, attributes = {}) {
     const element = document.createElementNS(SVG_NS, tag);
     Object.entries(attributes).forEach(([key, value]) => {
         if (value !== null && value !== undefined) element.setAttribute(key, value);
@@ -24,7 +27,7 @@ function svgElement(tag, attributes = {}) {
     return element;
 }
 
-function element(tag, className = '') {
+function createElement(tag, className = '') {
     const node = document.createElement(tag);
     if (className) node.className = className;
     return node;
@@ -98,7 +101,7 @@ function edgePath(source, target) {
     return `M ${source.x} ${source.y} C ${midpoint} ${source.y}, ${midpoint} ${target.y}, ${target.x} ${target.y}`;
 }
 
-function edgeClass(edge) {
+function getEdgeClass(edge) {
     return edge.strongest_evidence_class || 'none';
 }
 
@@ -146,51 +149,53 @@ export function createNetworkView({
     let contentSize = { width: 1000, height: 700 };
     let pan = null;
     let resizeTimer = null;
+    let renderKey = null;
+    let layout = null;
+    let animationFrame = null;
+    let nodeElements = new Map();
+    let edgePaths = [];
+    let drag = null;
+    let suppressNodeClick = false;
 
-    function setStatus(message) {
+    function setNetworkStatus(message) {
         if (!status) return;
         status.textContent = message || '';
     }
 
-    function detailContainer() {
+    function getDetailContainer() {
         if (!details) return null;
         let body = details.querySelector('.ia-detail-body');
         if (!body) {
             details.replaceChildren();
-            body = element('div', 'ia-detail-body');
+            body = createElement('div', 'ia-detail-body');
             details.appendChild(body);
         }
         return body;
     }
 
     function renderEmptyDetail() {
-        const body = detailContainer();
+        const body = getDetailContainer();
         if (!body) return;
         body.replaceChildren();
-        const container = element('div', 'ia-detail-empty');
-        const title = element('p', 'ia-detail-empty-title');
+        const container = createElement('div', 'ia-detail-empty');
+        const title = createElement('p', 'ia-detail-empty-title');
         title.textContent = 'Select a node or interaction';
-        const text = element('p', 'ia-muted');
+        const text = createElement('p', 'ia-muted');
         text.textContent =
-            'Click a pathogen, effector, host protein, or relationship line to inspect its biology and evidence.';
+            'Click a pathogen, effector, host protein, or interaction line to inspect its biology and evidence.';
         container.append(title, text);
         body.appendChild(container);
     }
 
-    function addFieldList(parent, fields) {
+    function createFieldList(parent, fields) {
         if (!fields.length) return;
-        const dl = element('dl', 'ia-detail-fields');
+        const dl = createElement('dl', 'ia-detail-fields');
         fields.forEach((item) => {
-            const dt = element('dt');
-            const dd = element('dd');
+            const dt = createElement('dt');
+            const dd = createElement('dd');
             dt.textContent = item.label;
             if (item.href) {
-                const link = element('a');
-                link.href = item.href;
-                link.target = '_blank';
-                link.rel = 'noopener noreferrer';
-                link.textContent = item.value;
-                dd.appendChild(link);
+                dd.appendChild(createLink(item.href, item.value, ''));
             } else {
                 dd.textContent = String(item.value);
             }
@@ -199,11 +204,11 @@ export function createNetworkView({
         parent.appendChild(dl);
     }
 
-    function addParagraphs(parent, paragraphs) {
+    function createParagraphs(parent, paragraphs) {
         paragraphs.forEach((item) => {
-            const block = element('div', 'ia-detail-paragraph');
-            const heading = element('p', 'ia-detail-section-label');
-            const text = element('p');
+            const block = createElement('div', 'ia-detail-paragraph');
+            const heading = createElement('p', 'ia-detail-section-label');
+            const text = createElement('p');
             heading.textContent = item.label;
             text.textContent = item.text;
             block.append(heading, text);
@@ -211,21 +216,16 @@ export function createNetworkView({
         });
     }
 
-    function addList(parent, label, items) {
+    function createList(parent, label, items) {
         if (!items.length) return;
-        const block = element('div', 'ia-detail-block');
-        const heading = element('p', 'ia-detail-section-label');
-        const list = element('ul', 'ia-detail-list');
+        const block = createElement('div', 'ia-detail-block');
+        const heading = createElement('p', 'ia-detail-section-label');
+        const list = createElement('ul', 'ia-detail-list');
         heading.textContent = label;
         items.forEach((item) => {
-            const li = element('li');
+            const li = createElement('li');
             if (item.href) {
-                const link = element('a');
-                link.href = item.href;
-                link.target = '_blank';
-                link.rel = 'noopener noreferrer';
-                link.textContent = item.text;
-                li.appendChild(link);
+                li.appendChild(createLink(item.href, item.text, ''));
             } else {
                 li.textContent = item.text;
             }
@@ -235,14 +235,14 @@ export function createNetworkView({
         parent.appendChild(block);
     }
 
-    function addRelated(parent, related) {
+    function createRelatedList(parent, related) {
         if (!related.length) return;
-        const block = element('div', 'ia-detail-block');
-        const heading = element('p', 'ia-detail-section-label');
-        const chips = element('div', 'ia-detail-chips');
+        const block = createElement('div', 'ia-detail-block');
+        const heading = createElement('p', 'ia-detail-section-label');
+        const chips = createElement('div', 'ia-detail-chips');
         heading.textContent = 'Connected entities';
         related.forEach((item) => {
-            const button = element('button', 'ia-detail-chip');
+            const button = createElement('button', 'ia-detail-chip');
             button.type = 'button';
             button.dataset.relatedId = item.id;
             button.title = `${NODE_TYPE_LABELS[item.type] || item.type}: ${item.label}`;
@@ -253,24 +253,24 @@ export function createNetworkView({
         parent.appendChild(block);
     }
 
-    function addEvidence(parent, evidence) {
+    function createEvidenceList(parent, evidence) {
         if (!evidence.length) return;
-        const block = element('div', 'ia-detail-block');
-        const heading = element('p', 'ia-detail-section-label');
+        const block = createElement('div', 'ia-detail-block');
+        const heading = createElement('p', 'ia-detail-section-label');
         heading.textContent = 'Evidence records';
-        const list = element('div', 'ia-evidence-list');
+        const list = createElement('div', 'ia-evidence-list');
 
         evidence.forEach((record) => {
-            const card = element('article', 'ia-evidence-card');
-            const classRow = element('div', 'ia-evidence-card-head');
-            const badge = element(
+            const card = createElement('article', 'ia-evidence-card');
+            const classRow = createElement('div', 'ia-evidence-card-head');
+            const badge = createElement(
                 'span',
                 `ia-evidence-badge ia-evidence-badge--${record.evidence_class || 'hypothetical'}`
             );
             badge.textContent = evidenceClassLabel(record.evidence_class);
             classRow.appendChild(badge);
             if (record.evidence_id) {
-                const id = element('span', 'ia-muted');
+                const id = createElement('span', 'ia-muted');
                 id.textContent = record.evidence_id;
                 classRow.appendChild(id);
             }
@@ -291,11 +291,11 @@ export function createNetworkView({
             }
 
             if (links.length) {
-                const linkList = element('ul', 'ia-detail-list');
+                const linkList = createElement('ul', 'ia-detail-list');
                 links.forEach((item) => {
-                    const li = element('li');
+                    const li = createElement('li');
                     if (item.href) {
-                        const link = element('a');
+                        const link = createElement('a');
                         link.href = item.href;
                         link.target = '_blank';
                         link.rel = 'noopener noreferrer';
@@ -310,12 +310,12 @@ export function createNetworkView({
             }
 
             if (record.note) {
-                const note = element('p', 'ia-evidence-note');
+                const note = createElement('p', 'ia-evidence-note');
                 note.textContent = record.note;
                 card.appendChild(note);
             }
             if (record.provenance) {
-                const provenance = element('p', 'ia-muted ia-evidence-provenance');
+                const provenance = createElement('p', 'ia-muted ia-evidence-provenance');
                 provenance.textContent = record.provenance;
                 card.appendChild(provenance);
             }
@@ -327,7 +327,7 @@ export function createNetworkView({
     }
 
     function renderDetail(detail) {
-        const body = detailContainer();
+        const body = getDetailContainer();
         if (!body) return;
         body.replaceChildren();
 
@@ -336,41 +336,41 @@ export function createNetworkView({
             return;
         }
 
-        const header = element('div', 'ia-detail-header');
-        const badge = element(
+        const header = createElement('div', 'ia-detail-header');
+        const badge = createElement(
             'span',
             detail.kind === 'edge' ? 'ia-detail-badge ia-detail-badge--edge' : `ia-detail-badge ia-detail-badge--${detail.type}`
         );
         badge.textContent = detail.kind === 'edge' ? 'Interaction' : detail.typeLabel;
-        const title = element('h4', 'ia-detail-title');
+        const title = createElement('h4', 'ia-detail-title');
         title.textContent = detail.title;
         header.append(badge, title);
         if (detail.subtitle) {
-            const subtitle = element('p', 'ia-detail-subtitle');
+            const subtitle = createElement('p', 'ia-detail-subtitle');
             subtitle.textContent = detail.subtitle;
             header.appendChild(subtitle);
         }
         if (detail.id) {
-            const id = element('code', 'ia-detail-id');
+            const id = createElement('code', 'ia-detail-id');
             id.textContent = detail.id;
             header.appendChild(id);
         }
         body.appendChild(header);
 
-        addFieldList(body, detail.fields);
-        addParagraphs(body, detail.paragraphs);
-        detail.lists.forEach((item) => addList(body, item.label, item.items));
-        addEvidence(body, detail.evidence);
-        addRelated(body, detail.related);
+        createFieldList(body, detail.fields);
+        createParagraphs(body, detail.paragraphs);
+        detail.lists.forEach((item) => createList(body, item.label, item.items));
+        createEvidenceList(body, detail.evidence);
+        createRelatedList(body, detail.related);
 
         if (detail.externalLinks?.length) {
-            const block = element('div', 'ia-detail-block');
-            const heading = element('p', 'ia-detail-section-label');
-            const list = element('ul', 'ia-detail-list');
+            const block = createElement('div', 'ia-detail-block');
+            const heading = createElement('p', 'ia-detail-section-label');
+            const list = createElement('ul', 'ia-detail-list');
             heading.textContent = 'External records';
             detail.externalLinks.forEach((item) => {
-                const li = element('li');
-                const link = element('a');
+                const li = createElement('li');
+                const link = createElement('a');
                 link.href = item.href;
                 link.target = '_blank';
                 link.rel = 'noopener noreferrer';
@@ -382,7 +382,7 @@ export function createNetworkView({
             body.appendChild(block);
         }
 
-        const clear = element('button', 'tool-btn tool-btn-sm ia-detail-clear');
+        const clear = createElement('button', 'tool-btn tool-btn-sm ia-detail-clear');
         clear.type = 'button';
         clear.textContent = 'Clear selection';
         clear.addEventListener('click', clearSelection);
@@ -391,7 +391,7 @@ export function createNetworkView({
 
     function applySelection() {
         if (!svg) return;
-        const connected = incidentNodeIds(model || { interactionEdges: [], membershipEdges: [] }, selected);
+        const connected = incidentNodeIds(filtered || { interactionEdges: [], membershipEdges: [] }, selected);
 
         svg.querySelectorAll('[data-node-id]').forEach((node) => {
             const id = node.dataset.nodeId;
@@ -437,6 +437,7 @@ export function createNetworkView({
     }
 
     function selectEdge(edgeId) {
+        if (!filtered?.interactionEdges.some((edge) => edge.id === edgeId)) return;
         selected = { kind: 'edge', id: edgeId };
         applySelection();
         renderDetail(buildEdgeDetail(dataset, filtered, edgeId));
@@ -459,9 +460,9 @@ export function createNetworkView({
         );
     }
 
-    function zoomBy(factor) {
-        const centerX = contentSize.width / 2;
-        const centerY = contentSize.height / 2;
+    function zoomBy(factor, anchor = null) {
+        const centerX = anchor?.x ?? contentSize.width / 2;
+        const centerY = anchor?.y ?? contentSize.height / 2;
         const nextZoom = Math.min(4, Math.max(0.45, transform.zoom * factor));
         const ratio = nextZoom / transform.zoom;
         transform.x = centerX - (centerX - transform.x) * ratio;
@@ -470,13 +471,35 @@ export function createNetworkView({
         applyTransform();
     }
 
-    function resetView() {
+    function resetNetworkView() {
         transform = { zoom: 1, x: 0, y: 0 };
         applyTransform();
     }
 
-    function drawLaneTitle(parent, label, x) {
-        const title = svgElement('text', {
+    function renderNetworkStatus() {
+        const counts = filtered?.counts;
+        if (!counts) return;
+        const countText = [
+            pluralize(counts.interactions, 'interaction'),
+            pluralize(counts.effectors, 'effector'),
+            pluralize(counts.hostProteins, 'host protein'),
+            pluralize(counts.pathogens, 'pathogen'),
+        ].join(' · ');
+        setNetworkStatus(countText);
+    }
+
+    function renderCurrentDetail() {
+        if (selected?.kind === 'node') {
+            renderDetail(buildNodeDetail(dataset, filtered, selected.id));
+        } else if (selected?.kind === 'edge') {
+            renderDetail(buildEdgeDetail(dataset, filtered, selected.id));
+        } else {
+            renderEmptyDetail();
+        }
+    }
+
+    function renderLaneTitle(parent, label, x) {
+        const title = createSvgElement('text', {
             x,
             y: 42,
             'text-anchor': 'middle',
@@ -486,22 +509,66 @@ export function createNetworkView({
         parent.appendChild(title);
     }
 
-    function drawGraph() {
+    function renderGraph() {
         if (!canvas) return;
-        canvas.replaceChildren();
-        svg = null;
-        viewport = null;
+        const nextKey = [
+            Math.max(920, Math.round(canvas.clientWidth || 920)),
+            model?.source?.datasetSha256 || model?.source?.datasetBuiltAt || dataset?.meta?.built_at || '',
+            (filtered?.nodes || []).map((node) => `${node.id}:${node.label}`).join(','),
+            (filtered?.interactionEdges || [])
+                .map((edge) => `${edge.id}:${edge.strongest_evidence_class || ''}`)
+                .join(','),
+            (filtered?.membershipEdges || []).map((edge) => edge.id).join(','),
+        ].join('|');
+        const visibleNodeIds = new Set((filtered?.nodes || []).map((node) => node.id));
+        const visibleEdgeIds = new Set((filtered?.interactionEdges || []).map((edge) => edge.id));
+        const selectionMissing =
+            selected &&
+            ((selected.kind === 'node' && !visibleNodeIds.has(selected.id)) ||
+                (selected.kind === 'edge' && !visibleEdgeIds.has(selected.id)));
+        if (selectionMissing) {
+            selected = null;
+            onSelectionChange(null);
+        }
 
         const hasInteractions = Boolean(filtered?.interactionEdges.length);
         if (canvas) canvas.hidden = !hasInteractions;
         if (empty) empty.hidden = hasInteractions;
         if (!hasInteractions) {
-            selected = null;
+            stopAnimation();
+            layout = null;
+            drag = null;
+            renderKey = null;
+            svg = null;
+            viewport = null;
+            canvas.replaceChildren();
+            if (selected) {
+                selected = null;
+                onSelectionChange(null);
+            }
             renderEmptyDetail();
-            setStatus('No interactions match the active filters.');
-            onSelectionChange(null);
+            setNetworkStatus('No interactions match the active filters.');
             return;
         }
+
+        if (svg && nextKey === renderKey) {
+            applyTransform();
+            applySelection();
+            renderNetworkStatus();
+            renderCurrentDetail();
+            return;
+        }
+
+        stopAnimation();
+        layout = null;
+        drag = null;
+        nodeElements = new Map();
+        edgePaths = [];
+        suppressNodeClick = false;
+        renderKey = nextKey;
+        canvas.replaceChildren();
+        svg = null;
+        viewport = null;
 
         const width = Math.max(920, Math.round(canvas.clientWidth || 920));
         const laneCounts = { pathogen: 0, effector: 0, host_protein: 0 };
@@ -512,15 +579,15 @@ export function createNetworkView({
         const height = Math.max(640, maxLane * 25 + 140);
         contentSize = { width, height };
 
-        svg = svgElement('svg', {
+        svg = createSvgElement('svg', {
             class: 'ia-network-svg',
             viewBox: `0 0 ${width} ${height}`,
-            role: 'img',
+            role: 'group',
             'aria-label': 'Layered interaction network from pathogens through effectors to host proteins',
         });
-        svg.appendChild(svgElement('title')).textContent = 'Pathogen, effector, and host protein interaction network';
+        svg.appendChild(createSvgElement('title')).textContent = 'Pathogen, effector, and host protein interaction network';
 
-        const background = svgElement('rect', {
+        const background = createSvgElement('rect', {
             x: 0,
             y: 0,
             width,
@@ -529,8 +596,8 @@ export function createNetworkView({
         });
         svg.appendChild(background);
 
-        const defs = svgElement('defs');
-        const marker = svgElement('marker', {
+        const defs = createSvgElement('defs');
+        const marker = createSvgElement('marker', {
             id: 'ia-arrow',
             viewBox: '0 0 10 10',
             refX: '9',
@@ -539,16 +606,16 @@ export function createNetworkView({
             markerHeight: '6',
             orient: 'auto-start-reverse',
         });
-        marker.appendChild(svgElement('path', { d: 'M 0 0 L 10 5 L 0 10 z', class: 'ia-arrow-head' }));
+        marker.appendChild(createSvgElement('path', { d: 'M 0 0 L 10 5 L 0 10 z', class: 'ia-arrow-head' }));
         defs.appendChild(marker);
         svg.appendChild(defs);
 
-        viewport = svgElement('g', { class: 'ia-viewport' });
+        viewport = createSvgElement('g', { class: 'ia-viewport' });
         svg.appendChild(viewport);
 
-        drawLaneTitle(viewport, `Pathogens (${laneCounts.pathogen})`, PATHOGEN_X);
-        drawLaneTitle(viewport, `Effectors (${laneCounts.effector})`, width / 2);
-        drawLaneTitle(viewport, `Host proteins (${laneCounts.host_protein})`, width - PATHOGEN_X);
+        renderLaneTitle(viewport, `Pathogens (${laneCounts.pathogen})`, PATHOGEN_X);
+        renderLaneTitle(viewport, `Effectors (${laneCounts.effector})`, width / 2);
+        renderLaneTitle(viewport, `Host proteins (${laneCounts.host_protein})`, width - PATHOGEN_X);
 
         const lanes = orderedLanes(filtered.nodes, filtered.interactionEdges);
         const top = 92;
@@ -557,48 +624,72 @@ export function createNetworkView({
         lanePositions(lanes.effector, top, bottom);
         lanePositions(lanes.host_protein, top, bottom);
 
-        const positions = new Map();
         lanes.pathogen.forEach((node) => {
             node.x = PATHOGEN_X;
-            positions.set(node.id, node);
         });
         lanes.effector.forEach((node) => {
             node.x = width / 2;
-            positions.set(node.id, node);
         });
         lanes.host_protein.forEach((node) => {
             node.x = width - PATHOGEN_X;
-            positions.set(node.id, node);
         });
 
-        const edgeLayer = svgElement('g', { class: 'ia-edge-layer' });
-        const hitLayer = svgElement('g', { class: 'ia-edge-hits' });
+        layout = createNetworkLayout({
+            nodes: filtered.nodes,
+            links: [
+                ...filtered.membershipEdges.map((edge) => ({
+                    source: edge.source,
+                    target: edge.target,
+                    kind: 'membership',
+                })),
+                ...filtered.interactionEdges.map((edge) => ({
+                    source: edge.source,
+                    target: edge.target,
+                    kind: 'interaction',
+                })),
+            ],
+            width,
+            height,
+            laneX: {
+                pathogen: PATHOGEN_X,
+                effector: width / 2,
+                host_protein: width - PATHOGEN_X,
+            },
+            radius: NODE_RADIUS + 3,
+            top: 72,
+            bottom: height - 28,
+        });
+        const positions = new Map(layout.bodies.map((body) => [body.id, body]));
+
+        const edgeLayer = createSvgElement('g', { class: 'ia-edge-layer' });
+        const hitLayer = createSvgElement('g', { class: 'ia-edge-hits' });
         viewport.append(edgeLayer, hitLayer);
 
         filtered.membershipEdges.forEach((edge) => {
             const source = positions.get(edge.source);
             const target = positions.get(edge.target);
             if (!source || !target) return;
-            const path = svgElement('path', {
+            const path = createSvgElement('path', {
                 d: edgePath(source, target),
                 class: 'ia-edge ia-edge--membership',
                 'data-membership-id': edge.id,
             });
             edgeLayer.appendChild(path);
+            edgePaths.push({ path, sourceId: edge.source, targetId: edge.target });
         });
 
         filtered.interactionEdges.forEach((edge) => {
             const source = positions.get(edge.source);
             const target = positions.get(edge.target);
             if (!source || !target) return;
-            const path = svgElement('path', {
+            const path = createSvgElement('path', {
                 d: edgePath(source, target),
-                class: `ia-edge ia-edge--interaction ia-edge--${edgeClass(edge)}`,
+                class: `ia-edge ia-edge--interaction ia-edge--${getEdgeClass(edge)}`,
                 'data-edge-id': edge.id,
             });
             edgeLayer.appendChild(path);
 
-            const hit = svgElement('path', {
+            const hit = createSvgElement('path', {
                 d: edgePath(source, target),
                 class: 'ia-edge-hit',
                 'data-edge-id': edge.id,
@@ -607,16 +698,17 @@ export function createNetworkView({
                 'aria-label': `Interaction ${edge.id}: ${source.label} targets ${target.label}`,
             });
             hitLayer.appendChild(hit);
+            edgePaths.push({ path, hit, sourceId: edge.source, targetId: edge.target });
         });
 
-        const nodeLayer = svgElement('g', { class: 'ia-node-layer' });
+        const nodeLayer = createSvgElement('g', { class: 'ia-node-layer' });
         viewport.appendChild(nodeLayer);
 
         filtered.nodes.forEach((node) => {
             const position = positions.get(node.id);
             if (!position) return;
 
-            const group = svgElement('g', {
+            const group = createSvgElement('g', {
                 class: `ia-node ia-node--${node.type}`,
                 transform: `translate(${position.x} ${position.y})`,
                 'data-node-id': node.id,
@@ -634,11 +726,11 @@ export function createNetworkView({
                         `${(NODE_RADIUS + 2) * Math.cos(angle)},${(NODE_RADIUS + 2) * Math.sin(angle)}`
                     );
                 }
-                shape = svgElement('polygon', { points: points.join(' '), class: 'ia-node-shape' });
+                shape = createSvgElement('polygon', { points: points.join(' '), class: 'ia-node-shape' });
             } else if (node.type === 'effector') {
-                shape = svgElement('circle', { r: NODE_RADIUS, class: 'ia-node-shape' });
+                shape = createSvgElement('circle', { r: NODE_RADIUS, class: 'ia-node-shape' });
             } else {
-                shape = svgElement('rect', {
+                shape = createSvgElement('rect', {
                     x: -NODE_RADIUS,
                     y: -NODE_RADIUS + 2,
                     width: NODE_RADIUS * 2,
@@ -649,11 +741,11 @@ export function createNetworkView({
             }
             group.appendChild(shape);
 
-            const title = svgElement('title');
+            const title = createSvgElement('title');
             title.textContent = `${NODE_TYPE_LABELS[node.type]}: ${node.label}`;
             group.appendChild(title);
 
-            const label = svgElement('text', {
+            const label = createSvgElement('text', {
                 class: `ia-node-label ia-node-label--${node.type}`,
                 x: node.type === 'pathogen' ? -15 : node.type === 'host_protein' ? 15 : 0,
                 y: node.type === 'pathogen' || node.type === 'host_protein' ? 4 : 22,
@@ -664,34 +756,19 @@ export function createNetworkView({
             group.appendChild(label);
 
             nodeLayer.appendChild(group);
+            nodeElements.set(node.id, group);
         });
 
         applyTransform();
         applySelection();
-
-        const countText = `${filtered.counts.interactions.toLocaleString()} interaction${filtered.counts.interactions === 1 ? '' : 's'} - ${filtered.counts.effectors.toLocaleString()} effectors - ${filtered.counts.hostProteins.toLocaleString()} host proteins - ${filtered.counts.pathogens.toLocaleString()} pathogens`;
-        setStatus(countText);
-
+        renderNetworkStatus();
         canvas.appendChild(svg);
-
-        if (selected?.kind === 'node' && !filtered.nodes.some((node) => node.id === selected.id)) {
-            selected = null;
-            renderEmptyDetail();
-        }
-        if (selected?.kind === 'edge' && !edgeById.has(selected.id)) {
-            selected = null;
-            renderEmptyDetail();
-        }
-        if (selected?.kind === 'node') {
-            renderDetail(buildNodeDetail(dataset, filtered, selected.id));
-        } else if (selected?.kind === 'edge') {
-            renderDetail(buildEdgeDetail(dataset, filtered, selected.id));
-        } else {
-            renderEmptyDetail();
-        }
+        layout.reheat(0.55);
+        startAnimation();
+        renderCurrentDetail();
     }
 
-    function svgPoint(event) {
+    function toSvgPoint(event) {
         if (!svg) return { x: 0, y: 0 };
         const point = svg.createSVGPoint();
         point.x = event.clientX;
@@ -699,11 +776,58 @@ export function createNetworkView({
         return point.matrixTransform(svg.getScreenCTM().inverse());
     }
 
+    function toGraphPoint(event) {
+        const point = toSvgPoint(event);
+        return {
+            x: (point.x - transform.x) / transform.zoom,
+            y: (point.y - transform.y) / transform.zoom,
+        };
+    }
+
+    function stopAnimation() {
+        if (animationFrame !== null) cancelAnimationFrame(animationFrame);
+        animationFrame = null;
+    }
+
+    function updatePositions() {
+        if (!layout) return;
+        for (const [id, group] of nodeElements) {
+            const body = layout.get(id);
+            if (body) {
+                group.setAttribute('transform', `translate(${body.x.toFixed(1)} ${body.y.toFixed(1)})`);
+            }
+        }
+        for (const entry of edgePaths) {
+            const source = layout.get(entry.sourceId);
+            const target = layout.get(entry.targetId);
+            if (!source || !target) continue;
+            const path = edgePath(source, target);
+            entry.path.setAttribute('d', path);
+            if (entry.hit) entry.hit.setAttribute('d', path);
+        }
+    }
+
+    function startAnimation() {
+        if (animationFrame !== null || !layout) return;
+        const step = () => {
+            animationFrame = null;
+            if (!layout) return;
+            const active = layout.tick();
+            updatePositions();
+            if (active) animationFrame = requestAnimationFrame(step);
+        };
+        animationFrame = requestAnimationFrame(step);
+    }
+
     function bindSvgEvents() {
         if (!canvas || canvas.dataset.bound === 'true') return;
         canvas.dataset.bound = 'true';
 
         canvas.addEventListener('click', (event) => {
+            if (suppressNodeClick) {
+                suppressNodeClick = false;
+                return;
+            }
             const edgeTarget = event.target.closest('[data-edge-id]');
             if (edgeTarget) {
                 selectEdge(edgeTarget.dataset.edgeId);
@@ -720,6 +844,35 @@ export function createNetworkView({
         });
 
         canvas.addEventListener('keydown', (event) => {
+            if (event.key === '+' || event.key === '=') {
+                if (svg) {
+                    event.preventDefault();
+                    zoomBy(1.18);
+                }
+                return;
+            }
+            if (event.key === '-' || event.key === '_') {
+                if (svg) {
+                    event.preventDefault();
+                    zoomBy(0.85);
+                }
+                return;
+            }
+            const panSteps = {
+                ArrowLeft: [1, 0],
+                ArrowRight: [-1, 0],
+                ArrowUp: [0, 1],
+                ArrowDown: [0, -1],
+            };
+            if (panSteps[event.key]) {
+                if (!svg) return;
+                event.preventDefault();
+                const step = event.shiftKey ? 120 : 40;
+                transform.x += panSteps[event.key][0] * step;
+                transform.y += panSteps[event.key][1] * step;
+                applyTransform();
+                return;
+            }
             if (event.key !== 'Enter' && event.key !== ' ') return;
             const nodeTarget = event.target.closest?.('[data-node-id]');
             if (nodeTarget) {
@@ -735,8 +888,36 @@ export function createNetworkView({
         });
 
         canvas.addEventListener('pointerdown', (event) => {
-            if (event.target.closest('[data-node-id], [data-edge-id]')) return;
             if (!svg) return;
+            const nodeTarget = event.target.closest('[data-node-id]');
+            if (nodeTarget && layout) {
+                const id = nodeTarget.dataset.nodeId;
+                const body = layout.get(id);
+                if (!body) return;
+                event.preventDefault();
+                const point = toGraphPoint(event);
+                drag = {
+                    pointerId: event.pointerId,
+                    id,
+                    group: nodeTarget,
+                    offsetX: body.x - point.x,
+                    offsetY: body.y - point.y,
+                    lastX: body.x,
+                    lastY: body.y,
+                    vx: 0,
+                    vy: 0,
+                    startClientX: event.clientX,
+                    startClientY: event.clientY,
+                    moved: false,
+                };
+                layout.setPinned(id, body.x, body.y);
+                nodeTarget.classList.add('is-dragging');
+                canvas.classList.add('is-dragging-node');
+                canvas.setPointerCapture?.(event.pointerId);
+                startAnimation();
+                return;
+            }
+            if (event.target.closest('[data-edge-id]')) return;
             pan = {
                 pointerId: event.pointerId,
                 startX: event.clientX,
@@ -749,9 +930,29 @@ export function createNetworkView({
         });
 
         canvas.addEventListener('pointermove', (event) => {
+            if (drag && drag.pointerId === event.pointerId && layout) {
+                const point = toGraphPoint(event);
+                const nextX = point.x + drag.offsetX;
+                const nextY = point.y + drag.offsetY;
+                drag.vx = (nextX - drag.lastX) * 0.65;
+                drag.vy = (nextY - drag.lastY) * 0.65;
+                drag.lastX = nextX;
+                drag.lastY = nextY;
+                if (
+                    Math.hypot(
+                        event.clientX - drag.startClientX,
+                        event.clientY - drag.startClientY
+                    ) > 3
+                ) {
+                    drag.moved = true;
+                }
+                layout.setPinned(drag.id, nextX, nextY);
+                updatePositions();
+                return;
+            }
             if (!pan || pan.pointerId !== event.pointerId) return;
-            const start = svgPoint({ clientX: pan.startX, clientY: pan.startY });
-            const current = svgPoint(event);
+            const start = toSvgPoint({ clientX: pan.startX, clientY: pan.startY });
+            const current = toSvgPoint(event);
             transform.x = pan.originX + (current.x - start.x);
             transform.y = pan.originY + (current.y - start.y);
             applyTransform();
@@ -762,14 +963,35 @@ export function createNetworkView({
             pan = null;
             canvas.classList.remove('is-panning');
         };
-        canvas.addEventListener('pointerup', endPan);
-        canvas.addEventListener('pointercancel', endPan);
-        canvas.addEventListener('pointerleave', endPan);
+
+        const endDrag = (event) => {
+            if (!drag || drag.pointerId !== event.pointerId) return;
+            const { id, group, moved, vx, vy } = drag;
+            drag = null;
+            group.classList.remove('is-dragging');
+            canvas.classList.remove('is-dragging-node');
+            if (layout) layout.release(id, vx, vy);
+            if (moved) {
+                suppressNodeClick = true;
+                setTimeout(() => {
+                    suppressNodeClick = false;
+                }, 0);
+            }
+            startAnimation();
+        };
+
+        const endPointer = (event) => {
+            endDrag(event);
+            endPan(event);
+        };
+        canvas.addEventListener('pointerup', endPointer);
+        canvas.addEventListener('pointercancel', endPointer);
+        canvas.addEventListener('pointerleave', endPointer);
 
         canvas.addEventListener('wheel', (event) => {
             if (!svg) return;
             event.preventDefault();
-            zoomBy(event.deltaY < 0 ? 1.12 : 0.89);
+            zoomBy(event.deltaY < 0 ? 1.12 : 0.89, toSvgPoint(event));
         }, { passive: false });
 
         document.addEventListener('keydown', (event) => {
@@ -789,14 +1011,18 @@ export function createNetworkView({
             const action = event.target.closest('[data-network-action]')?.dataset.networkAction;
             if (action === 'zoom-in') zoomBy(1.18);
             if (action === 'zoom-out') zoomBy(0.85);
-            if (action === 'fit') resetView();
+            if (action === 'reset') resetNetworkView();
+            if (action === 'settle') {
+                layout?.reheat(1);
+                startAnimation();
+            }
         });
     }
 
     window.addEventListener('resize', () => {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(() => {
-            if (filtered) drawGraph();
+            if (filtered) renderGraph();
         }, 120);
     });
 
@@ -810,7 +1036,7 @@ export function createNetworkView({
             edgeById = new Map((model?.interactionEdges || []).map((edge) => [edge.id, edge]));
             membershipById = new Map((model?.membershipEdges || []).map((edge) => [edge.id, edge]));
             filtered = nextFiltered;
-            drawGraph();
+            renderGraph();
         },
         serializeSvg(metadata = {}) {
             if (!svg) return null;
@@ -818,6 +1044,15 @@ export function createNetworkView({
             clone.setAttribute('xmlns', SVG_NS);
             clone.setAttribute('width', String(contentSize.width));
             clone.setAttribute('height', String(contentSize.height));
+            clone.querySelectorAll('.ia-edge-hits').forEach((layer) => layer.remove());
+            clone.querySelectorAll('.is-dimmed, .is-selected').forEach((element) => {
+                element.classList.remove('is-dimmed', 'is-selected');
+            });
+            clone.querySelectorAll('[tabindex], [aria-label]').forEach((element) => {
+                element.removeAttribute('tabindex');
+                element.removeAttribute('aria-label');
+                if (element.getAttribute('role') === 'button') element.removeAttribute('role');
+            });
 
             const background = getCssColor('--color-bg', '#ffffff');
             const text = getCssColor('--color-text', '#1e293b');
@@ -827,7 +1062,7 @@ export function createNetworkView({
             const host = getCssColor('--network-host', '#0f766e');
             const experimental = getCssColor('--evidence-experimental', '#16a34a');
             const predicted = getCssColor('--evidence-predicted', '#d97706');
-            const annotation = getCssColor('--evidence-annotation', '#2563eb');
+            const annotation = getCssColor('--evidence-annotation-derived', '#2563eb');
             const hypothetical = getCssColor('--evidence-hypothetical', '#64748b');
 
             const style = document.createElementNS(SVG_NS, 'style');
@@ -841,6 +1076,7 @@ export function createNetworkView({
                 .ia-edge--annotation-derived { stroke: ${annotation}; stroke-dasharray: 2 5; }
                 .ia-edge--hypothetical { stroke: ${hypothetical}; stroke-dasharray: 10 4 2 4; }
                 .ia-edge--none { stroke: ${muted}; stroke-dasharray: 2 5; opacity: .5; }
+                .ia-edge-hit { fill: none; stroke: transparent; stroke-width: 12; }
                 .ia-arrow-head { fill: ${muted}; }
                 .ia-node-shape { stroke: ${background}; stroke-width: 1.5; }
                 .ia-node--pathogen .ia-node-shape { fill: ${pathogen}; }
@@ -849,9 +1085,6 @@ export function createNetworkView({
                 .ia-node-label { fill: ${text}; stroke: ${background}; stroke-width: 3px; paint-order: stroke; font: 11px sans-serif; }
                 .ia-node-label--pathogen { font-weight: 600; }
                 .ia-node-label--host_protein { fill: ${host}; font-weight: 600; }
-                .ia-node.is-dimmed, .ia-edge.is-dimmed { opacity: .08; }
-                .ia-node.is-selected .ia-node-shape { stroke: ${text}; stroke-width: 2.5; }
-                .ia-edge.is-selected { stroke-width: 3; opacity: 1; }
             `;
 
             const metadataNode = document.createElementNS(SVG_NS, 'metadata');

@@ -1,5 +1,5 @@
 /*
-  schema.js - Central schema definitions for the PathoMap dataset (v2.2).
+  schema.js - Central schema definitions for the PathoMap dataset (v3.0).
 
   Purpose: Single source of truth for column metadata, enum values, visible
   column lists, and classification display labels. Every other module imports

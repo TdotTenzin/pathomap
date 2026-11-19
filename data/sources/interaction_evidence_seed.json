@@ -1,5 +1,306 @@
 {
   "schema_version": "1.0",
   "description": "Optional manually curated evidence. Each record must reference an existing stable effector_id and host_protein_id. Multiple evidence rows for a relationship are supported.",
-  "evidence": []
+  "evidence": [
+    {
+      "effector_id": "PM-EFF-0002",
+      "host_protein_id": "PM-HST-0029",
+      "evidence_class": "experimental",
+      "doi": "10.1126/science.1227037",
+      "pmid": null,
+      "database_accession": null,
+      "provenance": "McGourty et al., Science 2012 (SifA binds SKIP/PLEKHM2)",
+      "note": "Co-immunoprecipitation and functional assays show SifA forms a complex with SKIP/PLEKHM2 in infected cells."
+    },
+    {
+      "effector_id": "PM-EFF-0087",
+      "host_protein_id": "PM-HST-0029",
+      "evidence_class": "experimental",
+      "doi": "10.1126/science.1227037",
+      "pmid": null,
+      "database_accession": null,
+      "provenance": "McGourty et al., Science 2012 (S. Typhi SifA-SKIP/PLEKHM2)",
+      "note": "Same published SifA-SKIP binding evidence applied to the S. Typhi effector row."
+    },
+    {
+      "effector_id": "PM-EFF-0009",
+      "host_protein_id": "PM-HST-0014",
+      "evidence_class": "experimental",
+      "doi": "10.1016/S0092-8674(00)81070-3",
+      "pmid": null,
+      "database_accession": null,
+      "provenance": "Meng et al., Cell 1996 (InlA is the E-cadherin ligand)",
+      "note": "Affinity chromatography identified E-cadherin as the cellular receptor for Listeria internalin."
+    },
+    {
+      "effector_id": "PM-EFF-0010",
+      "host_protein_id": "PM-HST-0027",
+      "evidence_class": "experimental",
+      "doi": "10.1016/S0092-8674(00)00141-0",
+      "pmid": "11081636",
+      "database_accession": null,
+      "provenance": "Shen et al., Cell 2000 (InlB binds/activates MET)",
+      "note": "InlB binds the MET extracellular domain and is required for InlB-dependent entry."
+    },
+    {
+      "effector_id": "PM-EFF-0143",
+      "host_protein_id": "PM-HST-0021",
+      "evidence_class": "experimental",
+      "doi": "10.1073/pnas.1001815107",
+      "pmid": null,
+      "database_accession": null,
+      "provenance": "Wilke & Bubeck Wardenburg, PNAS 2010 (Hla-ADAM10)",
+      "note": "ADAM10 was purified as an Hla-binding protein and shown to be required for toxin binding."
+    },
+    {
+      "effector_id": "PM-EFF-0179",
+      "host_protein_id": "PM-HST-0017",
+      "evidence_class": "experimental",
+      "doi": "10.1016/0005-2744(77)90053-5",
+      "pmid": "196649",
+      "database_accession": null,
+      "provenance": "Chung & Collier, Biochim Biophys Acta 1977 (diphtheria toxin ADP-ribosylates EF-2)",
+      "note": "Kinetic analysis of EF-2 ADP-ribosylation catalyzed by diphtheria toxin fragment A."
+    },
+    {
+      "effector_id": "PM-EFF-0231",
+      "host_protein_id": "PM-HST-0014",
+      "evidence_class": "experimental",
+      "doi": "10.1073/pnas.95.25.14979",
+      "pmid": null,
+      "database_accession": null,
+      "provenance": "Wu et al., PNAS 1998 (BFT cleaves E-cadherin)",
+      "note": "Bacteroides fragilis enterotoxin specifically cleaves the extracellular domain of E-cadherin."
+    },
+    {
+      "effector_id": "PM-EFF-0003",
+      "host_protein_id": "PM-HST-0018",
+      "evidence_class": "experimental",
+      "doi": "10.1126/sciadv.adj5777",
+      "pmid": "38064550",
+      "database_accession": null,
+      "provenance": "Yuan et al., Science Advances 2023 (SipA binds and stabilizes F-actin)",
+      "note": "Cryo-EM shows SipA binds along F-actin grooves and stabilizes filaments through charged interface residues."
+    },
+    {
+      "effector_id": "PM-EFF-0005",
+      "host_protein_id": "PM-HST-0002",
+      "evidence_class": "experimental",
+      "doi": "10.1016/j.celrep.2015.07.063",
+      "pmid": "26299973",
+      "database_accession": null,
+      "provenance": "D'Costa et al., Cell Reports 2015 (SopD2 binds and inhibits Rab7)",
+      "note": "SopD2 directly binds Rab7 and inhibits nucleotide exchange, limiting Rab7 effector recruitment."
+    },
+    {
+      "effector_id": "PM-EFF-0016",
+      "host_protein_id": "PM-HST-0033",
+      "evidence_class": "experimental",
+      "doi": "10.1084/jem.20030527",
+      "pmid": "12925680",
+      "database_accession": null,
+      "provenance": "Singh et al., JEM 2003 (M. tuberculosis LAM blocks Ca2+/hVPS34 signaling)",
+      "note": "M. tuberculosis lipoarabinomannan blocks the Ca2+/calmodulin-PI3K hVPS34 cascade required for phagosome maturation."
+    },
+    {
+      "effector_id": "PM-EFF-0031",
+      "host_protein_id": "PM-HST-0018",
+      "evidence_class": "experimental",
+      "doi": "10.1093/emboj/18.12.3249",
+      "pmid": "10369666",
+      "database_accession": null,
+      "provenance": "Tran Van Nhieu et al., EMBO J 1999 (IpaC induces actin polymerization)",
+      "note": "IpaC induced filopodial/lamellipodial extensions and actin polymerization in semi-permeabilized and microinjected cells."
+    },
+    {
+      "effector_id": "PM-EFF-0034",
+      "host_protein_id": "PM-HST-0031",
+      "evidence_class": "experimental",
+      "doi": "10.1371/journal.ppat.0040021",
+      "pmid": "18266466",
+      "database_accession": null,
+      "provenance": "Salcedo et al., PLoS Pathogens 2008 (Btp1/BtpA interferes with TLR2 signaling)",
+      "note": "Experimental work shows Btp1/BtpA interferes with TLR2 signaling in dendritic cells; this is pathway-level evidence rather than direct receptor binding."
+    },
+    {
+      "effector_id": "PM-EFF-0045",
+      "host_protein_id": "PM-HST-0012",
+      "evidence_class": "experimental",
+      "doi": "10.1371/journal.ppat.1006101",
+      "pmid": null,
+      "database_accession": null,
+      "provenance": "Latomanski et al., PLoS Pathogens 2016 (Cig57 hijacks FCHO-mediated clathrin trafficking)",
+      "note": "Cig57 hijacks FCHO-dependent clathrin-mediated trafficking; this supports pathway subversion rather than a demonstrated direct Cig57-CLTC binding event."
+    },
+    {
+      "effector_id": "PM-EFF-0070",
+      "host_protein_id": "PM-HST-0028",
+      "evidence_class": "experimental",
+      "doi": "10.1128/IAI.71.7.4018-4025.2003",
+      "pmid": "12819090",
+      "database_accession": null,
+      "provenance": "Park et al., Infect Immun 2003 (Msp2/p44 facilitates granulocyte adherence)",
+      "note": "Recombinant Msp2 binds PSGL-1-expressing cells and reduces PSGL-1 antibody binding; the study supports Msp2/PSGL-1 association without establishing Msp2 as the sole PSGL-1 adhesin."
+    },
+    {
+      "effector_id": "PM-EFF-0081",
+      "host_protein_id": "PM-HST-0018",
+      "evidence_class": "experimental",
+      "doi": "10.1038/ncb2109",
+      "pmid": "20972427",
+      "database_accession": null,
+      "provenance": "Haglund et al., Nature Cell Biology 2010 (R. rickettsii Sca2 is a formin-like actin nucleator)",
+      "note": "Sca2 nucleates unbranched actin filaments, associates processively with barbed ends, and uses profilin to drive actin-based motility."
+    },
+    {
+      "effector_id": "PM-EFF-0085",
+      "host_protein_id": "PM-HST-0018",
+      "evidence_class": "experimental",
+      "doi": "10.1111/j.1462-5822.2012.01815.x",
+      "pmid": "22612237",
+      "database_accession": null,
+      "provenance": "Klee et al., Cellular Microbiology 2012 (R. conorii Sca2 actin-nucleating domains)",
+      "note": "R. conorii Sca2 has separable mammalian-association and actin-nucleating domains that support intracellular actin-based motility."
+    },
+    {
+      "effector_id": "PM-EFF-0096",
+      "host_protein_id": "PM-HST-0017",
+      "evidence_class": "experimental",
+      "doi": "10.1128/iai.15.1.138-144.1977",
+      "pmid": "188760",
+      "database_accession": null,
+      "provenance": "Chung & Collier, Infect Immun 1977 (Pseudomonas exotoxin A ADP-ribosylates EF-2)",
+      "note": "Pseudomonas aeruginosa exotoxin A catalyzes NAD-dependent ADP-ribosylation of mammalian elongation factor 2 in vitro and in vivo."
+    },
+    {
+      "effector_id": "PM-EFF-0098",
+      "host_protein_id": "PM-HST-0016",
+      "evidence_class": "experimental",
+      "doi": "10.1016/j.bbrc.2006.10.091",
+      "pmid": "17083913",
+      "database_accession": null,
+      "provenance": "Zhou et al., BBRC 2006 (IbeA interacts with vimentin)",
+      "note": "Vimentin was identified on brain microvascular endothelial cells as an IbeA-binding protein that mediates E. coli K1 binding and invasion."
+    },
+    {
+      "effector_id": "PM-EFF-0104",
+      "host_protein_id": "PM-HST-0023",
+      "evidence_class": "experimental",
+      "doi": "10.1128/IAI.69.10.6419-6426.2001",
+      "pmid": "11553586",
+      "database_accession": null,
+      "provenance": "Rytkönen et al., Infect Immun 2001 (gonococcal pilin binds CD46)",
+      "note": "Soluble gonococcal pilin bound a CD46-sized band, and CD46 antibodies or soluble pilin blocked Neisseria gonorrhoeae binding to target cells and tissue."
+    },
+    {
+      "effector_id": "PM-EFF-0116",
+      "host_protein_id": "PM-HST-0025",
+      "evidence_class": "experimental",
+      "doi": "10.1128/IAI.74.2.830-838.2006",
+      "pmid": "16428725",
+      "database_accession": null,
+      "provenance": "Avadhanula et al., Infect Immun 2006 (NTHI P5 fimbriae bind ICAM-1)",
+      "note": "Anti-P5 antiserum reduced NTHI adhesion to ICAM-1 cells and recombinant ICAM-1 bound P5-expressing but not P5-deficient outer membrane preparations."
+    },
+    {
+      "effector_id": "PM-EFF-0130",
+      "host_protein_id": "PM-HST-0013",
+      "evidence_class": "experimental",
+      "doi": "10.1073/pnas.0502040102",
+      "pmid": "15956214",
+      "database_accession": null,
+      "provenance": "Andersen-Nissen et al., PNAS 2005 (C. jejuni flagellin evades TLR5 recognition)",
+      "note": "This study supports a C. jejuni flagellin-TLR5 interface through demonstrated TLR5 evasion/non-recognition rather than TLR5 activation."
+    },
+    {
+      "effector_id": "PM-EFF-0133",
+      "host_protein_id": "PM-HST-0014",
+      "evidence_class": "experimental",
+      "doi": "10.1038/embor.2010.114",
+      "pmid": "20814423",
+      "database_accession": null,
+      "provenance": "Löwer et al., EMBO Reports 2010 (H. pylori HtrA cleaves E-cadherin)",
+      "note": "H. pylori HtrA was shown to cleave E-cadherin and disrupt epithelial adherens junctions."
+    },
+    {
+      "effector_id": "PM-EFF-0145",
+      "host_protein_id": "PM-HST-0022",
+      "evidence_class": "experimental",
+      "doi": "10.1016/j.chom.2013.04.006",
+      "pmid": "23684309",
+      "database_accession": null,
+      "provenance": "Spaan et al., Cell Host & Microbe 2013 (PVL targets C5a receptors)",
+      "note": "LukS-PV binds the C5a receptor C5aR and the C5a-like receptor C5L2 on human myeloid cells."
+    },
+    {
+      "effector_id": "PM-EFF-0155",
+      "host_protein_id": "PM-HST-0026",
+      "evidence_class": "experimental",
+      "doi": "10.1128/IAI.69.5.3372-3381.2001",
+      "pmid": "11292760",
+      "database_accession": null,
+      "provenance": "Hammer et al., Infect Immun 2001 (PspA binds lactoferrin)",
+      "note": "Pneumococcal surface protein A was shown to mediate binding of human lactoferrin to Streptococcus pneumoniae."
+    },
+    {
+      "effector_id": "PM-EFF-0156",
+      "host_protein_id": "PM-HST-0024",
+      "evidence_class": "experimental",
+      "doi": "10.1128/IAI.70.10.5604-5611.2002",
+      "pmid": "12228288",
+      "database_accession": null,
+      "provenance": "Duthy et al., Infect Immun 2002 (PspC binds factor H via SCR13-15)",
+      "note": "Factor H binding was PspC dependent and mapped to factor H short consensus repeats 13 to 15."
+    },
+    {
+      "effector_id": "PM-EFF-0170",
+      "host_protein_id": "PM-HST-0018",
+      "evidence_class": "experimental",
+      "doi": "10.1111/j.1574-6968.2000.tb09122.x",
+      "pmid": "10804189",
+      "database_accession": null,
+      "provenance": "Popoff et al., FEMS Microbiology Letters 2000 (C. difficile binary toxin ADP-ribosylates actin)",
+      "note": "C. difficile binary toxin production was linked to an actin-specific ADP-ribosyltransferase activity."
+    },
+    {
+      "effector_id": "PM-EFF-0171",
+      "host_protein_id": "PM-HST-0013",
+      "evidence_class": "experimental",
+      "doi": "10.1016/j.anaerobe.2016.01.002",
+      "pmid": "26790921",
+      "database_accession": null,
+      "provenance": "Batah et al., Anaerobe 2016 (C. difficile FliC activates TLR5)",
+      "note": "C. difficile FliC flagellin interacted with TLR5 and predominantly activated TLR5-linked NF-kB signaling in epithelial cell models."
+    },
+    {
+      "effector_id": "PM-EFF-0222",
+      "host_protein_id": "PM-HST-0018",
+      "evidence_class": "experimental",
+      "doi": "10.1128/JB.01455-10",
+      "pmid": "21335455",
+      "database_accession": null,
+      "provenance": "Stevens et al., J Bacteriol 2011 (B. pseudomallei BimA binds/polymerizes actin)",
+      "note": "BimA motifs required for intracellular motility, actin binding, and actin polymerization were experimentally identified."
+    },
+    {
+      "effector_id": "PM-EFF-0239",
+      "host_protein_id": "PM-HST-0015",
+      "evidence_class": "experimental",
+      "doi": "10.1074/jbc.274.37.26272",
+      "pmid": "10473582",
+      "database_accession": null,
+      "provenance": "Eicken et al., J Biol Chem 1999 (DbpA decorin binding residues)",
+      "note": "Critical lysine residues in Borrelia burgdorferi DbpA required for decorin binding were identified by mutagenesis."
+    },
+    {
+      "effector_id": "PM-EFF-0240",
+      "host_protein_id": "PM-HST-0031",
+      "evidence_class": "experimental",
+      "doi": "10.4049/jimmunol.167.2.987",
+      "pmid": "11441107",
+      "database_accession": null,
+      "provenance": "Bulut et al., J Immunol 2001 (OspA lipoprotein activates TLR2/TLR6)",
+      "note": "OspA lipoprotein activated NF-kB through TLR2/TLR6 in transfected endothelial cells; this supports OspA-TLR2 engagement in a lipoprotein context."
+    }
+  ]
 }

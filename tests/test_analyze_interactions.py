@@ -14,7 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from analyze_interactions import analyze, main
+from analyze_interactions import analyze, main, validate_result
 from identifiers import entity_id
 
 
@@ -152,6 +152,8 @@ class InteractionAnalysisTests(unittest.TestCase):
         self.assertEqual(len(host["effector_ids"]), 2)
 
         self.assertEqual(len(result["network"]["nodes"]), 5)
+        pathogen_nodes = [node for node in result["network"]["nodes"] if node["type"] == "pathogen"]
+        self.assertTrue(all(node["classification"] == "Unclassified" for node in pathogen_nodes))
         self.assertEqual(len(result["network"]["edges"]), 2)
         edge = result["network"]["edges"][0]
         self.assertEqual(edge["id"], entity_id("interaction", 1))
@@ -291,7 +293,7 @@ class InteractionAnalysisTests(unittest.TestCase):
 
             self.assertEqual(run_cli(["--dataset", str(source), "--output", str(output)]), 0)
             self.assertTrue(output.exists())
-            self.assertEqual(json.loads(output.read_text(encoding="utf-8"))["schema_version"], "1.1")
+            self.assertEqual(json.loads(output.read_text(encoding="utf-8"))["schema_version"], "1.2")
 
             invalid = copy.deepcopy(dataset)
             invalid["interactions"].append({
@@ -306,6 +308,32 @@ class InteractionAnalysisTests(unittest.TestCase):
             self.assertEqual(run_cli(["--dataset", str(source), "--output", str(output), "--check", "--strict"]), 1)
             self.assertFalse(output.exists())
 
+    def test_result_validation_recomputes_counts_from_source(self):
+        dataset = base_dataset()
+        result = analyze_dataset(dataset)
+        self.assertEqual(validate_result(result, dataset), [])
+
+        mutated = copy.deepcopy(result)
+        mutated["statistics"]["interaction_count"] = 99
+        self.assertIn("source_statistics_mismatch", codes(validate_result(mutated, dataset)))
+
+        mutated = copy.deepcopy(result)
+        mutated["network"]["edges"] = mutated["network"]["edges"][:1]
+        issues = codes(validate_result(mutated, dataset))
+        self.assertIn("edge_count_mismatch", issues)
+        self.assertIn("edge_source_mismatch", issues)
+
+        mutated = copy.deepcopy(result)
+        mutated["statistics"]["unresolved_target_count"] = 0
+        self.assertIn("unresolved_target_count_mismatch", codes(validate_result(mutated, dataset)))
+
+    def test_pathogen_classification_is_recorded_in_artifact(self):
+        dataset = base_dataset()
+        dataset["pathogens"][0]["name"] = "Influenza A virus"
+        result = analyze_dataset(dataset)
+        pathogen = next(node for node in result["network"]["nodes"] if node["type"] == "pathogen")
+        self.assertEqual(pathogen["classification"], "Virus")
+
     def test_known_answer_sample_dataset(self):
         sample = ROOT / "data" / "sample-dataset.json"
         if not sample.exists():
@@ -318,7 +346,7 @@ class InteractionAnalysisTests(unittest.TestCase):
         self.assertEqual(stats["unique_effector_count"], 5)
         self.assertEqual(stats["unique_host_protein_count"], 5)
         self.assertEqual(stats["unique_host_target_count"], 5)
-        self.assertEqual(stats["evidence_count"], 5)
+        self.assertEqual(stats["evidence_count"], 10)
         self.assertEqual(stats["host_proteins_targeted_by_multiple_pathogens_count"], 0)
         self.assertEqual(result["validation"]["interaction_issues"], [])
         self.assertEqual(result["validation"]["evidence_issues"], [])

@@ -10,3 +10,10 @@
 - No file edits unless asked; no commits/pushes/PRs unless asked.
 - Write code immediately when the task is clear — no restating the plan, no narration, no dumping full files back.
 - Keep replies to a few lines; bullets over paragraphs.
+
+## Response footer
+
+- End every main-assistant final answer with a `Suggestions:` section containing exactly three distinct, context-aware next steps.
+- Make each suggestion specific to the current task or repository; prefer concrete tests, files, commands, or follow-up changes over generic advice.
+- Do not repeat suggestions already given in the current conversation unless the context has materially changed.
+- Do not add this footer to tool-only progress messages or subagent results; only user-visible final answers from the main assistant.

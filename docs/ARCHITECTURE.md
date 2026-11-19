@@ -16,7 +16,7 @@ data/sources/ (curated seeds + API caches)
 
 index.html -> js/main.js -> js/data/loader.js -> js/views/database.js
 interaction-analysis.html -> js/pages/interaction-analysis.js
-    -> js/data/loader.js + js/data/analysis.js
+    -> js/data/loader.js + js/data/interaction-analysis.js
     -> js/analysis/network.js
     -> js/views/interaction-network.js
 ```
@@ -34,7 +34,7 @@ host-pathogen-tracker/
 │   ├── main.js                 # Boot: init database view + upload, load dataset
 │   ├── data/
 │   │   ├── loader.js           # Fetch + in-memory dataset
-│   │   ├── analysis.js         # Fetch derived interaction-analysis output
+│   │   ├── interaction-analysis.js # Fetch derived interaction-analysis output
 │   │   └── schema.js           # Columns, labels, enums, data dictionary
 │   ├── ui/
 │   │   ├── analyses.js         # Generated Analyses cards
@@ -85,7 +85,7 @@ Vanilla ES modules, no build step, no external dependencies.
 | `js/ui/upload.js` | Upload/sample/template flow | `initUpload()` |
 | `js/ui/references.js` | Home-page references and evidence rendering | `renderReferences()` |
 | `js/views/database.js` | Database browser rendering | `initDatabase()`, `renderDatabase()` |
-| `js/data/analysis.js` | Fetch optional Phase 4 analysis artifact | `loadInteractionAnalysis()` |
+| `js/data/interaction-analysis.js` | Fetch optional Phase 4 analysis artifact | `loadInteractionAnalysis()` |
 | `js/analysis/network.js` | Derived/dataset network model, filtering, detail joins | `buildNetworkModel()`, `filterNetwork()`, `buildNodeDetail()`, `buildEdgeDetail()` |
 | `js/views/interaction-network.js` | Layered SVG network, selection, details, SVG export | `createNetworkView()` |
 | `js/utils/export.js` | Download, CSV and XML helpers | `downloadText()`, `toCsv()`, `escapeXml()` |

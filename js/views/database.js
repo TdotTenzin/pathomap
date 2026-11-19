@@ -26,7 +26,7 @@
     pageSize Rows per page (10 / 25 / 50, from the select control).
 
   Internal functions:
-    tableDef(id)          Look up a TABLES entry by id (falls back to first).
+    getTableDefinition(id)          Look up a TABLES entry by id (falls back to first).
     rowsFor(def)          Pull rows from the loader, apply search filter, then
                           apply sort (numeric-aware, boolean-aware, localeCompare
                           for strings).
@@ -44,13 +44,13 @@
     renderStatus(def, rows)  Update #db-count and #db-hint with row count/desc.
     renderPagination(pagination)  Update the "Showing X–Y of Z" text, page info,
                           and disable prev/next buttons at the ends.
-    schemaLink(label, href)  Small helper for styled doc links.
+    createSchemaLink(label, href)  Small helper for styled doc links.
     renderSchema()        Populate the <details> data dictionary from COLUMN_META
                           (or effector/host-protein equivalents), including
                           schema version, row count, and links to the SQL/JSON
                           schema files.
-    toCsv(def, rows)      Serialize rows to CSV text, escaping quotes/commas/
-                          newlines per RFC 4180.
+    buildTableCsv(def, rows)  Serialize rows to CSV text, escaping quotes/commas/
+                              newlines per RFC 4180.
     downloadCsv()         Trigger a browser download of the current table as
                           pathomap-<table>.csv.
 
@@ -96,7 +96,9 @@ import {
   INTERACTION_VISIBLE_COLUMNS,
   INTERACTION_COLUMNS,
 } from '../data/schema.js';
+import { createLink } from '../utils/dom.js';
 import { downloadText, toCsv as serializeCsv } from '../utils/export.js';
+import { formatDateOnly, pluralize } from '../utils/format.js';
 import { STRATEGY_LABELS } from '../utils/labels.js';
 
 // Available tables to display in the database view (id, label, description,
@@ -106,7 +108,7 @@ const TABLES = [
     id: 'pathogens',
     label: 'Pathogens',
     description:
-      'Organisms with NCBI taxonomy, representative genome metadata, and intracellular survival strategy.',
+      'Pathogens with NCBI taxonomy, representative genome metadata, and intracellular survival strategy.',
     columns: VISIBLE_COLUMNS,
     exportColumns: PATHOGEN_COLUMNS,
   },
@@ -154,7 +156,7 @@ const state = {
 };
 
 // Get table definition by ID, fallback to first table if not found
-function tableDef(id) {
+function getTableDefinition(id) {
   return TABLES.find((table) => table.id === id) || TABLES[0];
 }
 
@@ -179,7 +181,7 @@ function rowsFor(def) {
   if (query) {
     out = rows.filter((row) =>
       def.columns.some((column) =>
-        searchText(row[column]).toLowerCase().includes(query)
+        toSearchText(row[column]).toLowerCase().includes(query)
       )
     );
   }
@@ -197,8 +199,8 @@ function rowsFor(def) {
       if (typeof av === 'boolean' && typeof bv === 'boolean') {
         return (Number(av) - Number(bv)) * direction;
       }
-      const aText = searchText(av);
-      const bText = searchText(bv);
+      const aText = toSearchText(av);
+      const bText = toSearchText(bv);
       return aText.localeCompare(bText) * direction;
     });
   }
@@ -249,7 +251,7 @@ function renderTabs() {
     const button = document.createElement('button');
     button.type = 'button';
     button.id = `db-tab-${table.id}`;
-    button.className = 'db-tab' + (table.id === state.active ? ' active' : '');
+    button.className = 'db-tab' + (table.id === state.active ? ' is-active' : '');
     button.setAttribute('role', 'tab');
     button.setAttribute('aria-selected', table.id === state.active ? 'true' : 'false');
     button.setAttribute('aria-controls', 'db-table');
@@ -278,7 +280,7 @@ function renderHead(def) {
   const el = document.getElementById('db-head');
   if (!el) return;
   el.replaceChildren();
-  const labels = columnLabelsFor(def.id);
+  const labels = getColumnLabels(def.id);
   def.columns.forEach((column) => {
     const th = document.createElement('th');
     const label = labels[column] || column.replace(/_/g, ' ');
@@ -356,7 +358,7 @@ function displayValue(column, value) {
 
 // Pick the field-label map for a table. Keeping this centralized prevents the
 // newer normalized tables from falling back to raw snake_case keys.
-function columnLabelsFor(tableId) {
+function getColumnLabels(tableId) {
   if (tableId === 'effectors') return EFFECTOR_COLUMN_LABELS;
   if (tableId === 'host_targets') return HOST_TARGET_COLUMN_LABELS;
   if (tableId === 'host_proteins') return HOST_PROTEIN_COLUMN_LABELS;
@@ -364,7 +366,7 @@ function columnLabelsFor(tableId) {
   return COLUMN_LABELS;
 }
 
-function columnMetaFor(tableId) {
+function getColumnMeta(tableId) {
   if (tableId === 'effectors') return EFFECTOR_COLUMNS_META;
   if (tableId === 'host_targets') return HOST_TARGET_COLUMNS_META;
   if (tableId === 'host_proteins') return HOST_PROTEIN_COLUMNS_META;
@@ -374,7 +376,7 @@ function columnMetaFor(tableId) {
 
 // Text used for search matching: arrays/objects become JSON so nested values
 // (domain names, GO terms, interaction partners) stay searchable.
-function searchText(value) {
+function toSearchText(value) {
   if (value === null || value === undefined) return '';
   if (typeof value === 'object') return JSON.stringify(value);
   return String(value);
@@ -386,7 +388,7 @@ function createClassificationBadge(classValue) {
 
   const badge = document.createElement('span');
   badge.className = 'classification-badge';
-  badge.setAttribute('data-class', classValue);
+  badge.setAttribute('data-entity-class', classValue);
   badge.textContent = CLASSIFICATION_LABELS[classValue] || classValue;
   return badge;
 }
@@ -422,24 +424,12 @@ function renderBody(def, rows) {
 
       // DOI and reference URLs render as external links.
       if (column === 'reference_doi' && value) {
-        const link = document.createElement('a');
-        link.className = 'db-link';
-        link.href = `https://doi.org/${value}`;
-        link.target = '_blank';
-        link.rel = 'noopener noreferrer';
-        link.textContent = value;
-        td.appendChild(link);
+        td.appendChild(createLink(`https://doi.org/${value}`, value));
       }
       else if (column === 'url' && value) {
-        const link = document.createElement('a');
-        link.className = 'db-link';
-        link.href = value;
-        link.target = '_blank';
-        link.rel = 'noopener noreferrer';
-        link.textContent = value;
-        td.appendChild(link);
+        td.appendChild(createLink(value, value));
       }
-      // Sequences render as a truncated preview with a "Show full" toggle
+      // Sequences render as a truncated preview with a "Show more" toggle
       else if (column === 'sequence' && typeof value === 'string' && value) {
         const container = document.createElement('div');
         container.className = 'sequence-container';
@@ -453,19 +443,19 @@ function renderBody(def, rows) {
           const toggle = document.createElement('button');
           toggle.type = 'button';
           toggle.className = 'tool-btn sequence-toggle';
-          toggle.textContent = 'Show full';
+          toggle.textContent = 'Show more';
           toggle.addEventListener('click', () => {
             const expanded = toggle.dataset.expanded === 'true';
             preview.textContent = expanded ? value.slice(0, 50) + '…' : value;
             toggle.dataset.expanded = expanded ? 'false' : 'true';
-            toggle.textContent = expanded ? 'Show full' : 'Show less';
+            toggle.textContent = expanded ? 'Show more' : 'Show less';
           });
           container.appendChild(toggle);
         }
 
         td.appendChild(container);
       }
-      // Domain lists render as a truncated preview with a "See more" toggle
+      // Domain lists render as a truncated preview with a "Show more" toggle
       // so long repeated annotations don't stretch the table row
       else if (column === 'domains' && Array.isArray(value)) {
         const names = value.map((d) => d.name || d.accession || '').filter(Boolean);
@@ -487,12 +477,12 @@ function renderBody(def, rows) {
             const toggle = document.createElement('button');
             toggle.type = 'button';
             toggle.className = 'tool-btn domain-toggle';
-            toggle.textContent = 'See more';
+            toggle.textContent = 'Show more';
             toggle.addEventListener('click', () => {
               const expanded = toggle.dataset.expanded === 'true';
               preview.textContent = expanded ? previewText : fullText;
               toggle.dataset.expanded = expanded ? 'false' : 'true';
-              toggle.textContent = expanded ? 'See more' : 'Show less';
+              toggle.textContent = expanded ? 'Show more' : 'Show less';
             });
             container.appendChild(toggle);
           }
@@ -531,7 +521,7 @@ function renderStatus(def, rows) {
   const count = document.getElementById('db-count');
   const hint = document.getElementById('db-hint');
   if (count) {
-    count.textContent = `${rows.length} row${rows.length === 1 ? '' : 's'}`;
+    count.textContent = pluralize(rows.length, 'row');
   }
   if (hint) {
     hint.textContent = state.search ? `Filtered · ${def.description}` : def.description;
@@ -568,7 +558,7 @@ function renderPagination(pagination) {
 }
 
 // Create a styled link for schema documentation
-function schemaLink(label, href) {
+function createSchemaLink(label, href) {
   const link = document.createElement('a');
   link.className = 'db-link';
   link.href = href;
@@ -585,19 +575,19 @@ function renderSchema() {
   if (!body) return;
   body.replaceChildren();
 
-  const def = tableDef(state.active);
+  const def = getTableDefinition(state.active);
   const meta = getDataset().meta || {};
   const counts = meta.tables || {};
   // Meta line: "Schema 2.1 · 53 pathogens · Built 2024-…"
   const metaLine = document.createElement('p');
   metaLine.className = 'schema-meta';
-  const columnMeta = columnMetaFor(def.id);
+  const columnMeta = getColumnMeta(def.id);
   const tableLabel = def.label.toLowerCase();
   const count = counts[def.id] ?? rowsFor(def).length;
   metaLine.textContent = [
     `Schema ${meta.schema_version || SCHEMA_VERSION}`,
     `${count} ${tableLabel}`,
-    meta.built_at ? `Built ${String(meta.built_at).slice(0, 10)}` : '',
+    meta.built_at ? `Built ${formatDateOnly(meta.built_at)}` : '',
   ]
     .filter(Boolean)
     .join(' · ');
@@ -607,11 +597,11 @@ function renderSchema() {
   const links = document.createElement('p');
   links.className = 'schema-links';
   links.append(
-    schemaLink('SQL schema', 'data/schema.sql'),
+    createSchemaLink('SQL schema', 'data/schema.sql'),
     document.createTextNode(' · '),
-    schemaLink('SQLite database', 'data/pathomap.db'),
+    createSchemaLink('SQLite database', 'data/pathomap.db'),
     document.createTextNode(' · '),
-    schemaLink('JSON Schema', 'data/schema/pathogens.schema.json')
+    createSchemaLink('JSON schema', 'data/schema/pathogens.schema.json')
   );
   body.appendChild(links);
 
@@ -662,7 +652,7 @@ function renderSchema() {
 // Main render function: updates all database view components in order
 // (tabs -> head -> body -> status -> pagination -> schema dictionary)
 export function renderDatabase() {
-  const def = tableDef(state.active);
+  const def = getTableDefinition(state.active);
   const rows = rowsFor(def);
   const pagination = paginateRows(rows);
   renderTabs();
@@ -676,14 +666,14 @@ export function renderDatabase() {
 
 // Get current table definition and filtered rows (used by CSV export)
 export function getCurrentRows() {
-  const def = tableDef(state.active);
+  const def = getTableDefinition(state.active);
   return { def, rows: rowsFor(def) };
 }
 
 // Serialize the current table to CSV using the shared CSV helpers.
-function toCsv(def, rows) {
+function buildTableCsv(def, rows) {
   const columns = def.exportColumns || def.columns;
-  const labels = columnLabelsFor(def.id);
+  const labels = getColumnLabels(def.id);
   return serializeCsv(
     columns.map((column) => ({ key: column, label: labels[column] || column })),
     rows
@@ -694,7 +684,7 @@ function toCsv(def, rows) {
 function downloadCsv() {
   const { def, rows } = getCurrentRows();
   downloadText(
-    toCsv(def, rows),
+    buildTableCsv(def, rows),
     `pathomap-${def.id}.csv`,
     'text/csv;charset=utf-8;'
   );

@@ -11,7 +11,7 @@
 */
 
 import { getAnalysisModules } from '../analysis/registry.js';
-import { checkAnalysisEligibility } from '../analysis/eligibility.js';
+import { isAnalysisEligible } from '../analysis/eligibility.js';
 
 export function renderAnalyses(dataset = null) {
     const container = document.getElementById('analysis-modules');
@@ -23,12 +23,12 @@ export function renderAnalyses(dataset = null) {
 
     const modules = getAnalysisModules();
     if (modules.length === 0) {
-        container.innerHTML = '<p class="muted">No analyses are surfaced in the UI yet. Planned analyses remain listed in the project registry for future release.</p>';
+        container.innerHTML = '<p class="muted">No analyses are available yet.</p>';
         return;
     }
 
     container.innerHTML = modules.map(module => {
-        const eligibility = checkAnalysisEligibility(module, dataset);
+        const eligibility = isAnalysisEligible(module, dataset);
 
         const eligibilityLabel = eligibility.eligible
             ? 'Data available'

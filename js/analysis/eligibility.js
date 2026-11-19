@@ -9,7 +9,7 @@
   Does not execute scientific analyses.
 */
 
-export function checkAnalysisEligibility(module, dataset) {
+export function isAnalysisEligible(module, dataset) {
     const reasons = [];
 
     if (!module) {
