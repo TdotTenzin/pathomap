@@ -9,12 +9,12 @@
     initTheme()  Restore the saved theme and bind the toggle button (if present).
 */
 
-const STORAGE_KEY = 'pathomap-theme';
+const THEME_STORAGE_KEY = 'pathomap-theme';
 
 export function initTheme() {
     const root = document.documentElement;
     const toggle = document.getElementById('dark-toggle');
-    const saved = localStorage.getItem(STORAGE_KEY);
+    const saved = localStorage.getItem(THEME_STORAGE_KEY);
 
     if (saved === 'dark') {
         root.setAttribute('data-theme', 'dark');
@@ -27,10 +27,10 @@ export function initTheme() {
     toggle.addEventListener('click', function () {
         if (root.getAttribute('data-theme') === 'dark') {
             root.removeAttribute('data-theme');
-            localStorage.setItem(STORAGE_KEY, 'light');
+            localStorage.setItem(THEME_STORAGE_KEY, 'light');
         } else {
             root.setAttribute('data-theme', 'dark');
-            localStorage.setItem(STORAGE_KEY, 'dark');
+            localStorage.setItem(THEME_STORAGE_KEY, 'dark');
         }
     });
 }

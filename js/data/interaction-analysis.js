@@ -1,5 +1,5 @@
 /*
-  analysis.js - Loader for generated analysis artifacts.
+  interaction-analysis.js - Loader for generated analysis artifacts.
 
   Purpose:
     Fetches the Phase 4 interaction-analysis output. The network page treats

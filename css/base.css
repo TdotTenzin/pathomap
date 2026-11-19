@@ -26,7 +26,6 @@
 :root {
   --color-bg: #ffffff;
   --color-bg-alt: #f4f7fb;
-  --color-bg-dark: #0f172a;
   --color-blue: #2563eb;
   --color-blue-light: #dbeafe;
   --color-blue-mid: #3b82f6;
@@ -36,19 +35,32 @@
   --color-border: #e2e8f0;
   --color-card: #ffffff;
   --color-highlight: #eff6ff;
-  --color-success: #4ade80;
-  --color-error: #f87171;
+  --color-success: #15803d;
+  --color-warning: #b45309;
+  --color-error: #b91c1c;
+  --badge-green-bg: #dcfce7;
+  --badge-green-text: #166534;
+  --badge-blue-bg: #dbeafe;
+  --badge-blue-text: #1e40af;
+  --focus-ring: rgba(37, 99, 235, 0.1);
   --network-pathogen: #7c3aed;
   --network-effector: #2563eb;
   --network-host: #0f766e;
   --evidence-experimental: #16a34a;
   --evidence-predicted: #d97706;
-  --evidence-annotation: #2563eb;
+  --evidence-annotation-derived: #2563eb;
   --evidence-hypothetical: #64748b;
   --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.05rem;
+  --radius-xs: 4px;
+  --radius-sm: 6px;
   --radius: 8px;
   --radius-lg: 12px;
+  --radius-pill: 999px;
   --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.05);
   --shadow-hover: 0 4px 24px rgba(37,99,235,0.12);
   --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -57,7 +69,6 @@
 [data-theme="dark"] {
   --color-bg: #0f172a;
   --color-bg-alt: #1e293b;
-  --color-bg-dark: #020617;
   --color-blue: #60a5fa;
   --color-blue-light: #1e3a5f;
   --color-blue-mid: #3b82f6;
@@ -68,13 +79,19 @@
   --color-card: #1e293b;
   --color-highlight: #1e293b;
   --color-success: #4ade80;
+  --color-warning: #fbbf24;
   --color-error: #f87171;
+  --badge-green-bg: #064e3b;
+  --badge-green-text: #6ee7b7;
+  --badge-blue-bg: #1e3a5f;
+  --badge-blue-text: #93c5fd;
+  --focus-ring: rgba(96, 165, 250, 0.15);
   --network-pathogen: #a78bfa;
   --network-effector: #60a5fa;
   --network-host: #2dd4bf;
   --evidence-experimental: #4ade80;
   --evidence-predicted: #fbbf24;
-  --evidence-annotation: #60a5fa;
+  --evidence-annotation-derived: #60a5fa;
   --evidence-hypothetical: #94a3b8;
 }
 
@@ -125,7 +142,7 @@ a:hover {
 }
 
 code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: var(--font-mono);
   background: var(--color-bg-alt);
   padding: 0.125rem 0.375rem;
   border-radius: 4px;

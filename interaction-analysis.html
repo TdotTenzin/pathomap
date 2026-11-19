@@ -48,7 +48,7 @@
       <div class="container">
 
         <div class="section-header ia-header">
-          <h1 class="section-title">Interaction Analysis</h1>
+          <h1 class="page-title">Interaction Analysis</h1>
           <p class="section-subtitle">
             Explore pathogen &rarr; effector &rarr; host protein relationships, inspect the
             evidence behind each link, and export the current network view.
@@ -77,8 +77,8 @@
 
         <div class="ia-filters">
           <div class="ia-filters-heading">
-            <p class="ia-filters-title">Search and filter interactions</p>
-            <button type="button" class="tool-btn" id="ia-reset">Reset filters</button>
+            <h2 class="ia-filters-title">Search and filter interactions</h2>
+            <button type="button" class="tool-btn" id="ia-reset">Clear filters</button>
           </div>
           <div class="ia-filter-grid">
             <label class="ia-filter ia-filter-search">
@@ -132,14 +132,14 @@
           <div class="ia-panel-header">
             <div>
               <h3>Interaction Network</h3>
-              <p class="ia-network-source" id="ia-network-source">Loading network and provenance&hellip;</p>
+              <p class="ia-network-source" id="ia-network-source">Source details appear once a dataset is loaded.</p>
             </div>
-            <details class="ia-export">
-              <summary class="tool-btn">Export</summary>
+            <details class="ia-export" id="ia-export">
+              <summary class="tool-btn">Export network</summary>
               <div class="ia-export-menu">
                 <button type="button" class="ia-export-item" data-export="json">Network JSON</button>
-                <button type="button" class="ia-export-item" data-export="nodes">Nodes CSV</button>
-                <button type="button" class="ia-export-item" data-export="edges">Edges CSV</button>
+                <button type="button" class="ia-export-item" data-export="nodes-csv">Nodes CSV</button>
+                <button type="button" class="ia-export-item" data-export="edges-csv">Interactions CSV</button>
                 <button type="button" class="ia-export-item" data-export="svg">Network SVG</button>
               </div>
             </details>
@@ -150,15 +150,15 @@
               <div class="ia-network-toolbar">
                 <p class="ia-network-status" id="ia-network-status" role="status">Loading&hellip;</p>
                 <div class="ia-network-controls" id="ia-network-controls" aria-label="Network view controls">
-                  <button type="button" class="tool-btn tool-btn-sm" data-network-action="zoom-out" title="Zoom out">&minus;</button>
-                  <button type="button" class="tool-btn tool-btn-sm" data-network-action="fit" title="Fit network">Fit</button>
-                  <button type="button" class="tool-btn tool-btn-sm" data-network-action="zoom-in" title="Zoom in">+</button>
+                  <button type="button" class="tool-btn tool-btn-sm" data-network-action="zoom-out" title="Zoom out" aria-label="Zoom out">&minus;</button>
+                  <button type="button" class="tool-btn tool-btn-sm" data-network-action="reset" title="Reset view" aria-label="Reset network view">Reset</button>
+                  <button type="button" class="tool-btn tool-btn-sm" data-network-action="zoom-in" title="Zoom in" aria-label="Zoom in">+</button>
                 </div>
               </div>
 
-              <div class="ia-network-canvas" id="ia-network-canvas" aria-label="Interactive interaction network"></div>
+              <div class="ia-network-canvas" id="ia-network-canvas" role="region" tabindex="0" aria-label="Interactive interaction network. Use arrow keys to pan and plus or minus keys to zoom."></div>
               <div class="ia-network-empty" id="ia-network-empty" hidden>
-                <p>No interactions match the active filters.</p>
+                <p>No interactions to display.</p>
                 <p class="ia-muted">Reset the filters or load a dataset with resolved interaction records.</p>
               </div>
 
@@ -167,13 +167,13 @@
                   <span class="ia-legend-title">Nodes</span>
                   <span class="ia-legend-item"><span class="ia-legend-node ia-legend-node--pathogen"></span>Pathogen</span>
                   <span class="ia-legend-item"><span class="ia-legend-node ia-legend-node--effector"></span>Effector</span>
-                  <span class="ia-legend-item"><span class="ia-legend-node ia-legend-node--host"></span>Host protein</span>
+                  <span class="ia-legend-item"><span class="ia-legend-node ia-legend-node--host-protein"></span>Host protein</span>
                 </div>
                 <div class="ia-legend-group">
                   <span class="ia-legend-title">Evidence</span>
                   <span class="ia-legend-item"><span class="ia-legend-line ia-legend-line--experimental"></span>Experimental</span>
                   <span class="ia-legend-item"><span class="ia-legend-line ia-legend-line--predicted"></span>Predicted</span>
-                  <span class="ia-legend-item"><span class="ia-legend-line ia-legend-line--annotation"></span>Annotation-derived</span>
+                  <span class="ia-legend-item"><span class="ia-legend-line ia-legend-line--annotation-derived"></span>Annotation-derived</span>
                   <span class="ia-legend-item"><span class="ia-legend-line ia-legend-line--hypothetical"></span>Hypothetical</span>
                   <span class="ia-legend-item"><span class="ia-legend-line ia-legend-line--membership"></span>Pathogen encodes effector</span>
                 </div>
@@ -184,12 +184,51 @@
           </div>
         </div>
 
+        <details class="ia-panel ia-unresolved-panel" id="ia-unresolved">
+          <summary class="ia-panel-header ia-unresolved-summary">
+            <div>
+              <h3>Unresolved targets</h3>
+              <p class="ia-muted" id="ia-unresolved-note">Target exclusions appear once a dataset is loaded.</p>
+            </div>
+          </summary>
+          <div class="ia-unresolved-body">
+            <div class="ia-unresolved-controls">
+              <label class="ia-unresolved-filter">
+                <span>Search</span>
+                <input class="tool-input" type="search" id="ia-unresolved-search" placeholder="Target, effector, reason" />
+              </label>
+              <label class="ia-unresolved-filter">
+                <span>Status</span>
+                <select class="tool-input" id="ia-unresolved-status">
+                  <option value="">All statuses</option>
+                </select>
+              </label>
+              <button type="button" class="tool-btn tool-btn-sm" id="ia-unresolved-reset">Reset</button>
+              <button type="button" class="tool-btn tool-btn-sm" data-export="unresolved-csv">Download CSV</button>
+            </div>
+            <p class="ia-muted" id="ia-unresolved-count" role="status"></p>
+            <div class="ia-unresolved-scroll">
+              <table class="ia-unresolved-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Target</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Effectors</th>
+                    <th scope="col">Reason</th>
+                  </tr>
+                </thead>
+                <tbody id="ia-unresolved-body"></tbody>
+              </table>
+            </div>
+          </div>
+        </details>
+
         <div class="ia-components">
           <h3>Reading this network</h3>
           <ul class="ia-component-list">
-            <li><strong>Relationships</strong> &mdash; pathogens point to their encoded effectors, then to resolved host proteins.</li>
-            <li><strong>Evidence</strong> &mdash; line style and colour show the strongest evidence class recorded for each effector&ndash;host relationship.</li>
-            <li><strong>Exclusions</strong> &mdash; unresolved, family, complex, and non-protein targets are not drawn; counts are reported from the analysis output.</li>
+            <li><strong>Interactions</strong> &mdash; pathogens point to their encoded effectors, then to resolved host proteins.</li>
+            <li><strong>Evidence</strong> &mdash; line style and color show the strongest evidence class recorded for each effector&ndash;host interaction.</li>
+            <li><strong>Exclusions</strong> &mdash; unresolved, family, complex, and non-protein targets are not drawn; the table below lists each excluded target and why.</li>
             <li><strong>Exports</strong> &mdash; downloads reflect the active filters and carry source/filter provenance.</li>
           </ul>
         </div>

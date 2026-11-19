@@ -45,7 +45,7 @@ insufficient - return `insufficient data` with the missing requirement instead.
 ```js
 {
   id: "interaction-analysis",
-  version: "1.1",
+  version: "1.1.0",
   prerequisites: ["pathogens", "effectors", "host_proteins"],
   canRun(dataset) -> { eligible, reasons },
   run(dataset, context) -> {
@@ -133,7 +133,7 @@ unresolved targets; source and rationale per edge.
 **Guardrail:** broad target annotations and host-host network data cannot be promoted to confirmed
 effector-host interactions.
 
-**Python implementation:** `scripts/analyze_interactions.py` (analysis version 1.1) writes
+**Python implementation:** `scripts/analyze_interactions.py` (analysis version 1.2) writes
 `data/derived/interaction_analysis.json` without modifying curated tables.
 
 - **Eligibility:** requires `pathogens`, `effectors`, `host_proteins`, `host_targets`,
@@ -174,7 +174,28 @@ difference honestly.
 - **Exports:** filtered network JSON with provenance and active filters, node/edge CSV, and SVG
   with embedded metadata. Downloads reflect the current filters.
 - **Tests:** `node --test tests/network_model.test.mjs` covers derived/fallback selection,
-  membership links, combined filters, detail joins and CSV escaping.
+  source-hash verification, evidence identity, membership links, combined filters, detail joins
+  and CSV escaping.
+- **Unresolved targets:** derived runs also expose a searchable target-exclusion table and CSV
+  export with resolution status, effector IDs/names and exclusion reasons. The JSON export embeds
+  the full unresolved-target report.
+- **Provenance:** the derived artifact now stores pathogen classification. Older artifacts still
+  fall back to the documented client-side heuristic, which is labelled in export provenance.
+- **Performance:** search text is precomputed once per edge and repeated renders with unchanged
+  topology reuse the existing SVG instead of rebuilding it.
+
+**Known limitations:**
+
+- The derived artifact is used only when dataset build time, schema version, raw interaction count
+  and source SHA-256 all match. Uploaded datasets without a hash always use the display-only
+  fallback; that path has no validation issues, unresolved-target report or deduplicated evidence
+  identity beyond the browser model.
+- The layered lane layout is deterministic rather than force-directed. It prioritises
+  pathogen → effector grouping and is not a measure of interaction strength or spatial biology.
+- SVG export is a static snapshot: interactive hit paths, selection dimming and keyboard
+  attributes are removed, and the exported styles are inlined.
+- Pathogen classification is a heuristic when `gram_stain` is absent; it must not be treated as
+  taxonomy evidence.
 
 ## 2. Effector Sequence Analysis
 

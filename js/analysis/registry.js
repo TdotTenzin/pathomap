@@ -6,7 +6,7 @@ export const ANALYSIS_MODULES = [
         number: "01",
         name: "Interaction Analysis",
         description: "Explore host\u2013pathogen interaction relationships.",
-        version: "1.0.0",
+        version: "1.1.0",
         status: "available",
         page: "interaction-analysis.html",
         prerequisites: {

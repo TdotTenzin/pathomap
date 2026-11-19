@@ -2,7 +2,7 @@
   "meta": {
     "dataset": "pathomap",
     "schema_version": "3.0",
-    "built_at": "2026-11-10T16:41:10Z",
+    "built_at": "2026-11-18T15:26:11Z",
     "tables": {
       "pathogens": 53,
       "references": 58,
@@ -10,7 +10,7 @@
       "host_proteins": 33,
       "host_targets": 129,
       "interactions": 39,
-      "interaction_evidence": 39
+      "interaction_evidence": 69
     },
     "identifiers": {
       "scheme": "PM-<TYPE>-<NNNN>",
@@ -70,7 +70,7 @@
       "description": "Resides in SCV; acquires LAMP1 but blocks hydrolase delivery; maintains non-degradative niche via SPI-2 T3SS effectors. SifA binds SKIP to displace Rab9, while SseJ deacylates cholesterol to prevent SCV-lysosome fusion. SCV matures into a LAMP1+ compartment that is non-degradative — Rab7 effectors (RILP, ORP1L) are decoupled from hydrolase delivery",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0002",
@@ -104,7 +104,7 @@
       "description": "Phagosomal escape via LLO within ~30 min; replicates in cytosol; uses ActA for actin-based motility. LLO is pH-dependent: forms pores at acidic pH of early phagosomes but is inactivated at neutral cytosolic pH. ActA nucleates Arp2/3-dependent branched actin networks for cytoplasmic motility and cell-to-cell spread via double-membrane protrusions",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0003",
@@ -138,7 +138,7 @@
       "description": "Arrests phagosome at early stage; blocks Rab5-to-Rab7 conversion; maintains near-neutral pH (~6.4) by excluding V-ATPase. Secretes SapM phosphatase to deplete PI3P from phagosomal membranes, and lipoarabinomannan (LAM) inhibits Ca2+ signaling and Vps34 recruitment. PknG and PtpA further modulate host Rab trafficking to prevent lysosomal fusion",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0004",
@@ -172,7 +172,7 @@
       "description": "Redirects ER-derived vesicles to build LCV; bypasses endocytic pathway entirely via Dot/Icm T4SS. DrrA/SidM is a Rab1 GEF that activates Rab1 on the LCV, redirecting COPII vesicle traffic from ER to the pathogen vacuole. AnkX phosphocholinates Rab35 and Rab1, locking them in an inactive state — a post-translational block distinct from host regulation",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0005",
@@ -206,7 +206,7 @@
       "description": "Rapid phagosome lysis (<15 min) via IpaB pore; escapes to cytosol before early markers fully acquired. IpaB inserts into the phagosomal membrane and oligomerizes to form a translocation pore. In the cytosol, IcsB masks IcsA from the autophagy receptor LC3 to evade xenophagy. Uses IcsA/VirG to recruit N-WASP and Arp2/3 for actin-based motility",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0006",
@@ -240,7 +240,7 @@
       "description": "Resides in Brucella-containing vacuole (BCV) that interacts with ER; avoids lysosomal fusion via VirB T4SS. BtpA and BtpB are TIR-domain containing effectors that inhibit TLR2 signaling and MyD88 adaptor function. VceC activates the unfolded protein response, creating a replicative niche that balances ER stress signaling with survival",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0007",
@@ -274,7 +274,7 @@
       "description": "Escapes phagosome within 30-60 min via acid-dependent mechanism; replicates in cytosol. IglC and IglD are essential T6SS components that mediate phagosomal disruption. Once cytosolic, Francisella evades autophagy detection by modifying its LPS structure and subverts host interferon responses through MglA-mediated virulence gene regulation",
       "curation_notes": "Pinned to the complete genome assembly for Francisella tularensis subsp. tularensis SCHU S4; regenerate metrics from this exact accession.",
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0008",
@@ -308,7 +308,7 @@
       "description": "Resides in acidified Coxiella-containing vacuole (CCV) that fuses with lysosomes; requires acidic pH for replication — uniquely thrives in phagolysosomes. Cig57 subverts clathrin-mediated trafficking, while CvpB binds PI3P and Rab5 for CCV biogenesis. CirA and CirB intercept HOPS and exocyst tethering complexes for CCV expansion",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0009",
@@ -342,7 +342,7 @@
       "description": "Extracellular pathogen that resists phagocytosis via Yop T3SS effectors; blocks phagocytic uptake. YopH dephosphorylates FAK and p130Cas to disrupt focal adhesions, while YopJ acetylates MAPKK and IKK to block NF-kB and MAPK signaling. YopE acts as a GAP for RhoA, Rac1, and Cdc42 to paralyze actin dynamics",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0010",
@@ -376,7 +376,7 @@
       "description": "Extracellular pathogen; injects Yop effectors via T3SS to disrupt actin and block phagocytosis. Shares core Yop arsenal with Y. pestis including YopE (RhoGAP), YopH (PTPase), and YopJ (MAPKK acetyltransferase). YpkA/YopO binds actin and RhoA to further disrupt the cytoskeleton in infected cells",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0011",
@@ -410,7 +410,7 @@
       "description": "Resides in non-acidified inclusion that intercepts exocytic vesicles from Golgi; avoids endolysosomal fusion. Inc proteins (IncA, IncB, IncC) decorate the inclusion membrane and recruit Rab4, Rab6, and Rab11 to intercept Golgi-derived vesicles. CT229 acts as a ubiquitin ligase to modify host Rab proteins, blocking fusion with lysosomes",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0012",
@@ -444,7 +444,7 @@
       "description": "Similar inclusion-based intracellular niche; acquires sphingolipids from Golgi via T3SS inc proteins. IncA blocks SNARE-mediated fusion with lysosomes, while CPn0585 acts as a GEF for host Rab GTPases to redirect vesicular trafficking away from the endolysosomal pathway",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0013",
@@ -478,7 +478,7 @@
       "description": "Resides in non-fusogenic membrane-bound inclusion that acquires host-derived membrane via T4SS. Ats-1 binds Rab5 and PI3P to anchor the inclusion to early endosomal compartments, while AnkA modulates host signaling through interaction with MYADM and Abl-1 tyrosine kinase. p44/Msp2 undergoes antigenic variation to evade immune detection",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0014",
@@ -512,7 +512,7 @@
       "description": "Resides in early endosome-like inclusions that avoid lysosomal fusion; uses T4SS for effector translocation. TRP120 mimics Notch ligand to activate Notch signaling and promote host cell survival, while TRP32 activates the Wnt pathway. Ank200 is an ankyrin-repeat effector that modulates host gene expression from within the inclusion",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0015",
@@ -546,7 +546,7 @@
       "description": "Injectisome (VirB/VirD4 T4SS) translocates Bep effectors; subverts host cell functions including actin dynamics. BepA promotes F-actin fiber formation and has anti-apoptotic activity, while BepC activates PI3K/Akt signaling to promote endothelial cell proliferation. BepD and BepE modulate actin recruitment and protect against host cell death",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0016",
@@ -580,7 +580,7 @@
       "description": "Rapid phagosomal escape via hemolysin and phospholipase; replicates in cytosol; actin-based motility. RickA activates Arp2/3 to nucleate actin tails, while Sca2 acts as a formin-like actin nucleator for enhanced motility. TlyA and Pat1 are hemolysin and patatin-like phospholipase that mediate rapid phagosomal membrane disruption within minutes of entry",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0017",
@@ -614,7 +614,7 @@
       "description": "Phagosomal escape within 15 min; intracytosolic replication; actin tail formation via RickA and Sca2-mediated actin nucleation. Uses Pat1 phospholipase to disrupt phagosomal membranes. Causes Mediterranean spotted fever; transmitted by Rhipicephalus ticks with endothelial cells as primary target",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0018",
@@ -648,7 +648,7 @@
       "description": "Similar SCV-based strategy as S. enterica; SPI-2 effectors maintain vacuolar niche. Uses SopE to activate Cdc42 for entry, while SifA binds SKIP to maintain SCV integrity. SseF and SseG are SPI-2 effectors that position the SCV near the Golgi apparatus by recruiting microtubule motors, ensuring access to nutrient-rich vesicles",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0019",
@@ -682,7 +682,7 @@
       "description": "Extracellular opportunistic pathogen; injects ExoU/ExoS/ExoT via T3SS; cytotoxic to host cells. ExoU is a potent phospholipase A2 that causes rapid plasma membrane lysis, while ExoS and ExoT act as both RhoGAPs and ADP-ribosyltransferases. ExoY is an adenylate cyclase that disrupts actin dynamics by raising cAMP/cGMP levels in infected cells",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0020",
@@ -716,7 +716,7 @@
       "description": "Survives within late endosomes/lysosomes by modulating Rab GTPase activity; K1 capsule prevents clearance. IbeA binds vimentin to mediate invasion of brain microvascular endothelial cells, enabling traversal of the blood-brain barrier. CNF1 deamidates RhoA, Rac1, and Cdc42, constitutively activating them to disrupt phagosome maturation",
       "curation_notes": "Pinned to the Escherichia coli K1 assembly. The previous accession GCF_000005845.2 represented E. coli K-12 MG1655.",
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0021",
@@ -750,7 +750,7 @@
       "description": "Extracellular mucosal pathogen; type IV pili and Opa proteins mediate adhesion; resists intracellular killing. PorB is a voltage-gated porin that targets mitochondria and inhibits host cell apoptosis. Opa proteins bind CEACAM receptors to trigger bacterial uptake into non-phagocytic cells, where Neisseria can survive intracellularly",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0022",
@@ -784,7 +784,7 @@
       "description": "Encapsulated extracellular pathogen; survives in bloodstream and cerebrospinal fluid; type IV pili for adhesion. PorB and PorA are major outer membrane porins with anti-apoptotic activity. Opca binds CEACAM and fibronectin, while NadA mediates adhesion to epithelial cells. Capsular polysaccharide (serogroups A, B, C, W, Y) is essential for serum resistance",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0023",
@@ -818,7 +818,7 @@
       "description": "Extracellular respiratory pathogen; IgA protease and biofilm formation; survives intracellularly in some cell types. Hap autotransporter mediates adherence and microcolony formation via its serine protease activity. HMW1/HMW2 and Hia are high-molecular-weight adhesins that bind epithelial cells. P5 fimbriae bind ICAM-1 on activated respiratory epithelium",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0024",
@@ -852,7 +852,7 @@
       "description": "Extracellular respiratory pathogen; adenylate cyclase toxin and T3SS effectors modulate host immunity. Pertussis toxin (PTx) ADP-ribosylates Gi proteins to disrupt cAMP signaling, while CyaA is a bifunctional RTX toxin that enters phagocytes and generates supraphysiological cAMP levels. FHA mediates adhesion to CR3 integrins on macrophages",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0025",
@@ -886,7 +886,7 @@
       "description": "Non-invasive extracellular pathogen; cholera toxin (CTX) is an AB toxin that ADP-ribosylates Gs-alpha, causing constitutive adenylate cyclase activation and massive fluid secretion into the intestinal lumen. The toxin-coregulated pilus (TCP) is essential for intestinal colonization. T6SS (VSP locus) mediates interbacterial competition in the gut microbiome",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0026",
@@ -920,7 +920,7 @@
       "description": "Survives within Campylobacter-containing vacuole (CCV); uses T6SS and flagellar secretion. Cytolethal distending toxin (Cdt) is a DNase that causes host cell cycle arrest at G2/M phase. FlaA flagellin is glycosylated and activates TLR5, contributing to intestinal inflammation. CiaB and VirK are secreted factors that promote intracellular survival within the CCV",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0027",
@@ -954,7 +954,7 @@
       "description": "Gastric extracellular pathogen that colonizes the stomach mucosa; Cag T4SS injects CagA effector into host cells where it is phosphorylated and activates SHP-2 phosphatase, disrupting cell polarity and adhesion. VacA forms pores in host membranes and targets mitochondria to induce apoptosis. UreA neutralizes gastric acid by producing ammonia from urea",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0028",
@@ -988,7 +988,7 @@
       "description": "Escapes phagosome via phospholipase D activity; replicates in cytosol; subverts autophagy. Pld is a phospholipase D homolog that disrupts phagosomal membranes shortly after entry. ScaA and ScaC are autotransporter proteins mediating adhesion to host cells. Tsa56 is the major outer membrane protein involved in immune evasion. Causes scrub typhus transmitted by chiggers",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0029",
@@ -1022,7 +1022,7 @@
       "description": "Pore-forming toxins (Hla, PVL) enable phagosomal escape; some strains survive intracellularly. Hla (alpha-hemolysin) binds ADAM10 to form heptameric pores in host membranes, while PVL targets C5aR on neutrophils. Protein A (SpA) binds IgG Fc region and cross-links VH3-type B cell receptors, acting as a B-cell superantigen. Efb binds fibrinogen to form immune-evasive clots",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0030",
@@ -1056,7 +1056,7 @@
       "description": "Streptolysin O (SLO) enables phagosomal escape; replicates in cytosol; M protein for adhesion. SLO is a cholesterol-dependent cytolysin that forms large pores in phagosomal membranes. M protein binds Factor H and C4BP to evade complement opsonization. SpeA is a superantigen that bridges MHC class II and TCR V-beta regions, triggering massive cytokine release",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0031",
@@ -1090,7 +1090,7 @@
       "description": "Extracellular pathogen; pneumolysin (PLY) and polysaccharide capsule; can survive intracellularly. PLY is a cholesterol-dependent cytolysin that forms pores and activates the NLRP3 inflammasome. PspA binds lactoferrin to reduce iron availability for host defenses, while PspC binds Factor H for complement evasion. LytA autolysin releases pneumolysin during antibiotic-induced lysis",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0032",
@@ -1124,7 +1124,7 @@
       "description": "Anthrolysin O (ALO) enables phagosomal escape; lethal factor (LF) and edema factor (EF) modulate host. ALO is a cholesterol-dependent cytolysin that permeabilizes the phagosome. The tripartite toxin (PA + LF + EF) is the major virulence determinant: PA binds ANTXR1/2 to translocate LF (zinc metalloprotease cleaving MAPKKs) and EF (calmodulin-dependent adenylate cyclase) into the cytosol",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0033",
@@ -1158,7 +1158,7 @@
       "description": "Opportunistic pathogen capable of intracellular survival via pore-forming toxins including hemolysin BL (Hbl), non-hemolytic enterotoxin (Nhe), and cytotoxin K (CytK). These three-component pore-forming toxins cause membrane disruption and cell lysis. PC-PLC (phosphatidylcholine-hydrolyzing phospholipase C) contributes to membrane degradation and tissue necrosis",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0034",
@@ -1192,7 +1192,7 @@
       "description": "Extracellular pathogen causing gas gangrene and food poisoning; perfringolysin O (PFO) is a cholesterol-dependent cytolysin that forms large transmembrane pores. Alpha-toxin (PLC) is a zinc-dependent phospholipase C that hydrolyzes phosphatidylcholine and sphingomyelin, causing hemolysis and necrosis. CPE (C. perfringens enterotoxin) binds claudins to disrupt tight junctions",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0035",
@@ -1226,7 +1226,7 @@
       "description": "Extracellular toxigenic pathogen causing antibiotic-associated diarrhea and pseudomembranous colitis. TcdA and TcdB are large clostridial glucosyltransferases that inactivate Rho GTPases (RhoA, Rac1, Cdc42) by monoglucosylation, leading to actin cytoskeleton disruption and tight junction breakdown. Cdt (binary toxin) ADP-ribosylates actin, causing microtubule-based protrusions",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0036",
@@ -1260,7 +1260,7 @@
       "description": "Opportunistic extracellular pathogen causing nosocomial and device-associated infections; survives within macrophages. Cytolysin (Cyl) is a hemolytic/bactericidal toxin that lyses host cells. Gelatinase (GelE) degrades host ECM proteins for tissue invasion. Ace adhesin binds collagen for adherence to host tissues. Esp surface protein promotes biofilm formation",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0037",
@@ -1294,7 +1294,7 @@
       "description": "Extracellular respiratory pathogen; diphtheria toxin (DT) is an AB toxin that ADP-ribosylates elongation factor 2 (EF-2), inhibiting host protein synthesis and causing cell death. DT is encoded by a lysogenic beta-prophage — only toxigenic strains cause disease. FbpABC iron transporter scavenges host iron for bacterial growth. SpaABC pili mediate adhesion to respiratory epithelium",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0038",
@@ -1328,7 +1328,7 @@
       "description": "Arrests phagosome maturation at early stage; blocks acidification; survives in macrophages. Mce (mammalian cell entry) proteins mediate invasion and intracellular survival. Phospholipase A (PLA) contributes to phagosomal membrane disruption, while superoxide dismutase (Sod) and catalase (Cat) neutralize host oxidative burst. Causes nocardiosis in immunocompromised patients",
       "curation_notes": "Nocardia species are partially acid-fast due to mycolic acids in cell wall.",
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0039",
@@ -1362,7 +1362,7 @@
       "description": "Resides in non-acidified Rhodococcus-containing vacuole (RCV); prevents lysosomal fusion via Vap proteins (VapA, VapB, VapC, VapD). VapA is the major virulence factor, a surface-expressed protein that modulates host vesicular trafficking and prevents lysosomal hydrolase delivery. Causes pneumonia in foals and opportunistic infections in immunocompromised humans",
       "curation_notes": "Rhodococcus species are partially acid-fast due to mycolic acids in cell wall.",
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0040",
@@ -1396,7 +1396,7 @@
       "description": "Arrests phagosome maturation; survives in macrophages; causes Whipple disease — a rare systemic infection affecting the gastrointestinal tract and joints. TW surface proteins mediate adhesion and intracellular survival. The bacterium has a reduced genome and relies on host-derived amino acids and metabolites. Survives within macrophages by blocking acidification and lysosomal fusion",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0041",
@@ -1430,7 +1430,7 @@
       "description": "Similar to M. tuberculosis; arrests phagosome maturation at the early stage; uniquely inhabits Schwann cells and macrophages. LAM (lipoarabinomannan) inhibits Vps34 and Ca2+ signaling to block phagosome maturation. ML0098 modulates TLR signaling to prevent pro-inflammatory responses. Causes leprosy with tropism for peripheral nerves leading to demyelination",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0042",
@@ -1464,7 +1464,7 @@
       "description": "Intracellular pathogen causing tuberculosis in cattle; BCG (Bacille Calmette-Guerin) is an attenuated strain used as a vaccine against human TB. Arrests phagosome maturation by inhibiting V-ATPase recruitment and Rab7 acquisition. ESAT-6 and CFP-10 are T7SS (ESX-1) secreted effectors that mediate phagosomal permeabilization and intercellular spread",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0043",
@@ -1498,7 +1498,7 @@
       "description": "Opportunistic environmental mycobacterium causing disseminated disease in immunocompromised patients (especially advanced HIV/AIDS). Survives and replicates within macrophages by blocking phagosome acidification and lysosomal fusion via LAM-mediated inhibition of Vps34 and PI3P production. MAV_2941 is a secreted factor that promotes intracellular survival",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0044",
@@ -1532,7 +1532,7 @@
       "description": "Model organism for studying mycobacterial pathogenesis in zebrafish infection model. Arrests phagosome maturation and prevents acidification similar to M. tuberculosis. ESAT-6 (ESX-1 T7SS effector) forms pores in phagosomal membranes to promote permeabilization. MMPL7 is an efflux pump involved in drug resistance. Causes fish tuberculosis and granulomatous skin infections in humans",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0046",
@@ -1566,7 +1566,7 @@
       "description": "Oral keystone pathogen causing periodontitis; hijacks host endocytic pathway and survives within gingival epithelial cells. Gingipains (RgpA, RgpB, Kgp) are cysteine proteases that degrade host ECM proteins, activate PAR signaling, and subvert complement. FimA fimbriae bind CD14/TLR2 to trigger inflammatory signaling and promote intracellular invasion",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0047",
@@ -1600,7 +1600,7 @@
       "description": "Encapsulated nosocomial pathogen causing pneumonia and urinary tract infections; emerging hypervirulent strains with enhanced mucoviscosity. CPS (capsular polysaccharide) is the major antiphagocytic factor — over 80 serotypes known. LPS activates TLR4 triggering inflammatory responses. FimH (type 1) and MrkD (type 3) fimbriae mediate adhesion to host tissues and biofilm formation",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0048",
@@ -1634,7 +1634,7 @@
       "description": "Multidrug-resistant nosocomial pathogen; survives on hospital surfaces and exhibits remarkable antibiotic resistance. OmpA is a major virulence factor that targets mitochondria to induce host cell death. Plc (phospholipase C) degrades host membrane phospholipids. CsuA/B pilus and Bap surface protein mediate biofilm formation on abiotic surfaces including medical devices",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0049",
@@ -1668,7 +1668,7 @@
       "description": "Escapes phagosome via T3SS (T3SS-3); replicates in cytosol; induces actin polymerization for cell-to-cell spread. BopA is a T3SS translocon protein that mediates phagosomal escape, while BopE acts as a GEF for Cdc42 and Rac1 to induce membrane ruffling. BimA recruits actin to the bacterial surface for polymerization-based motility. Causes melioidosis in tropical regions",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0050",
@@ -1702,7 +1702,7 @@
       "description": "Survives in membrane-bound vacuole in macrophages; T6SS and T3SS effectors modulate host cell functions. Bat3 is a T6SS component that mediates effector translocation into host cells. AidA is a T4SS effector that promotes intracellular survival within the vacuole. CblA (cable pilus) and BcaA adhesin mediate binding to host epithelial cells and biofilm formation",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0051",
@@ -1736,7 +1736,7 @@
       "description": "Anaerobic commensal and opportunistic pathogen; enterotoxigenic strains produce BFT (B. fragilis toxin) — a zinc-dependent metalloprotease that cleaves E-cadherin, disrupting epithelial tight junctions and activating beta-catenin signaling. PsaA is a protective surface antigen. FimA fimbriae mediate adherence to host cells. SusC is part of the starch utilization system for nutrient acquisition",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0052",
@@ -1770,7 +1770,7 @@
       "description": "Highly invasive spirochete causing syphilis; capable of penetrating intact mucous membranes and disseminating throughout the body. TprK undergoes antigenic variation to evade host immune responses. Tp0751 (pallilysin) is a metalloprotease that degrades laminin and fibrinogen for tissue penetration. Has a minimal genome (~1.14 Mbp) with limited metabolic capacity, relying on host nutrients",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0053",
@@ -1804,7 +1804,7 @@
       "description": "Lyme disease spirochete transmitted by Ixodes ticks; disseminates through tissue and evades immune clearance. OspA and OspC are differentially expressed surface lipoproteins — OspA promotes tick midgut colonization while OspC is required for mammalian infection. VlsE undergoes segmental gene conversion to generate antigenic variation, enabling persistent infection. DbpA binds decorin for tissue adhesion",
       "curation_notes": "NCBI has renamed genus from Borrelia to Borreliella for Lyme disease spirochetes.",
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0054",
@@ -1838,7 +1838,7 @@
       "description": "Leptospirosis spirochete; invades through mucous membranes or skin abrasions; colonizes the renal tubules of reservoir hosts and is shed in urine. LipL32 is the major outer membrane lipoprotein involved in adhesion to host ECM. LenA binds complement Factor H to evade immune killing. Loa22 contains a collagen-binding domain for host tissue adherence. Causes Weil's disease in severe cases",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     }
   ],
   "references": [
@@ -4273,12 +4273,30 @@
       "type_class": "t4ss_effector",
       "mechanism": "TIR-domain containing adaptor mimic",
       "mechanism_class": "signalling_modulation",
-      "uniprot_id": null,
-      "sequence": null,
-      "domains": null,
-      "go_terms": null,
+      "uniprot_id": "Q2YN91",
+      "sequence": "MPCTFDLSRCVNQHEYTDQKIAEKFGKLDGAELAELTRLPTIFAYEAACKLDPKFGLIRDVTVRRGQVRIEYEFIPVQPFLTVADFDTLAFELDIGNWEMNRTHWAVKDVNLPKELHTAKGITLPSWTRQASRAVDITQHDFDVGLSFPGEARGLVEQVARELEARVGPNAYFYDNNYVSQLARPSLDTLLQDIYRNRCKLIVVFVGDDYQRKDWCGVEFRAIREIIMARAEQRIMFVRVDDGAVDGVFRTDGYVDARRFNPSEIAQFIAERVALIT",
+      "domains": [
+        {
+          "name": "TIR",
+          "accession": null,
+          "start": 146,
+          "end": 260
+        }
+      ],
+      "go_terms": [
+        {
+          "id": "GO:0007165",
+          "term": "signal transduction",
+          "aspect": "P"
+        },
+        {
+          "id": "GO:0052170",
+          "term": "symbiont-mediated suppression of host innate immune response",
+          "aspect": "P"
+        }
+      ],
       "signal_peptide": null,
-      "transmembrane_regions": null,
+      "transmembrane_regions": [],
       "reference_ids": []
     },
     {
@@ -6008,12 +6026,12 @@
       "type_class": "t4ss_effector",
       "mechanism": "Subverts clathrin-mediated trafficking",
       "mechanism_class": "membrane_trafficking",
-      "uniprot_id": null,
-      "sequence": null,
-      "domains": null,
-      "go_terms": null,
+      "uniprot_id": "Q83AX6",
+      "sequence": "MGRVFSYIQRKRDIQEKDHQDRQVDPENYLGQKLQQAREEVAALEKKIPNRLQELEREISALKTSIDSDVLKAPPRERQKILIEKKTSTMLTSAAREQWEAQEERLPKLALLEAEQRALTAHHDQFTNENSELNITCRALDNVEAEFNDRQTNRRNIQSLIAEADPHLRVLDKTLMASRVKFEIEDLWMHLKRDEPHDLNNPLKPHLDEPYRLPLLEKDSGNINQLTKAVNNDLKELQELYKTAQLTLEGSKFEAYLKEEWKKLHDKLKRDSFALLKEMRSRVNIVGERPNAVPLMEKVTNICQFFNSGVKSKVTLLSKTTDTFACCHVNKAGELTQLFGGMEPTRKEIQQALEQFDRKVAIKSYRKFWLFGSKRFCLDFADAGDKERFCQILEGILQKRKEETVPEEVSTSIATRPARP",
+      "domains": [],
+      "go_terms": [],
       "signal_peptide": null,
-      "transmembrane_regions": null,
+      "transmembrane_regions": [],
       "reference_ids": []
     },
     {
@@ -6029,12 +6047,12 @@
       "type_class": "t4ss_effector",
       "mechanism": "Interacts with host Rab GTPases",
       "mechanism_class": "membrane_trafficking",
-      "uniprot_id": null,
-      "sequence": null,
-      "domains": null,
-      "go_terms": null,
+      "uniprot_id": "Q83FB9",
+      "sequence": "MSRQPSLTRQVYRDKKNQPLNKLLVFLFNLRSDNLPTGICPGPFQELAHSVPPEKRNKLIAQFGEWANFLYPKKEESAQSAPINGFISFLMEVILINPYDYNENFYKKLAEIIKIKKSKGLTWHDCLKDWLLTELTALDITIDDLLKQNNLEQYGQFHERYDKLTSNFLSLNKSLPLSELEIYIFFSNKNRELKKLCGSLASMEKCQQNLELIPETELAAISRQLSILDQEQCSAQIIASRQSEIPSSISSLPETSPEDWQRSIRIPIESINMSIVGAIQVGLAHYKKKRGLTDGDIKNGKSKSYILWDNLQRDIKENPRRNYYPHLIVAFEKYANKENSAKTCILREMASRTSTLNDSSPFKFKKNTALRYFGRLYQMIYQEKSYELERLLEPIFVLTEKIDGLENERISRESNSSENEANLVNSLAAFNQITRKCIDIDLPRLRQNNEIISLIKDIDLMINRLNFPLSVEVINQIMTLLNGWDNSINKLKEAKEVNPTLMARLSGSRKALNEKLKEEYGKLLQNLQGNYESIKANPNFTLDELKAFEKELNKVKQLNITELSSLGVNSNTIKDQIVKKEGQLRSYIEAYYNNHIKLKIIEMQNLLRNEKKNFEEISSTHQNTPPHVQGTLSSFSEQLKTSLDTLSSISAPSDFSSTDVIQGPLDTLRSTQTNLLGQCDLFTISLEFEEEKYNTFSIKLLHWVVEFARKIRNFLSNLFPFIEKKDKPRSPYEVTHTALNTTREAVSSLHVPQGDKQLENKLGHQSHSHAEQKISTATLNTQGMFRTKSVKETDVNKELDFEPIASFTK",
+      "domains": [],
+      "go_terms": [],
       "signal_peptide": null,
-      "transmembrane_regions": null,
+      "transmembrane_regions": [],
       "reference_ids": []
     },
     {
@@ -6050,12 +6068,12 @@
       "type_class": "t4ss_effector",
       "mechanism": "Binds PI3P and Rab5 for CCV biogenesis",
       "mechanism_class": "membrane_trafficking",
-      "uniprot_id": null,
-      "sequence": null,
-      "domains": null,
-      "go_terms": null,
+      "uniprot_id": "Q83FB9",
+      "sequence": "MSRQPSLTRQVYRDKKNQPLNKLLVFLFNLRSDNLPTGICPGPFQELAHSVPPEKRNKLIAQFGEWANFLYPKKEESAQSAPINGFISFLMEVILINPYDYNENFYKKLAEIIKIKKSKGLTWHDCLKDWLLTELTALDITIDDLLKQNNLEQYGQFHERYDKLTSNFLSLNKSLPLSELEIYIFFSNKNRELKKLCGSLASMEKCQQNLELIPETELAAISRQLSILDQEQCSAQIIASRQSEIPSSISSLPETSPEDWQRSIRIPIESINMSIVGAIQVGLAHYKKKRGLTDGDIKNGKSKSYILWDNLQRDIKENPRRNYYPHLIVAFEKYANKENSAKTCILREMASRTSTLNDSSPFKFKKNTALRYFGRLYQMIYQEKSYELERLLEPIFVLTEKIDGLENERISRESNSSENEANLVNSLAAFNQITRKCIDIDLPRLRQNNEIISLIKDIDLMINRLNFPLSVEVINQIMTLLNGWDNSINKLKEAKEVNPTLMARLSGSRKALNEKLKEEYGKLLQNLQGNYESIKANPNFTLDELKAFEKELNKVKQLNITELSSLGVNSNTIKDQIVKKEGQLRSYIEAYYNNHIKLKIIEMQNLLRNEKKNFEEISSTHQNTPPHVQGTLSSFSEQLKTSLDTLSSISAPSDFSSTDVIQGPLDTLRSTQTNLLGQCDLFTISLEFEEEKYNTFSIKLLHWVVEFARKIRNFLSNLFPFIEKKDKPRSPYEVTHTALNTTREAVSSLHVPQGDKQLENKLGHQSHSHAEQKISTATLNTQGMFRTKSVKETDVNKELDFEPIASFTK",
+      "domains": [],
+      "go_terms": [],
       "signal_peptide": null,
-      "transmembrane_regions": null,
+      "transmembrane_regions": [],
       "reference_ids": []
     },
     {
@@ -6071,12 +6089,18 @@
       "type_class": "t4ss_effector",
       "mechanism": "Modulates host vesicle tethering",
       "mechanism_class": "membrane_trafficking",
-      "uniprot_id": null,
-      "sequence": null,
-      "domains": null,
-      "go_terms": null,
+      "uniprot_id": "Q83FA5",
+      "sequence": "MRDGTTRVNTTGMRLKTITDVLIKLSQSSTHYDSAIFTSHKVKKFNLTTNENEPIEIWVYDDTSSSFPILTEYLKKHLESLIAAANHIFNRNEQLKKHWHETLVYIKKALEERLKFNIDLKQARKLVRDLINEIGFFWINQQPTMITTASQLYKGFLTKLFEAVEIAIPDYKRNHILVIQQTGDIIKCEYYERGTSRSLRSNVENALIEYRFAENTHESEKTKDFPSAHYRGKLGLCNVATCFSATFDANNETTSCKIYYRHASFPPIDLYPLYRQERKELKNTKQRYLKKKNEMEEGGKAMVNWQNRAFKTQQCREGIKLITTRNMEMLRDLMRKNRSELELLPAERPPLIYTNISLLTVKQWMDKDFQEEQYHDTILAAERLRSRGNRENEDKFVPIMFNFGVNLQAKWQRRKSWWRPSLPKEQVFENDRAFFKFNHLVIERLQLIASKKTFSFAKTQALPHLWELNEIASSWNRYEKTLDCLANAYDAACNNYEKDPSKENIEYLQECEEKLSQAKKNLWKVADTHIAFYRKDFKQLIANRSNFSNDDSELQAILKDWKMFNSLYLRDAWHDASFSIQTSIGNLTRVVGSELSINCKSADDRTTGFCRRFEGSEEGKDASSPHVRNDTDGGSIKFTGWAKTKKAKAIAKTEKKIAEAFSTHKLKKAVVAKSKIPTSHSLISSSSFWKLKAPDTSPFLTTNLPHSLSG",
+      "domains": [],
+      "go_terms": [
+        {
+          "id": "GO:0141030",
+          "term": "symbiont-mediated perturbation of host actin cytoskeleton via filamentous actin depolymerization",
+          "aspect": "P"
+        }
+      ],
       "signal_peptide": null,
-      "transmembrane_regions": null,
+      "transmembrane_regions": [],
       "reference_ids": []
     },
     {
@@ -6092,12 +6116,12 @@
       "type_class": "t4ss_effector",
       "mechanism": "Intercepts tethering for CCV expansion",
       "mechanism_class": "membrane_trafficking",
-      "uniprot_id": null,
-      "sequence": null,
-      "domains": null,
-      "go_terms": null,
+      "uniprot_id": "Q83EA1",
+      "sequence": "MEGVIYSPTVVDSKPHELTLLFPNCNKVTLIGDQSLSSQIENLHKILGEPKAESEAIKTAFENHGETGQYPLISLLRTLRYHLNATDFEYSETQPIETLTFKRTSFYEGLRRRPGLAWESCTIHFIPHSALTELLVQDNSQLFRTIDAILVKTSETDTVPNELQQVLQSLKSDSLILSTPSTIQSWFKNPPQKTDLKTVYDTTITLDLSQAKNLIIAPPQPEEKQIEKTPKEKMQTLAENLTKEVTTKKLSINGIPTVINEWESEQNLKKEIPSLWGEFVQDIKVLKNKEPEIVIQTIKGWIEGLYYNDSTSSDKEAAIRVKVFLTHFLMIRILPLLNKDLVELFQPLFYGNHSHLGGKDYYYKLLEKHTTQNTELSKVLQSYSGYKAPRANWDQPSIRVKDVESWINNIKPLSAPPTSSNSWLRSPFWQPSHKTQTPEEKVEQKFASKGPSAST",
+      "domains": [],
+      "go_terms": [],
       "signal_peptide": null,
-      "transmembrane_regions": null,
+      "transmembrane_regions": [],
       "reference_ids": []
     },
     {
@@ -10663,12 +10687,19 @@
       "type_class": "secreted_protein",
       "mechanism": "Porin activity",
       "mechanism_class": "membrane_disruption",
-      "uniprot_id": null,
-      "sequence": null,
-      "domains": null,
-      "go_terms": null,
+      "uniprot_id": "B4RLA7",
+      "sequence": "MARLTVHTLETAPEAAKPRVEAVLKNNGFIPNLIGVLANAPEALAFYQEVGKLNAANSLTAGEVEVIRIIAARTNQCGFCVAGHTKLATLKKLLSEQSLNAARALAAGEFDDAKLGALAAFTQAVMAKKGAVSDDELKAFFDAGYNRQQAVEVVMGVALATLCNYANNLAQTEINPKLQAYA",
+      "domains": [
+        {
+          "name": "Alkyl hydroperoxide reductase AhpD/CMD-like",
+          "accession": null,
+          "start": 41,
+          "end": 121
+        }
+      ],
+      "go_terms": [],
       "signal_peptide": null,
-      "transmembrane_regions": null,
+      "transmembrane_regions": [],
       "reference_ids": []
     },
     {
@@ -12486,12 +12517,28 @@
       "type_class": "surface_protein",
       "mechanism": "Virulence-associated protein; phagosome survival",
       "mechanism_class": "intracellular_survival",
-      "uniprot_id": null,
-      "sequence": null,
-      "domains": null,
-      "go_terms": null,
-      "signal_peptide": null,
-      "transmembrane_regions": null,
+      "uniprot_id": "Q9EUL9",
+      "sequence": "MKTLHKTVSKAIAATAVAAAAAMIPAGCANATVLDSGSSSAILNSGAGSGIVGSGSYDSSTTSLNLQKDEPNGRASDTAGQEQQYDVHGDVISAVVYQRFHVFGPEGKVFDGDAGGLTLPGAGAFWGTLFTNDLQRLYKDTVSFQYNAVGPYLNINFFDSSGSFLGHIQSGGVSTVVGVGGGSGSWHNA",
+      "domains": [
+        {
+          "name": "Rhodococcus equi virulence-associated protein",
+          "accession": "IPR008810",
+          "start": 1,
+          "end": 187
+        },
+        {
+          "name": "Rhodococcus equi virulence-associated superfamily",
+          "accession": "IPR038625",
+          "start": 78,
+          "end": 189
+        }
+      ],
+      "go_terms": [],
+      "signal_peptide": {
+        "start": 1,
+        "end": 27
+      },
+      "transmembrane_regions": [],
       "reference_ids": []
     },
     {
@@ -12579,12 +12626,28 @@
       "type_class": "surface_protein",
       "mechanism": "Vap family member",
       "mechanism_class": "intracellular_survival",
-      "uniprot_id": null,
-      "sequence": null,
-      "domains": null,
-      "go_terms": null,
-      "signal_peptide": null,
-      "transmembrane_regions": null,
+      "uniprot_id": "Q9Z5Y9",
+      "sequence": "MVRARAFGRLFTFLLAVAVIATVSMGGANAQELAGTKTSDAALLSGNKAAIPEDKEYDVSGRVVSALVYQYFIVTVDDAEDKKGKTFQGDAGGVTIPGVDFFWGTLHTPDLEKLYSDTVSFQYNAAATFLNINFFDSKGERLGYVLAGAAGTVSGIGGGTGGWE",
+      "domains": [
+        {
+          "name": "Rhodococcus equi virulence-associated protein",
+          "accession": "IPR008810",
+          "start": 2,
+          "end": 164
+        },
+        {
+          "name": "Rhodococcus equi virulence-associated superfamily",
+          "accession": "IPR038625",
+          "start": 49,
+          "end": 164
+        }
+      ],
+      "go_terms": [],
+      "signal_peptide": {
+        "start": 1,
+        "end": 30
+      },
+      "transmembrane_regions": [],
       "reference_ids": []
     },
     {
@@ -13374,12 +13437,31 @@
       "type_class": "t3ss_effector",
       "mechanism": "SCV maintenance",
       "mechanism_class": "intracellular_survival",
-      "uniprot_id": null,
-      "sequence": null,
-      "domains": null,
-      "go_terms": null,
+      "uniprot_id": "Q8Z7H8",
+      "sequence": "MPITIGNGFLKSEILTNSPRNTKEAWWKVLWEKIKDFFFSTGKAKADRCLHEMLFADRTPTRERFTEIFFELKELACASQRDRFQVHNPHENDDTIILRIMDQNEENELLRITQNTDTFSCEVMGNAYFLIKDRPDILKPHPQMTAMINRRYSEIVDYPLPSTLCLNPAGAPTLSVPLDNIEGYLYSEWRKGNLDEWKTQEKATYLAAKIQSGIEKTTRILQHANISESTQQNAFLETMTMCGLKQLEIPPPHTHIPIEKMVEEVLLADKTFQAFLVTDPSASLSMLAEIVEAISDQVFHAIFRIAPQSIQKMAEEQLTTLHVRSEQQSGYLCCFL",
+      "domains": [
+        {
+          "name": "Secreted effector protein SifB/A, C-terminal domain",
+          "accession": "IPR010637",
+          "start": 138,
+          "end": 322
+        },
+        {
+          "name": "Secreted effector protein SifA, C-terminal domain superfamily",
+          "accession": "IPR044928",
+          "start": 193,
+          "end": 327
+        },
+        {
+          "name": "SifA/B/SseJ-like, N-terminal domain",
+          "accession": "IPR083843",
+          "start": 1,
+          "end": 120
+        }
+      ],
+      "go_terms": [],
       "signal_peptide": null,
-      "transmembrane_regions": null,
+      "transmembrane_regions": [],
       "reference_ids": []
     },
     {
@@ -13478,12 +13560,25 @@
       "type_class": "t3ss_effector",
       "mechanism": "SCV-Golgi association",
       "mechanism_class": "membrane_trafficking",
-      "uniprot_id": null,
-      "sequence": null,
-      "domains": null,
-      "go_terms": null,
+      "uniprot_id": "Q8Z6M1",
+      "sequence": "MKPVSPNAQVGGQRPVNAPEESPPCPSLPHPETNMESGRIGPQQGKERLLAGLAKRVIECFPKEIFSWQTVILGGQILCCSAGIALTVLSGGGAPLVALAGIGLAIAIADVACLIYHHKHHLPMAHDSIGNAVFYIANCFANQRKSMAIAKAVSLGGRLALTATVVTHSYWSGSLGLQPHLLEHLNDLTYGLMSFTRFGMDGMAMTGMQVSSPLYRLLAQVTPEQRAPE",
+      "domains": [
+        {
+          "name": "Type III secretion system effector SseG-like",
+          "accession": "IPR058223",
+          "start": 1,
+          "end": 229
+        },
+        {
+          "name": "Type III secretion systems effector SseF/SseG",
+          "accession": "IPR060700",
+          "start": 42,
+          "end": 167
+        }
+      ],
+      "go_terms": [],
       "signal_peptide": null,
-      "transmembrane_regions": null,
+      "transmembrane_regions": [],
       "reference_ids": []
     },
     {
@@ -14717,12 +14812,19 @@
       "type_class": "toxin",
       "mechanism": "Streptolysin S; hemolytic",
       "mechanism_class": "membrane_disruption",
-      "uniprot_id": null,
-      "sequence": null,
-      "domains": null,
-      "go_terms": null,
+      "uniprot_id": "O69194",
+      "sequence": "MLKFTSNILATSVAETTQVAPGGCCCCCTTCCFSIATGSGNSQGGSGSYTPGK",
+      "domains": [
+        {
+          "name": "Bacteriocin, streptolysin S, precursor",
+          "accession": "IPR019891",
+          "start": 1,
+          "end": 53
+        }
+      ],
+      "go_terms": [],
       "signal_peptide": null,
-      "transmembrane_regions": null,
+      "transmembrane_regions": [],
       "reference_ids": []
     },
     {
@@ -16021,12 +16123,48 @@
       "type_class": "t3ss_effector",
       "mechanism": "Ser/Thr kinase; actin binding",
       "mechanism_class": "protein_modification",
-      "uniprot_id": null,
-      "sequence": null,
-      "domains": null,
-      "go_terms": null,
-      "signal_peptide": null,
-      "transmembrane_regions": null,
+      "uniprot_id": "Q05608",
+      "sequence": "MKSVKIMGTMPPSISLAKAHERISQHWQNPVGELNIGGKRYRIIDNQVLRLNPHSGFSLFREGVGKIFSGKMFNFSIARNLTDTLHAAQKTTSQELRSDIPNALSNLFGAKPQTELPLGWKGEPLSGAPDLEGMRVAETDKFAEGESHISIIETKDKQRLVAKIERSIAEGHLFAELEAYKHIYKTAGKHPNLANVHGMAVVPYGNRKEEALLMDEVDGWRCSDTLRTLADSWKQGKINSEAYWGTIKFIAHRLLDVTNHLAKAGVVHNDIKPGNVVFDRASGEPVVIDLGLHSRSGEQPKGFTESFKAPELGVGNLGASEKSDVFLVVSTLLHCIEGFEKNPEIKPNQGLRFITSEPAHVMDENGYPIHRPGIAGVETAYTRFITDILGVSADSRPDSNEARLHEFLSDGTIDEESAKQILKDTLTGEMSPLSTDVRRITPKKLRELSDLLRTHLSSAATKQLDMGGVLSDLDTMLVALDKAEREGGVDKDQLKSFNSLILKTYRVIEDYVKGREGDTKNSSTEVSPYHRSNFMLSIVEPSLQRIQKHLDQTHSFSDIGSLVRAHKHLETLLEVLVTLSQQGQPVSSETYGFLNRLAEAKITLSQQLNTLQQQQESAKAQLSILINRSGSWADVARQSLQRFDSTRPVVKFGTEQYTAIHRQMMAAHAAITLQEVSEFTDDMRNFTVDSIPLLIQLGRSSLMDEHLVEQREKLRELTTIAERLNRLEREWM",
+      "domains": [
+        {
+          "name": "Protein kinase",
+          "accession": null,
+          "start": 136,
+          "end": 408
+        }
+      ],
+      "go_terms": [
+        {
+          "id": "GO:0005737",
+          "term": "cytoplasm",
+          "aspect": "C"
+        },
+        {
+          "id": "GO:0005576",
+          "term": "extracellular region",
+          "aspect": "C"
+        },
+        {
+          "id": "GO:0005524",
+          "term": "ATP binding",
+          "aspect": "F"
+        },
+        {
+          "id": "GO:0106310",
+          "term": "protein serine kinase activity",
+          "aspect": "F"
+        },
+        {
+          "id": "GO:0004674",
+          "term": "protein serine/threonine kinase activity",
+          "aspect": "F"
+        }
+      ],
+      "signal_peptide": {
+        "start": 1,
+        "end": null
+      },
+      "transmembrane_regions": [],
       "reference_ids": []
     }
   ],
@@ -25044,7 +25182,58 @@
           "name": "NOTCH3 Activation and Transmission of Signal to the Nucleus"
         }
       ],
-      "interacting_partners": [],
+      "interacting_partners": [
+        {
+          "string_id": "10090.ENSMUSP00000000312",
+          "name": "Cdh1",
+          "score": 0.943
+        },
+        {
+          "string_id": "10090.ENSMUSP00000003154",
+          "name": "Efna2",
+          "score": 0.956
+        },
+        {
+          "string_id": "10090.ENSMUSP00000014917",
+          "name": "Dll1",
+          "score": 0.932
+        },
+        {
+          "string_id": "10090.ENSMUSP00000015812",
+          "name": "Pdzd11",
+          "score": 0.913
+        },
+        {
+          "string_id": "10090.ENSMUSP00000045282",
+          "name": "Tspan33",
+          "score": 0.955
+        },
+        {
+          "string_id": "10090.ENSMUSP00000138575",
+          "name": "Plekha7",
+          "score": 0.914
+        },
+        {
+          "string_id": "10090.ENSMUSP00000118318",
+          "name": "Afdn",
+          "score": 0.918
+        },
+        {
+          "string_id": "10090.ENSMUSP00000099087",
+          "name": "Adam17",
+          "score": 0.924
+        },
+        {
+          "string_id": "10090.ENSMUSP00000108371",
+          "name": "Bcl2",
+          "score": 0.933
+        },
+        {
+          "string_id": "10090.ENSMUSP00000078741",
+          "name": "Notch2",
+          "score": 0.949
+        }
+      ],
       "reference_doi": null,
       "reference_ids": [],
       "evidence_source": "https://www.uniprot.org/uniprotkb/O35598/entry",
@@ -25063,34 +25252,88 @@
       "gravy_score": 0.588,
       "domains": [
         {
-          "name": "Anphylx_rcpt_C3a/C5a1-2",
-          "accession": "IPR002234",
-          "start": null,
-          "end": null
-        },
-        {
-          "name": "Formyl_rcpt-rel",
-          "accession": "IPR000826",
-          "start": null,
-          "end": null
-        },
-        {
-          "name": "GPCR_Rhodpsn",
+          "name": "G protein-coupled receptor, rhodopsin-like",
           "accession": "IPR000276",
-          "start": null,
-          "end": null
+          "start": 39,
+          "end": 308
         },
         {
-          "name": "GPCR_Rhodpsn_7TM",
+          "name": "Formyl peptide receptor-related",
+          "accession": "IPR000826",
+          "start": 11,
+          "end": 346
+        },
+        {
+          "name": "Anaphylatoxin chemotactic receptor, C3a/C5a1/C5a2",
+          "accession": "IPR002234",
+          "start": 36,
+          "end": 48
+        },
+        {
+          "name": "Anaphylatoxin chemotactic receptor, C3a/C5a1/C5a2",
+          "accession": "IPR002234",
+          "start": 61,
+          "end": 74
+        },
+        {
+          "name": "Anaphylatoxin chemotactic receptor, C3a/C5a1/C5a2",
+          "accession": "IPR002234",
+          "start": 85,
+          "end": 95
+        },
+        {
+          "name": "Anaphylatoxin chemotactic receptor, C3a/C5a1/C5a2",
+          "accession": "IPR002234",
+          "start": 112,
+          "end": 123
+        },
+        {
+          "name": "Anaphylatoxin chemotactic receptor, C3a/C5a1/C5a2",
+          "accession": "IPR002234",
+          "start": 134,
+          "end": 157
+        },
+        {
+          "name": "Anaphylatoxin chemotactic receptor, C3a/C5a1/C5a2",
+          "accession": "IPR002234",
+          "start": 169,
+          "end": 178
+        },
+        {
+          "name": "Anaphylatoxin chemotactic receptor, C3a/C5a1/C5a2",
+          "accession": "IPR002234",
+          "start": 201,
+          "end": 210
+        },
+        {
+          "name": "Anaphylatoxin chemotactic receptor, C3a/C5a1/C5a2",
+          "accession": "IPR002234",
+          "start": 222,
+          "end": 242
+        },
+        {
+          "name": "Anaphylatoxin chemotactic receptor, C3a/C5a1/C5a2",
+          "accession": "IPR002234",
+          "start": 300,
+          "end": 314
+        },
+        {
+          "name": "Anaphylatoxin chemotactic receptor, C3a/C5a1/C5a2",
+          "accession": "IPR002234",
+          "start": 320,
+          "end": 333
+        },
+        {
+          "name": "Anaphylatoxin chemotactic receptor, C3a/C5a1/C5a2",
+          "accession": "IPR002234",
+          "start": 333,
+          "end": 348
+        },
+        {
+          "name": "GPCR, rhodopsin-like, 7TM",
           "accession": "IPR017452",
-          "start": null,
-          "end": null
-        },
-        {
-          "name": "7tm_1",
-          "accession": "PF00001",
-          "start": null,
-          "end": null
+          "start": 54,
+          "end": 300
         }
       ],
       "go_terms": [
@@ -25275,7 +25518,58 @@
           "name": "Differentiation of Circulating Monocytes"
         }
       ],
-      "interacting_partners": [],
+      "interacting_partners": [
+        {
+          "string_id": "9606.ENSP00000223642",
+          "name": "C5",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000245907",
+          "name": "C3",
+          "score": 0.931
+        },
+        {
+          "string_id": "9606.ENSP00000312999",
+          "name": "GNAI2",
+          "score": 0.884
+        },
+        {
+          "string_id": "9606.ENSP00000334448",
+          "name": "GNG2",
+          "score": 0.825
+        },
+        {
+          "string_id": "9606.ENSP00000356016",
+          "name": "CR1",
+          "score": 0.791
+        },
+        {
+          "string_id": "9606.ENSP00000396688",
+          "name": "C4A",
+          "score": 0.86
+        },
+        {
+          "string_id": "9606.ENSP00000367872",
+          "name": "GNB1",
+          "score": 0.909
+        },
+        {
+          "string_id": "9606.ENSP00000362680",
+          "name": "SRC",
+          "score": 0.913
+        },
+        {
+          "string_id": "9606.ENSP00000497260",
+          "name": "GNAI1",
+          "score": 0.932
+        },
+        {
+          "string_id": "9606.ENSP00000364898",
+          "name": "SYK",
+          "score": 0.934
+        }
+      ],
       "reference_doi": null,
       "reference_ids": [],
       "evidence_source": "https://www.uniprot.org/uniprotkb/P21730/entry",
@@ -25425,7 +25719,58 @@
           "name": "Regulation of Complement cascade"
         }
       ],
-      "interacting_partners": [],
+      "interacting_partners": [
+        {
+          "string_id": "9606.ENSP00000243611",
+          "name": "C4BPB",
+          "score": 0.921
+        },
+        {
+          "string_id": "9606.ENSP00000245907",
+          "name": "C3",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000261590",
+          "name": "DSG2",
+          "score": 0.931
+        },
+        {
+          "string_id": "9606.ENSP00000356037",
+          "name": "C4BPA",
+          "score": 0.922
+        },
+        {
+          "string_id": "9606.ENSP00000396688",
+          "name": "C4A",
+          "score": 0.927
+        },
+        {
+          "string_id": "9606.ENSP00000415941",
+          "name": "C4B",
+          "score": 0.927
+        },
+        {
+          "string_id": "9606.ENSP00000356399",
+          "name": "CFH",
+          "score": 0.939
+        },
+        {
+          "string_id": "9606.ENSP00000498879",
+          "name": "CD59",
+          "score": 0.953
+        },
+        {
+          "string_id": "9606.ENSP00000353408",
+          "name": "MSN",
+          "score": 0.955
+        },
+        {
+          "string_id": "9606.ENSP00000378131",
+          "name": "CFI",
+          "score": 0.994
+        }
+      ],
       "reference_doi": null,
       "reference_ids": [],
       "evidence_source": "https://www.uniprot.org/uniprotkb/P15529/entry",
@@ -25666,7 +26011,58 @@
           "name": "Regulation of Complement cascade"
         }
       ],
-      "interacting_partners": [],
+      "interacting_partners": [
+        {
+          "string_id": "9606.ENSP00000245907",
+          "name": "C3",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000255030",
+          "name": "CRP",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000295927",
+          "name": "PTX3",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000314299",
+          "name": "CFHR1",
+          "score": 0.998
+        },
+        {
+          "string_id": "9606.ENSP00000356385",
+          "name": "CFHR2",
+          "score": 0.983
+        },
+        {
+          "string_id": "9606.ENSP00000356395",
+          "name": "CFHR3",
+          "score": 0.957
+        },
+        {
+          "string_id": "9606.ENSP00000363079",
+          "name": "MBL2",
+          "score": 0.962
+        },
+        {
+          "string_id": "9606.ENSP00000366307",
+          "name": "THBD",
+          "score": 0.979
+        },
+        {
+          "string_id": "9606.ENSP00000416561",
+          "name": "CFB",
+          "score": 0.99
+        },
+        {
+          "string_id": "9606.ENSP00000378131",
+          "name": "CFI",
+          "score": 0.999
+        }
+      ],
       "reference_doi": null,
       "reference_ids": [],
       "evidence_source": "https://www.uniprot.org/uniprotkb/P08603/entry",
@@ -25907,7 +26303,58 @@
           "name": "Affinity selection of immunoglobulins"
         }
       ],
-      "interacting_partners": [],
+      "interacting_partners": [
+        {
+          "string_id": "9606.ENSP00000226574",
+          "name": "NFKB1",
+          "score": 0.996
+        },
+        {
+          "string_id": "9606.ENSP00000385675",
+          "name": "IL6",
+          "score": 0.946
+        },
+        {
+          "string_id": "9606.ENSP00000331736",
+          "name": "SELE",
+          "score": 0.947
+        },
+        {
+          "string_id": "9606.ENSP00000353408",
+          "name": "MSN",
+          "score": 0.947
+        },
+        {
+          "string_id": "9606.ENSP00000338934",
+          "name": "EZR",
+          "score": 0.969
+        },
+        {
+          "string_id": "9606.ENSP00000294728",
+          "name": "VCAM1",
+          "score": 0.979
+        },
+        {
+          "string_id": "9606.ENSP00000384273",
+          "name": "RELA",
+          "score": 0.996
+        },
+        {
+          "string_id": "9606.ENSP00000496959",
+          "name": "ITGAM",
+          "score": 0.998
+        },
+        {
+          "string_id": "9606.ENSP00000349252",
+          "name": "ITGAL",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000380948",
+          "name": "ITGB2",
+          "score": 0.999
+        }
+      ],
       "reference_doi": null,
       "reference_ids": [],
       "evidence_source": "https://www.uniprot.org/uniprotkb/P05362/entry",
@@ -26200,7 +26647,58 @@
           "name": "Amyloid fiber formation"
         }
       ],
-      "interacting_partners": [],
+      "interacting_partners": [
+        {
+          "string_id": "9606.ENSP00000206513",
+          "name": "CEBPE",
+          "score": 0.903
+        },
+        {
+          "string_id": "9606.ENSP00000216336",
+          "name": "CTSG",
+          "score": 0.869
+        },
+        {
+          "string_id": "9606.ENSP00000225275",
+          "name": "MPO",
+          "score": 0.918
+        },
+        {
+          "string_id": "9606.ENSP00000261267",
+          "name": "LYZ",
+          "score": 0.877
+        },
+        {
+          "string_id": "9606.ENSP00000323587",
+          "name": "ITLN1",
+          "score": 0.884
+        },
+        {
+          "string_id": "9606.ENSP00000361867",
+          "name": "SEMG1",
+          "score": 0.888
+        },
+        {
+          "string_id": "9606.ENSP00000362108",
+          "name": "LCN2",
+          "score": 0.889
+        },
+        {
+          "string_id": "9606.ENSP00000315130",
+          "name": "CLU",
+          "score": 0.898
+        },
+        {
+          "string_id": "9606.ENSP00000361746",
+          "name": "EPPIN",
+          "score": 0.925
+        },
+        {
+          "string_id": "9606.ENSP00000301046",
+          "name": "LALBA",
+          "score": 0.966
+        }
+      ],
       "reference_doi": null,
       "reference_ids": [],
       "evidence_source": "https://www.uniprot.org/uniprotkb/P02788/entry",
@@ -26501,7 +26999,58 @@
           "name": "Regulation of MITF-M-dependent genes involved in cell cycle and proliferation"
         }
       ],
-      "interacting_partners": [],
+      "interacting_partners": [
+        {
+          "string_id": "9606.ENSP00000222390",
+          "name": "HGF",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000262995",
+          "name": "GAB1",
+          "score": 0.996
+        },
+        {
+          "string_id": "9606.ENSP00000264033",
+          "name": "CBL",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000267101",
+          "name": "ERBB3",
+          "score": 0.987
+        },
+        {
+          "string_id": "9606.ENSP00000273261",
+          "name": "LRIG1",
+          "score": 0.983
+        },
+        {
+          "string_id": "9606.ENSP00000275493",
+          "name": "EGFR",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000351338",
+          "name": "PLXNB1",
+          "score": 0.993
+        },
+        {
+          "string_id": "9606.ENSP00000360683",
+          "name": "PTPN1",
+          "score": 0.996
+        },
+        {
+          "string_id": "9606.ENSP00000362680",
+          "name": "SRC",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000376345",
+          "name": "GRB2",
+          "score": 0.999
+        }
+      ],
       "reference_doi": null,
       "reference_ids": [],
       "evidence_source": "https://www.uniprot.org/uniprotkb/P08581/entry",
@@ -26520,10 +27069,10 @@
       "gravy_score": -0.222,
       "domains": [
         {
-          "name": "PSGL-1",
+          "name": "P-selectin glycoprotein ligand 1",
           "accession": "IPR026195",
-          "start": null,
-          "end": null
+          "start": 1,
+          "end": 412
         }
       ],
       "go_terms": [
@@ -26598,7 +27147,58 @@
           "name": "Cell surface interactions at the vascular wall"
         }
       ],
-      "interacting_partners": [],
+      "interacting_partners": [
+        {
+          "string_id": "9606.ENSP00000380948",
+          "name": "ITGB2",
+          "score": 0.789
+        },
+        {
+          "string_id": "9606.ENSP00000318142",
+          "name": "FUT7",
+          "score": 0.801
+        },
+        {
+          "string_id": "9606.ENSP00000329380",
+          "name": "GP1BA",
+          "score": 0.814
+        },
+        {
+          "string_id": "9606.ENSP00000356630",
+          "name": "HECA",
+          "score": 0.822
+        },
+        {
+          "string_id": "9606.ENSP00000498852",
+          "name": "SPN",
+          "score": 0.857
+        },
+        {
+          "string_id": "9606.ENSP00000349085",
+          "name": "MAGEA1",
+          "score": 0.902
+        },
+        {
+          "string_id": "9606.ENSP00000332062",
+          "name": "SNX20",
+          "score": 0.911
+        },
+        {
+          "string_id": "9606.ENSP00000498227",
+          "name": "SELL",
+          "score": 0.918
+        },
+        {
+          "string_id": "9606.ENSP00000263686",
+          "name": "SELP",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000331736",
+          "name": "SELE",
+          "score": 0.999
+        }
+      ],
       "reference_doi": null,
       "reference_ids": [],
       "evidence_source": "https://www.uniprot.org/uniprotkb/Q14242/entry",
@@ -26681,7 +27281,58 @@
           "name": ""
         }
       ],
-      "interacting_partners": [],
+      "interacting_partners": [
+        {
+          "string_id": "9606.ENSP00000259708",
+          "name": "KLC4",
+          "score": 0.943
+        },
+        {
+          "string_id": "9606.ENSP00000272217",
+          "name": "ARL8A",
+          "score": 0.969
+        },
+        {
+          "string_id": "9606.ENSP00000307078",
+          "name": "KIF5B",
+          "score": 0.984
+        },
+        {
+          "string_id": "9606.ENSP00000408979",
+          "name": "KIF5A",
+          "score": 0.916
+        },
+        {
+          "string_id": "9606.ENSP00000393379",
+          "name": "KIF5C",
+          "score": 0.92
+        },
+        {
+          "string_id": "9606.ENSP00000375810",
+          "name": "KLC3",
+          "score": 0.948
+        },
+        {
+          "string_id": "9606.ENSP00000414982",
+          "name": "KLC1",
+          "score": 0.95
+        },
+        {
+          "string_id": "9606.ENSP00000399403",
+          "name": "KLC2",
+          "score": 0.952
+        },
+        {
+          "string_id": "9606.ENSP00000420127",
+          "name": "RAB9A",
+          "score": 0.961
+        },
+        {
+          "string_id": "9606.ENSP00000479202",
+          "name": "ARL8B",
+          "score": 0.997
+        }
+      ],
       "reference_doi": null,
       "reference_ids": [],
       "evidence_source": "https://www.uniprot.org/uniprotkb/Q8IWE5/entry",
@@ -26958,7 +27609,58 @@
           "name": "IRAK4 deficiency (TLR2/4)"
         }
       ],
-      "interacting_partners": [],
+      "interacting_partners": [
+        {
+          "string_id": "9606.ENSP00000256458",
+          "name": "IRAK2",
+          "score": 0.975
+        },
+        {
+          "string_id": "9606.ENSP00000260010",
+          "name": "TLR2",
+          "score": 0.998
+        },
+        {
+          "string_id": "9606.ENSP00000353874",
+          "name": "TLR9",
+          "score": 0.989
+        },
+        {
+          "string_id": "9606.ENSP00000358997",
+          "name": "IRAK1",
+          "score": 0.996
+        },
+        {
+          "string_id": "9606.ENSP00000363089",
+          "name": "TLR4",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000386380",
+          "name": "IL1R1",
+          "score": 0.978
+        },
+        {
+          "string_id": "9606.ENSP00000389600",
+          "name": "TLR6",
+          "score": 0.987
+        },
+        {
+          "string_id": "9606.ENSP00000479889",
+          "name": "IRAK4",
+          "score": 0.998
+        },
+        {
+          "string_id": "9606.ENSP00000433623",
+          "name": "TRAF6",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000498321",
+          "name": "MYD88",
+          "score": 0.999
+        }
+      ],
       "reference_doi": null,
       "reference_ids": [],
       "evidence_source": "https://www.uniprot.org/uniprotkb/P58753/entry",
@@ -27341,7 +28043,58 @@
           "name": "RSV-host interactions"
         }
       ],
-      "interacting_partners": [],
+      "interacting_partners": [
+        {
+          "string_id": "9606.ENSP00000226574",
+          "name": "NFKB1",
+          "score": 0.995
+        },
+        {
+          "string_id": "9606.ENSP00000248244",
+          "name": "TICAM1",
+          "score": 0.989
+        },
+        {
+          "string_id": "9606.ENSP00000314733",
+          "name": "TOLLIP",
+          "score": 0.985
+        },
+        {
+          "string_id": "9606.ENSP00000345347",
+          "name": "HMGB1",
+          "score": 0.986
+        },
+        {
+          "string_id": "9606.ENSP00000363089",
+          "name": "TLR4",
+          "score": 0.989
+        },
+        {
+          "string_id": "9606.ENSP00000385519",
+          "name": "CD14",
+          "score": 0.994
+        },
+        {
+          "string_id": "9606.ENSP00000354932",
+          "name": "TLR1",
+          "score": 0.997
+        },
+        {
+          "string_id": "9606.ENSP00000389600",
+          "name": "TLR6",
+          "score": 0.997
+        },
+        {
+          "string_id": "9606.ENSP00000376445",
+          "name": "TIRAP",
+          "score": 0.998
+        },
+        {
+          "string_id": "9606.ENSP00000498321",
+          "name": "MYD88",
+          "score": 0.999
+        }
+      ],
       "reference_doi": null,
       "reference_ids": [],
       "evidence_source": "https://www.uniprot.org/uniprotkb/O60603/entry",
@@ -27854,7 +28607,58 @@
           "name": "Dengue Virus-Host Interactions"
         }
       ],
-      "interacting_partners": [],
+      "interacting_partners": [
+        {
+          "string_id": "9606.ENSP00000226574",
+          "name": "NFKB1",
+          "score": 0.997
+        },
+        {
+          "string_id": "9606.ENSP00000248244",
+          "name": "TICAM1",
+          "score": 0.998
+        },
+        {
+          "string_id": "9606.ENSP00000284818",
+          "name": "LY96",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000345347",
+          "name": "HMGB1",
+          "score": 0.998
+        },
+        {
+          "string_id": "9606.ENSP00000376500",
+          "name": "TRAF3",
+          "score": 0.993
+        },
+        {
+          "string_id": "9606.ENSP00000479889",
+          "name": "IRAK4",
+          "score": 0.997
+        },
+        {
+          "string_id": "9606.ENSP00000376445",
+          "name": "TIRAP",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000415139",
+          "name": "TICAM2",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000433623",
+          "name": "TRAF6",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000498321",
+          "name": "MYD88",
+          "score": 0.999
+        }
+      ],
       "reference_doi": null,
       "reference_ids": [],
       "evidence_source": "https://www.uniprot.org/uniprotkb/O00206/entry",
@@ -28163,7 +28967,58 @@
           "name": "Dengue virus modulates apoptosis"
         }
       ],
-      "interacting_partners": [],
+      "interacting_partners": [
+        {
+          "string_id": "9606.ENSP00000025008",
+          "name": "RB1CC1",
+          "score": 0.996
+        },
+        {
+          "string_id": "9606.ENSP00000247178",
+          "name": "ATG14",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000324560",
+          "name": "ULK1",
+          "score": 0.995
+        },
+        {
+          "string_id": "9606.ENSP00000273047",
+          "name": "RAB5A",
+          "score": 0.996
+        },
+        {
+          "string_id": "9606.ENSP00000361021",
+          "name": "PTEN",
+          "score": 0.997
+        },
+        {
+          "string_id": "9606.ENSP00000277746",
+          "name": "NRBF2",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000296343",
+          "name": "RUBCN",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000348455",
+          "name": "UVRAG",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000349205",
+          "name": "PIK3R4",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000355231",
+          "name": "BECN1",
+          "score": 0.999
+        }
+      ],
       "reference_doi": null,
       "reference_ids": [],
       "evidence_source": "https://www.uniprot.org/uniprotkb/Q8NEB9/entry",
@@ -32176,6 +33031,306 @@
       "database_accession": null,
       "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
       "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+    },
+    {
+      "evidence_id": "PM-EVD-0040",
+      "interaction_id": "PM-INT-0001",
+      "evidence_class": "experimental",
+      "doi": "10.1126/science.1227037",
+      "pmid": null,
+      "database_accession": null,
+      "provenance": "McGourty et al., Science 2012 (SifA binds SKIP/PLEKHM2)",
+      "note": "Co-immunoprecipitation and functional assays show SifA forms a complex with SKIP/PLEKHM2 in infected cells."
+    },
+    {
+      "evidence_id": "PM-EVD-0043",
+      "interaction_id": "PM-INT-0016",
+      "evidence_class": "experimental",
+      "doi": "10.1126/science.1227037",
+      "pmid": null,
+      "database_accession": null,
+      "provenance": "McGourty et al., Science 2012 (S. Typhi SifA-SKIP/PLEKHM2)",
+      "note": "Same published SifA-SKIP binding evidence applied to the S. Typhi effector row."
+    },
+    {
+      "evidence_id": "PM-EVD-0041",
+      "interaction_id": "PM-INT-0004",
+      "evidence_class": "experimental",
+      "doi": "10.1016/S0092-8674(00)81070-3",
+      "pmid": null,
+      "database_accession": null,
+      "provenance": "Meng et al., Cell 1996 (InlA is the E-cadherin ligand)",
+      "note": "Affinity chromatography identified E-cadherin as the cellular receptor for Listeria internalin."
+    },
+    {
+      "evidence_id": "PM-EVD-0042",
+      "interaction_id": "PM-INT-0005",
+      "evidence_class": "experimental",
+      "doi": "10.1016/S0092-8674(00)00141-0",
+      "pmid": "11081636",
+      "database_accession": null,
+      "provenance": "Shen et al., Cell 2000 (InlB binds/activates MET)",
+      "note": "InlB binds the MET extracellular domain and is required for InlB-dependent entry."
+    },
+    {
+      "evidence_id": "PM-EVD-0044",
+      "interaction_id": "PM-INT-0024",
+      "evidence_class": "experimental",
+      "doi": "10.1073/pnas.1001815107",
+      "pmid": null,
+      "database_accession": null,
+      "provenance": "Wilke & Bubeck Wardenburg, PNAS 2010 (Hla-ADAM10)",
+      "note": "ADAM10 was purified as an Hla-binding protein and shown to be required for toxin binding."
+    },
+    {
+      "evidence_id": "PM-EVD-0045",
+      "interaction_id": "PM-INT-0030",
+      "evidence_class": "experimental",
+      "doi": "10.1016/0005-2744(77)90053-5",
+      "pmid": "196649",
+      "database_accession": null,
+      "provenance": "Chung & Collier, Biochim Biophys Acta 1977 (diphtheria toxin ADP-ribosylates EF-2)",
+      "note": "Kinetic analysis of EF-2 ADP-ribosylation catalyzed by diphtheria toxin fragment A."
+    },
+    {
+      "evidence_id": "PM-EVD-0046",
+      "interaction_id": "PM-INT-0037",
+      "evidence_class": "experimental",
+      "doi": "10.1073/pnas.95.25.14979",
+      "pmid": null,
+      "database_accession": null,
+      "provenance": "Wu et al., PNAS 1998 (BFT cleaves E-cadherin)",
+      "note": "Bacteroides fragilis enterotoxin specifically cleaves the extracellular domain of E-cadherin."
+    },
+    {
+      "evidence_id": "PM-EVD-0047",
+      "interaction_id": "PM-INT-0002",
+      "evidence_class": "experimental",
+      "doi": "10.1126/sciadv.adj5777",
+      "pmid": "38064550",
+      "database_accession": null,
+      "provenance": "Yuan et al., Science Advances 2023 (SipA binds and stabilizes F-actin)",
+      "note": "Cryo-EM shows SipA binds along F-actin grooves and stabilizes filaments through charged interface residues."
+    },
+    {
+      "evidence_id": "PM-EVD-0048",
+      "interaction_id": "PM-INT-0003",
+      "evidence_class": "experimental",
+      "doi": "10.1016/j.celrep.2015.07.063",
+      "pmid": "26299973",
+      "database_accession": null,
+      "provenance": "D'Costa et al., Cell Reports 2015 (SopD2 binds and inhibits Rab7)",
+      "note": "SopD2 directly binds Rab7 and inhibits nucleotide exchange, limiting Rab7 effector recruitment."
+    },
+    {
+      "evidence_id": "PM-EVD-0049",
+      "interaction_id": "PM-INT-0006",
+      "evidence_class": "experimental",
+      "doi": "10.1084/jem.20030527",
+      "pmid": "12925680",
+      "database_accession": null,
+      "provenance": "Singh et al., JEM 2003 (M. tuberculosis LAM blocks Ca2+/hVPS34 signaling)",
+      "note": "M. tuberculosis lipoarabinomannan blocks the Ca2+/calmodulin-PI3K hVPS34 cascade required for phagosome maturation."
+    },
+    {
+      "evidence_id": "PM-EVD-0050",
+      "interaction_id": "PM-INT-0007",
+      "evidence_class": "experimental",
+      "doi": "10.1093/emboj/18.12.3249",
+      "pmid": "10369666",
+      "database_accession": null,
+      "provenance": "Tran Van Nhieu et al., EMBO J 1999 (IpaC induces actin polymerization)",
+      "note": "IpaC induced filopodial/lamellipodial extensions and actin polymerization in semi-permeabilized and microinjected cells."
+    },
+    {
+      "evidence_id": "PM-EVD-0051",
+      "interaction_id": "PM-INT-0008",
+      "evidence_class": "experimental",
+      "doi": "10.1371/journal.ppat.0040021",
+      "pmid": "18266466",
+      "database_accession": null,
+      "provenance": "Salcedo et al., PLoS Pathogens 2008 (Btp1/BtpA interferes with TLR2 signaling)",
+      "note": "Experimental work shows Btp1/BtpA interferes with TLR2 signaling in dendritic cells; this is pathway-level evidence rather than direct receptor binding."
+    },
+    {
+      "evidence_id": "PM-EVD-0052",
+      "interaction_id": "PM-INT-0010",
+      "evidence_class": "experimental",
+      "doi": "10.1371/journal.ppat.1006101",
+      "pmid": null,
+      "database_accession": null,
+      "provenance": "Latomanski et al., PLoS Pathogens 2016 (Cig57 hijacks FCHO-mediated clathrin trafficking)",
+      "note": "Cig57 hijacks FCHO-dependent clathrin-mediated trafficking; this supports pathway subversion rather than a demonstrated direct Cig57-CLTC binding event."
+    },
+    {
+      "evidence_id": "PM-EVD-0053",
+      "interaction_id": "PM-INT-0012",
+      "evidence_class": "experimental",
+      "doi": "10.1128/IAI.71.7.4018-4025.2003",
+      "pmid": "12819090",
+      "database_accession": null,
+      "provenance": "Park et al., Infect Immun 2003 (Msp2/p44 facilitates granulocyte adherence)",
+      "note": "Recombinant Msp2 binds PSGL-1-expressing cells and reduces PSGL-1 antibody binding; the study supports Msp2/PSGL-1 association without establishing Msp2 as the sole PSGL-1 adhesin."
+    },
+    {
+      "evidence_id": "PM-EVD-0054",
+      "interaction_id": "PM-INT-0014",
+      "evidence_class": "experimental",
+      "doi": "10.1038/ncb2109",
+      "pmid": "20972427",
+      "database_accession": null,
+      "provenance": "Haglund et al., Nature Cell Biology 2010 (R. rickettsii Sca2 is a formin-like actin nucleator)",
+      "note": "Sca2 nucleates unbranched actin filaments, associates processively with barbed ends, and uses profilin to drive actin-based motility."
+    },
+    {
+      "evidence_id": "PM-EVD-0055",
+      "interaction_id": "PM-INT-0015",
+      "evidence_class": "experimental",
+      "doi": "10.1111/j.1462-5822.2012.01815.x",
+      "pmid": "22612237",
+      "database_accession": null,
+      "provenance": "Klee et al., Cellular Microbiology 2012 (R. conorii Sca2 actin-nucleating domains)",
+      "note": "R. conorii Sca2 has separable mammalian-association and actin-nucleating domains that support intracellular actin-based motility."
+    },
+    {
+      "evidence_id": "PM-EVD-0056",
+      "interaction_id": "PM-INT-0018",
+      "evidence_class": "experimental",
+      "doi": "10.1128/iai.15.1.138-144.1977",
+      "pmid": "188760",
+      "database_accession": null,
+      "provenance": "Chung & Collier, Infect Immun 1977 (Pseudomonas exotoxin A ADP-ribosylates EF-2)",
+      "note": "Pseudomonas aeruginosa exotoxin A catalyzes NAD-dependent ADP-ribosylation of mammalian elongation factor 2 in vitro and in vivo."
+    },
+    {
+      "evidence_id": "PM-EVD-0057",
+      "interaction_id": "PM-INT-0019",
+      "evidence_class": "experimental",
+      "doi": "10.1016/j.bbrc.2006.10.091",
+      "pmid": "17083913",
+      "database_accession": null,
+      "provenance": "Zhou et al., BBRC 2006 (IbeA interacts with vimentin)",
+      "note": "Vimentin was identified on brain microvascular endothelial cells as an IbeA-binding protein that mediates E. coli K1 binding and invasion."
+    },
+    {
+      "evidence_id": "PM-EVD-0058",
+      "interaction_id": "PM-INT-0020",
+      "evidence_class": "experimental",
+      "doi": "10.1128/IAI.69.10.6419-6426.2001",
+      "pmid": "11553586",
+      "database_accession": null,
+      "provenance": "Rytkönen et al., Infect Immun 2001 (gonococcal pilin binds CD46)",
+      "note": "Soluble gonococcal pilin bound a CD46-sized band, and CD46 antibodies or soluble pilin blocked Neisseria gonorrhoeae binding to target cells and tissue."
+    },
+    {
+      "evidence_id": "PM-EVD-0059",
+      "interaction_id": "PM-INT-0021",
+      "evidence_class": "experimental",
+      "doi": "10.1128/IAI.74.2.830-838.2006",
+      "pmid": "16428725",
+      "database_accession": null,
+      "provenance": "Avadhanula et al., Infect Immun 2006 (NTHI P5 fimbriae bind ICAM-1)",
+      "note": "Anti-P5 antiserum reduced NTHI adhesion to ICAM-1 cells and recombinant ICAM-1 bound P5-expressing but not P5-deficient outer membrane preparations."
+    },
+    {
+      "evidence_id": "PM-EVD-0060",
+      "interaction_id": "PM-INT-0022",
+      "evidence_class": "experimental",
+      "doi": "10.1073/pnas.0502040102",
+      "pmid": "15956214",
+      "database_accession": null,
+      "provenance": "Andersen-Nissen et al., PNAS 2005 (C. jejuni flagellin evades TLR5 recognition)",
+      "note": "This study supports a C. jejuni flagellin-TLR5 interface through demonstrated TLR5 evasion/non-recognition rather than TLR5 activation."
+    },
+    {
+      "evidence_id": "PM-EVD-0061",
+      "interaction_id": "PM-INT-0023",
+      "evidence_class": "experimental",
+      "doi": "10.1038/embor.2010.114",
+      "pmid": "20814423",
+      "database_accession": null,
+      "provenance": "Löwer et al., EMBO Reports 2010 (H. pylori HtrA cleaves E-cadherin)",
+      "note": "H. pylori HtrA was shown to cleave E-cadherin and disrupt epithelial adherens junctions."
+    },
+    {
+      "evidence_id": "PM-EVD-0062",
+      "interaction_id": "PM-INT-0025",
+      "evidence_class": "experimental",
+      "doi": "10.1016/j.chom.2013.04.006",
+      "pmid": "23684309",
+      "database_accession": null,
+      "provenance": "Spaan et al., Cell Host & Microbe 2013 (PVL targets C5a receptors)",
+      "note": "LukS-PV binds the C5a receptor C5aR and the C5a-like receptor C5L2 on human myeloid cells."
+    },
+    {
+      "evidence_id": "PM-EVD-0063",
+      "interaction_id": "PM-INT-0026",
+      "evidence_class": "experimental",
+      "doi": "10.1128/IAI.69.5.3372-3381.2001",
+      "pmid": "11292760",
+      "database_accession": null,
+      "provenance": "Hammer et al., Infect Immun 2001 (PspA binds lactoferrin)",
+      "note": "Pneumococcal surface protein A was shown to mediate binding of human lactoferrin to Streptococcus pneumoniae."
+    },
+    {
+      "evidence_id": "PM-EVD-0064",
+      "interaction_id": "PM-INT-0027",
+      "evidence_class": "experimental",
+      "doi": "10.1128/IAI.70.10.5604-5611.2002",
+      "pmid": "12228288",
+      "database_accession": null,
+      "provenance": "Duthy et al., Infect Immun 2002 (PspC binds factor H via SCR13-15)",
+      "note": "Factor H binding was PspC dependent and mapped to factor H short consensus repeats 13 to 15."
+    },
+    {
+      "evidence_id": "PM-EVD-0065",
+      "interaction_id": "PM-INT-0028",
+      "evidence_class": "experimental",
+      "doi": "10.1111/j.1574-6968.2000.tb09122.x",
+      "pmid": "10804189",
+      "database_accession": null,
+      "provenance": "Popoff et al., FEMS Microbiology Letters 2000 (C. difficile binary toxin ADP-ribosylates actin)",
+      "note": "C. difficile binary toxin production was linked to an actin-specific ADP-ribosyltransferase activity."
+    },
+    {
+      "evidence_id": "PM-EVD-0066",
+      "interaction_id": "PM-INT-0029",
+      "evidence_class": "experimental",
+      "doi": "10.1016/j.anaerobe.2016.01.002",
+      "pmid": "26790921",
+      "database_accession": null,
+      "provenance": "Batah et al., Anaerobe 2016 (C. difficile FliC activates TLR5)",
+      "note": "C. difficile FliC flagellin interacted with TLR5 and predominantly activated TLR5-linked NF-kB signaling in epithelial cell models."
+    },
+    {
+      "evidence_id": "PM-EVD-0067",
+      "interaction_id": "PM-INT-0036",
+      "evidence_class": "experimental",
+      "doi": "10.1128/JB.01455-10",
+      "pmid": "21335455",
+      "database_accession": null,
+      "provenance": "Stevens et al., J Bacteriol 2011 (B. pseudomallei BimA binds/polymerizes actin)",
+      "note": "BimA motifs required for intracellular motility, actin binding, and actin polymerization were experimentally identified."
+    },
+    {
+      "evidence_id": "PM-EVD-0068",
+      "interaction_id": "PM-INT-0038",
+      "evidence_class": "experimental",
+      "doi": "10.1074/jbc.274.37.26272",
+      "pmid": "10473582",
+      "database_accession": null,
+      "provenance": "Eicken et al., J Biol Chem 1999 (DbpA decorin binding residues)",
+      "note": "Critical lysine residues in Borrelia burgdorferi DbpA required for decorin binding were identified by mutagenesis."
+    },
+    {
+      "evidence_id": "PM-EVD-0069",
+      "interaction_id": "PM-INT-0039",
+      "evidence_class": "experimental",
+      "doi": "10.4049/jimmunol.167.2.987",
+      "pmid": "11441107",
+      "database_accession": null,
+      "provenance": "Bulut et al., J Immunol 2001 (OspA lipoprotein activates TLR2/TLR6)",
+      "note": "OspA lipoprotein activated NF-kB through TLR2/TLR6 in transfected endothelial cells; this supports OspA-TLR2 engagement in a lipoprotein context."
     }
   ]
 }

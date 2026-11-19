@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 import statistics
 import sys
 from collections import Counter, defaultdict
@@ -25,8 +26,8 @@ from identifiers import interaction_evidence_key, is_entity_id
 ROOT = Path(__file__).resolve().parents[1]
 DATASET_PATH = ROOT / "data" / "pathomap-dataset.json"
 OUTPUT_PATH = ROOT / "data" / "derived" / "interaction_analysis.json"
-ANALYSIS_VERSION = "1.1"
-OUTPUT_SCHEMA_VERSION = "1.1"
+ANALYSIS_VERSION = "1.2"
+OUTPUT_SCHEMA_VERSION = "1.2"
 EVIDENCE_CLASSES = {"experimental", "predicted", "annotation-derived", "hypothetical"}
 EVIDENCE_PRIORITY = {
     "experimental": 4,
@@ -39,6 +40,7 @@ PARAMETERS = {
     "duplicate_relationship_policy": "retain_lexicographically_earliest_interaction_id",
     "evidence_identity": "interaction_id|evidence_class|doi|pmid|database_accession|provenance",
     "host_target_scope": "curated_host_target_ids",
+    "pathogen_classification": "gram_stain_or_name_heuristic",
 }
 INPUT_TABLES = ["pathogens", "effectors", "host_proteins", "host_targets", "interactions", "interaction_evidence"]
 
@@ -86,6 +88,28 @@ def strongest_evidence_class(classes: list[str]) -> str | None:
     if not classes:
         return None
     return max(classes, key=lambda item: EVIDENCE_PRIORITY.get(item, 0))
+
+
+def classify_pathogen(row: dict) -> str:
+    gram_stain = row.get("gram_stain")
+    if gram_stain in ("Gram-positive", "Gram-negative"):
+        return str(gram_stain)
+
+    text = " ".join(str(row.get(field) or "") for field in ("name", "phylum", "class_name")).lower()
+    if re.search(r"viricota|viridae|virus", text):
+        return "Virus"
+    if re.search(
+        r"ascomycota|basidiomycota|mucoromycota|chytridiomycota|microsporid|fungus|fungi",
+        text,
+    ):
+        return "Fungus"
+    if re.search(
+        r"apicomplexa|nematoda|platyhelminthes|kinetoplastida|amoebozoa|parasite|"
+        r"plasmodium|toxoplasma|trypanosoma|leishmania|giardia|entamoeba",
+        text,
+    ):
+        return "Parasite"
+    return "Unclassified"
 
 
 def evidence_summary(row: dict) -> dict:
@@ -174,7 +198,87 @@ def collect_unresolved_targets(dataset: dict, pathogens: dict, targets: dict, re
     }
 
 
-def validate_result(result: dict) -> list[dict]:
+def retained_source_records(dataset: dict) -> dict:
+    """Recompute retained interactions and evidence directly from source tables."""
+    def rows(name: str) -> list:
+        value = dataset.get(name, [])
+        return value if isinstance(value, list) else []
+
+    effectors = {
+        row.get("entity_id")
+        for row in rows("effectors")
+        if isinstance(row, dict) and is_entity_id(row.get("entity_id"), "effector")
+    }
+    proteins = {
+        row.get("entity_id")
+        for row in rows("host_proteins")
+        if isinstance(row, dict) and is_entity_id(row.get("entity_id"), "host_protein")
+    }
+
+    seen_interaction_ids: set[str] = set()
+    valid_interactions: list[dict] = []
+    for row in rows("interactions"):
+        if not isinstance(row, dict):
+            continue
+        row_id = row.get("interaction_id")
+        if not is_entity_id(row_id, "interaction") or row_id in seen_interaction_ids:
+            continue
+        seen_interaction_ids.add(row_id)
+        effector_id, protein_id = row.get("effector_id"), row.get("host_protein_id")
+        if effector_id not in effectors or protein_id not in proteins:
+            continue
+        valid_interactions.append(row)
+
+    by_pair: dict[tuple[str, str], dict] = {}
+    for row in sorted(valid_interactions, key=lambda item: item["interaction_id"]):
+        by_pair.setdefault((row["effector_id"], row["host_protein_id"]), row)
+    interactions = sorted(by_pair.values(), key=lambda item: item["interaction_id"])
+    valid_interaction_ids = {row["interaction_id"] for row in interactions}
+
+    seen_evidence_ids: set[str] = set()
+    seen_evidence_keys: set[str] = set()
+    evidence: list[dict] = []
+    for row in rows("interaction_evidence"):
+        if not isinstance(row, dict):
+            continue
+        row_id = row.get("evidence_id")
+        if not is_entity_id(row_id, "interaction_evidence") or row_id in seen_evidence_ids:
+            continue
+        seen_evidence_ids.add(row_id)
+        interaction_id = row.get("interaction_id")
+        if interaction_id not in valid_interaction_ids:
+            continue
+        if row.get("evidence_class") not in EVIDENCE_CLASSES:
+            continue
+        provenance = str(row.get("provenance") or "").strip()
+        if not provenance:
+            continue
+        key = interaction_evidence_key(
+            interaction_id,
+            row.get("evidence_class"),
+            row.get("doi"),
+            row.get("pmid"),
+            row.get("database_accession"),
+            provenance,
+        )
+        if key in seen_evidence_keys:
+            continue
+        seen_evidence_keys.add(key)
+        evidence.append(row)
+
+    evidence.sort(key=lambda item: item["evidence_id"])
+    evidence_by_interaction: dict[str, list[dict]] = defaultdict(list)
+    for row in evidence:
+        evidence_by_interaction[row["interaction_id"]].append(row)
+
+    return {
+        "interactions": interactions,
+        "evidence": evidence,
+        "evidence_by_interaction": evidence_by_interaction,
+    }
+
+
+def validate_result(result: dict, dataset: dict | None = None) -> list[dict]:
     issues: list[dict] = []
     nodes = result["network"]["nodes"]
     edges = result["network"]["edges"]
@@ -193,6 +297,50 @@ def validate_result(result: dict) -> list[dict]:
         issues.append(issue("edge_count_mismatch", f"Expected {expected_edges} edges, found {len(edges)}."))
     if len(edge_ids) != result["validation"]["retained_interaction_count"]:
         issues.append(issue("retained_edge_mismatch", "Retained interaction count does not match unique network edges."))
+
+    if not isinstance(dataset, dict):
+        return issues
+
+    source = retained_source_records(dataset)
+    source_interaction_ids = {row["interaction_id"] for row in source["interactions"]}
+    stats = result.get("statistics", {})
+    validation = result.get("validation", {})
+    raw_interactions = dataset.get("interactions")
+    raw_evidence = dataset.get("interaction_evidence")
+    raw_interactions = raw_interactions if isinstance(raw_interactions, list) else []
+    raw_evidence = raw_evidence if isinstance(raw_evidence, list) else []
+
+    if validation.get("raw_interaction_count") != len(raw_interactions):
+        issues.append(issue("source_interaction_count_mismatch", "Raw interaction count does not match source table."))
+    if validation.get("retained_interaction_count") != len(source["interactions"]):
+        issues.append(issue("source_retained_count_mismatch", "Retained interaction count does not match source table."))
+    if stats.get("interaction_count") != len(source["interactions"]):
+        issues.append(issue("source_statistics_mismatch", "Statistics interaction count does not match source table."))
+    if edge_ids != source_interaction_ids:
+        issues.append(issue("edge_source_mismatch", "Network edge IDs do not match retained source interactions."))
+    if validation.get("raw_evidence_count") != len(raw_evidence):
+        issues.append(issue("source_evidence_count_mismatch", "Raw evidence count does not match source table."))
+    if validation.get("retained_evidence_count") != len(source["evidence"]):
+        issues.append(issue("retained_evidence_mismatch", "Retained evidence count does not match source table."))
+
+    for edge in edges:
+        expected_records = source["evidence_by_interaction"].get(edge.get("id"), [])
+        edge_id = edge.get("id")
+        if edge.get("evidence_count") != len(expected_records):
+            issues.append(issue("edge_evidence_count_mismatch", "Edge evidence count does not match source evidence.", edge_id))
+        if set(edge.get("evidence_classes") or []) != {row["evidence_class"] for row in expected_records}:
+            issues.append(issue("edge_evidence_class_mismatch", "Edge evidence classes do not match source evidence.", edge_id))
+        expected_record_ids = {row["evidence_id"] for row in expected_records}
+        record_ids = {row.get("evidence_id") for row in edge.get("evidence_records", [])}
+        if record_ids != expected_record_ids:
+            issues.append(issue("edge_evidence_id_mismatch", "Edge evidence IDs do not match source evidence.", edge_id))
+
+    unresolved = result.get("unresolved_targets", {})
+    if stats.get("unresolved_target_count") != len(unresolved.get("targets", [])):
+        issues.append(issue("unresolved_target_count_mismatch", "Unresolved target count does not match target rows."))
+    if stats.get("unresolved_effector_count") != unresolved.get("effector_count"):
+        issues.append(issue("unresolved_effector_count_mismatch", "Unresolved effector count does not match target rows."))
+
     return issues
 
 
@@ -420,6 +568,7 @@ def analyze(
                 "type": "pathogen",
                 "label": pathogen.get("name"),
                 "tax_id": pathogen.get("tax_id"),
+                "classification": classify_pathogen(pathogen),
             }
         nodes[row["effector_id"]] = {
             "id": row["effector_id"],
@@ -514,7 +663,7 @@ def analyze(
         },
     }
 
-    result_issues = validate_result(result)
+    result_issues = validate_result(result, dataset=dataset)
     result["validation"]["result_issues"] = sorted(result_issues, key=issue_sort_key)
     result["validation"]["issue_counts"]["result"] = count_issue_codes(result_issues)
     return result

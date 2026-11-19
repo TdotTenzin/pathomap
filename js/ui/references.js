@@ -1,21 +1,7 @@
 import { getDataset } from '../data/loader.js';
+import { createLink } from '../utils/dom.js';
+import { pluralize } from '../utils/format.js';
 import { evidenceClassLabel } from '../utils/labels.js';
-
-function plural(count, singular, pluralForm = `${singular}s`) {
-  return `${count} ${count === 1 ? singular : pluralForm}`;
-}
-
-function createLink(href, text) {
-  if (!href) return document.createTextNode(text || '');
-
-  const link = document.createElement('a');
-  link.className = 'db-link';
-  link.href = href;
-  link.textContent = text || href;
-  link.target = '_blank';
-  link.rel = 'noopener noreferrer';
-  return link;
-}
 
 function createCell(content, className = '') {
   const cell = document.createElement('td');
@@ -106,12 +92,12 @@ function renderReferencesTable(references) {
 function createEvidenceBadge(evidenceClass) {
   const badge = document.createElement('span');
   badge.className = 'references-evidence-class';
-  badge.setAttribute('data-class', evidenceClass || 'unknown');
+  badge.setAttribute('data-evidence-class', evidenceClass || 'unknown');
   badge.textContent = evidenceClassLabel(evidenceClass, 'Unknown');
   return badge;
 }
 
-function createCitation(evidence) {
+function createEvidenceLinks(evidence) {
   const citation = document.createElement('div');
   citation.className = 'references-citation';
   let hasCitation = false;
@@ -155,7 +141,7 @@ function evidenceSummaryText(evidence) {
 
 function renderEvidenceTable(evidence) {
   if (!evidence.length) {
-    return createEmptyState('No interaction-evidence records are available for this dataset.');
+    return createEmptyState('No evidence records are available for this dataset.');
   }
 
   return createTable(
@@ -163,7 +149,7 @@ function renderEvidenceTable(evidence) {
       { label: 'Evidence ID' },
       { label: 'Interaction ID' },
       { label: 'Class' },
-      { label: 'Citation' },
+      { label: 'Evidence links' },
       { label: 'Provenance', className: 'references-provenance' },
       { label: 'Note', className: 'references-note' },
     ],
@@ -172,7 +158,7 @@ function renderEvidenceTable(evidence) {
       tableRow.appendChild(createCell(row.evidence_id));
       tableRow.appendChild(createCell(row.interaction_id));
       tableRow.appendChild(createCell(createEvidenceBadge(row.evidence_class)));
-      tableRow.appendChild(createCell(createCitation(row)));
+      tableRow.appendChild(createCell(createEvidenceLinks(row)));
       tableRow.appendChild(createCell(row.provenance, 'references-provenance'));
       tableRow.appendChild(createCell(row.note, 'references-note'));
     }
@@ -189,7 +175,7 @@ export function renderReferences(dataset = getDataset()) {
   const references = dataset?.references || [];
   const evidence = dataset?.interaction_evidence || [];
   const interactions = dataset?.interactions || [];
-  const citedEvidence = evidence.filter(
+  const evidenceWithLinks = evidence.filter(
     (row) => row.doi || row.pmid || row.database_accession
   ).length;
 
@@ -198,10 +184,10 @@ export function renderReferences(dataset = getDataset()) {
   const meta = document.createElement('p');
   meta.className = 'references-meta';
   meta.textContent = [
-    plural(references.length, 'DOI reference'),
-    plural(evidence.length, 'interaction-evidence record'),
-    plural(interactions.length, 'interaction'),
-    `${citedEvidence} with citation identifiers`,
+    pluralize(references.length, 'DOI reference'),
+    pluralize(evidence.length, 'evidence record'),
+    pluralize(interactions.length, 'interaction'),
+    `${evidenceWithLinks} with evidence identifiers`,
   ].join(' · ');
   container.appendChild(meta);
 

@@ -13,7 +13,11 @@ import { toCsv } from '../js/utils/export.js';
 
 function fixture() {
     return {
-        meta: { schema_version: '3.0', built_at: '2026-01-01T00:00:00Z' },
+        meta: {
+            schema_version: '3.0',
+            built_at: '2026-01-01T00:00:00Z',
+            sha256: 'a'.repeat(64),
+        },
         pathogens: [
             { entity_id: 'PM-PAT-0001', pathogen_id: 1, name: 'Pathogen A', gram_stain: 'Gram-negative', tax_id: 1 },
             { entity_id: 'PM-PAT-0002', pathogen_id: 2, name: 'Pathogen B', gram_stain: 'Gram-positive', tax_id: 2 },
@@ -91,11 +95,13 @@ function matchingAnalysis(dataset) {
             analysis_version: '1.1',
             source_dataset_built_at: dataset.meta.built_at,
             source_dataset_schema_version: dataset.meta.schema_version,
+            source_dataset_sha256: dataset.meta.sha256,
         },
+        validation: { raw_interaction_count: dataset.interactions.length },
         statistics: { interaction_count: dataset.interactions.length },
         network: {
             nodes: [
-                { id: 'PM-PAT-0001', type: 'pathogen', label: 'Pathogen A' },
+                { id: 'PM-PAT-0001', type: 'pathogen', label: 'Pathogen A', classification: 'Virus' },
                 { id: 'PM-EFF-0001', type: 'effector', label: 'Effector A', pathogen_id: 'PM-PAT-0001' },
                 { id: 'PM-HST-0001', type: 'host_protein', label: 'Host protein A', gene_name: 'HOSTA' },
             ],
@@ -121,9 +127,22 @@ test('derived analysis is used only when it matches the loaded dataset', () => {
     const analysis = matchingAnalysis(dataset);
 
     assert.equal(analysisMatchesDataset(analysis, dataset), true);
-    assert.equal(buildNetworkModel(dataset, analysis).source.kind, 'derived');
+    const model = buildNetworkModel(dataset, analysis);
+    assert.equal(model.source.kind, 'derived');
+    assert.equal(model.source.verified, true);
+    assert.equal(model.nodes.find((node) => node.id === 'PM-PAT-0001').classification, 'Virus');
 
     analysis.statistics.interaction_count = 99;
+    assert.equal(analysisMatchesDataset(analysis, dataset), false);
+    analysis.statistics.interaction_count = dataset.interactions.length;
+
+    analysis.validation.raw_interaction_count = 1;
+    assert.equal(analysisMatchesDataset(analysis, dataset), false);
+    analysis.validation.raw_interaction_count = dataset.interactions.length;
+
+    analysis.meta.source_dataset_sha256 = 'b'.repeat(64);
+    assert.equal(analysisMatchesDataset(analysis, dataset), false);
+    delete analysis.meta.source_dataset_sha256;
     assert.equal(analysisMatchesDataset(analysis, dataset), false);
     assert.equal(buildNetworkModel(dataset, analysis).source.kind, 'dataset');
 });
@@ -173,6 +192,28 @@ test('filter options and details use stable IDs and joined biology', () => {
     const edgeDetail = buildEdgeDetail(dataset, model, 'PM-INT-0002');
     assert.equal(edgeDetail.kind, 'edge');
     assert.equal(edgeDetail.evidence[0].evidence_class, 'predicted');
+});
+
+test('evidence reused across interactions is retained in details', () => {
+    const dataset = fixture();
+    dataset.interaction_evidence.push({
+        evidence_id: 'PM-EVD-0001',
+        interaction_id: 'PM-INT-0002',
+        evidence_class: 'experimental',
+        doi: '10.1000/a',
+        provenance: 'fixture',
+    });
+    const model = buildNetworkModel(dataset, null);
+
+    const nodeDetail = buildNodeDetail(dataset, model, 'PM-HST-0001');
+    assert.equal(nodeDetail.evidence.length, 3);
+    assert.equal(
+        nodeDetail.evidence.filter((record) => record.evidence_id === 'PM-EVD-0001').length,
+        2
+    );
+
+    const edgeDetail = buildEdgeDetail(dataset, model, 'PM-INT-0002');
+    assert.equal(edgeDetail.evidence.length, 2);
 });
 
 test('CSV output escapes commas, quotes, and newlines', () => {

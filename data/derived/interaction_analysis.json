@@ -1,13 +1,13 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "meta": {
     "analysis": "interaction_analysis",
-    "analysis_version": "1.1",
-    "generated_at": "2026-11-12T02:09:14Z",
+    "analysis_version": "1.2",
+    "generated_at": "2026-11-20T22:11:12Z",
     "source_dataset_path": "data/pathomap-dataset.json",
     "source_dataset_schema_version": "3.0",
-    "source_dataset_built_at": "2026-11-10T16:41:10Z",
-    "source_dataset_sha256": "f73bdcf5857ba79e52a076e3f4372b7ef834e8a9c913290c63a06fbd356e4515",
+    "source_dataset_built_at": "2026-11-18T15:26:11Z",
+    "source_dataset_sha256": "4e3896d0e3f7a561c1881668b73a7c70a32f6ea0c77742e8b657c9a5474e0c87",
     "input_tables": [
       "pathogens",
       "effectors",
@@ -20,7 +20,8 @@
       "deduplicate_relationships": true,
       "duplicate_relationship_policy": "retain_lexicographically_earliest_interaction_id",
       "evidence_identity": "interaction_id|evidence_class|doi|pmid|database_accession|provenance",
-      "host_target_scope": "curated_host_target_ids"
+      "host_target_scope": "curated_host_target_ids",
+      "pathogen_classification": "gram_stain_or_name_heuristic"
     }
   },
   "validation": {
@@ -28,8 +29,8 @@
     "retained_interaction_count": 39,
     "discarded_interaction_count": 0,
     "interaction_issues": [],
-    "raw_evidence_count": 39,
-    "retained_evidence_count": 39,
+    "raw_evidence_count": 69,
+    "retained_evidence_count": 69,
     "discarded_evidence_count": 0,
     "evidence_issues": [],
     "issue_counts": {
@@ -48,20 +49,21 @@
     "host_proteins_targeted_by_multiple_pathogens_count": 7,
     "unresolved_target_count": 105,
     "unresolved_effector_count": 207,
-    "evidence_count": 39,
+    "evidence_count": 69,
     "interactions_with_evidence_count": 39,
     "interactions_without_evidence_count": 0,
-    "mean_evidence_per_interaction": 1.0,
-    "median_evidence_per_interaction": 1,
+    "mean_evidence_per_interaction": 1.769,
+    "median_evidence_per_interaction": 2,
     "evidence_coverage": 1.0,
     "evidence_by_class": {
-      "annotation-derived": 39
+      "annotation-derived": 39,
+      "experimental": 30
     },
     "evidence_source_counts": {
-      "records_with_doi": 0,
-      "records_with_pmid": 0,
+      "records_with_doi": 30,
+      "records_with_pmid": 24,
       "records_with_database_accession": 0,
-      "records_with_citation": 0
+      "records_with_citation": 30
     },
     "interactions_by_pathogen": {
       "PM-PAT-0001": 3,
@@ -2821,181 +2823,211 @@
         "id": "PM-PAT-0001",
         "type": "pathogen",
         "label": "Salmonella enterica serovar Typhimurium",
-        "tax_id": 90371
+        "tax_id": 90371,
+        "classification": "Gram-negative"
       },
       {
         "id": "PM-PAT-0002",
         "type": "pathogen",
         "label": "Listeria monocytogenes",
-        "tax_id": 1639
+        "tax_id": 1639,
+        "classification": "Gram-positive"
       },
       {
         "id": "PM-PAT-0003",
         "type": "pathogen",
         "label": "Mycobacterium tuberculosis",
-        "tax_id": 1773
+        "tax_id": 1773,
+        "classification": "Gram-positive"
       },
       {
         "id": "PM-PAT-0005",
         "type": "pathogen",
         "label": "Shigella flexneri",
-        "tax_id": 623
+        "tax_id": 623,
+        "classification": "Gram-negative"
       },
       {
         "id": "PM-PAT-0006",
         "type": "pathogen",
         "label": "Brucella abortus",
-        "tax_id": 235
+        "tax_id": 235,
+        "classification": "Gram-negative"
       },
       {
         "id": "PM-PAT-0008",
         "type": "pathogen",
         "label": "Coxiella burnetii",
-        "tax_id": 777
+        "tax_id": 777,
+        "classification": "Gram-negative"
       },
       {
         "id": "PM-PAT-0011",
         "type": "pathogen",
         "label": "Chlamydia trachomatis",
-        "tax_id": 813
+        "tax_id": 813,
+        "classification": "Gram-negative"
       },
       {
         "id": "PM-PAT-0013",
         "type": "pathogen",
         "label": "Anaplasma phagocytophilum",
-        "tax_id": 948
+        "tax_id": 948,
+        "classification": "Gram-negative"
       },
       {
         "id": "PM-PAT-0015",
         "type": "pathogen",
         "label": "Bartonella henselae",
-        "tax_id": 38323
+        "tax_id": 38323,
+        "classification": "Gram-negative"
       },
       {
         "id": "PM-PAT-0016",
         "type": "pathogen",
         "label": "Rickettsia rickettsii",
-        "tax_id": 783
+        "tax_id": 783,
+        "classification": "Gram-negative"
       },
       {
         "id": "PM-PAT-0017",
         "type": "pathogen",
         "label": "Rickettsia conorii",
-        "tax_id": 781
+        "tax_id": 781,
+        "classification": "Gram-negative"
       },
       {
         "id": "PM-PAT-0018",
         "type": "pathogen",
         "label": "Salmonella enterica serovar Typhi",
-        "tax_id": 90370
+        "tax_id": 90370,
+        "classification": "Gram-negative"
       },
       {
         "id": "PM-PAT-0019",
         "type": "pathogen",
         "label": "Pseudomonas aeruginosa",
-        "tax_id": 287
+        "tax_id": 287,
+        "classification": "Gram-negative"
       },
       {
         "id": "PM-PAT-0020",
         "type": "pathogen",
         "label": "Escherichia coli K1",
-        "tax_id": 562
+        "tax_id": 562,
+        "classification": "Gram-negative"
       },
       {
         "id": "PM-PAT-0021",
         "type": "pathogen",
         "label": "Neisseria gonorrhoeae",
-        "tax_id": 485
+        "tax_id": 485,
+        "classification": "Gram-negative"
       },
       {
         "id": "PM-PAT-0023",
         "type": "pathogen",
         "label": "Haemophilus influenzae",
-        "tax_id": 727
+        "tax_id": 727,
+        "classification": "Gram-negative"
       },
       {
         "id": "PM-PAT-0026",
         "type": "pathogen",
         "label": "Campylobacter jejuni",
-        "tax_id": 197
+        "tax_id": 197,
+        "classification": "Gram-negative"
       },
       {
         "id": "PM-PAT-0027",
         "type": "pathogen",
         "label": "Helicobacter pylori",
-        "tax_id": 210
+        "tax_id": 210,
+        "classification": "Gram-negative"
       },
       {
         "id": "PM-PAT-0029",
         "type": "pathogen",
         "label": "Staphylococcus aureus",
-        "tax_id": 1280
+        "tax_id": 1280,
+        "classification": "Gram-positive"
       },
       {
         "id": "PM-PAT-0031",
         "type": "pathogen",
         "label": "Streptococcus pneumoniae",
-        "tax_id": 1313
+        "tax_id": 1313,
+        "classification": "Gram-positive"
       },
       {
         "id": "PM-PAT-0035",
         "type": "pathogen",
         "label": "Clostridioides difficile",
-        "tax_id": 1496
+        "tax_id": 1496,
+        "classification": "Gram-positive"
       },
       {
         "id": "PM-PAT-0037",
         "type": "pathogen",
         "label": "Corynebacterium diphtheriae",
-        "tax_id": 1717
+        "tax_id": 1717,
+        "classification": "Gram-positive"
       },
       {
         "id": "PM-PAT-0041",
         "type": "pathogen",
         "label": "Mycobacterium leprae",
-        "tax_id": 1769
+        "tax_id": 1769,
+        "classification": "Gram-positive"
       },
       {
         "id": "PM-PAT-0042",
         "type": "pathogen",
         "label": "Mycobacterium bovis",
-        "tax_id": 1765
+        "tax_id": 1765,
+        "classification": "Gram-positive"
       },
       {
         "id": "PM-PAT-0043",
         "type": "pathogen",
         "label": "Mycobacterium avium",
-        "tax_id": 1764
+        "tax_id": 1764,
+        "classification": "Gram-positive"
       },
       {
         "id": "PM-PAT-0044",
         "type": "pathogen",
         "label": "Mycobacterium marinum",
-        "tax_id": 1781
+        "tax_id": 1781,
+        "classification": "Gram-positive"
       },
       {
         "id": "PM-PAT-0047",
         "type": "pathogen",
         "label": "Klebsiella pneumoniae",
-        "tax_id": 573
+        "tax_id": 573,
+        "classification": "Gram-negative"
       },
       {
         "id": "PM-PAT-0049",
         "type": "pathogen",
         "label": "Burkholderia pseudomallei",
-        "tax_id": 28450
+        "tax_id": 28450,
+        "classification": "Gram-negative"
       },
       {
         "id": "PM-PAT-0051",
         "type": "pathogen",
         "label": "Bacteroides fragilis",
-        "tax_id": 817
+        "tax_id": 817,
+        "classification": "Gram-negative"
       },
       {
         "id": "PM-PAT-0053",
         "type": "pathogen",
         "label": "Borreliella burgdorferi",
-        "tax_id": 139
+        "tax_id": 139,
+        "classification": "Gram-negative"
       }
     ],
     "edges": [
@@ -3008,11 +3040,12 @@
         "pathogen_id": "PM-PAT-0001",
         "pathogen_name": "Salmonella enterica serovar Typhimurium",
         "provenance": "Derived from curated effector host_target and audited host-target resolution.",
-        "evidence_count": 1,
+        "evidence_count": 2,
         "evidence_classes": [
-          "annotation-derived"
+          "annotation-derived",
+          "experimental"
         ],
-        "strongest_evidence_class": "annotation-derived",
+        "strongest_evidence_class": "experimental",
         "evidence_records": [
           {
             "evidence_id": "PM-EVD-0001",
@@ -3022,6 +3055,15 @@
             "database_accession": null,
             "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
             "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+          },
+          {
+            "evidence_id": "PM-EVD-0040",
+            "evidence_class": "experimental",
+            "doi": "10.1126/science.1227037",
+            "pmid": null,
+            "database_accession": null,
+            "provenance": "McGourty et al., Science 2012 (SifA binds SKIP/PLEKHM2)",
+            "note": "Co-immunoprecipitation and functional assays show SifA forms a complex with SKIP/PLEKHM2 in infected cells."
           }
         ]
       },
@@ -3034,11 +3076,12 @@
         "pathogen_id": "PM-PAT-0001",
         "pathogen_name": "Salmonella enterica serovar Typhimurium",
         "provenance": "Derived from curated effector host_target and audited host-target resolution.",
-        "evidence_count": 1,
+        "evidence_count": 2,
         "evidence_classes": [
-          "annotation-derived"
+          "annotation-derived",
+          "experimental"
         ],
-        "strongest_evidence_class": "annotation-derived",
+        "strongest_evidence_class": "experimental",
         "evidence_records": [
           {
             "evidence_id": "PM-EVD-0002",
@@ -3048,6 +3091,15 @@
             "database_accession": null,
             "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
             "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+          },
+          {
+            "evidence_id": "PM-EVD-0047",
+            "evidence_class": "experimental",
+            "doi": "10.1126/sciadv.adj5777",
+            "pmid": "38064550",
+            "database_accession": null,
+            "provenance": "Yuan et al., Science Advances 2023 (SipA binds and stabilizes F-actin)",
+            "note": "Cryo-EM shows SipA binds along F-actin grooves and stabilizes filaments through charged interface residues."
           }
         ]
       },
@@ -3060,11 +3112,12 @@
         "pathogen_id": "PM-PAT-0001",
         "pathogen_name": "Salmonella enterica serovar Typhimurium",
         "provenance": "Derived from curated effector host_target and audited host-target resolution.",
-        "evidence_count": 1,
+        "evidence_count": 2,
         "evidence_classes": [
-          "annotation-derived"
+          "annotation-derived",
+          "experimental"
         ],
-        "strongest_evidence_class": "annotation-derived",
+        "strongest_evidence_class": "experimental",
         "evidence_records": [
           {
             "evidence_id": "PM-EVD-0003",
@@ -3074,6 +3127,15 @@
             "database_accession": null,
             "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
             "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+          },
+          {
+            "evidence_id": "PM-EVD-0048",
+            "evidence_class": "experimental",
+            "doi": "10.1016/j.celrep.2015.07.063",
+            "pmid": "26299973",
+            "database_accession": null,
+            "provenance": "D'Costa et al., Cell Reports 2015 (SopD2 binds and inhibits Rab7)",
+            "note": "SopD2 directly binds Rab7 and inhibits nucleotide exchange, limiting Rab7 effector recruitment."
           }
         ]
       },
@@ -3086,11 +3148,12 @@
         "pathogen_id": "PM-PAT-0002",
         "pathogen_name": "Listeria monocytogenes",
         "provenance": "Derived from curated effector host_target and audited host-target resolution.",
-        "evidence_count": 1,
+        "evidence_count": 2,
         "evidence_classes": [
-          "annotation-derived"
+          "annotation-derived",
+          "experimental"
         ],
-        "strongest_evidence_class": "annotation-derived",
+        "strongest_evidence_class": "experimental",
         "evidence_records": [
           {
             "evidence_id": "PM-EVD-0004",
@@ -3100,6 +3163,15 @@
             "database_accession": null,
             "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
             "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+          },
+          {
+            "evidence_id": "PM-EVD-0041",
+            "evidence_class": "experimental",
+            "doi": "10.1016/S0092-8674(00)81070-3",
+            "pmid": null,
+            "database_accession": null,
+            "provenance": "Meng et al., Cell 1996 (InlA is the E-cadherin ligand)",
+            "note": "Affinity chromatography identified E-cadherin as the cellular receptor for Listeria internalin."
           }
         ]
       },
@@ -3112,11 +3184,12 @@
         "pathogen_id": "PM-PAT-0002",
         "pathogen_name": "Listeria monocytogenes",
         "provenance": "Derived from curated effector host_target and audited host-target resolution.",
-        "evidence_count": 1,
+        "evidence_count": 2,
         "evidence_classes": [
-          "annotation-derived"
+          "annotation-derived",
+          "experimental"
         ],
-        "strongest_evidence_class": "annotation-derived",
+        "strongest_evidence_class": "experimental",
         "evidence_records": [
           {
             "evidence_id": "PM-EVD-0005",
@@ -3126,6 +3199,15 @@
             "database_accession": null,
             "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
             "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+          },
+          {
+            "evidence_id": "PM-EVD-0042",
+            "evidence_class": "experimental",
+            "doi": "10.1016/S0092-8674(00)00141-0",
+            "pmid": "11081636",
+            "database_accession": null,
+            "provenance": "Shen et al., Cell 2000 (InlB binds/activates MET)",
+            "note": "InlB binds the MET extracellular domain and is required for InlB-dependent entry."
           }
         ]
       },
@@ -3138,11 +3220,12 @@
         "pathogen_id": "PM-PAT-0003",
         "pathogen_name": "Mycobacterium tuberculosis",
         "provenance": "Derived from curated effector host_target and audited host-target resolution.",
-        "evidence_count": 1,
+        "evidence_count": 2,
         "evidence_classes": [
-          "annotation-derived"
+          "annotation-derived",
+          "experimental"
         ],
-        "strongest_evidence_class": "annotation-derived",
+        "strongest_evidence_class": "experimental",
         "evidence_records": [
           {
             "evidence_id": "PM-EVD-0006",
@@ -3152,6 +3235,15 @@
             "database_accession": null,
             "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
             "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+          },
+          {
+            "evidence_id": "PM-EVD-0049",
+            "evidence_class": "experimental",
+            "doi": "10.1084/jem.20030527",
+            "pmid": "12925680",
+            "database_accession": null,
+            "provenance": "Singh et al., JEM 2003 (M. tuberculosis LAM blocks Ca2+/hVPS34 signaling)",
+            "note": "M. tuberculosis lipoarabinomannan blocks the Ca2+/calmodulin-PI3K hVPS34 cascade required for phagosome maturation."
           }
         ]
       },
@@ -3164,11 +3256,12 @@
         "pathogen_id": "PM-PAT-0005",
         "pathogen_name": "Shigella flexneri",
         "provenance": "Derived from curated effector host_target and audited host-target resolution.",
-        "evidence_count": 1,
+        "evidence_count": 2,
         "evidence_classes": [
-          "annotation-derived"
+          "annotation-derived",
+          "experimental"
         ],
-        "strongest_evidence_class": "annotation-derived",
+        "strongest_evidence_class": "experimental",
         "evidence_records": [
           {
             "evidence_id": "PM-EVD-0007",
@@ -3178,6 +3271,15 @@
             "database_accession": null,
             "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
             "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+          },
+          {
+            "evidence_id": "PM-EVD-0050",
+            "evidence_class": "experimental",
+            "doi": "10.1093/emboj/18.12.3249",
+            "pmid": "10369666",
+            "database_accession": null,
+            "provenance": "Tran Van Nhieu et al., EMBO J 1999 (IpaC induces actin polymerization)",
+            "note": "IpaC induced filopodial/lamellipodial extensions and actin polymerization in semi-permeabilized and microinjected cells."
           }
         ]
       },
@@ -3190,11 +3292,12 @@
         "pathogen_id": "PM-PAT-0006",
         "pathogen_name": "Brucella abortus",
         "provenance": "Derived from curated effector host_target and audited host-target resolution.",
-        "evidence_count": 1,
+        "evidence_count": 2,
         "evidence_classes": [
-          "annotation-derived"
+          "annotation-derived",
+          "experimental"
         ],
-        "strongest_evidence_class": "annotation-derived",
+        "strongest_evidence_class": "experimental",
         "evidence_records": [
           {
             "evidence_id": "PM-EVD-0008",
@@ -3204,6 +3307,15 @@
             "database_accession": null,
             "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
             "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+          },
+          {
+            "evidence_id": "PM-EVD-0051",
+            "evidence_class": "experimental",
+            "doi": "10.1371/journal.ppat.0040021",
+            "pmid": "18266466",
+            "database_accession": null,
+            "provenance": "Salcedo et al., PLoS Pathogens 2008 (Btp1/BtpA interferes with TLR2 signaling)",
+            "note": "Experimental work shows Btp1/BtpA interferes with TLR2 signaling in dendritic cells; this is pathway-level evidence rather than direct receptor binding."
           }
         ]
       },
@@ -3242,11 +3354,12 @@
         "pathogen_id": "PM-PAT-0008",
         "pathogen_name": "Coxiella burnetii",
         "provenance": "Derived from curated effector host_target and audited host-target resolution.",
-        "evidence_count": 1,
+        "evidence_count": 2,
         "evidence_classes": [
-          "annotation-derived"
+          "annotation-derived",
+          "experimental"
         ],
-        "strongest_evidence_class": "annotation-derived",
+        "strongest_evidence_class": "experimental",
         "evidence_records": [
           {
             "evidence_id": "PM-EVD-0010",
@@ -3256,6 +3369,15 @@
             "database_accession": null,
             "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
             "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+          },
+          {
+            "evidence_id": "PM-EVD-0052",
+            "evidence_class": "experimental",
+            "doi": "10.1371/journal.ppat.1006101",
+            "pmid": null,
+            "database_accession": null,
+            "provenance": "Latomanski et al., PLoS Pathogens 2016 (Cig57 hijacks FCHO-mediated clathrin trafficking)",
+            "note": "Cig57 hijacks FCHO-dependent clathrin-mediated trafficking; this supports pathway subversion rather than a demonstrated direct Cig57-CLTC binding event."
           }
         ]
       },
@@ -3294,11 +3416,12 @@
         "pathogen_id": "PM-PAT-0013",
         "pathogen_name": "Anaplasma phagocytophilum",
         "provenance": "Derived from curated effector host_target and audited host-target resolution.",
-        "evidence_count": 1,
+        "evidence_count": 2,
         "evidence_classes": [
-          "annotation-derived"
+          "annotation-derived",
+          "experimental"
         ],
-        "strongest_evidence_class": "annotation-derived",
+        "strongest_evidence_class": "experimental",
         "evidence_records": [
           {
             "evidence_id": "PM-EVD-0012",
@@ -3308,6 +3431,15 @@
             "database_accession": null,
             "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
             "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+          },
+          {
+            "evidence_id": "PM-EVD-0053",
+            "evidence_class": "experimental",
+            "doi": "10.1128/IAI.71.7.4018-4025.2003",
+            "pmid": "12819090",
+            "database_accession": null,
+            "provenance": "Park et al., Infect Immun 2003 (Msp2/p44 facilitates granulocyte adherence)",
+            "note": "Recombinant Msp2 binds PSGL-1-expressing cells and reduces PSGL-1 antibody binding; the study supports Msp2/PSGL-1 association without establishing Msp2 as the sole PSGL-1 adhesin."
           }
         ]
       },
@@ -3346,11 +3478,12 @@
         "pathogen_id": "PM-PAT-0016",
         "pathogen_name": "Rickettsia rickettsii",
         "provenance": "Derived from curated effector host_target and audited host-target resolution.",
-        "evidence_count": 1,
+        "evidence_count": 2,
         "evidence_classes": [
-          "annotation-derived"
+          "annotation-derived",
+          "experimental"
         ],
-        "strongest_evidence_class": "annotation-derived",
+        "strongest_evidence_class": "experimental",
         "evidence_records": [
           {
             "evidence_id": "PM-EVD-0014",
@@ -3360,6 +3493,15 @@
             "database_accession": null,
             "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
             "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+          },
+          {
+            "evidence_id": "PM-EVD-0054",
+            "evidence_class": "experimental",
+            "doi": "10.1038/ncb2109",
+            "pmid": "20972427",
+            "database_accession": null,
+            "provenance": "Haglund et al., Nature Cell Biology 2010 (R. rickettsii Sca2 is a formin-like actin nucleator)",
+            "note": "Sca2 nucleates unbranched actin filaments, associates processively with barbed ends, and uses profilin to drive actin-based motility."
           }
         ]
       },
@@ -3372,11 +3514,12 @@
         "pathogen_id": "PM-PAT-0017",
         "pathogen_name": "Rickettsia conorii",
         "provenance": "Derived from curated effector host_target and audited host-target resolution.",
-        "evidence_count": 1,
+        "evidence_count": 2,
         "evidence_classes": [
-          "annotation-derived"
+          "annotation-derived",
+          "experimental"
         ],
-        "strongest_evidence_class": "annotation-derived",
+        "strongest_evidence_class": "experimental",
         "evidence_records": [
           {
             "evidence_id": "PM-EVD-0015",
@@ -3386,6 +3529,15 @@
             "database_accession": null,
             "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
             "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+          },
+          {
+            "evidence_id": "PM-EVD-0055",
+            "evidence_class": "experimental",
+            "doi": "10.1111/j.1462-5822.2012.01815.x",
+            "pmid": "22612237",
+            "database_accession": null,
+            "provenance": "Klee et al., Cellular Microbiology 2012 (R. conorii Sca2 actin-nucleating domains)",
+            "note": "R. conorii Sca2 has separable mammalian-association and actin-nucleating domains that support intracellular actin-based motility."
           }
         ]
       },
@@ -3398,11 +3550,12 @@
         "pathogen_id": "PM-PAT-0018",
         "pathogen_name": "Salmonella enterica serovar Typhi",
         "provenance": "Derived from curated effector host_target and audited host-target resolution.",
-        "evidence_count": 1,
+        "evidence_count": 2,
         "evidence_classes": [
-          "annotation-derived"
+          "annotation-derived",
+          "experimental"
         ],
-        "strongest_evidence_class": "annotation-derived",
+        "strongest_evidence_class": "experimental",
         "evidence_records": [
           {
             "evidence_id": "PM-EVD-0016",
@@ -3412,6 +3565,15 @@
             "database_accession": null,
             "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
             "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+          },
+          {
+            "evidence_id": "PM-EVD-0043",
+            "evidence_class": "experimental",
+            "doi": "10.1126/science.1227037",
+            "pmid": null,
+            "database_accession": null,
+            "provenance": "McGourty et al., Science 2012 (S. Typhi SifA-SKIP/PLEKHM2)",
+            "note": "Same published SifA-SKIP binding evidence applied to the S. Typhi effector row."
           }
         ]
       },
@@ -3450,11 +3612,12 @@
         "pathogen_id": "PM-PAT-0019",
         "pathogen_name": "Pseudomonas aeruginosa",
         "provenance": "Derived from curated effector host_target and audited host-target resolution.",
-        "evidence_count": 1,
+        "evidence_count": 2,
         "evidence_classes": [
-          "annotation-derived"
+          "annotation-derived",
+          "experimental"
         ],
-        "strongest_evidence_class": "annotation-derived",
+        "strongest_evidence_class": "experimental",
         "evidence_records": [
           {
             "evidence_id": "PM-EVD-0018",
@@ -3464,6 +3627,15 @@
             "database_accession": null,
             "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
             "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+          },
+          {
+            "evidence_id": "PM-EVD-0056",
+            "evidence_class": "experimental",
+            "doi": "10.1128/iai.15.1.138-144.1977",
+            "pmid": "188760",
+            "database_accession": null,
+            "provenance": "Chung & Collier, Infect Immun 1977 (Pseudomonas exotoxin A ADP-ribosylates EF-2)",
+            "note": "Pseudomonas aeruginosa exotoxin A catalyzes NAD-dependent ADP-ribosylation of mammalian elongation factor 2 in vitro and in vivo."
           }
         ]
       },
@@ -3476,11 +3648,12 @@
         "pathogen_id": "PM-PAT-0020",
         "pathogen_name": "Escherichia coli K1",
         "provenance": "Derived from curated effector host_target and audited host-target resolution.",
-        "evidence_count": 1,
+        "evidence_count": 2,
         "evidence_classes": [
-          "annotation-derived"
+          "annotation-derived",
+          "experimental"
         ],
-        "strongest_evidence_class": "annotation-derived",
+        "strongest_evidence_class": "experimental",
         "evidence_records": [
           {
             "evidence_id": "PM-EVD-0019",
@@ -3490,6 +3663,15 @@
             "database_accession": null,
             "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
             "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+          },
+          {
+            "evidence_id": "PM-EVD-0057",
+            "evidence_class": "experimental",
+            "doi": "10.1016/j.bbrc.2006.10.091",
+            "pmid": "17083913",
+            "database_accession": null,
+            "provenance": "Zhou et al., BBRC 2006 (IbeA interacts with vimentin)",
+            "note": "Vimentin was identified on brain microvascular endothelial cells as an IbeA-binding protein that mediates E. coli K1 binding and invasion."
           }
         ]
       },
@@ -3502,11 +3684,12 @@
         "pathogen_id": "PM-PAT-0021",
         "pathogen_name": "Neisseria gonorrhoeae",
         "provenance": "Derived from curated effector host_target and audited host-target resolution.",
-        "evidence_count": 1,
+        "evidence_count": 2,
         "evidence_classes": [
-          "annotation-derived"
+          "annotation-derived",
+          "experimental"
         ],
-        "strongest_evidence_class": "annotation-derived",
+        "strongest_evidence_class": "experimental",
         "evidence_records": [
           {
             "evidence_id": "PM-EVD-0020",
@@ -3516,6 +3699,15 @@
             "database_accession": null,
             "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
             "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+          },
+          {
+            "evidence_id": "PM-EVD-0058",
+            "evidence_class": "experimental",
+            "doi": "10.1128/IAI.69.10.6419-6426.2001",
+            "pmid": "11553586",
+            "database_accession": null,
+            "provenance": "Rytkönen et al., Infect Immun 2001 (gonococcal pilin binds CD46)",
+            "note": "Soluble gonococcal pilin bound a CD46-sized band, and CD46 antibodies or soluble pilin blocked Neisseria gonorrhoeae binding to target cells and tissue."
           }
         ]
       },
@@ -3528,11 +3720,12 @@
         "pathogen_id": "PM-PAT-0023",
         "pathogen_name": "Haemophilus influenzae",
         "provenance": "Derived from curated effector host_target and audited host-target resolution.",
-        "evidence_count": 1,
+        "evidence_count": 2,
         "evidence_classes": [
-          "annotation-derived"
+          "annotation-derived",
+          "experimental"
         ],
-        "strongest_evidence_class": "annotation-derived",
+        "strongest_evidence_class": "experimental",
         "evidence_records": [
           {
             "evidence_id": "PM-EVD-0021",
@@ -3542,6 +3735,15 @@
             "database_accession": null,
             "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
             "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+          },
+          {
+            "evidence_id": "PM-EVD-0059",
+            "evidence_class": "experimental",
+            "doi": "10.1128/IAI.74.2.830-838.2006",
+            "pmid": "16428725",
+            "database_accession": null,
+            "provenance": "Avadhanula et al., Infect Immun 2006 (NTHI P5 fimbriae bind ICAM-1)",
+            "note": "Anti-P5 antiserum reduced NTHI adhesion to ICAM-1 cells and recombinant ICAM-1 bound P5-expressing but not P5-deficient outer membrane preparations."
           }
         ]
       },
@@ -3554,11 +3756,12 @@
         "pathogen_id": "PM-PAT-0026",
         "pathogen_name": "Campylobacter jejuni",
         "provenance": "Derived from curated effector host_target and audited host-target resolution.",
-        "evidence_count": 1,
+        "evidence_count": 2,
         "evidence_classes": [
-          "annotation-derived"
+          "annotation-derived",
+          "experimental"
         ],
-        "strongest_evidence_class": "annotation-derived",
+        "strongest_evidence_class": "experimental",
         "evidence_records": [
           {
             "evidence_id": "PM-EVD-0022",
@@ -3568,6 +3771,15 @@
             "database_accession": null,
             "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
             "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+          },
+          {
+            "evidence_id": "PM-EVD-0060",
+            "evidence_class": "experimental",
+            "doi": "10.1073/pnas.0502040102",
+            "pmid": "15956214",
+            "database_accession": null,
+            "provenance": "Andersen-Nissen et al., PNAS 2005 (C. jejuni flagellin evades TLR5 recognition)",
+            "note": "This study supports a C. jejuni flagellin-TLR5 interface through demonstrated TLR5 evasion/non-recognition rather than TLR5 activation."
           }
         ]
       },
@@ -3580,11 +3792,12 @@
         "pathogen_id": "PM-PAT-0027",
         "pathogen_name": "Helicobacter pylori",
         "provenance": "Derived from curated effector host_target and audited host-target resolution.",
-        "evidence_count": 1,
+        "evidence_count": 2,
         "evidence_classes": [
-          "annotation-derived"
+          "annotation-derived",
+          "experimental"
         ],
-        "strongest_evidence_class": "annotation-derived",
+        "strongest_evidence_class": "experimental",
         "evidence_records": [
           {
             "evidence_id": "PM-EVD-0023",
@@ -3594,6 +3807,15 @@
             "database_accession": null,
             "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
             "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+          },
+          {
+            "evidence_id": "PM-EVD-0061",
+            "evidence_class": "experimental",
+            "doi": "10.1038/embor.2010.114",
+            "pmid": "20814423",
+            "database_accession": null,
+            "provenance": "Löwer et al., EMBO Reports 2010 (H. pylori HtrA cleaves E-cadherin)",
+            "note": "H. pylori HtrA was shown to cleave E-cadherin and disrupt epithelial adherens junctions."
           }
         ]
       },
@@ -3606,11 +3828,12 @@
         "pathogen_id": "PM-PAT-0029",
         "pathogen_name": "Staphylococcus aureus",
         "provenance": "Derived from curated effector host_target and audited host-target resolution.",
-        "evidence_count": 1,
+        "evidence_count": 2,
         "evidence_classes": [
-          "annotation-derived"
+          "annotation-derived",
+          "experimental"
         ],
-        "strongest_evidence_class": "annotation-derived",
+        "strongest_evidence_class": "experimental",
         "evidence_records": [
           {
             "evidence_id": "PM-EVD-0024",
@@ -3620,6 +3843,15 @@
             "database_accession": null,
             "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
             "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+          },
+          {
+            "evidence_id": "PM-EVD-0044",
+            "evidence_class": "experimental",
+            "doi": "10.1073/pnas.1001815107",
+            "pmid": null,
+            "database_accession": null,
+            "provenance": "Wilke & Bubeck Wardenburg, PNAS 2010 (Hla-ADAM10)",
+            "note": "ADAM10 was purified as an Hla-binding protein and shown to be required for toxin binding."
           }
         ]
       },
@@ -3632,11 +3864,12 @@
         "pathogen_id": "PM-PAT-0029",
         "pathogen_name": "Staphylococcus aureus",
         "provenance": "Derived from curated effector host_target and audited host-target resolution.",
-        "evidence_count": 1,
+        "evidence_count": 2,
         "evidence_classes": [
-          "annotation-derived"
+          "annotation-derived",
+          "experimental"
         ],
-        "strongest_evidence_class": "annotation-derived",
+        "strongest_evidence_class": "experimental",
         "evidence_records": [
           {
             "evidence_id": "PM-EVD-0025",
@@ -3646,6 +3879,15 @@
             "database_accession": null,
             "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
             "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+          },
+          {
+            "evidence_id": "PM-EVD-0062",
+            "evidence_class": "experimental",
+            "doi": "10.1016/j.chom.2013.04.006",
+            "pmid": "23684309",
+            "database_accession": null,
+            "provenance": "Spaan et al., Cell Host & Microbe 2013 (PVL targets C5a receptors)",
+            "note": "LukS-PV binds the C5a receptor C5aR and the C5a-like receptor C5L2 on human myeloid cells."
           }
         ]
       },
@@ -3658,11 +3900,12 @@
         "pathogen_id": "PM-PAT-0031",
         "pathogen_name": "Streptococcus pneumoniae",
         "provenance": "Derived from curated effector host_target and audited host-target resolution.",
-        "evidence_count": 1,
+        "evidence_count": 2,
         "evidence_classes": [
-          "annotation-derived"
+          "annotation-derived",
+          "experimental"
         ],
-        "strongest_evidence_class": "annotation-derived",
+        "strongest_evidence_class": "experimental",
         "evidence_records": [
           {
             "evidence_id": "PM-EVD-0026",
@@ -3672,6 +3915,15 @@
             "database_accession": null,
             "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
             "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+          },
+          {
+            "evidence_id": "PM-EVD-0063",
+            "evidence_class": "experimental",
+            "doi": "10.1128/IAI.69.5.3372-3381.2001",
+            "pmid": "11292760",
+            "database_accession": null,
+            "provenance": "Hammer et al., Infect Immun 2001 (PspA binds lactoferrin)",
+            "note": "Pneumococcal surface protein A was shown to mediate binding of human lactoferrin to Streptococcus pneumoniae."
           }
         ]
       },
@@ -3684,11 +3936,12 @@
         "pathogen_id": "PM-PAT-0031",
         "pathogen_name": "Streptococcus pneumoniae",
         "provenance": "Derived from curated effector host_target and audited host-target resolution.",
-        "evidence_count": 1,
+        "evidence_count": 2,
         "evidence_classes": [
-          "annotation-derived"
+          "annotation-derived",
+          "experimental"
         ],
-        "strongest_evidence_class": "annotation-derived",
+        "strongest_evidence_class": "experimental",
         "evidence_records": [
           {
             "evidence_id": "PM-EVD-0027",
@@ -3698,6 +3951,15 @@
             "database_accession": null,
             "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
             "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+          },
+          {
+            "evidence_id": "PM-EVD-0064",
+            "evidence_class": "experimental",
+            "doi": "10.1128/IAI.70.10.5604-5611.2002",
+            "pmid": "12228288",
+            "database_accession": null,
+            "provenance": "Duthy et al., Infect Immun 2002 (PspC binds factor H via SCR13-15)",
+            "note": "Factor H binding was PspC dependent and mapped to factor H short consensus repeats 13 to 15."
           }
         ]
       },
@@ -3710,11 +3972,12 @@
         "pathogen_id": "PM-PAT-0035",
         "pathogen_name": "Clostridioides difficile",
         "provenance": "Derived from curated effector host_target and audited host-target resolution.",
-        "evidence_count": 1,
+        "evidence_count": 2,
         "evidence_classes": [
-          "annotation-derived"
+          "annotation-derived",
+          "experimental"
         ],
-        "strongest_evidence_class": "annotation-derived",
+        "strongest_evidence_class": "experimental",
         "evidence_records": [
           {
             "evidence_id": "PM-EVD-0028",
@@ -3724,6 +3987,15 @@
             "database_accession": null,
             "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
             "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+          },
+          {
+            "evidence_id": "PM-EVD-0065",
+            "evidence_class": "experimental",
+            "doi": "10.1111/j.1574-6968.2000.tb09122.x",
+            "pmid": "10804189",
+            "database_accession": null,
+            "provenance": "Popoff et al., FEMS Microbiology Letters 2000 (C. difficile binary toxin ADP-ribosylates actin)",
+            "note": "C. difficile binary toxin production was linked to an actin-specific ADP-ribosyltransferase activity."
           }
         ]
       },
@@ -3736,11 +4008,12 @@
         "pathogen_id": "PM-PAT-0035",
         "pathogen_name": "Clostridioides difficile",
         "provenance": "Derived from curated effector host_target and audited host-target resolution.",
-        "evidence_count": 1,
+        "evidence_count": 2,
         "evidence_classes": [
-          "annotation-derived"
+          "annotation-derived",
+          "experimental"
         ],
-        "strongest_evidence_class": "annotation-derived",
+        "strongest_evidence_class": "experimental",
         "evidence_records": [
           {
             "evidence_id": "PM-EVD-0029",
@@ -3750,6 +4023,15 @@
             "database_accession": null,
             "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
             "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+          },
+          {
+            "evidence_id": "PM-EVD-0066",
+            "evidence_class": "experimental",
+            "doi": "10.1016/j.anaerobe.2016.01.002",
+            "pmid": "26790921",
+            "database_accession": null,
+            "provenance": "Batah et al., Anaerobe 2016 (C. difficile FliC activates TLR5)",
+            "note": "C. difficile FliC flagellin interacted with TLR5 and predominantly activated TLR5-linked NF-kB signaling in epithelial cell models."
           }
         ]
       },
@@ -3762,11 +4044,12 @@
         "pathogen_id": "PM-PAT-0037",
         "pathogen_name": "Corynebacterium diphtheriae",
         "provenance": "Derived from curated effector host_target and audited host-target resolution.",
-        "evidence_count": 1,
+        "evidence_count": 2,
         "evidence_classes": [
-          "annotation-derived"
+          "annotation-derived",
+          "experimental"
         ],
-        "strongest_evidence_class": "annotation-derived",
+        "strongest_evidence_class": "experimental",
         "evidence_records": [
           {
             "evidence_id": "PM-EVD-0030",
@@ -3776,6 +4059,15 @@
             "database_accession": null,
             "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
             "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+          },
+          {
+            "evidence_id": "PM-EVD-0045",
+            "evidence_class": "experimental",
+            "doi": "10.1016/0005-2744(77)90053-5",
+            "pmid": "196649",
+            "database_accession": null,
+            "provenance": "Chung & Collier, Biochim Biophys Acta 1977 (diphtheria toxin ADP-ribosylates EF-2)",
+            "note": "Kinetic analysis of EF-2 ADP-ribosylation catalyzed by diphtheria toxin fragment A."
           }
         ]
       },
@@ -3918,11 +4210,12 @@
         "pathogen_id": "PM-PAT-0049",
         "pathogen_name": "Burkholderia pseudomallei",
         "provenance": "Derived from curated effector host_target and audited host-target resolution.",
-        "evidence_count": 1,
+        "evidence_count": 2,
         "evidence_classes": [
-          "annotation-derived"
+          "annotation-derived",
+          "experimental"
         ],
-        "strongest_evidence_class": "annotation-derived",
+        "strongest_evidence_class": "experimental",
         "evidence_records": [
           {
             "evidence_id": "PM-EVD-0036",
@@ -3932,6 +4225,15 @@
             "database_accession": null,
             "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
             "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+          },
+          {
+            "evidence_id": "PM-EVD-0067",
+            "evidence_class": "experimental",
+            "doi": "10.1128/JB.01455-10",
+            "pmid": "21335455",
+            "database_accession": null,
+            "provenance": "Stevens et al., J Bacteriol 2011 (B. pseudomallei BimA binds/polymerizes actin)",
+            "note": "BimA motifs required for intracellular motility, actin binding, and actin polymerization were experimentally identified."
           }
         ]
       },
@@ -3944,11 +4246,12 @@
         "pathogen_id": "PM-PAT-0051",
         "pathogen_name": "Bacteroides fragilis",
         "provenance": "Derived from curated effector host_target and audited host-target resolution.",
-        "evidence_count": 1,
+        "evidence_count": 2,
         "evidence_classes": [
-          "annotation-derived"
+          "annotation-derived",
+          "experimental"
         ],
-        "strongest_evidence_class": "annotation-derived",
+        "strongest_evidence_class": "experimental",
         "evidence_records": [
           {
             "evidence_id": "PM-EVD-0037",
@@ -3958,6 +4261,15 @@
             "database_accession": null,
             "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
             "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+          },
+          {
+            "evidence_id": "PM-EVD-0046",
+            "evidence_class": "experimental",
+            "doi": "10.1073/pnas.95.25.14979",
+            "pmid": null,
+            "database_accession": null,
+            "provenance": "Wu et al., PNAS 1998 (BFT cleaves E-cadherin)",
+            "note": "Bacteroides fragilis enterotoxin specifically cleaves the extracellular domain of E-cadherin."
           }
         ]
       },
@@ -3970,11 +4282,12 @@
         "pathogen_id": "PM-PAT-0053",
         "pathogen_name": "Borreliella burgdorferi",
         "provenance": "Derived from curated effector host_target and audited host-target resolution.",
-        "evidence_count": 1,
+        "evidence_count": 2,
         "evidence_classes": [
-          "annotation-derived"
+          "annotation-derived",
+          "experimental"
         ],
-        "strongest_evidence_class": "annotation-derived",
+        "strongest_evidence_class": "experimental",
         "evidence_records": [
           {
             "evidence_id": "PM-EVD-0038",
@@ -3984,6 +4297,15 @@
             "database_accession": null,
             "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
             "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+          },
+          {
+            "evidence_id": "PM-EVD-0068",
+            "evidence_class": "experimental",
+            "doi": "10.1074/jbc.274.37.26272",
+            "pmid": "10473582",
+            "database_accession": null,
+            "provenance": "Eicken et al., J Biol Chem 1999 (DbpA decorin binding residues)",
+            "note": "Critical lysine residues in Borrelia burgdorferi DbpA required for decorin binding were identified by mutagenesis."
           }
         ]
       },
@@ -3996,11 +4318,12 @@
         "pathogen_id": "PM-PAT-0053",
         "pathogen_name": "Borreliella burgdorferi",
         "provenance": "Derived from curated effector host_target and audited host-target resolution.",
-        "evidence_count": 1,
+        "evidence_count": 2,
         "evidence_classes": [
-          "annotation-derived"
+          "annotation-derived",
+          "experimental"
         ],
-        "strongest_evidence_class": "annotation-derived",
+        "strongest_evidence_class": "experimental",
         "evidence_records": [
           {
             "evidence_id": "PM-EVD-0039",
@@ -4010,6 +4333,15 @@
             "database_accession": null,
             "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
             "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+          },
+          {
+            "evidence_id": "PM-EVD-0069",
+            "evidence_class": "experimental",
+            "doi": "10.4049/jimmunol.167.2.987",
+            "pmid": "11441107",
+            "database_accession": null,
+            "provenance": "Bulut et al., J Immunol 2001 (OspA lipoprotein activates TLR2/TLR6)",
+            "note": "OspA lipoprotein activated NF-kB through TLR2/TLR6 in transfected endothelial cells; this supports OspA-TLR2 engagement in a lipoprotein context."
           }
         ]
       }

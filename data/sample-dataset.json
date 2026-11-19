@@ -2,7 +2,7 @@
   "meta": {
     "dataset": "pathomap",
     "schema_version": "3.0",
-    "built_at": "2026-11-10T16:41:10Z",
+    "built_at": "2026-11-18T15:26:11Z",
     "tables": {
       "pathogens": 5,
       "references": 10,
@@ -10,7 +10,7 @@
       "host_proteins": 33,
       "host_targets": 25,
       "interactions": 5,
-      "interaction_evidence": 5
+      "interaction_evidence": 10
     },
     "identifiers": {
       "scheme": "PM-<TYPE>-<NNNN>",
@@ -70,7 +70,7 @@
       "description": "Resides in SCV; acquires LAMP1 but blocks hydrolase delivery; maintains non-degradative niche via SPI-2 T3SS effectors. SifA binds SKIP to displace Rab9, while SseJ deacylates cholesterol to prevent SCV-lysosome fusion. SCV matures into a LAMP1+ compartment that is non-degradative — Rab7 effectors (RILP, ORP1L) are decoupled from hydrolase delivery",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0003",
@@ -104,7 +104,7 @@
       "description": "Arrests phagosome at early stage; blocks Rab5-to-Rab7 conversion; maintains near-neutral pH (~6.4) by excluding V-ATPase. Secretes SapM phosphatase to deplete PI3P from phagosomal membranes, and lipoarabinomannan (LAM) inhibits Ca2+ signaling and Vps34 recruitment. PknG and PtpA further modulate host Rab trafficking to prevent lysosomal fusion",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0013",
@@ -138,7 +138,7 @@
       "description": "Resides in non-fusogenic membrane-bound inclusion that acquires host-derived membrane via T4SS. Ats-1 binds Rab5 and PI3P to anchor the inclusion to early endosomal compartments, while AnkA modulates host signaling through interaction with MYADM and Abl-1 tyrosine kinase. p44/Msp2 undergoes antigenic variation to evade immune detection",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0032",
@@ -172,7 +172,7 @@
       "description": "Anthrolysin O (ALO) enables phagosomal escape; lethal factor (LF) and edema factor (EF) modulate host. ALO is a cholesterol-dependent cytolysin that permeabilizes the phagosome. The tripartite toxin (PA + LF + EF) is the major virulence determinant: PA binds ANTXR1/2 to translocate LF (zinc metalloprotease cleaving MAPKKs) and EF (calmodulin-dependent adenylate cyclase) into the cytosol",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     },
     {
       "entity_id": "PM-PAT-0048",
@@ -206,7 +206,7 @@
       "description": "Multidrug-resistant nosocomial pathogen; survives on hospital surfaces and exhibits remarkable antibiotic resistance. OmpA is a major virulence factor that targets mitochondria to induce host cell death. Plc (phospholipase C) degrades host membrane phospholipids. CsuA/B pilus and Bap surface protein mediate biofilm formation on abiotic surfaces including medical devices",
       "curation_notes": null,
       "curation_status": "curated",
-      "last_updated": "2026-11-10"
+      "last_updated": "2026-11-18"
     }
   ],
   "references": [
@@ -11299,7 +11299,58 @@
           "name": "NOTCH3 Activation and Transmission of Signal to the Nucleus"
         }
       ],
-      "interacting_partners": [],
+      "interacting_partners": [
+        {
+          "string_id": "10090.ENSMUSP00000000312",
+          "name": "Cdh1",
+          "score": 0.943
+        },
+        {
+          "string_id": "10090.ENSMUSP00000003154",
+          "name": "Efna2",
+          "score": 0.956
+        },
+        {
+          "string_id": "10090.ENSMUSP00000014917",
+          "name": "Dll1",
+          "score": 0.932
+        },
+        {
+          "string_id": "10090.ENSMUSP00000015812",
+          "name": "Pdzd11",
+          "score": 0.913
+        },
+        {
+          "string_id": "10090.ENSMUSP00000045282",
+          "name": "Tspan33",
+          "score": 0.955
+        },
+        {
+          "string_id": "10090.ENSMUSP00000138575",
+          "name": "Plekha7",
+          "score": 0.914
+        },
+        {
+          "string_id": "10090.ENSMUSP00000118318",
+          "name": "Afdn",
+          "score": 0.918
+        },
+        {
+          "string_id": "10090.ENSMUSP00000099087",
+          "name": "Adam17",
+          "score": 0.924
+        },
+        {
+          "string_id": "10090.ENSMUSP00000108371",
+          "name": "Bcl2",
+          "score": 0.933
+        },
+        {
+          "string_id": "10090.ENSMUSP00000078741",
+          "name": "Notch2",
+          "score": 0.949
+        }
+      ],
       "reference_doi": null,
       "reference_ids": [],
       "evidence_source": "https://www.uniprot.org/uniprotkb/O35598/entry",
@@ -11318,34 +11369,88 @@
       "gravy_score": 0.588,
       "domains": [
         {
-          "name": "Anphylx_rcpt_C3a/C5a1-2",
-          "accession": "IPR002234",
-          "start": null,
-          "end": null
-        },
-        {
-          "name": "Formyl_rcpt-rel",
-          "accession": "IPR000826",
-          "start": null,
-          "end": null
-        },
-        {
-          "name": "GPCR_Rhodpsn",
+          "name": "G protein-coupled receptor, rhodopsin-like",
           "accession": "IPR000276",
-          "start": null,
-          "end": null
+          "start": 39,
+          "end": 308
         },
         {
-          "name": "GPCR_Rhodpsn_7TM",
+          "name": "Formyl peptide receptor-related",
+          "accession": "IPR000826",
+          "start": 11,
+          "end": 346
+        },
+        {
+          "name": "Anaphylatoxin chemotactic receptor, C3a/C5a1/C5a2",
+          "accession": "IPR002234",
+          "start": 36,
+          "end": 48
+        },
+        {
+          "name": "Anaphylatoxin chemotactic receptor, C3a/C5a1/C5a2",
+          "accession": "IPR002234",
+          "start": 61,
+          "end": 74
+        },
+        {
+          "name": "Anaphylatoxin chemotactic receptor, C3a/C5a1/C5a2",
+          "accession": "IPR002234",
+          "start": 85,
+          "end": 95
+        },
+        {
+          "name": "Anaphylatoxin chemotactic receptor, C3a/C5a1/C5a2",
+          "accession": "IPR002234",
+          "start": 112,
+          "end": 123
+        },
+        {
+          "name": "Anaphylatoxin chemotactic receptor, C3a/C5a1/C5a2",
+          "accession": "IPR002234",
+          "start": 134,
+          "end": 157
+        },
+        {
+          "name": "Anaphylatoxin chemotactic receptor, C3a/C5a1/C5a2",
+          "accession": "IPR002234",
+          "start": 169,
+          "end": 178
+        },
+        {
+          "name": "Anaphylatoxin chemotactic receptor, C3a/C5a1/C5a2",
+          "accession": "IPR002234",
+          "start": 201,
+          "end": 210
+        },
+        {
+          "name": "Anaphylatoxin chemotactic receptor, C3a/C5a1/C5a2",
+          "accession": "IPR002234",
+          "start": 222,
+          "end": 242
+        },
+        {
+          "name": "Anaphylatoxin chemotactic receptor, C3a/C5a1/C5a2",
+          "accession": "IPR002234",
+          "start": 300,
+          "end": 314
+        },
+        {
+          "name": "Anaphylatoxin chemotactic receptor, C3a/C5a1/C5a2",
+          "accession": "IPR002234",
+          "start": 320,
+          "end": 333
+        },
+        {
+          "name": "Anaphylatoxin chemotactic receptor, C3a/C5a1/C5a2",
+          "accession": "IPR002234",
+          "start": 333,
+          "end": 348
+        },
+        {
+          "name": "GPCR, rhodopsin-like, 7TM",
           "accession": "IPR017452",
-          "start": null,
-          "end": null
-        },
-        {
-          "name": "7tm_1",
-          "accession": "PF00001",
-          "start": null,
-          "end": null
+          "start": 54,
+          "end": 300
         }
       ],
       "go_terms": [
@@ -11530,7 +11635,58 @@
           "name": "Differentiation of Circulating Monocytes"
         }
       ],
-      "interacting_partners": [],
+      "interacting_partners": [
+        {
+          "string_id": "9606.ENSP00000223642",
+          "name": "C5",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000245907",
+          "name": "C3",
+          "score": 0.931
+        },
+        {
+          "string_id": "9606.ENSP00000312999",
+          "name": "GNAI2",
+          "score": 0.884
+        },
+        {
+          "string_id": "9606.ENSP00000334448",
+          "name": "GNG2",
+          "score": 0.825
+        },
+        {
+          "string_id": "9606.ENSP00000356016",
+          "name": "CR1",
+          "score": 0.791
+        },
+        {
+          "string_id": "9606.ENSP00000396688",
+          "name": "C4A",
+          "score": 0.86
+        },
+        {
+          "string_id": "9606.ENSP00000367872",
+          "name": "GNB1",
+          "score": 0.909
+        },
+        {
+          "string_id": "9606.ENSP00000362680",
+          "name": "SRC",
+          "score": 0.913
+        },
+        {
+          "string_id": "9606.ENSP00000497260",
+          "name": "GNAI1",
+          "score": 0.932
+        },
+        {
+          "string_id": "9606.ENSP00000364898",
+          "name": "SYK",
+          "score": 0.934
+        }
+      ],
       "reference_doi": null,
       "reference_ids": [],
       "evidence_source": "https://www.uniprot.org/uniprotkb/P21730/entry",
@@ -11680,7 +11836,58 @@
           "name": "Regulation of Complement cascade"
         }
       ],
-      "interacting_partners": [],
+      "interacting_partners": [
+        {
+          "string_id": "9606.ENSP00000243611",
+          "name": "C4BPB",
+          "score": 0.921
+        },
+        {
+          "string_id": "9606.ENSP00000245907",
+          "name": "C3",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000261590",
+          "name": "DSG2",
+          "score": 0.931
+        },
+        {
+          "string_id": "9606.ENSP00000356037",
+          "name": "C4BPA",
+          "score": 0.922
+        },
+        {
+          "string_id": "9606.ENSP00000396688",
+          "name": "C4A",
+          "score": 0.927
+        },
+        {
+          "string_id": "9606.ENSP00000415941",
+          "name": "C4B",
+          "score": 0.927
+        },
+        {
+          "string_id": "9606.ENSP00000356399",
+          "name": "CFH",
+          "score": 0.939
+        },
+        {
+          "string_id": "9606.ENSP00000498879",
+          "name": "CD59",
+          "score": 0.953
+        },
+        {
+          "string_id": "9606.ENSP00000353408",
+          "name": "MSN",
+          "score": 0.955
+        },
+        {
+          "string_id": "9606.ENSP00000378131",
+          "name": "CFI",
+          "score": 0.994
+        }
+      ],
       "reference_doi": null,
       "reference_ids": [],
       "evidence_source": "https://www.uniprot.org/uniprotkb/P15529/entry",
@@ -11921,7 +12128,58 @@
           "name": "Regulation of Complement cascade"
         }
       ],
-      "interacting_partners": [],
+      "interacting_partners": [
+        {
+          "string_id": "9606.ENSP00000245907",
+          "name": "C3",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000255030",
+          "name": "CRP",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000295927",
+          "name": "PTX3",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000314299",
+          "name": "CFHR1",
+          "score": 0.998
+        },
+        {
+          "string_id": "9606.ENSP00000356385",
+          "name": "CFHR2",
+          "score": 0.983
+        },
+        {
+          "string_id": "9606.ENSP00000356395",
+          "name": "CFHR3",
+          "score": 0.957
+        },
+        {
+          "string_id": "9606.ENSP00000363079",
+          "name": "MBL2",
+          "score": 0.962
+        },
+        {
+          "string_id": "9606.ENSP00000366307",
+          "name": "THBD",
+          "score": 0.979
+        },
+        {
+          "string_id": "9606.ENSP00000416561",
+          "name": "CFB",
+          "score": 0.99
+        },
+        {
+          "string_id": "9606.ENSP00000378131",
+          "name": "CFI",
+          "score": 0.999
+        }
+      ],
       "reference_doi": null,
       "reference_ids": [],
       "evidence_source": "https://www.uniprot.org/uniprotkb/P08603/entry",
@@ -12162,7 +12420,58 @@
           "name": "Affinity selection of immunoglobulins"
         }
       ],
-      "interacting_partners": [],
+      "interacting_partners": [
+        {
+          "string_id": "9606.ENSP00000226574",
+          "name": "NFKB1",
+          "score": 0.996
+        },
+        {
+          "string_id": "9606.ENSP00000385675",
+          "name": "IL6",
+          "score": 0.946
+        },
+        {
+          "string_id": "9606.ENSP00000331736",
+          "name": "SELE",
+          "score": 0.947
+        },
+        {
+          "string_id": "9606.ENSP00000353408",
+          "name": "MSN",
+          "score": 0.947
+        },
+        {
+          "string_id": "9606.ENSP00000338934",
+          "name": "EZR",
+          "score": 0.969
+        },
+        {
+          "string_id": "9606.ENSP00000294728",
+          "name": "VCAM1",
+          "score": 0.979
+        },
+        {
+          "string_id": "9606.ENSP00000384273",
+          "name": "RELA",
+          "score": 0.996
+        },
+        {
+          "string_id": "9606.ENSP00000496959",
+          "name": "ITGAM",
+          "score": 0.998
+        },
+        {
+          "string_id": "9606.ENSP00000349252",
+          "name": "ITGAL",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000380948",
+          "name": "ITGB2",
+          "score": 0.999
+        }
+      ],
       "reference_doi": null,
       "reference_ids": [],
       "evidence_source": "https://www.uniprot.org/uniprotkb/P05362/entry",
@@ -12455,7 +12764,58 @@
           "name": "Amyloid fiber formation"
         }
       ],
-      "interacting_partners": [],
+      "interacting_partners": [
+        {
+          "string_id": "9606.ENSP00000206513",
+          "name": "CEBPE",
+          "score": 0.903
+        },
+        {
+          "string_id": "9606.ENSP00000216336",
+          "name": "CTSG",
+          "score": 0.869
+        },
+        {
+          "string_id": "9606.ENSP00000225275",
+          "name": "MPO",
+          "score": 0.918
+        },
+        {
+          "string_id": "9606.ENSP00000261267",
+          "name": "LYZ",
+          "score": 0.877
+        },
+        {
+          "string_id": "9606.ENSP00000323587",
+          "name": "ITLN1",
+          "score": 0.884
+        },
+        {
+          "string_id": "9606.ENSP00000361867",
+          "name": "SEMG1",
+          "score": 0.888
+        },
+        {
+          "string_id": "9606.ENSP00000362108",
+          "name": "LCN2",
+          "score": 0.889
+        },
+        {
+          "string_id": "9606.ENSP00000315130",
+          "name": "CLU",
+          "score": 0.898
+        },
+        {
+          "string_id": "9606.ENSP00000361746",
+          "name": "EPPIN",
+          "score": 0.925
+        },
+        {
+          "string_id": "9606.ENSP00000301046",
+          "name": "LALBA",
+          "score": 0.966
+        }
+      ],
       "reference_doi": null,
       "reference_ids": [],
       "evidence_source": "https://www.uniprot.org/uniprotkb/P02788/entry",
@@ -12756,7 +13116,58 @@
           "name": "Regulation of MITF-M-dependent genes involved in cell cycle and proliferation"
         }
       ],
-      "interacting_partners": [],
+      "interacting_partners": [
+        {
+          "string_id": "9606.ENSP00000222390",
+          "name": "HGF",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000262995",
+          "name": "GAB1",
+          "score": 0.996
+        },
+        {
+          "string_id": "9606.ENSP00000264033",
+          "name": "CBL",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000267101",
+          "name": "ERBB3",
+          "score": 0.987
+        },
+        {
+          "string_id": "9606.ENSP00000273261",
+          "name": "LRIG1",
+          "score": 0.983
+        },
+        {
+          "string_id": "9606.ENSP00000275493",
+          "name": "EGFR",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000351338",
+          "name": "PLXNB1",
+          "score": 0.993
+        },
+        {
+          "string_id": "9606.ENSP00000360683",
+          "name": "PTPN1",
+          "score": 0.996
+        },
+        {
+          "string_id": "9606.ENSP00000362680",
+          "name": "SRC",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000376345",
+          "name": "GRB2",
+          "score": 0.999
+        }
+      ],
       "reference_doi": null,
       "reference_ids": [],
       "evidence_source": "https://www.uniprot.org/uniprotkb/P08581/entry",
@@ -12775,10 +13186,10 @@
       "gravy_score": -0.222,
       "domains": [
         {
-          "name": "PSGL-1",
+          "name": "P-selectin glycoprotein ligand 1",
           "accession": "IPR026195",
-          "start": null,
-          "end": null
+          "start": 1,
+          "end": 412
         }
       ],
       "go_terms": [
@@ -12853,7 +13264,58 @@
           "name": "Cell surface interactions at the vascular wall"
         }
       ],
-      "interacting_partners": [],
+      "interacting_partners": [
+        {
+          "string_id": "9606.ENSP00000380948",
+          "name": "ITGB2",
+          "score": 0.789
+        },
+        {
+          "string_id": "9606.ENSP00000318142",
+          "name": "FUT7",
+          "score": 0.801
+        },
+        {
+          "string_id": "9606.ENSP00000329380",
+          "name": "GP1BA",
+          "score": 0.814
+        },
+        {
+          "string_id": "9606.ENSP00000356630",
+          "name": "HECA",
+          "score": 0.822
+        },
+        {
+          "string_id": "9606.ENSP00000498852",
+          "name": "SPN",
+          "score": 0.857
+        },
+        {
+          "string_id": "9606.ENSP00000349085",
+          "name": "MAGEA1",
+          "score": 0.902
+        },
+        {
+          "string_id": "9606.ENSP00000332062",
+          "name": "SNX20",
+          "score": 0.911
+        },
+        {
+          "string_id": "9606.ENSP00000498227",
+          "name": "SELL",
+          "score": 0.918
+        },
+        {
+          "string_id": "9606.ENSP00000263686",
+          "name": "SELP",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000331736",
+          "name": "SELE",
+          "score": 0.999
+        }
+      ],
       "reference_doi": null,
       "reference_ids": [],
       "evidence_source": "https://www.uniprot.org/uniprotkb/Q14242/entry",
@@ -12936,7 +13398,58 @@
           "name": ""
         }
       ],
-      "interacting_partners": [],
+      "interacting_partners": [
+        {
+          "string_id": "9606.ENSP00000259708",
+          "name": "KLC4",
+          "score": 0.943
+        },
+        {
+          "string_id": "9606.ENSP00000272217",
+          "name": "ARL8A",
+          "score": 0.969
+        },
+        {
+          "string_id": "9606.ENSP00000307078",
+          "name": "KIF5B",
+          "score": 0.984
+        },
+        {
+          "string_id": "9606.ENSP00000408979",
+          "name": "KIF5A",
+          "score": 0.916
+        },
+        {
+          "string_id": "9606.ENSP00000393379",
+          "name": "KIF5C",
+          "score": 0.92
+        },
+        {
+          "string_id": "9606.ENSP00000375810",
+          "name": "KLC3",
+          "score": 0.948
+        },
+        {
+          "string_id": "9606.ENSP00000414982",
+          "name": "KLC1",
+          "score": 0.95
+        },
+        {
+          "string_id": "9606.ENSP00000399403",
+          "name": "KLC2",
+          "score": 0.952
+        },
+        {
+          "string_id": "9606.ENSP00000420127",
+          "name": "RAB9A",
+          "score": 0.961
+        },
+        {
+          "string_id": "9606.ENSP00000479202",
+          "name": "ARL8B",
+          "score": 0.997
+        }
+      ],
       "reference_doi": null,
       "reference_ids": [],
       "evidence_source": "https://www.uniprot.org/uniprotkb/Q8IWE5/entry",
@@ -13213,7 +13726,58 @@
           "name": "IRAK4 deficiency (TLR2/4)"
         }
       ],
-      "interacting_partners": [],
+      "interacting_partners": [
+        {
+          "string_id": "9606.ENSP00000256458",
+          "name": "IRAK2",
+          "score": 0.975
+        },
+        {
+          "string_id": "9606.ENSP00000260010",
+          "name": "TLR2",
+          "score": 0.998
+        },
+        {
+          "string_id": "9606.ENSP00000353874",
+          "name": "TLR9",
+          "score": 0.989
+        },
+        {
+          "string_id": "9606.ENSP00000358997",
+          "name": "IRAK1",
+          "score": 0.996
+        },
+        {
+          "string_id": "9606.ENSP00000363089",
+          "name": "TLR4",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000386380",
+          "name": "IL1R1",
+          "score": 0.978
+        },
+        {
+          "string_id": "9606.ENSP00000389600",
+          "name": "TLR6",
+          "score": 0.987
+        },
+        {
+          "string_id": "9606.ENSP00000479889",
+          "name": "IRAK4",
+          "score": 0.998
+        },
+        {
+          "string_id": "9606.ENSP00000433623",
+          "name": "TRAF6",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000498321",
+          "name": "MYD88",
+          "score": 0.999
+        }
+      ],
       "reference_doi": null,
       "reference_ids": [],
       "evidence_source": "https://www.uniprot.org/uniprotkb/P58753/entry",
@@ -13596,7 +14160,58 @@
           "name": "RSV-host interactions"
         }
       ],
-      "interacting_partners": [],
+      "interacting_partners": [
+        {
+          "string_id": "9606.ENSP00000226574",
+          "name": "NFKB1",
+          "score": 0.995
+        },
+        {
+          "string_id": "9606.ENSP00000248244",
+          "name": "TICAM1",
+          "score": 0.989
+        },
+        {
+          "string_id": "9606.ENSP00000314733",
+          "name": "TOLLIP",
+          "score": 0.985
+        },
+        {
+          "string_id": "9606.ENSP00000345347",
+          "name": "HMGB1",
+          "score": 0.986
+        },
+        {
+          "string_id": "9606.ENSP00000363089",
+          "name": "TLR4",
+          "score": 0.989
+        },
+        {
+          "string_id": "9606.ENSP00000385519",
+          "name": "CD14",
+          "score": 0.994
+        },
+        {
+          "string_id": "9606.ENSP00000354932",
+          "name": "TLR1",
+          "score": 0.997
+        },
+        {
+          "string_id": "9606.ENSP00000389600",
+          "name": "TLR6",
+          "score": 0.997
+        },
+        {
+          "string_id": "9606.ENSP00000376445",
+          "name": "TIRAP",
+          "score": 0.998
+        },
+        {
+          "string_id": "9606.ENSP00000498321",
+          "name": "MYD88",
+          "score": 0.999
+        }
+      ],
       "reference_doi": null,
       "reference_ids": [],
       "evidence_source": "https://www.uniprot.org/uniprotkb/O60603/entry",
@@ -14109,7 +14724,58 @@
           "name": "Dengue Virus-Host Interactions"
         }
       ],
-      "interacting_partners": [],
+      "interacting_partners": [
+        {
+          "string_id": "9606.ENSP00000226574",
+          "name": "NFKB1",
+          "score": 0.997
+        },
+        {
+          "string_id": "9606.ENSP00000248244",
+          "name": "TICAM1",
+          "score": 0.998
+        },
+        {
+          "string_id": "9606.ENSP00000284818",
+          "name": "LY96",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000345347",
+          "name": "HMGB1",
+          "score": 0.998
+        },
+        {
+          "string_id": "9606.ENSP00000376500",
+          "name": "TRAF3",
+          "score": 0.993
+        },
+        {
+          "string_id": "9606.ENSP00000479889",
+          "name": "IRAK4",
+          "score": 0.997
+        },
+        {
+          "string_id": "9606.ENSP00000376445",
+          "name": "TIRAP",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000415139",
+          "name": "TICAM2",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000433623",
+          "name": "TRAF6",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000498321",
+          "name": "MYD88",
+          "score": 0.999
+        }
+      ],
       "reference_doi": null,
       "reference_ids": [],
       "evidence_source": "https://www.uniprot.org/uniprotkb/O00206/entry",
@@ -14418,7 +15084,58 @@
           "name": "Dengue virus modulates apoptosis"
         }
       ],
-      "interacting_partners": [],
+      "interacting_partners": [
+        {
+          "string_id": "9606.ENSP00000025008",
+          "name": "RB1CC1",
+          "score": 0.996
+        },
+        {
+          "string_id": "9606.ENSP00000247178",
+          "name": "ATG14",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000324560",
+          "name": "ULK1",
+          "score": 0.995
+        },
+        {
+          "string_id": "9606.ENSP00000273047",
+          "name": "RAB5A",
+          "score": 0.996
+        },
+        {
+          "string_id": "9606.ENSP00000361021",
+          "name": "PTEN",
+          "score": 0.997
+        },
+        {
+          "string_id": "9606.ENSP00000277746",
+          "name": "NRBF2",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000296343",
+          "name": "RUBCN",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000348455",
+          "name": "UVRAG",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000349205",
+          "name": "PIK3R4",
+          "score": 0.999
+        },
+        {
+          "string_id": "9606.ENSP00000355231",
+          "name": "BECN1",
+          "score": 0.999
+        }
+      ],
       "reference_doi": null,
       "reference_ids": [],
       "evidence_source": "https://www.uniprot.org/uniprotkb/Q8NEB9/entry",
@@ -15141,6 +15858,56 @@
       "database_accession": null,
       "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
       "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+    },
+    {
+      "evidence_id": "PM-EVD-0040",
+      "interaction_id": "PM-INT-0001",
+      "evidence_class": "experimental",
+      "doi": "10.1126/science.1227037",
+      "pmid": null,
+      "database_accession": null,
+      "provenance": "McGourty et al., Science 2012 (SifA binds SKIP/PLEKHM2)",
+      "note": "Co-immunoprecipitation and functional assays show SifA forms a complex with SKIP/PLEKHM2 in infected cells."
+    },
+    {
+      "evidence_id": "PM-EVD-0047",
+      "interaction_id": "PM-INT-0002",
+      "evidence_class": "experimental",
+      "doi": "10.1126/sciadv.adj5777",
+      "pmid": "38064550",
+      "database_accession": null,
+      "provenance": "Yuan et al., Science Advances 2023 (SipA binds and stabilizes F-actin)",
+      "note": "Cryo-EM shows SipA binds along F-actin grooves and stabilizes filaments through charged interface residues."
+    },
+    {
+      "evidence_id": "PM-EVD-0048",
+      "interaction_id": "PM-INT-0003",
+      "evidence_class": "experimental",
+      "doi": "10.1016/j.celrep.2015.07.063",
+      "pmid": "26299973",
+      "database_accession": null,
+      "provenance": "D'Costa et al., Cell Reports 2015 (SopD2 binds and inhibits Rab7)",
+      "note": "SopD2 directly binds Rab7 and inhibits nucleotide exchange, limiting Rab7 effector recruitment."
+    },
+    {
+      "evidence_id": "PM-EVD-0049",
+      "interaction_id": "PM-INT-0006",
+      "evidence_class": "experimental",
+      "doi": "10.1084/jem.20030527",
+      "pmid": "12925680",
+      "database_accession": null,
+      "provenance": "Singh et al., JEM 2003 (M. tuberculosis LAM blocks Ca2+/hVPS34 signaling)",
+      "note": "M. tuberculosis lipoarabinomannan blocks the Ca2+/calmodulin-PI3K hVPS34 cascade required for phagosome maturation."
+    },
+    {
+      "evidence_id": "PM-EVD-0053",
+      "interaction_id": "PM-INT-0012",
+      "evidence_class": "experimental",
+      "doi": "10.1128/IAI.71.7.4018-4025.2003",
+      "pmid": "12819090",
+      "database_accession": null,
+      "provenance": "Park et al., Infect Immun 2003 (Msp2/p44 facilitates granulocyte adherence)",
+      "note": "Recombinant Msp2 binds PSGL-1-expressing cells and reduces PSGL-1 antibody binding; the study supports Msp2/PSGL-1 association without establishing Msp2 as the sole PSGL-1 adhesin."
     }
   ]
 }

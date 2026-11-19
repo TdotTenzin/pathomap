@@ -14,7 +14,7 @@
                      References & Evidence section (#references).
 
   Key element IDs consumed by JS:
-    dataset-file, file-input-name, dataset-load-builtin, dataset-load-sample, dataset-status  -> js/ui/upload.js
+    dataset-file, dataset-file-name, dataset-load-builtin, dataset-load-sample, dataset-status  -> js/ui/upload.js
     db-tabs, db-search, db-download, db-count, db-hint, db-prev, db-next, db-page-size,
     db-page-info, db-pagination-info, db-head, db-body, db-schema-body                       -> js/views/database.js
     references-content                                                                        -> js/ui/references.js
@@ -63,12 +63,12 @@
     <div class="container">
       <h1 class="hero-title">PathoMap</h1>
       <p class="hero-subtitle">
-        PathoMap is a curated host&ndash;pathogen interaction dataset. The current release contains pathogen, effector, and host-protein tables; interaction, reference, and derived-analysis tables are being rebuilt one at a time.
+        PathoMap is a curated host&ndash;pathogen interaction dataset. The current release contains pathogen, effector, and host-protein tables; interaction, evidence, and derived-analysis tables are being rebuilt one at a time.
       </p>
 
       <div class="research-objective">
         <p class="section-label">Research Objective</p>
-        <h3 class="research-question">
+        <h2 class="research-question">
           Can the amino acid sequence features of bacterial effector proteins predict their pathogen's intracellular survival strategy?
         </h3>
         <ul class="research-list">
@@ -97,12 +97,12 @@
           <div class="db-upload-actions">
             <label class="file-input-label" title="Upload a dataset JSON file (pathogens required; effectors and host_proteins optional)">
               <input type="file" id="dataset-file" accept="application/json,.json" class="upload-input-inline" hidden>
-              <span class="tool-btn">Choose File</span>
-              <span class="file-input-name" id="file-input-name"></span>
+              <span class="tool-btn">Upload file</span>
+              <span class="dataset-file-name" id="dataset-file-name"></span>
             </label>
-            <button type="button" id="dataset-load-builtin" class="tool-btn" title="Load the full curated dataset: pathogens, effectors, and host proteins (data/pathomap-dataset.json)">Load Curated Dataset</button>
-            <button type="button" id="dataset-load-sample" class="tool-btn" title="Load a small test subset of all three tables (data/sample-dataset.json)">Load Built-in Sample</button>
-            <button type="button" id="dataset-download-template" class="tool-btn" title="Download an empty pathogens-only dataset template">Download Template</button>
+            <button type="button" id="dataset-load-builtin" class="tool-btn" title="Load the full curated dataset: pathogens, effectors, and host proteins (data/pathomap-dataset.json)">Load curated dataset</button>
+            <button type="button" id="dataset-load-sample" class="tool-btn" title="Load a small test subset of all three tables (data/sample-dataset.json)">Load sample dataset</button>
+            <button type="button" id="dataset-download-template" class="tool-btn" title="Download an empty pathogens-only dataset template">Download template</button>
           </div>
           <p id="dataset-status" class="upload-status"></p>
         </div>
@@ -112,7 +112,7 @@
           <div class="db-tabs" id="db-tabs" role="tablist" aria-label="Database tables"></div>
           <div class="db-toolbar-right">
             <input id="db-search" class="tool-input db-search" type="search" placeholder="Search&hellip;" autocomplete="off" aria-label="Filter table rows">
-            <button type="button" id="db-download" class="tool-btn">Download CSV</button>
+            <button type="button" id="db-download" class="tool-btn">Export CSV</button>
           </div>
         </div>
 
@@ -165,16 +165,12 @@
     <section id="generated-analyses" class="section">
       <div class="container">
         <div class="section-header">
-          <p class="section-label">Analytics</p>
+          <p class="section-label">Analyses</p>
           <h2 class="section-title">Generated Analyses</h2>
           <p class="section-subtitle">
             Explore biological analyses generated
             from your uploaded dataset.
           </p>
-        </div>
-
-        <div id="analysis-overview">
-            <!-- Analysis overview will go here -->
         </div>
 
       <div id="analysis-modules">
@@ -189,7 +185,7 @@
           <p class="section-label">Provenance</p>
           <h2 class="section-title">References &amp; Evidence</h2>
           <p class="section-subtitle">
-            Citations and interaction-evidence records supporting the curated dataset.
+            DOI references and interaction evidence records supporting the curated dataset.
           </p>
         </div>
 
@@ -201,16 +197,16 @@
       <div class="container">
         <div class="section-header">
           <p class="section-label">Transparency</p>
-          <h2 class="section-title">Limitations &amp; scope</h2>
+          <h2 class="section-title">Limitations &amp; Scope</h2>
           <p class="section-subtitle">
             What this release is (and is not), to interpret results responsibly.
           </p>
         </div>
         <ul class="research-list">
-          <li><strong>Curated prototype, not a comprehensive resource:</strong> current tables cover a focused, curated subset (bacterial host&ndash;pathogen effectors, host targets/proteins, and related interaction records as available in the loaded dataset).</li>
+          <li><strong>Curated prototype, not a comprehensive resource:</strong> current tables cover a focused, curated subset (bacterial host&ndash;pathogen effectors, host proteins, and related interaction records as available in the loaded dataset).</li>
           <li><strong>Coverage is limited:</strong> interaction counts are small (demonstration-scale); absence of a record does not mean an interaction is absent in biology.</li>
           <li><strong>Evidence is labeled, not inferred silently:</strong> interaction evidence is categorized (e.g. experimental, predicted, annotation-derived, hypothetical). Labels reflect curation/provenance—not clinical or functional certainty.</li>
-          <li><strong>Derived analyses are reproducible outputs:</strong> generated artifacts (e.g. interaction network outputs) depend on validated inputs and explicit methods; they are not curated ground truth.</li>
+          <li><strong>Generated analyses are reproducible outputs:</strong> generated artifacts (e.g. interaction network outputs) depend on validated inputs and explicit methods; they are not curated ground truth.</li>
           <li><strong>Demo/sample data:</strong> built-in sample and uploaded datasets are for exploration; validate against the curated pipeline outputs for serious use.</li>
         </ul>
       </div>
