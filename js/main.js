@@ -67,7 +67,9 @@ import { initTheme } from './ui/theme.js';
             // Load the default dataset
             const dataset = await loadDataset();
 
-            // Render analysis eligibility and references (database rendered by initDatabase)
+            // Re-render the database against the loaded dataset, then the
+            // analysis eligibility and references.
+            renderDatabase();
             renderAnalyses(dataset);
             renderReferences(dataset);
 

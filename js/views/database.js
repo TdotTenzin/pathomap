@@ -597,11 +597,11 @@ function renderSchema() {
   const links = document.createElement('p');
   links.className = 'schema-links';
   links.append(
-    createSchemaLink('SQL schema', 'data/schema.sql'),
+    createSchemaLink('SQL schema', '/data/schema.sql'),
     document.createTextNode(' · '),
-    createSchemaLink('SQLite database', 'data/pathomap.db'),
+    createSchemaLink('SQLite database', '/data/pathomap.db'),
     document.createTextNode(' · '),
-    createSchemaLink('JSON schema', 'data/schema/pathogens.schema.json')
+    createSchemaLink('JSON schema', '/data/schema/pathogens.schema.json')
   );
   body.appendChild(links);
 

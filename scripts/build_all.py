@@ -88,7 +88,10 @@ STAGES: tuple[Stage, ...] = (
     ),
     Stage(
         "analysis",
-        (DATA_DIR / "derived" / "interaction_analysis.json",),
+        (
+            DATA_DIR / "derived" / "interaction_analysis.json",
+            DATA_DIR / "derived" / "interaction_analysis_sample.json",
+        ),
         analyze_interactions.build,
     ),
 )
@@ -149,7 +152,11 @@ def stage_kwargs(
 ) -> dict:
     """Translate shared CLI options into a stage's build() keyword arguments."""
     if stage_name == "analysis":
-        return {"check": check, "strict": strict}
+        return {
+            "check": check,
+            "strict": strict,
+            "sample_output_path": DATA_DIR / "derived" / "interaction_analysis_sample.json",
+        }
     if stage_name == "pathogens":
         return {"check": check, "refresh": refresh, "no_network": no_network}
     if stage_name == "effectors":

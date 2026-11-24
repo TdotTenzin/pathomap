@@ -1,0 +1,726 @@
+{
+  "schema_version": "1.2",
+  "meta": {
+    "analysis": "interaction_analysis",
+    "analysis_version": "1.2",
+    "generated_at": "2026-11-26T17:10:52Z",
+    "source_dataset_path": "data/sample-dataset.json",
+    "source_dataset_schema_version": "3.0",
+    "source_dataset_built_at": "2026-11-18T15:26:11Z",
+    "source_dataset_sha256": "0e5b15ec1557fa98cac11889f3f2bc16711c8e02f64619b9dc9c576b631ac4b7",
+    "input_tables": [
+      "pathogens",
+      "effectors",
+      "host_proteins",
+      "host_targets",
+      "interactions",
+      "interaction_evidence"
+    ],
+    "parameters": {
+      "deduplicate_relationships": true,
+      "duplicate_relationship_policy": "retain_lexicographically_earliest_interaction_id",
+      "evidence_identity": "interaction_id|evidence_class|doi|pmid|database_accession|provenance",
+      "host_target_scope": "curated_host_target_ids",
+      "pathogen_classification": "gram_stain_or_name_heuristic"
+    }
+  },
+  "validation": {
+    "raw_interaction_count": 5,
+    "retained_interaction_count": 5,
+    "discarded_interaction_count": 0,
+    "interaction_issues": [],
+    "raw_evidence_count": 10,
+    "retained_evidence_count": 10,
+    "discarded_evidence_count": 0,
+    "evidence_issues": [],
+    "issue_counts": {
+      "interaction": {},
+      "evidence": {},
+      "result": {}
+    },
+    "result_issues": []
+  },
+  "statistics": {
+    "interaction_count": 5,
+    "unique_effector_count": 5,
+    "unique_host_protein_count": 5,
+    "unique_host_target_count": 5,
+    "unique_pathogen_count": 3,
+    "host_proteins_targeted_by_multiple_pathogens_count": 0,
+    "unresolved_target_count": 20,
+    "unresolved_effector_count": 22,
+    "evidence_count": 10,
+    "interactions_with_evidence_count": 5,
+    "interactions_without_evidence_count": 0,
+    "mean_evidence_per_interaction": 2.0,
+    "median_evidence_per_interaction": 2,
+    "evidence_coverage": 1.0,
+    "evidence_by_class": {
+      "annotation-derived": 5,
+      "experimental": 5
+    },
+    "evidence_source_counts": {
+      "records_with_doi": 5,
+      "records_with_pmid": 4,
+      "records_with_database_accession": 0,
+      "records_with_citation": 5
+    },
+    "interactions_by_pathogen": {
+      "PM-PAT-0001": 3,
+      "PM-PAT-0003": 1,
+      "PM-PAT-0013": 1
+    },
+    "effectors_by_pathogen": {
+      "PM-PAT-0001": 3,
+      "PM-PAT-0003": 1,
+      "PM-PAT-0013": 1
+    }
+  },
+  "host_proteins_targeted_by_multiple_pathogens": [],
+  "unresolved_targets": {
+    "target_count": 20,
+    "effector_count": 22,
+    "by_resolution_status": {
+      "ambiguous": {
+        "target_count": 6,
+        "effector_count": 6
+      },
+      "non_protein": {
+        "target_count": 10,
+        "effector_count": 12
+      },
+      "protein_complex": {
+        "target_count": 2,
+        "effector_count": 2
+      },
+      "protein_family": {
+        "target_count": 2,
+        "effector_count": 2
+      }
+    },
+    "targets": [
+      {
+        "host_target_id": "PM-TGT-0018",
+        "target_name": "Cholesterol",
+        "host_target_class": "lipid",
+        "resolution_status": "non_protein",
+        "reason": "Host target is classified as 'non_protein', not resolved_protein.",
+        "effector_ids": [
+          "PM-EFF-0007",
+          "PM-EFF-0157"
+        ],
+        "effector_names": [
+          "ALO",
+          "SseJ"
+        ],
+        "effector_count": 2,
+        "pathogen_ids": [
+          "PM-PAT-0001",
+          "PM-PAT-0032"
+        ]
+      },
+      {
+        "host_target_id": "PM-TGT-0055",
+        "target_name": "Host membranes",
+        "host_target_class": "cellular_structure",
+        "resolution_status": "non_protein",
+        "reason": "Host target is classified as 'non_protein', not resolved_protein.",
+        "effector_ids": [
+          "PM-EFF-0217",
+          "PM-EFF-0221"
+        ],
+        "effector_names": [
+          "AbOmpA",
+          "Plc"
+        ],
+        "effector_count": 2,
+        "pathogen_ids": [
+          "PM-PAT-0048"
+        ]
+      },
+      {
+        "host_target_id": "PM-TGT-0006",
+        "target_name": "ANTXR1/2",
+        "host_target_class": "protein",
+        "resolution_status": "ambiguous",
+        "reason": "Host target is classified as 'ambiguous', not resolved_protein.",
+        "effector_ids": [
+          "PM-EFF-0161"
+        ],
+        "effector_names": [
+          "PA"
+        ],
+        "effector_count": 1,
+        "pathogen_ids": [
+          "PM-PAT-0032"
+        ]
+      },
+      {
+        "host_target_id": "PM-TGT-0010",
+        "target_name": "CaM/adenylate cyclase",
+        "host_target_class": "protein",
+        "resolution_status": "ambiguous",
+        "reason": "Host target is classified as 'ambiguous', not resolved_protein.",
+        "effector_ids": [
+          "PM-EFF-0159"
+        ],
+        "effector_names": [
+          "EF"
+        ],
+        "effector_count": 1,
+        "pathogen_ids": [
+          "PM-PAT-0032"
+        ]
+      },
+      {
+        "host_target_id": "PM-TGT-0015",
+        "target_name": "Cdc42 / Rac1",
+        "host_target_class": "protein",
+        "resolution_status": "ambiguous",
+        "reason": "Host target is classified as 'ambiguous', not resolved_protein.",
+        "effector_ids": [
+          "PM-EFF-0006"
+        ],
+        "effector_names": [
+          "SopE"
+        ],
+        "effector_count": 1,
+        "pathogen_ids": [
+          "PM-PAT-0001"
+        ]
+      },
+      {
+        "host_target_id": "PM-TGT-0065",
+        "target_name": "JNK/AMPK",
+        "host_target_class": "protein",
+        "resolution_status": "ambiguous",
+        "reason": "Host target is classified as 'ambiguous', not resolved_protein.",
+        "effector_ids": [
+          "PM-EFF-0015"
+        ],
+        "effector_names": [
+          "Eis"
+        ],
+        "effector_count": 1,
+        "pathogen_ids": [
+          "PM-PAT-0003"
+        ]
+      },
+      {
+        "host_target_id": "PM-TGT-0082",
+        "target_name": "MYADM / Abl-1",
+        "host_target_class": "protein",
+        "resolution_status": "ambiguous",
+        "reason": "Host target is classified as 'ambiguous', not resolved_protein.",
+        "effector_ids": [
+          "PM-EFF-0068"
+        ],
+        "effector_names": [
+          "AnkA"
+        ],
+        "effector_count": 1,
+        "pathogen_ids": [
+          "PM-PAT-0013"
+        ]
+      },
+      {
+        "host_target_id": "PM-TGT-0102",
+        "target_name": "Rab5 / PI3P",
+        "host_target_class": "protein",
+        "resolution_status": "ambiguous",
+        "reason": "Host target is classified as 'ambiguous', not resolved_protein.",
+        "effector_ids": [
+          "PM-EFF-0069"
+        ],
+        "effector_names": [
+          "Ats-1"
+        ],
+        "effector_count": 1,
+        "pathogen_ids": [
+          "PM-PAT-0013"
+        ]
+      },
+      {
+        "host_target_id": "PM-TGT-0001",
+        "target_name": "Abiotic surfaces",
+        "host_target_class": "cellular_structure",
+        "resolution_status": "non_protein",
+        "reason": "Host target is classified as 'non_protein', not resolved_protein.",
+        "effector_ids": [
+          "PM-EFF-0219"
+        ],
+        "effector_names": [
+          "CsuA/B"
+        ],
+        "effector_count": 1,
+        "pathogen_ids": [
+          "PM-PAT-0048"
+        ]
+      },
+      {
+        "host_target_id": "PM-TGT-0048",
+        "target_name": "Host cells",
+        "host_target_class": "cellular_structure",
+        "resolution_status": "non_protein",
+        "reason": "Host target is classified as 'non_protein', not resolved_protein.",
+        "effector_ids": [
+          "PM-EFF-0218"
+        ],
+        "effector_names": [
+          "Bap"
+        ],
+        "effector_count": 1,
+        "pathogen_ids": [
+          "PM-PAT-0048"
+        ]
+      },
+      {
+        "host_target_id": "PM-TGT-0075",
+        "target_name": "Membrane",
+        "host_target_class": "cellular_structure",
+        "resolution_status": "non_protein",
+        "reason": "Host target is classified as 'non_protein', not resolved_protein.",
+        "effector_ids": [
+          "PM-EFF-0014"
+        ],
+        "effector_names": [
+          "ESAT-6"
+        ],
+        "effector_count": 1,
+        "pathogen_ids": [
+          "PM-PAT-0003"
+        ]
+      },
+      {
+        "host_target_id": "PM-TGT-0079",
+        "target_name": "Mitochondria",
+        "host_target_class": "organelle",
+        "resolution_status": "non_protein",
+        "reason": "Host target is classified as 'non_protein', not resolved_protein.",
+        "effector_ids": [
+          "PM-EFF-0220"
+        ],
+        "effector_names": [
+          "OmpA"
+        ],
+        "effector_count": 1,
+        "pathogen_ids": [
+          "PM-PAT-0048"
+        ]
+      },
+      {
+        "host_target_id": "PM-TGT-0090",
+        "target_name": "PI(3,5)P2",
+        "host_target_class": "lipid",
+        "resolution_status": "non_protein",
+        "reason": "Host target is classified as 'non_protein', not resolved_protein.",
+        "effector_ids": [
+          "PM-EFF-0018"
+        ],
+        "effector_names": [
+          "MptpB"
+        ],
+        "effector_count": 1,
+        "pathogen_ids": [
+          "PM-PAT-0003"
+        ]
+      },
+      {
+        "host_target_id": "PM-TGT-0091",
+        "target_name": "PI(4,5)P2",
+        "host_target_class": "lipid",
+        "resolution_status": "non_protein",
+        "reason": "Host target is classified as 'non_protein', not resolved_protein.",
+        "effector_ids": [
+          "PM-EFF-0004"
+        ],
+        "effector_names": [
+          "SopB/SigD"
+        ],
+        "effector_count": 1,
+        "pathogen_ids": [
+          "PM-PAT-0001"
+        ]
+      },
+      {
+        "host_target_id": "PM-TGT-0093",
+        "target_name": "PI3P",
+        "host_target_class": "lipid",
+        "resolution_status": "non_protein",
+        "reason": "Host target is classified as 'non_protein', not resolved_protein.",
+        "effector_ids": [
+          "PM-EFF-0020"
+        ],
+        "effector_names": [
+          "SapM"
+        ],
+        "effector_count": 1,
+        "pathogen_ids": [
+          "PM-PAT-0003"
+        ]
+      },
+      {
+        "host_target_id": "PM-TGT-0107",
+        "target_name": "ROS",
+        "host_target_class": "metabolite",
+        "resolution_status": "non_protein",
+        "reason": "Host target is classified as 'non_protein', not resolved_protein.",
+        "effector_ids": [
+          "PM-EFF-0158"
+        ],
+        "effector_names": [
+          "CatB"
+        ],
+        "effector_count": 1,
+        "pathogen_ids": [
+          "PM-PAT-0032"
+        ]
+      },
+      {
+        "host_target_id": "PM-TGT-0066",
+        "target_name": "Kinesin-1",
+        "host_target_class": "protein",
+        "resolution_status": "protein_complex",
+        "reason": "Host target is classified as 'protein_complex', not resolved_protein.",
+        "effector_ids": [
+          "PM-EFF-0001"
+        ],
+        "effector_names": [
+          "PipB2"
+        ],
+        "effector_count": 1,
+        "pathogen_ids": [
+          "PM-PAT-0001"
+        ]
+      },
+      {
+        "host_target_id": "PM-TGT-0124",
+        "target_name": "V-ATPase",
+        "host_target_class": "protein_complex",
+        "resolution_status": "protein_complex",
+        "reason": "Host target is classified as 'protein_complex', not resolved_protein.",
+        "effector_ids": [
+          "PM-EFF-0017"
+        ],
+        "effector_names": [
+          "MptpA"
+        ],
+        "effector_count": 1,
+        "pathogen_ids": [
+          "PM-PAT-0003"
+        ]
+      },
+      {
+        "host_target_id": "PM-TGT-0074",
+        "target_name": "MAPKKs",
+        "host_target_class": "protein",
+        "resolution_status": "protein_family",
+        "reason": "Host target is classified as 'protein_family', not resolved_protein.",
+        "effector_ids": [
+          "PM-EFF-0160"
+        ],
+        "effector_names": [
+          "LF"
+        ],
+        "effector_count": 1,
+        "pathogen_ids": [
+          "PM-PAT-0032"
+        ]
+      },
+      {
+        "host_target_id": "PM-TGT-0098",
+        "target_name": "Rab proteins",
+        "host_target_class": "protein_family",
+        "resolution_status": "protein_family",
+        "reason": "Host target is classified as 'protein_family', not resolved_protein.",
+        "effector_ids": [
+          "PM-EFF-0019"
+        ],
+        "effector_names": [
+          "PknG"
+        ],
+        "effector_count": 1,
+        "pathogen_ids": [
+          "PM-PAT-0003"
+        ]
+      }
+    ]
+  },
+  "network": {
+    "nodes": [
+      {
+        "id": "PM-EFF-0002",
+        "type": "effector",
+        "label": "SifA",
+        "pathogen_id": "PM-PAT-0001",
+        "host_target_id": 112
+      },
+      {
+        "id": "PM-EFF-0003",
+        "type": "effector",
+        "label": "SipA",
+        "pathogen_id": "PM-PAT-0001",
+        "host_target_id": 2
+      },
+      {
+        "id": "PM-EFF-0005",
+        "type": "effector",
+        "label": "SopD2",
+        "pathogen_id": "PM-PAT-0001",
+        "host_target_id": 104
+      },
+      {
+        "id": "PM-EFF-0016",
+        "type": "effector",
+        "label": "LAM",
+        "pathogen_id": "PM-PAT-0003",
+        "host_target_id": 128
+      },
+      {
+        "id": "PM-EFF-0070",
+        "type": "effector",
+        "label": "p44/Msp2",
+        "pathogen_id": "PM-PAT-0013",
+        "host_target_id": 85
+      },
+      {
+        "id": "PM-HST-0002",
+        "type": "host_protein",
+        "label": "Ras-related protein Rab-7A",
+        "gene_name": "RAB7A",
+        "uniprot_id": "P51149"
+      },
+      {
+        "id": "PM-HST-0018",
+        "type": "host_protein",
+        "label": "Actin, cytoplasmic 1",
+        "gene_name": "ACTB",
+        "uniprot_id": "P60709"
+      },
+      {
+        "id": "PM-HST-0028",
+        "type": "host_protein",
+        "label": "P-selectin glycoprotein ligand 1",
+        "gene_name": "SELPLG",
+        "uniprot_id": "Q14242"
+      },
+      {
+        "id": "PM-HST-0029",
+        "type": "host_protein",
+        "label": "Pleckstrin homology domain-containing family M member 2",
+        "gene_name": "PLEKHM2",
+        "uniprot_id": "Q8IWE5"
+      },
+      {
+        "id": "PM-HST-0033",
+        "type": "host_protein",
+        "label": "Phosphatidylinositol 3-kinase catalytic subunit type 3",
+        "gene_name": "PIK3C3",
+        "uniprot_id": "Q8NEB9"
+      },
+      {
+        "id": "PM-PAT-0001",
+        "type": "pathogen",
+        "label": "Salmonella enterica serovar Typhimurium",
+        "tax_id": 90371,
+        "classification": "Gram-negative"
+      },
+      {
+        "id": "PM-PAT-0003",
+        "type": "pathogen",
+        "label": "Mycobacterium tuberculosis",
+        "tax_id": 1773,
+        "classification": "Gram-positive"
+      },
+      {
+        "id": "PM-PAT-0013",
+        "type": "pathogen",
+        "label": "Anaplasma phagocytophilum",
+        "tax_id": 948,
+        "classification": "Gram-negative"
+      }
+    ],
+    "edges": [
+      {
+        "id": "PM-INT-0001",
+        "source": "PM-EFF-0002",
+        "target": "PM-HST-0029",
+        "type": "effector_targets_host_protein",
+        "mechanism": "Binds SKIP displacing Rab9",
+        "pathogen_id": "PM-PAT-0001",
+        "pathogen_name": "Salmonella enterica serovar Typhimurium",
+        "provenance": "Derived from curated effector host_target and audited host-target resolution.",
+        "evidence_count": 2,
+        "evidence_classes": [
+          "annotation-derived",
+          "experimental"
+        ],
+        "strongest_evidence_class": "experimental",
+        "evidence_records": [
+          {
+            "evidence_id": "PM-EVD-0001",
+            "evidence_class": "annotation-derived",
+            "doi": null,
+            "pmid": null,
+            "database_accession": null,
+            "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
+            "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+          },
+          {
+            "evidence_id": "PM-EVD-0040",
+            "evidence_class": "experimental",
+            "doi": "10.1126/science.1227037",
+            "pmid": null,
+            "database_accession": null,
+            "provenance": "McGourty et al., Science 2012 (SifA binds SKIP/PLEKHM2)",
+            "note": "Co-immunoprecipitation and functional assays show SifA forms a complex with SKIP/PLEKHM2 in infected cells."
+          }
+        ]
+      },
+      {
+        "id": "PM-INT-0002",
+        "source": "PM-EFF-0003",
+        "target": "PM-HST-0018",
+        "type": "effector_targets_host_protein",
+        "mechanism": "Binds/stabilizes actin filaments",
+        "pathogen_id": "PM-PAT-0001",
+        "pathogen_name": "Salmonella enterica serovar Typhimurium",
+        "provenance": "Derived from curated effector host_target and audited host-target resolution.",
+        "evidence_count": 2,
+        "evidence_classes": [
+          "annotation-derived",
+          "experimental"
+        ],
+        "strongest_evidence_class": "experimental",
+        "evidence_records": [
+          {
+            "evidence_id": "PM-EVD-0002",
+            "evidence_class": "annotation-derived",
+            "doi": null,
+            "pmid": null,
+            "database_accession": null,
+            "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
+            "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+          },
+          {
+            "evidence_id": "PM-EVD-0047",
+            "evidence_class": "experimental",
+            "doi": "10.1126/sciadv.adj5777",
+            "pmid": "38064550",
+            "database_accession": null,
+            "provenance": "Yuan et al., Science Advances 2023 (SipA binds and stabilizes F-actin)",
+            "note": "Cryo-EM shows SipA binds along F-actin grooves and stabilizes filaments through charged interface residues."
+          }
+        ]
+      },
+      {
+        "id": "PM-INT-0003",
+        "source": "PM-EFF-0005",
+        "target": "PM-HST-0002",
+        "type": "effector_targets_host_protein",
+        "mechanism": "Suppresses Rab7-dependent recruitment",
+        "pathogen_id": "PM-PAT-0001",
+        "pathogen_name": "Salmonella enterica serovar Typhimurium",
+        "provenance": "Derived from curated effector host_target and audited host-target resolution.",
+        "evidence_count": 2,
+        "evidence_classes": [
+          "annotation-derived",
+          "experimental"
+        ],
+        "strongest_evidence_class": "experimental",
+        "evidence_records": [
+          {
+            "evidence_id": "PM-EVD-0003",
+            "evidence_class": "annotation-derived",
+            "doi": null,
+            "pmid": null,
+            "database_accession": null,
+            "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
+            "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+          },
+          {
+            "evidence_id": "PM-EVD-0048",
+            "evidence_class": "experimental",
+            "doi": "10.1016/j.celrep.2015.07.063",
+            "pmid": "26299973",
+            "database_accession": null,
+            "provenance": "D'Costa et al., Cell Reports 2015 (SopD2 binds and inhibits Rab7)",
+            "note": "SopD2 directly binds Rab7 and inhibits nucleotide exchange, limiting Rab7 effector recruitment."
+          }
+        ]
+      },
+      {
+        "id": "PM-INT-0006",
+        "source": "PM-EFF-0016",
+        "target": "PM-HST-0033",
+        "type": "effector_targets_host_protein",
+        "mechanism": "Inhibits Ca2+ signaling",
+        "pathogen_id": "PM-PAT-0003",
+        "pathogen_name": "Mycobacterium tuberculosis",
+        "provenance": "Derived from curated effector host_target and audited host-target resolution.",
+        "evidence_count": 2,
+        "evidence_classes": [
+          "annotation-derived",
+          "experimental"
+        ],
+        "strongest_evidence_class": "experimental",
+        "evidence_records": [
+          {
+            "evidence_id": "PM-EVD-0006",
+            "evidence_class": "annotation-derived",
+            "doi": null,
+            "pmid": null,
+            "database_accession": null,
+            "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
+            "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+          },
+          {
+            "evidence_id": "PM-EVD-0049",
+            "evidence_class": "experimental",
+            "doi": "10.1084/jem.20030527",
+            "pmid": "12925680",
+            "database_accession": null,
+            "provenance": "Singh et al., JEM 2003 (M. tuberculosis LAM blocks Ca2+/hVPS34 signaling)",
+            "note": "M. tuberculosis lipoarabinomannan blocks the Ca2+/calmodulin-PI3K hVPS34 cascade required for phagosome maturation."
+          }
+        ]
+      },
+      {
+        "id": "PM-INT-0012",
+        "source": "PM-EFF-0070",
+        "target": "PM-HST-0028",
+        "type": "effector_targets_host_protein",
+        "mechanism": "Antigenic variation; immune evasion",
+        "pathogen_id": "PM-PAT-0013",
+        "pathogen_name": "Anaplasma phagocytophilum",
+        "provenance": "Derived from curated effector host_target and audited host-target resolution.",
+        "evidence_count": 2,
+        "evidence_classes": [
+          "annotation-derived",
+          "experimental"
+        ],
+        "strongest_evidence_class": "experimental",
+        "evidence_records": [
+          {
+            "evidence_id": "PM-EVD-0012",
+            "evidence_class": "annotation-derived",
+            "doi": null,
+            "pmid": null,
+            "database_accession": null,
+            "provenance": "data/sources/effectors_seed.json; data/sources/host_target_audit.json",
+            "note": "Relationship is derived from the original target annotation; it is not independent experimental evidence."
+          },
+          {
+            "evidence_id": "PM-EVD-0053",
+            "evidence_class": "experimental",
+            "doi": "10.1128/IAI.71.7.4018-4025.2003",
+            "pmid": "12819090",
+            "database_accession": null,
+            "provenance": "Park et al., Infect Immun 2003 (Msp2/p44 facilitates granulocyte adherence)",
+            "note": "Recombinant Msp2 binds PSGL-1-expressing cells and reduces PSGL-1 antibody binding; the study supports Msp2/PSGL-1 association without establishing Msp2 as the sole PSGL-1 adhesin."
+          }
+        ]
+      }
+    ]
+  }
+}

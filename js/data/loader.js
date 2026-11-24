@@ -33,9 +33,9 @@
 
 import { normalizeDataset } from '../utils/dataset.js';
 
-// Default URLs for the built-in datasets
-export const DEFAULT_DATASET_URL = 'data/pathomap-dataset.json';
-export const DEFAULT_SAMPLE_DATASET_URL = 'data/sample-dataset.json';
+// Default URLs for the built-in datasets (relative to pages/ directory)
+export const DEFAULT_DATASET_URL = '../data/pathomap-dataset.json';
+export const DEFAULT_SAMPLE_DATASET_URL = '../data/sample-dataset.json';
 
 // Shared hint shown when a fetch fails because the site is opened as a file
 export const HTTP_SETUP_HINT = 'Serve the site over HTTP (for example, python -m http.server).';

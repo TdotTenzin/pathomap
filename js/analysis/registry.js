@@ -8,7 +8,7 @@ export const ANALYSIS_MODULES = [
         description: "Explore host\u2013pathogen interaction relationships.",
         version: "1.1.0",
         status: "available",
-        page: "interaction-analysis.html",
+        page: "/pages/interaction-analysis.html",
         prerequisites: {
             tables: ["pathogens", "effectors", "host_proteins", "interactions", "interaction_evidence"],
             fields: []

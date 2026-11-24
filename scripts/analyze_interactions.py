@@ -26,6 +26,8 @@ from identifiers import interaction_evidence_key, is_entity_id
 ROOT = Path(__file__).resolve().parents[1]
 DATASET_PATH = ROOT / "data" / "pathomap-dataset.json"
 OUTPUT_PATH = ROOT / "data" / "derived" / "interaction_analysis.json"
+SAMPLE_DATASET_PATH = ROOT / "data" / "sample-dataset.json"
+SAMPLE_OUTPUT_PATH = ROOT / "data" / "derived" / "interaction_analysis_sample.json"
 ANALYSIS_VERSION = "1.2"
 OUTPUT_SCHEMA_VERSION = "1.2"
 EVIDENCE_CLASSES = {"experimental", "predicted", "annotation-derived", "hypothetical"}
@@ -684,6 +686,7 @@ def build(
     strict: bool = False,
     dataset_path: Path = DATASET_PATH,
     output_path: Path = OUTPUT_PATH,
+    sample_output_path: Path | None = None,
 ) -> int:
     """Analyze the dataset in-process; ``check=True`` writes nothing."""
     with no_writes() if check else nullcontext():
@@ -701,6 +704,17 @@ def build(
         result = analyze(dataset, source_bytes, dataset_path=dataset_path)
         if not check:
             write_json_atomic(output_path, result)
+            if sample_output_path is not None:
+                try:
+                    sample_bytes = SAMPLE_DATASET_PATH.read_bytes()
+                    sample_dataset = json.loads(sample_bytes)
+                except (OSError, json.JSONDecodeError) as exc:
+                    print(f"error: cannot read sample dataset: {exc}", file=sys.stderr)
+                    return 2
+                write_json_atomic(
+                    sample_output_path,
+                    analyze(sample_dataset, sample_bytes, dataset_path=SAMPLE_DATASET_PATH),
+                )
 
         stats = result["statistics"]
         print(f"interactions: {stats['interaction_count']}")
@@ -728,6 +742,11 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--dataset", type=Path, default=DATASET_PATH, help="source PathoMap dataset JSON")
     parser.add_argument("--output", type=Path, default=OUTPUT_PATH, help="derived analysis JSON output path")
+    parser.add_argument(
+        "--sample-output",
+        type=Path,
+        help="also write the built-in sample dataset analysis to this path",
+    )
     parser.add_argument("--check", action="store_true", help="validate and calculate without writing the JSON artifact")
     parser.add_argument("--strict", action="store_true", help="exit non-zero when validation or result issues exist")
     args = parser.parse_args(argv)
@@ -736,6 +755,7 @@ def main(argv: list[str] | None = None) -> int:
         strict=args.strict,
         dataset_path=args.dataset,
         output_path=args.output,
+        sample_output_path=args.sample_output,
     )
 
 

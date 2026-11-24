@@ -34,8 +34,8 @@ Serve the directory over HTTP (the browser must be able to fetch JSON):
 python -m http.server 8000
 ```
 
-Open <http://localhost:8000>. The interactive network is at
-<http://localhost:8000/interaction-analysis.html> after loading a dataset on the home page, or it
+Open <http://localhost:8000/pages/index.html>. The interactive network is at
+<http://localhost:8000/pages/interaction-analysis.html> after loading a dataset on the home page, or it
 will fetch the curated dataset directly.
 
 ## Build the dataset
@@ -79,7 +79,9 @@ dependencies. Full pipeline details: `docs/DATA_PIPELINE.md`.
 
 ```
 host-pathogen-tracker/
-├── index.html                  # SPA shell
+├── pages/
+│   ├── index.html              # SPA shell
+│   └── interaction-analysis.html
 ├── css/                        # base, layout, components, utilities
 ├── js/                         # vanilla ES modules (data, ui, utils, views)
 ├── scripts/                    # Python build pipeline

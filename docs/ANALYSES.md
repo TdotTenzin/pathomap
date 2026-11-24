@@ -171,8 +171,9 @@ difference honestly.
   filtering.
 - **Details:** clicking a node or edge opens biological fields joined by stable ID, related
   entities, evidence records, citations and external UniProt/DOI links.
-- **Interaction:** drag nodes to move them; collisions bounce, linked proteins re-align, and the
-  Settle control reheats the layout without changing the underlying biology.
+- **Interaction:** the graph is laid out organically by repulsion, link springs and centering; drag
+  nodes to move them, pan the background, zoom, fit to screen or reset. Settle reheats the layout
+  without changing the underlying biology. Shared host targets are ringed.
 - **Exports:** filtered network JSON with provenance and active filters, node/edge CSV, and SVG
   with embedded metadata. Downloads reflect the current filters.
 - **Tests:** `node --test tests/network_model.test.mjs` covers derived/fallback selection,
@@ -192,10 +193,10 @@ difference honestly.
   and source SHA-256 all match. Uploaded datasets without a hash always use the display-only
   fallback; that path has no validation issues, unresolved-target report or deduplicated evidence
   identity beyond the browser model.
-- The layered lane layout uses a lightweight force simulation: nodes are held in their
-  pathogen → effector → host lanes, linked proteins pull into vertical alignment, and collisions
-  bounce. Dragging and settling are exploratory and are not a measure of interaction strength or
-  spatial biology.
+- The force-directed layout is exploratory only: node distances and positions are not a measure of
+  interaction strength or spatial biology. Membership edges (pathogen encodes effector) are dotted
+  and arrowed; interaction edges keep their evidence colouring. Shared host rings are derived only
+  from distinct pathogen IDs already present on curated interaction edges.
 - SVG export is a static snapshot: interactive hit paths, selection dimming and keyboard
   attributes are removed, and the exported styles are inlined.
 - Pathogen classification is a heuristic when `gram_stain` is absent; it must not be treated as

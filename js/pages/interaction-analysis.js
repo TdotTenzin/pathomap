@@ -19,7 +19,7 @@ import {
   loadDataset,
   loadStoredDataset,
 } from '../data/loader.js';
-import { loadInteractionAnalysis } from '../data/interaction-analysis.js';
+import { loadMatchingInteractionAnalysis } from '../data/interaction-analysis.js';
 import {
     UNCLASSIFIED,
     buildNetworkModel,
@@ -621,7 +621,11 @@ async function initInteractionAnalysisPage() {
 
         let analysis = null;
         try {
-            analysis = await loadInteractionAnalysis();
+            const result = await loadMatchingInteractionAnalysis(dataset);
+            analysis = result.analysis;
+            if (result.errors.length) {
+                console.warn('Interaction analysis artifact unavailable; using dataset fallback.', result.errors);
+            }
         } catch (error) {
             console.warn('Interaction analysis artifact unavailable; using dataset fallback.', error);
         }

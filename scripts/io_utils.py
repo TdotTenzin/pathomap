@@ -53,16 +53,17 @@ def write_bytes(path: Path, payload: bytes) -> None:
 
 
 def write_text(path: Path, text: str, *, atomic: bool = True) -> None:
-    """Write text, atomically by default, unless writes are suppressed."""
+    """Write UTF-8 text with LF endings, atomically by default."""
     if not _WRITES_ENABLED:
         return
+    payload = text.encode("utf-8")
     path.parent.mkdir(parents=True, exist_ok=True)
     if not atomic:
-        path.write_text(text, encoding="utf-8")
+        path.write_bytes(payload)
         return
     temporary = path.with_name(f".{path.name}.{os.getpid()}.tmp")
     try:
-        temporary.write_text(text, encoding="utf-8")
+        temporary.write_bytes(payload)
         temporary.replace(path)
     finally:
         if temporary.exists():

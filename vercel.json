@@ -1,0 +1,21 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": null,
+  "installCommand": "",
+  "outputDirectory": ".",
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/pages/index.html"
+    },
+    {
+      "source": "/index.html",
+      "destination": "/pages/index.html"
+    },
+    {
+      "source": "/interaction-analysis.html",
+      "destination": "/pages/interaction-analysis.html"
+    }
+  ]
+}
