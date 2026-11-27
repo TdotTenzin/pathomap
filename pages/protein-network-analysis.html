@@ -1,0 +1,151 @@
+<!--
+  PathoMap - Protein Network Analysis module page.
+
+  Standalone page for one analysis module. Uploaded data is analyzed in this
+  page only; no dataset is restored from a previous session.
+
+  Script: js/pages/module-page.js (body[data-module] selects the module).
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protein Network Analysis - PathoMap</title>
+  <meta name="description" content="Inspect the structure of supported effector-host relationships.">
+  <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('pathomap-theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (error) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/utilities.css">
+</head>
+<body data-module="protein-network-analysis">
+  <nav>
+    <div class="container nav-inner">
+      <a class="nav-brand" href="index.html">PathoMap</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Workspace</a></li>
+        <li class="nav-module"><a href="interaction-analysis.html">Interactions</a></li>
+        <li class="nav-module"><a href="sequence-analysis.html">Sequences</a></li>
+        <li class="nav-module"><a href="pathway-analysis.html">Pathways</a></li>
+        <li class="nav-module"><a href="functional-enrichment.html">Enrichment</a></li>
+        <li class="nav-module"><a href="protein-network-analysis.html" aria-current="page">Protein network</a></li>
+        <li class="nav-module"><a href="comparative-pathogen-analysis.html">Comparative</a></li>
+        <li class="nav-module"><a href="host-response-analysis.html">Host response</a></li>
+        <li class="nav-module"><a href="predictive-readiness.html">Readiness</a></li>
+      </ul>
+      <button class="dark-toggle" id="dark-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9790;</button>
+    </div>
+  </nav>
+
+  <main>
+    <section id="protein-network-analysis" class="section pna-section">
+      <div class="container">
+
+        <div class="section-header pna-header">
+          <h1 class="page-title">Protein Network Analysis</h1>
+          <p class="section-subtitle">
+            What structure do the supported effector-host relationships form?
+          </p>
+        </div>
+
+        <div class="pna-stats" aria-label="Network overview">
+          <div class="pna-stat">
+            <span class="pna-stat-value" data-stat="nodes">&mdash;</span>
+            <span class="pna-stat-label">Nodes</span>
+          </div>
+          <div class="pna-stat">
+            <span class="pna-stat-value" data-stat="edges">&mdash;</span>
+            <span class="pna-stat-label">Edges</span>
+          </div>
+          <div class="pna-stat">
+            <span class="pna-stat-value" data-stat="components">&mdash;</span>
+            <span class="pna-stat-label">Components</span>
+          </div>
+          <div class="pna-stat">
+            <span class="pna-stat-value" data-stat="largest-component">&mdash;</span>
+            <span class="pna-stat-label">Largest component</span>
+          </div>
+        </div>
+        <p class="pna-muted pna-stats-status" id="pna-stats-status" role="status" hidden></p>
+
+        <div class="pna-filters">
+          <div class="pna-filters-heading">
+            <h2 class="pna-filters-title">Filter network</h2>
+            <button type="button" class="tool-btn" id="pna-reset">Clear filters</button>
+          </div>
+          <div class="pna-filter-grid">
+            <label class="pna-filter pna-filter-search">
+              <span>Search</span>
+              <input
+                class="tool-input"
+                id="pna-search"
+                type="search"
+                placeholder="Search node"
+                autocomplete="off"
+              >
+            </label>
+            <label class="pna-filter">
+              <span>Node type</span>
+              <select class="tool-input" id="pna-node-type">
+                <option value="">All node types</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="pna-panel pna-tables-panel">
+          <div class="pna-panel-header">
+            <div>
+              <h3>Network Structure</h3>
+              <p class="pna-table-source" id="pna-table-source">Source details appear once a dataset is loaded.</p>
+            </div>
+            <button type="button" class="tool-btn" id="pna-download" disabled>Download result</button>
+          </div>
+
+          <div class="pna-tables-layout">
+            <div class="pna-tables-main">
+              <div class="pna-table-status" id="pna-table-status" role="status">Waiting for data</div>
+              <div class="pna-table-empty" id="pna-table-empty" hidden>
+                <p>No network data to display.</p>
+                <p class="pna-muted">Load a dataset with interaction records.</p>
+              </div>
+
+              <div class="pna-tables-content" id="pna-tables-content"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pna-components">
+          <h3>Reading this analysis</h3>
+          <ul class="pna-component-list">
+            <li><strong>Centrality</strong> &mdash; describes graph structure, not biological importance.</li>
+            <li><strong>Components and clusters</strong> &mdash; depend on upload coverage and edge provenance.</li>
+            <li><strong>Membership links</strong> &mdash; are included as graph edges but are not effector-host interactions.</li>
+            <li><strong>Graph metrics</strong> &mdash; are computed from the filtered network view.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer-inner">
+      <span>PathoMap &mdash; curated prototype, not a comprehensive resource.</span>
+      <a href="transparency.html">Limitations &amp; Scope</a>
+    </div>
+  </footer>
+
+  <script type="module" src="../js/pages/protein-network-analysis.js"></script>
+</body>
+</html>

@@ -20,7 +20,7 @@ from pathlib import Path
 from typing import Any
 
 sys.path.insert(0, str(Path(__file__).parent))
-from build_common import no_writes, utc_now, write_json_atomic
+from build_common import no_writes, utc_now, write_json
 from identifiers import interaction_evidence_key, is_entity_id
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -703,7 +703,7 @@ def build(
 
         result = analyze(dataset, source_bytes, dataset_path=dataset_path)
         if not check:
-            write_json_atomic(output_path, result)
+            write_json(output_path, result)
             if sample_output_path is not None:
                 try:
                     sample_bytes = SAMPLE_DATASET_PATH.read_bytes()
@@ -711,7 +711,7 @@ def build(
                 except (OSError, json.JSONDecodeError) as exc:
                     print(f"error: cannot read sample dataset: {exc}", file=sys.stderr)
                     return 2
-                write_json_atomic(
+                write_json(
                     sample_output_path,
                     analyze(sample_dataset, sample_bytes, dataset_path=SAMPLE_DATASET_PATH),
                 )

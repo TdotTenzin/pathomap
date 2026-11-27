@@ -14,17 +14,9 @@ import { getAnalysisModules } from '../analysis/registry.js';
 import { isAnalysisEligible } from '../analysis/eligibility.js';
 import { buildInteractionAnalysisSummary } from '../analysis/summary.js';
 import { loadMatchingInteractionAnalysis } from '../data/interaction-analysis.js';
+import { escapeXml as escapeHtml } from '../utils/export.js';
 
 let summaryRenderId = 0;
-
-function escapeHtml(value) {
-    return String(value ?? '')
-        .replaceAll('&', '&amp;')
-        .replaceAll('<', '&lt;')
-        .replaceAll('>', '&gt;')
-        .replaceAll('"', '&quot;')
-        .replaceAll("'", '&#39;');
-}
 
 function renderSummaryPlaceholder(message) {
     return `

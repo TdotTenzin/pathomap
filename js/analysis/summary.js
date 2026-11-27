@@ -10,14 +10,10 @@
 */
 
 import { analysisMatchesDataset } from './network.js';
+import { INTERACTION_EVIDENCE_CLASS_VALUES } from '../data/schema.js';
 import { evidenceClassLabel } from '../utils/labels.js';
 
-const EVIDENCE_CLASS_KEYS = new Set([
-    'experimental',
-    'predicted',
-    'annotation-derived',
-    'hypothetical',
-]);
+const EVIDENCE_CLASS_KEYS = new Set(INTERACTION_EVIDENCE_CLASS_VALUES);
 
 const VALIDATION_ISSUE_FIELDS = [
     'interaction_issues',

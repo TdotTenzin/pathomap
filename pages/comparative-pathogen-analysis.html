@@ -1,0 +1,151 @@
+<!--
+  PathoMap - Comparative Pathogen Analysis module page.
+
+  Standalone page for one analysis module. Uploaded data is analyzed in this
+  page only; no dataset is restored from a previous session.
+
+  Script: js/pages/module-page.js (body[data-module] selects the module).
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparative Pathogen Analysis - PathoMap</title>
+  <meta name="description" content="Compare pathogens by effector repertoire and host target set.">
+  <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('pathomap-theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (error) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/utilities.css">
+</head>
+<body data-module="comparative-pathogen-analysis">
+  <nav>
+    <div class="container nav-inner">
+      <a class="nav-brand" href="index.html">PathoMap</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Workspace</a></li>
+        <li class="nav-module"><a href="interaction-analysis.html">Interactions</a></li>
+        <li class="nav-module"><a href="sequence-analysis.html">Sequences</a></li>
+        <li class="nav-module"><a href="pathway-analysis.html">Pathways</a></li>
+        <li class="nav-module"><a href="functional-enrichment.html">Enrichment</a></li>
+        <li class="nav-module"><a href="protein-network-analysis.html">Protein network</a></li>
+        <li class="nav-module"><a href="comparative-pathogen-analysis.html" aria-current="page">Comparative</a></li>
+        <li class="nav-module"><a href="host-response-analysis.html">Host response</a></li>
+        <li class="nav-module"><a href="predictive-readiness.html">Readiness</a></li>
+      </ul>
+      <button class="dark-toggle" id="dark-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9790;</button>
+    </div>
+  </nav>
+
+  <main>
+    <section id="comparative-pathogen-analysis" class="section cpa-section">
+      <div class="container">
+
+        <div class="section-header cpa-header">
+          <h1 class="page-title">Comparative Pathogen Analysis</h1>
+          <p class="section-subtitle">
+            How do pathogens differ by effector repertoire and target set?
+          </p>
+        </div>
+
+        <div class="cpa-stats" aria-label="Comparison overview">
+          <div class="cpa-stat">
+            <span class="cpa-stat-value" data-stat="pathogens">&mdash;</span>
+            <span class="cpa-stat-label">Pathogens compared</span>
+          </div>
+          <div class="cpa-stat">
+            <span class="cpa-stat-value" data-stat="effectors">&mdash;</span>
+            <span class="cpa-stat-label">Effectors compared</span>
+          </div>
+          <div class="cpa-stat">
+            <span class="cpa-stat-value" data-stat="targets">&mdash;</span>
+            <span class="cpa-stat-label">Targeted host proteins</span>
+          </div>
+          <div class="cpa-stat">
+            <span class="cpa-stat-value" data-stat="clusters">&mdash;</span>
+            <span class="cpa-stat-label">Effector clusters</span>
+          </div>
+        </div>
+        <p class="cpa-muted cpa-stats-status" id="cpa-stats-status" role="status" hidden></p>
+
+        <div class="cpa-filters">
+          <div class="cpa-filters-heading">
+            <h2 class="cpa-filters-title">Filter comparisons</h2>
+            <button type="button" class="tool-btn" id="cpa-reset">Clear filters</button>
+          </div>
+          <div class="cpa-filter-grid">
+            <label class="cpa-filter cpa-filter-search">
+              <span>Search</span>
+              <input
+                class="tool-input"
+                id="cpa-search"
+                type="search"
+                placeholder="Search pathogen"
+                autocomplete="off"
+              >
+            </label>
+            <label class="cpa-filter">
+              <span>Pathogen</span>
+              <select class="tool-input" id="cpa-pathogen">
+                <option value="">All pathogens</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="cpa-panel cpa-tables-panel">
+          <div class="cpa-panel-header">
+            <div>
+              <h3>Pathogen Comparisons</h3>
+              <p class="cpa-table-source" id="cpa-table-source">Source details appear once a dataset is loaded.</p>
+            </div>
+            <button type="button" class="tool-btn" id="cpa-download" disabled>Download result</button>
+          </div>
+
+          <div class="cpa-tables-layout">
+            <div class="cpa-tables-main">
+              <div class="cpa-table-status" id="cpa-table-status" role="status">Waiting for data</div>
+              <div class="cpa-table-empty" id="cpa-table-empty" hidden>
+                <p>No comparison data to display.</p>
+                <p class="cpa-muted">Load a dataset with at least two pathogens.</p>
+              </div>
+
+              <div class="cpa-tables-content" id="cpa-tables-content"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cpa-components">
+          <h3>Reading this analysis</h3>
+          <ul class="cpa-component-list">
+            <li><strong>Similarity</strong> &mdash; does not establish shared evolutionary origin or common mechanism.</li>
+            <li><strong>Unequal annotation coverage</strong> &mdash; and missing data affect every similarity value.</li>
+            <li><strong>Target similarity</strong> &mdash; uses uploaded interactions only.</li>
+            <li><strong>Descriptive clusters</strong> &mdash; group pathogens by effector repertoire similarity.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer-inner">
+      <span>PathoMap &mdash; curated prototype, not a comprehensive resource.</span>
+      <a href="transparency.html">Limitations &amp; Scope</a>
+    </div>
+  </footer>
+
+  <script type="module" src="../js/pages/comparative-pathogen-analysis.js"></script>
+</body>
+</html>

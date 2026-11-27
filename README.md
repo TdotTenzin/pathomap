@@ -15,11 +15,11 @@ Schema version **3.0**. Every row carries a stable entity ID (`PM-PAT-…`, `PM-
 | `host_proteins` | 33 | Stable ID, UniProt, GO, pathway and STRING partner data |
 | `host_targets` | 129 | Audited effector target names and resolution status |
 | `interactions` | 39 | Resolved effector–host protein relationships |
-| `interaction_evidence` | 39 | Evidence class and provenance for each interaction |
+| `interaction_evidence` | 69 | Evidence class and provenance for each interaction |
 | `references` | 58 | Citations used by curated records |
 
-The home page includes a References & Evidence section. Primary database tabs cover pathogens,
-effectors, host targets, host proteins, and interactions.
+Database tabs cover pathogens, effectors, host targets, host proteins, interactions, references
+and interaction evidence; uploaded datasets can populate every tab.
 
 A 5-pathogen, 27-effector sample is bundled for demos. The Interaction Analysis page implements
 an interactive, filterable pathogen → effector → host-protein network with evidence-aware edge
@@ -36,7 +36,18 @@ python -m http.server 8000
 
 Open <http://localhost:8000/pages/index.html>. The interactive network is at
 <http://localhost:8000/pages/interaction-analysis.html> after loading a dataset on the home page, or it
-will fetch the curated dataset directly.
+will fetch the curated dataset directly. Limitations and scope notes live at
+<http://localhost:8000/pages/transparency.html> (also linked from each page's footer).
+
+The home page is a single Discovery workspace with one upload/load area: paste or upload a CSV,
+TSV, or JSON table, or click **Load example**, **Load curated dataset**, or **Load sample dataset**.
+Any of those actions analyzes the data immediately; columns are auto-matched and can be corrected
+before clicking **Discover insights** on pasted rows. Every module and the inline data table use
+the same in-memory dataset. The workspace shows compact summary cards with a **Show full results**
+link; following that link (or a module nav link) hands the active dataset to the module page once.
+The module page consumes and clears the handoff, then runs its own detailed analysis. Module pages
+do not duplicate the upload panel; load or change data in the Workspace and follow a module link.
+Nothing is restored on page load, and localStorage is never used for datasets.
 
 ## Build the dataset
 
@@ -81,9 +92,10 @@ dependencies. Full pipeline details: `docs/DATA_PIPELINE.md`.
 host-pathogen-tracker/
 ├── pages/
 │   ├── index.html              # SPA shell
-│   └── interaction-analysis.html
+│   ├── interaction-analysis.html
+│   └── transparency.html       # limitations and scope notes
 ├── css/                        # base, layout, components, utilities
-├── js/                         # vanilla ES modules (data, ui, utils, views)
+├── js/                         # vanilla ES modules (data, discovery, experiment, ui, utils, views)
 ├── scripts/                    # Python build pipeline
 ├── data/
 │   ├── pathomap-dataset.json   # generated; loaded by the app

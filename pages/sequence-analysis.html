@@ -1,0 +1,161 @@
+<!--
+  PathoMap - Effector Sequence Analysis module page.
+
+  Standalone page for one analysis module. Uploaded data is analyzed in this
+  page only; no dataset is restored from a previous session.
+
+  Script: js/pages/module-page.js (body[data-module] selects the module).
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Effector Sequence Analysis - PathoMap</title>
+  <meta name="description" content="Compute sequence-derived descriptors for uploaded effectors.">
+  <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('pathomap-theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (error) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/utilities.css">
+</head>
+<body data-module="sequence-analysis">
+  <nav>
+    <div class="container nav-inner">
+      <a class="nav-brand" href="index.html">PathoMap</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Workspace</a></li>
+        <li class="nav-module"><a href="interaction-analysis.html">Interactions</a></li>
+        <li class="nav-module"><a href="sequence-analysis.html" aria-current="page">Sequences</a></li>
+        <li class="nav-module"><a href="pathway-analysis.html">Pathways</a></li>
+        <li class="nav-module"><a href="functional-enrichment.html">Enrichment</a></li>
+        <li class="nav-module"><a href="protein-network-analysis.html">Protein network</a></li>
+        <li class="nav-module"><a href="comparative-pathogen-analysis.html">Comparative</a></li>
+        <li class="nav-module"><a href="host-response-analysis.html">Host response</a></li>
+        <li class="nav-module"><a href="predictive-readiness.html">Readiness</a></li>
+      </ul>
+      <button class="dark-toggle" id="dark-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9790;</button>
+    </div>
+  </nav>
+
+  <main>
+    <section id="sequence-analysis" class="section sa-section">
+      <div class="container">
+
+        <div class="section-header sa-header">
+          <h1 class="page-title">Effector Sequence Analysis</h1>
+          <p class="section-subtitle">
+            What molecular and sequence-derived properties characterize the effector set?
+          </p>
+        </div>
+
+        <div class="sa-stats" aria-label="Sequence overview">
+          <div class="sa-stat">
+            <span class="sa-stat-value" data-stat="sequences">&mdash;</span>
+            <span class="sa-stat-label">Sequences analyzed</span>
+          </div>
+          <div class="sa-stat">
+            <span class="sa-stat-value" data-stat="missing">&mdash;</span>
+            <span class="sa-stat-label">Missing sequences</span>
+          </div>
+          <div class="sa-stat">
+            <span class="sa-stat-value" data-stat="mean-length">&mdash;</span>
+            <span class="sa-stat-label">Mean length (aa)</span>
+          </div>
+          <div class="sa-stat">
+            <span class="sa-stat-value" data-stat="mean-pi">&mdash;</span>
+            <span class="sa-stat-label">Mean pI</span>
+          </div>
+          <div class="sa-stat">
+            <span class="sa-stat-value" data-stat="mean-gravy">&mdash;</span>
+            <span class="sa-stat-label">Mean GRAVY</span>
+          </div>
+        </div>
+        <p class="sa-muted sa-stats-status" id="sa-stats-status" role="status" hidden></p>
+
+        <div class="sa-filters">
+          <div class="sa-filters-heading">
+            <h2 class="sa-filters-title">Filter sequences</h2>
+            <button type="button" class="tool-btn" id="sa-reset">Clear filters</button>
+          </div>
+          <div class="sa-filter-grid">
+            <label class="sa-filter sa-filter-search">
+              <span>Search</span>
+              <input
+                class="tool-input"
+                id="sa-search"
+                type="search"
+                placeholder="Search effector, pathogen, or phenotype"
+                autocomplete="off"
+              >
+            </label>
+            <label class="sa-filter">
+              <span>Pathogen</span>
+              <select class="tool-input" id="sa-pathogen">
+                <option value="">All pathogens</option>
+              </select>
+            </label>
+            <label class="sa-filter">
+              <span>Phenotype</span>
+              <select class="tool-input" id="sa-phenotype">
+                <option value="">All phenotypes</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="sa-panel sa-tables-panel">
+          <div class="sa-panel-header">
+            <div>
+              <h3>Sequence Features</h3>
+              <p class="sa-table-source" id="sa-table-source">Source details appear once a dataset is loaded.</p>
+            </div>
+            <button type="button" class="tool-btn" id="sa-download" disabled>Download result</button>
+          </div>
+
+          <div class="sa-tables-layout">
+            <div class="sa-tables-main">
+              <div class="sa-table-status" id="sa-table-status" role="status">Waiting for data</div>
+              <div class="sa-table-empty" id="sa-table-empty" hidden>
+                <p>No sequences to display.</p>
+                <p class="sa-muted">Load a dataset with effector sequences.</p>
+              </div>
+
+              <div class="sa-tables-content" id="sa-tables-content"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sa-components">
+          <h3>Reading this analysis</h3>
+          <ul class="sa-component-list">
+            <li><strong>Sequence-derived properties</strong> &mdash; computed descriptors include length, molecular weight, isoelectric point (pI), and GRAVY hydropathy score.</li>
+            <li><strong>Distributions</strong> &mdash; grouped by phenotype to compare molecular characteristics across effector categories.</li>
+            <li><strong>Missing sequences</strong> &mdash; effectors without sequence data are reported separately.</li>
+            <li><strong>Limitations</strong> &mdash; these properties are not direct evidence of localization, secretion, structure, or function.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer-inner">
+      <span>PathoMap &mdash; curated prototype, not a comprehensive resource.</span>
+      <a href="transparency.html">Limitations &amp; Scope</a>
+    </div>
+  </footer>
+
+  <script type="module" src="../js/pages/sequence-analysis.js"></script>
+</body>
+</html>

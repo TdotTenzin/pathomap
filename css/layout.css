@@ -17,6 +17,7 @@
     - #hero            Full-width gradient banner with decorative radial blobs
                        (::before / ::after) and the research-objective card
                        (.research-objective / .research-question / .research-list).
+    - .site-footer     Shared footer bar with a link to the transparency page.
     - @media 768px     Mobile adjustments (tighter padding, smaller type,
                        compressed nav links).
 
@@ -106,10 +107,22 @@ nav .nav-brand {
 
 nav .nav-links {
   display: flex;
-  gap: 24px;
+  align-items: center;
+  gap: 16px;
   list-style: none;
   margin-left: auto;
   margin-right: 16px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  white-space: nowrap;
+}
+
+nav .nav-links::-webkit-scrollbar {
+  display: none;
+}
+
+nav .nav-links .nav-module a {
+  font-size: 0.76rem;
 }
 
 nav .nav-links a {
@@ -156,6 +169,40 @@ nav .nav-links a:hover::after {
 .dark-toggle:hover {
   color: var(--color-blue);
   border-color: var(--color-blue);
+}
+
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  padding: 24px 0;
+  background: var(--color-bg-alt);
+}
+
+.site-footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 24px;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.transparency-list {
+  color: var(--color-text);
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 900px;
+}
+
+.transparency-list li {
+  margin: 0;
+}
+
+.transparency-list strong {
+  color: var(--color-text);
 }
 
 #hero {
@@ -275,7 +322,7 @@ nav .nav-links a:hover::after {
     font-size: 1rem;
   }
   nav .nav-links {
-    gap: 16px;
+    gap: 12px;
   }
   #hero {
     padding: 64px 0 56px;

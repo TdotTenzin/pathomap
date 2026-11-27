@@ -767,7 +767,14 @@ export const HOST_TARGET_VISIBLE_COLUMNS = [
 // References table metadata
 // ---------------------------------------------------------------------------
 
-export const REFERENCE_COLUMNS = ['entity_id', 'doi', 'url'];
+export const REFERENCE_COLUMNS_META = [
+  { key: 'entity_id', label: 'Reference ID', type: 'string', description: 'Stable citation identifier in the form PM-REF-0001.', source: 'PathoMap identifier registry' },
+  { key: 'doi', label: 'DOI', type: 'string, nullable', description: 'Digital Object Identifier used to resolve the publication.', source: 'Curated citation' },
+  { key: 'url', label: 'URL', type: 'string, nullable', description: 'Resolvable link to the cited source.', source: 'Curated citation' },
+];
+export const REFERENCE_COLUMN_LABELS = Object.fromEntries(REFERENCE_COLUMNS_META.map((column) => [column.key, column.label]));
+export const REFERENCE_COLUMNS = REFERENCE_COLUMNS_META.map((column) => column.key);
+export const REFERENCE_VISIBLE_COLUMNS = REFERENCE_COLUMNS;
 
 // ---------------------------------------------------------------------------
 // Interaction and interaction-evidence metadata
@@ -785,10 +792,19 @@ export const INTERACTION_COLUMN_LABELS = Object.fromEntries(INTERACTION_COLUMNS_
 export const INTERACTION_COLUMNS = INTERACTION_COLUMNS_META.map((column) => column.key);
 export const INTERACTION_VISIBLE_COLUMNS = ['interaction_id', 'effector_id', 'host_protein_id', 'mechanism', 'interaction_type'];
 
-export const INTERACTION_EVIDENCE_COLUMNS = [
-  'evidence_id', 'interaction_id', 'evidence_class', 'doi', 'pmid',
-  'database_accession', 'provenance', 'note',
+export const INTERACTION_EVIDENCE_COLUMNS_META = [
+  { key: 'evidence_id', label: 'Evidence ID', type: 'string', description: 'Stable identifier in the form PM-EVD-0001.', source: 'PathoMap identifier registry' },
+  { key: 'interaction_id', label: 'Interaction ID', type: 'string', description: 'Interaction this record supports.', source: 'interactions.interaction_id' },
+  { key: 'evidence_class', label: 'Evidence class', type: 'enum', description: 'experimental, predicted, annotation-derived or hypothetical.', source: 'Evidence curation' },
+  { key: 'doi', label: 'DOI', type: 'string, nullable', description: 'Digital Object Identifier for the supporting publication.', source: 'Curated evidence' },
+  { key: 'pmid', label: 'PMID', type: 'string, nullable', description: 'PubMed identifier for the supporting publication.', source: 'Curated evidence' },
+  { key: 'database_accession', label: 'Database accession', type: 'string, nullable', description: 'Accession in an external evidence database.', source: 'Curated evidence' },
+  { key: 'provenance', label: 'Provenance', type: 'string', description: 'Source and rationale for this evidence record.', source: 'Curated evidence' },
+  { key: 'note', label: 'Note', type: 'string, nullable', description: 'Additional context for the evidence record.', source: 'Curated evidence' },
 ];
+export const INTERACTION_EVIDENCE_COLUMN_LABELS = Object.fromEntries(INTERACTION_EVIDENCE_COLUMNS_META.map((column) => [column.key, column.label]));
+export const INTERACTION_EVIDENCE_COLUMNS = INTERACTION_EVIDENCE_COLUMNS_META.map((column) => column.key);
+export const INTERACTION_EVIDENCE_VISIBLE_COLUMNS = INTERACTION_EVIDENCE_COLUMNS;
 
 // ---------------------------------------------------------------------------
 // Enum registry + human-readable classification labels

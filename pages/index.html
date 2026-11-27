@@ -1,23 +1,23 @@
 ﻿<!--
-  PathoMap - Single-page host-pathogen dataset browser.
+  PathoMap - Upload-driven computational discovery workspace.
 
   Purpose: Entry point for the PathoMap v3.0 web app. Defines the full page
   structure that the JavaScript modules hydrate at runtime.
 
   Structure:
-    - <nav>          Sticky top bar with brand, section links, and dark-mode toggle (#dark-toggle).
-    - <header#hero>  Landing hero with the project research objective (effector-sequence ML question).
-    - <main>         Database section (#database): upload bar, table tabs, search/CSV toolbar,
-                     row count/status line, pagination controls, empty data table shell,
-                     and a collapsible "Data dictionary" (<details>) for schema docs.
-                     Generated Analyses section (#generated-analyses).
-                     References & Evidence section (#references).
+    - <nav>          Sticky top bar with brand, one link per analysis module, and dark-mode toggle.
+    - <header#hero>  Landing hero with a plain-language three-step explanation.
+    - <main>         One Discovery workspace (#discovery): paste/upload or load a dataset; every
+                     module in docs/ANALYSES.md and the results table (#results-table) consume the
+                     same in-memory dataset. Dataset load controls live inside the workspace.
+    - <footer>       Shared footer linking to the standalone Transparency page.
 
   Key element IDs consumed by JS:
-    dataset-file, dataset-file-name, dataset-load-builtin, dataset-load-sample, dataset-status  -> js/ui/upload.js
+    disc-file, disc-example, disc-template, disc-curated, disc-sample, disc-analyze,
+    disc-download, disc-input, disc-status, disc-mapping, disc-mapping-grid,
+    disc-upload-summary, disc-results                                                         -> js/ui/discovery.js
     db-tabs, db-search, db-download, db-count, db-hint, db-prev, db-next, db-page-size,
     db-page-info, db-pagination-info, db-head, db-body, db-schema-body                       -> js/views/database.js
-    references-content                                                                        -> js/ui/references.js
     dark-toggle                                                                               -> js/main.js
 
   Stylesheets are loaded in cascade order: base -> layout -> components -> utilities.
@@ -51,167 +51,153 @@
     <div class="container nav-inner">
       <a class="nav-brand" href="#hero">PathoMap</a>
       <ul class="nav-links" id="nav-links">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="/pages/interaction-analysis.html">Interaction Analysis</a></li>
+        <li><a href="#discovery">Workspace</a></li>
+        <li class="nav-module"><a href="/pages/interaction-analysis.html">Interactions</a></li>
+        <li class="nav-module"><a href="/pages/sequence-analysis.html">Sequences</a></li>
+        <li class="nav-module"><a href="/pages/pathway-analysis.html">Pathways</a></li>
+        <li class="nav-module"><a href="/pages/functional-enrichment.html">Enrichment</a></li>
+        <li class="nav-module"><a href="/pages/protein-network-analysis.html">Protein network</a></li>
+        <li class="nav-module"><a href="/pages/comparative-pathogen-analysis.html">Comparative</a></li>
+        <li class="nav-module"><a href="/pages/host-response-analysis.html">Host response</a></li>
+        <li class="nav-module"><a href="/pages/predictive-readiness.html">Readiness</a></li>
       </ul>
       <button class="dark-toggle" id="dark-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9790;</button>
     </div>
   </nav>
 
-  <!-- Hero: project title, subtitle, and research objective (ML on effector sequences) -->
+  <!-- Hero: project purpose and research objective -->
   <header id="hero">
     <div class="container">
       <h1 class="hero-title">PathoMap</h1>
       <p class="hero-subtitle">
-        PathoMap is a curated host&ndash;pathogen interaction dataset. The current release contains pathogen, effector, and host-protein tables; interaction, evidence, and derived-analysis tables are being rebuilt one at a time.
+        PathoMap is a curated host&ndash;pathogen resource for connecting bacterial pathogens, their effector
+        proteins, and the host proteins they target. Every relationship carries stable IDs, an evidence class,
+        and a citation, so you can see what is known, how it is supported, and what remains uncertain.
       </p>
 
       <div class="research-objective">
         <p class="section-label">Research Objective</p>
         <h2 class="research-question">
-          Can the amino acid sequence features of bacterial effector proteins predict their pathogen's intracellular survival strategy?
-        </h3>
+          How do bacterial effectors connect to host proteins and pathways, and how strong is the evidence?
+        </h2>
         <ul class="research-list">
-          <li><strong>Background:</strong> Intracellular pathogens evade phagolysosomal killing by arresting maturation, escaping to the cytosol, rerouting vesicles, or remodeling vacuoles; some remain extracellular.</li>
-          <li><strong>Methods:</strong> Compute molecular weight, isoelectric point, GRAVY, and hydrophobicity windows from effector sequences; planned features include amino acid composition, aliphatic index, signal peptide probability, and low-complexity region count and length.</li>
-          <li><strong>Approach:</strong> Train and evaluate a machine learning classifier on curated effector data to predict intracellular survival strategy.</li>
+          <li><strong>Background:</strong> Published evidence for effector&ndash;host relationships is scattered across studies and databases. Broad annotations or shared pathways can be mistaken for direct interactions.</li>
+          <li><strong>Methods:</strong> Browse curated pathogens, effectors, host proteins, interactions, and references. Filter, sort, and export the tables, and inspect the provenance behind each relationship.</li>
+          <li><strong>Approach:</strong> Upload your own rows to compute interaction insights and compare them with the curated dataset. Generated results are labelled by evidence class and state exactly what is missing when data are insufficient.</li>
         </ul>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- Database section: upload controls, table toolbar, pagination, table shell, schema docs -->
-    <section id="database" class="section">
+    <!-- Discovery workspace: one upload feeds every implemented analysis module -->
+    <section id="discovery" class="section section-alt">
       <div class="container">
         <header class="section-header">
-          <p class="section-label">Database</p>
-          <h2 class="section-title">Browse &amp; Upload Dataset</h2>
+          <p class="section-label">Discovery Workspace</p>
+          <h2 class="section-title">Upload Data. Get Insights.</h2>
           <p class="section-subtitle">
-            Browse the NCBI-enriched pathogen, effector, and host-protein tables; filter, sort, or export them; or upload your own dataset JSON.
+            Paste or upload your results, or load a curated/sample dataset. Compact module summaries
+            stay linked to the rows below; open a module page whenever you want the full results.
           </p>
         </header>
 
-        <!-- Upload bar: file picker, curated/sample dataset loaders, status message -->
-        <div class="db-upload-bar">
-          <div class="db-upload-actions">
-            <label class="file-input-label" title="Upload a dataset JSON file (pathogens required; effectors and host_proteins optional)">
-              <input type="file" id="dataset-file" accept="application/json,.json" class="upload-input-inline" hidden>
+        <div class="exp-panel">
+          <div class="exp-controls">
+            <label class="file-input-label" title="Upload a CSV, TSV, or JSON table of experiment rows">
+              <input type="file" id="disc-file" accept=".csv,.tsv,.txt,.json,text/csv,text/tab-separated-values,application/json" hidden>
               <span class="tool-btn">Upload file</span>
-              <span class="dataset-file-name" id="dataset-file-name"></span>
             </label>
-            <button type="button" id="dataset-load-builtin" class="tool-btn" title="Load the full curated dataset: pathogens, effectors, and host proteins (data/pathomap-dataset.json)">Load curated dataset</button>
-            <button type="button" id="dataset-load-sample" class="tool-btn" title="Load a small test subset of all three tables (data/sample-dataset.json)">Load sample dataset</button>
-            <button type="button" id="dataset-download-template" class="tool-btn" title="Download an empty pathogens-only dataset template">Download template</button>
+            <button type="button" class="tool-btn" id="disc-example">Load example</button>
+            <button type="button" class="tool-btn" id="disc-template">Download template</button>
+            <button type="button" class="tool-btn" id="disc-curated">Load curated dataset</button>
+            <button type="button" class="tool-btn" id="disc-sample">Load sample dataset</button>
+            <button type="button" class="tool-btn tool-btn-primary" id="disc-analyze">Discover insights</button>
+            <button type="button" class="tool-btn" id="disc-download" disabled>Download report</button>
           </div>
-          <p id="dataset-status" class="upload-status"></p>
-        </div>
 
-        <!-- Toolbar: table tabs (populated by JS) + search box + CSV download -->
-        <div class="db-toolbar">
-          <div class="db-tabs" id="db-tabs" role="tablist" aria-label="Database tables"></div>
-          <div class="db-toolbar-right">
-            <input id="db-search" class="tool-input db-search" type="search" placeholder="Search&hellip;" autocomplete="off" aria-label="Filter table rows">
-            <button type="button" id="db-download" class="tool-btn">Export CSV</button>
+          <p class="exp-hint">CSV, TSV, or dataset JSON accepted. Loading an example, file, curated, or sample dataset analyzes it immediately; paste your own rows and click Discover insights.</p>
+          <label class="exp-input-label" for="disc-input">Paste your rows</label>
+          <textarea class="exp-input" id="disc-input" spellcheck="false" placeholder="pathogen,effector,sequence,host_protein,phenotype&#10;Salmonella,SteE,MKTAIL...,ACTB,intracellular"></textarea>
+          <p class="exp-status" id="disc-status" role="status" hidden></p>
+
+          <details class="disc-mapping" id="disc-mapping" hidden>
+            <summary>Column mapping (auto-detected)</summary>
+            <div id="disc-mapping-grid"></div>
+          </details>
+
+          <div class="exp-metrics" id="disc-upload-summary" hidden></div>
+          <div class="exp-results" id="disc-results" hidden></div>
+
+          <!-- Same rows behind the summaries above, kept inline in the workspace -->
+          <div class="disc-table-block" id="results-table">
+            <div class="disc-table-inline-head">
+              <p class="section-label">Loaded dataset rows</p>
+              <p>Same rows behind the summaries above. Loading here updates every module.</p>
+            </div>
+
+            <div class="db-toolbar">
+              <div class="db-tabs" id="db-tabs" role="tablist" aria-label="Database tables"></div>
+              <div class="db-toolbar-right">
+                <input id="db-search" class="tool-input db-search" type="search" placeholder="Search&hellip;" autocomplete="off" aria-label="Filter table rows">
+                <button type="button" id="db-download" class="tool-btn">Export CSV</button>
+              </div>
+            </div>
+
+            <p class="db-status">
+              <span id="db-count">&nbsp;</span>
+              <span class="db-status-hint" id="db-hint"></span>
+            </p>
+
+            <div class="db-pagination" id="db-pagination">
+              <div class="db-pagination-info" id="db-pagination-info"></div>
+
+              <div class="db-pagination-controls">
+                <label for="db-page-size">Rows per page:</label>
+                <select id="db-page-size" class="tool-input">
+                  <option value="10" selected>10</option>
+                  <option value="25">25</option>
+                  <option value="50">50</option>
+                </select>
+
+                <button type="button" id="db-prev" class="tool-btn tool-btn-sm">
+                  Previous
+                </button>
+
+                <span id="db-page-info"></span>
+
+                <button type="button" id="db-next" class="tool-btn tool-btn-sm">
+                  Next
+                </button>
+              </div>
+            </div>
+
+            <div class="db-table-wrap">
+              <table class="db-table" id="db-table">
+                <thead>
+                  <tr id="db-head"></tr>
+                </thead>
+                <tbody id="db-body"></tbody>
+              </table>
+            </div>
+
+            <details class="db-schema">
+              <summary>Data dictionary</summary>
+              <div id="db-schema-body" class="db-schema-body"></div>
+            </details>
           </div>
         </div>
-
-        <p class="db-status">
-          <span id="db-count">&nbsp;</span>
-          <span class="db-status-hint" id="db-hint"></span>
-        </p>
-
-        <div class="db-pagination" id="db-pagination">
-          <div class="db-pagination-info" id="db-pagination-info"></div>
-
-          <div class="db-pagination-controls">
-            <label for="db-page-size">Rows per page:</label>
-            <select id="db-page-size" class="tool-input">
-              <option value="10" selected>10</option>
-              <option value="25">25</option>
-              <option value="50">50</option>
-            </select>
-
-            <button type="button" id="db-prev" class="tool-btn tool-btn-sm">
-              Previous
-            </button>
-
-            <span id="db-page-info"></span>
-
-            <button type="button" id="db-next" class="tool-btn tool-btn-sm">
-              Next
-            </button>
-          </div>
-        </div>
-
-        <!-- Empty table shell; thead/tbody rows are rendered by js/views/database.js -->
-        <div class="db-table-wrap">
-          <table class="db-table" id="db-table">
-            <thead>
-              <tr id="db-head"></tr>
-            </thead>
-            <tbody id="db-body"></tbody>
-          </table>
-        </div>
-
-        <!-- Collapsible data dictionary; contents rendered by renderSchema() in database.js -->
-        <details class="db-schema">
-          <summary>Data dictionary</summary>
-          <div id="db-schema-body" class="db-schema-body"></div>
-        </details>
       </div>
     </section>
 
-    <section id="generated-analyses" class="section">
-      <div class="container">
-        <div class="section-header">
-          <p class="section-label">Analyses</p>
-          <h2 class="section-title">Generated Analyses</h2>
-          <p class="section-subtitle">
-            Explore biological analyses generated
-            from your uploaded dataset.
-          </p>
-        </div>
-
-      <div id="analysis-modules">
-          <!-- Analysis module cards will go here (currently: Interaction Analysis) -->
-      </div>
-      </div>
-    </section>
-
-    <section id="references" class="section section-alt">
-      <div class="container">
-        <div class="section-header">
-          <p class="section-label">Provenance</p>
-          <h2 class="section-title">References &amp; Evidence</h2>
-          <p class="section-subtitle">
-            DOI references and interaction evidence records supporting the curated dataset.
-          </p>
-        </div>
-
-        <div id="references-content" class="references-content"></div>
-      </div>
-    </section>
-
-    <section id="limitations-scope" class="section">
-      <div class="container">
-        <div class="section-header">
-          <p class="section-label">Transparency</p>
-          <h2 class="section-title">Limitations &amp; Scope</h2>
-          <p class="section-subtitle">
-            What this release is (and is not), to interpret results responsibly.
-          </p>
-        </div>
-        <ul class="research-list">
-          <li><strong>Curated prototype, not a comprehensive resource:</strong> current tables cover a focused, curated subset (bacterial host&ndash;pathogen effectors, host proteins, and related interaction records as available in the loaded dataset).</li>
-          <li><strong>Coverage is limited:</strong> interaction counts are small (demonstration-scale); absence of a record does not mean an interaction is absent in biology.</li>
-          <li><strong>Evidence is labeled, not inferred silently:</strong> interaction evidence is categorized (e.g. experimental, predicted, annotation-derived, hypothetical). Labels reflect curation/provenance—not clinical or functional certainty.</li>
-          <li><strong>Generated analyses are reproducible outputs:</strong> generated artifacts (e.g. interaction network outputs) depend on validated inputs and explicit methods; they are not curated ground truth.</li>
-          <li><strong>Demo/sample data:</strong> built-in sample and uploaded datasets are for exploration; validate against the curated pipeline outputs for serious use.</li>
-        </ul>
-      </div>
-    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer-inner">
+      <span>PathoMap &mdash; curated prototype, not a comprehensive resource.</span>
+      <a href="/pages/transparency.html">Limitations &amp; Scope</a>
+    </div>
+  </footer>
 
   <script type="module" src="../js/main.js"></script>
 </body>

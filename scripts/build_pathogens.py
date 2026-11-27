@@ -40,7 +40,8 @@ from build_common import (
     validate_references,
     write_text,
 )
-from http_client import ApiError, http_json, http_text, read_json, slug, write_json
+from http_client import ApiError, http_json, http_text, slug
+from io_utils import read_json, write_json
 from identifiers import (
     assign_registry_ids,
     entity_id,

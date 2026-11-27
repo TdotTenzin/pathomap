@@ -1,8 +1,8 @@
 # Generated Analyses
 
 Specification for the computed-analysis layer. Source: `PathoMap_Future_Development_Plan.docx`
-(7 November 2026), sections 4-8. This document is the reference for module behaviour; delivery
-order lives in `docs/ROADMAP.md`.
+(7 November 2026), sections 4-8. This document is the reference for module behaviour; current
+implementation status is tracked by `js/analysis/registry.js`.
 
 ## Three-layer model
 
@@ -59,6 +59,26 @@ insufficient - return `insufficient data` with the missing requirement instead.
 Engines return structured data, never HTML. Views render; utilities handle identifier
 normalization, provenance, statistics and validation. Unit tests use small known-answer cases.
 
+## Discovery engine
+
+The home-page workspace (`js/discovery/`) orchestrates the modules specified below.
+`ingest.js` accepts a pasted or uploaded CSV, TSV, or JSON table, detects columns through
+plain-language aliases, and builds an in-memory dataset. `engine.js` calls each module's
+`canRun` / `run` / `validate` contract; modules without prerequisites return
+**insufficient data** with exact reasons, never fabricated results.
+
+| Entry point | Responsibility |
+|---|---|
+| `js/discovery/ingest.js` | Delimited/JSON parsing, column aliases, canonical links, upload summary |
+| `js/discovery/modules/*.js` | One module per §1–§8; structured output only |
+| `js/discovery/engine.js` | Orchestration, validation, status aggregation |
+| `js/ui/discovery.js` | Workspace rendering, interactive network, report export |
+
+`js/experiment/features.js` mirrors `scripts/build_effectors_host_proteins.py` and is reused by
+the sequence module. Predictive Modelling (§8) is deliberately gated to a readiness checklist:
+the site does not train models or report accuracy. Upload-derived results are always labelled as
+computed or predicted and never presented as curated ground truth.
+
 ## Module states
 
 | State | Meaning | UI behaviour |
@@ -86,9 +106,11 @@ normalization, provenance, statistics and validation. Unit tests use small known
 
 ## Dashboard cards
 
-Each card shows its own state and progress. Only Interaction Analysis is currently available;
-the remaining rows describe the planned catalogue. Summary metrics must be analysis-specific and
-data-derived:
+The Discovery workspace runs each module against the active dataset (uploaded table, uploaded
+JSON, curated, or sample) and shows a compact summary card for each one. Each card carries a
+**Show full results** link to that module's dedicated page. Following that link hands the active
+dataset to the page once, where the full renderer displays metrics, findings, tables, and
+visualizations. Summary metrics must be analysis-specific and data-derived:
 
 | Module | Summary metrics |
 |---|---|
@@ -202,6 +224,9 @@ difference honestly.
 - Pathogen classification is a heuristic when `gram_stain` is absent; it must not be treated as
   taxonomy evidence.
 
+> Sections 1–7 are implemented in the Discovery workspace. Section 8 is a data-readiness
+> assessment only; no model is trained and no performance metric is reported.
+
 ## 2. Effector Sequence Analysis
 
 **Question:** What molecular and sequence-derived properties characterise the effector set?
@@ -232,7 +257,8 @@ effector-associated targets.
 only with a defensible background.
 
 **Outputs:** mapped proteins; pathways represented; contributing proteins; enrichment statistics
-where valid; unmapped records.
+where valid; unmapped records. The detailed module page toggles between broad pathway categories and
+detailed Reactome/KEGG annotations so a large curated annotation set stays navigable.
 
 **Guardrail:** pathway association is not proof of perturbation; enrichment requires a defensible
 background and multiple-testing correction.

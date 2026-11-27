@@ -42,7 +42,7 @@ from build_common import (
     validate_references,
     write_text,
 )
-from http_client import read_json, write_json
+from io_utils import read_json, write_json
 from identifiers import (
     assign_effector_ids,
     assign_registry_ids,
@@ -96,9 +96,6 @@ DATASET_NAME = "pathomap"
 # ambiguity codes B/Z/J/X and rare U/O) plus a stop codon
 SEQUENCE_PATTERN = re.compile(r"^[ACDEFGHIKLMNPQRSTVWYBZJXUO*]+$")
 
-# Sample pathogen IDs from build_pathogens.py
-SAMPLE_PATHOGEN_IDS = [1, 3, 13, 32, 48]
-
 # Sample pathogen names (for filtering effectors)
 SAMPLE_PATHOGEN_NAMES = [
     "Salmonella enterica serovar Typhimurium",
@@ -107,11 +104,6 @@ SAMPLE_PATHOGEN_NAMES = [
     "Bacillus anthracis",
     "Acinetobacter baumannii",
 ]
-
-
-def read_classification_mapping(mapping_path: Path) -> dict[str, dict[str, str]]:
-    """Read classification mapping JSON file."""
-    return read_json(mapping_path)
 
 
 def apply_classifications(effectors: list[dict], mapping: dict[str, dict[str, str]]) -> list[dict]:
@@ -369,7 +361,7 @@ def validate_effectors(
 
         # Canonical entity ID must be valid and unique
         eid = row.get("entity_id")
-        if not isinstance(eid, str) or not re.fullmatch(r"PM-EFF-\d{4,}", eid):
+        if not is_entity_id(eid, "effector"):
             errors.append(f"{label}: invalid effector entity_id {eid!r}")
         elif eid in seen_entity_ids:
             errors.append(f"{label}: duplicate entity_id {eid}")
@@ -425,7 +417,7 @@ def validate_host_proteins(host_proteins: list[dict]) -> list[str]:
 
         # Check canonical entity ID
         eid = row.get("entity_id")
-        if not isinstance(eid, str) or not re.fullmatch(r"PM-HST-\d{4,}", eid):
+        if not is_entity_id(eid, "host_protein"):
             errors.append(f"{label}: invalid host protein entity_id {eid!r}")
         elif eid in seen_entity_ids:
             errors.append(f"{label}: duplicate entity_id {eid}")
@@ -997,7 +989,7 @@ def build_tables(
     # Read classification mapping
     if not CLASSIFICATION_MAPPING_PATH.exists():
         raise BuildError(f"missing classification mapping {CLASSIFICATION_MAPPING_PATH}")
-    classification_mapping = read_classification_mapping(CLASSIFICATION_MAPPING_PATH)
+    classification_mapping = read_json(CLASSIFICATION_MAPPING_PATH)
 
     # Apply classifications to effectors
     effectors = apply_classifications(effectors, classification_mapping)
@@ -1163,12 +1155,6 @@ HOST_TARGET_COLUMNS = [
     "members",
     "evidence_sources",
     "audit_notes",
-]
-
-REFERENCE_COLUMNS = [
-    "entity_id",
-    "doi",
-    "url",
 ]
 
 # Array fields are stored in link tables, not as JSON columns.

@@ -1,0 +1,83 @@
+<!--
+  PathoMap - Transparency / limitations page.
+
+  Purpose: Standalone home for the "Limitations & Scope" notes linked from the
+  footer of every page. Keeps scope/interpretation guidance out of the home
+  page while remaining easy to find.
+
+  Structure:
+    - <nav>   Brand, page links, dark-mode toggle (#dark-toggle).
+    - <main>  Single section (#limitations-scope) with the full transparency notes.
+    - <footer> Shared site footer linking back to the home page.
+
+  Script: imports initTheme() from js/ui/theme.js so the dark-mode toggle works.
+  Requires serving over HTTP for the ES module import.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transparency - PathoMap</title>
+  <meta name="description" content="What the current PathoMap release covers, and how to interpret its interaction evidence and generated analyses.">
+  <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('pathomap-theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (error) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/utilities.css">
+</head>
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <a class="nav-brand" href="index.html">PathoMap</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Workspace</a></li>
+        <li class="nav-module"><a href="interaction-analysis.html">Interactions</a></li>
+        <li class="nav-module"><a href="sequence-analysis.html">Sequences</a></li>
+        <li class="nav-module"><a href="pathway-analysis.html">Pathways</a></li>
+        <li class="nav-module"><a href="functional-enrichment.html">Enrichment</a></li>
+        <li class="nav-module"><a href="protein-network-analysis.html">Protein network</a></li>
+        <li class="nav-module"><a href="comparative-pathogen-analysis.html">Comparative</a></li>
+        <li class="nav-module"><a href="host-response-analysis.html">Host response</a></li>
+        <li class="nav-module"><a href="predictive-readiness.html">Readiness</a></li>
+      </ul>
+      <button class="dark-toggle" id="dark-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9790;</button>
+    </div>
+  </nav>
+
+  <main>
+    <section id="limitations-scope" class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Transparency</p>
+          <h1 class="page-title">Limitations &amp; Scope</h1>
+          <p class="section-subtitle">
+            What this release is (and is not), to interpret results responsibly.
+          </p>
+        </div>
+        <ul class="transparency-list">
+          <li><strong>Curated prototype, not a comprehensive resource:</strong> current tables cover a focused, curated subset (bacterial host&ndash;pathogen effectors, host proteins, and related interaction records as available in the loaded dataset).</li>
+          <li><strong>Coverage is limited:</strong> interaction counts are small (demonstration-scale); absence of a record does not mean an interaction is absent in biology.</li>
+          <li><strong>Evidence is labeled, not inferred silently:</strong> interaction evidence is categorized (e.g. experimental, predicted, annotation-derived, hypothetical). Labels reflect curation/provenance&mdash;not clinical or functional certainty.</li>
+          <li><strong>Generated analyses are reproducible outputs:</strong> generated artifacts (e.g. interaction network outputs) depend on validated inputs and explicit methods; they are not curated ground truth.</li>
+          <li><strong>Demo/sample data:</strong> built-in sample and uploaded datasets are for exploration; validate against the curated pipeline outputs for serious use.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script type="module">
+    import { initTheme } from '../js/ui/theme.js';
+    initTheme();
+  </script>
+</body>
+</html>

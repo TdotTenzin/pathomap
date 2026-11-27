@@ -2,9 +2,10 @@
   database.js - Main database-browser view (tabs, table, search, sort,
   pagination, CSV export, and the collapsible data dictionary).
 
-  Purpose: Renders the five primary dataset tables (pathogens / effectors /
-  host_targets / host_proteins / interactions) into the #database section of
-  index.html. All DOM updates go through renderDatabase(), which is re-invoked
+  Purpose: Renders all seven dataset tables (pathogens / effectors /
+  host_targets / host_proteins / interactions / references /
+  interaction_evidence) into the #results-table block of the Discovery workspace. All DOM
+  updates go through renderDatabase(), which is re-invoked
   on every state change (tab switch, search keystroke, sort click, page nav).
 
   Exports:
@@ -26,7 +27,7 @@
     pageSize Rows per page (10 / 25 / 50, from the select control).
 
   Internal functions:
-    getTableDefinition(id)          Look up a TABLES entry by id (falls back to first).
+    getTableDefinition(id)          Look up a TABLES entry by id.
     rowsFor(def)          Pull rows from the loader, apply search filter, then
                           apply sort (numeric-aware, boolean-aware, localeCompare
                           for strings).
@@ -44,7 +45,6 @@
     renderStatus(def, rows)  Update #db-count and #db-hint with row count/desc.
     renderPagination(pagination)  Update the "Showing X–Y of Z" text, page info,
                           and disable prev/next buttons at the ends.
-    createSchemaLink(label, href)  Small helper for styled doc links.
     renderSchema()        Populate the <details> data dictionary from COLUMN_META
                           (or effector/host-protein equivalents), including
                           schema version, row count, and links to the SQL/JSON
@@ -70,6 +70,8 @@ import {
   getHostProteins,
   getHostTargets,
   getInteractions,
+  getReferences,
+  getInteractionEvidence,
 } from '../data/loader.js';
 import {
   COLUMN_LABELS,
@@ -95,11 +97,19 @@ import {
   INTERACTION_COLUMN_LABELS,
   INTERACTION_VISIBLE_COLUMNS,
   INTERACTION_COLUMNS,
+  REFERENCE_COLUMNS_META,
+  REFERENCE_COLUMN_LABELS,
+  REFERENCE_VISIBLE_COLUMNS,
+  REFERENCE_COLUMNS,
+  INTERACTION_EVIDENCE_COLUMNS_META,
+  INTERACTION_EVIDENCE_COLUMN_LABELS,
+  INTERACTION_EVIDENCE_VISIBLE_COLUMNS,
+  INTERACTION_EVIDENCE_COLUMNS,
 } from '../data/schema.js';
 import { createLink } from '../utils/dom.js';
 import { downloadText, toCsv as serializeCsv } from '../utils/export.js';
 import { formatDateOnly, pluralize } from '../utils/format.js';
-import { STRATEGY_LABELS } from '../utils/labels.js';
+import { STRATEGY_LABELS, evidenceClassLabel } from '../utils/labels.js';
 
 // Available tables to display in the database view (id, label, description,
 // visible columns for the UI, and full column list for CSV export)
@@ -143,6 +153,20 @@ const TABLES = [
     columns: INTERACTION_VISIBLE_COLUMNS,
     exportColumns: INTERACTION_COLUMNS,
   },
+  {
+    id: 'references',
+    label: 'References',
+    description: 'DOI references and resolvable links supporting the curated dataset.',
+    columns: REFERENCE_VISIBLE_COLUMNS,
+    exportColumns: REFERENCE_COLUMNS,
+  },
+  {
+    id: 'interaction_evidence',
+    label: 'Evidence',
+    description: 'Evidence records supporting interactions, with class, citation and provenance.',
+    columns: INTERACTION_EVIDENCE_VISIBLE_COLUMNS,
+    exportColumns: INTERACTION_EVIDENCE_COLUMNS,
+  },
 ];
 
 // Global state for database view (active table, search, sort, pagination)
@@ -155,9 +179,9 @@ const state = {
   pageSize: 10,
 };
 
-// Get table definition by ID, fallback to first table if not found
+// Get table definition by ID
 function getTableDefinition(id) {
-  return TABLES.find((table) => table.id === id) || TABLES[0];
+  return TABLES.find((table) => table.id === id);
 }
 
 // Filter and sort rows based on current search and sort state.
@@ -173,7 +197,11 @@ function rowsFor(def) {
         ? getHostProteins()
         : def.id === 'interactions'
           ? getInteractions()
-          : getPathogens();
+          : def.id === 'references'
+            ? getReferences()
+            : def.id === 'interaction_evidence'
+              ? getInteractionEvidence()
+              : getPathogens();
   const query = state.search.trim().toLowerCase();
   let out = rows;
 
@@ -363,6 +391,8 @@ function getColumnLabels(tableId) {
   if (tableId === 'host_targets') return HOST_TARGET_COLUMN_LABELS;
   if (tableId === 'host_proteins') return HOST_PROTEIN_COLUMN_LABELS;
   if (tableId === 'interactions') return INTERACTION_COLUMN_LABELS;
+  if (tableId === 'references') return REFERENCE_COLUMN_LABELS;
+  if (tableId === 'interaction_evidence') return INTERACTION_EVIDENCE_COLUMN_LABELS;
   return COLUMN_LABELS;
 }
 
@@ -371,6 +401,8 @@ function getColumnMeta(tableId) {
   if (tableId === 'host_targets') return HOST_TARGET_COLUMNS_META;
   if (tableId === 'host_proteins') return HOST_PROTEIN_COLUMNS_META;
   if (tableId === 'interactions') return INTERACTION_COLUMNS_META;
+  if (tableId === 'references') return REFERENCE_COLUMNS_META;
+  if (tableId === 'interaction_evidence') return INTERACTION_EVIDENCE_COLUMNS_META;
   return COLUMN_META;
 }
 
@@ -394,9 +426,9 @@ function createClassificationBadge(classValue) {
 }
 
 // Render table body with data rows.
-// Special handling: reference_doi renders as an external link; effector
-// classification columns render the text value plus a colored badge for the
-// matching *_class column.
+// Special handling: DOI/URL columns render as external links; evidence class
+// renders as a coloured chip; effector classification columns render the text
+// value plus a coloured badge for the matching *_class column.
 function renderBody(def, rows) {
   const el = document.getElementById('db-body');
   if (!el) return;
@@ -423,11 +455,17 @@ function renderBody(def, rows) {
       const value = row[column];
 
       // DOI and reference URLs render as external links.
-      if (column === 'reference_doi' && value) {
+      if ((column === 'doi' || column === 'reference_doi') && value) {
         td.appendChild(createLink(`https://doi.org/${value}`, value));
       }
       else if (column === 'url' && value) {
         td.appendChild(createLink(value, value));
+      }
+      else if (column === 'evidence_class' && value) {
+        const chip = document.createElement('span');
+        chip.className = `analysis-evidence-chip analysis-evidence-chip--${value}`;
+        chip.textContent = evidenceClassLabel(value);
+        td.appendChild(chip);
       }
       // Sequences render as a truncated preview with a "Show more" toggle
       else if (column === 'sequence' && typeof value === 'string' && value) {
@@ -557,15 +595,6 @@ function renderPagination(pagination) {
   pageSizeSelect.value = String(state.pageSize);
 }
 
-// Create a styled link for schema documentation
-function createSchemaLink(label, href) {
-  const link = document.createElement('a');
-  link.className = 'db-link';
-  link.href = href;
-  link.textContent = label;
-  return link;
-}
-
 // Render schema documentation table with column metadata (the "Data dictionary"
 // <details> panel). Pulls the active table's column metadata and renders
 // field/type/description/source rows plus
@@ -597,11 +626,11 @@ function renderSchema() {
   const links = document.createElement('p');
   links.className = 'schema-links';
   links.append(
-    createSchemaLink('SQL schema', '/data/schema.sql'),
+    createLink('/data/schema.sql', 'SQL schema'),
     document.createTextNode(' · '),
-    createSchemaLink('SQLite database', '/data/pathomap.db'),
+    createLink('/data/pathomap.db', 'SQLite database'),
     document.createTextNode(' · '),
-    createSchemaLink('JSON schema', '/data/schema/pathogens.schema.json')
+    createLink('/data/schema/pathogens.schema.json', 'JSON schema')
   );
   body.appendChild(links);
 

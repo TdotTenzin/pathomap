@@ -30,7 +30,7 @@ import build_effectors_host_proteins
 import build_interactions
 import build_pathogens
 from build_common import utc_now
-from io_utils import no_writes, read_json, write_bytes, write_json_atomic, writes_enabled
+from io_utils import no_writes, read_json, write_bytes, write_json, writes_enabled
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
@@ -255,7 +255,7 @@ def run_pipeline(
     for stage in selected:
         updated["stages"][stage.name] = stage_state(stage)
     updated["built_at"] = utc_now()
-    write_json_atomic(manifest_path, updated)
+    write_json(manifest_path, updated)
     print(f"wrote {manifest_path}")
     return 0
 

@@ -455,7 +455,7 @@ export function filterNetwork(model, filters = {}) {
         }
         if (
             query &&
-            !(edge.searchText || searchTextForEdge(edge, sourceNode, targetNode, pathogenNode)).includes(query)
+            !(edge.searchText || '').includes(query)
         ) {
             return false;
         }

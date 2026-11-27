@@ -1,7 +1,7 @@
 # Effector Sequence Features
 
-Feature specification for **Effector Sequence Analysis** (module 2 in `docs/ANALYSES.md`;
-implementation phase in `docs/ROADMAP.md`). Statuses reflect the current build
+Feature specification for **Effector Sequence Analysis** (module 2 in `docs/ANALYSES.md`).
+Statuses reflect the current build
 (`scripts/build_effectors_host_proteins.py`, `js/data/schema.js`).
 
 Status legend: **Implemented** = annotation stored on the effector row; **Derived artifact** =

@@ -76,8 +76,3 @@ def write_json(path: Path, payload: Any) -> None:
         path,
         json.dumps(payload, indent=2, ensure_ascii=False, allow_nan=False) + "\n",
     )
-
-
-def write_json_atomic(path: Path, payload: Any) -> None:
-    """Alias for :func:`write_json`; all JSON writes are atomic."""
-    write_json(path, payload)

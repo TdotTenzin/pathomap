@@ -200,9 +200,23 @@ export function initUpload({ render } = {}) {
         meta: {
           dataset: 'pathomap',
           schema_version: SCHEMA_VERSION,
-          tables: { pathogens: 0 },
+          tables: {
+            pathogens: 0,
+            effectors: 0,
+            host_targets: 0,
+            host_proteins: 0,
+            interactions: 0,
+            references: 0,
+            interaction_evidence: 0,
+          },
         },
         pathogens: [],
+        effectors: [],
+        host_targets: [],
+        host_proteins: [],
+        interactions: [],
+        references: [],
+        interaction_evidence: [],
       };
 
       downloadText(
@@ -212,7 +226,7 @@ export function initUpload({ render } = {}) {
       );
 
       setUploadStatus(
-        'Template downloaded. Only the pathogens array is required.',
+        'Template downloaded. Only the pathogens array is required; fill other tables to browse them.',
         'success'
       );
     });

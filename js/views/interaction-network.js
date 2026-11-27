@@ -123,7 +123,6 @@ export function createNetworkView({
     empty,
     status,
     controls,
-    onSelectionChange = () => {},
 }) {
     let dataset = null;
     let model = null;
@@ -409,7 +408,6 @@ export function createNetworkView({
         selected = { kind: 'node', id: nodeId };
         applySelection();
         renderDetail(buildNodeDetail(dataset, filtered, nodeId));
-        onSelectionChange(selected);
         if (focusDetails && details) details.scrollTop = 0;
     }
 
@@ -418,7 +416,6 @@ export function createNetworkView({
         selected = { kind: 'edge', id: edgeId };
         applySelection();
         renderDetail(buildEdgeDetail(dataset, filtered, edgeId));
-        onSelectionChange(selected);
         if (details) details.scrollTop = 0;
     }
 
@@ -426,7 +423,6 @@ export function createNetworkView({
         selected = null;
         applySelection();
         renderEmptyDetail();
-        onSelectionChange(null);
     }
 
     function clamp(value, min, max) {
@@ -534,7 +530,6 @@ export function createNetworkView({
                 (selected.kind === 'edge' && !visibleEdgeIds.has(selected.id)));
         if (selectionMissing) {
             selected = null;
-            onSelectionChange(null);
         }
 
         const hasInteractions = Boolean(filtered?.interactionEdges.length);
@@ -552,7 +547,6 @@ export function createNetworkView({
             canvas.replaceChildren();
             if (selected) {
                 selected = null;
-                onSelectionChange(null);
             }
             renderEmptyDetail();
             setNetworkStatus('No interactions match the active filters.');

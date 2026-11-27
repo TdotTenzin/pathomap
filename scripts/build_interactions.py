@@ -18,7 +18,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 
 from build_common import BuildError, begin_sqlite_write, no_writes, write_text
-from http_client import read_json, write_json
+from io_utils import read_json, write_json
 from identifiers import (
     assign_registry_ids,
     interaction_evidence_key,

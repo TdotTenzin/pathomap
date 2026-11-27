@@ -2,7 +2,7 @@
 
 Schema version **3.0**. The current release contains seven tables: `pathogens` (53),
 `references` (58), `effectors` (246), `host_proteins` (33), `host_targets` (129),
-`interactions` (39) and `interaction_evidence` (39). Entity rows carry a stable, prefixed
+`interactions` (39) and `interaction_evidence` (69). Entity rows carry a stable, prefixed
 `entity_id` (`PM-PAT-…`, `PM-REF-…`, `PM-EFF-…`, `PM-HST-…`, `PM-TGT-…`, `PM-INT-…`,
 `PM-EVD-…`). Generated analyses live outside the curated dataset under `data/derived/`.
 

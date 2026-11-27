@@ -19,7 +19,6 @@ from io_utils import (  # re-exported for the build scripts
     no_writes,
     read_json,
     write_json,
-    write_json_atomic,
     write_text,
     writes_enabled,
 )

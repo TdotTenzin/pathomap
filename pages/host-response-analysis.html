@@ -1,0 +1,147 @@
+<!--
+  PathoMap - Host Response Analysis module page.
+
+  Standalone page for one analysis module. Uploaded data is analyzed in this
+  page only; no dataset is restored from a previous session.
+
+  Script: js/pages/module-page.js (body[data-module] selects the module).
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Host Response Analysis - PathoMap</title>
+  <meta name="description" content="Link effector targets to host processes and supporting evidence.">
+  <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('pathomap-theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (error) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/utilities.css">
+</head>
+<body data-module="host-response-analysis">
+  <nav>
+    <div class="container nav-inner">
+      <a class="nav-brand" href="index.html">PathoMap</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Workspace</a></li>
+        <li class="nav-module"><a href="interaction-analysis.html">Interactions</a></li>
+        <li class="nav-module"><a href="sequence-analysis.html">Sequences</a></li>
+        <li class="nav-module"><a href="pathway-analysis.html">Pathways</a></li>
+        <li class="nav-module"><a href="functional-enrichment.html">Enrichment</a></li>
+        <li class="nav-module"><a href="protein-network-analysis.html">Protein network</a></li>
+        <li class="nav-module"><a href="comparative-pathogen-analysis.html">Comparative</a></li>
+        <li class="nav-module"><a href="host-response-analysis.html" aria-current="page">Host response</a></li>
+        <li class="nav-module"><a href="predictive-readiness.html">Readiness</a></li>
+      </ul>
+      <button class="dark-toggle" id="dark-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9790;</button>
+    </div>
+  </nav>
+
+  <main>
+    <section id="host-response-analysis" class="section hra-section">
+      <div class="container">
+
+        <div class="section-header hra-header">
+          <h1 class="page-title">Host Response Analysis</h1>
+          <p class="section-subtitle">
+            Which host processes are associated with effector targets, and what evidence links them?
+          </p>
+        </div>
+
+        <div class="hra-stats" aria-label="Host response overview">
+          <div class="hra-stat">
+            <span class="hra-stat-value" data-stat="processes">&mdash;</span>
+            <span class="hra-stat-label">Processes represented</span>
+          </div>
+          <div class="hra-stat">
+            <span class="hra-stat-value" data-stat="proteins">&mdash;</span>
+            <span class="hra-stat-label">Effector-linked proteins</span>
+          </div>
+          <div class="hra-stat">
+            <span class="hra-stat-value" data-stat="mechanisms">&mdash;</span>
+            <span class="hra-stat-label">Mechanisms recorded</span>
+          </div>
+        </div>
+        <p class="hra-muted hra-stats-status" id="hra-stats-status" role="status" hidden></p>
+
+        <div class="hra-filters">
+          <div class="hra-filters-heading">
+            <h2 class="hra-filters-title">Filter processes</h2>
+            <button type="button" class="tool-btn" id="hra-reset">Clear filters</button>
+          </div>
+          <div class="hra-filter-grid">
+            <label class="hra-filter hra-filter-search">
+              <span>Search</span>
+              <input
+                class="tool-input"
+                id="hra-search"
+                type="search"
+                placeholder="Search process or pathogen"
+                autocomplete="off"
+              >
+            </label>
+            <label class="hra-filter">
+              <span>Process</span>
+              <select class="tool-input" id="hra-process">
+                <option value="">All processes</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="hra-panel hra-tables-panel">
+          <div class="hra-panel-header">
+            <div>
+              <h3>Host Process Features</h3>
+              <p class="hra-table-source" id="hra-table-source">Source details appear once a dataset is loaded.</p>
+            </div>
+            <button type="button" class="tool-btn" id="hra-download" disabled>Download result</button>
+          </div>
+
+          <div class="hra-tables-layout">
+            <div class="hra-tables-main">
+              <div class="hra-table-status" id="hra-table-status" role="status">Waiting for data</div>
+              <div class="hra-table-empty" id="hra-table-empty" hidden>
+                <p>No process data to display.</p>
+                <p class="hra-muted">Load a dataset with host process annotations and interactions.</p>
+              </div>
+
+              <div class="hra-tables-content" id="hra-tables-content"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hra-components">
+          <h3>Reading this analysis</h3>
+          <ul class="hra-component-list">
+            <li><strong>Process association</strong> &mdash; comes from annotations, not a measured cellular response.</li>
+            <li><strong>Direction and mechanism</strong> &mdash; are reported only when the upload records them.</li>
+            <li><strong>Evidence classes</strong> &mdash; are shown beside each process so inference strength stays visible.</li>
+            <li><strong>Cross-pathogen comparison</strong> &mdash; shows which processes are targeted by multiple pathogens.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer-inner">
+      <span>PathoMap &mdash; curated prototype, not a comprehensive resource.</span>
+      <a href="transparency.html">Limitations &amp; Scope</a>
+    </div>
+  </footer>
+
+  <script type="module" src="../js/pages/host-response-analysis.js"></script>
+</body>
+</html>

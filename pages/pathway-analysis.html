@@ -1,0 +1,151 @@
+<!--
+  PathoMap - Pathway Analysis module page.
+
+  Standalone page for one analysis module. Uploaded data is analyzed in this
+  page only; no dataset is restored from a previous session.
+
+  Script: js/pages/module-page.js (body[data-module] selects the module).
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pathway Analysis - PathoMap</title>
+  <meta name="description" content="Inspect annotated host pathways represented among uploaded host proteins.">
+  <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('pathomap-theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (error) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/utilities.css">
+</head>
+<body data-module="pathway-analysis">
+  <nav>
+    <div class="container nav-inner">
+      <a class="nav-brand" href="index.html">PathoMap</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Workspace</a></li>
+        <li class="nav-module"><a href="interaction-analysis.html">Interactions</a></li>
+        <li class="nav-module"><a href="sequence-analysis.html">Sequences</a></li>
+        <li class="nav-module"><a href="pathway-analysis.html" aria-current="page">Pathways</a></li>
+        <li class="nav-module"><a href="functional-enrichment.html">Enrichment</a></li>
+        <li class="nav-module"><a href="protein-network-analysis.html">Protein network</a></li>
+        <li class="nav-module"><a href="comparative-pathogen-analysis.html">Comparative</a></li>
+        <li class="nav-module"><a href="host-response-analysis.html">Host response</a></li>
+        <li class="nav-module"><a href="predictive-readiness.html">Readiness</a></li>
+      </ul>
+      <button class="dark-toggle" id="dark-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9790;</button>
+    </div>
+  </nav>
+
+  <main>
+    <section id="pathway-analysis" class="section pa-section">
+      <div class="container">
+
+        <div class="section-header pa-header">
+          <h1 class="page-title">Pathway Analysis</h1>
+          <p class="section-subtitle">
+            Which annotated host pathways are represented among the uploaded host proteins?
+          </p>
+        </div>
+
+        <div class="pa-stats" aria-label="Pathway overview">
+          <div class="pa-stat">
+            <span class="pa-stat-value" data-stat="host-proteins">&mdash;</span>
+            <span class="pa-stat-label">Host proteins</span>
+          </div>
+          <div class="pa-stat">
+            <span class="pa-stat-value" data-stat="annotated">&mdash;</span>
+            <span class="pa-stat-label">Annotated</span>
+          </div>
+          <div class="pa-stat">
+            <span class="pa-stat-value" data-stat="pathways">&mdash;</span>
+            <span class="pa-stat-label">Pathways represented</span>
+          </div>
+          <div class="pa-stat">
+            <span class="pa-stat-value" data-stat="unmapped">&mdash;</span>
+            <span class="pa-stat-label">Unmapped proteins</span>
+          </div>
+        </div>
+        <p class="pa-muted pa-stats-status" id="pa-stats-status" role="status" hidden></p>
+
+        <div class="pa-filters">
+          <div class="pa-filters-heading">
+            <h2 class="pa-filters-title">Filter pathways</h2>
+            <button type="button" class="tool-btn" id="pa-reset">Clear filters</button>
+          </div>
+          <div class="pa-filter-grid">
+            <label class="pa-filter pa-filter-search">
+              <span>Search</span>
+              <input
+                class="tool-input"
+                id="pa-search"
+                type="search"
+                placeholder="Search pathway or proteins"
+                autocomplete="off"
+              >
+            </label>
+            <label class="pa-filter">
+              <span>Pathway</span>
+              <select class="tool-input" id="pa-pathway">
+                <option value="">All pathways</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="pa-panel pa-tables-panel">
+          <div class="pa-panel-header">
+            <div>
+              <h3>Pathway Features</h3>
+              <p class="pa-table-source" id="pa-table-source">Source details appear once a dataset is loaded.</p>
+            </div>
+            <button type="button" class="tool-btn" id="pa-download" disabled>Download result</button>
+          </div>
+
+          <div class="pa-tables-layout">
+            <div class="pa-tables-main">
+              <div class="pa-table-status" id="pa-table-status" role="status">Waiting for data</div>
+              <div class="pa-table-empty" id="pa-table-empty" hidden>
+                <p>No pathways to display.</p>
+                <p class="pa-muted">Load a dataset with host protein pathway annotations.</p>
+              </div>
+
+              <div class="pa-tables-content" id="pa-tables-content"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pa-components">
+          <h3>Reading this analysis</h3>
+          <ul class="pa-component-list">
+            <li><strong>Pathway membership</strong> &mdash; annotation-based; it does not prove perturbation by an effector.</li>
+            <li><strong>Broad categories</strong> &mdash; come from curated pathway labels.</li>
+            <li><strong>Detailed annotations</strong> &mdash; use the supplied Reactome/KEGG records.</li>
+            <li><strong>Enrichment significance</strong> &mdash; reported separately by Functional Enrichment when a background universe is available.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer-inner">
+      <span>PathoMap &mdash; curated prototype, not a comprehensive resource.</span>
+      <a href="transparency.html">Limitations &amp; Scope</a>
+    </div>
+  </footer>
+
+  <script type="module" src="../js/pages/pathway-analysis.js"></script>
+</body>
+</html>

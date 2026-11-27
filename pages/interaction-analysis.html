@@ -31,13 +31,20 @@
   <link rel="stylesheet" href="../css/components.css">
   <link rel="stylesheet" href="../css/utilities.css">
 </head>
-<body>
+<body data-module="interaction-analysis">
   <nav>
     <div class="container nav-inner">
       <a class="nav-brand" href="index.html">PathoMap</a>
       <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="interaction-analysis.html" aria-current="page">Interaction Analysis</a></li>
+        <li><a href="index.html">Workspace</a></li>
+        <li class="nav-module"><a href="interaction-analysis.html" aria-current="page">Interactions</a></li>
+        <li class="nav-module"><a href="sequence-analysis.html">Sequences</a></li>
+        <li class="nav-module"><a href="pathway-analysis.html">Pathways</a></li>
+        <li class="nav-module"><a href="functional-enrichment.html">Enrichment</a></li>
+        <li class="nav-module"><a href="protein-network-analysis.html">Protein network</a></li>
+        <li class="nav-module"><a href="comparative-pathogen-analysis.html">Comparative</a></li>
+        <li class="nav-module"><a href="host-response-analysis.html">Host response</a></li>
+        <li class="nav-module"><a href="predictive-readiness.html">Readiness</a></li>
       </ul>
       <button class="dark-toggle" id="dark-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9790;</button>
     </div>
@@ -148,7 +155,7 @@
           <div class="ia-network-layout">
             <div class="ia-network-main">
               <div class="ia-network-toolbar">
-                <p class="ia-network-status" id="ia-network-status" role="status">Loading&hellip;</p>
+                <p class="ia-network-status" id="ia-network-status" role="status">Waiting for data</p>
                 <div class="ia-network-controls" id="ia-network-controls" aria-label="Network view controls">
                   <button type="button" class="tool-btn tool-btn-sm" data-network-action="zoom-out" title="Zoom out" aria-label="Zoom out">&minus;</button>
                   <button type="button" class="tool-btn tool-btn-sm" data-network-action="fit" title="Fit network to screen" aria-label="Fit network to screen">Fit</button>
@@ -239,6 +246,13 @@
       </div>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer-inner">
+      <span>PathoMap &mdash; curated prototype, not a comprehensive resource.</span>
+      <a href="transparency.html">Limitations &amp; Scope</a>
+    </div>
+  </footer>
 
   <script type="module" src="../js/pages/interaction-analysis.js"></script>
 </body>

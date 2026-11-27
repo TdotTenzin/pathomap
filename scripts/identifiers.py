@@ -27,7 +27,7 @@ import re
 from pathlib import Path
 from typing import Any, Iterable, Mapping
 
-from io_utils import write_json_atomic
+from io_utils import write_json
 
 ENTITY_PREFIXES = {
     "pathogen": "PAT",
@@ -186,7 +186,7 @@ def write_registry(
         "description": description,
         section: {key: registry[key] for key in sorted(registry, key=sort_key)},
     }
-    write_json_atomic(path, payload)
+    write_json(path, payload)
 
 
 # ---------------------------------------------------------------------------

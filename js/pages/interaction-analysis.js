@@ -2,8 +2,8 @@
   interaction-analysis.js - Entry script for the Interaction Analysis page.
 
   Boot:
-    1. Restore a dataset loaded on index.html, or fetch the curated dataset.
-    2. Fetch the optional Phase 4 derived analysis.
+    1. Use the one-shot dataset handed off from the workspace; otherwise show a waiting state.
+    2. Fetch the optional Phase 4 derived analysis when its provenance matches.
     3. Build/validate a network model, populate filters, and render the SVG view.
 
   Data source:
@@ -13,12 +13,7 @@
 */
 
 import { initTheme } from '../ui/theme.js';
-import {
-  DEFAULT_DATASET_URL,
-  HTTP_SETUP_HINT,
-  loadDataset,
-  loadStoredDataset,
-} from '../data/loader.js';
+import { consumeQueuedDataset, queueDatasetForModule } from '../discovery/dataset-handoff.js';
 import { loadMatchingInteractionAnalysis } from '../data/interaction-analysis.js';
 import {
     UNCLASSIFIED,
@@ -36,6 +31,7 @@ initTheme();
 
 const state = {
     dataset: null,
+    datasetOrigin: 'default',
     model: null,
     filtered: null,
     filters: {
@@ -112,12 +108,15 @@ function renderStats(model) {
 function renderSourceNote(model) {
     if (!els.networkSource) return;
 
+    const origin = state.datasetOrigin === 'handoff' ? 'Workspace dataset' : 'Curated dataset';
+
     if (model.source.kind === 'derived') {
         const stats = model.source.statistics || {};
         const unresolved = model.source.unresolvedTargets?.target_count ?? stats.unresolved_target_count;
         const unresolvedEffectors =
             model.source.unresolvedTargets?.effector_count ?? stats.unresolved_effector_count;
         const pieces = [
+            origin,
             `Phase 4 interaction analysis v${model.source.analysisVersion || '?'}`,
             `dataset built ${formatDate(model.source.datasetBuiltAt) || 'unknown'}`,
         ];
@@ -135,8 +134,10 @@ function renderSourceNote(model) {
         return;
     }
 
+    const count = state.dataset?.interactions?.length || 0;
     els.networkSource.textContent =
-        'Display-only network built from dataset interactions. Run python scripts/analyze_interactions.py for validated evidence.';
+        `${origin} · Display-only network built from ${count} interaction row(s). ` +
+        'Run python scripts/analyze_interactions.py for validated evidence.';
 }
 
 function unresolvedRows() {
@@ -610,15 +611,44 @@ function bindExports() {
     });
 }
 
+function bindNavHandoff() {
+    document.querySelectorAll('.nav-module a').forEach((link) => {
+        link.addEventListener('click', () => {
+            if (state.dataset) queueDatasetForModule(state.dataset);
+        });
+    });
+}
+
+function showNoDataset(message) {
+    setPageStatus(message);
+    if (els.networkStatus) els.networkStatus.textContent = 'Waiting for data';
+    if (els.networkSource) els.networkSource.textContent = 'No dataset loaded.';
+    if (els.networkEmpty) {
+        els.networkEmpty.hidden = false;
+        els.networkEmpty.innerHTML =
+            '<p>No interactions to display.</p>' +
+            '<p class="ia-muted">Reset the filters or load a dataset with resolved interaction records.</p>';
+    }
+    document.querySelectorAll('[data-export]').forEach((button) => {
+        button.disabled = true;
+    });
+}
+
 async function initInteractionAnalysisPage() {
     bindFilters();
     bindUnresolvedFilters();
     bindExports();
+    bindNavHandoff();
+
+    const dataset = consumeQueuedDataset();
+    if (!dataset) {
+        showNoDataset('No dataset on this page. Load data in the Workspace, then open this module.');
+        return;
+    }
+
+    state.datasetOrigin = 'handoff';
 
     try {
-        const stored = loadStoredDataset();
-        const dataset = stored || (await loadDataset(DEFAULT_DATASET_URL));
-
         let analysis = null;
         try {
             const result = await loadMatchingInteractionAnalysis(dataset);
@@ -640,21 +670,18 @@ async function initInteractionAnalysisPage() {
         refreshClassificationMeta();
         renderSourceNote(state.model);
         populateUnresolved();
-        setPageStatus('');
         view.render(dataset, state.model, state.filtered);
 
         if (!state.model.interactionEdges.length) {
             setPageStatus(
-                'The loaded dataset has no resolved interaction records. Load the curated dataset or run the interaction build.'
+                'The loaded dataset has no resolved interaction records. Load a dataset with interactions in the workspace.'
             );
+        } else {
+            setPageStatus('Showing the dataset loaded in the workspace.');
         }
     } catch (error) {
-        console.error('Could not load interaction data.', error);
-        setPageStatus(
-            `Could not load the dataset. ${HTTP_SETUP_HINT} Or load a dataset on the home page first.`
-        );
-        if (els.networkStatus) els.networkStatus.textContent = 'Network unavailable.';
-        if (els.networkSource) els.networkSource.textContent = 'No dataset loaded.';
+        console.error('Could not render the carried dataset.', error);
+        showNoDataset('Could not render the dataset carried from the workspace.');
     }
 }
 

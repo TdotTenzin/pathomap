@@ -10,7 +10,7 @@
     loadDataset(url)     Fetch + parse + normalize a dataset; returns the
                          normalized object and replaces the in-memory copy.
     setDataset(data)     Replace the in-memory dataset (used by upload.js).
-    loadStoredDataset()  Restore the last persisted dataset, or null.
+    clearStoredDataset() Remove a stale dataset cached by an older version.
     getDataset()         Return the whole in-memory dataset object.
     getPathogens()       Shorthand for dataset.pathogens.
     getEffectors()       Shorthand for dataset.effectors (defaults to []).
@@ -22,10 +22,9 @@
              an empty normalized structure so getters never crash before load.
 
   Persistence:
-    Every setDataset()/loadDataset() call mirrors the normalized dataset into
-    localStorage (key `pathomap-dataset`). Standalone pages such as
-    interaction-analysis.html use loadStoredDataset() so a dataset loaded or
-    uploaded on index.html carries across navigation.
+    None. Datasets live only in memory for the current page view. A stale
+    `pathomap-dataset` key written by an older build is removed at boot so a
+    previous session's results can never appear without an explicit action.
 
   Note: Normalization is delegated to normalizeDataset() (js/utils/dataset.js)
   so both the fetch path and the upload path share identical cleaning logic.
@@ -40,8 +39,8 @@ export const DEFAULT_SAMPLE_DATASET_URL = '../data/sample-dataset.json';
 // Shared hint shown when a fetch fails because the site is opened as a file
 export const HTTP_SETUP_HINT = 'Serve the site over HTTP (for example, python -m http.server).';
 
-// localStorage key used to carry the dataset between standalone pages
-const DATASET_STORAGE_KEY = 'pathomap-dataset';
+// Legacy key written by older builds; removed once at boot, never read.
+const LEGACY_STORAGE_KEY = 'pathomap-dataset';
 
 // In-memory dataset storage (module-scoped singleton)
 let dataset = normalizeDataset({
@@ -55,7 +54,7 @@ async function sha256Hex(buffer) {
   return Array.from(new Uint8Array(digest), (byte) => byte.toString(16).padStart(2, '0')).join('');
 }
 
-// Single ingest path: validate/annotate meta, normalize, persist, cache.
+// Single ingest path: validate/annotate meta and normalize into memory only.
 function ingestDataset(data, { sha256 } = {}) {
   const normalized = normalizeDataset(
     sha256
@@ -63,7 +62,6 @@ function ingestDataset(data, { sha256 } = {}) {
       : data
   );
   dataset = normalized;
-  persistDataset(normalized);
   return normalized;
 }
 
@@ -84,26 +82,13 @@ export function setDataset(data) {
   return ingestDataset(data);
 }
 
-// Mirror the dataset into localStorage so other pages can reuse it. Failures
-// (quota exceeded, storage disabled) are non-fatal: the in-memory copy remains.
-function persistDataset(normalized) {
+// Delete any dataset cached by a previous build. Store-disabled environments
+// are fine: there is nothing to clean up.
+export function clearStoredDataset() {
   try {
-    localStorage.setItem(DATASET_STORAGE_KEY, JSON.stringify(normalized));
+    localStorage.removeItem(LEGACY_STORAGE_KEY);
   } catch (error) {
-    console.warn('Could not persist dataset to localStorage.', error);
-  }
-}
-
-// Restore the dataset persisted by a previous page load, or null when absent
-export function loadStoredDataset() {
-  try {
-    const stored = localStorage.getItem(DATASET_STORAGE_KEY);
-    if (!stored) return null;
-    dataset = normalizeDataset(JSON.parse(stored));
-    return dataset;
-  } catch (error) {
-    console.warn('Could not restore persisted dataset.', error);
-    return null;
+    console.warn('Could not clear the legacy dataset cache.', error);
   }
 }
 
@@ -134,4 +119,12 @@ export function getHostTargets() {
 
 export function getInteractions() {
   return dataset.interactions || [];
+}
+
+export function getReferences() {
+  return dataset.references || [];
+}
+
+export function getInteractionEvidence() {
+  return dataset.interaction_evidence || [];
 }

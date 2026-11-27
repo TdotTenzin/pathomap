@@ -8,7 +8,6 @@ can run offline with cached responses.
 Cache layout (relative to ``data/sources``):
 
     uniprot/entries/{accession}.json      Full UniProt entries
-    uniprot/sequences/{accession}.json    Sequence-only responses
     uniprot/search/{query}.json           Effector name -> accession searches
     interpro/matches/{accession}.json     InterPro domain annotations
     pfam/matches/{accession}.json         Pfam domain annotations
@@ -40,7 +39,7 @@ from typing import Any, Optional
 sys.path.insert(0, str(Path(__file__).parent))
 
 from http_client import ApiError, http_json, slug
-from io_utils import write_json_atomic
+from io_utils import write_json
 
 UNIPROT_BASE = "https://rest.uniprot.org/uniprotkb"
 INTERPRO_BASE = "https://www.ebi.ac.uk/interpro/api"
@@ -168,7 +167,7 @@ def _fetch_interpro_entries(
         elif wrapper.get("results") is not None:
             payload = wrapper
 
-    write_json_atomic(cache_path, payload)
+    write_json(cache_path, payload)
     return payload
 
 
