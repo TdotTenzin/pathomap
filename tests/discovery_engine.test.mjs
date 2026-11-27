@@ -81,11 +81,13 @@ test('interaction analysis maps the uploaded network and evidence', () => {
   const result = moduleById(report, 'interaction-analysis');
   assert.equal(result.status, 'complete');
   assert.equal(result.metrics.find((metric) => metric.label === 'Interactions').value, '4');
+  assert.equal(result.metrics.find((metric) => metric.label === 'Annotated target links').value, '4');
   assert.equal(result.metrics.find((metric) => metric.label === 'Evidence coverage').value, '100.0%');
   const shared = result.tables.find((table) => table.title === 'Shared host proteins');
   assert.equal(shared.rows.length, 2);
   assert.equal(shared.rows[0].pathogen_count, 2);
-  assert.equal(result.network.filtered.interactionEdges.length, 4);
+  assert.equal(result.network.filtered.interactionEdges.length, 8);
+  assert.equal(result.network.filtered.interactionEdges.filter((edge) => edge.kind === 'target_association').length, 4);
 });
 
 test('sequence analysis reports descriptors and missing sequences without prediction', () => {
@@ -184,6 +186,21 @@ test('a curated dataset drives the same modules and network', () => {
   assert.equal(moduleById(report, 'interaction-analysis').status, 'complete');
   assert.equal(moduleById(report, 'comparative-pathogen-analysis').status, 'complete');
   assert.ok(report.summary.complete >= 4, `only ${report.summary.complete} modules completed`);
+});
+
+test('curated dataset readiness passes with propagated labels and derived features', () => {
+  const raw = JSON.parse(readFileSync(new URL('../data/pathomap-dataset.json', import.meta.url), 'utf8'));
+  const report = runDiscovery(normalizeDataset(raw));
+  const result = moduleById(report, 'predictive-readiness');
+  const rows = Object.fromEntries(result.tables[0].rows.map((row) => [row.check, row]));
+
+  assert.equal(rows['Labelled examples'].value, '246');
+  assert.equal(rows['Distinct phenotype labels'].value, '5');
+  assert.equal(rows['Independent pathogen groups'].value, '53');
+  assert.equal(rows['Complete feature vectors'].value, '90.2%');
+  assert.ok(Object.values(rows).every((row) => row.passed === 'yes'));
+  assert.equal(result.metrics.find((metric) => metric.label === 'Readiness').value, 'Adequate for planning');
+  assert.equal(result.metrics.find((metric) => metric.label === 'Checks passed').value, '4/4');
 });
 
 test('curated pathway annotations use readable labels instead of object strings', () => {

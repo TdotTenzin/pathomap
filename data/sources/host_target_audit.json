@@ -2062,16 +2062,19 @@
     {
       "original_target": "PRP kinases",
       "original_class": "protein",
-      "audit_status": "unresolved",
-      "resolved_name": null,
+      "audit_status": "ambiguous",
+      "resolved_name": "PRK/RSK kinase family (ambiguous)",
       "gene_symbol": null,
       "uniprot_id": null,
-      "aliases": [],
+      "aliases": [
+        "PRP kinase",
+        "RSK kinase"
+      ],
       "members": [],
       "evidence_sources": [
         "data/sources/effectors_seed.json"
       ],
-      "notes": "Original annotation 'PRP kinases' is not a standard human gene/protein name and could not be mapped confidently. Possible PRK/RSK kinases require curator confirmation."
+      "notes": "Curated as an ambiguous family-level target: 'PRP kinases' is not a single standard human gene/protein name. Possible PRK/RSK kinases are retained as a family annotation rather than an unresolved row."
     },
     {
       "original_target": "Rab GTPases",

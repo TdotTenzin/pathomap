@@ -119,8 +119,9 @@ format/resolution, deduplicates relationships (retaining the earliest stable int
 and evidence (by interaction, class, identifiers and provenance), and records every discarded
 row with a code and message. It computes unique effectors, host proteins, curated host targets
 and pathogens; multi-pathogen host proteins; evidence counts/coverage by class and citation;
-unresolved targets by resolution status; and a bipartite network of pathogen, effector and
-host-protein nodes with evidence-bearing edges.
+annotated target associations for non-protein, family, complex and ambiguous targets; unresolved
+targets by resolution status; and a network of pathogen, effector, host-protein and annotated-target
+nodes with evidence-bearing or annotation-derived edges.
 
 **Outputs:** `data/derived/interaction_analysis.json`, including source schema/build timestamp,
 input SHA-256 and analysis parameters. Curated tables are never modified.

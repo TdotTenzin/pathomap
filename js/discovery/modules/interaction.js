@@ -47,8 +47,10 @@ export default {
     const filtered = filterNetwork(model, {});
     const nodesById = new Map(model.nodes.map((node) => [node.id, node]));
     const nodeLabel = (id) => nodesById.get(id)?.label || id || '—';
+    const proteinEdges = filtered.interactionEdges.filter((edge) => edge.kind !== 'target_association');
+    const targetEdges = filtered.interactionEdges.filter((edge) => edge.kind === 'target_association');
 
-    const interactionRows = filtered.interactionEdges.map((edge) => ({
+    const interactionRows = proteinEdges.map((edge) => ({
       effector: nodeLabel(edge.source),
       pathogen: edge.pathogen_name || nodeLabel(edge.pathogen_id),
       host: nodeLabel(edge.target),
@@ -65,7 +67,7 @@ export default {
       .map(([evidence_class, count]) => ({ evidence_class, count }));
 
     const pathogensByHost = new Map();
-    filtered.interactionEdges.forEach((edge) => {
+    proteinEdges.forEach((edge) => {
       if (!edge.pathogen_id) return;
       const list = pathogensByHost.get(edge.target) || [];
       list.push(edge.pathogen_id);
@@ -90,15 +92,25 @@ export default {
       .slice(0, 5)
       .map(([id, count]) => `${nodeLabel(id)} (${count} links)`);
 
-    const evidenceCoverage = filtered.interactionEdges.length === 0
+    const evidenceCoverage = proteinEdges.length === 0
       ? null
-      : filtered.interactionEdges.filter((edge) => (edge.evidence_count || 0) > 0).length / filtered.interactionEdges.length;
-    const unresolved = (dataset.host_targets || []).filter((target) => target.resolution_status !== 'resolved');
+      : proteinEdges.filter((edge) => (edge.evidence_count || 0) > 0).length / proteinEdges.length;
+    const resolvedStatuses = new Set([
+      'resolved_protein',
+      'protein_family',
+      'protein_complex',
+      'non_protein',
+      'ambiguous',
+    ]);
+    const unresolved = (dataset.host_targets || []).filter(
+      (target) => !resolvedStatuses.has(target.resolution_status)
+    );
 
     return {
       metrics: [
         { label: 'Network nodes', value: String(model.nodes.length) },
-        { label: 'Interactions', value: String(filtered.interactionEdges.length) },
+        { label: 'Interactions', value: String(proteinEdges.length) },
+        { label: 'Annotated target links', value: String(targetEdges.length) },
         { label: 'Evidence records', value: String((dataset.interaction_evidence || []).length) },
         { label: 'Evidence coverage', value: percent(evidenceCoverage) },
         { label: 'Shared host proteins', value: String(sharedHostRows.length) },
@@ -116,6 +128,7 @@ export default {
       notes: [
         'Node position and distance are exploratory only; they do not measure interaction strength.',
         'Pathogen-encodes-effector links are membership links, not effector-host interactions.',
+        'Annotated target links represent curated family, complex, ambiguous, or non-protein targets; they are not protein interactions.',
         'Open a node or edge in the network to see its evidence records and identifiers.',
       ],
       warnings: [],

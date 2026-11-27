@@ -41,14 +41,13 @@
       <a class="nav-brand" href="index.html">PathoMap</a>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Workspace</a></li>
-        <li class="nav-module"><a href="interaction-analysis.html">Interactions</a></li>
-        <li class="nav-module"><a href="sequence-analysis.html">Sequences</a></li>
-        <li class="nav-module"><a href="pathway-analysis.html">Pathways</a></li>
-        <li class="nav-module"><a href="functional-enrichment.html">Enrichment</a></li>
-        <li class="nav-module"><a href="protein-network-analysis.html">Protein network</a></li>
-        <li class="nav-module"><a href="comparative-pathogen-analysis.html">Comparative</a></li>
-        <li class="nav-module"><a href="host-response-analysis.html">Host response</a></li>
-        <li class="nav-module"><a href="predictive-readiness.html">Readiness</a></li>
+        <li class="nav-module"><a href="interaction-analysis.html" title="Explore host-pathogen interaction networks and evidence classes">Interactions</a></li>
+        <li class="nav-module"><a href="sequence-analysis.html" title="Analyze effector sequence properties and distributions">Sequences</a></li>
+        <li class="nav-module"><a href="pathway-analysis.html" title="Map host proteins to biological pathways">Pathways</a></li>
+        <li class="nav-module"><a href="functional-enrichment.html" title="Test if host proteins are enriched for biological functions">Enrichment</a></li>
+        <li class="nav-module"><a href="protein-network-analysis.html" title="Analyze protein interaction network structure and centrality">Protein network</a></li>
+        <li class="nav-module"><a href="comparative-pathogen-analysis.html" title="Compare pathogens by effector repertoire similarity">Comparative</a></li>
+        <li class="nav-module"><a href="host-response-analysis.html" title="Explore host cellular processes targeted by pathogens">Host response</a></li>
       </ul>
       <button class="dark-toggle" id="dark-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9790;</button>
     </div>
@@ -65,9 +64,9 @@
           </p>
         </div>
         <ul class="transparency-list">
-          <li><strong>Curated prototype, not a comprehensive resource:</strong> current tables cover a focused, curated subset (bacterial host&ndash;pathogen effectors, host proteins, and related interaction records as available in the loaded dataset).</li>
+          <li><strong>Curated prototype, not a comprehensive resource:</strong> current tables cover a focused, curated subset (bacterial <span title="Microorganisms that cause disease">host&ndash;pathogen</span> <span title="Proteins secreted by pathogens to manipulate host cell functions">effectors</span>, <span title="Proteins in the host organism that are targeted by pathogen effectors">host proteins</span>, and related interaction records as available in the loaded dataset).</li>
           <li><strong>Coverage is limited:</strong> interaction counts are small (demonstration-scale); absence of a record does not mean an interaction is absent in biology.</li>
-          <li><strong>Evidence is labeled, not inferred silently:</strong> interaction evidence is categorized (e.g. experimental, predicted, annotation-derived, hypothetical). Labels reflect curation/provenance&mdash;not clinical or functional certainty.</li>
+          <li><strong>Evidence is labeled, not inferred silently:</strong> interaction <span title="Categorization of the strength and type of supporting evidence (e.g., experimental, computational)">evidence</span> is categorized (e.g. experimental, predicted, annotation-derived, hypothetical). Labels reflect curation/provenance&mdash;not clinical or functional certainty.</li>
           <li><strong>Generated analyses are reproducible outputs:</strong> generated artifacts (e.g. interaction network outputs) depend on validated inputs and explicit methods; they are not curated ground truth.</li>
           <li><strong>Demo/sample data:</strong> built-in sample and uploaded datasets are for exploration; validate against the curated pipeline outputs for serious use.</li>
         </ul>

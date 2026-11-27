@@ -102,6 +102,62 @@ test('normalizeDataset generates unique canonical IDs and resolves links by name
     ]);
 });
 
+test('normalizeDataset derives missing effector features from sequence', () => {
+    const normalized = normalizeDataset({
+        effectors: [
+            { effector_name: 'Derived', sequence: 'MKTAILVFVKRLREGYDCPHQNA' },
+            { effector_name: 'Explicit', sequence: 'A', molecular_weight_da: 999, isoelectric_point: 7, gravy_score: 1 },
+            { effector_name: 'No sequence' },
+        ],
+    });
+    const [derived, explicit, missing] = normalized.effectors;
+
+    assert.equal(derived.sequence_length, 23);
+    assert.equal(derived.molecular_weight_da, 2690.2);
+    assert.equal(derived.isoelectric_point, 9.37);
+    assert.equal(derived.gravy_score, -0.291);
+    assert.deepEqual(
+        [explicit.sequence_length, explicit.molecular_weight_da, explicit.isoelectric_point, explicit.gravy_score],
+        [1, 999, 7, 1],
+    );
+    assert.deepEqual(
+        [missing.sequence_length, missing.molecular_weight_da, missing.isoelectric_point, missing.gravy_score],
+        [null, null, null, null],
+    );
+});
+
+test('normalizeDataset propagates pathogen strategies as traceable effector phenotypes', () => {
+    const normalized = normalizeDataset({
+        pathogens: [
+            { pathogen_id: 1, name: 'Alpha one', strategy: 'escape' },
+            { pathogen_id: 2, name: 'Beta two', strategy: 'unknown' },
+            { pathogen_id: 3, name: 'Gamma three', strategy: 'arrest' },
+        ],
+        effectors: [
+            { effector_name: 'By id', pathogen_id: 1 },
+            { effector_name: 'By name', pathogen_name: 'Gamma three' },
+            { effector_name: 'Direct', pathogen_id: 1, phenotype: 'intracellular' },
+            { effector_name: 'Unknown strategy', pathogen_id: 2 },
+            { effector_name: 'No pathogen' },
+        ],
+    });
+    const [byId, byName, direct, unknownStrategy, noPathogen] = normalized.effectors;
+
+    assert.equal(byId.phenotype, 'escape');
+    assert.equal(byId.phenotype_source, 'pathogen.strategy');
+    assert.equal(byId.phenotype_code, 2);
+    assert.equal(byName.phenotype, 'arrest');
+    assert.equal(byName.phenotype_source, 'pathogen.strategy');
+    assert.equal(byName.phenotype_code, 1);
+    assert.equal(direct.phenotype, 'intracellular');
+    assert.equal(direct.phenotype_source, 'direct');
+    assert.equal(direct.phenotype_code, null);
+    assert.equal(unknownStrategy.phenotype, null);
+    assert.equal(unknownStrategy.phenotype_source, null);
+    assert.equal(noPathogen.phenotype, null);
+    assert.equal(noPathogen.phenotype_code, null);
+});
+
 test('normalizeDataset drops undeclared fields and reports final row counts', () => {
     const normalized = normalizeDataset({
         pathogens: [{ entity_id: 'PM-PAT-0001', pathogen_id: 1, name: 'Alpha', mystery: 'drop' }],

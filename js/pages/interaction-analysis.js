@@ -112,18 +112,20 @@ function renderSourceNote(model) {
 
     if (model.source.kind === 'derived') {
         const stats = model.source.statistics || {};
+        const annotated = model.source.annotatedTargets?.target_count ?? stats.annotated_target_count;
         const unresolved = model.source.unresolvedTargets?.target_count ?? stats.unresolved_target_count;
-        const unresolvedEffectors =
-            model.source.unresolvedTargets?.effector_count ?? stats.unresolved_effector_count;
         const pieces = [
             origin,
             `Phase 4 interaction analysis v${model.source.analysisVersion || '?'}`,
             `dataset built ${formatDate(model.source.datasetBuiltAt) || 'unknown'}`,
         ];
-        if (Number.isFinite(Number(unresolved))) {
+        if (Number.isFinite(Number(annotated))) {
             pieces.push(
-                `${pluralize(Number(unresolved), 'unresolved target')} (${pluralize(Number(unresolvedEffectors || 0), 'effector')}) excluded`
+                `${pluralize(Number(annotated), 'annotated target')} included as target links`
             );
+        }
+        if (Number.isFinite(Number(unresolved))) {
+            pieces.push(`${pluralize(Number(unresolved), 'unresolved target')}`);
         }
         if (model.source.datasetSha256) {
             pieces.push(
@@ -141,16 +143,21 @@ function renderSourceNote(model) {
 }
 
 function unresolvedRows() {
-    return state.model?.source?.unresolvedTargets?.targets || [];
+    const annotated = state.model?.source?.annotatedTargets?.targets || [];
+    const unresolved = state.model?.source?.unresolvedTargets?.targets || [];
+    return [...annotated, ...unresolved];
 }
 
 function unresolvedSearchText(row) {
     return [
         row.host_target_id,
         row.target_name,
+        row.resolved_name,
         row.host_target_class,
         row.resolution_status,
         row.reason,
+        row.audit_notes,
+        ...(row.aliases || []),
         ...(row.effector_names || []),
         ...(row.effector_ids || []),
     ]
@@ -178,14 +185,16 @@ function populateUnresolved() {
     );
 
     const summary = state.model?.source?.unresolvedTargets || {};
+    const annotated = state.model?.source?.annotatedTargets || {};
     const stats = state.model?.source?.statistics || {};
     const targets = summary.target_count ?? stats.unresolved_target_count ?? rows.length;
     const effectors = summary.effector_count ?? stats.unresolved_effector_count ?? 0;
+    const annotatedTargets = annotated.target_count ?? stats.annotated_target_count ?? 0;
     if (els.unresolvedNote) {
         els.unresolvedNote.textContent =
             state.model?.source?.kind === 'derived' && Number.isFinite(Number(targets))
-                ? `${pluralize(Number(targets), 'target group')} · ${pluralize(Number(effectors), 'effector')} excluded from the network`
-                : 'No excluded-target report is available for this dataset.';
+                ? `${pluralize(Number(annotatedTargets), 'annotated target')} included as links · ${pluralize(Number(targets), 'unresolved target')} (${pluralize(Number(effectors), 'effector')})`
+                : 'No target-resolution report is available for this dataset.';
     }
     renderUnresolved();
 }
@@ -199,10 +208,10 @@ function renderUnresolved() {
     visible.forEach((row) => {
         const tr = document.createElement('tr');
         const cells = [
-            row.target_name || String(row.host_target_id ?? 'Unknown'),
+            row.resolved_name || row.target_name || String(row.host_target_id ?? 'Unknown'),
             row.resolution_status || 'unknown',
             (row.effector_names || []).join(', ') || (row.effector_ids || []).join(', '),
-            row.reason || '',
+            row.audit_notes || row.reason || 'Curated target annotation.',
         ];
         cells.forEach((value) => {
             const td = document.createElement('td');
@@ -216,14 +225,14 @@ function renderUnresolved() {
         const tr = document.createElement('tr');
         const td = document.createElement('td');
         td.colSpan = 4;
-        td.textContent = rows.length ? 'No unresolved targets match these filters.' : 'No unresolved targets reported.';
+        td.textContent = rows.length ? 'No target annotations match these filters.' : 'No target annotations reported.';
         tr.appendChild(td);
         els.unresolvedBody.appendChild(tr);
     }
 
     if (els.unresolvedCount) {
         els.unresolvedCount.textContent = rows.length
-            ? `${visible.length} of ${rows.length} target groups shown`
+            ? `${visible.length} of ${rows.length} target annotations shown`
             : '';
     }
 }
@@ -423,6 +432,7 @@ function downloadJson() {
         nodes: state.filtered.nodes,
         interaction_edges: state.filtered.interactionEdges,
         membership_edges: state.filtered.membershipEdges,
+        annotated_targets: state.model.source?.annotatedTargets || null,
         unresolved_targets: state.model.source?.unresolvedTargets || null,
     };
 
@@ -548,6 +558,7 @@ function downloadUnresolvedCsv() {
     const rows = visibleUnresolvedRows().map((row) => ({
         host_target_id: row.host_target_id ?? '',
         target_name: row.target_name || '',
+        resolved_name: row.resolved_name || '',
         host_target_class: row.host_target_class || '',
         resolution_status: row.resolution_status || '',
         effector_count: row.effector_count ?? (row.effector_ids || []).length,
@@ -555,6 +566,7 @@ function downloadUnresolvedCsv() {
         effector_names: (row.effector_names || []).join('; '),
         pathogen_ids: (row.pathogen_ids || []).join('; '),
         reason: row.reason || '',
+        audit_notes: row.audit_notes || '',
         source_kind: provenance.source_kind,
         analysis_version: provenance.analysis_version,
         exported_at: provenance.exported_at,
@@ -563,6 +575,7 @@ function downloadUnresolvedCsv() {
     const columns = [
         { key: 'host_target_id', label: 'host_target_id' },
         { key: 'target_name', label: 'target_name' },
+        { key: 'resolved_name', label: 'resolved_name' },
         { key: 'host_target_class', label: 'host_target_class' },
         { key: 'resolution_status', label: 'resolution_status' },
         { key: 'effector_count', label: 'effector_count' },
@@ -570,6 +583,7 @@ function downloadUnresolvedCsv() {
         { key: 'effector_names', label: 'effector_names' },
         { key: 'pathogen_ids', label: 'pathogen_ids' },
         { key: 'reason', label: 'reason' },
+        { key: 'audit_notes', label: 'audit_notes' },
         { key: 'source_kind', label: 'source_kind' },
         { key: 'analysis_version', label: 'analysis_version' },
         { key: 'exported_at', label: 'exported_at' },
@@ -577,7 +591,7 @@ function downloadUnresolvedCsv() {
 
     downloadText(
         toCsv(columns, rows),
-        `pathomap-unresolved-targets-${timestampSlug()}.csv`,
+        `pathomap-target-resolution-${timestampSlug()}.csv`,
         'text/csv;charset=utf-8'
     );
 }

@@ -1,13 +1,13 @@
 {
-  "schema_version": "1.2",
+  "schema_version": "1.3",
   "meta": {
     "analysis": "interaction_analysis",
-    "analysis_version": "1.2",
-    "generated_at": "2026-11-26T17:10:52Z",
+    "analysis_version": "1.3",
+    "generated_at": "2026-11-27T23:27:49Z",
     "source_dataset_path": "data/sample-dataset.json",
     "source_dataset_schema_version": "3.0",
-    "source_dataset_built_at": "2026-11-18T15:26:11Z",
-    "source_dataset_sha256": "0e5b15ec1557fa98cac11889f3f2bc16711c8e02f64619b9dc9c576b631ac4b7",
+    "source_dataset_built_at": "2026-11-27T23:27:39Z",
+    "source_dataset_sha256": "4b6309ba3a5549688267c5752a853a30e9811b0bbc7eaa4e59fa9fdf715a1304",
     "input_tables": [
       "pathogens",
       "effectors",
@@ -21,6 +21,13 @@
       "duplicate_relationship_policy": "retain_lexicographically_earliest_interaction_id",
       "evidence_identity": "interaction_id|evidence_class|doi|pmid|database_accession|provenance",
       "host_target_scope": "curated_host_target_ids",
+      "annotated_target_statuses": [
+        "ambiguous",
+        "non_protein",
+        "protein_complex",
+        "protein_family",
+        "resolved_protein"
+      ],
       "pathogen_classification": "gram_stain_or_name_heuristic"
     }
   },
@@ -47,8 +54,11 @@
     "unique_host_target_count": 5,
     "unique_pathogen_count": 3,
     "host_proteins_targeted_by_multiple_pathogens_count": 0,
-    "unresolved_target_count": 20,
-    "unresolved_effector_count": 22,
+    "unresolved_target_count": 0,
+    "unresolved_effector_count": 0,
+    "annotated_target_count": 20,
+    "annotated_target_effector_count": 22,
+    "target_association_count": 22,
     "evidence_count": 10,
     "interactions_with_evidence_count": 5,
     "interactions_without_evidence_count": 0,
@@ -78,8 +88,15 @@
   },
   "host_proteins_targeted_by_multiple_pathogens": [],
   "unresolved_targets": {
+    "target_count": 0,
+    "effector_count": 0,
+    "by_resolution_status": {},
+    "targets": []
+  },
+  "target_associations": {
     "target_count": 20,
     "effector_count": 22,
+    "association_count": 22,
     "by_resolution_status": {
       "ambiguous": {
         "target_count": 6,
@@ -101,10 +118,19 @@
     "targets": [
       {
         "host_target_id": "PM-TGT-0018",
+        "numeric_host_target_id": 18,
         "target_name": "Cholesterol",
+        "resolved_name": "Cholesterol",
         "host_target_class": "lipid",
         "resolution_status": "non_protein",
-        "reason": "Host target is classified as 'non_protein', not resolved_protein.",
+        "audit_status": "non_protein",
+        "aliases": [],
+        "members": [],
+        "evidence_sources": [
+          "data/sources/effectors_seed.json",
+          "data/classification-mapping.json"
+        ],
+        "audit_notes": "Membrane lipid; not a protein.",
         "effector_ids": [
           "PM-EFF-0007",
           "PM-EFF-0157"
@@ -113,18 +139,27 @@
           "ALO",
           "SseJ"
         ],
-        "effector_count": 2,
         "pathogen_ids": [
           "PM-PAT-0001",
           "PM-PAT-0032"
-        ]
+        ],
+        "effector_count": 2
       },
       {
         "host_target_id": "PM-TGT-0055",
+        "numeric_host_target_id": 55,
         "target_name": "Host membranes",
+        "resolved_name": "Host membrane",
         "host_target_class": "cellular_structure",
         "resolution_status": "non_protein",
-        "reason": "Host target is classified as 'non_protein', not resolved_protein.",
+        "audit_status": "non_protein",
+        "aliases": [],
+        "members": [],
+        "evidence_sources": [
+          "data/sources/effectors_seed.json",
+          "data/classification-mapping.json"
+        ],
+        "audit_notes": "Membrane compartment, not a protein.",
         "effector_ids": [
           "PM-EFF-0217",
           "PM-EFF-0221"
@@ -133,316 +168,1482 @@
           "AbOmpA",
           "Plc"
         ],
-        "effector_count": 2,
         "pathogen_ids": [
           "PM-PAT-0048"
-        ]
+        ],
+        "effector_count": 2
       },
       {
         "host_target_id": "PM-TGT-0006",
+        "numeric_host_target_id": 6,
         "target_name": "ANTXR1/2",
+        "resolved_name": "ANTXR1 and ANTXR2 (multi-target)",
         "host_target_class": "protein",
         "resolution_status": "ambiguous",
-        "reason": "Host target is classified as 'ambiguous', not resolved_protein.",
+        "audit_status": "ambiguous",
+        "aliases": [],
+        "members": [
+          {
+            "name": "Anthrax toxin receptor 1",
+            "gene_symbol": "ANTXR1",
+            "uniprot_id": "Q9H6X2"
+          },
+          {
+            "name": "Anthrax toxin receptor 2",
+            "gene_symbol": "ANTXR2",
+            "uniprot_id": "P58335"
+          }
+        ],
+        "evidence_sources": [
+          "https://www.uniprot.org/uniprotkb/Q9H6X2/entry",
+          "https://www.uniprot.org/uniprotkb/P58335/entry",
+          "data/sources/effectors_seed.json"
+        ],
+        "audit_notes": "PA binds either ANTXR1 (TEM8) or ANTXR2 (CMG2); two distinct receptors.",
         "effector_ids": [
           "PM-EFF-0161"
         ],
         "effector_names": [
           "PA"
         ],
-        "effector_count": 1,
         "pathogen_ids": [
           "PM-PAT-0032"
-        ]
+        ],
+        "effector_count": 1
       },
       {
         "host_target_id": "PM-TGT-0010",
+        "numeric_host_target_id": 10,
         "target_name": "CaM/adenylate cyclase",
+        "resolved_name": "Calmodulin and adenylate cyclase (multi-target)",
         "host_target_class": "protein",
         "resolution_status": "ambiguous",
-        "reason": "Host target is classified as 'ambiguous', not resolved_protein.",
+        "audit_status": "ambiguous",
+        "aliases": [],
+        "members": [
+          {
+            "name": "Calmodulin-1",
+            "gene_symbol": "CALM1",
+            "uniprot_id": "P0DP23"
+          },
+          {
+            "name": "Adenylate cyclase type 1",
+            "gene_symbol": "ADCY1",
+            "uniprot_id": "Q08828"
+          }
+        ],
+        "evidence_sources": [
+          "https://www.uniprot.org/uniprotkb/P0DP23/entry",
+          "https://www.uniprot.org/uniprotkb/Q08828/entry",
+          "data/sources/effectors_seed.json"
+        ],
+        "audit_notes": "Edema factor and CyaA are calmodulin-dependent adenylate cyclases; both host components are involved.",
         "effector_ids": [
           "PM-EFF-0159"
         ],
         "effector_names": [
           "EF"
         ],
-        "effector_count": 1,
         "pathogen_ids": [
           "PM-PAT-0032"
-        ]
+        ],
+        "effector_count": 1
       },
       {
         "host_target_id": "PM-TGT-0015",
+        "numeric_host_target_id": 15,
         "target_name": "Cdc42 / Rac1",
+        "resolved_name": "Cdc42 and Rac1 (multi-target)",
         "host_target_class": "protein",
         "resolution_status": "ambiguous",
-        "reason": "Host target is classified as 'ambiguous', not resolved_protein.",
+        "audit_status": "ambiguous",
+        "aliases": [],
+        "members": [
+          {
+            "name": "Cell division control protein 42 homolog",
+            "gene_symbol": "CDC42",
+            "uniprot_id": "P60953"
+          },
+          {
+            "name": "Ras-related C3 botulinum toxin substrate 1",
+            "gene_symbol": "RAC1",
+            "uniprot_id": "P63000"
+          }
+        ],
+        "evidence_sources": [
+          "https://www.uniprot.org/uniprotkb/P60953/entry",
+          "https://www.uniprot.org/uniprotkb/P63000/entry",
+          "data/sources/effectors_seed.json"
+        ],
+        "audit_notes": "BopE, ExoT and SopE can act on both GTPases; no single host_protein_id link is valid.",
         "effector_ids": [
           "PM-EFF-0006"
         ],
         "effector_names": [
           "SopE"
         ],
-        "effector_count": 1,
         "pathogen_ids": [
           "PM-PAT-0001"
-        ]
+        ],
+        "effector_count": 1
       },
       {
         "host_target_id": "PM-TGT-0065",
+        "numeric_host_target_id": 65,
         "target_name": "JNK/AMPK",
+        "resolved_name": "JNK and AMPK kinases (multi-target)",
         "host_target_class": "protein",
         "resolution_status": "ambiguous",
-        "reason": "Host target is classified as 'ambiguous', not resolved_protein.",
+        "audit_status": "ambiguous",
+        "aliases": [],
+        "members": [
+          {
+            "name": "Mitogen-activated protein kinase 8",
+            "gene_symbol": "MAPK8",
+            "uniprot_id": "P45983"
+          },
+          {
+            "name": "5'-AMP-activated protein kinase catalytic subunit alpha-1",
+            "gene_symbol": "PRKAA1",
+            "uniprot_id": "Q13131"
+          }
+        ],
+        "evidence_sources": [
+          "https://www.uniprot.org/uniprotkb/P45983/entry",
+          "https://www.uniprot.org/uniprotkb/Q13131/entry",
+          "data/sources/effectors_seed.json"
+        ],
+        "audit_notes": "Eis is reported to modulate both kinase pathways.",
         "effector_ids": [
           "PM-EFF-0015"
         ],
         "effector_names": [
           "Eis"
         ],
-        "effector_count": 1,
         "pathogen_ids": [
           "PM-PAT-0003"
-        ]
+        ],
+        "effector_count": 1
       },
       {
         "host_target_id": "PM-TGT-0082",
+        "numeric_host_target_id": 82,
         "target_name": "MYADM / Abl-1",
+        "resolved_name": "MYADM and ABL1 (multi-target)",
         "host_target_class": "protein",
         "resolution_status": "ambiguous",
-        "reason": "Host target is classified as 'ambiguous', not resolved_protein.",
+        "audit_status": "ambiguous",
+        "aliases": [],
+        "members": [
+          {
+            "name": "Myeloid-associated differentiation marker",
+            "gene_symbol": "MYADM",
+            "uniprot_id": "Q96S97"
+          },
+          {
+            "name": "Tyrosine-protein kinase ABL1",
+            "gene_symbol": "ABL1",
+            "uniprot_id": "P00519"
+          }
+        ],
+        "evidence_sources": [
+          "https://www.uniprot.org/uniprotkb/Q96S97/entry",
+          "https://www.uniprot.org/uniprotkb/P00519/entry",
+          "data/sources/effectors_seed.json"
+        ],
+        "audit_notes": "AnkA interacts with both MYADM and ABL1.",
         "effector_ids": [
           "PM-EFF-0068"
         ],
         "effector_names": [
           "AnkA"
         ],
-        "effector_count": 1,
         "pathogen_ids": [
           "PM-PAT-0013"
-        ]
+        ],
+        "effector_count": 1
       },
       {
         "host_target_id": "PM-TGT-0102",
+        "numeric_host_target_id": 102,
         "target_name": "Rab5 / PI3P",
+        "resolved_name": "Rab5 and PI3P (mixed lipid/protein target)",
         "host_target_class": "protein",
         "resolution_status": "ambiguous",
-        "reason": "Host target is classified as 'ambiguous', not resolved_protein.",
+        "audit_status": "ambiguous",
+        "aliases": [],
+        "members": [
+          {
+            "name": "Ras-related protein Rab-5A",
+            "gene_symbol": "RAB5A",
+            "uniprot_id": "P20339"
+          }
+        ],
+        "evidence_sources": [
+          "https://www.uniprot.org/uniprotkb/P20339/entry",
+          "data/sources/effectors_seed.json"
+        ],
+        "audit_notes": "Ats-1 binds Rab5 and PI3P; mixed lipid/protein annotation.",
         "effector_ids": [
           "PM-EFF-0069"
         ],
         "effector_names": [
           "Ats-1"
         ],
-        "effector_count": 1,
         "pathogen_ids": [
           "PM-PAT-0013"
-        ]
+        ],
+        "effector_count": 1
       },
       {
         "host_target_id": "PM-TGT-0001",
+        "numeric_host_target_id": 1,
         "target_name": "Abiotic surfaces",
+        "resolved_name": "Abiotic surface",
         "host_target_class": "cellular_structure",
         "resolution_status": "non_protein",
-        "reason": "Host target is classified as 'non_protein', not resolved_protein.",
+        "audit_status": "non_protein",
+        "aliases": [],
+        "members": [],
+        "evidence_sources": [
+          "data/sources/effectors_seed.json",
+          "data/classification-mapping.json"
+        ],
+        "audit_notes": "Non-biological surface; no human protein target.",
         "effector_ids": [
           "PM-EFF-0219"
         ],
         "effector_names": [
           "CsuA/B"
         ],
-        "effector_count": 1,
         "pathogen_ids": [
           "PM-PAT-0048"
-        ]
+        ],
+        "effector_count": 1
       },
       {
         "host_target_id": "PM-TGT-0048",
+        "numeric_host_target_id": 48,
         "target_name": "Host cells",
+        "resolved_name": "Host cell",
         "host_target_class": "cellular_structure",
         "resolution_status": "non_protein",
-        "reason": "Host target is classified as 'non_protein', not resolved_protein.",
+        "audit_status": "non_protein",
+        "aliases": [],
+        "members": [],
+        "evidence_sources": [
+          "data/sources/effectors_seed.json",
+          "data/classification-mapping.json"
+        ],
+        "audit_notes": "Whole-cell annotation; no single molecular target.",
         "effector_ids": [
           "PM-EFF-0218"
         ],
         "effector_names": [
           "Bap"
         ],
-        "effector_count": 1,
         "pathogen_ids": [
           "PM-PAT-0048"
-        ]
+        ],
+        "effector_count": 1
       },
       {
         "host_target_id": "PM-TGT-0075",
+        "numeric_host_target_id": 75,
         "target_name": "Membrane",
+        "resolved_name": "Membrane",
         "host_target_class": "cellular_structure",
         "resolution_status": "non_protein",
-        "reason": "Host target is classified as 'non_protein', not resolved_protein.",
+        "audit_status": "non_protein",
+        "aliases": [],
+        "members": [],
+        "evidence_sources": [
+          "data/sources/effectors_seed.json",
+          "data/classification-mapping.json"
+        ],
+        "audit_notes": "Membrane compartment, not a protein.",
         "effector_ids": [
           "PM-EFF-0014"
         ],
         "effector_names": [
           "ESAT-6"
         ],
-        "effector_count": 1,
         "pathogen_ids": [
           "PM-PAT-0003"
-        ]
+        ],
+        "effector_count": 1
       },
       {
         "host_target_id": "PM-TGT-0079",
+        "numeric_host_target_id": 79,
         "target_name": "Mitochondria",
+        "resolved_name": "Mitochondrion",
         "host_target_class": "organelle",
         "resolution_status": "non_protein",
-        "reason": "Host target is classified as 'non_protein', not resolved_protein.",
+        "audit_status": "non_protein",
+        "aliases": [],
+        "members": [],
+        "evidence_sources": [
+          "data/sources/effectors_seed.json",
+          "data/classification-mapping.json"
+        ],
+        "audit_notes": "Organelle, not a protein.",
         "effector_ids": [
           "PM-EFF-0220"
         ],
         "effector_names": [
           "OmpA"
         ],
-        "effector_count": 1,
         "pathogen_ids": [
           "PM-PAT-0048"
-        ]
+        ],
+        "effector_count": 1
       },
       {
         "host_target_id": "PM-TGT-0090",
+        "numeric_host_target_id": 90,
         "target_name": "PI(3,5)P2",
+        "resolved_name": "Phosphatidylinositol 3,5-bisphosphate",
         "host_target_class": "lipid",
         "resolution_status": "non_protein",
-        "reason": "Host target is classified as 'non_protein', not resolved_protein.",
+        "audit_status": "non_protein",
+        "aliases": [],
+        "members": [],
+        "evidence_sources": [
+          "data/sources/effectors_seed.json",
+          "data/classification-mapping.json"
+        ],
+        "audit_notes": "Membrane lipid; not a protein.",
         "effector_ids": [
           "PM-EFF-0018"
         ],
         "effector_names": [
           "MptpB"
         ],
-        "effector_count": 1,
         "pathogen_ids": [
           "PM-PAT-0003"
-        ]
+        ],
+        "effector_count": 1
       },
       {
         "host_target_id": "PM-TGT-0091",
+        "numeric_host_target_id": 91,
         "target_name": "PI(4,5)P2",
+        "resolved_name": "Phosphatidylinositol 4,5-bisphosphate",
         "host_target_class": "lipid",
         "resolution_status": "non_protein",
-        "reason": "Host target is classified as 'non_protein', not resolved_protein.",
+        "audit_status": "non_protein",
+        "aliases": [],
+        "members": [],
+        "evidence_sources": [
+          "data/sources/effectors_seed.json",
+          "data/classification-mapping.json"
+        ],
+        "audit_notes": "Membrane lipid; not a protein.",
         "effector_ids": [
           "PM-EFF-0004"
         ],
         "effector_names": [
           "SopB/SigD"
         ],
-        "effector_count": 1,
         "pathogen_ids": [
           "PM-PAT-0001"
-        ]
+        ],
+        "effector_count": 1
       },
       {
         "host_target_id": "PM-TGT-0093",
+        "numeric_host_target_id": 93,
         "target_name": "PI3P",
+        "resolved_name": "Phosphatidylinositol 3-phosphate",
         "host_target_class": "lipid",
         "resolution_status": "non_protein",
-        "reason": "Host target is classified as 'non_protein', not resolved_protein.",
+        "audit_status": "non_protein",
+        "aliases": [],
+        "members": [],
+        "evidence_sources": [
+          "data/sources/effectors_seed.json",
+          "data/classification-mapping.json"
+        ],
+        "audit_notes": "Membrane lipid; not a protein.",
         "effector_ids": [
           "PM-EFF-0020"
         ],
         "effector_names": [
           "SapM"
         ],
-        "effector_count": 1,
         "pathogen_ids": [
           "PM-PAT-0003"
-        ]
+        ],
+        "effector_count": 1
       },
       {
         "host_target_id": "PM-TGT-0107",
+        "numeric_host_target_id": 107,
         "target_name": "ROS",
+        "resolved_name": "Reactive oxygen species",
         "host_target_class": "metabolite",
         "resolution_status": "non_protein",
-        "reason": "Host target is classified as 'non_protein', not resolved_protein.",
+        "audit_status": "non_protein",
+        "aliases": [],
+        "members": [],
+        "evidence_sources": [
+          "data/sources/effectors_seed.json",
+          "data/classification-mapping.json"
+        ],
+        "audit_notes": "Reactive oxygen metabolites; not a protein.",
         "effector_ids": [
           "PM-EFF-0158"
         ],
         "effector_names": [
           "CatB"
         ],
-        "effector_count": 1,
         "pathogen_ids": [
           "PM-PAT-0032"
-        ]
+        ],
+        "effector_count": 1
       },
       {
         "host_target_id": "PM-TGT-0066",
+        "numeric_host_target_id": 66,
         "target_name": "Kinesin-1",
+        "resolved_name": "Kinesin-1 motor complex",
         "host_target_class": "protein",
         "resolution_status": "protein_complex",
-        "reason": "Host target is classified as 'protein_complex', not resolved_protein.",
+        "audit_status": "verified_complex",
+        "aliases": [],
+        "members": [
+          {
+            "name": "Kinesin heavy chain isoform 5A",
+            "gene_symbol": "KIF5A",
+            "uniprot_id": "Q12840"
+          },
+          {
+            "name": "Kinesin heavy chain isoform 5B",
+            "gene_symbol": "KIF5B",
+            "uniprot_id": "P33176"
+          },
+          {
+            "name": "Kinesin heavy chain isoform 5C",
+            "gene_symbol": "KIF5C",
+            "uniprot_id": "O60282"
+          }
+        ],
+        "evidence_sources": [
+          "https://www.uniprot.org/uniprotkb/Q12840/entry",
+          "https://www.uniprot.org/uniprotkb/P33176/entry",
+          "https://www.uniprot.org/uniprotkb/O60282/entry",
+          "data/sources/effectors_seed.json"
+        ],
+        "audit_notes": "Kinesin-1 is a heavy/light-chain motor complex; isoforms listed.",
         "effector_ids": [
           "PM-EFF-0001"
         ],
         "effector_names": [
           "PipB2"
         ],
-        "effector_count": 1,
         "pathogen_ids": [
           "PM-PAT-0001"
-        ]
+        ],
+        "effector_count": 1
       },
       {
         "host_target_id": "PM-TGT-0124",
+        "numeric_host_target_id": 124,
         "target_name": "V-ATPase",
+        "resolved_name": "Vacuolar-type H+-ATPase",
         "host_target_class": "protein_complex",
         "resolution_status": "protein_complex",
-        "reason": "Host target is classified as 'protein_complex', not resolved_protein.",
+        "audit_status": "verified_complex",
+        "aliases": [],
+        "members": [
+          {
+            "name": "V-type proton ATPase catalytic subunit A",
+            "gene_symbol": "ATP6V1A",
+            "uniprot_id": "P38606"
+          },
+          {
+            "name": "V-type proton ATPase subunit B, brain isoform",
+            "gene_symbol": "ATP6V1B2",
+            "uniprot_id": "P21281"
+          },
+          {
+            "name": "V-type proton ATPase 116 kDa subunit a isoform 1",
+            "gene_symbol": "ATP6V0A1",
+            "uniprot_id": "Q93050"
+          }
+        ],
+        "evidence_sources": [
+          "https://www.uniprot.org/uniprotkb/P38606/entry",
+          "https://www.uniprot.org/uniprotkb/P21281/entry",
+          "https://www.uniprot.org/uniprotkb/Q93050/entry",
+          "data/sources/effectors_seed.json"
+        ],
+        "audit_notes": "Multi-subunit rotary proton pump; representative subunits listed.",
         "effector_ids": [
           "PM-EFF-0017"
         ],
         "effector_names": [
           "MptpA"
         ],
-        "effector_count": 1,
         "pathogen_ids": [
           "PM-PAT-0003"
-        ]
+        ],
+        "effector_count": 1
       },
       {
         "host_target_id": "PM-TGT-0074",
+        "numeric_host_target_id": 74,
         "target_name": "MAPKKs",
+        "resolved_name": "Mitogen-activated protein kinase kinase family",
         "host_target_class": "protein",
         "resolution_status": "protein_family",
-        "reason": "Host target is classified as 'protein_family', not resolved_protein.",
+        "audit_status": "verified_protein_family",
+        "aliases": [],
+        "members": [
+          {
+            "name": "Dual specificity mitogen-activated protein kinase kinase 1",
+            "gene_symbol": "MAP2K1",
+            "uniprot_id": "Q02750"
+          },
+          {
+            "name": "Dual specificity mitogen-activated protein kinase kinase 2",
+            "gene_symbol": "MAP2K2",
+            "uniprot_id": "P36507"
+          }
+        ],
+        "evidence_sources": [
+          "https://www.uniprot.org/uniprotkb/Q02750/entry",
+          "https://www.uniprot.org/uniprotkb/P36507/entry",
+          "data/sources/effectors_seed.json"
+        ],
+        "audit_notes": "LF cleaves MAPKK family members; family not a single protein.",
         "effector_ids": [
           "PM-EFF-0160"
         ],
         "effector_names": [
           "LF"
         ],
-        "effector_count": 1,
         "pathogen_ids": [
           "PM-PAT-0032"
-        ]
+        ],
+        "effector_count": 1
       },
       {
         "host_target_id": "PM-TGT-0098",
+        "numeric_host_target_id": 98,
         "target_name": "Rab proteins",
+        "resolved_name": "Rab GTPase family",
         "host_target_class": "protein_family",
         "resolution_status": "protein_family",
-        "reason": "Host target is classified as 'protein_family', not resolved_protein.",
+        "audit_status": "verified_protein_family",
+        "aliases": [],
+        "members": [
+          {
+            "name": "Ras-related protein Rab-5A",
+            "gene_symbol": "RAB5A",
+            "uniprot_id": "P20339"
+          },
+          {
+            "name": "Ras-related protein Rab-7A",
+            "gene_symbol": "RAB7A",
+            "uniprot_id": "P51149"
+          },
+          {
+            "name": "Ras-related protein Rab-11A",
+            "gene_symbol": "RAB11A",
+            "uniprot_id": "P62491"
+          }
+        ],
+        "evidence_sources": [
+          "https://www.uniprot.org/uniprotkb/P20339/entry",
+          "https://www.uniprot.org/uniprotkb/P51149/entry",
+          "https://www.uniprot.org/uniprotkb/P62491/entry",
+          "data/sources/effectors_seed.json"
+        ],
+        "audit_notes": "Large Rab GTPase family; specific Rab not resolved by the original annotation.",
         "effector_ids": [
           "PM-EFF-0019"
         ],
         "effector_names": [
           "PknG"
         ],
-        "effector_count": 1,
         "pathogen_ids": [
           "PM-PAT-0003"
-        ]
+        ],
+        "effector_count": 1
+      }
+    ],
+    "nodes": [
+      {
+        "id": "PM-TGT-0001",
+        "type": "host_target",
+        "label": "Abiotic surfaces",
+        "target_name": "Abiotic surfaces",
+        "resolved_name": "Abiotic surface",
+        "host_target_class": "cellular_structure",
+        "resolution_status": "non_protein",
+        "audit_status": "non_protein",
+        "aliases": [],
+        "members": [],
+        "evidence_sources": [
+          "data/sources/effectors_seed.json",
+          "data/classification-mapping.json"
+        ],
+        "audit_notes": "Non-biological surface; no human protein target."
+      },
+      {
+        "id": "PM-TGT-0006",
+        "type": "host_target",
+        "label": "ANTXR1/2",
+        "target_name": "ANTXR1/2",
+        "resolved_name": "ANTXR1 and ANTXR2 (multi-target)",
+        "host_target_class": "protein",
+        "resolution_status": "ambiguous",
+        "audit_status": "ambiguous",
+        "aliases": [],
+        "members": [
+          {
+            "name": "Anthrax toxin receptor 1",
+            "gene_symbol": "ANTXR1",
+            "uniprot_id": "Q9H6X2"
+          },
+          {
+            "name": "Anthrax toxin receptor 2",
+            "gene_symbol": "ANTXR2",
+            "uniprot_id": "P58335"
+          }
+        ],
+        "evidence_sources": [
+          "https://www.uniprot.org/uniprotkb/Q9H6X2/entry",
+          "https://www.uniprot.org/uniprotkb/P58335/entry",
+          "data/sources/effectors_seed.json"
+        ],
+        "audit_notes": "PA binds either ANTXR1 (TEM8) or ANTXR2 (CMG2); two distinct receptors."
+      },
+      {
+        "id": "PM-TGT-0010",
+        "type": "host_target",
+        "label": "CaM/adenylate cyclase",
+        "target_name": "CaM/adenylate cyclase",
+        "resolved_name": "Calmodulin and adenylate cyclase (multi-target)",
+        "host_target_class": "protein",
+        "resolution_status": "ambiguous",
+        "audit_status": "ambiguous",
+        "aliases": [],
+        "members": [
+          {
+            "name": "Calmodulin-1",
+            "gene_symbol": "CALM1",
+            "uniprot_id": "P0DP23"
+          },
+          {
+            "name": "Adenylate cyclase type 1",
+            "gene_symbol": "ADCY1",
+            "uniprot_id": "Q08828"
+          }
+        ],
+        "evidence_sources": [
+          "https://www.uniprot.org/uniprotkb/P0DP23/entry",
+          "https://www.uniprot.org/uniprotkb/Q08828/entry",
+          "data/sources/effectors_seed.json"
+        ],
+        "audit_notes": "Edema factor and CyaA are calmodulin-dependent adenylate cyclases; both host components are involved."
+      },
+      {
+        "id": "PM-TGT-0015",
+        "type": "host_target",
+        "label": "Cdc42 / Rac1",
+        "target_name": "Cdc42 / Rac1",
+        "resolved_name": "Cdc42 and Rac1 (multi-target)",
+        "host_target_class": "protein",
+        "resolution_status": "ambiguous",
+        "audit_status": "ambiguous",
+        "aliases": [],
+        "members": [
+          {
+            "name": "Cell division control protein 42 homolog",
+            "gene_symbol": "CDC42",
+            "uniprot_id": "P60953"
+          },
+          {
+            "name": "Ras-related C3 botulinum toxin substrate 1",
+            "gene_symbol": "RAC1",
+            "uniprot_id": "P63000"
+          }
+        ],
+        "evidence_sources": [
+          "https://www.uniprot.org/uniprotkb/P60953/entry",
+          "https://www.uniprot.org/uniprotkb/P63000/entry",
+          "data/sources/effectors_seed.json"
+        ],
+        "audit_notes": "BopE, ExoT and SopE can act on both GTPases; no single host_protein_id link is valid."
+      },
+      {
+        "id": "PM-TGT-0018",
+        "type": "host_target",
+        "label": "Cholesterol",
+        "target_name": "Cholesterol",
+        "resolved_name": "Cholesterol",
+        "host_target_class": "lipid",
+        "resolution_status": "non_protein",
+        "audit_status": "non_protein",
+        "aliases": [],
+        "members": [],
+        "evidence_sources": [
+          "data/sources/effectors_seed.json",
+          "data/classification-mapping.json"
+        ],
+        "audit_notes": "Membrane lipid; not a protein."
+      },
+      {
+        "id": "PM-TGT-0048",
+        "type": "host_target",
+        "label": "Host cells",
+        "target_name": "Host cells",
+        "resolved_name": "Host cell",
+        "host_target_class": "cellular_structure",
+        "resolution_status": "non_protein",
+        "audit_status": "non_protein",
+        "aliases": [],
+        "members": [],
+        "evidence_sources": [
+          "data/sources/effectors_seed.json",
+          "data/classification-mapping.json"
+        ],
+        "audit_notes": "Whole-cell annotation; no single molecular target."
+      },
+      {
+        "id": "PM-TGT-0055",
+        "type": "host_target",
+        "label": "Host membranes",
+        "target_name": "Host membranes",
+        "resolved_name": "Host membrane",
+        "host_target_class": "cellular_structure",
+        "resolution_status": "non_protein",
+        "audit_status": "non_protein",
+        "aliases": [],
+        "members": [],
+        "evidence_sources": [
+          "data/sources/effectors_seed.json",
+          "data/classification-mapping.json"
+        ],
+        "audit_notes": "Membrane compartment, not a protein."
+      },
+      {
+        "id": "PM-TGT-0065",
+        "type": "host_target",
+        "label": "JNK/AMPK",
+        "target_name": "JNK/AMPK",
+        "resolved_name": "JNK and AMPK kinases (multi-target)",
+        "host_target_class": "protein",
+        "resolution_status": "ambiguous",
+        "audit_status": "ambiguous",
+        "aliases": [],
+        "members": [
+          {
+            "name": "Mitogen-activated protein kinase 8",
+            "gene_symbol": "MAPK8",
+            "uniprot_id": "P45983"
+          },
+          {
+            "name": "5'-AMP-activated protein kinase catalytic subunit alpha-1",
+            "gene_symbol": "PRKAA1",
+            "uniprot_id": "Q13131"
+          }
+        ],
+        "evidence_sources": [
+          "https://www.uniprot.org/uniprotkb/P45983/entry",
+          "https://www.uniprot.org/uniprotkb/Q13131/entry",
+          "data/sources/effectors_seed.json"
+        ],
+        "audit_notes": "Eis is reported to modulate both kinase pathways."
+      },
+      {
+        "id": "PM-TGT-0066",
+        "type": "host_target",
+        "label": "Kinesin-1",
+        "target_name": "Kinesin-1",
+        "resolved_name": "Kinesin-1 motor complex",
+        "host_target_class": "protein",
+        "resolution_status": "protein_complex",
+        "audit_status": "verified_complex",
+        "aliases": [],
+        "members": [
+          {
+            "name": "Kinesin heavy chain isoform 5A",
+            "gene_symbol": "KIF5A",
+            "uniprot_id": "Q12840"
+          },
+          {
+            "name": "Kinesin heavy chain isoform 5B",
+            "gene_symbol": "KIF5B",
+            "uniprot_id": "P33176"
+          },
+          {
+            "name": "Kinesin heavy chain isoform 5C",
+            "gene_symbol": "KIF5C",
+            "uniprot_id": "O60282"
+          }
+        ],
+        "evidence_sources": [
+          "https://www.uniprot.org/uniprotkb/Q12840/entry",
+          "https://www.uniprot.org/uniprotkb/P33176/entry",
+          "https://www.uniprot.org/uniprotkb/O60282/entry",
+          "data/sources/effectors_seed.json"
+        ],
+        "audit_notes": "Kinesin-1 is a heavy/light-chain motor complex; isoforms listed."
+      },
+      {
+        "id": "PM-TGT-0074",
+        "type": "host_target",
+        "label": "MAPKKs",
+        "target_name": "MAPKKs",
+        "resolved_name": "Mitogen-activated protein kinase kinase family",
+        "host_target_class": "protein",
+        "resolution_status": "protein_family",
+        "audit_status": "verified_protein_family",
+        "aliases": [],
+        "members": [
+          {
+            "name": "Dual specificity mitogen-activated protein kinase kinase 1",
+            "gene_symbol": "MAP2K1",
+            "uniprot_id": "Q02750"
+          },
+          {
+            "name": "Dual specificity mitogen-activated protein kinase kinase 2",
+            "gene_symbol": "MAP2K2",
+            "uniprot_id": "P36507"
+          }
+        ],
+        "evidence_sources": [
+          "https://www.uniprot.org/uniprotkb/Q02750/entry",
+          "https://www.uniprot.org/uniprotkb/P36507/entry",
+          "data/sources/effectors_seed.json"
+        ],
+        "audit_notes": "LF cleaves MAPKK family members; family not a single protein."
+      },
+      {
+        "id": "PM-TGT-0075",
+        "type": "host_target",
+        "label": "Membrane",
+        "target_name": "Membrane",
+        "resolved_name": "Membrane",
+        "host_target_class": "cellular_structure",
+        "resolution_status": "non_protein",
+        "audit_status": "non_protein",
+        "aliases": [],
+        "members": [],
+        "evidence_sources": [
+          "data/sources/effectors_seed.json",
+          "data/classification-mapping.json"
+        ],
+        "audit_notes": "Membrane compartment, not a protein."
+      },
+      {
+        "id": "PM-TGT-0079",
+        "type": "host_target",
+        "label": "Mitochondria",
+        "target_name": "Mitochondria",
+        "resolved_name": "Mitochondrion",
+        "host_target_class": "organelle",
+        "resolution_status": "non_protein",
+        "audit_status": "non_protein",
+        "aliases": [],
+        "members": [],
+        "evidence_sources": [
+          "data/sources/effectors_seed.json",
+          "data/classification-mapping.json"
+        ],
+        "audit_notes": "Organelle, not a protein."
+      },
+      {
+        "id": "PM-TGT-0082",
+        "type": "host_target",
+        "label": "MYADM / Abl-1",
+        "target_name": "MYADM / Abl-1",
+        "resolved_name": "MYADM and ABL1 (multi-target)",
+        "host_target_class": "protein",
+        "resolution_status": "ambiguous",
+        "audit_status": "ambiguous",
+        "aliases": [],
+        "members": [
+          {
+            "name": "Myeloid-associated differentiation marker",
+            "gene_symbol": "MYADM",
+            "uniprot_id": "Q96S97"
+          },
+          {
+            "name": "Tyrosine-protein kinase ABL1",
+            "gene_symbol": "ABL1",
+            "uniprot_id": "P00519"
+          }
+        ],
+        "evidence_sources": [
+          "https://www.uniprot.org/uniprotkb/Q96S97/entry",
+          "https://www.uniprot.org/uniprotkb/P00519/entry",
+          "data/sources/effectors_seed.json"
+        ],
+        "audit_notes": "AnkA interacts with both MYADM and ABL1."
+      },
+      {
+        "id": "PM-TGT-0090",
+        "type": "host_target",
+        "label": "PI(3,5)P2",
+        "target_name": "PI(3,5)P2",
+        "resolved_name": "Phosphatidylinositol 3,5-bisphosphate",
+        "host_target_class": "lipid",
+        "resolution_status": "non_protein",
+        "audit_status": "non_protein",
+        "aliases": [],
+        "members": [],
+        "evidence_sources": [
+          "data/sources/effectors_seed.json",
+          "data/classification-mapping.json"
+        ],
+        "audit_notes": "Membrane lipid; not a protein."
+      },
+      {
+        "id": "PM-TGT-0091",
+        "type": "host_target",
+        "label": "PI(4,5)P2",
+        "target_name": "PI(4,5)P2",
+        "resolved_name": "Phosphatidylinositol 4,5-bisphosphate",
+        "host_target_class": "lipid",
+        "resolution_status": "non_protein",
+        "audit_status": "non_protein",
+        "aliases": [],
+        "members": [],
+        "evidence_sources": [
+          "data/sources/effectors_seed.json",
+          "data/classification-mapping.json"
+        ],
+        "audit_notes": "Membrane lipid; not a protein."
+      },
+      {
+        "id": "PM-TGT-0093",
+        "type": "host_target",
+        "label": "PI3P",
+        "target_name": "PI3P",
+        "resolved_name": "Phosphatidylinositol 3-phosphate",
+        "host_target_class": "lipid",
+        "resolution_status": "non_protein",
+        "audit_status": "non_protein",
+        "aliases": [],
+        "members": [],
+        "evidence_sources": [
+          "data/sources/effectors_seed.json",
+          "data/classification-mapping.json"
+        ],
+        "audit_notes": "Membrane lipid; not a protein."
+      },
+      {
+        "id": "PM-TGT-0098",
+        "type": "host_target",
+        "label": "Rab proteins",
+        "target_name": "Rab proteins",
+        "resolved_name": "Rab GTPase family",
+        "host_target_class": "protein_family",
+        "resolution_status": "protein_family",
+        "audit_status": "verified_protein_family",
+        "aliases": [],
+        "members": [
+          {
+            "name": "Ras-related protein Rab-5A",
+            "gene_symbol": "RAB5A",
+            "uniprot_id": "P20339"
+          },
+          {
+            "name": "Ras-related protein Rab-7A",
+            "gene_symbol": "RAB7A",
+            "uniprot_id": "P51149"
+          },
+          {
+            "name": "Ras-related protein Rab-11A",
+            "gene_symbol": "RAB11A",
+            "uniprot_id": "P62491"
+          }
+        ],
+        "evidence_sources": [
+          "https://www.uniprot.org/uniprotkb/P20339/entry",
+          "https://www.uniprot.org/uniprotkb/P51149/entry",
+          "https://www.uniprot.org/uniprotkb/P62491/entry",
+          "data/sources/effectors_seed.json"
+        ],
+        "audit_notes": "Large Rab GTPase family; specific Rab not resolved by the original annotation."
+      },
+      {
+        "id": "PM-TGT-0102",
+        "type": "host_target",
+        "label": "Rab5 / PI3P",
+        "target_name": "Rab5 / PI3P",
+        "resolved_name": "Rab5 and PI3P (mixed lipid/protein target)",
+        "host_target_class": "protein",
+        "resolution_status": "ambiguous",
+        "audit_status": "ambiguous",
+        "aliases": [],
+        "members": [
+          {
+            "name": "Ras-related protein Rab-5A",
+            "gene_symbol": "RAB5A",
+            "uniprot_id": "P20339"
+          }
+        ],
+        "evidence_sources": [
+          "https://www.uniprot.org/uniprotkb/P20339/entry",
+          "data/sources/effectors_seed.json"
+        ],
+        "audit_notes": "Ats-1 binds Rab5 and PI3P; mixed lipid/protein annotation."
+      },
+      {
+        "id": "PM-TGT-0107",
+        "type": "host_target",
+        "label": "ROS",
+        "target_name": "ROS",
+        "resolved_name": "Reactive oxygen species",
+        "host_target_class": "metabolite",
+        "resolution_status": "non_protein",
+        "audit_status": "non_protein",
+        "aliases": [],
+        "members": [],
+        "evidence_sources": [
+          "data/sources/effectors_seed.json",
+          "data/classification-mapping.json"
+        ],
+        "audit_notes": "Reactive oxygen metabolites; not a protein."
+      },
+      {
+        "id": "PM-TGT-0124",
+        "type": "host_target",
+        "label": "V-ATPase",
+        "target_name": "V-ATPase",
+        "resolved_name": "Vacuolar-type H+-ATPase",
+        "host_target_class": "protein_complex",
+        "resolution_status": "protein_complex",
+        "audit_status": "verified_complex",
+        "aliases": [],
+        "members": [
+          {
+            "name": "V-type proton ATPase catalytic subunit A",
+            "gene_symbol": "ATP6V1A",
+            "uniprot_id": "P38606"
+          },
+          {
+            "name": "V-type proton ATPase subunit B, brain isoform",
+            "gene_symbol": "ATP6V1B2",
+            "uniprot_id": "P21281"
+          },
+          {
+            "name": "V-type proton ATPase 116 kDa subunit a isoform 1",
+            "gene_symbol": "ATP6V0A1",
+            "uniprot_id": "Q93050"
+          }
+        ],
+        "evidence_sources": [
+          "https://www.uniprot.org/uniprotkb/P38606/entry",
+          "https://www.uniprot.org/uniprotkb/P21281/entry",
+          "https://www.uniprot.org/uniprotkb/Q93050/entry",
+          "data/sources/effectors_seed.json"
+        ],
+        "audit_notes": "Multi-subunit rotary proton pump; representative subunits listed."
+      }
+    ],
+    "edges": [
+      {
+        "id": "TGT:PM-EFF-0001:PM-TGT-0066",
+        "source": "PM-EFF-0001",
+        "target": "PM-TGT-0066",
+        "type": "effector_targets_host_target",
+        "kind": "target_association",
+        "mechanism": null,
+        "pathogen_id": "PM-PAT-0001",
+        "pathogen_name": "Salmonella enterica serovar Typhimurium",
+        "provenance": "curated_target_annotation",
+        "resolution_status": "protein_complex",
+        "evidence_count": 0,
+        "evidence_classes": [
+          "annotation-derived"
+        ],
+        "strongest_evidence_class": "annotation-derived",
+        "evidence_records": []
+      },
+      {
+        "id": "TGT:PM-EFF-0004:PM-TGT-0091",
+        "source": "PM-EFF-0004",
+        "target": "PM-TGT-0091",
+        "type": "effector_targets_host_target",
+        "kind": "target_association",
+        "mechanism": null,
+        "pathogen_id": "PM-PAT-0001",
+        "pathogen_name": "Salmonella enterica serovar Typhimurium",
+        "provenance": "curated_target_annotation",
+        "resolution_status": "non_protein",
+        "evidence_count": 0,
+        "evidence_classes": [
+          "annotation-derived"
+        ],
+        "strongest_evidence_class": "annotation-derived",
+        "evidence_records": []
+      },
+      {
+        "id": "TGT:PM-EFF-0006:PM-TGT-0015",
+        "source": "PM-EFF-0006",
+        "target": "PM-TGT-0015",
+        "type": "effector_targets_host_target",
+        "kind": "target_association",
+        "mechanism": null,
+        "pathogen_id": "PM-PAT-0001",
+        "pathogen_name": "Salmonella enterica serovar Typhimurium",
+        "provenance": "curated_target_annotation",
+        "resolution_status": "ambiguous",
+        "evidence_count": 0,
+        "evidence_classes": [
+          "annotation-derived"
+        ],
+        "strongest_evidence_class": "annotation-derived",
+        "evidence_records": []
+      },
+      {
+        "id": "TGT:PM-EFF-0007:PM-TGT-0018",
+        "source": "PM-EFF-0007",
+        "target": "PM-TGT-0018",
+        "type": "effector_targets_host_target",
+        "kind": "target_association",
+        "mechanism": null,
+        "pathogen_id": "PM-PAT-0001",
+        "pathogen_name": "Salmonella enterica serovar Typhimurium",
+        "provenance": "curated_target_annotation",
+        "resolution_status": "non_protein",
+        "evidence_count": 0,
+        "evidence_classes": [
+          "annotation-derived"
+        ],
+        "strongest_evidence_class": "annotation-derived",
+        "evidence_records": []
+      },
+      {
+        "id": "TGT:PM-EFF-0014:PM-TGT-0075",
+        "source": "PM-EFF-0014",
+        "target": "PM-TGT-0075",
+        "type": "effector_targets_host_target",
+        "kind": "target_association",
+        "mechanism": null,
+        "pathogen_id": "PM-PAT-0003",
+        "pathogen_name": "Mycobacterium tuberculosis",
+        "provenance": "curated_target_annotation",
+        "resolution_status": "non_protein",
+        "evidence_count": 0,
+        "evidence_classes": [
+          "annotation-derived"
+        ],
+        "strongest_evidence_class": "annotation-derived",
+        "evidence_records": []
+      },
+      {
+        "id": "TGT:PM-EFF-0015:PM-TGT-0065",
+        "source": "PM-EFF-0015",
+        "target": "PM-TGT-0065",
+        "type": "effector_targets_host_target",
+        "kind": "target_association",
+        "mechanism": null,
+        "pathogen_id": "PM-PAT-0003",
+        "pathogen_name": "Mycobacterium tuberculosis",
+        "provenance": "curated_target_annotation",
+        "resolution_status": "ambiguous",
+        "evidence_count": 0,
+        "evidence_classes": [
+          "annotation-derived"
+        ],
+        "strongest_evidence_class": "annotation-derived",
+        "evidence_records": []
+      },
+      {
+        "id": "TGT:PM-EFF-0017:PM-TGT-0124",
+        "source": "PM-EFF-0017",
+        "target": "PM-TGT-0124",
+        "type": "effector_targets_host_target",
+        "kind": "target_association",
+        "mechanism": null,
+        "pathogen_id": "PM-PAT-0003",
+        "pathogen_name": "Mycobacterium tuberculosis",
+        "provenance": "curated_target_annotation",
+        "resolution_status": "protein_complex",
+        "evidence_count": 0,
+        "evidence_classes": [
+          "annotation-derived"
+        ],
+        "strongest_evidence_class": "annotation-derived",
+        "evidence_records": []
+      },
+      {
+        "id": "TGT:PM-EFF-0018:PM-TGT-0090",
+        "source": "PM-EFF-0018",
+        "target": "PM-TGT-0090",
+        "type": "effector_targets_host_target",
+        "kind": "target_association",
+        "mechanism": null,
+        "pathogen_id": "PM-PAT-0003",
+        "pathogen_name": "Mycobacterium tuberculosis",
+        "provenance": "curated_target_annotation",
+        "resolution_status": "non_protein",
+        "evidence_count": 0,
+        "evidence_classes": [
+          "annotation-derived"
+        ],
+        "strongest_evidence_class": "annotation-derived",
+        "evidence_records": []
+      },
+      {
+        "id": "TGT:PM-EFF-0019:PM-TGT-0098",
+        "source": "PM-EFF-0019",
+        "target": "PM-TGT-0098",
+        "type": "effector_targets_host_target",
+        "kind": "target_association",
+        "mechanism": null,
+        "pathogen_id": "PM-PAT-0003",
+        "pathogen_name": "Mycobacterium tuberculosis",
+        "provenance": "curated_target_annotation",
+        "resolution_status": "protein_family",
+        "evidence_count": 0,
+        "evidence_classes": [
+          "annotation-derived"
+        ],
+        "strongest_evidence_class": "annotation-derived",
+        "evidence_records": []
+      },
+      {
+        "id": "TGT:PM-EFF-0020:PM-TGT-0093",
+        "source": "PM-EFF-0020",
+        "target": "PM-TGT-0093",
+        "type": "effector_targets_host_target",
+        "kind": "target_association",
+        "mechanism": null,
+        "pathogen_id": "PM-PAT-0003",
+        "pathogen_name": "Mycobacterium tuberculosis",
+        "provenance": "curated_target_annotation",
+        "resolution_status": "non_protein",
+        "evidence_count": 0,
+        "evidence_classes": [
+          "annotation-derived"
+        ],
+        "strongest_evidence_class": "annotation-derived",
+        "evidence_records": []
+      },
+      {
+        "id": "TGT:PM-EFF-0068:PM-TGT-0082",
+        "source": "PM-EFF-0068",
+        "target": "PM-TGT-0082",
+        "type": "effector_targets_host_target",
+        "kind": "target_association",
+        "mechanism": null,
+        "pathogen_id": "PM-PAT-0013",
+        "pathogen_name": "Anaplasma phagocytophilum",
+        "provenance": "curated_target_annotation",
+        "resolution_status": "ambiguous",
+        "evidence_count": 0,
+        "evidence_classes": [
+          "annotation-derived"
+        ],
+        "strongest_evidence_class": "annotation-derived",
+        "evidence_records": []
+      },
+      {
+        "id": "TGT:PM-EFF-0069:PM-TGT-0102",
+        "source": "PM-EFF-0069",
+        "target": "PM-TGT-0102",
+        "type": "effector_targets_host_target",
+        "kind": "target_association",
+        "mechanism": null,
+        "pathogen_id": "PM-PAT-0013",
+        "pathogen_name": "Anaplasma phagocytophilum",
+        "provenance": "curated_target_annotation",
+        "resolution_status": "ambiguous",
+        "evidence_count": 0,
+        "evidence_classes": [
+          "annotation-derived"
+        ],
+        "strongest_evidence_class": "annotation-derived",
+        "evidence_records": []
+      },
+      {
+        "id": "TGT:PM-EFF-0157:PM-TGT-0018",
+        "source": "PM-EFF-0157",
+        "target": "PM-TGT-0018",
+        "type": "effector_targets_host_target",
+        "kind": "target_association",
+        "mechanism": null,
+        "pathogen_id": "PM-PAT-0032",
+        "pathogen_name": "Bacillus anthracis",
+        "provenance": "curated_target_annotation",
+        "resolution_status": "non_protein",
+        "evidence_count": 0,
+        "evidence_classes": [
+          "annotation-derived"
+        ],
+        "strongest_evidence_class": "annotation-derived",
+        "evidence_records": []
+      },
+      {
+        "id": "TGT:PM-EFF-0158:PM-TGT-0107",
+        "source": "PM-EFF-0158",
+        "target": "PM-TGT-0107",
+        "type": "effector_targets_host_target",
+        "kind": "target_association",
+        "mechanism": null,
+        "pathogen_id": "PM-PAT-0032",
+        "pathogen_name": "Bacillus anthracis",
+        "provenance": "curated_target_annotation",
+        "resolution_status": "non_protein",
+        "evidence_count": 0,
+        "evidence_classes": [
+          "annotation-derived"
+        ],
+        "strongest_evidence_class": "annotation-derived",
+        "evidence_records": []
+      },
+      {
+        "id": "TGT:PM-EFF-0159:PM-TGT-0010",
+        "source": "PM-EFF-0159",
+        "target": "PM-TGT-0010",
+        "type": "effector_targets_host_target",
+        "kind": "target_association",
+        "mechanism": null,
+        "pathogen_id": "PM-PAT-0032",
+        "pathogen_name": "Bacillus anthracis",
+        "provenance": "curated_target_annotation",
+        "resolution_status": "ambiguous",
+        "evidence_count": 0,
+        "evidence_classes": [
+          "annotation-derived"
+        ],
+        "strongest_evidence_class": "annotation-derived",
+        "evidence_records": []
+      },
+      {
+        "id": "TGT:PM-EFF-0160:PM-TGT-0074",
+        "source": "PM-EFF-0160",
+        "target": "PM-TGT-0074",
+        "type": "effector_targets_host_target",
+        "kind": "target_association",
+        "mechanism": null,
+        "pathogen_id": "PM-PAT-0032",
+        "pathogen_name": "Bacillus anthracis",
+        "provenance": "curated_target_annotation",
+        "resolution_status": "protein_family",
+        "evidence_count": 0,
+        "evidence_classes": [
+          "annotation-derived"
+        ],
+        "strongest_evidence_class": "annotation-derived",
+        "evidence_records": []
+      },
+      {
+        "id": "TGT:PM-EFF-0161:PM-TGT-0006",
+        "source": "PM-EFF-0161",
+        "target": "PM-TGT-0006",
+        "type": "effector_targets_host_target",
+        "kind": "target_association",
+        "mechanism": null,
+        "pathogen_id": "PM-PAT-0032",
+        "pathogen_name": "Bacillus anthracis",
+        "provenance": "curated_target_annotation",
+        "resolution_status": "ambiguous",
+        "evidence_count": 0,
+        "evidence_classes": [
+          "annotation-derived"
+        ],
+        "strongest_evidence_class": "annotation-derived",
+        "evidence_records": []
+      },
+      {
+        "id": "TGT:PM-EFF-0217:PM-TGT-0055",
+        "source": "PM-EFF-0217",
+        "target": "PM-TGT-0055",
+        "type": "effector_targets_host_target",
+        "kind": "target_association",
+        "mechanism": null,
+        "pathogen_id": "PM-PAT-0048",
+        "pathogen_name": "Acinetobacter baumannii",
+        "provenance": "curated_target_annotation",
+        "resolution_status": "non_protein",
+        "evidence_count": 0,
+        "evidence_classes": [
+          "annotation-derived"
+        ],
+        "strongest_evidence_class": "annotation-derived",
+        "evidence_records": []
+      },
+      {
+        "id": "TGT:PM-EFF-0218:PM-TGT-0048",
+        "source": "PM-EFF-0218",
+        "target": "PM-TGT-0048",
+        "type": "effector_targets_host_target",
+        "kind": "target_association",
+        "mechanism": null,
+        "pathogen_id": "PM-PAT-0048",
+        "pathogen_name": "Acinetobacter baumannii",
+        "provenance": "curated_target_annotation",
+        "resolution_status": "non_protein",
+        "evidence_count": 0,
+        "evidence_classes": [
+          "annotation-derived"
+        ],
+        "strongest_evidence_class": "annotation-derived",
+        "evidence_records": []
+      },
+      {
+        "id": "TGT:PM-EFF-0219:PM-TGT-0001",
+        "source": "PM-EFF-0219",
+        "target": "PM-TGT-0001",
+        "type": "effector_targets_host_target",
+        "kind": "target_association",
+        "mechanism": null,
+        "pathogen_id": "PM-PAT-0048",
+        "pathogen_name": "Acinetobacter baumannii",
+        "provenance": "curated_target_annotation",
+        "resolution_status": "non_protein",
+        "evidence_count": 0,
+        "evidence_classes": [
+          "annotation-derived"
+        ],
+        "strongest_evidence_class": "annotation-derived",
+        "evidence_records": []
+      },
+      {
+        "id": "TGT:PM-EFF-0220:PM-TGT-0079",
+        "source": "PM-EFF-0220",
+        "target": "PM-TGT-0079",
+        "type": "effector_targets_host_target",
+        "kind": "target_association",
+        "mechanism": null,
+        "pathogen_id": "PM-PAT-0048",
+        "pathogen_name": "Acinetobacter baumannii",
+        "provenance": "curated_target_annotation",
+        "resolution_status": "non_protein",
+        "evidence_count": 0,
+        "evidence_classes": [
+          "annotation-derived"
+        ],
+        "strongest_evidence_class": "annotation-derived",
+        "evidence_records": []
+      },
+      {
+        "id": "TGT:PM-EFF-0221:PM-TGT-0055",
+        "source": "PM-EFF-0221",
+        "target": "PM-TGT-0055",
+        "type": "effector_targets_host_target",
+        "kind": "target_association",
+        "mechanism": null,
+        "pathogen_id": "PM-PAT-0048",
+        "pathogen_name": "Acinetobacter baumannii",
+        "provenance": "curated_target_annotation",
+        "resolution_status": "non_protein",
+        "evidence_count": 0,
+        "evidence_classes": [
+          "annotation-derived"
+        ],
+        "strongest_evidence_class": "annotation-derived",
+        "evidence_records": []
       }
     ]
   },

@@ -34,14 +34,13 @@
       <a class="nav-brand" href="index.html">PathoMap</a>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Workspace</a></li>
-        <li class="nav-module"><a href="interaction-analysis.html">Interactions</a></li>
-        <li class="nav-module"><a href="sequence-analysis.html">Sequences</a></li>
-        <li class="nav-module"><a href="pathway-analysis.html">Pathways</a></li>
-        <li class="nav-module"><a href="functional-enrichment.html">Enrichment</a></li>
-        <li class="nav-module"><a href="protein-network-analysis.html">Protein network</a></li>
-        <li class="nav-module"><a href="comparative-pathogen-analysis.html">Comparative</a></li>
-        <li class="nav-module"><a href="host-response-analysis.html" aria-current="page">Host response</a></li>
-        <li class="nav-module"><a href="predictive-readiness.html">Readiness</a></li>
+        <li class="nav-module"><a href="interaction-analysis.html" title="Explore host-pathogen interaction networks and evidence classes">Interactions</a></li>
+        <li class="nav-module"><a href="sequence-analysis.html" title="Analyze effector sequence properties and distributions">Sequences</a></li>
+        <li class="nav-module"><a href="pathway-analysis.html" title="Map host proteins to biological pathways">Pathways</a></li>
+        <li class="nav-module"><a href="functional-enrichment.html" title="Test if host proteins are enriched for biological functions">Enrichment</a></li>
+        <li class="nav-module"><a href="protein-network-analysis.html" title="Analyze protein interaction network structure and centrality">Protein network</a></li>
+        <li class="nav-module"><a href="comparative-pathogen-analysis.html" title="Compare pathogens by effector repertoire similarity">Comparative</a></li>
+        <li class="nav-module"><a href="host-response-analysis.html" aria-current="page" title="Explore host cellular processes targeted by pathogens">Host response</a></li>
       </ul>
       <button class="dark-toggle" id="dark-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9790;</button>
     </div>
@@ -86,7 +85,7 @@
                 class="tool-input"
                 id="hra-search"
                 type="search"
-                placeholder="Search process or pathogen"
+                placeholder="Search process or pathogen" title="Search by host cellular process name or pathogen species"
                 autocomplete="off"
               >
             </label>
@@ -119,16 +118,6 @@
               <div class="hra-tables-content" id="hra-tables-content"></div>
             </div>
           </div>
-        </div>
-
-        <div class="hra-components">
-          <h3>Reading this analysis</h3>
-          <ul class="hra-component-list">
-            <li><strong>Process association</strong> &mdash; comes from annotations, not a measured cellular response.</li>
-            <li><strong>Direction and mechanism</strong> &mdash; are reported only when the upload records them.</li>
-            <li><strong>Evidence classes</strong> &mdash; are shown beside each process so inference strength stays visible.</li>
-            <li><strong>Cross-pathogen comparison</strong> &mdash; shows which processes are targeted by multiple pathogens.</li>
-          </ul>
         </div>
 
       </div>

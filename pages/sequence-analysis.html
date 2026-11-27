@@ -34,14 +34,13 @@
       <a class="nav-brand" href="index.html">PathoMap</a>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Workspace</a></li>
-        <li class="nav-module"><a href="interaction-analysis.html">Interactions</a></li>
-        <li class="nav-module"><a href="sequence-analysis.html" aria-current="page">Sequences</a></li>
-        <li class="nav-module"><a href="pathway-analysis.html">Pathways</a></li>
-        <li class="nav-module"><a href="functional-enrichment.html">Enrichment</a></li>
-        <li class="nav-module"><a href="protein-network-analysis.html">Protein network</a></li>
-        <li class="nav-module"><a href="comparative-pathogen-analysis.html">Comparative</a></li>
-        <li class="nav-module"><a href="host-response-analysis.html">Host response</a></li>
-        <li class="nav-module"><a href="predictive-readiness.html">Readiness</a></li>
+        <li class="nav-module"><a href="interaction-analysis.html" title="Explore host-pathogen interaction networks and evidence classes">Interactions</a></li>
+        <li class="nav-module"><a href="sequence-analysis.html" aria-current="page" title="Analyze effector sequence properties and distributions">Sequences</a></li>
+        <li class="nav-module"><a href="pathway-analysis.html" title="Map host proteins to biological pathways">Pathways</a></li>
+        <li class="nav-module"><a href="functional-enrichment.html" title="Test if host proteins are enriched for biological functions">Enrichment</a></li>
+        <li class="nav-module"><a href="protein-network-analysis.html" title="Analyze protein interaction network structure and centrality">Protein network</a></li>
+        <li class="nav-module"><a href="comparative-pathogen-analysis.html" title="Compare pathogens by effector repertoire similarity">Comparative</a></li>
+        <li class="nav-module"><a href="host-response-analysis.html" title="Explore host cellular processes targeted by pathogens">Host response</a></li>
       </ul>
       <button class="dark-toggle" id="dark-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9790;</button>
     </div>
@@ -94,7 +93,7 @@
                 class="tool-input"
                 id="sa-search"
                 type="search"
-                placeholder="Search effector, pathogen, or phenotype"
+                placeholder="Search effector, pathogen, or phenotype" title="Search by effector protein name, pathogen species, or observed phenotype"
                 autocomplete="off"
               >
             </label>
@@ -133,16 +132,6 @@
               <div class="sa-tables-content" id="sa-tables-content"></div>
             </div>
           </div>
-        </div>
-
-        <div class="sa-components">
-          <h3>Reading this analysis</h3>
-          <ul class="sa-component-list">
-            <li><strong>Sequence-derived properties</strong> &mdash; computed descriptors include length, molecular weight, isoelectric point (pI), and GRAVY hydropathy score.</li>
-            <li><strong>Distributions</strong> &mdash; grouped by phenotype to compare molecular characteristics across effector categories.</li>
-            <li><strong>Missing sequences</strong> &mdash; effectors without sequence data are reported separately.</li>
-            <li><strong>Limitations</strong> &mdash; these properties are not direct evidence of localization, secretion, structure, or function.</li>
-          </ul>
         </div>
 
       </div>

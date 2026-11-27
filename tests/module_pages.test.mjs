@@ -1,9 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 
 import { DISCOVERY_MODULES } from '../js/discovery/engine.js';
-import { modulePageFor } from '../js/discovery/module-pages.js';
+import { modulePageFor, PAGED_MODULE_IDS, READINESS_MODULE_ID } from '../js/discovery/module-pages.js';
 import { consumeQueuedDataset, queueDatasetForModule } from '../js/discovery/dataset-handoff.js';
 import { renderModule, renderModuleSummary, renderWaitingSummary } from '../js/ui/module-view.js';
 
@@ -13,28 +13,28 @@ function pageFor(moduleId) {
   return `pages/${modulePageFor(moduleId)}`;
 }
 
-test('every analysis module has a dedicated page', () => {
-  for (const module of DISCOVERY_MODULES) {
-    const html = read(pageFor(module.id));
-    assert.match(html, /<!DOCTYPE html>/, `${module.id} page is not HTML`);
+test('every paged analysis module has a dedicated page', () => {
+  for (const moduleId of PAGED_MODULE_IDS) {
+    const html = read(pageFor(moduleId));
+    assert.match(html, /<!DOCTYPE html>/, `${moduleId} page is not HTML`);
     assert.match(
       html,
-      new RegExp(`<body data-module="${module.id}">`),
-      `${module.id} page does not select its module`
+      new RegExp(`<body data-module="${moduleId}">`),
+      `${moduleId} page does not select its module`
     );
     assert.match(html, /href="transparency\.html">Limitations &amp; Scope</);
     assert.doesNotMatch(html, /<a[^>]+>Transparency<\/a>/);
   }
 });
 
-test('new module pages load their own controller scripts', () => {
-  for (const module of DISCOVERY_MODULES) {
-    const html = read(pageFor(module.id));
-    const controller = `js/pages/${module.id}.js`;
+test('paged modules load their own controller scripts', () => {
+  for (const moduleId of PAGED_MODULE_IDS) {
+    const html = read(pageFor(moduleId));
+    const controller = `js/pages/${moduleId}.js`;
     assert.match(
       html,
-      new RegExp(`src="\\.\\.\\/${controller.replace(/\./g, '\\.')}")`),
-      `${module.id} page does not load ${controller}`
+      new RegExp(`src="\\.\\.\\/${controller.replace(/\./g, '\\.')}"`),
+      `${moduleId} page does not load ${controller}`
     );
     assert.match(html, /id="dark-toggle"/);
   }
@@ -51,19 +51,19 @@ test('module pages do not duplicate the workspace upload panel', () => {
 
 test('the workspace nav links to every module page', () => {
   const index = read('pages/index.html');
-  for (const module of DISCOVERY_MODULES) {
-    const href = `/${pageFor(module.id)}`;
+  for (const moduleId of PAGED_MODULE_IDS) {
+    const href = `/${pageFor(moduleId)}`;
     assert.ok(index.includes(`href="${href}"`), `workspace nav is missing ${href}`);
   }
 });
 
 test('module pages share the same complete module nav', () => {
-  for (const module of DISCOVERY_MODULES) {
-    const html = read(pageFor(module.id));
-    for (const target of DISCOVERY_MODULES) {
+  for (const moduleId of PAGED_MODULE_IDS) {
+    const html = read(pageFor(moduleId));
+    for (const target of PAGED_MODULE_IDS) {
       assert.ok(
-        html.includes(`href="${pageFor(target.id).replace('pages/', '')}"`),
-        `${module.id} page nav is missing ${target.id}`
+        html.includes(`href="${pageFor(target).replace('pages/', '')}"`),
+        `${moduleId} page nav is missing ${target}`
       );
     }
     assert.match(html, /href="transparency\.html"/);
@@ -74,10 +74,31 @@ test('module pages share the same complete module nav', () => {
 test('Vercel rewrites expose every module page at the root', () => {
   const config = JSON.parse(read('vercel.json'));
   const destinations = config.rewrites.map((rewrite) => rewrite.destination);
-  for (const module of DISCOVERY_MODULES) {
-    const destination = `/${pageFor(module.id)}`;
+  for (const moduleId of PAGED_MODULE_IDS) {
+    const destination = `/${pageFor(moduleId)}`;
     assert.ok(destinations.includes(destination), `rewrite is missing ${destination}`);
   }
+});
+
+test('readiness is inline in the workspace with no page, controller, nav item, or rewrite', () => {
+  const module = DISCOVERY_MODULES.find((item) => item.id === READINESS_MODULE_ID);
+  assert.ok(module, 'readiness module must still run in the workspace');
+  assert.equal(modulePageFor(READINESS_MODULE_ID), '#readiness');
+  assert.equal(PAGED_MODULE_IDS.includes(READINESS_MODULE_ID), false);
+  for (const file of ['pages/predictive-readiness.html', 'js/pages/predictive-readiness.js']) {
+    assert.equal(existsSync(new URL(`../${file}`, import.meta.url)), false, `${file} still exists`);
+  }
+
+  const pages = ['pages/index.html', 'pages/transparency.html', ...PAGED_MODULE_IDS.map((id) => pageFor(id))];
+  for (const file of pages) {
+    assert.doesNotMatch(
+      read(file),
+      /href="(?:\/pages\/)?predictive-readiness\.html"/,
+      `${file} still links to the deleted readiness page`
+    );
+  }
+  const config = JSON.parse(read('vercel.json'));
+  assert.equal(config.rewrites.some((rewrite) => rewrite.destination.includes(READINESS_MODULE_ID)), false);
 });
 
 test('workspace summary cards link to the module page without embedding details', () => {
@@ -105,7 +126,7 @@ test('waiting summaries show a module link before any data is loaded', () => {
   const html = renderWaitingSummary(module);
   assert.match(html, /Waiting for data/);
   assert.match(html, /No dataset loaded yet/);
-  assert.match(html, new RegExp(`href="${modulePageFor(module.id)}"`));
+  assert.match(html, /href="#readiness"/);
 });
 
 test('pathway module renders a toggle between broad and detailed views', () => {

@@ -34,14 +34,13 @@
       <a class="nav-brand" href="index.html">PathoMap</a>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Workspace</a></li>
-        <li class="nav-module"><a href="interaction-analysis.html">Interactions</a></li>
-        <li class="nav-module"><a href="sequence-analysis.html">Sequences</a></li>
-        <li class="nav-module"><a href="pathway-analysis.html">Pathways</a></li>
-        <li class="nav-module"><a href="functional-enrichment.html" aria-current="page">Enrichment</a></li>
-        <li class="nav-module"><a href="protein-network-analysis.html">Protein network</a></li>
-        <li class="nav-module"><a href="comparative-pathogen-analysis.html">Comparative</a></li>
-        <li class="nav-module"><a href="host-response-analysis.html">Host response</a></li>
-        <li class="nav-module"><a href="predictive-readiness.html">Readiness</a></li>
+        <li class="nav-module"><a href="interaction-analysis.html" title="Explore host-pathogen interaction networks and evidence classes">Interactions</a></li>
+        <li class="nav-module"><a href="sequence-analysis.html" title="Analyze effector sequence properties and distributions">Sequences</a></li>
+        <li class="nav-module"><a href="pathway-analysis.html" title="Map host proteins to biological pathways">Pathways</a></li>
+        <li class="nav-module"><a href="functional-enrichment.html" aria-current="page" title="Test if host proteins are enriched for biological functions">Enrichment</a></li>
+        <li class="nav-module"><a href="protein-network-analysis.html" title="Analyze protein interaction network structure and centrality">Protein network</a></li>
+        <li class="nav-module"><a href="comparative-pathogen-analysis.html" title="Compare pathogens by effector repertoire similarity">Comparative</a></li>
+        <li class="nav-module"><a href="host-response-analysis.html" title="Explore host cellular processes targeted by pathogens">Host response</a></li>
       </ul>
       <button class="dark-toggle" id="dark-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9790;</button>
     </div>
@@ -90,7 +89,7 @@
                 class="tool-input"
                 id="fe-search"
                 type="search"
-                placeholder="Search pathway or contributing proteins"
+                placeholder="Search pathway or contributing proteins" title="Search by enriched pathway name or associated host protein names"
                 autocomplete="off"
               >
             </label>
@@ -131,16 +130,6 @@
               <div class="fe-tables-content" id="fe-tables-content"></div>
             </div>
           </div>
-        </div>
-
-        <div class="fe-components">
-          <h3>Reading this analysis</h3>
-          <ul class="fe-component-list">
-            <li><strong>Background</strong> &mdash; all annotated host proteins in the upload.</li>
-            <li><strong>Query set</strong> &mdash; host proteins with uploaded interactions.</li>
-            <li><strong>Statistics</strong> &mdash; hypergeometric test with Benjamini-Hochberg FDR correction.</li>
-            <li><strong>Limitations</strong> &mdash; small sets and incomplete annotations produce unstable results; do not treat q-values as proof of mechanism.</li>
-          </ul>
         </div>
 
       </div>

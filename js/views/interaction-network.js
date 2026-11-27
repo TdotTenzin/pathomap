@@ -168,7 +168,7 @@ export function createNetworkView({
         title.textContent = 'Select a node or interaction';
         const text = createElement('p', 'ia-muted');
         text.textContent =
-            'Click a pathogen, effector, host protein, or interaction line to inspect its biology and evidence.';
+            'Click a pathogen, effector, host protein, annotated target, or link to inspect its biology and evidence.';
         container.append(title, text);
         body.appendChild(container);
     }
@@ -494,8 +494,10 @@ export function createNetworkView({
         if (!counts) return;
         const countText = [
             pluralize(counts.interactions, 'interaction'),
+            pluralize(counts.targetAssociations || 0, 'annotated target link'),
             pluralize(counts.effectors, 'effector'),
             pluralize(counts.hostProteins, 'host protein'),
+            pluralize(counts.annotatedTargets || 0, 'annotated target'),
             pluralize(counts.pathogens, 'pathogen'),
         ].join(' · ');
         setNetworkStatus(countText);
@@ -584,10 +586,10 @@ export function createNetworkView({
             class: 'ia-network-svg',
             viewBox: `0 0 ${width} ${height}`,
             role: 'group',
-            'aria-label': 'Force-directed interaction network of pathogens, effectors, and host proteins',
+            'aria-label': 'Force-directed network of pathogens, effectors, host proteins, and annotated targets',
         });
         svg.appendChild(createSvgElement('title')).textContent =
-            'Pathogen, effector, and host protein interaction network';
+            'Pathogen, effector, host protein, and annotated target network';
 
         const background = createSvgElement('rect', {
             x: 0,
@@ -737,6 +739,15 @@ export function createNetworkView({
                 shape = createSvgElement('polygon', { points: points.join(' '), class: 'ia-node-shape' });
             } else if (node.type === 'effector') {
                 shape = createSvgElement('circle', { r: NODE_RADIUS, class: 'ia-node-shape' });
+            } else if (node.type === 'host_target') {
+                shape = createSvgElement('rect', {
+                    x: -NODE_RADIUS + 2,
+                    y: -NODE_RADIUS + 2,
+                    width: NODE_RADIUS * 2 - 4,
+                    height: NODE_RADIUS * 2 - 4,
+                    rx: 10,
+                    class: 'ia-node-shape',
+                });
             } else {
                 shape = createSvgElement('rect', {
                     x: -NODE_RADIUS,

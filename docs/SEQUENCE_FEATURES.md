@@ -5,8 +5,9 @@ Statuses reflect the current build
 (`scripts/build_effectors_host_proteins.py`, `js/data/schema.js`).
 
 Status legend: **Implemented** = annotation stored on the effector row; **Derived artifact** =
-generated in `data/derived/effector_features.json` but not consumed by the web app; **Partial** =
-annotation present but no prediction/probability; **Planned** = not implemented.
+generated in `data/derived/effector_features.json` and recomputed in-app from `sequence` during
+normalization when the numeric field is absent; **Partial** = annotation present but no
+prediction/probability; **Planned** = not implemented.
 
 ## Status summary
 

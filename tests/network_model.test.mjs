@@ -166,6 +166,34 @@ test('dataset fallback adds pathogen membership links and evidence classes', () 
     assert.equal(model.interactionEdges[0].evidence_classes[0], 'experimental');
 });
 
+test('annotated non-protein targets are included as target links', () => {
+    const dataset = fixture();
+    dataset.host_targets[0] = {
+        entity_id: 'PM-TGT-0001',
+        host_target_id: 1,
+        name: 'Host cells',
+        resolved_name: 'Host cell',
+        host_target_class: 'cellular_structure',
+        resolution_status: 'non_protein',
+        audit_status: 'non_protein',
+        aliases: [],
+        members: [],
+        evidence_sources: ['fixture'],
+        audit_notes: 'Whole-cell annotation.',
+    };
+
+    const model = buildNetworkModel(dataset, null);
+    const target = model.nodes.find((node) => node.type === 'host_target');
+    assert.ok(target);
+    assert.equal(target.label, 'Host cell');
+    const links = model.interactionEdges.filter((edge) => edge.kind === 'target_association');
+    assert.equal(links.length, 2);
+    assert.ok(links.every((edge) => edge.strongest_evidence_class === 'annotation-derived'));
+    assert.equal(model.source.annotatedTargets.target_count, 1);
+    assert.equal(model.source.annotatedTargets.by_resolution_status.non_protein.effector_count, 2);
+    assert.equal(filterNetwork(model, {}).counts.annotatedTargets, 1);
+});
+
 test('filters combine pathogen, host, evidence, type, classification, and search', () => {
     const model = buildNetworkModel(fixture(), null);
 

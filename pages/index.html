@@ -13,7 +13,7 @@
     - <footer>       Shared footer linking to the standalone Transparency page.
 
   Key element IDs consumed by JS:
-    disc-file, disc-example, disc-template, disc-curated, disc-sample, disc-analyze,
+    disc-file, disc-example, disc-curated, disc-sample,
     disc-download, disc-input, disc-status, disc-mapping, disc-mapping-grid,
     disc-upload-summary, disc-results                                                         -> js/ui/discovery.js
     db-tabs, db-search, db-download, db-count, db-hint, db-prev, db-next, db-page-size,
@@ -52,14 +52,13 @@
       <a class="nav-brand" href="#hero">PathoMap</a>
       <ul class="nav-links" id="nav-links">
         <li><a href="#discovery">Workspace</a></li>
-        <li class="nav-module"><a href="/pages/interaction-analysis.html">Interactions</a></li>
-        <li class="nav-module"><a href="/pages/sequence-analysis.html">Sequences</a></li>
-        <li class="nav-module"><a href="/pages/pathway-analysis.html">Pathways</a></li>
-        <li class="nav-module"><a href="/pages/functional-enrichment.html">Enrichment</a></li>
-        <li class="nav-module"><a href="/pages/protein-network-analysis.html">Protein network</a></li>
-        <li class="nav-module"><a href="/pages/comparative-pathogen-analysis.html">Comparative</a></li>
-        <li class="nav-module"><a href="/pages/host-response-analysis.html">Host response</a></li>
-        <li class="nav-module"><a href="/pages/predictive-readiness.html">Readiness</a></li>
+        <li class="nav-module"><a href="/pages/interaction-analysis.html" title="Explore host-pathogen interaction networks and evidence classes">Interactions</a></li>
+        <li class="nav-module"><a href="/pages/sequence-analysis.html" title="Analyze effector sequence properties and distributions">Sequences</a></li>
+        <li class="nav-module"><a href="/pages/pathway-analysis.html" title="Map host proteins to biological pathways">Pathways</a></li>
+        <li class="nav-module"><a href="/pages/functional-enrichment.html" title="Test if host proteins are enriched for biological functions">Enrichment</a></li>
+        <li class="nav-module"><a href="/pages/protein-network-analysis.html" title="Analyze protein interaction network structure and centrality">Protein network</a></li>
+        <li class="nav-module"><a href="/pages/comparative-pathogen-analysis.html" title="Compare pathogens by effector repertoire similarity">Comparative</a></li>
+        <li class="nav-module"><a href="/pages/host-response-analysis.html" title="Explore host cellular processes targeted by pathogens">Host response</a></li>
       </ul>
       <button class="dark-toggle" id="dark-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9790;</button>
     </div>
@@ -70,20 +69,20 @@
     <div class="container">
       <h1 class="hero-title">PathoMap</h1>
       <p class="hero-subtitle">
-        PathoMap is a curated host&ndash;pathogen resource for connecting bacterial pathogens, their effector
-        proteins, and the host proteins they target. Every relationship carries stable IDs, an evidence class,
+        PathoMap is a curated host&ndash;pathogen resource for connecting bacterial <span title="Microorganisms that cause disease">pathogens</span>, their <span title="Proteins secreted by pathogens to manipulate host cell functions">effector</span>
+        proteins, and the <span title="Proteins in the host organism that are targeted by pathogen effectors">host proteins</span> they target. Every relationship carries stable IDs, an <span title="Categorization of the strength and type of supporting evidence (e.g., experimental, computational)">evidence class</span>,
         and a citation, so you can see what is known, how it is supported, and what remains uncertain.
       </p>
 
       <div class="research-objective">
         <p class="section-label">Research Objective</p>
         <h2 class="research-question">
-          How do bacterial effectors connect to host proteins and pathways, and how strong is the evidence?
+          How do bacterial <span title="Proteins secreted by pathogens to manipulate host cell functions">effectors</span> connect to <span title="Proteins in the host organism that are targeted by pathogen effectors">host proteins</span> and pathways, and how strong is the evidence?
         </h2>
         <ul class="research-list">
-          <li><strong>Background:</strong> Published evidence for effector&ndash;host relationships is scattered across studies and databases. Broad annotations or shared pathways can be mistaken for direct interactions.</li>
-          <li><strong>Methods:</strong> Browse curated pathogens, effectors, host proteins, interactions, and references. Filter, sort, and export the tables, and inspect the provenance behind each relationship.</li>
-          <li><strong>Approach:</strong> Upload your own rows to compute interaction insights and compare them with the curated dataset. Generated results are labelled by evidence class and state exactly what is missing when data are insufficient.</li>
+          <li><strong>Background:</strong> Published evidence for <span title="Proteins secreted by pathogens to manipulate host cell functions">effector</span>&ndash;<span title="Proteins in the host organism that are targeted by pathogen effectors">host</span> relationships is scattered across studies and databases. Broad annotations or shared pathways can be mistaken for direct interactions.</li>
+          <li><strong>Methods:</strong> Browse curated <span title="Microorganisms that cause disease">pathogens</span>, <span title="Proteins secreted by pathogens to manipulate host cell functions">effectors</span>, <span title="Proteins in the host organism that are targeted by pathogen effectors">host proteins</span>, interactions, and references. Filter, sort, and export the tables, and inspect the provenance behind each relationship.</li>
+          <li><strong>Approach:</strong> Upload your own rows to compute interaction insights and compare them with the curated dataset. Generated results are labelled by <span title="Categorization of the strength and type of supporting evidence (e.g., experimental, computational)">evidence class</span> and state exactly what is missing when data are insufficient.</li>
         </ul>
       </div>
     </div>
@@ -98,7 +97,8 @@
           <h2 class="section-title">Upload Data. Get Insights.</h2>
           <p class="section-subtitle">
             Paste or upload your results, or load a curated/sample dataset. Compact module summaries
-            stay linked to the rows below; open a module page whenever you want the full results.
+            and the full readiness assessment stay linked to the rows below; open a module page
+            whenever you want the full results.
           </p>
         </header>
 
@@ -108,21 +108,19 @@
               <input type="file" id="disc-file" accept=".csv,.tsv,.txt,.json,text/csv,text/tab-separated-values,application/json" hidden>
               <span class="tool-btn">Upload file</span>
             </label>
-            <button type="button" class="tool-btn" id="disc-example">Load example</button>
-            <button type="button" class="tool-btn" id="disc-template">Download template</button>
-            <button type="button" class="tool-btn" id="disc-curated">Load curated dataset</button>
-            <button type="button" class="tool-btn" id="disc-sample">Load sample dataset</button>
-            <button type="button" class="tool-btn tool-btn-primary" id="disc-analyze">Discover insights</button>
-            <button type="button" class="tool-btn" id="disc-download" disabled>Download report</button>
+            <button type="button" class="tool-btn" id="disc-example" title="Load a small example dataset to try the workspace">Load example</button>
+            <button type="button" class="tool-btn" id="disc-curated" title="Load the full PathoMap reference dataset">Load curated dataset</button>
+            <button type="button" class="tool-btn" id="disc-sample" title="Load a sample dataset for testing">Load sample dataset</button>
+            <button type="button" class="tool-btn" id="disc-download" disabled title="Download the analysis report">Download report</button>
           </div>
 
-          <p class="exp-hint">CSV, TSV, or dataset JSON accepted. Loading an example, file, curated, or sample dataset analyzes it immediately; paste your own rows and click Discover insights.</p>
+          <p class="exp-hint">CSV, TSV, or dataset JSON accepted. Loading an example, file, curated, or sample dataset analyzes it immediately; pasted rows analyze automatically. <a href="/data/upload-template.csv" target="_blank">Download CSV template</a> for offline entry.</p>
           <label class="exp-input-label" for="disc-input">Paste your rows</label>
-          <textarea class="exp-input" id="disc-input" spellcheck="false" placeholder="pathogen,effector,sequence,host_protein,phenotype&#10;Salmonella,SteE,MKTAIL...,ACTB,intracellular"></textarea>
+          <textarea class="exp-input" id="disc-input" spellcheck="false" placeholder="pathogen,effector,sequence,host_protein,phenotype&#10;Salmonella,SteE,MKTAIL...,ACTB,intracellular" title="Columns: pathogen (bacterial species), effector (protein name), sequence (amino acid sequence), host_protein (target protein), phenotype (observed effect)"></textarea>
           <p class="exp-status" id="disc-status" role="status" hidden></p>
 
           <details class="disc-mapping" id="disc-mapping" hidden>
-            <summary>Column mapping (auto-detected)</summary>
+            <summary title="Review how columns were mapped to the required schema">Column mapping (auto-detected)</summary>
             <div id="disc-mapping-grid"></div>
           </details>
 
@@ -139,7 +137,7 @@
             <div class="db-toolbar">
               <div class="db-tabs" id="db-tabs" role="tablist" aria-label="Database tables"></div>
               <div class="db-toolbar-right">
-                <input id="db-search" class="tool-input db-search" type="search" placeholder="Search&hellip;" autocomplete="off" aria-label="Filter table rows">
+                <input id="db-search" class="tool-input db-search" type="search" placeholder="Search&hellip;" autocomplete="off" aria-label="Filter table rows" title="Search by pathogen, effector, host protein, or any column value">
                 <button type="button" id="db-download" class="tool-btn">Export CSV</button>
               </div>
             </div>
@@ -160,13 +158,13 @@
                   <option value="50">50</option>
                 </select>
 
-                <button type="button" id="db-prev" class="tool-btn tool-btn-sm">
+                <button type="button" id="db-prev" class="tool-btn tool-btn-sm" title="Go to previous page">
                   Previous
                 </button>
 
                 <span id="db-page-info"></span>
 
-                <button type="button" id="db-next" class="tool-btn tool-btn-sm">
+                <button type="button" id="db-next" class="tool-btn tool-btn-sm" title="Go to next page">
                   Next
                 </button>
               </div>
@@ -182,7 +180,7 @@
             </div>
 
             <details class="db-schema">
-              <summary>Data dictionary</summary>
+              <summary title="View definitions and descriptions for each column">Data dictionary</summary>
               <div id="db-schema-body" class="db-schema-body"></div>
             </details>
           </div>

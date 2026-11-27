@@ -102,18 +102,26 @@ export default {
   run(dataset) {
     const model = buildNetworkModel(dataset, null);
     const filtered = filterNetwork(model, {});
+    // Annotated non-protein / family / complex targets are shown in the
+    // interaction network but are not protein nodes for centrality analysis.
+    const nodes = filtered.nodes.filter((node) => node.type !== 'host_target');
+    const nodeIds = new Set(nodes.map((node) => node.id));
     const edges = [
-      ...filtered.interactionEdges.map((edge) => ({ source: edge.source, target: edge.target })),
-      ...(filtered.membershipEdges || []).map((edge) => ({ source: edge.source, target: edge.target })),
+      ...filtered.interactionEdges
+        .filter((edge) => edge.kind !== 'target_association' && nodeIds.has(edge.source) && nodeIds.has(edge.target))
+        .map((edge) => ({ source: edge.source, target: edge.target })),
+      ...(filtered.membershipEdges || [])
+        .filter((edge) => nodeIds.has(edge.source) && nodeIds.has(edge.target))
+        .map((edge) => ({ source: edge.source, target: edge.target })),
     ];
-    const adjacency = undirectedAdjacency(filtered.nodes, edges);
+    const adjacency = undirectedAdjacency(nodes, edges);
     const comps = components(adjacency);
     const componentOf = new Map();
     comps.forEach((members, index) => members.forEach((id) => componentOf.set(id, index + 1)));
     const centralityValues = centrality(adjacency);
 
-    const labels = new Map(filtered.nodes.map((node) => [node.id, node.label]));
-    const rows = filtered.nodes.map((node) => ({
+    const labels = new Map(nodes.map((node) => [node.id, node.label]));
+    const rows = nodes.map((node) => ({
       node: node.label,
       type: node.type.replace('_', ' '),
       degree: adjacency.get(node.id)?.size || 0,
@@ -132,7 +140,7 @@ export default {
 
     return {
       metrics: [
-        { label: 'Nodes', value: String(filtered.nodes.length) },
+        { label: 'Nodes', value: String(nodes.length) },
         { label: 'Edges', value: String(edges.length) },
         { label: 'Components', value: String(comps.length) },
         { label: 'Largest component', value: String(comps[0]?.length || 0) },
@@ -168,6 +176,7 @@ export default {
         'Centrality describes graph structure, not biological importance.',
         'Components and clusters depend on upload coverage and edge provenance.',
         'Membership links are included as graph edges but are not effector-host interactions.',
+        'Annotated non-protein, family, complex, and ambiguous targets are excluded from protein centrality.',
       ],
       warnings: [],
     };

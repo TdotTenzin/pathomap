@@ -28,7 +28,8 @@ data/
 - `pathomap.db`, `schema.sql` — SQLite mirror of the JSON dataset
 - `schema/pathogens.schema.json`
 - `derived/interaction_analysis.json` — validation/deduplication report, interaction and
-  evidence statistics, unresolved targets, multi-pathogen host proteins and network nodes/edges
+  evidence statistics, annotated target associations, unresolved targets, multi-pathogen host
+  proteins and network nodes/edges
 
 **Manually maintained:**
 

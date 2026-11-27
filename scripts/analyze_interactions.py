@@ -28,8 +28,17 @@ DATASET_PATH = ROOT / "data" / "pathomap-dataset.json"
 OUTPUT_PATH = ROOT / "data" / "derived" / "interaction_analysis.json"
 SAMPLE_DATASET_PATH = ROOT / "data" / "sample-dataset.json"
 SAMPLE_OUTPUT_PATH = ROOT / "data" / "derived" / "interaction_analysis_sample.json"
-ANALYSIS_VERSION = "1.2"
-OUTPUT_SCHEMA_VERSION = "1.2"
+ANALYSIS_VERSION = "1.3"
+OUTPUT_SCHEMA_VERSION = "1.3"
+# Audit decisions that are complete enough to be shown as target associations.
+# Non-protein targets are legitimate biological outcomes, not missing data.
+ANNOTATED_TARGET_STATUSES = {
+    "resolved_protein",
+    "protein_family",
+    "protein_complex",
+    "ambiguous",
+    "non_protein",
+}
 EVIDENCE_CLASSES = {"experimental", "predicted", "annotation-derived", "hypothetical"}
 EVIDENCE_PRIORITY = {
     "experimental": 4,
@@ -42,6 +51,7 @@ PARAMETERS = {
     "duplicate_relationship_policy": "retain_lexicographically_earliest_interaction_id",
     "evidence_identity": "interaction_id|evidence_class|doi|pmid|database_accession|provenance",
     "host_target_scope": "curated_host_target_ids",
+    "annotated_target_statuses": sorted(ANNOTATED_TARGET_STATUSES),
     "pathogen_classification": "gram_stain_or_name_heuristic",
 }
 INPUT_TABLES = ["pathogens", "effectors", "host_proteins", "host_targets", "interactions", "interaction_evidence"]
@@ -146,9 +156,9 @@ def collect_unresolved_targets(dataset: dict, pathogens: dict, targets: dict, re
             reason = "Host target ID does not resolve to a host_targets row."
         else:
             status = str(target.get("resolution_status") or "unresolved")
-            if status != "resolved_protein":
-                reason = f"Host target is classified as '{status}', not resolved_protein."
-            elif effector_id not in retained_effector_ids:
+            if status not in ANNOTATED_TARGET_STATUSES:
+                reason = f"Host target has no audit resolution decision (status '{status}')."
+            elif status == "resolved_protein" and effector_id not in retained_effector_ids:
                 reason = "Host target is resolved but the effector has no retained interaction."
         if reason is None:
             continue
@@ -197,6 +207,131 @@ def collect_unresolved_targets(dataset: dict, pathogens: dict, targets: dict, re
         "effector_count": sum(row["effector_count"] for row in rows),
         "by_resolution_status": dict(sorted(by_status.items())),
         "targets": rows,
+    }
+
+
+def collect_target_associations(dataset: dict, pathogens: dict, targets: dict) -> dict:
+    """Model curated non-protein target annotations as graph associations.
+
+    Effectors whose target has a complete audit decision but no protein-level
+    interaction (non-protein, family, complex or ambiguous) are retained as
+    effector -> host-target edges. They are annotation-derived target
+    associations, never promoted to experimentally supported protein edges.
+    """
+    effector_rows = table_rows(dataset, "effectors", [])
+    effectors_by_entity = {
+        row.get("entity_id"): row
+        for row in effector_rows
+        if isinstance(row, dict) and row.get("entity_id")
+    }
+    groups: dict[str, dict] = {}
+    for effector in effector_rows:
+        if not isinstance(effector, dict):
+            continue
+        effector_id = effector.get("entity_id")
+        if not is_entity_id(effector_id, "effector"):
+            continue
+        target_id = effector.get("host_target_id")
+        target = targets.get(target_id) if target_id is not None else None
+        if not isinstance(target, dict):
+            continue
+        status = str(target.get("resolution_status") or "unresolved")
+        target_entity = target.get("entity_id")
+        if (
+            status == "resolved_protein"
+            or status not in ANNOTATED_TARGET_STATUSES
+            or not is_entity_id(target_entity, "host_target")
+        ):
+            continue
+
+        group = groups.setdefault(target_entity, {
+            "host_target_id": target_entity,
+            "numeric_host_target_id": target_id,
+            "target_name": target.get("name"),
+            "resolved_name": target.get("resolved_name"),
+            "host_target_class": target.get("host_target_class"),
+            "resolution_status": status,
+            "audit_status": target.get("audit_status"),
+            "aliases": list(target.get("aliases") or []),
+            "members": list(target.get("members") or []),
+            "evidence_sources": list(target.get("evidence_sources") or []),
+            "audit_notes": target.get("audit_notes"),
+            "effector_ids": set(),
+            "effector_names": set(),
+            "pathogen_ids": set(),
+        })
+        group["effector_ids"].add(effector_id)
+        if effector.get("effector_name"):
+            group["effector_names"].add(str(effector["effector_name"]))
+        pathogen = pathogens.get(effector.get("pathogen_id"))
+        pathogen_id = pathogen.get("entity_id") if isinstance(pathogen, dict) else None
+        if pathogen_id:
+            group["pathogen_ids"].add(pathogen_id)
+
+    nodes: list[dict] = []
+    edges: list[dict] = []
+    rows: list[dict] = []
+    by_status: dict[str, dict[str, int]] = {}
+    for target_entity, group in groups.items():
+        nodes.append({
+            "id": target_entity,
+            "type": "host_target",
+            "label": group["target_name"] or group["resolved_name"] or target_entity,
+            "target_name": group["target_name"],
+            "resolved_name": group["resolved_name"],
+            "host_target_class": group["host_target_class"],
+            "resolution_status": group["resolution_status"],
+            "audit_status": group["audit_status"],
+            "aliases": group["aliases"],
+            "members": group["members"],
+            "evidence_sources": group["evidence_sources"],
+            "audit_notes": group["audit_notes"],
+        })
+        for effector_id in sorted(group["effector_ids"]):
+            effector = effectors_by_entity.get(effector_id, {})
+            pathogen = pathogens.get(effector.get("pathogen_id"))
+            pathogen_id = pathogen.get("entity_id") if isinstance(pathogen, dict) else None
+            edges.append({
+                "id": f"TGT:{effector_id}:{target_entity}",
+                "source": effector_id,
+                "target": target_entity,
+                "type": "effector_targets_host_target",
+                "kind": "target_association",
+                "mechanism": None,
+                "pathogen_id": pathogen_id,
+                "pathogen_name": pathogen.get("name") if isinstance(pathogen, dict) else None,
+                "provenance": "curated_target_annotation",
+                "resolution_status": group["resolution_status"],
+                "evidence_count": 0,
+                "evidence_classes": ["annotation-derived"],
+                "strongest_evidence_class": "annotation-derived",
+                "evidence_records": [],
+            })
+        row = {
+            key: value
+            for key, value in group.items()
+            if key not in {"effector_ids", "effector_names", "pathogen_ids"}
+        }
+        row["effector_ids"] = sorted(group["effector_ids"])
+        row["effector_names"] = sorted(group["effector_names"])
+        row["pathogen_ids"] = sorted(group["pathogen_ids"])
+        row["effector_count"] = len(group["effector_ids"])
+        rows.append(row)
+        bucket = by_status.setdefault(group["resolution_status"], {"target_count": 0, "effector_count": 0})
+        bucket["target_count"] += 1
+        bucket["effector_count"] += len(group["effector_ids"])
+
+    rows.sort(key=lambda item: (-item["effector_count"], item["resolution_status"], str(item["host_target_id"])))
+    nodes.sort(key=lambda item: str(item["id"]))
+    edges.sort(key=lambda item: str(item["id"]))
+    return {
+        "target_count": len(rows),
+        "effector_count": len({effector for row in rows for effector in row["effector_ids"]}),
+        "association_count": len(edges),
+        "by_resolution_status": dict(sorted(by_status.items())),
+        "targets": rows,
+        "nodes": nodes,
+        "edges": edges,
     }
 
 
@@ -342,6 +477,31 @@ def validate_result(result: dict, dataset: dict | None = None) -> list[dict]:
         issues.append(issue("unresolved_target_count_mismatch", "Unresolved target count does not match target rows."))
     if stats.get("unresolved_effector_count") != unresolved.get("effector_count"):
         issues.append(issue("unresolved_effector_count_mismatch", "Unresolved effector count does not match target rows."))
+
+    associations = result.get("target_associations") or {}
+    association_nodes = associations.get("nodes") or []
+    association_edges = associations.get("edges") or []
+    association_node_ids = [node.get("id") for node in association_nodes]
+    if len(association_node_ids) != len(set(association_node_ids)):
+        issues.append(issue("duplicate_target_node_id", "Target association nodes contain duplicate IDs."))
+    association_edge_ids = [edge.get("id") for edge in association_edges]
+    if len(association_edge_ids) != len(set(association_edge_ids)):
+        issues.append(issue("duplicate_target_edge_id", "Target association edges contain duplicate IDs."))
+    known_target_ids = set(association_node_ids)
+    known_effector_ids = {
+        row.get("entity_id")
+        for row in (dataset.get("effectors") or [])
+        if isinstance(row, dict)
+    }
+    for edge in association_edges:
+        if edge.get("source") not in known_effector_ids:
+            issues.append(issue("broken_target_association", "Association effector does not resolve.", edge.get("id")))
+        if edge.get("target") not in known_target_ids:
+            issues.append(issue("dangling_target_association", "Association target node is missing.", edge.get("id")))
+    if stats.get("annotated_target_count") != len(associations.get("targets", [])):
+        issues.append(issue("annotated_target_count_mismatch", "Annotated target count does not match target rows."))
+    if stats.get("target_association_count") != len(association_edges):
+        issues.append(issue("target_association_count_mismatch", "Association count does not match association edges."))
 
     return issues
 
@@ -605,6 +765,7 @@ def analyze(
         })
 
     unresolved_targets = collect_unresolved_targets(dataset, pathogens, targets, retained_effector_ids)
+    target_associations = collect_target_associations(dataset, pathogens, targets)
 
     result = {
         "schema_version": OUTPUT_SCHEMA_VERSION,
@@ -643,6 +804,9 @@ def analyze(
             "host_proteins_targeted_by_multiple_pathogens_count": len(multi_pathogen_hosts),
             "unresolved_target_count": unresolved_targets["target_count"],
             "unresolved_effector_count": unresolved_targets["effector_count"],
+            "annotated_target_count": target_associations["target_count"],
+            "annotated_target_effector_count": target_associations["effector_count"],
+            "target_association_count": target_associations["association_count"],
             "evidence_count": len(evidence),
             "interactions_with_evidence_count": interactions_with_evidence,
             "interactions_without_evidence_count": len(interactions) - interactions_with_evidence,
@@ -659,6 +823,7 @@ def analyze(
         },
         "host_proteins_targeted_by_multiple_pathogens": multi_pathogen_hosts,
         "unresolved_targets": unresolved_targets,
+        "target_associations": target_associations,
         "network": {
             "nodes": sorted(nodes.values(), key=lambda item: item["id"]),
             "edges": sorted(edges, key=lambda item: item["id"]),

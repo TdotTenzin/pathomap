@@ -33,6 +33,8 @@
     - Effector pathogen_id is resolved by name when absent; host-target links
       are stored through host_target_id and target-to-protein resolution lives
       in the host_targets table.
+    - Effector sequence features are derived from `sequence` for any missing
+      numeric feature column, matching uploaded-row ingest behavior.
     - Enum fields (gram_stain, strategy, assembly_level, curation_status for pathogens)
       fall back to 'unknown' / 'needs_review' when the value isn't in the allowed set.
     - Output rows contain ONLY the columns declared in schema.js (extras dropped).
@@ -49,6 +51,7 @@ import {
   PATHOGEN_COLUMNS,
   SCHEMA_VERSION,
   STRATEGY_VALUES,
+  STRATEGY_CODES,
   EFFECTOR_COLUMNS,
   HOST_PROTEIN_COLUMNS,
   HOST_TARGET_COLUMNS,
@@ -58,6 +61,7 @@ import {
   INTERACTION_EVIDENCE_CLASS_VALUES,
 } from '../data/schema.js';
 import { isEntityId, makeEntityId } from '../data/identifiers.js';
+import { calculateFeatures, SEQUENCE_FEATURE_KEYS } from '../experiment/features.js';
 
 // ---------------------------------------------------------------------------
 // Type-coercion helpers (private)
@@ -144,6 +148,47 @@ function normalizeHostProteinFeatures(row) {
     molecular_weight_da: asNumber(row.molecular_weight_da),
     isoelectric_point: asNumber(row.isoelectric_point),
     gravy_score: asNumber(row.gravy_score),
+  };
+}
+
+// Effectors may carry numeric features or only a sequence; derive what is
+// missing so both sources present a complete feature vector when possible.
+function normalizeEffectorFeatures(row) {
+  const provided = {
+    sequence_length: asInteger(row.sequence_length),
+    molecular_weight_da: asNumber(row.molecular_weight_da),
+    isoelectric_point: asNumber(row.isoelectric_point),
+    gravy_score: asNumber(row.gravy_score),
+  };
+  if (SEQUENCE_FEATURE_KEYS.every((key) => provided[key] !== null)) return provided;
+
+  const derived = calculateFeatures(row.sequence);
+  return Object.fromEntries(
+    SEQUENCE_FEATURE_KEYS.map((key) => [key, provided[key] ?? derived[key]])
+  );
+}
+
+// Prefer an explicit effector phenotype; otherwise inherit a non-unknown
+// pathogen strategy so every derived label stays traceable to its source.
+function normalizeEffectorLabel(row, pathogenId, pathogenStrategyById) {
+  const direct = nullableString(row.phenotype);
+  if (direct) {
+    return {
+      phenotype: direct,
+      phenotype_source: 'direct',
+      phenotype_code: STRATEGY_CODES[direct] ?? null,
+    };
+  }
+
+  const strategy = pathogenId === null ? null : pathogenStrategyById.get(pathogenId) ?? null;
+  if (!strategy || strategy === 'unknown') {
+    return { phenotype: null, phenotype_source: null, phenotype_code: null };
+  }
+
+  return {
+    phenotype: strategy,
+    phenotype_source: 'pathogen.strategy',
+    phenotype_code: STRATEGY_CODES[strategy] ?? null,
   };
 }
 
@@ -457,6 +502,11 @@ export function normalizeDataset(data) {
       .filter((row) => row.name)
       .map((row) => [row.name.toLowerCase(), row.pathogen_id])
   );
+  const pathogenStrategyById = new Map(
+    pathogens
+      .filter((row) => row.strategy && row.strategy !== 'unknown')
+      .map((row) => [row.pathogen_id, row.strategy])
+  );
 
   // Normalize effectors (stable ID plus nullable foreign keys)
   const sourceEffectors = Array.isArray(data?.effectors) ? data.effectors : [];
@@ -464,6 +514,11 @@ export function normalizeDataset(data) {
   const effectors = sourceEffectors
     .filter((row) => row && typeof row === 'object' && !Array.isArray(row))
     .map((row) => {
+      const pathogenId =
+        asInteger(row.pathogen_id) ??
+        pathogenIdByName.get(cleanString(row.pathogen_name).toLowerCase()) ??
+        null;
+      const label = normalizeEffectorLabel(row, pathogenId, pathogenStrategyById);
       const normalized = {
         entity_id: normalizeEntityId(
           row.entity_id,
@@ -472,10 +527,7 @@ export function normalizeDataset(data) {
         ),
         effector_name: cleanString(row.effector_name),
         effector_name_class: cleanString(row.effector_name_class),
-        pathogen_id:
-          asInteger(row.pathogen_id) ??
-          pathogenIdByName.get(cleanString(row.pathogen_name).toLowerCase()) ??
-          null,
+        pathogen_id: pathogenId,
         pathogen_name: cleanString(row.pathogen_name),
         host_target_id: asInteger(row.host_target_id),
         host_target: cleanString(row.host_target),
@@ -484,8 +536,10 @@ export function normalizeDataset(data) {
         type_class: cleanString(row.type_class),
         mechanism: cleanString(row.mechanism),
         mechanism_class: cleanString(row.mechanism_class),
+        ...label,
         uniprot_id: nullableString(row.uniprot_id),
         ...normalizeSequenceEnrichment(row),
+        ...normalizeEffectorFeatures(row),
         signal_peptide: asObjectOrNull(row.signal_peptide),
         transmembrane_regions: asArray(row.transmembrane_regions),
         reference_ids: asReferenceIds(row.reference_ids),

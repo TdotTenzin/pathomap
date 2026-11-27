@@ -19,11 +19,12 @@ import { renderDatabase } from '../views/database.js';
 import { downloadText, timestampSlug } from '../utils/export.js';
 import {
   EXAMPLE,
-  TEMPLATE,
   setStatus,
   renderMetrics,
   renderModuleSummary,
   renderWaitingSummary,
+  renderReadinessSection,
+  mountReadinessSection,
   renderMappingGrid,
   readMappingOverrides,
 } from './module-view.js';
@@ -40,10 +41,8 @@ export function initDiscovery() {
   const input = document.getElementById('disc-input');
   const file = document.getElementById('disc-file');
   const example = document.getElementById('disc-example');
-  const template = document.getElementById('disc-template');
   const curated = document.getElementById('disc-curated');
   const sample = document.getElementById('disc-sample');
-  const analyze = document.getElementById('disc-analyze');
   const download = document.getElementById('disc-download');
   const status = document.getElementById('disc-status');
   const mapping = document.getElementById('disc-mapping');
@@ -51,7 +50,7 @@ export function initDiscovery() {
   const uploadSummary = document.getElementById('disc-upload-summary');
   const results = document.getElementById('disc-results');
 
-  if (!input || !analyze || !results) return;
+  if (!input || !results) return;
 
   let lastIngest = null;
   let lastReport = null;
@@ -67,12 +66,19 @@ export function initDiscovery() {
       <div class="disc-summary-grid">
         ${DISCOVERY_MODULES.map(renderWaitingSummary).join('')}
       </div>
+      ${renderReadinessSection(null)}
     `;
+    mountReadinessSection(results);
     if (download) download.disabled = true;
   }
 
   function renderReport(report) {
     lastReport = report;
+    const readiness = report.modules.find((module) => module.id === 'predictive-readiness');
+    const effectorCount = lastIngest?.dataset?.effectors?.length ?? null;
+    const sourceLabel = lastIngest?.sourceKind === 'handoff'
+      ? 'Workspace dataset'
+      : 'Loaded dataset';
     results.hidden = false;
     results.innerHTML = `
       <div class="disc-results-head">
@@ -84,7 +90,9 @@ export function initDiscovery() {
       <div class="disc-summary-grid">
         ${report.modules.map(renderModuleSummary).join('')}
       </div>
+      ${renderReadinessSection(readiness, { sourceLabel, effectorCount })}
     `;
+    mountReadinessSection(results);
     if (download) download.disabled = false;
   }
 
@@ -132,6 +140,9 @@ export function initDiscovery() {
 
     if (mappingGrid && ingest.sourceKind !== 'json') {
       renderMappingGrid(mapping, ingest.headers, ingest.mapping);
+      mappingGrid.querySelectorAll('[data-mapping-field]').forEach((select) => {
+        select.addEventListener('change', analyzeInput);
+      });
     } else if (mapping) {
       mapping.hidden = true;
     }
@@ -171,13 +182,6 @@ export function initDiscovery() {
     });
   }
 
-  if (template) {
-    template.addEventListener('click', () => {
-      downloadText(TEMPLATE, `pathomap-upload-template-${timestampSlug()}.csv`, 'text/csv;charset=utf-8');
-      setStatus(status, 'Template downloaded. Fill in your own rows and upload it.', 'success');
-    });
-  }
-
   async function loadReference(url, label) {
     try {
       const response = await fetch(url, { cache: 'no-store' });
@@ -193,15 +197,42 @@ export function initDiscovery() {
   if (curated) curated.addEventListener('click', () => loadReference(DEFAULT_DATASET_URL, 'Curated dataset'));
   if (sample) sample.addEventListener('click', () => loadReference(DEFAULT_SAMPLE_DATASET_URL, 'Sample dataset'));
 
-  analyze.addEventListener('click', analyzeInput);
+  input.addEventListener('input', () => {
+    if (input.value.trim()) {
+      setStatus(status, 'Analyzing...', 'success');
+      analyzeInput();
+    }
+  });
 
   // Carry the active dataset into a module page only when a user follows a
   // module link. The receiving page consumes and clears it immediately.
   function queueCurrentDataset() {
     if (lastIngest) queueDatasetForModule(lastIngest.dataset);
   }
+  function downloadReadiness() {
+    if (!lastReport || !lastIngest) return;
+    const result = lastReport.modules.find((module) => module.id === 'predictive-readiness');
+    if (!result) return;
+    const portable = {
+      meta: {
+        generated_at: new Date().toISOString(),
+        source: 'pathomap-predictive-readiness',
+        source_kind: lastIngest.sourceKind,
+      },
+      dataset: { effectors_count: lastIngest.dataset?.effectors?.length || 0 },
+      result,
+    };
+    downloadText(
+      JSON.stringify(portable, null, 2),
+      `pathomap-predictive-readiness-${timestampSlug()}.json`,
+      'application/json;charset=utf-8'
+    );
+  }
+
   results.addEventListener('click', (event) => {
-    if (event.target.closest('a.disc-summary-link')) queueCurrentDataset();
+    const link = event.target.closest('a.disc-summary-link');
+    if (link && !link.getAttribute('href')?.startsWith('#')) queueCurrentDataset();
+    if (event.target.closest('[data-readiness-download]')) downloadReadiness();
   });
   document.querySelectorAll('.nav-module a').forEach((link) => {
     link.addEventListener('click', queueCurrentDataset);

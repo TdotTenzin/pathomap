@@ -6,7 +6,7 @@
 */
 
 import { FIELD_LABELS } from '../discovery/ingest.js';
-import { modulePageFor } from '../discovery/module-pages.js';
+import { modulePageFor, READINESS_MODULE_ID } from '../discovery/module-pages.js';
 import { filterNetwork } from '../analysis/network.js';
 import { createNetworkView } from '../views/interaction-network.js';
 import { escapeXml as escapeHtml } from '../utils/export.js';
@@ -20,8 +20,6 @@ Legionella pneumophila,SidC,MKRRKKLIVFFVVAAAGG,ACTB,P60709,Actin cytoskeleton,in
 Legionella pneumophila,LepB,MKEEQQNNSSGGCCYYPP,RAB1,P20381,Vesicle trafficking,extracellular,infection_score,0.24,hypothetical,,Vesicle diversion,negative
 Yersinia enterocolitica,YopE,MKDDQQNNSSGGCCYYPP,RAB1,P20381,Vesicle trafficking,extracellular,infection_score,0.39,predicted,,GTPase mimicry,negative
 Yersinia enterocolitica,YopH,MKLLIIVVFFAARRKQQ,TUBB,P07437,Microtubule,intracellular,infection_score,0.71,experimental,10.1126/science.1234570,Phosphatase signaling,negative`;
-
-export const TEMPLATE = EXAMPLE.split('\n').slice(0, 2).join('\n');
 
 export function setStatus(element, message, tone = '') {
   if (!element) return;
@@ -193,6 +191,149 @@ export function renderWaitingSummary(module) {
   });
 }
 
+function renderReadinessChecklist(table) {
+  const columns = table?.columns || [];
+  const header = columns.map((column) => `<th scope="col">${escapeHtml(column.label)}</th>`).join('');
+  const body = (table?.rows || []).map((row) => {
+    const searchText = columns.map((column) => row[column.key] ?? '').join(' ').toLowerCase();
+    const passed = ['yes', 'no'].includes(row.passed) ? row.passed : '';
+    return `
+    <tr data-readiness-row data-search="${escapeHtml(searchText)}" data-passed="${escapeHtml(passed)}">${columns.map((column) => {
+      const value = row[column.key] ?? '—';
+      const modifier = column.key === 'passed' && ['yes', 'no'].includes(value)
+        ? ` disc-readiness-cell--${value}`
+        : '';
+      return `<td class="disc-readiness-cell${modifier}">${escapeHtml(value)}</td>`;
+    }).join('')}</tr>`;
+  }).join('');
+
+  return `
+    <div class="disc-table-section">
+      <h4>${escapeHtml(table?.title || 'Readiness checklist')}</h4>
+      <div class="exp-table-wrap">
+        <table class="exp-table disc-readiness-table">
+          <thead><tr>${header}</tr></thead>
+          <tbody>${body}</tbody>
+        </table>
+      </div>
+    </div>
+  `;
+}
+
+export function renderReadinessSection(result, { sourceLabel = '', effectorCount = null } = {}) {
+  const status = result?.status || 'waiting';
+  const label = !result ? 'Waiting for data'
+    : status === 'complete' ? 'Assessment complete' : statusLabel(result);
+  const head = `
+    <div class="disc-readiness-head">
+      <div>
+        <p class="section-label">Prediction Readiness</p>
+        <h3>Readiness</h3>
+        <p>Checklist of the data needed before predictive modelling. No model, score, or accuracy is produced.</p>
+      </div>
+      <span class="disc-status disc-status--${escapeHtml(status.replace(/\s+/g, '-'))}">${escapeHtml(label)}</span>
+    </div>
+  `;
+  const tables = (result?.tables || []).map(renderReadinessChecklist).join('');
+  const source = result && effectorCount !== null
+    ? `<p class="disc-readiness-source">${escapeHtml(sourceLabel || 'Dataset')} · Readiness assessment of ${escapeHtml(effectorCount)} effector(s).</p>`
+    : '';
+  const tools = tables ? `
+    <div class="disc-readiness-tools">
+      <label class="disc-readiness-filter">
+        <span>Search checks</span>
+        <input class="tool-input" type="search" data-readiness-search placeholder="Search checks" autocomplete="off">
+      </label>
+      <label class="disc-readiness-filter">
+        <span>Status</span>
+        <select class="tool-input" data-readiness-passed>
+          <option value="">All checks</option>
+          <option value="yes">Passed</option>
+          <option value="no">Failed</option>
+        </select>
+      </label>
+      <button type="button" class="tool-btn" data-readiness-reset>Clear filters</button>
+      <button type="button" class="tool-btn" data-readiness-download>Download readiness result</button>
+    </div>
+  ` : '';
+  const empty = tables
+    ? '<p class="disc-readiness-empty" data-readiness-empty hidden>No readiness checks match these filters.</p>'
+    : '';
+
+  if (!result || status !== 'complete') {
+    const detail = result?.reasons?.length
+      ? `<ul class="disc-reasons">${result.reasons.map((reason) => `<li>${escapeHtml(reason)}</li>`).join('')}</ul>`
+      : '<p class="disc-waiting">Load an example or dataset above to assess predictive readiness.</p>';
+    return `
+      <section class="disc-readiness" id="readiness" data-module="${READINESS_MODULE_ID}">
+        ${head}
+        <div class="disc-readiness-body">${detail}</div>
+      </section>
+    `;
+  }
+
+  const notes = (result.notes || []).length
+    ? `<ul class="disc-readiness-notes">${result.notes.map((note) => `<li>${escapeHtml(note)}</li>`).join('')}</ul>`
+    : '';
+  const warnings = (result.warnings || []).length
+    ? `<ul class="disc-readiness-warnings">${result.warnings.map((warning) => `<li>${escapeHtml(warning)}</li>`).join('')}</ul>`
+    : '';
+
+  return `
+    <section class="disc-readiness" id="readiness" data-module="${READINESS_MODULE_ID}">
+      ${head}
+      ${tools}
+      <div class="disc-readiness-body">
+        ${source}
+        ${renderMetrics(result.metrics)}
+        ${renderFindings(result.findings)}
+        ${tables}
+        ${empty}
+        ${notes}
+        ${warnings}
+      </div>
+    </section>
+  `;
+}
+
+export function mountReadinessSection(root) {
+  const section = root?.querySelector?.('.disc-readiness');
+  if (!section) return;
+
+  const search = section.querySelector('[data-readiness-search]');
+  const passed = section.querySelector('[data-readiness-passed]');
+  const reset = section.querySelector('[data-readiness-reset]');
+  const empty = section.querySelector('[data-readiness-empty]');
+  const rows = [...section.querySelectorAll('[data-readiness-row]')];
+  if (!rows.length) return;
+
+  let timer = null;
+  function applyFilters() {
+    const query = (search?.value || '').trim().toLowerCase();
+    const status = passed?.value || '';
+    let visible = 0;
+    rows.forEach((row) => {
+      const matchesSearch = !query || (row.dataset.search || '').includes(query);
+      const matchesStatus = !status || row.dataset.passed === status;
+      row.hidden = !(matchesSearch && matchesStatus);
+      if (!row.hidden) visible += 1;
+    });
+    if (empty) empty.hidden = visible > 0;
+  }
+
+  search?.addEventListener('input', () => {
+    clearTimeout(timer);
+    timer = setTimeout(applyFilters, 120);
+  });
+  passed?.addEventListener('change', applyFilters);
+  reset?.addEventListener('click', () => {
+    if (search) search.value = '';
+    if (passed) passed.value = '';
+    applyFilters();
+    search?.focus();
+  });
+}
+
 export function renderModule(result, { open = false } = {}) {
   const isComplete = result.status === 'complete';
   const reasons = !isComplete
@@ -284,11 +425,11 @@ export function mountNetworks(root, { modules = [], dataset = null } = {}) {
   });
 }
 
-export function renderMappingGrid(container, headers, mapping, { actionLabel = 'Discover insights' } = {}) {
+export function renderMappingGrid(container, headers, mapping) {
   if (!container) return;
   container.hidden = false;
   container.innerHTML = `
-    <p class="disc-mapping-note">Columns were matched automatically. Change any selection, then click <strong>${escapeHtml(actionLabel)}</strong> again.</p>
+    <p class="disc-mapping-note">Columns were matched automatically. Change any selection to re-analyze.</p>
     <div class="disc-mapping-grid">
       ${Object.entries(FIELD_LABELS).map(([field, label]) => `
         <label class="exp-control">

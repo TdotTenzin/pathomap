@@ -622,7 +622,7 @@ function renderSchema() {
     .join(' · ');
   body.appendChild(metaLine);
 
-  // Links to the SQL schema, SQLite DB, and JSON Schema files
+  // Links to the SQL schema, SQLite DB, JSON Schema, and CSV template files
   const links = document.createElement('p');
   links.className = 'schema-links';
   links.append(
@@ -630,7 +630,9 @@ function renderSchema() {
     document.createTextNode(' · '),
     createLink('/data/pathomap.db', 'SQLite database'),
     document.createTextNode(' · '),
-    createLink('/data/schema/pathogens.schema.json', 'JSON schema')
+    createLink('/data/schema/pathogens.schema.json', 'JSON schema'),
+    document.createTextNode(' · '),
+    createLink('/data/upload-template.csv', 'CSV template')
   );
   body.appendChild(links);
 

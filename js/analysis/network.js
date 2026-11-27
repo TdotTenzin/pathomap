@@ -22,12 +22,13 @@ export { evidenceClassLabel };
 
 export const UNCLASSIFIED = 'Unclassified';
 
-export const NODE_TYPE_ORDER = ['pathogen', 'effector', 'host_protein'];
+export const NODE_TYPE_ORDER = ['pathogen', 'effector', 'host_protein', 'host_target'];
 
 export const NODE_TYPE_LABELS = {
     pathogen: 'Pathogen',
     effector: 'Effector',
     host_protein: 'Host protein',
+    host_target: 'Annotated target',
 };
 
 export function classifyPathogen(row = {}) {
@@ -115,13 +116,22 @@ function datasetIndexes(dataset) {
     (dataset?.host_proteins || []).forEach((row) => {
         if (row?.entity_id) hostProteinsById.set(row.entity_id, row);
     });
+    const hostTargetsByEntity = new Map();
     (dataset?.host_targets || []).forEach((row) => {
         if (row?.host_target_id !== null && row?.host_target_id !== undefined) {
             hostTargetsById.set(Number(row.host_target_id), row);
         }
+        if (row?.entity_id) hostTargetsByEntity.set(row.entity_id, row);
     });
 
-    return { pathogensById, pathogensByNumericId, effectorsById, hostProteinsById, hostTargetsById };
+    return {
+        pathogensById,
+        pathogensByNumericId,
+        effectorsById,
+        hostProteinsById,
+        hostTargetsById,
+        hostTargetsByEntity,
+    };
 }
 
 function membershipId(pathogenId, effectorId) {
@@ -148,6 +158,10 @@ function labelsForNode(node, indexes) {
     }
     if (node.type === 'pathogen' && !node.label) {
         node.label = indexes.pathogensById.get(node.id)?.name || node.id;
+    }
+    if (node.type === 'host_target' && !node.label) {
+        const row = indexes.hostTargetsByEntity.get(node.id);
+        node.label = row?.resolved_name || row?.name || node.id;
     }
     return node;
 }
@@ -195,6 +209,14 @@ function buildFromAnalysis(analysis, dataset) {
         nodeById.set(node.id, node);
     });
 
+    // Curated non-protein / family / complex targets are first-class nodes.
+    (analysis.target_associations?.nodes || []).forEach((source) => {
+        if (!source.id || nodeById.has(source.id)) return;
+        const node = labelsForNode({ ...source }, indexes);
+        nodes.push(node);
+        nodeById.set(node.id, node);
+    });
+
     const interactionEdges = (analysis.network.edges || [])
         .filter((edge) => nodeById.has(edge.source) && nodeById.has(edge.target))
         .map((edge) => {
@@ -211,6 +233,20 @@ function buildFromAnalysis(analysis, dataset) {
             };
         });
 
+    (analysis.target_associations?.edges || [])
+        .filter((edge) => nodeById.has(edge.source) && nodeById.has(edge.target))
+        .forEach((edge) => {
+            interactionEdges.push({
+                ...edge,
+                kind: 'target_association',
+                type: edge.type || 'effector_targets_host_target',
+                pathogen_id: edge.pathogen_id || nodeById.get(edge.source)?.pathogen_id || null,
+                evidence_classes: edge.evidence_classes || ['annotation-derived'],
+                strongest_evidence_class: edge.strongest_evidence_class || 'annotation-derived',
+                evidence_records: edge.evidence_records || [],
+            });
+        });
+
     const membershipEdges = nodes
         .filter((node) => node.type === 'effector' && node.pathogen_id && nodeById.has(node.pathogen_id))
         .map(buildMembershipLink)
@@ -222,6 +258,7 @@ function buildFromAnalysis(analysis, dataset) {
         membershipEdges,
         source: {
             kind: 'derived',
+            annotatedTargets: analysis.target_associations || null,
             analysisVersion: analysis.meta?.analysis_version || null,
             generatedAt: analysis.meta?.generated_at || null,
             datasetBuiltAt: analysis.meta?.source_dataset_built_at || null,
@@ -326,10 +363,114 @@ function buildFromDataset(dataset) {
         });
     });
 
+    // Annotated non-protein / family / complex targets are kept as target
+    // associations even when they have no protein-level interaction row.
+    const seenAssociations = new Set();
+    (dataset?.effectors || []).forEach((effector) => {
+        const target = indexes.hostTargetsById.get(Number(effector?.host_target_id));
+        if (!target?.entity_id || target.resolution_status === 'resolved_protein') return;
+        const pairKey = `${effector.entity_id}|${target.entity_id}`;
+        if (seenAssociations.has(pairKey)) return;
+        seenAssociations.add(pairKey);
+
+        const pathRow =
+            indexes.pathogensByNumericId.get(Number(effector.pathogen_id)) ||
+            (dataset.pathogens || []).find((candidate) => candidate.name === effector.pathogen_name);
+        if (pathRow?.entity_id) {
+            addNode({
+                id: pathRow.entity_id,
+                type: 'pathogen',
+                label: pathRow.name,
+                tax_id: pathRow.tax_id,
+                classification: classifyPathogen(pathRow),
+            });
+        }
+        addNode({
+            id: effector.entity_id,
+            type: 'effector',
+            label: effector.effector_name,
+            pathogen_id: pathRow?.entity_id || null,
+            host_target_id: effector.host_target_id,
+        });
+        addNode({
+            id: target.entity_id,
+            type: 'host_target',
+            label: target.resolved_name || target.name,
+            target_name: target.name,
+            resolved_name: target.resolved_name,
+            host_target_class: target.host_target_class,
+            resolution_status: target.resolution_status,
+            audit_status: target.audit_status,
+            aliases: target.aliases || [],
+            members: target.members || [],
+            evidence_sources: target.evidence_sources || [],
+            audit_notes: target.audit_notes,
+        });
+
+        interactionEdges.push({
+            id: `TGT:${effector.entity_id}:${target.entity_id}`,
+            source: effector.entity_id,
+            target: target.entity_id,
+            type: 'effector_targets_host_target',
+            kind: 'target_association',
+            mechanism: null,
+            pathogen_id: pathRow?.entity_id || null,
+            pathogen_name: pathRow?.name || effector.pathogen_name || null,
+            provenance: 'curated_target_annotation',
+            resolution_status: target.resolution_status,
+            evidence_count: 0,
+            evidence_classes: ['annotation-derived'],
+            strongest_evidence_class: 'annotation-derived',
+            evidence_records: [],
+        });
+    });
+
     const membershipEdges = nodes
         .filter((node) => node.type === 'effector' && node.pathogen_id && nodeById.has(node.pathogen_id))
         .map(buildMembershipLink)
         .filter(Boolean);
+
+    const targetNodes = nodes.filter((node) => node.type === 'host_target');
+    const targetEdges = interactionEdges.filter((edge) => edge.kind === 'target_association');
+    let annotatedTargets = null;
+    if (targetNodes.length) {
+        const byStatus = {};
+        const effectorIds = new Set();
+        const targets = targetNodes.map((node) => {
+            const edges = targetEdges.filter((edge) => edge.target === node.id);
+            const ids = edges.map((edge) => edge.source).sort();
+            ids.forEach((id) => effectorIds.add(id));
+            const bucket = byStatus[node.resolution_status] || { target_count: 0, effector_count: 0 };
+            bucket.target_count += 1;
+            bucket.effector_count += ids.length;
+            byStatus[node.resolution_status] = bucket;
+            return {
+                host_target_id: node.id,
+                target_name: node.target_name,
+                resolved_name: node.resolved_name,
+                host_target_class: node.host_target_class,
+                resolution_status: node.resolution_status,
+                audit_status: node.audit_status,
+                aliases: node.aliases || [],
+                members: node.members || [],
+                evidence_sources: node.evidence_sources || [],
+                audit_notes: node.audit_notes,
+                effector_ids: ids,
+                effector_names: ids.map((id) => nodeById.get(id)?.label).filter(Boolean).sort(),
+                pathogen_ids: [...new Set(edges.map((edge) => edge.pathogen_id).filter(Boolean))].sort(),
+                effector_count: ids.length,
+            };
+        });
+        annotatedTargets = {
+            target_count: targets.length,
+            effector_count: effectorIds.size,
+            association_count: targetEdges.length,
+            by_resolution_status: Object.fromEntries(Object.entries(byStatus).sort(([a], [b]) => a.localeCompare(b))),
+            targets,
+            nodes: targetNodes,
+            edges: targetEdges,
+        };
+    }
 
     return {
         nodes: sortNodes(nodes),
@@ -344,6 +485,7 @@ function buildFromDataset(dataset) {
             verified: false,
             statistics: null,
             validation: null,
+            annotatedTargets,
             unresolvedTargets: null,
         },
     };
@@ -420,6 +562,10 @@ function searchTextForEdge(edge, sourceNode, targetNode, pathogenNode) {
         targetNode?.label,
         targetNode?.gene_name,
         targetNode?.uniprot_id,
+        targetNode?.target_name,
+        targetNode?.resolved_name,
+        targetNode?.resolution_status,
+        ...(targetNode?.aliases || []),
         targetNode?.id,
         pathogenNode?.label,
         pathogenNode?.id,
@@ -490,8 +636,10 @@ export function filterNetwork(model, filters = {}) {
         interactionCount: interactionEdges.length,
         counts: {
             interactions: interactionEdges.length,
+            targetAssociations: interactionEdges.filter((edge) => edge.kind === 'target_association').length,
             effectors: usedEffectors.size,
-            hostProteins: usedHosts.size,
+            hostProteins: nodes.filter((node) => usedHosts.has(node.id) && node.type === 'host_protein').length,
+            annotatedTargets: nodes.filter((node) => usedHosts.has(node.id) && node.type === 'host_target').length,
             pathogens: usedPathogens.size,
             nodes: nodes.length,
         },
@@ -703,6 +851,47 @@ export function buildNodeDetail(dataset, model, nodeId) {
         }
     }
 
+    if (node.type === 'host_target') {
+        const row = indexes.hostTargetsByEntity.get(node.id) || {};
+        const targetName = node.target_name || row.name;
+        const resolvedName = node.resolved_name || row.resolved_name;
+        const aliases = node.aliases || row.aliases || [];
+        const members = node.members || row.members || [];
+        const sources = node.evidence_sources || row.evidence_sources || [];
+        const notes = node.audit_notes || row.audit_notes;
+        base.subtitle = resolvedName || null;
+        base.fields = compactFields([
+            buildField('Original target', targetName),
+            buildField('Original class', node.host_target_class || row.host_target_class),
+            buildField('Resolution', node.resolution_status || row.resolution_status),
+            buildField('Audit status', node.audit_status || row.audit_status),
+            buildField('Linked effectors', incidentEdges.length),
+        ]);
+        if (notes) base.paragraphs.push({ label: 'Audit note', text: notes });
+        if (aliases.length) {
+            base.lists.push({ label: 'Aliases', items: aliases.map((text) => ({ text })) });
+        }
+        if (members.length) {
+            base.lists.push({
+                label: 'Protein members',
+                items: members.map((member) => ({
+                    text: [member.name, member.gene_symbol, member.uniprot_id].filter(Boolean).join(' · '),
+                })),
+            });
+            members
+                .filter((member) => member.uniprot_id)
+                .forEach((member) => {
+                    base.externalLinks.push({
+                        label: `UniProt ${member.uniprot_id}`,
+                        href: `https://www.uniprot.org/uniprotkb/${encodeURIComponent(member.uniprot_id)}/entry`,
+                    });
+                });
+        }
+        if (sources.length) {
+            base.lists.push({ label: 'Evidence sources', items: sources.map((text) => ({ text })) });
+        }
+    }
+
     if (node.type === 'host_protein') {
         const row = indexes.hostProteinsById.get(node.id) || {};
         base.subtitle = row.gene_name || null;
@@ -747,6 +936,7 @@ export function buildEdgeDetail(dataset, model, edgeId) {
     const pathogenNode = nodeById.get(edge.pathogen_id);
     const indexes = datasetIndexes(dataset);
     const hostRow = indexes.hostProteinsById.get(edge.target) || {};
+    const isAssociation = edge.kind === 'target_association';
 
     return {
         kind: 'edge',
@@ -754,19 +944,21 @@ export function buildEdgeDetail(dataset, model, edgeId) {
         title: `${sourceNode?.label || edge.source} -> ${targetNode?.gene_name || targetNode?.label || edge.target}`,
         subtitle: pathogenNode?.label || edge.pathogen_name || null,
         fields: compactFields([
-            buildField('Interaction ID', edge.id),
+            buildField(isAssociation ? 'Association ID' : 'Interaction ID', edge.id),
             buildField('Relationship', edge.type),
             buildField('Mechanism', edge.mechanism),
             buildField('Pathogen', pathogenNode?.label || edge.pathogen_name),
             buildField('Effector', sourceNode?.label),
-            buildField('Host protein', targetNode?.label),
-            buildField('Host gene', hostRow.gene_name),
-            buildField('Host UniProt', hostRow.uniprot_id),
+            buildField(isAssociation ? 'Annotated target' : 'Host protein', targetNode?.label),
+            buildField(isAssociation ? 'Target resolution' : 'Host gene', isAssociation ? edge.resolution_status || targetNode?.resolution_status : hostRow.gene_name),
+            buildField('Host UniProt', isAssociation ? null : hostRow.uniprot_id),
             buildField('Evidence classes', (edge.evidence_classes || []).map((value) => EVIDENCE_CLASS_LABELS[value] || value)),
             buildField('Evidence count', edge.evidence_count),
             buildField('Provenance', edge.provenance),
         ]),
-        paragraphs: [],
+        paragraphs: isAssociation && targetNode?.audit_notes
+            ? [{ label: 'Curation note', text: targetNode.audit_notes }]
+            : [],
         lists: [],
         related: [pathogenNode, sourceNode, targetNode]
             .filter(Boolean)

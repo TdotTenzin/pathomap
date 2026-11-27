@@ -61,6 +61,17 @@ export const STRATEGY_VALUES = [
   'unknown',
 ];
 
+// Stable integer codes for strategy labels used by downstream integrations.
+// Append new values; never renumber existing ones.
+export const STRATEGY_CODES = {
+  arrest: 1,
+  escape: 2,
+  reroute: 3,
+  modified_compartment: 4,
+  extracellular: 5,
+  unknown: 0,
+};
+
 // Valid values for genome assembly completeness levels
 export const ASSEMBLY_LEVEL_VALUES = [
   'Complete Genome',
@@ -387,6 +398,27 @@ export const EFFECTOR_COLUMNS_META = [
     source: 'PathoMap curation',
   },
   {
+    key: 'phenotype',
+    label: 'Phenotype',
+    type: 'string, nullable',
+    description: 'Phenotype / survival-strategy label. Direct labels are preserved; otherwise inherited from the producing pathogen strategy on load.',
+    source: 'PathoMap curation / pathogens.strategy',
+  },
+  {
+    key: 'phenotype_source',
+    label: 'Phenotype Source',
+    type: 'string, nullable',
+    description: 'Provenance of the phenotype label: direct or pathogen.strategy.',
+    source: 'Derived on load',
+  },
+  {
+    key: 'phenotype_code',
+    label: 'Phenotype Code',
+    type: 'integer, nullable',
+    description: 'Stable integer code for strategy phenotype labels (see STRATEGY_CODES); null for other direct labels.',
+    source: 'Derived from STRATEGY_CODES',
+  },
+  {
     key: 'uniprot_id',
     label: 'UniProt ID',
     type: 'string, nullable',
@@ -399,6 +431,34 @@ export const EFFECTOR_COLUMNS_META = [
     type: 'string, nullable',
     description: 'Amino acid sequence of the effector.',
     source: 'UniProt API',
+  },
+  {
+    key: 'sequence_length',
+    label: 'Length (aa)',
+    type: 'integer, nullable',
+    description: 'Number of amino acids in the effector sequence.',
+    source: 'Calculated from sequence on load',
+  },
+  {
+    key: 'molecular_weight_da',
+    label: 'MW (Da)',
+    type: 'number, nullable',
+    description: 'Molecular weight in Daltons.',
+    source: 'Calculated from sequence on load',
+  },
+  {
+    key: 'isoelectric_point',
+    label: 'pI',
+    type: 'number, nullable',
+    description: 'Isoelectric point (pI) of the effector.',
+    source: 'Calculated from sequence on load',
+  },
+  {
+    key: 'gravy_score',
+    label: 'GRAVY',
+    type: 'number, nullable',
+    description: 'Grand average of hydropathy (indicates hydrophobicity).',
+    source: 'Calculated from sequence on load',
   },
   {
     key: 'domains',

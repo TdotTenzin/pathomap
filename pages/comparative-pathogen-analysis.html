@@ -34,14 +34,13 @@
       <a class="nav-brand" href="index.html">PathoMap</a>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Workspace</a></li>
-        <li class="nav-module"><a href="interaction-analysis.html">Interactions</a></li>
-        <li class="nav-module"><a href="sequence-analysis.html">Sequences</a></li>
-        <li class="nav-module"><a href="pathway-analysis.html">Pathways</a></li>
-        <li class="nav-module"><a href="functional-enrichment.html">Enrichment</a></li>
-        <li class="nav-module"><a href="protein-network-analysis.html">Protein network</a></li>
-        <li class="nav-module"><a href="comparative-pathogen-analysis.html" aria-current="page">Comparative</a></li>
-        <li class="nav-module"><a href="host-response-analysis.html">Host response</a></li>
-        <li class="nav-module"><a href="predictive-readiness.html">Readiness</a></li>
+        <li class="nav-module"><a href="interaction-analysis.html" title="Explore host-pathogen interaction networks and evidence classes">Interactions</a></li>
+        <li class="nav-module"><a href="sequence-analysis.html" title="Analyze effector sequence properties and distributions">Sequences</a></li>
+        <li class="nav-module"><a href="pathway-analysis.html" title="Map host proteins to biological pathways">Pathways</a></li>
+        <li class="nav-module"><a href="functional-enrichment.html" title="Test if host proteins are enriched for biological functions">Enrichment</a></li>
+        <li class="nav-module"><a href="protein-network-analysis.html" title="Analyze protein interaction network structure and centrality">Protein network</a></li>
+        <li class="nav-module"><a href="comparative-pathogen-analysis.html" aria-current="page" title="Compare pathogens by effector repertoire similarity">Comparative</a></li>
+        <li class="nav-module"><a href="host-response-analysis.html" title="Explore host cellular processes targeted by pathogens">Host response</a></li>
       </ul>
       <button class="dark-toggle" id="dark-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9790;</button>
     </div>
@@ -90,7 +89,7 @@
                 class="tool-input"
                 id="cpa-search"
                 type="search"
-                placeholder="Search pathogen"
+                placeholder="Search pathogen" title="Search by bacterial pathogen species name"
                 autocomplete="off"
               >
             </label>
@@ -123,16 +122,6 @@
               <div class="cpa-tables-content" id="cpa-tables-content"></div>
             </div>
           </div>
-        </div>
-
-        <div class="cpa-components">
-          <h3>Reading this analysis</h3>
-          <ul class="cpa-component-list">
-            <li><strong>Similarity</strong> &mdash; does not establish shared evolutionary origin or common mechanism.</li>
-            <li><strong>Unequal annotation coverage</strong> &mdash; and missing data affect every similarity value.</li>
-            <li><strong>Target similarity</strong> &mdash; uses uploaded interactions only.</li>
-            <li><strong>Descriptive clusters</strong> &mdash; group pathogens by effector repertoire similarity.</li>
-          </ul>
         </div>
 
       </div>

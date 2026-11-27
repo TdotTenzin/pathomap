@@ -166,16 +166,27 @@ Primary key `entity_id`. The natural uniqueness rule remains
 | `host_target_class` | string or null | Target classification (protein, organelle, pathway, ...). |
 | `type`, `type_class` | string | Secretion type (T3SS/T4SS/T6SS, toxin, ...) and its classification. |
 | `mechanism`, `mechanism_class` | string | Host-cell manipulation mechanism and its classification. |
+| `phenotype` | string or null | Phenotype / survival-strategy label; direct value or inherited from `pathogens.strategy` on load. |
+| `phenotype_source` | string or null | `direct` or `pathogen.strategy`, recording where the label came from. |
+| `phenotype_code` | integer or null | Stable integer code for strategy labels (`STRATEGY_CODES`); null for other direct labels. |
 | `uniprot_id` | string or null | UniProt accession (curated or search fallback). |
 | `sequence` | string or null | Amino-acid sequence. |
+| `sequence_length` | integer or null | Length in amino acids; derived from `sequence` on load when absent. |
+| `molecular_weight_da`, `isoelectric_point`, `gravy_score` | number or null | Calculated properties; derived from `sequence` on load when absent. |
 | `domains` | array | UniProt/InterPro/Pfam domain annotations. |
 | `go_terms` | array | UniProt GO annotations. |
 | `signal_peptide` | object or null | `{start, end}` annotation. |
 | `transmembrane_regions` | array | `[{start, end}, ...]` annotations. |
 | `reference_ids` | array | `PM-REF` citations supporting the row. |
 
-Sequence-derived metrics are published in `data/derived/effector_features.json`; the web app does
-not merge them into curated effector rows.
+Sequence-derived metrics are also published in `data/derived/effector_features.json`. The web app
+recomputes missing numeric descriptors in memory from `sequence` and never writes them back into
+the curated dataset.
+
+Effectors without an explicit phenotype inherit a non-`unknown` `pathogens.strategy` label during
+normalization. The inherited label is a pathogen-level attribute, so effectors from the same
+pathogen are not independent samples; any later predictive work must use leakage-aware group
+splits. Integer codes are a separate field (`phenotype_code`) and never replace the readable label.
 
 ## Host proteins schema
 
@@ -252,15 +263,19 @@ Run `python scripts/analyze_interactions.py` to write
 - `validation` — raw/retained/discarded counts plus coded interaction, evidence
   and result issues; one edge is retained per effector-to-host pair.
 - `statistics` — interactions; unique effectors, host proteins, curated host
-  targets and pathogens; multi-pathogen host count; unresolved target/effector
-  counts; evidence count, coverage, mean/median per interaction, classes and
-  citation availability; interactions and effectors per pathogen.
+  targets and pathogens; multi-pathogen host count; annotated target/effector
+  and association counts; unresolved target/effector counts; evidence count,
+  coverage, mean/median per interaction, classes and citation availability;
+  interactions and effectors per pathogen.
 - `host_proteins_targeted_by_multiple_pathogens` — pathogen IDs/names,
   effector IDs and interaction counts per host protein.
-- `unresolved_targets` — targets excluded from the network, grouped by
+- `target_associations` — curated non-protein, family, complex and ambiguous
+  targets with their aliases, members, audit notes, effectors and annotation-derived
+  edges, grouped by `resolution_status`.
+- `unresolved_targets` — targets with no audit resolution decision, grouped by
   `resolution_status`, with their effectors and reasons.
-- `network` — sorted pathogen, effector and host-protein nodes plus edges with
-  predicate, mechanism, provenance, evidence classes and citations.
+- `network` — sorted pathogen, effector, host-protein and annotated-target nodes
+  plus edges with predicate, mechanism, provenance, evidence classes and citations.
 
 `--check` performs the same work without replacing the output file;
 `--strict` exits non-zero on any validation or result issue.

@@ -37,14 +37,13 @@
       <a class="nav-brand" href="index.html">PathoMap</a>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Workspace</a></li>
-        <li class="nav-module"><a href="interaction-analysis.html" aria-current="page">Interactions</a></li>
-        <li class="nav-module"><a href="sequence-analysis.html">Sequences</a></li>
-        <li class="nav-module"><a href="pathway-analysis.html">Pathways</a></li>
-        <li class="nav-module"><a href="functional-enrichment.html">Enrichment</a></li>
-        <li class="nav-module"><a href="protein-network-analysis.html">Protein network</a></li>
-        <li class="nav-module"><a href="comparative-pathogen-analysis.html">Comparative</a></li>
-        <li class="nav-module"><a href="host-response-analysis.html">Host response</a></li>
-        <li class="nav-module"><a href="predictive-readiness.html">Readiness</a></li>
+        <li class="nav-module"><a href="interaction-analysis.html" aria-current="page" title="Explore host-pathogen interaction networks and evidence classes">Interactions</a></li>
+        <li class="nav-module"><a href="sequence-analysis.html" title="Analyze effector sequence properties and distributions">Sequences</a></li>
+        <li class="nav-module"><a href="pathway-analysis.html" title="Map host proteins to biological pathways">Pathways</a></li>
+        <li class="nav-module"><a href="functional-enrichment.html" title="Test if host proteins are enriched for biological functions">Enrichment</a></li>
+        <li class="nav-module"><a href="protein-network-analysis.html" title="Analyze protein interaction network structure and centrality">Protein network</a></li>
+        <li class="nav-module"><a href="comparative-pathogen-analysis.html" title="Compare pathogens by effector repertoire similarity">Comparative</a></li>
+        <li class="nav-module"><a href="host-response-analysis.html" title="Explore host cellular processes targeted by pathogens">Host response</a></li>
       </ul>
       <button class="dark-toggle" id="dark-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9790;</button>
     </div>
@@ -94,7 +93,7 @@
                 class="tool-input"
                 id="ia-search"
                 type="search"
-                placeholder="Search pathogen, effector, host protein, mechanism, evidence, or DOI"
+                placeholder="Search pathogen, effector, host protein, mechanism, evidence, or DOI" title="Search by pathogen species, effector name, host protein, interaction mechanism, evidence class, or publication DOI"
                 autocomplete="off"
               >
             </label>
@@ -177,6 +176,7 @@
                   <span class="ia-legend-item"><span class="ia-legend-node ia-legend-node--pathogen"></span>Pathogen</span>
                   <span class="ia-legend-item"><span class="ia-legend-node ia-legend-node--effector"></span>Effector</span>
                   <span class="ia-legend-item"><span class="ia-legend-node ia-legend-node--host-protein"></span>Host protein</span>
+                  <span class="ia-legend-item"><span class="ia-legend-node ia-legend-node--annotated-target"></span>Annotated target</span>
                   <span class="ia-legend-item"><span class="ia-legend-shared-host"></span>Shared host target</span>
                 </div>
                 <div class="ia-legend-group">
@@ -197,15 +197,15 @@
         <details class="ia-panel ia-unresolved-panel" id="ia-unresolved">
           <summary class="ia-panel-header ia-unresolved-summary">
             <div>
-              <h3>Unresolved targets</h3>
-              <p class="ia-muted" id="ia-unresolved-note">Target exclusions appear once a dataset is loaded.</p>
+              <h3>Target resolution</h3>
+              <p class="ia-muted" id="ia-unresolved-note">Target annotations appear once a dataset is loaded.</p>
             </div>
           </summary>
           <div class="ia-unresolved-body">
             <div class="ia-unresolved-controls">
               <label class="ia-unresolved-filter">
                 <span>Search</span>
-                <input class="tool-input" type="search" id="ia-unresolved-search" placeholder="Target, effector, reason" />
+                <input class="tool-input" type="search" id="ia-unresolved-search" placeholder="Target, effector, note" title="Search unresolved targets by target name, effector name, or annotation note" />
               </label>
               <label class="ia-unresolved-filter">
                 <span>Status</span>
@@ -224,7 +224,7 @@
                     <th scope="col">Target</th>
                     <th scope="col">Status</th>
                     <th scope="col">Effectors</th>
-                    <th scope="col">Reason</th>
+                    <th scope="col">Details</th>
                   </tr>
                 </thead>
                 <tbody id="ia-unresolved-body"></tbody>
@@ -232,16 +232,6 @@
             </div>
           </div>
         </details>
-
-        <div class="ia-components">
-          <h3>Reading this network</h3>
-          <ul class="ia-component-list">
-            <li><strong>Interactions</strong> &mdash; pathogens point to their encoded effectors, then to resolved host proteins.</li>
-            <li><strong>Evidence</strong> &mdash; line style and color show the strongest evidence class recorded for each effector&ndash;host interaction.</li>
-            <li><strong>Exclusions</strong> &mdash; unresolved, family, complex, and non-protein targets are not drawn; the table below lists each excluded target and why.</li>
-            <li><strong>Exports</strong> &mdash; downloads reflect the active filters and carry source/filter provenance.</li>
-          </ul>
-        </div>
 
       </div>
     </section>

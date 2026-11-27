@@ -43,17 +43,29 @@ def base_dataset() -> dict:
             "host_target_id": 2,
             "entity_id": entity_id("host_target", 2),
             "name": "Unresolved complex",
+            "resolved_name": "Ambiguous receptor pair",
             "host_target_class": "protein_complex",
             "host_protein_id": None,
             "resolution_status": "ambiguous",
+            "audit_status": "ambiguous",
+            "aliases": [],
+            "members": [],
+            "evidence_sources": ["fixture"],
+            "audit_notes": "Two candidate receptors.",
         },
         {
             "host_target_id": 3,
             "entity_id": entity_id("host_target", 3),
             "name": "Host cells",
+            "resolved_name": "Host cell",
             "host_target_class": "cellular_structure",
             "host_protein_id": None,
             "resolution_status": "non_protein",
+            "audit_status": "non_protein",
+            "aliases": [],
+            "members": [],
+            "evidence_sources": ["fixture"],
+            "audit_notes": "Whole-cell annotation.",
         },
     ]
     effectors = [
@@ -137,8 +149,11 @@ class InteractionAnalysisTests(unittest.TestCase):
         self.assertEqual(stats["unique_host_target_count"], 1)
         self.assertEqual(stats["unique_pathogen_count"], 2)
         self.assertEqual(stats["host_proteins_targeted_by_multiple_pathogens_count"], 1)
-        self.assertEqual(stats["unresolved_target_count"], 2)
-        self.assertEqual(stats["unresolved_effector_count"], 2)
+        self.assertEqual(stats["unresolved_target_count"], 0)
+        self.assertEqual(stats["unresolved_effector_count"], 0)
+        self.assertEqual(stats["annotated_target_count"], 2)
+        self.assertEqual(stats["annotated_target_effector_count"], 2)
+        self.assertEqual(stats["target_association_count"], 2)
         self.assertEqual(stats["evidence_count"], 2)
         self.assertEqual(stats["interactions_with_evidence_count"], 2)
         self.assertEqual(stats["evidence_coverage"], 1.0)
@@ -152,6 +167,7 @@ class InteractionAnalysisTests(unittest.TestCase):
         self.assertEqual(len(host["effector_ids"]), 2)
 
         self.assertEqual(len(result["network"]["nodes"]), 5)
+        self.assertEqual(len(result["target_associations"]["nodes"]), 2)
         pathogen_nodes = [node for node in result["network"]["nodes"] if node["type"] == "pathogen"]
         self.assertTrue(all(node["classification"] == "Unclassified" for node in pathogen_nodes))
         self.assertEqual(len(result["network"]["edges"]), 2)
@@ -161,10 +177,22 @@ class InteractionAnalysisTests(unittest.TestCase):
         self.assertEqual(edge["evidence_records"][0]["doi"], "10.1000/example")
 
         unresolved = result["unresolved_targets"]
-        self.assertEqual(unresolved["target_count"], 2)
-        self.assertEqual(unresolved["effector_count"], 2)
-        self.assertEqual(unresolved["by_resolution_status"]["ambiguous"]["effector_count"], 1)
-        self.assertEqual(unresolved["by_resolution_status"]["non_protein"]["effector_count"], 1)
+        self.assertEqual(unresolved["target_count"], 0)
+        self.assertEqual(unresolved["effector_count"], 0)
+
+        associations = result["target_associations"]
+        self.assertEqual(associations["target_count"], 2)
+        self.assertEqual(associations["effector_count"], 2)
+        self.assertEqual(associations["association_count"], 2)
+        self.assertEqual(associations["by_resolution_status"]["ambiguous"]["effector_count"], 1)
+        self.assertEqual(associations["by_resolution_status"]["non_protein"]["effector_count"], 1)
+        self.assertTrue(
+            all(edge["strongest_evidence_class"] == "annotation-derived" for edge in associations["edges"])
+        )
+        self.assertEqual(
+            {node["id"] for node in associations["nodes"]},
+            {entity_id("host_target", 2), entity_id("host_target", 3)},
+        )
 
     def test_invalid_and_duplicate_interactions(self):
         dataset = base_dataset()
@@ -293,7 +321,7 @@ class InteractionAnalysisTests(unittest.TestCase):
 
             self.assertEqual(run_cli(["--dataset", str(source), "--output", str(output)]), 0)
             self.assertTrue(output.exists())
-            self.assertEqual(json.loads(output.read_text(encoding="utf-8"))["schema_version"], "1.2")
+            self.assertEqual(json.loads(output.read_text(encoding="utf-8"))["schema_version"], "1.3")
 
             invalid = copy.deepcopy(dataset)
             invalid["interactions"].append({
@@ -324,8 +352,12 @@ class InteractionAnalysisTests(unittest.TestCase):
         self.assertIn("edge_source_mismatch", issues)
 
         mutated = copy.deepcopy(result)
-        mutated["statistics"]["unresolved_target_count"] = 0
-        self.assertIn("unresolved_target_count_mismatch", codes(validate_result(mutated, dataset)))
+        mutated["statistics"]["annotated_target_count"] = 0
+        self.assertIn("annotated_target_count_mismatch", codes(validate_result(mutated, dataset)))
+
+        mutated = copy.deepcopy(result)
+        mutated["statistics"]["target_association_count"] = 0
+        self.assertIn("target_association_count_mismatch", codes(validate_result(mutated, dataset)))
 
     def test_pathogen_classification_is_recorded_in_artifact(self):
         dataset = base_dataset()

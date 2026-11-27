@@ -26,10 +26,13 @@ pages/interaction-analysis.html -> js/pages/interaction-analysis.js
     -> js/views/interaction-network.js
 ```
 
-The web app never computes curated data. It loads a validated JSON envelope plus the generated
-analysis artifact and renders them directly. The Discovery workspace computes explicit, labelled
-descriptors, network structure, and descriptive statistics from user-pasted rows; those results
-are never written back into the curated dataset.
+The web app never rewrites curated data. It loads a validated JSON envelope plus the generated
+analysis artifact and renders them directly. Effector sequence descriptors missing from the
+envelope are recomputed in memory from `sequence` during normalization, and unlabelled effectors
+inherit a traceable `pathogens.strategy` phenotype; neither derived value is written back into the
+curated dataset. The Discovery workspace computes explicit, labelled descriptors, network
+structure, and descriptive statistics from user-pasted rows; those results are never written back
+into the curated dataset either.
 
 ## Repository layout
 
@@ -146,8 +149,8 @@ Transparency stays in the footer; every page shares the same module nav.
 
 | Page | Purpose | Contents |
 |---|---|---|
-| Workspace | Load data and preview every module together | Upload/paste, dataset loaders, summary cards with module-page links, inline data table, export |
-| Module pages | Run and inspect one module | `interaction-analysis.html`, `sequence-analysis.html`, `pathway-analysis.html`, `functional-enrichment.html`, `protein-network-analysis.html`, `comparative-pathogen-analysis.html`, `host-response-analysis.html`, `predictive-readiness.html` |
+| Workspace | Load data and preview every module together | Upload/paste, dataset loaders, summary cards with module-page links, inline readiness assessment with filters and export, inline data table, export |
+| Module pages | Run and inspect one module | `interaction-analysis.html`, `sequence-analysis.html`, `pathway-analysis.html`, `functional-enrichment.html`, `protein-network-analysis.html`, `comparative-pathogen-analysis.html`, `host-response-analysis.html` |
 | Transparency | Interpretation and limitations | Footer-linked `pages/transparency.html` |
 
 **Rules**

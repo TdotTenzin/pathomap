@@ -75,9 +75,11 @@ plain-language aliases, and builds an in-memory dataset. `engine.js` calls each 
 | `js/ui/discovery.js` | Workspace rendering, interactive network, report export |
 
 `js/experiment/features.js` mirrors `scripts/build_effectors_host_proteins.py` and is reused by
-the sequence module. Predictive Modelling (§8) is deliberately gated to a readiness checklist:
-the site does not train models or report accuracy. Upload-derived results are always labelled as
-computed or predicted and never presented as curated ground truth.
+the sequence module. Curated effectors inherit a traceable `pathogens.strategy` phenotype in memory
+(with a separate stable integer code), so the checklist can reach 4/4 without implying that
+pathogen-mates are independent labels. Predictive Modelling (§8) is deliberately gated to a
+readiness checklist: the site does not train models or report accuracy. Upload-derived results are
+always labelled as computed or predicted and never presented as curated ground truth.
 
 ## Module states
 
@@ -150,12 +152,13 @@ evidence and citations.
 evidence classification and scoring; bipartite graph construction; relationship deduplication.
 
 **Outputs:** candidate relationships; unique effectors and host proteins; evidence breakdown;
-unresolved targets; source and rationale per edge.
+annotated target associations; unresolved targets; source and rationale per edge.
 
 **Guardrail:** broad target annotations and host-host network data cannot be promoted to confirmed
-effector-host interactions.
+effector-host interactions. Non-protein, family, complex and ambiguous targets are retained as
+annotation-derived target associations, never as protein interactions.
 
-**Python implementation:** `scripts/analyze_interactions.py` (analysis version 1.2) writes
+**Python implementation:** `scripts/analyze_interactions.py` (analysis version 1.3) writes
 `data/derived/interaction_analysis.json` without modifying curated tables.
 
 - **Eligibility:** requires `pathogens`, `effectors`, `host_proteins`, `host_targets`,
@@ -170,6 +173,7 @@ effector-host interactions.
 - **Outputs:** provenance metadata (dataset schema/build time/SHA-256, analysis parameters),
   validation summary, unique effector/host-protein/host-target/pathogen statistics,
   interaction and evidence statistics, host proteins targeted by multiple pathogens,
+  `target_associations` for curated non-protein/family/complex/ambiguous targets,
   unresolved targets grouped by `resolution_status`, and sorted network nodes/edges. Edges
   carry relationship predicate, mechanism, provenance, evidence classes and citations.
 - **CLI:** `--check` validates without writing, `--dataset`/`--output` override paths, and
@@ -184,10 +188,11 @@ interaction count match the loaded dataset. Sample or uploaded datasets fall bac
 display-only graph built from `interactions` and `interaction_evidence`; the page labels this
 difference honestly.
 
-- **View:** layered pathogen → effector → host-protein SVG layout with display-only
-  pathogen-encodes-effector membership links. Effector-host edges use the strongest evidence
-  class for line style and colour (experimental solid, predicted dashed, annotation-derived
-  dotted, hypothetical dash-dot).
+- **View:** layered pathogen → effector → host-protein/annotated-target SVG layout with display-only
+  pathogen-encodes-effector membership links. Annotated targets are dashed amber nodes joined by
+  dotted annotation-derived links. Effector-host edges use the strongest evidence class for line
+  style and colour (experimental solid, predicted dashed, annotation-derived dotted, hypothetical
+  dash-dot).
 - **Filters:** text search, pathogen, host protein, evidence class, interaction type, and
   pathogen classification. Orphan effectors, pathogens and host proteins are pruned after
   filtering.
@@ -201,9 +206,9 @@ difference honestly.
 - **Tests:** `node --test tests/network_model.test.mjs` covers derived/fallback selection,
   source-hash verification, evidence identity, membership links, combined filters, detail joins,
   CSV escaping and the physics layout invariants.
-- **Unresolved targets:** derived runs also expose a searchable target-exclusion table and CSV
-  export with resolution status, effector IDs/names and exclusion reasons. The JSON export embeds
-  the full unresolved-target report.
+- **Target resolution:** derived runs expose a searchable table of annotated target links and any
+  remaining unresolved rows, with resolution status, effector IDs/names and audit notes. CSV/JSON
+  exports embed both the annotated-target and unresolved-target reports.
 - **Provenance:** the derived artifact now stores pathogen classification. Older artifacts still
   fall back to the documented client-side heuristic, which is labelled in export provenance.
 - **Performance:** search text is precomputed once per edge and repeated renders with unchanged
@@ -213,8 +218,9 @@ difference honestly.
 
 - The derived artifact is used only when dataset build time, schema version, raw interaction count
   and source SHA-256 all match. Uploaded datasets without a hash always use the display-only
-  fallback; that path has no validation issues, unresolved-target report or deduplicated evidence
-  identity beyond the browser model.
+  fallback; that path has no validation issues, derived target-association report or deduplicated
+  evidence identity beyond the browser model, but curated target links are still rebuilt from
+  dataset annotations.
 - The force-directed layout is exploratory only: node distances and positions are not a measure of
   interaction strength or spatial biology. Membership edges (pathogen encodes effector) are dotted
   and arrowed; interaction edges keep their evidence colouring. Shared host rings are derived only
@@ -224,8 +230,9 @@ difference honestly.
 - Pathogen classification is a heuristic when `gram_stain` is absent; it must not be treated as
   taxonomy evidence.
 
-> Sections 1–7 are implemented in the Discovery workspace. Section 8 is a data-readiness
-> assessment only; no model is trained and no performance metric is reported.
+> Sections 1–8 are implemented in the Discovery workspace. Section 8 is a data-readiness
+> assessment shown inline below the module summaries; no model is trained and no performance
+> metric is reported.
 
 ## 2. Effector Sequence Analysis
 
