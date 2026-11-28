@@ -10,12 +10,17 @@ import {
     getFilterOptions,
 } from '../js/analysis/network.js';
 import { toCsv } from '../js/utils/export.js';
-import { createNetworkLayout } from '../js/views/network-physics.js';
+import { createNetworkLayout, networkForceProfile } from '../js/views/network-physics.js';
 import {
+    createSpatialIndex,
     edgeCurvature,
     edgePath,
     fitTransform,
+    graphWorldSize,
+    MIN_ZOOM,
+    networkZoomRange,
     seedOrganicPositions,
+    selectVisibleLabels,
     sharedHostPathogens,
 } from '../js/views/network-layout.js';
 
@@ -273,7 +278,10 @@ test('physics layout separates overlapping nodes without fixed lanes', () => {
     });
 
     layout.reheat(1);
-    for (let index = 0; index < 120; index += 1) layout.tick();
+    layout.tick();
+    const afterOneTick = Math.hypot(layout.bodies[1].x - layout.bodies[0].x, layout.bodies[1].y - layout.bodies[0].y);
+    assert.ok(afterOneTick < 12, `separation is gradual, not a teleport (${afterOneTick})`);
+    for (let index = 0; index < 119; index += 1) layout.tick();
 
     const [first, second] = layout.bodies;
     assert.ok(Math.hypot(second.x - first.x, second.y - first.y) >= 27.5);
@@ -404,4 +412,185 @@ test('edge paths curve deterministically and fit transform centres the graph', (
     );
     assert.ok(transform.zoom > 0 && transform.zoom <= 1.8);
     assert.ok(Number.isFinite(transform.x) && Number.isFinite(transform.y));
+});
+
+test('spatial index finds neighbours from grid cells without scanning all bodies', () => {
+    const index = createSpatialIndex(50);
+    index.rebuild([
+        { id: 'a', x: 10, y: 10 },
+        { id: 'b', x: 90, y: 10 },
+        { id: 'c', x: 400, y: 400 },
+    ]);
+    const found = [];
+    index.forEachNear(10, 10, 100, 100, (item) => found.push(item.id));
+    assert.deepEqual(new Set(found), new Set(['a', 'b']));
+});
+
+test('prioritised labels use measured rectangles and skip overlaps', () => {
+    const visible = selectVisibleLabels(
+        [
+            {
+                id: 'selected',
+                priority: 200,
+                rect: { x: 10, y: 10, width: 80, height: 12 },
+            },
+            {
+                id: 'overlapping',
+                priority: 100,
+                rect: { x: 20, y: 12, width: 70, height: 12 },
+            },
+            {
+                id: 'clear',
+                priority: 50,
+                rect: { x: 200, y: 10, width: 40, height: 12 },
+            },
+        ],
+        { width: 400, height: 100 },
+        { margin: 2 }
+    );
+    assert.deepEqual([...visible], ['selected', 'clear']);
+});
+
+test('fit transform scales large graphs below the old minimum zoom', () => {
+    const world = graphWorldSize(427, 900, 590);
+    const bodies = [
+        { x: 100, y: 100, radius: 13, labelHalfWidth: 60, labelHalfHeight: 13 },
+        { x: world.width - 100, y: world.height - 100, radius: 13, labelHalfWidth: 60, labelHalfHeight: 13 },
+    ];
+    const transform = fitTransform(bodies, 900, 590, 26);
+    assert.ok(transform.zoom < 0.95);
+    assert.ok(transform.zoom >= MIN_ZOOM);
+    assert.ok(Number.isFinite(transform.x) && Number.isFinite(transform.y));
+});
+
+test('zoom limits are relative to the network fit scale', () => {
+    const small = networkZoomRange(
+        [
+            { x: 0, y: 0, radius: 12 },
+            { x: 200, y: 100, radius: 12 },
+        ],
+        900,
+        590
+    );
+    const large = networkZoomRange(
+        [
+            { x: 0, y: 0, radius: 12 },
+            { x: 1900, y: 1600, radius: 12 },
+        ],
+        900,
+        590
+    );
+    assert.ok(small.fit > large.fit);
+    assert.ok(small.minZoom > large.minZoom);
+    assert.ok(small.maxZoom > large.maxZoom / 2);
+    assert.ok(large.minZoom < 0.95);
+    assert.ok(large.maxZoom <= 8);
+});
+
+test('force profile scales reach and strength with graph size and density', () => {
+    const sample = networkForceProfile({ nodeCount: 57, linkCount: 54 });
+    const curated = networkForceProfile({ nodeCount: 427, linkCount: 492 });
+
+    assert.equal(sample.nodeScale, 1);
+    assert.ok(curated.nodeScale > sample.nodeScale);
+    assert.ok(curated.repulsionStrength > sample.repulsionStrength);
+    assert.ok(curated.repulsionRange > sample.repulsionRange);
+    assert.ok(curated.linkDistanceScale > sample.linkDistanceScale);
+    assert.ok(curated.linkStrengthScale < sample.linkStrengthScale);
+    assert.ok(curated.centerStrength < sample.centerStrength);
+});
+
+test('fit transform raises zoom to keep typical neighbours readable', () => {
+    const bodies = Array.from({ length: 12 }, (_, index) => ({
+        x: 100 + (index % 4) * 10,
+        y: 100 + Math.floor(index / 4) * 10,
+        radius: 9,
+    }));
+    bodies.push({ x: 1900, y: 1600, radius: 9 });
+
+    const range = networkZoomRange(bodies, 900, 590, 26);
+    const transform = fitTransform(bodies, 900, 590, 26, { minZoom: range.minZoom });
+
+    assert.ok(transform.zoom > range.fit, `zoom ${transform.zoom} should exceed fit ${range.fit}`);
+    assert.ok(10 * transform.zoom >= 17.9, `screen spacing ${10 * transform.zoom} is too small`);
+});
+
+function syntheticNetwork(nodeCount, edgeCount) {
+    const nodes = Array.from({ length: nodeCount }, (_, index) => ({
+        id: `n${index}`,
+        type: index % 3 === 0 ? 'pathogen' : index % 3 === 1 ? 'effector' : 'host_protein',
+    }));
+    const links = [];
+    const seen = new Set();
+    for (let index = 1; index < nodeCount; index += 1) {
+        links.push({ source: `n${index - 1}`, target: `n${index}`, kind: 'interaction' });
+        seen.add(`${index - 1}-${index}`);
+    }
+    let cursor = 0;
+    while (links.length < edgeCount) {
+        const source = cursor % nodeCount;
+        const target = (cursor * 7 + 11) % nodeCount;
+        cursor += 1;
+        if (source === target) continue;
+        const key = `${Math.min(source, target)}-${Math.max(source, target)}`;
+        if (seen.has(key)) continue;
+        seen.add(key);
+        links.push({ source: `n${source}`, target: `n${target}`, kind: cursor % 2 ? 'membership' : 'interaction' });
+    }
+    const world = graphWorldSize(nodeCount, 900, 590);
+    seedOrganicPositions(nodes, world.width, world.height, links);
+    return { nodes, links, world };
+}
+
+function medianNearestGap(bodies) {
+    const gaps = bodies
+        .map((body, index) => {
+            let nearest = Infinity;
+            bodies.forEach((other, otherIndex) => {
+                if (otherIndex === index) return;
+                const gap = Math.hypot(other.x - body.x, other.y - body.y);
+                if (gap > 0 && gap < nearest) nearest = gap;
+            });
+            return nearest;
+        })
+        .filter((gap) => Number.isFinite(gap))
+        .sort((first, second) => first - second);
+    return gaps.length ? gaps[Math.floor(gaps.length / 2)] : Infinity;
+}
+
+function settledNetwork(nodeCount, edgeCount, forceProfile) {
+    const { nodes, links, world } = syntheticNetwork(nodeCount, edgeCount);
+    const layout = createNetworkLayout({
+        nodes,
+        links,
+        width: world.width,
+        height: world.height,
+        radius: 13,
+        top: 56,
+        bottom: world.height - 56,
+        forceProfile,
+    });
+    layout.reheat(0.55);
+    for (let tick = 0; tick < 120; tick += 1) layout.tick();
+    return layout;
+}
+
+function screenSpacing(layout) {
+    const range = networkZoomRange(layout.bodies, 900, 590, 26);
+    const transform = fitTransform(layout.bodies, 900, 590, 26, { minZoom: range.minZoom });
+    return medianNearestGap(layout.bodies) * transform.zoom;
+}
+
+test('curated-scale graphs keep readable spacing after settling', () => {
+    const baseline = networkForceProfile({ nodeCount: 1, linkCount: 1 });
+    const sample = settledNetwork(57, 54);
+    const curated = settledNetwork(427, 492);
+    const unscaled = settledNetwork(427, 492, baseline);
+
+    assert.ok(
+        medianNearestGap(curated.bodies) > medianNearestGap(unscaled.bodies) * 1.15,
+        'adaptive forces should separate dense-world neighbours more than fixed forces'
+    );
+    assert.ok(screenSpacing(sample) > screenSpacing(curated));
+    assert.ok(screenSpacing(curated) >= 17.9, `curated screen spacing ${screenSpacing(curated)} is too tight`);
 });

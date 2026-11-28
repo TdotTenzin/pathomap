@@ -23,6 +23,7 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import json
+import math
 import re
 import sqlite3
 import sys
@@ -578,38 +579,52 @@ PKA_SIDE_CHAINS = {
 }
 
 
+def _round_js(value: float, digits: int) -> float:
+    """Round like JavaScript Math.round, so build and in-app features agree."""
+    factor = 10 ** digits
+    return math.floor(value * factor + 0.5) / factor
+
+
 def clean_sequence(sequence: str) -> str:
-    """Strip whitespace/stop codons and uppercase an amino acid sequence."""
-    return "".join(ch for ch in sequence.upper() if ch.isalpha())
+    """Strip FASTA headers/whitespace, uppercase, and keep ASCII letters."""
+    body = "".join(
+        line.strip()
+        for line in sequence.splitlines()
+        if not line.strip().startswith(">")
+    )
+    return "".join(ch for ch in body.upper() if "A" <= ch <= "Z")
 
 
-def calculate_molecular_weight(sequence: str) -> float:
+def calculate_molecular_weight(sequence: str) -> float | None:
     """Calculate molecular weight in Daltons (sum of residues minus water)."""
     residues = [aa for aa in sequence if aa in AA_MW]
     if not residues:
-        return 0.0
-    return sum(AA_MW[aa] for aa in residues) - (len(residues) - 1) * 18.015
+        return None
+    total = 0.0
+    for aa in AA_MW:
+        total += AA_MW[aa] * sequence.count(aa)
+    return total - (len(residues) - 1) * 18.015
 
 
 def _net_charge(sequence: str, ph: float) -> float:
     """Net charge of a peptide at a given pH (Henderson-Hasselbalch)."""
     positive = 1.0 / (1.0 + 10 ** (ph - PKA_NTERM))  # N-terminus
     positive += sum(
-        1.0 / (1.0 + 10 ** (ph - PKA_SIDE_CHAINS[aa]))
-        for aa in sequence if aa in ('K', 'R', 'H')
+        sequence.count(aa) / (1.0 + 10 ** (ph - PKA_SIDE_CHAINS[aa]))
+        for aa in ('K', 'R', 'H')
     )
     negative = 1.0 / (1.0 + 10 ** (PKA_CTERM - ph))  # C-terminus
     negative += sum(
-        1.0 / (1.0 + 10 ** (PKA_SIDE_CHAINS[aa] - ph))
-        for aa in sequence if aa in ('D', 'E', 'C', 'Y')
+        sequence.count(aa) / (1.0 + 10 ** (PKA_SIDE_CHAINS[aa] - ph))
+        for aa in ('D', 'E', 'C', 'Y')
     )
     return positive - negative
 
 
-def calculate_isoelectric_point(sequence: str) -> float:
+def calculate_isoelectric_point(sequence: str) -> float | None:
     """Calculate the isoelectric point (pI) by bisection on net charge."""
-    if not sequence:
-        return 0.0
+    if not any(aa in AA_MW for aa in sequence):
+        return None
     low, high = 0.0, 14.0
     for _ in range(100):
         mid = (low + high) / 2.0
@@ -617,29 +632,32 @@ def calculate_isoelectric_point(sequence: str) -> float:
             low = mid
         else:
             high = mid
-    return round((low + high) / 2.0, 2)
+    return _round_js((low + high) / 2.0, 2)
 
 
-def calculate_gravy(sequence: str) -> float:
+def calculate_gravy(sequence: str) -> float | None:
     """Calculate grand average of hydropathy (GRAVY)."""
-    values = [AA_GRAVY[aa] for aa in sequence if aa in AA_GRAVY]
+    values = [aa for aa in sequence if aa in AA_GRAVY]
     if not values:
-        return 0.0
-    return sum(values) / len(values)
+        return None
+    total = 0.0
+    for aa in AA_GRAVY:
+        total += AA_GRAVY[aa] * sequence.count(aa)
+    return total / len(values)
 
 
 def calculate_molecular_features(sequence: str) -> dict:
     """Calculate molecular weight, pI, and GRAVY for a sequence."""
-    if not sequence:
+    if not any(aa in AA_MW for aa in sequence):
         return {
             "molecular_weight_da": None,
             "isoelectric_point": None,
             "gravy_score": None,
         }
     return {
-        "molecular_weight_da": round(calculate_molecular_weight(sequence), 2),
+        "molecular_weight_da": _round_js(calculate_molecular_weight(sequence), 2),
         "isoelectric_point": calculate_isoelectric_point(sequence),
-        "gravy_score": round(calculate_gravy(sequence), 3),
+        "gravy_score": _round_js(calculate_gravy(sequence), 3),
     }
 
 

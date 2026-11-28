@@ -11,7 +11,8 @@ import { initTheme } from '../ui/theme.js';
 import { consumeQueuedDataset, queueDatasetForModule } from '../discovery/dataset-handoff.js';
 import { runDiscovery } from '../discovery/engine.js';
 import { downloadText, timestampSlug } from '../utils/export.js';
-import { pluralize } from '../utils/format.js';
+import { renderResultDetails, renderTable } from '../ui/module-view.js';
+import { buildReport, FEATURE_TABLE_TITLE, featureMatrixCsv, filterResult, unavailableMessage } from './sequence-analysis-view.js';
 
 initTheme();
 
@@ -19,7 +20,6 @@ const state = {
     dataset: null,
     datasetOrigin: 'default',
     result: null,
-    filteredRows: [],
     filters: {
         search: '',
         pathogen: '',
@@ -37,7 +37,9 @@ const els = {
     tableStatus: document.getElementById('sa-table-status'),
     tableEmpty: document.getElementById('sa-table-empty'),
     tablesContent: document.getElementById('sa-tables-content'),
+    details: document.getElementById('sa-result-details'),
     download: document.getElementById('sa-download'),
+    downloadCsv: document.getElementById('sa-download-csv'),
 };
 
 let searchTimer = null;
@@ -89,34 +91,11 @@ function renderSourceNote() {
     els.tableSource.textContent = `${origin} · Analysis of ${count} effector(s).`;
 }
 
-function escapeHtml(text) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
-}
-
-function renderTable(table, maxRows = 100) {
-    const visible = (table.rows || []).slice(0, maxRows);
-    const header = (table.columns || []).map((column) => `<th scope="col">${escapeHtml(column.label)}</th>`).join('');
-    const body = visible.map((row) => `
-        <tr>${(table.columns || []).map((column) => `<td>${escapeHtml(row[column.key] ?? '—')}</td>`).join('')}</tr>
-    `).join('');
-    const truncated = (table.rows || []).length > visible.length
-        ? `<p class="sa-table-note">Showing first ${visible.length} of ${table.rows.length} rows.</p>`
-        : '';
-
-    return `
-        <section class="sa-table-section">
-          <h4>${escapeHtml(table.title || 'Results')}</h4>
-          <div class="sa-table-wrap">
-            <table class="sa-table">
-              <thead><tr>${header}</tr></thead>
-              <tbody>${body}</tbody>
-            </table>
-          </div>
-          ${truncated}
-        </section>
-    `;
+function renderDetails(result) {
+    if (!els.details) return;
+    const markup = renderResultDetails(result);
+    els.details.innerHTML = markup;
+    els.details.hidden = !markup;
 }
 
 function renderTables(result) {
@@ -153,7 +132,7 @@ function populateSelect(select, values, allLabel) {
 function populateFilters(result) {
     if (!result || !result.tables) return;
 
-    const featureTable = result.tables.find((t) => t.title === 'Per-effector features');
+    const featureTable = result.tables.find((t) => t.title === FEATURE_TABLE_TITLE);
     if (!featureTable) return;
 
     const pathogens = [...new Set(featureTable.rows.map((row) => row.pathogen).filter(Boolean))].sort();
@@ -164,38 +143,14 @@ function populateFilters(result) {
 }
 
 function applyFilters() {
-    if (!state.result || !state.result.tables) return;
+    if (!state.result || state.result.status !== 'complete' || !state.result.tables) return;
 
-    const featureTable = state.result.tables.find((t) => t.title === 'Per-effector features');
-    if (!featureTable) return;
+    const filtered = filterResult(state.result, state.filters);
+    renderTables(filtered);
 
-    const query = state.filters.search.trim().toLowerCase();
-    const filtered = featureTable.rows.filter((row) => {
-        const matchesSearch = !query || (
-            row.effector?.toLowerCase().includes(query) ||
-            row.pathogen?.toLowerCase().includes(query) ||
-            row.phenotype?.toLowerCase().includes(query)
-        );
-        const matchesPathogen = !state.filters.pathogen || row.pathogen === state.filters.pathogen;
-        const matchesPhenotype = !state.filters.phenotype || row.phenotype === state.filters.phenotype;
-        return matchesSearch && matchesPathogen && matchesPhenotype;
-    });
-
-    const filteredTable = {
-        ...featureTable,
-        rows: filtered,
-    };
-
-    const otherTables = state.result.tables.filter((t) => t.title !== 'Per-effector features');
-    const filteredResult = {
-        ...state.result,
-        tables: [filteredTable, ...otherTables],
-    };
-
-    renderTables(filteredResult);
-
+    const featureTable = filtered.tables.find((table) => table.title === FEATURE_TABLE_TITLE);
     if (els.tableEmpty) {
-        els.tableEmpty.hidden = filtered.length > 0;
+        els.tableEmpty.hidden = !featureTable || featureTable.rows.length > 0;
     }
 }
 
@@ -237,18 +192,7 @@ function bindFilters() {
 function downloadResult() {
     if (!state.result || !state.dataset) return;
 
-    const report = {
-        meta: {
-            generated_at: new Date().toISOString(),
-            source: 'pathomap-sequence-analysis',
-            source_kind: 'dataset-handoff',
-        },
-        dataset: {
-            effectors_count: state.dataset.effectors?.length || 0,
-        },
-        result: state.result,
-    };
-
+    const report = buildReport(state.dataset, state.result, state.filters, state.datasetOrigin);
     downloadText(
         JSON.stringify(report, null, 2),
         `pathomap-sequence-analysis-${timestampSlug()}.json`,
@@ -256,16 +200,41 @@ function downloadResult() {
     );
 }
 
-function showWaitingState() {
-    renderStats(null);
-    renderSourceNote();
-    setPageStatus('No dataset on this page. Load data in the Workspace, then open this module.');
-    if (els.tableStatus) els.tableStatus.textContent = 'Waiting for data';
+function downloadFeatureMatrix() {
+    if (!state.result || !state.dataset) return;
+
+    const csv = featureMatrixCsv(state.result, state.filters, {
+        origin: state.datasetOrigin,
+        dataset: state.dataset,
+    });
+    downloadText(csv, `pathomap-sequence-features-${timestampSlug()}.csv`, 'text/csv;charset=utf-8');
+}
+
+function resetTables(message) {
+    if (els.tableStatus) els.tableStatus.textContent = message;
     if (els.tableEmpty) els.tableEmpty.hidden = false;
     els.tablesContent.innerHTML = '';
     els.download.disabled = true;
+    if (els.downloadCsv) els.downloadCsv.disabled = true;
     populateSelect(els.pathogen, [], 'All pathogens');
     populateSelect(els.phenotype, [], 'All phenotypes');
+}
+
+function showWaitingState() {
+    renderStats(null);
+    renderSourceNote();
+    renderDetails(null);
+    setPageStatus('No dataset on this page. Load data in the Workspace, then open this module.');
+    resetTables('Waiting for data');
+}
+
+function showUnavailable(result) {
+    const message = unavailableMessage(result);
+    renderStats(null);
+    renderSourceNote();
+    renderDetails(result);
+    setPageStatus(message);
+    resetTables(message);
 }
 
 function showDataset(dataset) {
@@ -275,19 +244,25 @@ function showDataset(dataset) {
     const results = runDiscovery(dataset);
     state.result = results.modules.find((module) => module.id === 'sequence-analysis') || null;
 
-    if (!state.result || state.result.status !== 'complete') {
+    if (!state.result) {
         showWaitingState();
+        return;
+    }
+    if (state.result.status !== 'complete') {
+        showUnavailable(state.result);
         return;
     }
 
     renderStats(state.result);
     renderSourceNote();
+    renderDetails(state.result);
     setPageStatus('');
     if (els.tableStatus) els.tableStatus.textContent = '';
     if (els.tableEmpty) els.tableEmpty.hidden = true;
     renderTables(state.result);
     populateFilters(state.result);
     els.download.disabled = false;
+    if (els.downloadCsv) els.downloadCsv.disabled = false;
 }
 
 // Initialize
@@ -296,6 +271,7 @@ showWaitingState();
 // Bind events
 bindFilters();
 els.download?.addEventListener('click', downloadResult);
+els.downloadCsv?.addEventListener('click', downloadFeatureMatrix);
 
 // Move the current dataset across module-page nav links, then clear it on
 // arrival. This is a one-shot handoff, not a persistent cache.

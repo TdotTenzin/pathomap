@@ -1,9 +1,9 @@
 /* Module 02 - Effector Sequence Analysis (descriptive, no prediction). */
 
-import { calculateFeatures, cleanSequence, unknownResidues } from '../../experiment/features.js';
+import { calculateFeatures, cleanSequence, STANDARD_AMINO_ACIDS, unknownResidues } from '../../experiment/features.js';
 import { eligible, groupBy, mean, requireField, round } from '../utils.js';
 
-const AMINO_ACIDS = 'ACDEFGHIKLMNPQRSTVWY';
+const AMINO_ACIDS = STANDARD_AMINO_ACIDS;
 
 function composition(sequence) {
   const seq = cleanSequence(sequence);
@@ -32,22 +32,38 @@ export default {
     const withSequence = [];
     const missing = [];
 
+    const warnings = [];
+
     effectors.forEach((effector) => {
+      const name = effector.effector_name || effector.entity_id;
+      const pathogen = effector.pathogen_name || '—';
       const seq = cleanSequence(effector.sequence);
-      if (!seq) {
-        missing.push({ effector: effector.effector_name || effector.entity_id, pathogen: effector.pathogen_name || '—' });
+      const features = calculateFeatures(seq);
+
+      if (!seq || features.molecular_weight_da === null) {
+        missing.push({
+          effector: name,
+          pathogen,
+          reason: seq ? 'No standard amino-acid residues' : 'Missing sequence',
+        });
         return;
       }
-      const features = calculateFeatures(seq);
+
+      const unknown = unknownResidues(seq);
+      if (unknown.length > 0) {
+        warnings.push(`${name}: non-standard residue(s) ${unknown.join(', ')} excluded from feature calculations.`);
+      }
+
       withSequence.push({
-        effector: effector.effector_name || effector.entity_id,
-        pathogen: effector.pathogen_name || '—',
+        entity_id: effector.entity_id || name,
+        effector: name,
+        pathogen,
         phenotype: effector.phenotype || 'Unlabelled',
         sequence_length: features.sequence_length,
         molecular_weight_da: features.molecular_weight_da,
         isoelectric_point: features.isoelectric_point,
         gravy_score: features.gravy_score,
-        unknown_residues: unknownResidues(seq).join(', ') || '—',
+        unknown_residues: unknown.join(', ') || '—',
         composition: composition(seq),
       });
     });
@@ -63,7 +79,19 @@ export default {
       mean_gravy: round(mean(rows.map((row) => row.gravy_score)), 3),
     }));
 
+    const compositionTotals = Object.fromEntries([...AMINO_ACIDS].map((aa) => [aa, 0]));
+    for (const row of withSequence) {
+      for (const aa of AMINO_ACIDS) compositionTotals[aa] += row.composition[aa];
+    }
+    const totalResidues = Object.values(compositionTotals).reduce((sum, count) => sum + count, 0);
+    const compositionRows = [...AMINO_ACIDS].map((aa) => ({
+      residue: aa,
+      count: compositionTotals[aa],
+      fraction: totalResidues ? round(compositionTotals[aa] / totalResidues, 4) : 0,
+    }));
+
     const featureRows = withSequence.map((row) => ({
+      entity_id: row.entity_id,
       effector: row.effector,
       pathogen: row.pathogen,
       phenotype: row.phenotype,
@@ -72,6 +100,7 @@ export default {
       isoelectric_point: row.isoelectric_point,
       gravy_score: row.gravy_score,
       unknown_residues: row.unknown_residues,
+      ...Object.fromEntries([...AMINO_ACIDS].map((aa) => [`aa_${aa}`, row.composition[aa]])),
     }));
 
     const longest = [...withSequence].sort((a, b) => b.sequence_length - a.sequence_length)[0];
@@ -119,10 +148,20 @@ export default {
           rows: distributionRows,
         },
         {
+          title: 'Amino acid composition',
+          columns: [
+            { key: 'residue', label: 'Residue' },
+            { key: 'count', label: 'Count' },
+            { key: 'fraction', label: 'Fraction' },
+          ],
+          rows: compositionRows,
+        },
+        {
           title: 'Missing sequences',
           columns: [
             { key: 'effector', label: 'Effector' },
             { key: 'pathogen', label: 'Pathogen' },
+            { key: 'reason', label: 'Reason' },
           ],
           rows: missing,
         },
@@ -131,7 +170,7 @@ export default {
         'Sequence-derived properties are not direct evidence of localization, secretion, structure, or function.',
         'pI uses the EMBOSS pKa scale and GRAVY uses Kyte-Doolittle hydropathy values.',
       ],
-      warnings: [],
+      warnings,
     };
   },
 

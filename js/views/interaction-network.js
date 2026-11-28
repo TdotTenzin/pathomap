@@ -21,8 +21,10 @@ import {
     edgeCurvature,
     edgePath,
     fitTransform,
-    MIN_ZOOM,
+    graphWorldSize,
+    networkZoomRange,
     seedOrganicPositions,
+    selectVisibleLabels,
     sharedHostPathogens,
 } from './network-layout.js';
 
@@ -32,7 +34,12 @@ const PAN_THRESHOLD = 4;
 const PAN_LIMIT_X = 280;
 const PAN_LIMIT_Y = 220;
 const PAN_CAP_SCALE = 0.576;
-const MAX_ZOOM = 4;
+const PROGRESSIVE_BATCH = 80;
+const LARGE_GRAPH_NODES = 180;
+const LARGE_GRAPH_TICK_LIMIT = 120;
+const LABEL_TIERS = { essential: 0, primary: 1, secondary: 2, minor: 3 };
+const FALLBACK_LABEL_WIDTH = 6.1;
+const FALLBACK_LABEL_HEIGHT = 13;
 
 function createSvgElement(tag, attributes = {}) {
     const element = document.createElementNS(SVG_NS, tag);
@@ -56,8 +63,34 @@ function shortLabel(node) {
     return value.length > limit ? `${value.slice(0, limit - 1)}...` : value;
 }
 
-function labelRadiusFor(node) {
-    return Math.min(46, Math.max(20, shortLabel(node).length * 3.1));
+function labelRadiusFromWidth(width) {
+    return Math.min(140, Math.max(20, width / 2 + 6));
+}
+
+function labelPriority(node, degree = 0, flags = {}) {
+    let priority = Math.min(24, degree) * 0.7;
+    if (node.type === 'pathogen') priority += 16;
+    if (node.type === 'host_protein') priority += 18;
+    if (node.type === 'host_target') priority += 8;
+    if (node.type === 'effector') priority += 1;
+    if (flags.shared > 1) priority += 12;
+    if (flags.connected) priority += 80;
+    if (flags.selected) priority += 200;
+    return priority;
+}
+
+function labelTier(node, degree = 0, flags = {}) {
+    if (flags.selected || flags.connected) return 'essential';
+    if (
+        node.type === 'pathogen' ||
+        node.type === 'host_protein' ||
+        flags.shared > 1 ||
+        degree >= 5
+    ) {
+        return 'primary';
+    }
+    if (node.type === 'host_target' || degree >= 2) return 'secondary';
+    return 'minor';
 }
 
 function getEdgeClass(edge) {
@@ -131,17 +164,37 @@ export function createNetworkView({
     let svg = null;
     let viewport = null;
     let transform = { zoom: 1, x: 0, y: 0 };
+    let zoomRange = { minZoom: 0.08, maxZoom: 8 };
     let panOrigin = { x: 0, y: 0 };
     let contentSize = { width: 1000, height: 700 };
     let gesture = null;
     let resizeTimer = null;
+    let resizeObserver = null;
     let renderKey = null;
     let layout = null;
     let sharedHosts = new Map();
     let animationFrame = null;
+    let animationTicks = 0;
     let nodeElements = new Map();
+    let nodeRecords = [];
+    let labelRecords = [];
+    let edgeRecords = [];
+    let membershipRecords = [];
     let edgePaths = [];
+    let nodeEdges = new Map();
+    let nodeDegree = new Map();
+    let labelMetricCache = new Map();
+    let labelFrame = null;
     let suppressClick = false;
+    let progressiveTasks = [];
+    let progressiveFrame = null;
+    let progressiveToken = 0;
+    let visibleLabelIds = new Set();
+    let detailsToggle = null;
+    let selectionKey = null;
+    let lastTransformKey = '';
+    let labelRefreshKey = null;
+    let labelGeometryVersion = 0;
 
     function setNetworkStatus(message) {
         if (!status) return;
@@ -157,6 +210,212 @@ export function createNetworkView({
             details.appendChild(body);
         }
         return body;
+    }
+
+    function cancelProgressive() {
+        progressiveToken += 1;
+        if (progressiveFrame !== null) cancelAnimationFrame(progressiveFrame);
+        progressiveFrame = null;
+        progressiveTasks = [];
+    }
+
+    function measureLabel(element, node) {
+        const key = `${node.type}|${shortLabel(node)}`;
+        if (labelMetricCache.has(key)) return labelMetricCache.get(key);
+        const text = shortLabel(node);
+        let metrics = {
+            width: text.length * FALLBACK_LABEL_WIDTH,
+            height: FALLBACK_LABEL_HEIGHT,
+            dx: (-text.length * FALLBACK_LABEL_WIDTH) / 2,
+            dy: NODE_RADIUS + 6,
+        };
+        try {
+            if (typeof element.getBBox === 'function') {
+                const box = element.getBBox();
+                if (box && Number.isFinite(box.width) && box.width > 0) {
+                    metrics = {
+                        width: box.width,
+                        height: Number.isFinite(box.height) && box.height > 0 ? box.height : FALLBACK_LABEL_HEIGHT,
+                        dx: Number.isFinite(box.x) ? box.x : -box.width / 2,
+                        dy: Number.isFinite(box.y) ? box.y : NODE_RADIUS + 6,
+                    };
+                }
+            }
+            if (metrics.width <= 0 && typeof element.getComputedTextLength === 'function') {
+                const width = element.getComputedTextLength();
+                if (Number.isFinite(width) && width > 0) {
+                    metrics = {
+                        width,
+                        height: FALLBACK_LABEL_HEIGHT,
+                        dx: -width / 2,
+                        dy: NODE_RADIUS + 6,
+                    };
+                }
+            }
+        } catch (error) {
+            // Detached/headless SVG implementations may not support metrics.
+        }
+        labelMetricCache.set(key, metrics);
+        return metrics;
+    }
+
+    function measureNewLabels() {
+        for (const record of labelRecords) {
+            if (!record.metrics) record.metrics = measureLabel(record.element, record.node);
+        }
+    }
+
+    function refreshLabels(force = false) {
+        if (!svg || !layout || !filtered) return;
+        const effectiveFont = 11 * transform.zoom;
+        const maxTier =
+            effectiveFont < 6
+                ? 'primary'
+                : effectiveFont < 8.5
+                  ? 'primary'
+                  : effectiveFont < 11
+                    ? 'secondary'
+                    : 'minor';
+        // At overview scale keep only a few anchor labels so the graph stays
+        // interpretable without becoming a wall of text.
+        const candidateLimit = effectiveFont < 6 ? 20 : Infinity;
+        // Translation and uniform scaling do not change which label rectangles
+        // overlap. Recompute only when the tier, selection, or node geometry
+        // actually changes, so wheel zoom and pan stay cheap.
+        const nextKey = [
+            maxTier,
+            candidateLimit,
+            selected?.kind || '',
+            selected?.id || '',
+            labelRecords.length,
+            labelGeometryVersion,
+        ].join('|');
+        if (!force && nextKey === labelRefreshKey) return;
+        labelRefreshKey = nextKey;
+
+        const connected = connectedSelection(filtered, selected);
+        const candidates = [];
+
+        for (const record of labelRecords) {
+            const body = layout.get(record.node.id);
+            if (!body || !record.metrics) continue;
+            const { dx, dy, width, height } = record.metrics;
+            const shared = sharedHosts.get(record.node.id)?.size || 0;
+            const isConnected = connected.nodes.has(record.node.id);
+            const isSelected = selected?.kind === 'node' && selected.id === record.node.id;
+            const tier = labelTier(record.node, nodeDegree.get(record.node.id) || 0, {
+                shared,
+                connected: isConnected,
+                selected: isSelected,
+            });
+            if (LABEL_TIERS[tier] > LABEL_TIERS[maxTier]) {
+                if (!record.hidden) {
+                    record.element.classList.add('is-label-hidden');
+                    record.hidden = true;
+                }
+                continue;
+            }
+            candidates.push({
+                id: record.node.id,
+                priority:
+                    labelPriority(record.node, nodeDegree.get(record.node.id) || 0, {
+                        shared,
+                        connected: connected.nodes.has(record.node.id),
+                        selected: isSelected,
+                    }) + (visibleLabelIds.has(record.node.id) ? 30 : 0),
+                rect: {
+                    x: (body.x + dx) * transform.zoom + transform.x,
+                    y: (body.y + dy) * transform.zoom + transform.y,
+                    width: width * transform.zoom,
+                    height: height * transform.zoom,
+                },
+            });
+        }
+
+        candidates.sort((first, second) => second.priority - first.priority);
+        const visible = selectVisibleLabels(
+            Number.isFinite(candidateLimit) ? candidates.slice(0, candidateLimit) : candidates,
+            contentSize,
+            { margin: 2, cellSize: 96 }
+        );
+        // The selected node is always labelled, even if it sits just outside
+        // the viewport after a drag or zoom.
+        if (selected?.kind === 'node') visible.add(selected.id);
+        visibleLabelIds = new Set(visible);
+        for (const record of labelRecords) {
+            const hidden = !visible.has(record.node.id);
+            if (hidden !== record.hidden) {
+                record.element.classList.toggle('is-label-hidden', hidden);
+                record.hidden = hidden;
+            }
+        }
+    }
+
+    function scheduleLabels() {
+        if (labelFrame !== null) return;
+        labelFrame = requestAnimationFrame(() => {
+            labelFrame = null;
+            refreshLabels();
+        });
+    }
+
+    function startProgressive() {
+        const token = ++progressiveToken;
+        const step = () => {
+            progressiveFrame = null;
+            if (token !== progressiveToken || !svg) return;
+            const started = typeof performance !== 'undefined' ? performance.now() : Date.now();
+            let processed = 0;
+            while (
+                progressiveTasks.length &&
+                processed < PROGRESSIVE_BATCH &&
+                (typeof performance === 'undefined' ? Date.now() : performance.now()) - started < 10
+            ) {
+                progressiveTasks.shift()();
+                processed += 1;
+            }
+            measureNewLabels();
+            updatePositions();
+            applySelection(true);
+            if (progressiveTasks.length) {
+                progressiveFrame = requestAnimationFrame(step);
+            } else {
+                // Keep the graph still until every node and edge exists;
+                // otherwise the viewport and labels jump while batches land.
+                startAnimation();
+            }
+        };
+        progressiveFrame = requestAnimationFrame(step);
+    }
+
+    function flushProgressive({ resume = true } = {}) {
+        if (!progressiveTasks.length && progressiveFrame === null) return;
+        if (progressiveFrame !== null) cancelAnimationFrame(progressiveFrame);
+        progressiveFrame = null;
+        progressiveToken += 1;
+        while (progressiveTasks.length) progressiveTasks.shift()();
+        measureNewLabels();
+        updatePositions();
+        applySelection(true);
+        if (resume) startAnimation();
+    }
+
+    function toggleDetails(force) {
+        if (!details) return;
+        const host = details.closest?.('.ia-network-layout');
+        const collapsed =
+            typeof force === 'boolean'
+                ? force
+                : !(host?.classList.contains('is-details-collapsed') || details.classList.contains('is-details-collapsed'));
+        host?.classList.toggle('is-details-collapsed', collapsed);
+        details.classList.toggle('is-details-collapsed', collapsed);
+        details.hidden = collapsed;
+        if (detailsToggle) {
+            detailsToggle.setAttribute('aria-expanded', String(!collapsed));
+            detailsToggle.setAttribute('aria-label', collapsed ? 'Show details panel' : 'Hide details panel');
+            detailsToggle.setAttribute('title', collapsed ? 'Show details panel' : 'Hide details panel');
+            detailsToggle.textContent = collapsed ? 'Details' : 'Hide details';
+        }
     }
 
     function renderEmptyDetail() {
@@ -375,32 +634,39 @@ export function createNetworkView({
         body.appendChild(clear);
     }
 
-    function applySelection() {
+    function applySelection(force = false) {
         if (!svg) return;
+        const signature = selected ? `${selected.kind}:${selected.id}` : 'none';
+        if (!force && signature === selectionKey) return;
+        selectionKey = signature;
+
         const source = filtered || { interactionEdges: [], membershipEdges: [] };
         const connected = connectedSelection(source, selected);
 
-        svg.querySelectorAll('[data-node-id]').forEach((node) => {
-            const id = node.dataset.nodeId;
-            const isRelevant = !selected || connected.nodes.has(id);
-            node.classList.toggle('is-dimmed', !isRelevant);
-            node.classList.toggle('is-connected', Boolean(selected) && connected.nodes.has(id));
-            node.classList.toggle('is-selected', selected?.kind === 'node' && selected.id === id);
-        });
+        for (const record of nodeRecords) {
+            const isRelevant = !selected || connected.nodes.has(record.id);
+            record.element.classList.toggle('is-dimmed', !isRelevant);
+            record.element.classList.toggle('is-connected', Boolean(selected) && connected.nodes.has(record.id));
+            record.element.classList.toggle('is-selected', selected?.kind === 'node' && selected.id === record.id);
+        }
 
-        svg.querySelectorAll('[data-edge-id]').forEach((path) => {
-            const id = path.dataset.edgeId;
-            const relevant = !selected || connected.interactionEdges.has(id);
-            path.classList.toggle('is-dimmed', !relevant);
-            path.classList.toggle('is-connected', Boolean(selected) && relevant && selected?.kind !== 'edge');
-            path.classList.toggle('is-selected', selected?.kind === 'edge' && selected.id === id);
-        });
+        for (const record of edgeRecords) {
+            const relevant = !selected || connected.interactionEdges.has(record.id);
+            record.path.classList.toggle('is-dimmed', !relevant);
+            record.path.classList.toggle(
+                'is-connected',
+                Boolean(selected) && relevant && selected?.kind !== 'edge'
+            );
+            record.path.classList.toggle('is-selected', selected?.kind === 'edge' && selected.id === record.id);
+        }
 
-        svg.querySelectorAll('[data-membership-id]').forEach((path) => {
-            const relevant = !selected || connected.membershipEdges.has(path.dataset.membershipId);
-            path.classList.toggle('is-dimmed', !relevant);
-            path.classList.toggle('is-connected', Boolean(selected) && relevant);
-        });
+        for (const record of membershipRecords) {
+            const relevant = !selected || connected.membershipEdges.has(record.id);
+            record.path.classList.toggle('is-dimmed', !relevant);
+            record.path.classList.toggle('is-connected', Boolean(selected) && relevant);
+        }
+
+        refreshLabels(force);
     }
 
     function selectNode(nodeId, focusDetails = true) {
@@ -449,14 +715,15 @@ export function createNetworkView({
 
     function applyTransform() {
         if (!viewport) return;
-        viewport.setAttribute(
-            'transform',
-            `translate(${transform.x} ${transform.y}) scale(${transform.zoom})`
-        );
+        const next = `translate(${transform.x.toFixed(3)} ${transform.y.toFixed(3)}) scale(${transform.zoom.toFixed(4)})`;
+        if (next === lastTransformKey) return;
+        lastTransformKey = next;
+        viewport.setAttribute('transform', next);
+        scheduleLabels();
     }
 
     function zoomBy(factor, anchor = null) {
-        const nextZoom = clamp(transform.zoom * factor, MIN_ZOOM, MAX_ZOOM);
+        const nextZoom = clamp(transform.zoom * factor, zoomRange.minZoom, zoomRange.maxZoom);
         if (nextZoom === transform.zoom) return;
         // Anchor in SVG user space: screen = translate + zoom * graph.
         // Keeping the translate untouched by pan bounds here makes the
@@ -475,7 +742,10 @@ export function createNetworkView({
 
     function fitToScreen() {
         if (!layout) return;
-        transform = fitTransform(layout.bodies, contentSize.width, contentSize.height);
+        zoomRange = networkZoomRange(layout.bodies, contentSize.width, contentSize.height, 26);
+        transform = fitTransform(layout.bodies, contentSize.width, contentSize.height, 26, {
+            minZoom: zoomRange.minZoom,
+        });
         panOrigin = { x: transform.x, y: transform.y };
         applyTransform();
     }
@@ -483,10 +753,8 @@ export function createNetworkView({
     function resetNetworkView() {
         layout?.reset();
         updatePositions();
-        transform = { zoom: 1, x: 0, y: 0 };
-        panOrigin = { x: 0, y: 0 };
-        applyTransform();
-        startAnimation();
+        fitToScreen();
+        if (!progressiveTasks.length && progressiveFrame === null) startAnimation();
     }
 
     function renderNetworkStatus() {
@@ -515,8 +783,17 @@ export function createNetworkView({
 
     function renderGraph() {
         if (!canvas) return;
+        const viewportWidth = Math.max(
+            1,
+            Math.round(canvas.clientWidth || canvas.getBoundingClientRect?.().width || 800)
+        );
+        const viewportHeight = Math.max(
+            1,
+            Math.round(canvas.clientHeight || canvas.getBoundingClientRect?.().height || 560)
+        );
         const nextKey = [
-            Math.max(920, Math.round(canvas.clientWidth || 920)),
+            viewportWidth,
+            viewportHeight,
             model?.source?.datasetSha256 || model?.source?.datasetBuiltAt || dataset?.meta?.built_at || '',
             (filtered?.nodes || []).map((node) => `${node.id}:${node.label}`).join(','),
             (filtered?.interactionEdges || [])
@@ -539,11 +816,22 @@ export function createNetworkView({
         if (empty) empty.hidden = hasInteractions;
         if (!hasInteractions) {
             stopAnimation();
+            cancelProgressive();
+            if (labelFrame !== null) cancelAnimationFrame(labelFrame);
+            labelFrame = null;
             layout = null;
             sharedHosts = new Map();
             gesture = null;
             suppressClick = false;
             renderKey = null;
+            selectionKey = null;
+            lastTransformKey = '';
+            nodeElements = new Map();
+            nodeRecords = [];
+            labelRecords = [];
+            edgeRecords = [];
+            membershipRecords = [];
+            edgePaths = [];
             svg = null;
             viewport = null;
             canvas.replaceChildren();
@@ -559,28 +847,34 @@ export function createNetworkView({
             applyTransform();
             applySelection();
             renderNetworkStatus();
-            renderCurrentDetail();
             return;
         }
 
         stopAnimation();
+        cancelProgressive();
         layout = null;
         gesture = null;
         nodeElements = new Map();
+        nodeRecords = [];
+        labelRecords = [];
+        edgeRecords = [];
+        membershipRecords = [];
         edgePaths = [];
+        nodeEdges = new Map();
+        nodeDegree = new Map();
         suppressClick = false;
-        panOrigin = { x: transform.x, y: transform.y };
+        selectionKey = null;
+        lastTransformKey = '';
+        labelRefreshKey = null;
         renderKey = nextKey;
         canvas.replaceChildren();
         svg = null;
         viewport = null;
 
-        const width = Math.max(920, Math.round(canvas.clientWidth || 920));
-        const height = Math.max(
-            620,
-            Math.min(900, 420 + filtered.nodes.length * 4 + filtered.interactionEdges.length)
-        );
+        const width = viewportWidth;
+        const height = viewportHeight;
         contentSize = { width, height };
+        const world = graphWorldSize(filtered.nodes.length, width, height);
 
         svg = createSvgElement('svg', {
             class: 'ia-network-svg',
@@ -616,6 +910,23 @@ export function createNetworkView({
 
         viewport = createSvgElement('g', { class: 'ia-viewport' });
         svg.appendChild(viewport);
+        canvas.appendChild(svg);
+
+        // Measure label text once, while attached, so layout spacing and the
+        // initial fit use real dimensions instead of a character heuristic.
+        const measureProbe = createSvgElement('text', {
+            'text-anchor': 'middle',
+            x: 0,
+            y: NODE_RADIUS + 16,
+            visibility: 'hidden',
+        });
+        svg.appendChild(measureProbe);
+        filtered.nodes.forEach((node) => {
+            measureProbe.setAttribute('class', `ia-node-label ia-node-label--${node.type}`);
+            measureProbe.textContent = shortLabel(node);
+            measureLabel(measureProbe, node);
+        });
+        measureProbe.remove();
 
         sharedHosts = sharedHostPathogens(filtered.interactionEdges);
         const links = [
@@ -630,19 +941,31 @@ export function createNetworkView({
                 kind: 'interaction',
             })),
         ];
-        const layoutNodes = filtered.nodes.map((node) => ({
-            ...node,
-            labelRadius: labelRadiusFor(node),
-        }));
-        seedOrganicPositions(layoutNodes, width, height, links);
+        nodeDegree = new Map(filtered.nodes.map((node) => [node.id, 0]));
+        links.forEach((link) => {
+            const source = link.source?.id ?? link.source;
+            const target = link.target?.id ?? link.target;
+            if (nodeDegree.has(source)) nodeDegree.set(source, nodeDegree.get(source) + 1);
+            if (nodeDegree.has(target)) nodeDegree.set(target, nodeDegree.get(target) + 1);
+        });
+        const layoutNodes = filtered.nodes.map((node) => {
+            const metrics = labelMetricCache.get(`${node.type}|${shortLabel(node)}`);
+            return {
+                ...node,
+                labelRadius: labelRadiusFromWidth(metrics.width),
+                labelHalfWidth: metrics.width / 2,
+                labelHalfHeight: metrics.height,
+            };
+        });
+        seedOrganicPositions(layoutNodes, world.width, world.height, links);
         layout = createNetworkLayout({
             nodes: layoutNodes,
             links,
-            width,
-            height,
+            width: world.width,
+            height: world.height,
             radius: NODE_RADIUS + 4,
             top: 56,
-            bottom: height - 56,
+            bottom: world.height - 56,
         });
         const positions = new Map(layout.bodies.map((body) => [body.id, body]));
 
@@ -661,8 +984,9 @@ export function createNetworkView({
                 'data-membership-id': edge.id,
                 'marker-end': 'url(#ia-arrow)',
             });
-            edgeLayer.appendChild(path);
+            progressiveTasks.push(() => edgeLayer.appendChild(path));
             edgePaths.push({ path, sourceId: edge.source, targetId: edge.target, curvature: 0 });
+            membershipRecords.push({ id: edge.id, path });
         });
 
         filtered.interactionEdges.forEach((edge) => {
@@ -677,7 +1001,7 @@ export function createNetworkView({
                 class: `ia-edge ia-edge--interaction ia-edge--${getEdgeClass(edge)}`,
                 'data-edge-id': edge.id,
             });
-            edgeLayer.appendChild(path);
+            progressiveTasks.push(() => edgeLayer.appendChild(path));
 
             const hit = createSvgElement('path', {
                 d,
@@ -689,7 +1013,7 @@ export function createNetworkView({
                     `Interaction ${edge.id}: ${source.label} targets ${target.label}` +
                     (sharedCount > 1 ? ` (shared by ${sharedCount} pathogens)` : ''),
             });
-            hitLayer.appendChild(hit);
+            progressiveTasks.push(() => hitLayer.appendChild(hit));
             edgePaths.push({
                 path,
                 hit,
@@ -697,6 +1021,14 @@ export function createNetworkView({
                 targetId: edge.target,
                 curvature,
             });
+            edgeRecords.push({ id: edge.id, path, hit });
+        });
+
+        // Dragging one node should update only its incident edges, not all 492.
+        nodeEdges = new Map(filtered.nodes.map((node) => [node.id, []]));
+        edgePaths.forEach((entry) => {
+            nodeEdges.get(entry.sourceId)?.push(entry);
+            nodeEdges.get(entry.targetId)?.push(entry);
         });
 
         const nodeLayer = createSvgElement('g', { class: 'ia-node-layer' });
@@ -765,7 +1097,7 @@ export function createNetworkView({
             group.appendChild(title);
 
             const label = createSvgElement('text', {
-                class: `ia-node-label ia-node-label--${node.type}`,
+                class: `ia-node-label ia-node-label--${node.type} is-label-hidden`,
                 x: 0,
                 y: NODE_RADIUS + 16,
                 'text-anchor': 'middle',
@@ -773,29 +1105,59 @@ export function createNetworkView({
             label.textContent = shortLabel(node);
             group.appendChild(label);
 
-            nodeLayer.appendChild(group);
+            // Nodes land before their edges so the graph never appears as a
+            // web of lines waiting for endpoints.
+            progressiveTasks.unshift(() => nodeLayer.appendChild(group));
             nodeElements.set(node.id, group);
+            nodeRecords.push({ id: node.id, element: group });
+            labelRecords.push({
+                id: node.id,
+                node,
+                element: label,
+                metrics: null,
+                hidden: true,
+                tier: labelTier(node, nodeDegree.get(node.id) || 0, {
+                    shared: sharedPathogens,
+                }),
+            });
         });
 
-        applyTransform();
-        applySelection();
-        renderNetworkStatus();
-        canvas.appendChild(svg);
         layout.reheat(0.55);
-        startAnimation();
+        visibleLabelIds = new Set();
+        fitToScreen();
+        applySelection(true);
+        renderNetworkStatus();
         renderCurrentDetail();
+        startProgressive();
     }
 
-    function toSvgPoint(event, inverse = null) {
+    /**
+     * Map client pixels into SVG user space. A rect-derived mapping avoids the
+     * getScreenCTM()/SVGPoint allocations that made wheel and drag events slow.
+     */
+    function clientToSvg(event, rect = null) {
         if (!svg) return { x: 0, y: 0 };
+        const box =
+            rect ||
+            (typeof svg.getBoundingClientRect === 'function' ? svg.getBoundingClientRect() : null);
+        if (box && box.width && box.height) {
+            return {
+                x: ((event.clientX - box.left) * contentSize.width) / box.width,
+                y: ((event.clientY - box.top) * contentSize.height) / box.height,
+            };
+        }
         const point = svg.createSVGPoint();
         point.x = event.clientX;
         point.y = event.clientY;
-        return point.matrixTransform(inverse || svg.getScreenCTM().inverse());
+        return point.matrixTransform(svg.getScreenCTM().inverse());
     }
 
-    function toGraphPoint(event, inverse = null) {
-        const point = toSvgPoint(event, inverse);
+    function toSvgPoint(event) {
+        return clientToSvg(event);
+    }
+
+    function toGraphPoint(event, rect = null) {
+        const point = clientToSvg(event, rect);
         return {
             x: (point.x - transform.x) / transform.zoom,
             y: (point.y - transform.y) / transform.zoom,
@@ -809,30 +1171,74 @@ export function createNetworkView({
 
     function updatePositions() {
         if (!layout) return;
+        const moved = new Set();
         for (const [id, group] of nodeElements) {
             const body = layout.get(id);
-            if (body) {
-                group.setAttribute('transform', `translate(${body.x.toFixed(1)} ${body.y.toFixed(1)})`);
-            }
+            if (!body) continue;
+            const x = Math.round(body.x * 10) / 10;
+            const y = Math.round(body.y * 10) / 10;
+            if (body.renderX === x && body.renderY === y) continue;
+            body.renderX = x;
+            body.renderY = y;
+            group.setAttribute('transform', `translate(${x} ${y})`);
+            moved.add(id);
+            labelGeometryVersion += 1;
         }
         for (const entry of edgePaths) {
-            const source = layout.get(entry.sourceId);
-            const target = layout.get(entry.targetId);
-            if (!source || !target) continue;
-            const path = edgePath(source, target, entry.curvature);
-            entry.path.setAttribute('d', path);
-            if (entry.hit) entry.hit.setAttribute('d', path);
+            if (moved.has(entry.sourceId) || moved.has(entry.targetId)) updateEdgePath(entry);
         }
+    }
+
+    function updateEdgePath(entry) {
+        const source = layout.get(entry.sourceId);
+        const target = layout.get(entry.targetId);
+        if (!source || !target) return;
+        const path = edgePath(source, target, entry.curvature);
+        entry.path.setAttribute('d', path);
+        if (entry.hit) entry.hit.setAttribute('d', path);
+    }
+
+    function updateNodePosition(id) {
+        const body = layout?.get(id);
+        const group = nodeElements.get(id);
+        if (!body || !group) return;
+        const x = Math.round(body.x * 10) / 10;
+        const y = Math.round(body.y * 10) / 10;
+        if (body.renderX === x && body.renderY === y) return;
+        body.renderX = x;
+        body.renderY = y;
+        group.setAttribute('transform', `translate(${x} ${y})`);
+        labelGeometryVersion += 1;
+        for (const entry of nodeEdges.get(id) || []) updateEdgePath(entry);
     }
 
     function startAnimation() {
         if (animationFrame !== null || !layout) return;
+        // Every graph animates, including the curated one. Dense graphs run
+        // physics every other frame with a bounded tick count so zoom, pan,
+        // and dragging stay responsive while the layout is still alive.
+        const largeGraph = (filtered?.nodes.length || 0) > LARGE_GRAPH_NODES;
+        const tickLimit = largeGraph ? LARGE_GRAPH_TICK_LIMIT : 200;
+        const stride = largeGraph ? 2 : 1;
+        animationTicks = 0;
+        let frameCount = 0;
         const step = () => {
             animationFrame = null;
             if (!layout) return;
-            const active = layout.tick();
-            updatePositions();
-            if (active) animationFrame = requestAnimationFrame(step);
+            let active = true;
+            if (frameCount % stride === 0) {
+                active = layout.tick();
+                updatePositions();
+                animationTicks += 1;
+            }
+            frameCount += 1;
+            // Recomputing labels while bodies move makes them pop in and out.
+            // Refresh only once the simulation has settled or been capped.
+            if (!active || animationTicks >= tickLimit) {
+                refreshLabels(true);
+                return;
+            }
+            animationFrame = requestAnimationFrame(step);
         };
         animationFrame = requestAnimationFrame(step);
     }
@@ -932,10 +1338,10 @@ export function createNetworkView({
             const edgeTarget = event.target.closest('[data-edge-id]');
             const body = nodeTarget && layout ? layout.get(nodeTarget.dataset.nodeId) : null;
             if (nodeTarget && !body) return;
-            // Lock the screen-to-SVG matrix for the whole gesture so a scroll
+            // Lock the client-to-SVG mapping for the whole gesture so a scroll
             // or resize mid-drag cannot change the pointer's coordinate frame.
-            const inverse = svg.getScreenCTM().inverse();
-            const point = body ? toGraphPoint(event, inverse) : null;
+            const rect = typeof svg.getBoundingClientRect === 'function' ? svg.getBoundingClientRect() : null;
+            const point = body ? toGraphPoint(event, rect) : null;
 
             gesture = {
                 pointerId: event.pointerId,
@@ -943,7 +1349,8 @@ export function createNetworkView({
                 id: nodeTarget?.dataset.nodeId ?? edgeTarget?.dataset.edgeId ?? null,
                 group: nodeTarget || null,
                 focusTarget: nodeTarget || edgeTarget || null,
-                inverse,
+                rect,
+                startPoint: body ? null : clientToSvg(event, rect),
                 startX: event.clientX,
                 startY: event.clientY,
                 originX: transform.x,
@@ -972,14 +1379,16 @@ export function createNetworkView({
                 if (gesture.kind === 'node') {
                     gesture.group.classList.add('is-dragging');
                     canvas.classList.add('is-dragging-node');
-                    startAnimation();
+                    // The node is moved directly by pointermove. Running the
+                    // full force simulation during a drag is what stalled the
+                    // curated graph.
                 } else {
                     // Edges and background both pan the whole network.
                     canvas.classList.add('is-panning');
                 }
             }
             if (gesture.kind === 'node' && layout) {
-                const point = toGraphPoint(event, gesture.inverse);
+                const point = toGraphPoint(event, gesture.rect);
                 const nextX = point.x + gesture.offsetX;
                 const nextY = point.y + gesture.offsetY;
                 gesture.vx = (nextX - gesture.lastX) * 0.65;
@@ -987,11 +1396,11 @@ export function createNetworkView({
                 gesture.lastX = nextX;
                 gesture.lastY = nextY;
                 layout.setPinned(gesture.id, nextX, nextY);
-                updatePositions();
+                updateNodePosition(gesture.id);
                 return;
             }
-            const start = toSvgPoint({ clientX: gesture.startX, clientY: gesture.startY }, gesture.inverse);
-            const current = toSvgPoint(event, gesture.inverse);
+            const start = gesture.startPoint;
+            const current = clientToSvg(event, gesture.rect);
             transform.x = gesture.originX + (current.x - start.x);
             transform.y = gesture.originY + (current.y - start.y);
             clampTransform();
@@ -1019,6 +1428,7 @@ export function createNetworkView({
                 } else {
                     canvas.classList.remove('is-panning');
                 }
+                scheduleLabels();
                 return;
             }
 
@@ -1050,6 +1460,22 @@ export function createNetworkView({
         });
     }
 
+    if (controls && details) {
+        detailsToggle = controls.querySelector('[data-network-action="toggle-details"]');
+        if (!detailsToggle) {
+            detailsToggle = document.createElement('button');
+            detailsToggle.type = 'button';
+            detailsToggle.className = 'tool-btn tool-btn-sm';
+            controls.appendChild(detailsToggle);
+        }
+        detailsToggle.dataset.networkAction = 'toggle-details';
+        if (details.id) detailsToggle.setAttribute('aria-controls', details.id);
+        detailsToggle.setAttribute('aria-expanded', 'true');
+        detailsToggle.setAttribute('aria-label', 'Hide details panel');
+        detailsToggle.setAttribute('title', 'Hide details panel');
+        detailsToggle.textContent = 'Hide details';
+    }
+
     if (controls) {
         controls.addEventListener('click', (event) => {
             const action = event.target.closest('[data-network-action]')?.dataset.networkAction;
@@ -1057,19 +1483,39 @@ export function createNetworkView({
             if (action === 'zoom-out') zoomBy(0.85);
             if (action === 'fit') fitToScreen();
             if (action === 'reset') resetNetworkView();
+            if (action === 'toggle-details') toggleDetails();
             if (action === 'settle') {
-                layout?.reheat(1);
-                startAnimation();
+                layout?.reheat(0.6);
+                if (!progressiveTasks.length && progressiveFrame === null) startAnimation();
             }
         });
     }
 
-    window.addEventListener('resize', () => {
+    const handleResize = () => {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(() => {
-            if (filtered) renderGraph();
+            if (!svg || !layout) return;
+            const width = Math.max(320, Math.round(canvas.clientWidth || canvas.getBoundingClientRect?.().width || 800));
+            const height = Math.max(300, Math.round(canvas.clientHeight || canvas.getBoundingClientRect?.().height || 590));
+            if (width === contentSize.width && height === contentSize.height) return;
+            contentSize = { width, height };
+            svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+            const background = svg.querySelector('.ia-network-background');
+            if (background) {
+                background.setAttribute('width', String(width));
+                background.setAttribute('height', String(height));
+            }
+            // Reuse the settled graph; rebuilding/reseeding on every panel
+            // resize is expensive and makes collapse feel laggy.
+            fitToScreen();
         }, 120);
-    });
+    };
+    if (canvas && typeof ResizeObserver !== 'undefined') {
+        resizeObserver = new ResizeObserver(handleResize);
+        resizeObserver.observe(canvas);
+    } else {
+        window.addEventListener('resize', handleResize);
+    }
 
     bindSvgEvents();
     renderEmptyDetail();
@@ -1081,15 +1527,18 @@ export function createNetworkView({
             filtered = nextFiltered;
             renderGraph();
         },
+        fitToScreen,
+        toggleDetails,
         serializeSvg(metadata = {}) {
             if (!svg) return null;
+            flushProgressive({ resume: false });
             const clone = svg.cloneNode(true);
             clone.setAttribute('xmlns', SVG_NS);
             clone.setAttribute('width', String(contentSize.width));
             clone.setAttribute('height', String(contentSize.height));
             clone.querySelectorAll('.ia-edge-hits').forEach((layer) => layer.remove());
-            clone.querySelectorAll('.is-dimmed, .is-selected, .is-connected').forEach((element) => {
-                element.classList.remove('is-dimmed', 'is-selected', 'is-connected');
+            clone.querySelectorAll('.is-dimmed, .is-selected, .is-connected, .is-label-hidden').forEach((element) => {
+                element.classList.remove('is-dimmed', 'is-selected', 'is-connected', 'is-label-hidden');
             });
             clone.querySelectorAll('[data-shared-pathogens]').forEach((element) => {
                 element.removeAttribute('data-shared-pathogens');
@@ -1106,6 +1555,7 @@ export function createNetworkView({
             const pathogen = getCssColor('--network-pathogen', '#7c3aed');
             const effector = getCssColor('--network-effector', '#2563eb');
             const host = getCssColor('--network-host', '#0f766e');
+            const target = getCssColor('--network-target', '#b45309');
             const experimental = getCssColor('--evidence-experimental', '#16a34a');
             const predicted = getCssColor('--evidence-predicted', '#d97706');
             const annotation = getCssColor('--evidence-annotation-derived', '#2563eb');
@@ -1128,6 +1578,7 @@ export function createNetworkView({
                 .ia-node--pathogen .ia-node-shape { fill: ${pathogen}; }
                 .ia-node--effector .ia-node-shape { fill: ${effector}; }
                 .ia-node--host_protein .ia-node-shape { fill: ${host}; }
+                .ia-node--host_target .ia-node-shape { fill: ${target}; stroke-dasharray: 3 2; }
                 .ia-shared-host-ring { fill: none; stroke: ${host}; stroke-width: 2; stroke-dasharray: 4 3; }
                 .ia-node-label { fill: ${text}; stroke: ${background}; stroke-width: 3px; paint-order: stroke; font: 11px sans-serif; }
                 .ia-node-label--pathogen { font-weight: 600; }

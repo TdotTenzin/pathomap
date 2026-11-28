@@ -625,6 +625,21 @@ function bindExports() {
     });
 }
 
+function bindNetworkShortcuts() {
+    document.addEventListener('keydown', (event) => {
+        if (event.key !== 'd' && event.key !== 'D') return;
+        if (event.altKey || event.ctrlKey || event.metaKey) return;
+        if (
+            event.target.closest?.(
+                'input, select, textarea, summary, button, [contenteditable="true"]'
+            )
+        ) {
+            return;
+        }
+        view.toggleDetails();
+    });
+}
+
 function bindNavHandoff() {
     document.querySelectorAll('.nav-module a').forEach((link) => {
         link.addEventListener('click', () => {
@@ -653,6 +668,7 @@ async function initInteractionAnalysisPage() {
     bindUnresolvedFilters();
     bindExports();
     bindNavHandoff();
+    bindNetworkShortcuts();
 
     const dataset = consumeQueuedDataset();
     if (!dataset) {
@@ -685,6 +701,7 @@ async function initInteractionAnalysisPage() {
         renderSourceNote(state.model);
         populateUnresolved();
         view.render(dataset, state.model, state.filtered);
+        view.fitToScreen();
 
         if (!state.model.interactionEdges.length) {
             setPageStatus(

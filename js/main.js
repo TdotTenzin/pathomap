@@ -47,6 +47,7 @@ import { initTheme } from './ui/theme.js';
         // Initialize application interfaces. Discovery renders waiting cards;
         // no dataset is read from localStorage or fetched at boot.
         clearStoredDataset();
+        initTheme();
         initDiscovery();
         initDatabase();
         renderDatabase();

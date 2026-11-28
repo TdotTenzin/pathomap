@@ -1,10 +1,10 @@
 <!--
   PathoMap - Effector Sequence Analysis module page.
 
-  Standalone page for one analysis module. Uploaded data is analyzed in this
-  page only; no dataset is restored from a previous session.
+  Standalone page for one analysis module. Data is handed off from the
+  workspace; no dataset is restored from a previous session.
 
-  Script: js/pages/module-page.js (body[data-module] selects the module).
+  Script: js/pages/sequence-analysis.js (body[data-module] selects the module).
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -80,6 +80,7 @@
           </div>
         </div>
         <p class="sa-muted sa-stats-status" id="sa-stats-status" role="status" hidden></p>
+        <div class="sa-result-details" id="sa-result-details" hidden></div>
 
         <div class="sa-filters">
           <div class="sa-filters-heading">
@@ -118,7 +119,10 @@
               <h3>Sequence Features</h3>
               <p class="sa-table-source" id="sa-table-source">Source details appear once a dataset is loaded.</p>
             </div>
-            <button type="button" class="tool-btn" id="sa-download" disabled>Download result</button>
+            <div class="sa-download-actions">
+              <button type="button" class="tool-btn" id="sa-download" disabled>Download JSON</button>
+              <button type="button" class="tool-btn" id="sa-download-csv" disabled>Download CSV</button>
+            </div>
           </div>
 
           <div class="sa-tables-layout">

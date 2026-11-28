@@ -40,6 +40,22 @@ export const SEQUENCE_FEATURE_LABELS = {
   gravy_score: 'GRAVY',
 };
 
+export const STANDARD_AMINO_ACIDS = Object.keys(AA_MW).join('');
+
+const POSITIVE_RESIDUES = ['K', 'R', 'H'];
+const NEGATIVE_RESIDUES = ['D', 'E', 'C', 'Y'];
+const EMPTY_FEATURES = {
+  sequence_length: null,
+  molecular_weight_da: null,
+  isoelectric_point: null,
+  gravy_score: null,
+};
+
+const roundTo = (value, digits) => {
+  const factor = 10 ** digits;
+  return Math.round(value * factor) / factor;
+};
+
 export function cleanSequence(value) {
   const withoutHeaders = String(value ?? '')
     .split(/\r?\n/)
@@ -57,69 +73,108 @@ export function unknownResidues(sequence) {
   return [...unknown].sort();
 }
 
-export function calculateMolecularWeight(sequence) {
-  const residues = [...cleanSequence(sequence)].filter((aa) => aa in AA_MW);
-  if (residues.length === 0) return null;
-  const total = residues.reduce((sum, aa) => sum + AA_MW[aa], 0);
-  return Math.round((total - (residues.length - 1) * 18.015) * 100) / 100;
+function residueCounts(seq) {
+  const counts = {};
+  for (const aa of seq) {
+    if (aa in AA_MW) counts[aa] = (counts[aa] || 0) + 1;
+  }
+  return counts;
 }
 
-export function netCharge(sequence, ph) {
-  const seq = cleanSequence(sequence);
-  let positive = 1 / (1 + 10 ** (ph - PKA_NTERM));
-  let negative = 1 / (1 + 10 ** (PKA_CTERM - ph));
+function hasStandardResidues(counts) {
+  return STANDARD_AMINO_ACIDS.split('').some((aa) => counts[aa] > 0);
+}
 
+function chargeCounts(seq) {
+  const positive = {};
+  const negative = {};
   for (const aa of seq) {
-    if (aa in PKA_SIDE_CHAINS && ['K', 'R', 'H'].includes(aa)) {
-      positive += 1 / (1 + 10 ** (ph - PKA_SIDE_CHAINS[aa]));
-    }
-    if (aa in PKA_SIDE_CHAINS && ['D', 'E', 'C', 'Y'].includes(aa)) {
-      negative += 1 / (1 + 10 ** (PKA_SIDE_CHAINS[aa] - ph));
-    }
+    if (POSITIVE_RESIDUES.includes(aa)) positive[aa] = (positive[aa] || 0) + 1;
+    else if (NEGATIVE_RESIDUES.includes(aa)) negative[aa] = (negative[aa] || 0) + 1;
+  }
+  return { positive, negative };
+}
+
+function netChargeFromCounts({ positive, negative }, ph) {
+  let totalPositive = 1 / (1 + 10 ** (ph - PKA_NTERM));
+  let totalNegative = 1 / (1 + 10 ** (PKA_CTERM - ph));
+
+  for (const aa of POSITIVE_RESIDUES) {
+    totalPositive += (positive[aa] || 0) / (1 + 10 ** (ph - PKA_SIDE_CHAINS[aa]));
+  }
+  for (const aa of NEGATIVE_RESIDUES) {
+    totalNegative += (negative[aa] || 0) / (1 + 10 ** (PKA_SIDE_CHAINS[aa] - ph));
   }
 
-  return positive - negative;
+  return totalPositive - totalNegative;
 }
 
-export function calculateIsoelectricPoint(sequence) {
-  const seq = cleanSequence(sequence);
-  if (seq.length === 0) return null;
-
+function isoelectricPointFromCounts(charges) {
   let low = 0;
   let high = 14;
   for (let i = 0; i < 100; i += 1) {
     const mid = (low + high) / 2;
-    if (netCharge(seq, mid) > 0) low = mid;
+    if (netChargeFromCounts(charges, mid) > 0) low = mid;
     else high = mid;
   }
-  return Math.round(((low + high) / 2) * 100) / 100;
+  return roundTo((low + high) / 2, 2);
 }
 
-export function calculateGravy(sequence) {
-  const values = [...cleanSequence(sequence)]
-    .filter((aa) => aa in AA_GRAVY)
-    .map((aa) => AA_GRAVY[aa]);
-
-  if (values.length === 0) return null;
-  const total = values.reduce((sum, value) => sum + value, 0);
-  return Math.round((total / values.length) * 1000) / 1000;
-}
-
-export function calculateFeatures(sequence) {
-  const seq = cleanSequence(sequence);
-  if (seq.length === 0) {
-    return {
-      sequence_length: null,
-      molecular_weight_da: null,
-      isoelectric_point: null,
-      gravy_score: null,
-    };
+function molecularWeightFromCounts(counts) {
+  let total = 0;
+  let residues = 0;
+  for (const aa of STANDARD_AMINO_ACIDS) {
+    const count = counts[aa] || 0;
+    total += AA_MW[aa] * count;
+    residues += count;
   }
+  if (residues === 0) return null;
+  return roundTo(total - (residues - 1) * 18.015, 2);
+}
+
+function gravyFromCounts(counts) {
+  let total = 0;
+  let residues = 0;
+  for (const aa of STANDARD_AMINO_ACIDS) {
+    const count = counts[aa] || 0;
+    total += AA_GRAVY[aa] * count;
+    residues += count;
+  }
+  if (residues === 0) return null;
+  return roundTo(total / residues, 3);
+}
+
+function featuresFromClean(seq) {
+  const counts = residueCounts(seq);
+  if (!hasStandardResidues(counts)) return { ...EMPTY_FEATURES };
 
   return {
     sequence_length: seq.length,
-    molecular_weight_da: calculateMolecularWeight(seq),
-    isoelectric_point: calculateIsoelectricPoint(seq),
-    gravy_score: calculateGravy(seq),
+    molecular_weight_da: molecularWeightFromCounts(counts),
+    isoelectric_point: isoelectricPointFromCounts(chargeCounts(seq)),
+    gravy_score: gravyFromCounts(counts),
   };
+}
+
+export function calculateMolecularWeight(sequence) {
+  return molecularWeightFromCounts(residueCounts(cleanSequence(sequence)));
+}
+
+export function netCharge(sequence, ph) {
+  return netChargeFromCounts(chargeCounts(cleanSequence(sequence)), ph);
+}
+
+export function calculateIsoelectricPoint(sequence) {
+  const seq = cleanSequence(sequence);
+  const counts = residueCounts(seq);
+  if (!hasStandardResidues(counts)) return null;
+  return isoelectricPointFromCounts(chargeCounts(seq));
+}
+
+export function calculateGravy(sequence) {
+  return gravyFromCounts(residueCounts(cleanSequence(sequence)));
+}
+
+export function calculateFeatures(sequence) {
+  return featuresFromClean(cleanSequence(sequence));
 }

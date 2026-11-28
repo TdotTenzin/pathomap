@@ -62,6 +62,25 @@ export function renderTable(table, maxRows = 100) {
   `;
 }
 
+export function renderResultDetails(result) {
+  const sections = [
+    ['reasons', 'Why this result is unavailable', result?.reasons, 'disc-reasons'],
+    ['findings', 'Findings', result?.findings, 'disc-findings'],
+    ['notes', 'Notes', result?.notes, 'exp-notes'],
+    ['warnings', 'Warnings', result?.warnings, 'exp-warnings'],
+  ];
+
+  return sections
+    .filter(([, , items]) => Array.isArray(items) && items.length > 0)
+    .map(([key, label, items, className]) => `
+      <section class="result-details" data-result-details="${key}">
+        <h4>${escapeHtml(label)}</h4>
+        <ul class="${className}">${items.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
+      </section>
+    `)
+    .join('');
+}
+
 function renderFindings(findings = []) {
   if (findings.length === 0) return '';
   return `<ul class="disc-findings">${findings.map((finding) => `<li>${escapeHtml(finding)}</li>`).join('')}</ul>`;
